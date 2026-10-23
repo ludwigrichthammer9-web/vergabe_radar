@@ -4,7 +4,7 @@
 > **Weiter, wenn:** Nische und messbare Erfolgskriterien schriftlich feststehen.
 > Details: [CRISP-DM.md](../CRISP-DM.md#1-business-understanding)
 >
-> **Artefakte laut CRISP-DM.md:** `docs/business.md` (fehlt noch)
+> **Artefakte laut CRISP-DM.md:** [`docs/business.md`](../business.md) (angelegt 2026-10-23: Zielgruppe Oberpfalz, Leitfaden, Notizvorlage)
 
 ---
 

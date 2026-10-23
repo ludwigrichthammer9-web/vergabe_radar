@@ -210,8 +210,10 @@ _Jetzt Iteration 4 (geändert am 2026-10-23)._
 - [ ] G1.4 Abdeckung durch TED abschätzen: Welcher Teil der Reinigungsaufträge liegt über den EU-Schwellenwerten? (A3)
 
 ### G2 Kundengespräche (A1, A15)
-- [ ] G2.1 Zielgruppe festlegen (Größe, Region, Rolle: Geschäftsführung, Vertrieb, Ausschreibungsverantwortliche)
-- [ ] G2.2 Gesprächsleitfaden schreiben (offene Fragen zum heutigen Vorgehen, kein Verkaufsgespräch)
+- [x] G2.1 Zielgruppe festlegen (Größe, Region, Rolle: Geschäftsführung, Vertrieb, Ausschreibungsverantwortliche)
+  _(2026-10-23: Oberpfalz; 71 Firmen mit TED-Zuschlägen als Startliste, dazu kleine lokale Firmen; `docs/business.md`)_
+- [x] G2.2 Gesprächsleitfaden schreiben (offene Fragen zum heutigen Vorgehen, kein Verkaufsgespräch)
+  _(2026-10-23: `docs/business.md`, Abschnitt 3)_
 - [ ] G2.3 Fünf bis zehn Gespräche führen, jeweils kurz protokollieren
 - [ ] G2.4 Auswerten: Wie finden Firmen heute Ausschreibungen? Was würde ein früherer Hinweis wert sein? Wie viele Monate Vorlauf bräuchten sie?
 - [ ] G2.5 Ergebnisse in `docs/annahmen.md` (A1, A15) und Phase 1 eintragen
