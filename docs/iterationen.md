@@ -147,6 +147,19 @@ früheren CPV-909-Zuschlag desselben Auftraggebers.“
 > competition-Notices veröffentlicht (16 % der ersten 250 Notices aus Q2 2026 haben `change-notice-version-identifier`,
 > [rueckreichweite_909.md](../reports/rueckreichweite_909.md)). Der Nenner von K1 zählt deshalb **Verfahren** (eindeutige
 > `procedure-identifier`), nicht Notices. Änderungsbekanntmachungen zählen nicht extra. Schwellen unverändert.
+> Ergebnis Schritt 3: 551 Original-Ausschreibungen (159 von 710 Notices sind Änderungen).
+
+> **Änderung der Kandidatenauswahl (2026-10-23, nach dem ersten Lauf des Prototyps, vor jeder Paarbeurteilung):** Der erste Lauf
+> wählte unter mehreren Kandidaten den mit dem ähnlichsten Titel, sonst den jüngsten. Gesehen wurden nur Gesamtzahlen
+> (K1 83,7 %, Vorlauf-Median 24 Monate), keine K2-Urteile. Problem: Nur eForms-Notices haben Titel. Kandidaten vor eForms
+> konnten daher nie gewinnen, obwohl 358 von 461 Treffern solche haben. Gewählt wurden oft laufende Verträge mit Ende etwa 2 Jahre
+> nach der Ausschreibung. **Neue Reihenfolge:** (1) eForms-Kandidat mit Vertragsende 3 Monate vor bis 18 Monate nach der Ausschreibung,
+> bei mehreren der mit dem ähnlichsten Titel; (2) sonst der jüngste Kandidat vor eForms; (3) sonst ähnlichster Titel bzw. jüngster.
+> K1 ist davon nicht betroffen. **Folge:** Die Vorlaufzeiten der gewählten Paare sind durch das Fenster vorgeprägt und gelten nur
+> noch als Beschreibung, nicht als Test von A8. Die erste, nicht ausgefüllte Prüfliste wurde gelöscht und neu gezogen.
+> Prüfung K2: Claude bewertet vor (separate Datei), der Nutzer prüft nach. Entscheidung des Nutzers.
+> _Nachtrag 2026-10-23:_ Der Nutzer hat die Prüfung vollständig an Claude übertragen („alles selbst prüfen“). Zuordnungsregel und
+> K2-Urteil stammen damit aus derselben Hand. Das ist eine Schwäche, die der Evaluator bewerten soll.
 
 Explorativ, ohne Schwelle: Abstand zwischen Vertragsende des Vorgängers und Veröffentlichung der Neuausschreibung (erster Blick auf A8);
 Gründe für fehlende Vorgänger (Hinweise auf A3); Anzahl der Vorinformationen (PIN) je Quartal.

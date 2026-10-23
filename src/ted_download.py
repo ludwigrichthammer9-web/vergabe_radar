@@ -1,14 +1,20 @@
-"""Lädt Zuschlagsbekanntmachungen (eForms, form-type=result) aus der TED Search API v3.
+"""Lädt Bekanntmachungen aus der TED Search API v3 (Standard: Zuschläge, form-type=result).
 
-Jede API-Antwort wird unverändert (Byte für Byte) in data/raw/ted_search/<von>_<bis>/ gespeichert.
+Jede API-Antwort wird unverändert (Byte für Byte) in data/raw/ted_search/<lauf>/ gespeichert.
 Auswertungen passieren getrennt in analyze_completeness.py.
 
 Doku: https://docs.ted.europa.eu/api/latest/search.html
 OpenAPI-Spezifikation: https://ted.europa.eu/docs/v3
+Feldliste: https://docs.ted.europa.eu/ODS/latest/reuse/field-list.html
+
+Hinweis: Notices vor eForms (vor dem 25.10.2023) liefern nur einen Teil der Felder (u. a. keine Haupt-CPV, keine Laufzeit).
+Für sie filtert man den CPV-Bereich über --cpv-field classification-cpv. Die API reicht bis Ende Oktober 2016 zurück.
 
 Aufruf:
-    .venv\\Scripts\\python src/ted_download.py                       # letzte 3 Monate bis gestern
+    .venv\\Scripts\\python src/ted_download.py                       # Zuschläge der letzten 3 Monate bis gestern
     .venv\\Scripts\\python src/ted_download.py --from 20260722 --to 20261021
+    .venv\\Scripts\\python src/ted_download.py --form-type competition --cpv 909 --cpv-field main-classification-proc \\
+        --from 20260401 --to 20260630
 """
 
 import argparse
@@ -36,6 +42,14 @@ FIELDS = [
     "notice-type",
     "procedure-type",
     "contract-nature-main-proc",
+    "form-type",
+    "title-proc",
+    # Kennungen für Zuordnung und Deduplizierung (seit Iteration 2)
+    "procedure-identifier",  # BT-04
+    "notice-identifier",  # BT-701
+    "notice-version",  # BT-757
+    "change-notice-version-identifier",  # BT-758: gesetzt bei Änderungsbekanntmachungen
+    "change-reason-code",  # BT-140
     # Vertragslaufzeit
     "contract-duration-period-lot",  # BT-36: Dauer (Wert + Einheit)
     "contract-duration-start-date-lot",  # BT-536
@@ -52,6 +66,9 @@ FIELDS = [
     # Auftraggeber
     "buyer-name",
     "buyer-country",
+    "buyer-identifier",  # BT-501, uneinheitlich befüllt (Leitweg-ID, UUID, teils Telefonnummer)
+    "buyer-city",
+    "buyer-post-code",
     # Auftragswert
     "total-value",  # BT-161: Gesamtwert der Bekanntmachung
     "result-value-lot",  # BT-709: Höchstwert Rahmenvereinbarung je Los-Ergebnis
@@ -73,11 +90,25 @@ def default_period(today: date) -> tuple[date, date]:
     return date(year, month, day), today - timedelta(days=1)
 
 
-def build_query(country: str, date_from: str, date_to: str) -> str:
+def build_query(
+    country: str, date_from: str, date_to: str, form_type: str = "result", cpv: str | None = None,
+    cpv_field: str = "classification-cpv",
+) -> str:
+    cpv_clause = f"AND {cpv_field}={cpv}* " if cpv else ""
     return (
-        f"buyer-country={country} AND form-type=result "
+        f"buyer-country={country} AND form-type={form_type} {cpv_clause}"
         f"AND publication-date>={date_from} AND publication-date<={date_to}"
     )
+
+
+def run_name(country: str, date_from: str, date_to: str, form_type: str, cpv: str | None, cpv_field: str) -> str:
+    """Ordnername des Laufs. Ohne Zusatzfilter wie in Iteration 1: <land>_<von>_<bis>."""
+    parts = [country]
+    if form_type != "result" or cpv:
+        parts.append(form_type)
+    if cpv:
+        parts.append(f"cpv{cpv}" + ("main" if cpv_field == "main-classification-proc" else ""))
+    return "_".join(parts + [date_from, date_to])
 
 
 def post_with_retry(session: requests.Session, body: dict) -> requests.Response:
@@ -106,14 +137,20 @@ def main() -> None:
     parser.add_argument("--from", dest="date_from", default=default_from.strftime("%Y%m%d"))
     parser.add_argument("--to", dest="date_to", default=default_to.strftime("%Y%m%d"))
     parser.add_argument("--country", default="DEU", help="dreistelliger Ländercode des Auftraggebers")
+    parser.add_argument("--form-type", default="result", help="z. B. result, competition, planning")
+    parser.add_argument("--cpv", help="CPV-Präfix, z. B. 909 (ohne Angabe: alle CPV)")
+    parser.add_argument(
+        "--cpv-field", default="classification-cpv", choices=["classification-cpv", "main-classification-proc"],
+        help="classification-cpv = Haupt- oder Zusatz-CPV (auch vor eForms); main-classification-proc = Haupt-CPV (nur eForms)",
+    )
     args = parser.parse_args()
 
-    out_dir = RAW_DIR / f"{args.country}_{args.date_from}_{args.date_to}"
+    out_dir = RAW_DIR / run_name(args.country, args.date_from, args.date_to, args.form_type, args.cpv, args.cpv_field)
     if out_dir.exists() and any(out_dir.iterdir()):
         sys.exit(f"{out_dir} existiert bereits und ist nicht leer. Bitte löschen oder anderen Zeitraum wählen.")
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    query = build_query(args.country, args.date_from, args.date_to)
+    query = build_query(args.country, args.date_from, args.date_to, args.form_type, args.cpv, args.cpv_field)
     body = {
         "query": query,
         "fields": FIELDS,
@@ -166,6 +203,9 @@ def main() -> None:
         "date_from": args.date_from,
         "date_to": args.date_to,
         "country": args.country,
+        "form_type": args.form_type,
+        "cpv": args.cpv,
+        "cpv_field": args.cpv_field if args.cpv else None,
         "downloaded_at": datetime.now(timezone.utc).isoformat(),
         "total_notice_count_api": total_expected,
         "notices_downloaded": total_notices,

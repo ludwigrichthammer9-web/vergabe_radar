@@ -116,6 +116,39 @@ _Interpretation_
 - Laut Definition schließt BT-36 Verlängerungen ein, BT-537 ist offen formuliert. Ob die Vergabestellen das so ausfüllen, ist
   ungeprüft (Iteration 1: nur 40 % Übereinstimmung von BT-36 und Beginn/Ende).
 
+### Zwischenstand Iteration 2, Schritte 2–4: Rückreichweite, Download, K4, K5 (2026-10-23)
+
+_Wird beim Abschluss von Iteration 2 in den Aktuellen Stand eingearbeitet._
+
+Quellen: **[RR]** = [reports/rueckreichweite_909.md](../../reports/rueckreichweite_909.md),
+**[K]** = [reports/kennzahlen_iteration2.md](../../reports/kennzahlen_iteration2.md) (erzeugt mit `src/kennzahlen_iteration2.py`),
+**[D1]** = `data/raw/ted_search/DEU_competition_cpv909main_20260401_20260630/`,
+**[D2]** = `data/raw/ted_search/DEU_result_cpv909_20161001_20261022/`.
+
+_Fakten_
+- **Ausschreibungen Q2 2026** (Haupt-CPV 909, DEU): 710 Notices, vollständig laut API. 159 davon (22,4 %) sind Änderungsbekanntmachungen.
+  Es bleiben **551 Original-Ausschreibungen** mit 551 verschiedenen `procedure-identifier` (Nenner von K1). 29 weitere Verfahren
+  erscheinen in Q2 nur als Änderung. `buyer-identifier` ist bei allen 710 befüllt. [D1]
+- **Vorgänger-Pool:** 15.361 Zuschläge (CPV 909 in der CPV-Liste, DEU, Abfrage 01.10.2016–22.10.2026; erste Notices Ende Okt. 2016), vollständig laut API und gleich der Summe
+  der Quartalszählungen [RR]. Keine Duplikate. [D2]
+- **Gegenprobe:** Aus dem Pool ergibt das Fenster von Iteration 1 erneut 440 Notices, davon 356 mit bestimmbarem Ende. [K]
+- **K4 (Q2 2025):** 320 von 390 = **82,1 %** (Wilson 77,9–85,5 %). [K]
+- **Quote je Jahr (ergänzend):** 2023 (ab 25.10.) 70,7 %, 2024 70,1 % (KI 67,8–72,2 %), 2025 79,7 %, 2026 82,5 %. [K]
+- **K5:** 4.905 eForms-Zuschläge (25.10.2023–22.10.2026). Bei 629 liegt das Laufzeitende am oder vor dem 23.10.2026, bei 3 davon schon vor
+  der Veröffentlichung des Zuschlags. Herkunft des Endes: Enddatum 3.716, Beginn + Dauer 48, nicht bestimmbar 1.134, verworfen 7. [K]
+- **Laufzeit der abgelaufenen Verträge:** Median **12 Monate** (Quartile 12/24, n = 622), alle K5-Notices Median 36 Monate. Von den 629
+  abgelaufenen wurden 473 bis Ende 2024 veröffentlicht. [K]
+
+_Interpretation_
+- **K4 und K5 sind nach der vorab festgelegten Definition erfüllt.** Die Gegenprobe zeigt, dass Pool und Code mit Iteration 1 übereinstimmen.
+- **Die 80-%-Quote gilt nicht für den ganzen eForms-Zeitraum.** 2023/2024 liegt sie bei etwa 70 %, ab 2025 bei etwa 80 %. Mögliche Gründe
+  sind ungeprüft, etwa dass sich die Vergabestellen erst an eForms gewöhnt haben oder dass Plattformen ihre Formulare angepasst haben.
+  Beide Stichproben (Iteration 1 und K4) stammen aus der besseren Phase. Für A13 heißt das: ab 2025 repliziert, für 2024 nicht.
+- **K5 ist zahlenmäßig erfüllt, inhaltlich aber stark verzerrt.** Die abgelaufenen Verträge sind fast nur kurze Verträge
+  (Median 12 statt 36 Monate). Ein Backtest nur mit eForms-Daten würde also vor allem einjährige Verträge prüfen. Das ist die
+  Zensierungsverzerrung, die der Evaluator in Iteration 1 vorhergesagt hat (A10). Ob 12-Monats-Verträge typisch neu ausgeschrieben
+  werden oder eher verlängert werden, ist offen.
+
 ## Offene Fragen
 
 - [ ] Wie weit zurück sind die Daten brauchbar? Zahl der 909-Zuschläge seit Ende Oktober 2023 und Verteilung ihrer Enddaten. Enthalten die Formate vor eForms Laufzeiten (A10, A11)?

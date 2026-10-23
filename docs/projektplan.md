@@ -54,26 +54,34 @@ und neue Ausschreibungen zuordnen lassen. Das sind die riskantesten offenen Anna
 - [ ] **T2.2 Auftragsbekanntmachungen (competition) für CPV 909 laden**
   - [x] T2.2.1 Passende `form-type`- und `notice-type`-Werte in der API-Doku klären
     _(2026-10-23: `form-type=competition`, `notice-type` z. B. `cn-standard`; Filter `main-classification-proc=909*`)_
-  - [ ] T2.2.2 `src/ted_download.py` erweitern, Rohdaten unverändert nach `data/raw`
+  - [x] T2.2.2 `src/ted_download.py` erweitern, Rohdaten unverändert nach `data/raw`
+    _(2026-10-23: Parameter `--form-type`, `--cpv`, `--cpv-field`; 710 Ausschreibungen Q2 2026, davon 551 Original-Verfahren)_
   - [x] T2.2.3 Anzahl pro Jahr bestimmen (Basisrate des Prognoseziels)
     _(2026-10-23: `reports/rueckreichweite_909.md`; 2024/2025 je ca. 2.560–2.780 Ausschreibungs-Notices, davon ca. 16 % Änderungen)_
   - [x] T2.2.4 Prüfen, ob Vorinformationen (PIN) als Frühsignal existieren und wie häufig sie sind
     _(2026-10-23: 5 PIN mit Haupt-CPV 909 in Q2 2026, praktisch bedeutungslos)_
 - [ ] **T2.3 Rückreichweite klären (A10, A11)**
-  - [ ] T2.3.1 Zuschläge für CPV 909 seit Ende Oktober 2023 laden
-  - [ ] T2.3.2 Verteilung der Enddaten auswerten: Wie viele Verträge sind bis heute ausgelaufen?
+  - [x] T2.3.1 Zuschläge für CPV 909 seit Ende Oktober 2023 laden
+    _(2026-10-23: sogar seit Okt. 2016, 15.361 Notices, davon 4.905 eForms mit Haupt-CPV 909)_
+  - [x] T2.3.2 Verteilung der Enddaten auswerten: Wie viele Verträge sind bis heute ausgelaufen?
+    _(2026-10-23: 629 abgelaufen, aber Median-Laufzeit nur 12 Monate; `reports/kennzahlen_iteration2.md`)_
   - [ ] T2.3.3 Prüfen, ob Daten vor eForms (alte TED-Formulare) Laufzeiten enthalten und wie sie abrufbar sind
     _(teilweise, 2026-10-23: Such-API ab Ende Okt. 2016, vor eForms ohne Laufzeit; in der XML alter Ausschreibungen (F02)
     vorhanden, alte Zuschläge (F03) ohne Laufzeit, bisher 1 Fall)_
   - [ ] T2.3.4 Entscheiden, ob die eForms-Historie für einen Backtest reicht oder ältere Daten nötig sind
 - [ ] **T2.4 Erste Zuordnung Zuschlag zu Neuausschreibung (A9)**
-  - [ ] T2.4.1 Merkmale für die Zuordnung festlegen (Auftraggeber, CPV, Ort, Titel, Beschreibung, Kennungen)
-  - [ ] T2.4.2 Einfachen Score bauen (nachvollziehbar vor komplex)
+  - [x] T2.4.1 Merkmale für die Zuordnung festlegen (Auftraggeber, CPV, Ort, Titel, Beschreibung, Kennungen)
+    _(2026-10-23: erste Fassung nur Auftraggebername und -kennung; Ort/Titel nur zur Auswahl unter Kandidaten)_
+  - [x] T2.4.2 Einfachen Score bauen (nachvollziehbar vor komplex)
+    _(2026-10-23: `src/zuordnung_prototyp.py`, Regel statt Score; K1 83,7 %, `reports/zuordnung_iteration2.md`)_
   - [ ] T2.4.3 30 Paare aus allen Score-Bereichen **von Hand prüfen** und Trefferquote festhalten
   - [ ] T2.4.4 Typische Fehlerfälle dokumentieren (Losaufteilung, Fusion von Auftraggebern, neuer Zuschnitt)
+    _(vorläufig 2026-10-23 in `reports/k2_vorbewertung.md`: große Auftraggeber mit vielen Parallelverträgen, zu grobe Kennungen,
+    abweichende Namensschreibweisen; Prüfung durch den Nutzer steht aus)_
 - [ ] **T2.5 Replikation der 80-%-Quote (A13)**
-  - [ ] T2.5.1 Ein unabhängiges Quartal wählen (z. B. Frühjahr 2025), Definition und Schwelle vorab festlegen
-  - [ ] T2.5.2 Quote „Laufzeitende bestimmbar“ berechnen, Konfidenzintervall angeben
+  - [x] T2.5.1 Ein unabhängiges Quartal wählen (z. B. Frühjahr 2025), Definition und Schwelle vorab festlegen
+  - [x] T2.5.2 Quote „Laufzeitende bestimmbar“ berechnen, Konfidenzintervall angeben
+    _(2026-10-23: Q2 2025 82,1 %, KI 77,9–85,5 %; aber 2024 nur 70,1 %)_
 - [ ] **T2.6 Fehlende Laufzeiten verstehen**
   - [ ] T2.6.1 Etwa 20 der 84 nicht bestimmbaren Notices von Hand prüfen
   - [ ] T2.6.2 Ursachen einteilen (Freitext, unbefristet, falsches Formular, echte Lücke)
