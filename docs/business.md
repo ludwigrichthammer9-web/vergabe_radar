@@ -80,7 +80,47 @@ Antworten möglichst wörtlich notieren.
 
 _Noch keine Gespräche (Stand 2026-10-23)._
 
-## 6. Erfolgskriterien (offen)
+## 6. Markt und Preise (Schreibtisch-Recherche, 2026-10-24)
+
+Ersatz bzw. Ergänzung für Kundengespräche, falls diese nicht stattfinden. Prüft vor allem A2 (Wettbewerb).
+
+### Fakten
+
+**Wert der Aufträge** ([reports/auftragswerte_909.md](../reports/auftragswerte_909.md), eigene TED-Auswertung, Zuschläge 2024–2025)
+- 2.952 Zuschläge Gebäudereinigung (DEU), davon 1.321 (45 %) mit plausiblem Wert.
+- Median-Auftragswert über die Gesamtlaufzeit **421.713 €**, Quartile 209.033 € / 954.876 €. Pro Jahr im Median **167.404 €**
+  (Quartile 80.367 € / 422.744 €, n = 957 mit bekannter Laufzeit).
+
+**Lohn- und Preisniveau der Branche**
+- Branchenmindestlohn Gebäudereinigung Lohngruppe 1 (Innen- und Unterhaltsreinigung) ab 01.01.2026: **15,00 €/Std.**,
+  Lohngruppe 6: 18,40 €; die Verordnung gilt bis 31.12.2026. ([gesetze-im-internet.de](https://www.gesetze-im-internet.de/tvmindestlohngeb_ude_2024/BJNR0160B0025.html),
+  [Deutsche Handwerks Zeitung](https://www.deutsche-handwerks-zeitung.de/tariflohn-gebaeudereinigung-2025-2026-337962/))
+- Stundenverrechnungssätze werden nicht amtlich veröffentlicht. Ein Verbraucherratgeber nennt 25–38 € netto je Stunde
+  ([meister-job.de](https://meister-job.de/was-kosten-treppenhaus-reinigen/)). Das ist eine Größenordnung, keine Statistik.
+
+**Ausschreibungsdienste in Deutschland**
+- DTAD: keine öffentlichen Preise, Angebot über den Vertrieb, 12 Monate Laufzeit, Zahlung im Voraus. Quellen sind Vergleichsseiten
+  von Wettbewerbern ([jorpex.com](https://jorpex.com/de/compare/), [ki-syndikat.de](https://www.ki-syndikat.de/tools/dtad/)).
+- subreport: laut Wettbewerber-Vergleich 84–198 € pro Monat zzgl. MwSt., Mindestlaufzeit 12 Monate
+  ([jorpex.com](https://jorpex.com/de/compare/subreport-alternative/)). Nicht auf der Seite von subreport selbst geprüft.
+- Einen deutschen Dienst, der **auslaufende Verträge** oder **künftige Neuausschreibungen** anzeigt, habe ich in zwei Suchen nicht
+  gefunden. Das ist kein Beleg dafür, dass es keinen gibt.
+
+**Ausland (Vergleich)**
+- Großbritannien: Stotles bewirbt „expiring contracts“ (auslaufende öffentliche Verträge), laut eigener Preisseite ab 50 £ pro Nutzer
+  und Monat (ein Drittanbieter nennt 75 £). Tussell: öffentliche Vertragsdatenbank, Preise nur auf Anfrage
+  ([stotles.com](https://www.stotles.com/competitors/tussell), [itqlick.com](https://www.itqlick.com/Products/21420)).
+
+### Interpretation
+
+- Ein einzelner gewonnener Auftrag (Median etwa 167.000 € Umsatz pro Jahr) ist für eine Reinigungsfirma um Größenordnungen mehr
+  wert als ein Informationsdienst für 50–200 € im Monat. Wenn ein früher Hinweis die Gewinnchance auch nur gering erhöht, kann sich
+  das rechnen. Ob er das tut, ist ohne Kundengespräche nicht belegt (A1, A15).
+- Dass es in Großbritannien bezahlte Dienste für auslaufende Verträge gibt, deutet auf eine Zahlungsbereitschaft für diese Art
+  Information hin. Das ist allerdings ein anderer Markt mit anderer Datenlage (A2).
+- Preis-Hypothese für das Projekt (ungeprüft): 50–150 € pro Monat und Region, also im Bereich bestehender Ausschreibungsdienste.
+
+## 7. Erfolgskriterien (offen)
 
 Geschäftliche und technische Erfolgskriterien werden nach den ersten Gesprächen festgelegt, zum Beispiel der Vorlauf, den Kunden
 brauchen, und das daraus folgende Trefferfenster für den Backtest. Entscheidungstor laut [projektplan.md](projektplan.md), Strang G:
