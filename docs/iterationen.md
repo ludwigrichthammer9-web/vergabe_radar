@@ -336,6 +336,13 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsf
 > ([testfaelle_iteration3.md](../reports/testfaelle_iteration3.md): Population Q3 2026 = 492 Verfahren, 60 Fälle, 54 Auftraggeber).
 > Die Handsuche läuft in 4 Teilen zu je 15 Fällen nacheinander, mit identischem Auftrag an den Rechercheur.
 
+> **Fortschritt 2026-10-24:** Handsuche abgeschlossen und vor dem Regel-Lauf committet (850747c). Regel auf Testdaten angewendet,
+> 14 Vorschläge außerhalb der Handsuche von Claude einzeln beurteilt (84313ea, [zuordnung_iteration3.md](../reports/zuordnung_iteration3.md)).
+> **Festlegung V4 (vor dem Urteil des Nutzers):** 20 Paare laut `src/blindpruefung_iteration3.py` (3 schwach belegte und 7 zufällige
+> Treffer der Handsuche, 8 Einzelurteile von Claude, 2 unklare Kandidaten), zufällig gemischt. Übereinstimmung wird binär gezählt:
+> „gefunden“ (objektgleich/teilmenge) gegen „nicht gefunden“ (nicht objektgleich/unklar). Der Lösungsschlüssel liegt lokal in
+> `data/processed/blindpruefung_iteration3_schluessel.csv`, SHA-256 `c45d448c11ab1d2296e63581ec1a0ca258a735d8b6e34757d5dc37556e319eaf`.
+
 **Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
 explorativ); A8 (Hinweis).
 
