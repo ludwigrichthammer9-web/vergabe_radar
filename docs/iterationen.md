@@ -326,6 +326,11 @@ Explorativ mit vorab festgelegter Folge: Anteil vorzeitiger Neuvergaben unter de
 
 Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsfirmen (A15), auch zur Frage, ob Auftraggeber-Ebene reicht.
 
+> **Nachtrag 2026-10-23 (vor Schritt 1, Kriterien unverändert):** Die Handsuche für V1 (Schritt 4) führt der Subagent `rechercheur`
+> (`.claude/agents/rechercheur.md`) nach festem Protokoll durch. Er kennt die Zuordnungsregel und ihre Ergebnisse nicht. Damit sind
+> der Bau der Regel und die Ground Truth personell getrennt (es ist aber dasselbe Modell, also keine echte Zweitmeinung; dafür V4).
+> Entscheidung des Nutzers.
+
 **Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
 explorativ); A8 (Hinweis).
 
