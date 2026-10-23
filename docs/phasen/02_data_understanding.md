@@ -68,12 +68,64 @@ Abkürzungen für Quellen: **[R]** = Report `reports/datenqualitaet_DEU_20260722
 - Die Gesamtkennzahlen sind wegen des hohen Anteils an Bau- und Ingenieurprojekten für das Radar wenig aussagekräftig.
   Sinnvolle Bezugsgröße ist die Nische.
 
+### Zwischenstand Iteration 2, Schritt 1: API-Prüfung (2026-10-23)
+
+_Wird beim Abschluss von Iteration 2 in den Aktuellen Stand eingearbeitet._
+
+Quellen: **[P]** = Probeabfragen vom 23.10.2026, Antworten und Request-Body unverändert in `data/raw/ted_probes/20261023/`
+(Dateiname = Kürzel unten), **[X]** = Original-XML in `data/raw/ted_xml/probe_20261023/`,
+**[F]** = Feldliste https://docs.ted.europa.eu/ODS/latest/reuse/field-list.html,
+**[SDK]** = eForms SDK, `translations/business-term_en.xml` (Branch develop, https://github.com/OP-TED/eForms-SDK).
+
+_Fakten_
+- **Rückreichweite der Such-API:** Die ersten Notices stammen aus der Zeit zwischen dem 21. und 28.10.2016. Für 2014, 2015 und die
+  Zeit vom 01.01. bis 20.10.2016 gibt es 0 Treffer. 2017–2019 sind volle Jahre (529.000–623.000 Notices, DEU 83.000–110.000).
+  [P q04–q09, q17]
+- **CPV-Filter mit Platzhalter funktioniert:** `main-classification-proc=909*` liefert für Q3 2026 genau 440 Zuschläge, dieselbe Zahl
+  wie in Iteration 1. `classification-cpv=909*` liefert 465, weil dieses Feld auch Zusatz-CPVs enthält. [P q01, q02], [F]
+- **Formatwechsel zu eForms:** `main-classification-proc=909*` (DEU, Zuschläge) ergibt Juli–Sept. 2023 jeweils 0 Treffer, Okt. 8,
+  Nov. 96, Dez. 135. Mit `classification-cpv=909*` sind es 196, 148, 144, 127, 108, 163. [P q16]
+- **Felder vor eForms:** Bei Notices vor eForms liefert die Such-API nur `publication-number`, `publication-date`, `form-type`,
+  `notice-type`, `classification-cpv`, `buyer-name` und `buyer-city`. **Leer bleiben:** Haupt-CPV, Laufzeit (BT-36/536/537),
+  BT-58, `buyer-identifier`, `buyer-post-code`, Titel. Geprüft an Zuschlägen 2020 und Ausschreibungen 09/2019. Der Filter
+  `form-type` funktioniert auch für alte Notices. [P q11, q15]
+- **Laufzeit vor eForms in der XML:** Der Zuschlag 3473-2020 (Formular F03, Stadt Wesel, Gebäude- und Glasreinigung) enthält
+  **keine** Laufzeit-Elemente, aber `REF_NOTICE` → 2019/S 169-413386. Diese Ausschreibung 413386-2019 (Formular F02) enthält
+  `DATE_START` 2020-03-01, `DATE_END` 2023-02-28 und `RENEWAL`. [X]
+- **Ausschreibungen (competition) für CPV 909, DEU, Q2 2026:** 710 mit Haupt-CPV 909, 754 mit `classification-cpv`. In einer
+  Stichprobe von 5 eForms-Ausschreibungen haben alle Beginn und Ende geplant (BT-536/537). [P q03, q12, q14]
+- **Vorinformationen (form-type=planning), Haupt-CPV 909, DEU, Q2 2026:** 5. [P q13]
+- **`buyer-identifier` in eForms (5 Ausschreibungen):** 3 Leitweg-ID-ähnliche Werte (z. B. `991-02034-63`), 1 UUID,
+  1 Telefonnummer (`Tel. 0211/91747-0`). [P q14]
+- **Haupt-CPV 909 umfasst nicht nur Reinigung:** 222786-2026 ist „Rattenbekämpfung“ (Schädlingsbekämpfung). [P q14]
+- **Definitionen [SDK]:** BT-36: „The (estimated) period from the start to the end of the contract […]. This shall include any options
+  and renewals.“ BT-537: „The (estimated) date when the contract […] will finish.“ (ohne Aussage zu Verlängerungen). BT-58: maximale
+  Zahl möglicher Verlängerungen, Ausübung nach Wahl des Auftraggebers.
+
+_Interpretation_
+- Rückblick bis Ende 2016 ist möglich. Das sind knapp 10 Jahre und damit für Verträge mit 36 Monaten Median ausreichend. Vor eForms
+  liefert die Such-API aber nur Auftraggebername, Ort und CPV-Liste. Eine **Zuordnung über die Such-API ist auch für alte Notices
+  machbar**, **Laufzeiten dagegen nur über die Original-XML** (A11).
+- Alte Zuschläge enthalten (zumindest im F03-Beispiel) keine Laufzeit. Die Laufzeit steht in der zugehörigen alten Ausschreibung
+  (F02), erreichbar über `REF_NOTICE`. Ein Fall ist kein Beleg für die Regel.
+- Die Auftraggeber-Kennung ist uneinheitlich und fehlt vor eForms ganz. Die Zuordnung muss deshalb vor allem über normalisierte
+  Namen (ggf. mit Ort) laufen.
+- Vorinformationen sind mit 5 pro Quartal als Frühsignal praktisch bedeutungslos.
+- 710 Ausschreibungen in Q2 2026 gegenüber 440 Zuschlägen in Q3 2026 sind auffällig. Mögliche Gründe (Saison, mehrere Ausschreibungen
+  pro Zuschlag, Aufhebungen) sind ungeprüft.
+- Laut Definition schließt BT-36 Verlängerungen ein, BT-537 ist offen formuliert. Ob die Vergabestellen das so ausfüllen, ist
+  ungeprüft (Iteration 1: nur 40 % Übereinstimmung von BT-36 und Beginn/Ende).
+
 ## Offene Fragen
 
 - [ ] Wie weit zurück sind die Daten brauchbar? Zahl der 909-Zuschläge seit Ende Oktober 2023 und Verteilung ihrer Enddaten. Enthalten die Formate vor eForms Laufzeiten (A10, A11)?
+  _Teilantwort 2026-10-23:_ Such-API ab Ende Oktober 2016; vor eForms keine Laufzeit über die API, wohl aber in der XML alter Ausschreibungen (1 Fall) [P], [X].
 - [ ] Erscheinen Neuausschreibungen für CPV 909 als Auftragsbekanntmachungen (competition) auf TED, und wie viele pro Jahr? Gibt es Vorinformationen (PIN) als Frühsignal?
 - [ ] Lassen sich Zuschlag und Neuausschreibung zuordnen, z. B. über Auftraggeber und CPV (A9)?
 - [ ] Meinen BT-36/BT-536/BT-537 die Laufzeit mit oder ohne Verlängerungen? (eForms-Dokumentation prüfen)
+  _Teilantwort 2026-10-23:_ BT-36 laut Definition **mit** Optionen und Verlängerungen; BT-537 ohne Aussage [SDK]. Praxis ungeprüft.
+- [ ] _(neu, 2026-10-23)_ Enthalten alte Zuschläge (F03) generell keine Laufzeit, und lässt sie sich zuverlässig über `REF_NOTICE`
+  aus der alten Ausschreibung (F02) holen? Bisher 1 Fall [X].
 - [ ] Warum ist bei 84 von 440 Gebäudereinigungs-Notices kein Laufzeitende bestimmbar? Stichprobe von etwa 20 Fällen.
 - [ ] Hält die Quote in einem unabhängigen Zeitfenster (z. B. ein Frühjahrsquartal 2025), mit vorab festgelegter Schwelle (A13)?
 - [ ] Wie sieht die Befüllung auf Los-Ebene aus statt auf Notice-Ebene?

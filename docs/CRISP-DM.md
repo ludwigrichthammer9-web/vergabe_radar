@@ -152,10 +152,14 @@ flowchart LR
 | Iteration | Fokus | Phasen | Ergebnis |
 |---|---|---|---|
 | 1 | Machbarkeit | 1 → 2 | Datenqualitätsreport, Entscheidung für eine Nische |
-| 2 | Erste Prognose | 3 → 4 → 5 | Baseline-Regel mit Backtest-Kennzahlen |
-| 3 | Verbesserung | 3 → 4 → 5 | Verlängerungsoptionen und Auftraggeber-Historie, besserer Backtest |
-| 4 | Erster Kundentest | 6 → 1 | Testliste für Kunden, Feedback, Preis-Hypothese |
-| 5+ | Ausbau | je nach Bewertung | weitere Nischen, Automatisierung, ggf. ML |
+| 2 | Zielereignis sichtbar und zuordenbar? | 2 (→ 3) | Neuausschreibungen, Rückreichweite, erste Zuordnung Zuschlag–Neuausschreibung |
+| 3 | Erste Prognose | 3 → 4 → 5 | Baseline-Regel mit Backtest-Kennzahlen |
+| 4 | Verbesserung | 3 → 4 → 5 | Verlängerungsoptionen und Auftraggeber-Historie, besserer Backtest |
+| 5 | Erster Kundentest | 6 → 1 | Testliste für Kunden, Feedback, Preis-Hypothese |
+| 6+ | Ausbau | je nach Bewertung | weitere Nischen, Automatisierung, ggf. ML |
+
+_Angepasst am 2026-10-23:_ Nach Iteration 1 wurde eine Iteration 2 in Phase 2 eingeschoben. Die übrigen sind um eine Stelle verschoben.
+Die Grobplanung mit Aufgaben, Strängen (Technik, Geschäft, Prozess) und Entscheidungstoren steht in [projektplan.md](projektplan.md).
 
 Die Gespräche mit potenziellen Kunden (Phase 1) laufen parallel zu allen
 Iterationen weiter, nicht nur am Anfang.

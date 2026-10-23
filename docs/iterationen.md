@@ -14,13 +14,16 @@ Regeln:
 | Nr | Fokus | Phasen | Zeitraum | Status | Entscheidung |
 |---|---|---|---|---|---|
 | 1 | Machbarkeit der Daten | 1 → 2 | 2026-10-22 | abgeschlossen | Gebäudereinigung als vorläufige Arbeitsnische; **zurück zu Phase 2** (Zielereignis und Rückreichweite prüfen) |
-| 2 | Neuausschreibungen sichtbar und zuordenbar? Danach Datenaufbereitung (Arbeitsnische Gebäudereinigung) | 2 → 3 (→ 4 → 5) | – | geplant | – |
-| 3 | Erste Prognose (Baseline + Backtest) | 3 → 4 → 5 | – | geplant | – |
-| 4 | Erster Kundentest | 6 → 1 | – | geplant | – |
-| 5+ | Ausbau | je nach Bewertung | – | geplant | – |
+| 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 bis 2026-11-08 | läuft | offen |
+| 3 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
+| 4 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
+| 5 | Erster Kundentest | 6 → 1 | – | geplant | – |
+| 6+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
 sind sie um eine Stelle verschoben. Konkretisiert werden sie mit `/iteration-start`.
+_Nachtrag 2026-10-23:_ Die geplanten Zeilen (3 bis 6+) sind an den [Projektplan](projektplan.md) angeglichen, der jetzt eine eigene
+Verbesserungs-Iteration vorsieht.
 
 ---
 
@@ -100,3 +103,88 @@ _Begründung (korrigiert gegenüber dem ersten Entwurf):_
   - Verlängerungen aus Freitext (BT-54/BT-57) extrahieren
   - Zuordnung alter und neuer Ausschreibungen aufbauen
 - Phase 1 (parallel): erste Gespräche mit Reinigungsfirmen (A15). Idee „Facility-Services-Radar“ ist in Phase 1 notiert.
+
+---
+
+## Iteration 2: Neuausschreibungen sichtbar und zuordenbar?
+
+**Status:** läuft seit 2026-10-23
+
+**Fokus und Phasen:** Phase 2 für die Arbeitsnische Gebäudereinigung (Haupt-CPV 909…), dazu ein Zuordnungs-Prototyp als Vorarbeit
+für Phase 3. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan): Die erste Prognose wird verschoben, weil das
+Zielereignis (Neuausschreibung) und seine Zuordnung zu alten Zuschlägen noch ungeprüft sind (Entscheidung Iteration 1).
+
+**Vorgehen:** Rückwärtssuche. Ausgangspunkt sind aktuelle Ausschreibungen (competition), zu denen frühere Zuschläge gesucht werden.
+Eine Vorwärtssuche ist nicht möglich, weil Zuschläge aus 2026 bei 36 Monaten Median-Laufzeit erst ab etwa 2029 neu ausgeschrieben werden.
+
+**Hypothese** _(vorab festgelegt am 2026-10-23, vor Kenntnis der Ergebnisse)_
+„Für die Mehrheit der deutschen Gebäudereinigungs-Ausschreibungen (competition, Haupt-CPV 909) aus Q2 2026 gibt es auf TED einen
+früheren CPV-909-Zuschlag desselben Auftraggebers.“
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-10-23)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| K1 | Anteil der competition-Notices (DEU, Haupt-CPV 909, veröffentlicht 01.04.–30.06.2026) mit automatisch gefundenem Vorgänger-Zuschlag: gleicher normalisierter Auftraggeber, Haupt-CPV 909, veröffentlicht vor der Ausschreibung | ≥ 50 % | A9 |
+| K2 | Manuelle Prüfung von 30 zufälligen automatischen Treffern: Anteil, bei dem plausibel dieselbe Leistung gemeint ist (Objekt/Liegenschaft, Umfang) | ~~≥ 70 %~~ **≥ 80 %** _(angepasst 2026-10-23)_ | A9 |
+| K3 | Anteil der bestätigten Vorgänger im eForms-Format (veröffentlicht ab 25.10.2023) | Messwert ohne Schwelle; entscheidet, ob A10 trägt oder A11 nötig wird | A10, A11 |
+| K4 | Replikation „Laufzeitende bestimmbar“ (Definition wie Iteration 1, Haupt-CPV 909, Notice-Ebene, gleiches Skript) für Zuschläge vom 01.04.–30.06.2025 | Punktwert ≥ 80 % **und** Untergrenze 95-%-KI ≥ 75 % | A13 |
+| K5 _(ergänzt 2026-10-23)_ | Backtest-Basis: Anzahl eForms-Zuschläge (DEU, Haupt-CPV 909, veröffentlicht 25.10.2023–22.10.2026) mit bestimmbarem Laufzeitende (Definition wie Iteration 1, Notice-Ebene, erstes Los, Laufzeiten ≤ 0 oder > 240 Monate verworfen), dessen Ende ≤ 23.10.2026 liegt | ≥ 100 | A10 |
+
+> **Präzisierung K1 (2026-10-23, nach API-Prüfung, vor Kenntnis von Ergebnissen):** Für Notices vor eForms liefert die Such-API
+> keine Haupt-CPV ([02_data_understanding.md](phasen/02_data_understanding.md), Zwischenstand Iteration 2). Der Vorgänger-Pool wird
+> deshalb für alle Jahre einheitlich über `classification-cpv=909*` gebildet (Haupt- **oder** Zusatz-CPV 909). Die Ausschreibungen
+> (Nenner von K1) bleiben bei Haupt-CPV 909. Schwellen unverändert. Mögliche Fehltreffer durch Zusatz-CPV fängt K2 auf.
+> Entscheidung des Nutzers.
+
+> **Anpassung an den Projektplan (2026-10-23, vor Kenntnis von Ergebnissen; Schritt 2 noch nicht begonnen):** Abgleich mit dem
+> Entscheidungstor nach Iteration 2 in [projektplan.md](projektplan.md). (1) K2 von ≥ 70 % auf ≥ 80 % angehoben, wie im Projektplan.
+> Die Stichprobe bleibt eine Zufallsauswahl aus den Treffern, weil die Regel keinen Score hat und so die Präzision direkt gemessen
+> wird. (2) K5 ergänzt, Richtwert „mindestens 100 abgelaufene Verträge“ aus dem Projektplan. Bisher fragte kein Kriterium, ob es
+> **genug** Fälle für einen Backtest gibt. Entscheidung des Nutzers.
+
+> **Präzisierung K1-Nenner (2026-10-23, nach Schritt 2, vor jeder Zuordnung):** In eForms werden Korrekturen als eigene
+> competition-Notices veröffentlicht (16 % der ersten 250 Notices aus Q2 2026 haben `change-notice-version-identifier`,
+> [rueckreichweite_909.md](../reports/rueckreichweite_909.md)). Der Nenner von K1 zählt deshalb **Verfahren** (eindeutige
+> `procedure-identifier`), nicht Notices. Änderungsbekanntmachungen zählen nicht extra. Schwellen unverändert.
+
+Explorativ, ohne Schwelle: Abstand zwischen Vertragsende des Vorgängers und Veröffentlichung der Neuausschreibung (erster Blick auf A8);
+Gründe für fehlende Vorgänger (Hinweise auf A3); Anzahl der Vorinformationen (PIN) je Quartal.
+
+**Was folgt aus welchem Ergebnis**
+- K1, K2 und K5 erfüllt → **weiter zu Phase 3** (Zuordnung als Skript, Backtest-Datensatz). Iteration 3 = Baseline mit Backtest.
+  Ist K3 < 50 %, muss Phase 3 auch Formate vor eForms abdecken.
+- K1 und K2 erfüllt, K5 verfehlt → **Historie zu kurz:** vor Iteration 3 ältere Daten über die Original-XML erschließen (A11),
+  wie im Projektplan vorgesehen. _(ergänzt 2026-10-23)_
+- K1 25–50 % oder K2 50–80 % → **in Phase 2 bleiben**: Gründe für fehlende Vorgänger klären, bevor Phase 3 beginnt.
+- K1 < 25 % oder K2 < 50 % → **Idee anpassen / zurück zu Phase 1** (Nachfolger auf TED kaum sichtbar, A3). Optionen: Facility-Services-Radar,
+  Prognose aus Auftraggeber-Zyklen statt Vertragsende, nationale Quellen.
+- K4 verfehlt → A13 widerlegt bzw. nur teilweise gestützt. Kein Abbruch, die Quote geht als Unsicherheit in den Backtest ein.
+
+**Zeitrahmen:** 2026-10-23 bis 2026-11-08, etwa 4–5 Arbeitssitzungen.
+
+**Plan**
+1. TED-API-Dokumentation prüfen: Filter für competition, Rückreichweite der API, Felder für Notices vor eForms, Auftraggeber-Kennungen
+   (Phase 2; Notiz in `docs/phasen/02_data_understanding.md`).
+2. Rückreichweite und Basisrate: Trefferzahlen je Quartal für CPV-909-Zuschläge, -Ausschreibungen und -Vorinformationen (DEU), so weit die
+   API zurückreicht (Ziel ab 2016) (Phase 2; `data/raw/…`, `reports/rueckreichweite_909.md`).
+3. Laden: competition-Notices CPV 909 aus Q2 2026 sowie alle CPV-909-Zuschläge (DEU) als Vorgänger-Pool; `src/ted_download.py` um
+   Abfrageparameter erweitern; Rohdaten unverändert in `data/raw/` (Phase 2).
+4. Replikation K4 mit `src/analyze_completeness.py` auf den Zuschlägen aus Q2 2025; K5 auf den eForms-Zuschlägen ab 25.10.2023
+   (Phase 2; Abschnitt im Iterationsreport).
+5. Zuordnungs-Prototyp mit einfacher Namensnormalisierung und ggf. Auftraggeber-Kennungen; berechnet K1, K3, Vorlaufzeiten
+   (Phase 2/3; `src/zuordnung_prototyp.py`, `reports/zuordnung_iteration2.md`).
+6. Manuelle Prüfung: 30 Treffer (K2), 15 Ausschreibungen ohne Treffer (Gründe); bei Vorgängern vor eForms prüfen, ob die Laufzeit
+   ablesbar ist (A11) (Phase 2).
+7. Kritische Prüfung durch den Evaluator, Abschluss mit `/iteration-ende`.
+
+Bewusst verschoben: Stichprobe der 84 nicht bestimmbaren 909-Notices, Verlängerungen aus Freitext, Los-Ebene (Phase 3 / Iteration 3).
+_Vermerk 2026-10-23:_ Die Stichprobe entspricht T2.6.1/T2.6.2 im Projektplan. Sie bleibt verschoben, weil sie für das Entscheidungstor
+nach Iteration 2 nicht nötig ist und der Zeitrahmen knapp ist (Entscheidung des Nutzers). T2.6.3 ist teilweise erledigt (Schritt 1).
+Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Reinigungsfirmen für ein Gespräch anfragen (A15).
+
+**Geprüfte Annahmen:** A9 (Hauptannahme), A10, A11, A13; teilweise A3 und A8 (explorativ).
+
+**Ergebnis:** offen
+
+**Entscheidung:** offen

@@ -29,6 +29,7 @@ Details: docs/iterationen.md
 - Kurz erklären, was du tust, ich bin Student und lerne dabei.
 
 ## Prozess und Dokumentation (CRISP-DM, iterativ)
+- Grobplanung (Aufgaben, Stränge, Entscheidungstore): docs/projektplan.md, erledigte Punkte dort abhaken.
 - Vorgehen: docs/CRISP-DM.md. Stand je Phase: docs/phasen/01_… bis 06_…,
   Iterationen: docs/iterationen.md, Annahmen: docs/annahmen.md.
 - Iteration mit /iteration-start beginnen und mit /iteration-ende abschließen;
