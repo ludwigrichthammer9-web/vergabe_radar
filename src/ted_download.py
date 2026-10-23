@@ -69,6 +69,12 @@ FIELDS = [
     "buyer-identifier",  # BT-501, uneinheitlich befüllt (Leitweg-ID, UUID, teils Telefonnummer)
     "buyer-city",
     "buyer-post-code",
+    # Objektmerkmale je Los (seit Iteration 3; nur eForms befüllt)
+    "title-lot",  # BT-21-Lot
+    "place-of-performance-city-lot",  # BT-5131
+    "place-of-performance-post-code-lot",  # BT-5121
+    "place-performance-street-lot",  # BT-5101
+    "place-of-performance-other-lot",  # BT-727
     # Auftragswert
     "total-value",  # BT-161: Gesamtwert der Bekanntmachung
     "result-value-lot",  # BT-709: Höchstwert Rahmenvereinbarung je Los-Ergebnis
