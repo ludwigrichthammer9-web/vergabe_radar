@@ -284,3 +284,14 @@ Frage: Warum kein Vorgänger? (z. B. erstmalige Vergabe, Name abweichend, Vorgä
 - Ausschreibung: [421013-2026](https://ted.europa.eu/de/notice/-/detail/421013-2026) (2026-06-18) – ENTEGA AG Müllheizkraftwerk – „Sandstrahl-, Reinigungs- und Bestiftungsarbeiten im MHKW Darmstadt“
 - Vermuteter Grund: Unklar: „ENTEGA AG“ (2025) und „ENTEGA AG Zentraleinkauf“ (2021) im Pool, Inhalt nicht geprüft.
 
+
+## Nachtrag nach der Evaluation (2026-10-23)
+
+Urteile unverändert. Ergänzungen aus [evaluation_iteration2.md](evaluation_iteration2.md):
+- **A2:** Vorbehalt: Ein Zwischenvertrag 2021–2026 (national oder unter anderem Namen) ist nicht ausgeschlossen; dann wäre
+  264073-2017 nicht der direkte Vorgänger. Die neue Ausschreibung nennt im Auszug Unterhalts-, Grund- und Sonderreinigung; Glas
+  ist dort nicht sichtbar.
+- **A4:** Die Begründung „Zeitpunkt passt nicht“ ist uneinheitlich, weil der Zeitpunkt nicht zur K2-Definition gehört und bei A8/A24
+  vorzeitige Neuvergaben als „ja“ zählen. Maßgeblich für „unklar“ ist der verkleinerte Umfang (Teilmenge eines Loses).
+- **A30:** Urteil „nein“ für das gewählte Paar bleibt richtig. Der objektgleiche Vorgänger 775273-2024 (JKI Quedlinburg) war aber
+  unter den Kandidaten und wurde wegen des Zeitfensters nicht gewählt.

@@ -74,10 +74,14 @@ und neue Ausschreibungen zuordnen lassen. Das sind die riskantesten offenen Anna
     _(2026-10-23: erste Fassung nur Auftraggebername und -kennung; Ort/Titel nur zur Auswahl unter Kandidaten)_
   - [x] T2.4.2 Einfachen Score bauen (nachvollziehbar vor komplex)
     _(2026-10-23: `src/zuordnung_prototyp.py`, Regel statt Score; K1 83,7 %, `reports/zuordnung_iteration2.md`)_
-  - [ ] T2.4.3 30 Paare aus allen Score-Bereichen **von Hand prüfen** und Trefferquote festhalten
-  - [ ] T2.4.4 Typische Fehlerfälle dokumentieren (Losaufteilung, Fusion von Auftraggebern, neuer Zuschnitt)
-    _(vorläufig 2026-10-23 in `reports/k2_vorbewertung.md`: große Auftraggeber mit vielen Parallelverträgen, zu grobe Kennungen,
-    abweichende Namensschreibweisen; Prüfung durch den Nutzer steht aus)_
+  - [x] T2.4.3 30 Paare aus allen Score-Bereichen **von Hand prüfen** und Trefferquote festhalten
+    _(2026-10-23: Zufallsauswahl statt Score-Bereiche; geprüft von Claude auf Wunsch des Nutzers; K2 = 5/30 = 16,7 %,
+    `reports/k2_pruefliste.md`; Evaluator in 29/30 einig)_
+  - [x] T2.4.4 Typische Fehlerfälle dokumentieren (Losaufteilung, Fusion von Auftraggebern, neuer Zuschnitt)
+    _(2026-10-23, `reports/ergebnis_iteration2.md`: große Auftraggeber mit vielen Parallelverträgen, zu grobe Kennungen,
+    abweichende Namensschreibweisen, Neuzuschnitt, vorzeitige Neuvergabe, Nicht-Reinigung unter CPV 909)_
+- [x] **T2.7.1** Report: `reports/ergebnis_iteration2.md` _(2026-10-23)_
+- [x] **T2.7.2** Evaluator: `reports/evaluation_iteration2.md` _(2026-10-23; Empfehlung: Idee anpassen, nicht weiter zu Phase 3)_
 - [ ] **T2.5 Replikation der 80-%-Quote (A13)**
   - [x] T2.5.1 Ein unabhängiges Quartal wählen (z. B. Frühjahr 2025), Definition und Schwelle vorab festlegen
   - [x] T2.5.2 Quote „Laufzeitende bestimmbar“ berechnen, Konfidenzintervall angeben

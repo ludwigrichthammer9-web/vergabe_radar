@@ -87,6 +87,8 @@ Geprüft wurden die ersten 250 von 710 Ausschreibungen (Haupt-CPV 909, Q2 2026),
 - Die Basisrate des Prognoseziels liegt in den vollen eForms-Jahren 2024 und 2025 bei **etwa 2.560 bis 2.780 Ausschreibungs-Notices
   pro Jahr** (Haupt-CPV bzw. CPV-Liste). Nach Abzug von etwa 16 % Änderungen wären das grob 2.150 bis 2.350 Verfahren. Das ist eine
   Hochrechnung aus einer nicht zufälligen Teilmenge; die bereinigte Zahl folgt aus dem Download in Schritt 3.
+  _Nachtrag 2026-10-23 (nach Schritt 3 und Evaluation):_ Im vollständigen Q2 2026 sind 159 von 710 Notices Änderungen (22,4 %).
+  Damit ergeben sich grob **1.990–2.160 Verfahren pro Jahr** (2.560 bzw. 2.780 × 0,776). Auch das ist hochgerechnet, aus einem Quartal.
 
 ## Offene Punkte für die nächsten Schritte
 
