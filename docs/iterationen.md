@@ -15,7 +15,7 @@ Regeln:
 |---|---|---|---|---|---|
 | 1 | Machbarkeit der Daten | 1 → 2 | 2026-10-22 | abgeschlossen | Gebäudereinigung als vorläufige Arbeitsnische; **zurück zu Phase 2** (Zielereignis und Rückreichweite prüfen) |
 | 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 | abgeschlossen | **Idee anpassen:** Zuordnung über Auftraggeber verworfen (K2 = 16,7 %); weiter in Phase 2 mit Zuordnung über das Objekt |
-| 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | – | geplant | – |
+| 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-11-15 | läuft | offen |
 | 4 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
 | 5 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
 | 6 | Erster Kundentest | 6 → 1 | – | geplant | – |
@@ -257,3 +257,78 @@ Neue Kriterien und eine harte Abbruchregel (bei geringer Sichtbarkeit: nationale
 - Zweitprüfung: Der Nutzer beurteilt mindestens 20 Paare blind.
 - A11 an einer Zufallsstichprobe prüfen; zuordenbare Paare mit bekanntem Ende zählen (Backtest-Basis laut Projektplan).
 - Parallel in Phase 1: Gespräche mit Reinigungsfirmen (A15).
+
+---
+
+## Iteration 3: Sichtbarkeit der Vorgänger und Zuordnung über das Objekt
+
+**Status:** läuft seit 2026-10-24 (angelegt am 2026-10-23)
+
+**Fokus und Phasen:** Phase 2, Vorarbeit für Phase 3. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) gemäß
+Entscheidung zu Iteration 2: Die erste Prognose (jetzt Iteration 4) folgt erst, wenn eine Zuordnung über das Objekt belegt ist.
+
+**Hypothese** _(vorab festgelegt am 2026-10-23, vor Kenntnis der Ergebnisse)_
+„Für mindestens die Hälfte der eng abgegrenzten deutschen Gebäudereinigungs-Ausschreibungen aus Q3 2026 gibt es auf TED einen
+objektgleichen Vorgänger. Eine einfache Regel über Objektmerkmale ordnet ihn mit mindestens 80 % Präzision zu.“
+
+**Begriffe** _(vorab festgelegt)_
+- **Population:** Ausschreibungen (competition), Auftraggeber DEU, Haupt-CPV 90910/90911/90919, nur Originale (ohne
+  `change-notice-version-identifier`). Ausgeschlossen über eine Stichwortliste im Titel (Bau-, Bauend-, Schimmel-, Fahrzeug- und
+  Industriereinigung, Schädlingsbekämpfung). Die genaue Liste wird in Schritt 1 festgehalten und committet, **bevor** Testdaten
+  angesehen werden.
+- **Entwicklungsdaten:** Ausschreibungen Q2 2026 (inkl. der 30 K2-Paare aus Iteration 2). **Testdaten:** Ausschreibungen Q3 2026
+  (01.07.–30.09.2026). Testprobe: 60 Zufallsfälle (Seed 20261024), höchstens 2 je Auftraggeber.
+- **Vorgänger-Quellen:** Zuschläge **und** frühere Ausschreibungen auf TED, veröffentlicht ab Okt. 2016 und vor der Testausschreibung.
+- **Objektgleich:** gleiche Adresse oder gleicher Liegenschaftsname **und** überlappende Leistungsart (Unterhalts-, Grund-,
+  Glasreinigung). Eigene Kategorie „Teilmenge/Neuzuschnitt“: mindestens ein gemeinsames Objekt; zählt in V1 als gefunden, wird
+  getrennt ausgewiesen. Der Zeitpunkt ist nicht Teil der Definition.
+- **Vorzeitige Neuvergabe:** Der neue Vertrag beginnt mindestens 3 Monate vor dem Ende der Grundlaufzeit des Vorgängers.
+- **Reihenfolge:** (1) Regel auf Entwicklungsdaten bauen und per Commit einfrieren, (2) erst dann Testprobe ziehen, (3) Handsuche
+  mit Protokoll abschließen und committen, **bevor** die Regel auf den Testdaten läuft.
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-10-23)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| V1 Sichtbarkeit | Anteil der 60 Testfälle mit objektgleichem Vorgänger auf TED (Handsuche mit Protokoll) | ≥ 50 % | A3, A9b |
+| V2 Präzision | Anteil korrekter Vorschläge der eingefrorenen Regel auf den Testfällen | ≥ 80 % **und** Wilson-Untergrenze ≥ 60 % | A9b |
+| V3 Trefferquote | Anteil der in V1 gefundenen Vorgänger, die die Regel korrekt findet | ≥ 60 % | A9b |
+| V4 Zweitprüfung | Übereinstimmung zwischen Claude und dem Nutzer bei 20 blind beurteilten Paaren | ≥ 85 % | – |
+| V5 Backtest-Basis | Korrekt zugeordnete Paare mit bestimmbarem Vorgänger-Ende, hochgerechnet (Anteil im Test × Verfahren pro Jahr der Population, aus Q3 2026 × 4) | ≥ 100 pro Jahr | A10 |
+| V6 A11 | Anteil von 30 zufälligen Zuschlägen vor eForms (2018–2023, CPV 909, DEU) mit Laufzeit über `REF_NOTICE` | ≥ 80 % | A11 |
+
+Explorativ mit vorab festgelegter Folge: Anteil vorzeitiger Neuvergaben unter den objektgleichen Paaren mit bekanntem Vorgänger-Ende.
+Über 30 % → Prognoseziel in Phase 1 neu bewerten (A16, A8).
+
+**Was folgt aus welchem Ergebnis**
+- V4 < 85 % → Definition schärfen. V1–V3 gelten nicht, die Messung wird wiederholt.
+- V1 < 30 % → **zurück zu Phase 1:** nationale Quellen oder Prognose aus Auftraggeber-Zyklen (in Iteration 2 vorab als Ausweg genannt).
+- V1 30–50 % → **Idee anpassen:** Teilsegment (z. B. Auftraggeber mit wenigen Verträgen) in Phase 1 festlegen, bevor Phase 3 beginnt.
+- V1 ≥ 50 %, aber V2 oder V3 verfehlt → **in Phase 2/3 bleiben:** ein letzter Verbesserungsversuch der Regel, alternativ Produkt mit
+  manueller Prüfung.
+- V1, V2, V3 und V5 erfüllt (V4 erfüllt) → **weiter zu Phase 3**, danach Iteration 4 (erste Prognose und Backtest).
+- V6 < 80 % → Backtest nur mit eForms-Daten, Verzerrung offen ausweisen; A11 widerlegt.
+
+**Zeitrahmen:** 2026-10-24 bis 2026-11-15, etwa 5–6 Arbeitssitzungen; Nutzer etwa 1 Stunde für V4.
+
+**Plan**
+1. Population und Ausschlussliste festlegen; Q3-2026-Ausschreibungen und alle Gebäudereinigungs-Ausschreibungen seit 2016 laden
+   (Phase 2; `data/raw/…`, `reports/population_iteration3.md`).
+2. Objektmerkmale je Los extrahieren (Titel, Ort, PLZ, Straße): eForms über die API, Notices vor eForms über die XML (nur Kandidaten)
+   (Phase 2/3; `src/objekt_merkmale.py`).
+3. Zuordnungsregel auf Entwicklungsdaten bauen (unscharfer Auftraggebername und/oder gleiche PLZ, Ähnlichkeit von Titel und Adresse,
+   1:1, kein Zeitfenster); Commit = eingefroren (`src/zuordnung_objekt.py`).
+4. Testprobe ziehen, Handsuche mit Protokoll (V1) (`reports/sichtbarkeit_iteration3.md`).
+5. Regel auf Testdaten anwenden (V2, V3, V5, vorzeitige Neuvergaben); Blindprüfung durch den Nutzer (V4)
+   (`reports/zuordnung_iteration3.md`, `reports/blindpruefung_iteration3.md`).
+6. A11-Zufallsstichprobe (V6) (`reports/a11_stichprobe.md`).
+7. Iterationsreport, Evaluator, `/iteration-ende`.
+
+Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsfirmen (A15), auch zur Frage, ob Auftraggeber-Ebene reicht.
+
+**Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
+explorativ); A8 (Hinweis).
+
+**Ergebnis:** offen
+
+**Entscheidung:** offen
