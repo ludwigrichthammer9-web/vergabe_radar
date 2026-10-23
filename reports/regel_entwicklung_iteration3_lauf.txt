@@ -1,0 +1,257 @@
+
+## 272646-2026 (2026-04-21) – die autobahn gmbh des bundes – „Unterhaltsreinigung Niederlassung Nordost in 4 Lose“
+   PLZ ['03050', '10829', '16540', '18273'] | Straßen ['an der autobahn', 'ella barowsky str', 'hermann loens str', 'krakower chausse'] | Objektwörter ['cottbus', 'guestrow', 'niederlassung', 'nordost']
+   Kandidaten 300, Treffer 2
+   → Stufe A words=0.067 street=True plz=True gemeinsam=['nordost'] ['an der autobahn', 'ella barowsky str', 'hermann loens str', 'krakower chausse']
+     686226-2024 (2024-11-11, result, eForms) – die autobahn gmbh des bundes – „Unterhaltsreinigung administrativer Standorte in 10 Losen bundesweit“ | PLZ ['01099', '03050', '06112', '10829'] | Straßen ['alemannenstr', 'am bahnhof', 'an der autobahn', 'augsburger str']
+
+## 274781-2026 (2026-04-22) – bundesrepublik deutschland vertreten durch die bundesministe – „Glasreinigung München“
+   PLZ [] | Straßen [] | Objektwörter []
+   Kandidaten 0, Treffer 0
+   → kein Vorgänger
+
+## 405499-2026 (2026-06-12) – landratsamt heilbronn – „Reinigungsdienstleistungen“
+   PLZ ['74072'] | Straßen ['lerchenstr'] | Objektwörter []
+   Kandidaten 14, Treffer 0
+   → kein Vorgänger
+
+## 264493-2026 (2026-04-17) – landeshauptstadt stuttgart haupt und personalamt abt allgeme – „Glasreinigung für die Einrichtungen des Eigenbetrieb Leben & Wohnen“
+   PLZ ['70173'] | Straßen [] | Objektwörter ['eigenbetrieb', 'leben', 'wohnen']
+   Kandidaten 66, Treffer 0
+   → kein Vorgänger
+
+## 337010-2026 (2026-05-18) – hansestadt demmin der buergermeister – „Reinigungsleistungen städtische Objekte“
+   PLZ [] | Straßen [] | Objektwörter []
+   Kandidaten 2, Treffer 0
+   → kein Vorgänger
+
+## 293322-2026 (2026-04-29) – freistaat bayern vertreten durch das bayerische landesamt fu – „Unterhalts- sowie Glas- und Rahmenreinigung für das LfF München“
+   PLZ ['80538'] | Straßen [] | Objektwörter ['lff']
+   Kandidaten 216, Treffer 0
+   → kein Vorgänger
+
+## 271109-2026 (2026-04-21) – stadt frankfurt am main amt fuer bau und immobilien – „UHR Grundschule Riedberg“
+   PLZ ['60438'] | Straßen ['zur kalbacher hoehe'] | Objektwörter ['riedberg']
+   Kandidaten 196, Treffer 0
+   → kein Vorgänger
+
+## 347467-2026 (2026-05-21) – messe erfurt gmbh – „Messe Erfurt GmbH - Rahmenvertrag Reinigungsleistungen“
+   PLZ ['99094'] | Straßen ['gothaer str'] | Objektwörter []
+   Kandidaten 3, Treffer 0
+   → kein Vorgänger
+
+## 298030-2026 (2026-04-30) – gascade gastransport gmbh – „Unterhaltsreinigung Verwaltungsgebäude“
+   PLZ ['34117', '34119'] | Straßen ['baumbachstr', 'joseph beuys str'] | Objektwörter []
+   Kandidaten 0, Treffer 0
+   → kein Vorgänger
+
+## 225677-2026 (2026-04-01) – behoerde fuer finanzen und bezirke finanzbehoerde – „Glas und Gebäudereinigung in den Physikalischen Instituten der Uni Hamburg, Jungiusstraße “
+   PLZ ['20355'] | Straßen ['jungiusstr'] | Objektwörter ['instituten', 'jungiusstrasse', 'physikalischen', 'uni']
+   Kandidaten 28, Treffer 0
+   → kein Vorgänger
+
+## 309807-2026 (2026-05-06) – technische universitaet braunschweig – „Unterhaltsreinigung Campus Ost 3. Teil“
+   PLZ [] | Straßen [] | Objektwörter ['campus', 'ost']
+   Kandidaten 39, Treffer 14
+   → Stufe T words=1.0 street=False plz=False gemeinsam=['campus', 'ost'] []
+     255177-2022 (2022-05-13, competition, vor eForms) – technische universitaet braunschweig abteilung 39 vergabeste – „Unterhaltsreinigung Campus Ost 3. Teil“ | PLZ ['38106'] | Straßen []
+
+## 236827-2026 (2026-04-08) – stadt frankfurt am main amt fuer bau und immobilien – „UHR IGS Eschersheim“
+   PLZ ['60433'] | Straßen ['zehnmorgenstrasse'] | Objektwörter ['eschersheim']
+   Kandidaten 181, Treffer 0
+   → kein Vorgänger
+
+## 431880-2026 (2026-06-25) – bundeswehr dienstleistungszentrum homberg efze – „6003061639-Gebäudereinigung Frankenberg (Eder)“
+   PLZ ['35066'] | Straßen [] | Objektwörter ['eder', 'frankenberg']
+   Kandidaten 25, Treffer 2
+   → Stufe B words=0.333 street=False plz=False gemeinsam=['eder', 'frankenberg'] []
+     203761-2023 (2023-04-05, result, vor eForms) – bundeswehr dienstleistungszentrum homberg efze – „6002376016-Gebäudereinigung am Bundeswehrstandort Frankenberg (Eder)“ | PLZ [] | Straßen []
+
+## 306349-2026 (2026-05-05) – bundeswehr dienstleistungszentrum kaufbeuren – „Unterhaltsreinigung Kaufbeuren“
+   PLZ [] | Straßen [] | Objektwörter []
+   Kandidaten 10, Treffer 0
+   → kein Vorgänger
+
+## 407388-2026 (2026-06-15) – revg rhein erft verkehrsgesellschaft mbh – „Unterhaltsreinigung sowie Glasreinigung in verschiedenen Objekten der REVG“
+   PLZ ['50169'] | Straßen ['roentgenstrasse'] | Objektwörter ['auftraggeberin', 'aussenstellen', 'betrieb', 'container', 'enthaltenen', 'hauptverwaltung', 'werkstatt']
+   Kandidaten 11, Treffer 0
+   → kein Vorgänger
+
+## 264674-2026 (2026-04-17) – stadt frankfurt am main amt fuer bau und immobilien – „UHR An drei Standorten der Stadtentwässerung Frankfurt am Main“
+   PLZ ['60327', '60528', '65931'] | Straßen ['goldsteinstrasse', 'gutleutstrasse', 'roter weg'] | Objektwörter ['drei', 'stadtentwaesserung']
+   Kandidaten 193, Treffer 0
+   → kein Vorgänger
+
+## 283253-2026 (2026-04-24) – zentrale beschaffungsstelle bei dem landgericht magdeburg – „Offenes Verfahren zur Vergabe von Dienstleistungsverträgen über die Gebäudeinnen- und Sond“
+   PLZ [] | Straßen [] | Objektwörter ['halle', 'justizzentrum']
+   Kandidaten 27, Treffer 4
+   → Stufe B words=0.667 street=False plz=False gemeinsam=['halle', 'justizzentrum'] []
+     583860-2024 (2024-09-27, result, eForms) – zentrale beschaffungsstelle bei dem landgericht magdeburg – „Offenes Vergabeverfahren zur Vergabe von Gebäudereinigungsdientleistungen (Unterhaltsreini“ | PLZ [] | Straßen []
+
+## 291488-2026 (2026-04-28) – leipziger verkehrsbetriebe lvb gmbh bereich einkauf und it – „Unterhaltsreinigungsleistungen an Objekten der L-Gruppe“
+   PLZ ['04103', '04416', '04420', '04425'] | Straßen [] | Objektwörter ['gruppe', 'lww']
+   Kandidaten 6, Treffer 0
+   → kein Vorgänger
+
+## 279763-2026 (2026-04-23) – bundeswehr dienstleistungszentrum veitshoechheim – „Verträge über die Unterhalts-/Sonderreinigungen in Liegenschaften der Bundeswehr (Bereiche“
+   PLZ ['74736', '97209', '97996'] | Straßen [] | Objektwörter ['hardheim', 'niederstetten']
+   Kandidaten 17, Treffer 2
+   → Stufe B words=0.667 street=False plz=False gemeinsam=['hardheim', 'niederstetten'] []
+     400020-2022 (2022-07-22, result, vor eForms) – bundeswehr dienstleistungszentrum veitshoechheim – „Rahmenverträge über die Unterhalts-/Sonderreinigung im Bereich des BwDLZ Veitshöchheim“ | PLZ [] | Straßen []
+
+## 351985-2026 (2026-05-22) – stadt frankfurt am main amt fuer bau und immobilien – „UHR Karl-von-Ibell-Schule“
+   PLZ ['65929'] | Straßen ['schmalkaldener str'] | Objektwörter ['ibell', 'karl']
+   Kandidaten 203, Treffer 0
+   → kein Vorgänger
+
+## 273684-2026 (2026-04-22) – stadt frankfurt am main amt fuer bau und immobilien – „UHR Deutschherrenschule, Sporthalle Süd, Willemerschule“
+   PLZ ['60594'] | Straßen ['willemerstr'] | Objektwörter ['deutschherrenschule', 'sued', 'willemerschule']
+   Kandidaten 195, Treffer 0
+   → kein Vorgänger
+
+## 349980-2026 (2026-05-21) – zentrale vertrags und vergabestelle im geschaeftsbereich der – „Unterhalts- Glas- und Außenbereichsreinigung für das Saarländische Landesarchiv“
+   PLZ ['66133'] | Straßen ['dudweilerstrasse'] | Objektwörter ['landesarchiv', 'saarlaendische']
+   Kandidaten 2, Treffer 0
+   → kein Vorgänger
+
+## 448655-2026 (2026-06-30) – stadt salzgitter – „Unterhaltsreinigung Grundschule Am Sonnenberg“
+   PLZ ['38229'] | Straßen ['sonnenbergweg'] | Objektwörter ['sonnenberg']
+   Kandidaten 24, Treffer 0
+   → kein Vorgänger
+
+## 293724-2026 (2026-04-29) – stadt neumarkt i d opf – „Verwaltungsgebäude III (Rathaus III), Untere Marktstraße 14, Neumarkt i.d.OPf. -Reinigungs“
+   PLZ [] | Straßen ['marktstr'] | Objektwörter ['iii', 'marktstrasse', 'untere']
+   Kandidaten 14, Treffer 0
+   → kein Vorgänger
+
+## 230406-2026 (2026-04-02) – kreisverwaltung mayen koblenz – „Reinigungsdienstleistungen an verschiedenen Schulen im Landkreis Mayen-Koblenz“
+   PLZ [] | Straßen [] | Objektwörter ['andernach', 'bezirk', 'gondorf', 'kobern', 'mendig', 'schulstandorten', 'teilweise', 'untermosel']
+   Kandidaten 17, Treffer 2
+   → Stufe T words=0.0 street=False plz=False gemeinsam=[] []
+     109604-2026 (2026-02-16, result, eForms) – kreisverwaltung mayen koblenz – „Reinigungsdienstleistungen an verschiedenen Schulen im Landkreis Mayen-Koblenz“ | PLZ [] | Straßen []
+
+## 345247-2026 (2026-05-20) – helmholtz zentrum hereon gmbh – „Unterhalts- und Glasreinigung Geesthacht, Gerics und Teltow“
+   PLZ ['14513', '21502'] | Straßen ['kantstrasse', 'max planck str'] | Objektwörter ['gerics', 'teltow']
+   Kandidaten 12, Treffer 0
+   → kein Vorgänger
+
+## 307836-2026 (2026-05-05) – stadt seelze – „Gebäudereinigung Grundschule Seelze-Süd“
+   PLZ ['30926'] | Straßen ['an den grachten'] | Objektwörter ['sued']
+   Kandidaten 12, Treffer 0
+   → kein Vorgänger
+
+## 225076-2026 (2026-04-01) – senatsverwaltung fuer bildung jugend und familie – „Unterhalts-, Grund-, Sonder- und Gästezimmerreinigung des SFBB“
+   PLZ ['10178'] | Straßen [] | Objektwörter ['sfbb']
+   Kandidaten 0, Treffer 0
+   → kein Vorgänger
+
+## 251214-2026 (2026-04-14) – stadt frankfurt am main amt fuer bau und immobilien – „UHR Emma-Kann-Grundschule“
+   PLZ ['60486'] | Straßen ['maastrichter ring'] | Objektwörter ['emma', 'kann']
+   Kandidaten 187, Treffer 0
+   → kein Vorgänger
+
+## 319665-2026 (2026-05-11) – stadt neumuenster fd gebaeudemanagement – „Unterhaltsreinigung an der Grundschule an der Schwale“
+   PLZ [] | Straßen [] | Objektwörter ['schwale']
+   Kandidaten 8, Treffer 0
+   → kein Vorgänger
+
+## 429080-2026 (2026-06-24) – stadt nuernberg zentrale dienste – „Laufende Innen-, Grund-, Glas- und Kehrreinigung in der Grundschule Bartholomäusstraße 16 “
+   PLZ ['90403', '90489'] | Straßen ['bartholomaeusstr'] | Objektwörter ['bartholomaeusstrasse', 'foerderzentrum', 'staatliches']
+   Kandidaten 71, Treffer 0
+   → kein Vorgänger
+
+## 435636-2026 (2026-06-25) – regierung von oberbayern – „Unterhalts- und Glasreinigung Ankerdependance Garmisch-Partenkirchen, Abrams Kaserne“
+   PLZ ['82467'] | Straßen [] | Objektwörter ['abrams', 'ankerdependance', 'garmisch', 'kaserne', 'partenkirchen']
+   Kandidaten 53, Treffer 2
+   → Stufe B words=0.286 street=False plz=False gemeinsam=['garmisch', 'partenkirchen'] []
+     597480-2022 (2022-10-28, result, vor eForms) – regierung von oberbayern sg 14 1 – „Reinigungsdienstleistungen - ANKER-Dependance Garmisch-Partenkirchen“ | PLZ [] | Straßen []
+
+## 353449-2026 (2026-05-22) – stadt ulm zentrale vergabestelle liefer und dienstleistungen – „Offenes Verfahren für die Vergabe der Unterhalts-, Grund- und Glasreinigung der Kita Lette“
+   PLZ ['89073', '89075'] | Straßen [] | Objektwörter ['erika', 'lettenwald', 'schmid', 'weg']
+   Kandidaten 38, Treffer 2
+   → Stufe T words=1.0 street=False plz=True gemeinsam=['erika', 'lettenwald', 'schmid', 'weg'] []
+     317717-2026 (2026-05-08, result, eForms) – stadt ulm zentrale vergabestelle liefer und dienstleistungen – „Offenes Verfahren für die Vergabe der Unterhalts-, Grund- und Glasreinigung der Kita Lette“ | PLZ ['89073', '89075'] | Straßen []
+
+## 415931-2026 (2026-06-17) – gesundheit nord ggmbh klinikverbund bremen bildungsakademie – „Reinigungsdienstleistung für die Bildungsakademie der Gesundheit Nord gGmbH“
+   PLZ [] | Straßen [] | Objektwörter []
+   Kandidaten 4, Treffer 2
+   → Stufe T words=0.0 street=False plz=False gemeinsam=[] []
+     355616-2022 (2022-07-01, result, vor eForms) – gesundheit nord ggmbh klinikverbund bremen – „Reinigungsdienstleistung für die Bildungsakademie der Gesundheit Nord gGmbH“ | PLZ [] | Straßen []
+
+## 300272-2026 (2026-05-04) – magistrat der universitaetsstadt giessen haupt und personala – „Unterhalts- und Grundreinigung an den Sporthallen Liebigschule, Theodor-Litt-Schule und Sp“
+   PLZ ['35390', '35396'] | Straßen ['bismarckstrasse', 'philosophenstrasse', 'ringallee'] | Objektwörter ['liebigschule', 'litt', 'littschule', 'theodor', 'wieseck']
+   Kandidaten 18, Treffer 0
+   → kein Vorgänger
+
+## 252396-2026 (2026-04-14) – oberhavel kliniken gmbh – „Unterhaltsreinigung Oberhavel Kliniken“
+   PLZ ['16761'] | Straßen [] | Objektwörter ['hospiz', 'stationaeres']
+   Kandidaten 2, Treffer 0
+   → kein Vorgänger
+
+## 279013-2026 (2026-04-23) – hochschule darmstadt – „Gebäudereinigung“
+   PLZ [] | Straßen [] | Objektwörter ['b14', 'campus', 'dieburg', 'e10', 'e30', 'e40', 'e41', 'e60']
+   Kandidaten 4, Treffer 2
+   → Stufe B words=0.211 street=False plz=False gemeinsam=['campus', 'dieburg', 'e10', 'e30'] []
+     18399-2021 (2021-01-15, competition, vor eForms) – hochschule darmstadt – „Unterhaltsreinigung an der Hochschule Darmstadt“ | PLZ ['64283', '64295', '64807'] | Straßen ['adelungstr', 'birkenweg', 'haardtring', 'olbichweg']
+
+## 387762-2026 (2026-06-05) – stuttgarter strassenbahnen ag – „Unterhaltsreinigung Gaisburg“
+   PLZ ['70188'] | Straßen ['ulmer str'] | Objektwörter ['gaisburg']
+   Kandidaten 36, Treffer 2
+   → Stufe B words=1.0 street=False plz=False gemeinsam=['gaisburg'] []
+     627394-2025 (2025-09-25, result, eForms) – stuttgarter strassenbahnen ag – „Unterhaltsreinigung in Stuttgart-Gaisburg“ | PLZ ['70186'] | Straßen []
+
+## 232441-2026 (2026-04-03) – zentrale beschaffungsstelle bei dem landgericht magdeburg – „Offenes Verfahren zur Vergabe von Dienstleistungsverträgen über die Gebäudeinnen- und Sond“
+   PLZ [] | Straßen [] | Objektwörter ['aussenstelle', 'landesjustizpruefungsamt', 'ministeriums', 'verbraucherschutz']
+   Kandidaten 25, Treffer 2
+   → Stufe B words=0.167 street=False plz=False gemeinsam=['ministeriums', 'verbraucherschutz'] []
+     257417-2023 (2023-04-28, result, vor eForms) – zentrale beschaffungsstelle bei dem landgericht magdeburg – „Offenes Verfahren zur Vergabe von Gebäudereinigungsleistungen (Unterhalts- und Glasreinigu“ | PLZ ['39104', '39112'] | Straßen ['domplatz', 'klewitzstr']
+
+## 278397-2026 (2026-04-23) – bundesamt fuer soziale sicherung – „Unterhaltsreinigung sowie Glas- und Rahmenreinigung für die Liegenschaft Bonn“
+   PLZ ['53113'] | Straßen ['friedrich ebert allee'] | Objektwörter ['fluren', 'glastueren', 'jaehrlich', 'regelmaessige', 'sanitaeranlagen', 'sonstiger', 'taeglicher']
+   Kandidaten 10, Treffer 0
+   → kein Vorgänger
+
+## 226099-2026 (2026-04-01) – die autobahn gmbh des bundes nl nordost – „PWC-Reinigung AM Fürstenwalde“
+   PLZ [] | Straßen [] | Objektwörter ['fuerstenwalde', 'pwc']
+   Kandidaten 42, Treffer 2
+   → Stufe B words=0.286 street=False plz=False gemeinsam=['fuerstenwalde', 'pwc'] []
+     454573-2022 (2022-08-19, result, vor eForms) – die autobahn gmbh des bundes nl nordost – „PWC-Gebäudereinigung 01.09.2022 bis 31.08.2024“ | PLZ [] | Straßen []
+
+## 226131-2026 (2026-04-01) – gemeinde wenden – „Gebäudereinigung - Gemeinde Wenden“
+   PLZ ['57482'] | Straßen ['gemeinde wenden'] | Objektwörter []
+   Kandidaten 2, Treffer 2
+   → Stufe T words=0.0 street=False plz=False gemeinsam=[] []
+     264073-2017 (2017-07-08, result, vor eForms) – gemeinde wenden – „Gebäudereinigung Gemeinde Wenden.“ | PLZ [] | Straßen []
+
+## 230823-2026 (2026-04-03) – stadt frankfurt am main amt fuer bau und immobilien – „UHR Schillerschule“
+   PLZ ['60596'] | Straßen ['morgensternstrasse'] | Objektwörter ['schillerschule']
+   Kandidaten 179, Treffer 0
+   → kein Vorgänger
+
+## 285673-2026 (2026-04-27) – bezirk oberbayern – „Reinigungsdienstleistungen für die Bezirksverwaltung“
+   PLZ ['80538'] | Straßen [] | Objektwörter ['bezirksverwaltung']
+   Kandidaten 8, Treffer 2
+   → Stufe B words=1.0 street=False plz=True gemeinsam=['bezirksverwaltung'] []
+     400319-2022 (2022-07-22, result, vor eForms) – bezirk oberbayern – „Reinigungsdienstleistungen im Verwaltungsgebäude der Bezirksverwaltung“ | PLZ ['80538', '81539', '81673'] | Straßen ['landstr', 'prinzregentenstr']
+
+## 300897-2026 (2026-05-04) – wissenschaftszentrum berlin fuer sozialforschung ggmbh – „Ausführung von Unterhaltsreinigungsarbeiten“
+   PLZ [] | Straßen [] | Objektwörter ['ausfuehrung']
+   Kandidaten 4, Treffer 4
+   → Stufe T words=1.0 street=False plz=False gemeinsam=['ausfuehrung'] []
+     507058-2022 (2022-09-16, result, vor eForms) – wissenschaftszentrum berlin fuer sozialforschung ggmbh – „Ausführung von Unterhaltsreinigungsarbeiten“ | PLZ [] | Straßen []
+
+## 315594-2026 (2026-05-07) – stadt frankfurt am main amt fuer bau und immobilien – „UHR Niddaschule“
+   PLZ ['65934'] | Straßen ['oeserstrasse'] | Objektwörter ['niddaschule']
+   Kandidaten 199, Treffer 0
+   → kein Vorgänger
+
+## 353523-2026 (2026-05-22) – land hessen vertreten durch das hessische competence center  – „Unterhaltsreinigung Polizeirevier Ost“
+   PLZ ['34123'] | Straßen [] | Objektwörter ['ost', 'polizeirevier']
+   Kandidaten 221, Treffer 2
+   → Stufe B words=0.5 street=False plz=True gemeinsam=['ost', 'polizeirevier'] []
+     769069-2023 (2023-12-19, result, eForms) – land hessen vertreten durch das hessische competence center  – „Unterhaltsreinigung im Polizeirevier Ost, Forstbachweg 80, 34123 Kassel“ | PLZ ['34123'] | Straßen ['forstbachweg']
+
+## 441725-2026 (2026-06-26) – julius kuehn institut jki – „Gebäudeunterhaltsreinigung im JKI Quedlinburg“
+   PLZ [] | Straßen [] | Objektwörter []
+   Kandidaten 24, Treffer 0
+   → kein Vorgänger
