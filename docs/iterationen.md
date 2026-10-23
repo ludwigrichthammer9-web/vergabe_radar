@@ -331,6 +331,11 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsf
 > der Bau der Regel und die Ground Truth personell getrennt (es ist aber dasselbe Modell, also keine echte Zweitmeinung; dafür V4).
 > Entscheidung des Nutzers.
 
+> **Fortschritt 2026-10-23:** Population festgelegt (Commit af36eab), Zuordnungsregel auf Entwicklungsdaten gebaut und eingefroren
+> (Commit 4497743, [regel_entwicklung_iteration3.md](../reports/regel_entwicklung_iteration3.md)), danach Testprobe gezogen
+> ([testfaelle_iteration3.md](../reports/testfaelle_iteration3.md): Population Q3 2026 = 492 Verfahren, 60 Fälle, 54 Auftraggeber).
+> Die Handsuche läuft in 4 Teilen zu je 15 Fällen nacheinander, mit identischem Auftrag an den Rechercheur.
+
 **Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
 explorativ); A8 (Hinweis).
 
