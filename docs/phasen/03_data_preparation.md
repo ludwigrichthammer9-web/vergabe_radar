@@ -14,21 +14,31 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 1, 2026-10-22. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 2 (Abschluss), 2026-10-23. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+
+Phase 3 ist noch nicht richtig begonnen. In Iteration 2 sind aber Bausteine für die Aufbereitung entstanden.
 
 ### Fakten (aus den Daten)
 
-- `data/processed/notices_DEU_20260722_20261021.csv` hat 15.706 Zeilen, eine pro Notice. Erzeugt von
-  `build_table()` in [src/analyze_completeness.py](../../src/analyze_completeness.py).
-- Start- und Enddatum sowie Dauer stammen nur aus dem **ersten Los**. 15,3 % der Notices haben mehrere Lose. [Report §1]
-- Die Laufzeit liegt in drei Formen vor: Dauer mit Einheit DAY/WEEK/MONTH/YEAR (BT-36), Start- und Enddatum (BT-536/537)
-  und „sonstige“ wie UNLIMITED (BT-538). (Rohdaten, Stichprobe)
-- `buyer-name` ist ein mehrsprachiges Feld (`{"deu": [...]}`). Normalisiert wurde nichts. (Rohdaten)
+- `build_table()` in [src/analyze_completeness.py](../../src/analyze_completeness.py) erzeugt eine Tabelle pro Notice. Datumsfelder
+  stammen aus dem ersten Los; 15,3 % der Notices haben mehrere Lose. [R §1]
+- `end_date()` in [src/kennzahlen_iteration2.py](../../src/kennzahlen_iteration2.py) vereinheitlicht das Laufzeitende: Enddatum,
+  sonst Beginn + Dauer; Laufzeiten ≤ 0 oder > 240 Monate werden verworfen.
+  [reports/kennzahlen_iteration2.md](../../reports/kennzahlen_iteration2.md)
+- [src/zuordnung_prototyp.py](../../src/zuordnung_prototyp.py) normalisiert Auftraggebernamen (Kleinschreibung, Umlaute,
+  Satzzeichen) und Kennungen. Exakte Gleichheit verpasst Schreibvarianten (z. B. „Hansestadt Demmin“ vs. „Hansestadt Demmin –
+  Der Bürgermeister“) und trennt nicht zwischen Objekten desselben Auftraggebers.
+  [reports/k2_pruefliste.md](../../reports/k2_pruefliste.md)
+- [src/k2_xml_auszug.py](../../src/k2_xml_auszug.py) liest Titel, Lose, Ort und Laufzeit aus eForms- und alter TED-XML und folgt
+  bei alten Zuschlägen `REF_NOTICE` zur alten Ausschreibung.
+- `buyer-identifier` ist uneinheitlich (Leitweg-ID, USt-ID, UUID, teils Telefonnummer) und teils für mehrere Niederlassungen gleich
+  (Autobahn GmbH). [reports/evaluation_iteration2.md](../../reports/evaluation_iteration2.md)
 
 ### Interpretation
 
-- Die CSV ist ein Analyse-Nebenprodukt, noch kein Vertragsdatensatz für den Backtest.
-- Für den Backtest braucht es eine Tabelle pro Los mit vereinheitlichtem Laufzeitende.
+- Für die Zuordnung über das Objekt braucht es Merkmale auf Los-Ebene (Adresse, Liegenschaftsname, Titel). Bei Notices vor eForms
+  stehen sie nur in der XML.
+- Eine Tabelle pro Los mit vereinheitlichtem Laufzeitende bleibt das Ziel für den Backtest, sobald Phase 2 die Zuordnung klärt.
 
 ## Offene Fragen
 
@@ -37,6 +47,10 @@ _Stand: Iteration 1, 2026-10-22. Dieser Abschnitt wird in jeder Iteration neu ge
 - [ ] Wie werden Verlängerungen aus dem Freitext (BT-54, BT-57) strukturiert erfasst?
 - [ ] Wie werden Auftraggeber normalisiert (gleiche Behörde, unterschiedliche Schreibweisen; ggf. über Kennungen)?
 - [ ] Wie ordnen wir Neuausschreibungen den ursprünglichen Verträgen zu (Annahme A9)?
+  _Stand Iteration 2:_ Über Auftraggeber + CPV nicht (K2 = 16,7 %). Nächster Versuch über das Objekt (A9b), zunächst in Phase 2.
+- [ ] _(neu, Iteration 2)_ Wie werden Adresse, Liegenschaftsname und Titel je Los extrahiert und normalisiert, auch aus alter TED-XML?
+- [ ] _(neu, Iteration 2)_ Wie werden Auftraggeber-Schreibvarianten zusammengeführt (unscharfer Vergleich, ohne Objekte verschiedener
+  Niederlassungen zu vermischen)?
 - [ ] Sollen die Skripte in die Ordnerstruktur aus CRISP-DM.md wandern (`src/ingest/`, `src/prepare/`)?
 - [ ] _(aus Iteration 1)_ Laufzeit aus Beginn/Ende (BT-536/BT-537) als Hauptquelle nutzen, BT-36 nur ergänzend. Bei Dauer ohne
   Beginn eventuell den Vertragsabschluss als Näherung nehmen (Platzhalter wie `AwardDate 2000-01-01` beachten).
@@ -50,6 +64,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | Datum | Iteration | Entscheidung | Begründung |
 |---|---|---|---|
 | – | – | Noch keine Entscheidungen | – |
+| 2026-10-23 | 2 | Zuordnung über Auftraggeber + CPV wird nicht in eine Aufbereitung übernommen; Phase 3 wartet auf die Zuordnung über das Objekt (Iteration 3, Phase 2) | K2 = 16,7 % (reports/ergebnis_iteration2.md) |
 
 ## Iterationslog
 
@@ -62,3 +77,16 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Erkenntnisse – Fakten:** Die Tabelle nutzt bei Datumsfeldern nur das erste Los. Auftraggebernamen sind nicht normalisiert.
 - **Erkenntnisse – Interpretation:** Für den Backtest reicht die Tabelle so nicht aus.
 - **Übergabe an die nächste Phase:** Keine. Phase 3 beginnt richtig in Iteration 2.
+
+### Iteration 2 – 2026-10-23
+
+- **Was gemacht:** Keine eigentliche Aufbereitung. Als Prototypen in Phase 2 entstanden:
+  - einheitliches Laufzeitende (`end_date()` in `src/kennzahlen_iteration2.py`)
+  - Normalisierung von Namen und Kennungen (`src/zuordnung_prototyp.py`)
+  - XML-Auszug für eForms und alte TED-Formulare (`src/k2_xml_auszug.py`)
+- **Erkenntnisse – Fakten:**
+  - Exakte Namensgleichheit verpasst 5 von 15 Vorgängern mit abweichender Schreibweise.
+  - Kennungen sind uneinheitlich bzw. zu grob.
+  - Vor eForms liegen Laufzeit und Objektangaben nur in der XML.
+- **Erkenntnisse – Interpretation:** Für eine Zuordnung über das Objekt braucht es Merkmale auf Los-Ebene und das Lesen der XML.
+- **Übergabe an die nächste Phase:** Keine. Phase 3 beginnt erst, wenn Iteration 3 eine tragfähige Zuordnung zeigt.

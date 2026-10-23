@@ -10,15 +10,18 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 1 (Abschluss), 2026-10-22. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 2 (Abschluss), 2026-10-23. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
 **Arbeitsnische (vorläufig): Gebäudereinigung, Haupt-CPV 909….** Die Wahl beruht nur auf Daten. Kundensicht, Wettbewerb und
-geschäftliche Erfolgskriterien fehlen noch, das Phase-1-Gate aus CRISP-DM.md ist also nicht erfüllt.
+geschäftliche Erfolgskriterien fehlen noch, das Phase-1-Gate aus CRISP-DM.md ist also nicht erfüllt. Nach Iteration 2 wird die
+**Idee angepasst**: Die Prognose soll sich auf das Objekt (Liegenschaft) beziehen, nicht auf den Auftraggeber. Ob das mit TED-Daten
+geht, prüft Iteration 3.
 
 ### Fakten (aus den Daten)
 
 Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_20260722_20261021.md),
-**[E]** = [Evaluation](../../reports/evaluation_iteration1.md). Zeitraum der Daten: Zuschläge vom 22.07. bis 21.10.2026.
+**[E]** = [Evaluation Iteration 1](../../reports/evaluation_iteration1.md), **[RR]** = [rueckreichweite_909.md](../../reports/rueckreichweite_909.md),
+**[Erg]** = [ergebnis_iteration2.md](../../reports/ergebnis_iteration2.md), **[E2]** = [evaluation_iteration2.md](../../reports/evaluation_iteration2.md).
 
 | Nische (Haupt-CPV) | Zuschläge in 3 Monaten | Laufzeitende bestimmbar¹ | 95-%-KI | Median-Laufzeit aus Beginn/Ende | BT-58 > 0 |
 |---|---|---|---|---|---|
@@ -27,21 +30,24 @@ Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_2026
 | Sicherheitsdienste (7971) | 137 | 83,9 % | 76,9–89,2 % | 24 Mon. (n = 115) | 42,3 % |
 | IT-Dienste (72) | 575 | 33,7 % | – | 36 Mon. (n = 185) | 34,3 % |
 | IT-Wartung/Support (503, 7225, 72267) | 47 | 29,8 % | – | 44 Mon. (n = 14) | 29,8 % |
-| Kantinenbetrieb | nicht ausgewertet | | | | |
 
-¹ Enddatum vorhanden oder Beginn und Dauer vorhanden. Quelle: [R §5]; KI aus [E]; BT-58: [R §4].
+¹ Enddatum vorhanden oder Beginn und Dauer vorhanden; Zeitraum 22.07.–21.10.2026. Quelle: [R §5]; KI aus [E].
 
-- 91,8 % der 909-Notices tragen Reinigungs-Codes 90910/90911/90919. [E]
+- Gebäudereinigung auf TED (DEU): 1.250–1.750 Zuschläge und grob 1.990–2.160 ausgeschriebene Verfahren pro Jahr. [RR]
+- Haupt-CPV 909 enthält auch Schädlingsbekämpfung, Fahrzeug- und Industriereinigung sowie einmalige Bau- und Sonderreinigung. [E2]
+- Große Auftraggeber (Städte, BImA, Bundeswehr, Länder) vergeben viele Reinigungsverträge parallel. Eine Zuordnung nur über den
+  Auftraggeber traf in 5 von 30 Fällen den richtigen Vorgänger. [Erg]
+- Unter 6 objektgleichen Paaren waren 3 vorzeitige Neuvergaben. [Erg], [E2]
 - Kundengespräche: 0. Wettbewerberprüfung: nicht begonnen.
 
 ### Interpretation
 
-- Gebäudereinigung ist die häufigste Kandidaten-Nische, rund 3-mal so häufig wie Winterdienst oder Sicherheitsdienste.
-  Bei der Datenqualität unterscheidet sie sich nicht erkennbar von diesen beiden, die Intervalle überlappen. [E]
-- Winterdienst ist im Herbstfenster vermutlich saisonal überzeichnet. [E]
-- IT-Dienste und IT-Wartung geben die Laufzeit meist nur als Dauer ohne Beginn an. Für eine Prognose sind sie ohne Zusatzannahmen
-  ungeeignet.
-- Ob die Nische geschäftlich trägt, also Zahlungsbereitschaft vorhanden ist und Nachfolgeaufträge auf TED sichtbar sind, ist offen.
+- Für Kunden zählt vermutlich, *welcher* Vertrag ausläuft (Objekt, Umfang, Termin), nicht nur, *dass* ein Auftraggeber wieder
+  ausschreibt. Ungeprüft, das sollen Gespräche mit Reinigungsfirmen klären (A15).
+- Eine Variante auf Ebene des Auftraggebers („Stadt X schreibt bald wieder Reinigung aus“) ginge mit den vorhandenen Daten, wäre
+  aber vermutlich weniger wert. Sie bleibt Ausweichoption.
+- Vorzeitige Neuvergaben und Verlängerungen machen das Prognoseziel „Vertragsende minus Vorlauf“ unsicherer als angenommen (A8, A16).
+- Ob die Nische geschäftlich trägt, ist weiterhin offen.
 
 ## Ideen für später
 
@@ -60,6 +66,11 @@ Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_2026
 - [ ] Wie häufig ist Kantinenbetrieb auf TED (CPV noch abzugrenzen)?
 - [ ] Zahlen Reinigungsfirmen für Vorabinformationen über auslaufende Verträge (Annahme A15)? Erste Gespräche mit Reinigungsfirmen.
 - [ ] Liegen Reinigungsaufträge oft unter dem EU-Schwellenwert, sodass Nachfolger nicht auf TED erscheinen (A3)?
+- [ ] _(neu, Iteration 2)_ Brauchen Kunden die Prognose auf Objektebene (welche Liegenschaft, welcher Umfang), oder reicht
+  „Auftraggeber X schreibt bald wieder aus“? In Gesprächen klären (A15).
+- [ ] _(neu, Iteration 2)_ Wie eng wird die Nische gefasst (nur wiederkehrende Unterhalts- und Glasreinigung, ohne
+  Schädlingsbekämpfung, Bau- und Sonderreinigung)? (A12)
+- [ ] _(neu, Iteration 2)_ Ist ein Prognoseziel „Vertragsende minus Vorlauf“ tragfähig, wenn vorzeitige Neuvergaben häufig sind (A8, A16)?
 
 ## Entscheidungen
 
@@ -68,6 +79,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | Datum | Iteration | Entscheidung | Begründung |
 |---|---|---|---|
 | 2026-10-22 | 1 | Gebäudereinigung (Haupt-CPV 909…) wird **vorläufige Arbeitsnische** | Häufigste Kandidaten-Nische (440 Zuschläge in 3 Monaten). Laufzeitende bei 80,9 % bestimmbar (KI 77–84 %), vergleichbar mit Winterdienst und Sicherheit. Rein datengetrieben, Kundensicht fehlt. Siehe reports/evaluation_iteration1.md |
+| 2026-10-23 | 2 | **Idee anpassen:** Prognose auf Objektebene (Liegenschaft) statt auf Auftraggeber-Ebene; Gebäudereinigung bleibt vorläufige Nische, wird aber enger abgegrenzt. Ausweichoptionen (Auftraggeber-Zyklen, nationale Quellen) bleiben bestehen. | Zuordnung über den Auftraggeber K2 = 16,7 %; siehe reports/ergebnis_iteration2.md und reports/evaluation_iteration2.md. Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -95,3 +107,17 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Übergabe an die nächste Phase:** Phase 2 lädt in Iteration 2 Auftragsbekanntmachungen (competition) für CPV 909, klärt die
   Rückreichweite und versucht eine erste Zuordnung von Zuschlag und Neuausschreibung. Parallel in Phase 1: erste Gespräche
   mit Reinigungsfirmen (A15).
+
+### Iteration 2 – 2026-10-23
+
+- **Was gemacht:** Keine eigene Arbeit mit Kunden oder Wettbewerb. Ergebnisse aus Phase 2 für die Ausrichtung ausgewertet.
+- **Erkenntnisse – Fakten:**
+  - Zuordnung über den Auftraggeber: 5 von 30 richtig.
+  - 3 von 6 objektgleichen Paaren sind vorzeitige Neuvergaben.
+  - Haupt-CPV 909 ist breiter als wiederkehrende Gebäudereinigung.
+
+  Quellen: [Erg], [E2].
+- **Erkenntnisse – Interpretation:** Das Produkt muss vermutlich auf Objektebene prognostizieren. Ob TED dafür reicht und ob Kunden
+  das brauchen, ist offen.
+- **Übergabe an die nächste Phase:** Phase 2 (Iteration 3) misst Sichtbarkeit und Zuordnung über das Objekt. Parallel in Phase 1:
+  erste Gespräche mit Reinigungsfirmen (A15), dabei auch fragen, ob Auftraggeber-Ebene reichen würde.

@@ -7,15 +7,18 @@ ausgeschrieben werden, basierend auf Zuschlagsbekanntmachungen aus TED
 Neuausschreibungen vorbereiten wollen (z. B. Gebäudereinigung, IT-Wartung,
 Winterdienst).
 
-## Aktuelle Phase: Iteration 2, Phase 2 (Data Understanding)
-Iteration 1 ist abgeschlossen. Vorläufige Arbeitsnische ist Gebäudereinigung
-(Haupt-CPV 909…). Noch kein Modell. Als Nächstes klären, ob das Zielereignis
-in den Daten sichtbar ist:
-- Erscheinen Neuausschreibungen (Auftragsbekanntmachungen, competition) für
-  CPV 909 auf TED, und lassen sie sich alten Zuschlägen zuordnen?
-- Wie weit zurück sind die Daten brauchbar (eForms seit Herbst 2023)?
-  Reicht das bei rund 36 Monaten Median-Laufzeit für einen Backtest?
-Details: docs/iterationen.md
+## Aktuelle Phase: Iteration 3, Phase 2 (Data Understanding)
+Iteration 2 ist abgeschlossen (Entscheidung: Idee anpassen). Die Zuordnung
+über den Auftraggeber trifft den Vorgänger nur in 17 % der Fälle. Vorläufige
+Arbeitsnische bleibt Gebäudereinigung (Haupt-CPV 909…, enger abzugrenzen).
+Noch kein Modell. Als Nächstes getrennt messen:
+- Gibt es zu Ausschreibungen überhaupt einen objektgleichen Vorgänger auf TED
+  (unter Zuschlägen und früheren Ausschreibungen)?
+- Lässt sich der Vorgänger über das Objekt (Adresse, Liegenschaft, Titel)
+  automatisch zuordnen?
+Bei zu geringer Sichtbarkeit: nationale Quellen oder Auftraggeber-Zyklen.
+Daten: TED-API ab Okt. 2016; vor eForms Laufzeit nur in der XML (REF_NOTICE).
+Details: docs/iterationen.md, reports/ergebnis_iteration2.md
 
 ## Später geplant
 - Nische wählen, Backtest (erwartetes Auslaufdatum vs. tatsächliche

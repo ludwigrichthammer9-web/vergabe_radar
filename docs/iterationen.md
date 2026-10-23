@@ -14,16 +14,19 @@ Regeln:
 | Nr | Fokus | Phasen | Zeitraum | Status | Entscheidung |
 |---|---|---|---|---|---|
 | 1 | Machbarkeit der Daten | 1 → 2 | 2026-10-22 | abgeschlossen | Gebäudereinigung als vorläufige Arbeitsnische; **zurück zu Phase 2** (Zielereignis und Rückreichweite prüfen) |
-| 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 bis 2026-11-08 | läuft | offen |
-| 3 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
-| 4 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
-| 5 | Erster Kundentest | 6 → 1 | – | geplant | – |
-| 6+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
+| 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 | abgeschlossen | **Idee anpassen:** Zuordnung über Auftraggeber verworfen (K2 = 16,7 %); weiter in Phase 2 mit Zuordnung über das Objekt |
+| 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | – | geplant | – |
+| 4 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
+| 5 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
+| 6 | Erster Kundentest | 6 → 1 | – | geplant | – |
+| 7+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
 sind sie um eine Stelle verschoben. Konkretisiert werden sie mit `/iteration-start`.
 _Nachtrag 2026-10-23:_ Die geplanten Zeilen (3 bis 6+) sind an den [Projektplan](projektplan.md) angeglichen, der jetzt eine eigene
 Verbesserungs-Iteration vorsieht.
+_Nachtrag 2026-10-23 (Abschluss Iteration 2):_ Nach der Entscheidung zu Iteration 2 ist eine weitere Phase-2-Iteration (3)
+eingeschoben; die übrigen rücken um eine Stelle.
 
 ---
 
@@ -108,7 +111,7 @@ _Begründung (korrigiert gegenüber dem ersten Entwurf):_
 
 ## Iteration 2: Neuausschreibungen sichtbar und zuordenbar?
 
-**Status:** läuft seit 2026-10-23
+**Status:** abgeschlossen am 2026-10-23
 
 **Fokus und Phasen:** Phase 2 für die Arbeitsnische Gebäudereinigung (Haupt-CPV 909…), dazu ein Zuordnungs-Prototyp als Vorarbeit
 für Phase 3. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan): Die erste Prognose wird verschoben, weil das
@@ -198,6 +201,59 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Reinigungsfirmen für ein 
 
 **Geprüfte Annahmen:** A9 (Hauptannahme), A10, A11, A13; teilweise A3 und A8 (explorativ).
 
-**Ergebnis:** offen
+**Ergebnis**
 
-**Entscheidung:** offen
+Quellen: [Erg] [ergebnis_iteration2.md](../reports/ergebnis_iteration2.md), [E2] [evaluation_iteration2.md](../reports/evaluation_iteration2.md),
+[K] [kennzahlen_iteration2.md](../reports/kennzahlen_iteration2.md), [Z] [zuordnung_iteration2.md](../reports/zuordnung_iteration2.md),
+[P] [k2_pruefliste.md](../reports/k2_pruefliste.md), [RR] [rueckreichweite_909.md](../reports/rueckreichweite_909.md).
+
+_Fakten:_
+
+| | Ergebnis | Schwelle (vorab) | Status |
+|---|---|---|---|
+| K1 | 461 / 551 = 83,7 % (Wilson 80,3–86,5 %) [Z] | ≥ 50 % | erfüllt |
+| K2 | 5 / 30 = 16,7 % (Wilson 7,3–33,6 %); 2 unklar, 23 nein [P] | ≥ 80 % | **nicht erfüllt** |
+| K3 | 2 / 5 [P] | Messwert | nicht interpretierbar (n zu klein) [E2] |
+| K4 | 320 / 390 = 82,1 % (Wilson 77,9–85,5 %) [K] | ≥ 80 % und KI-Untergrenze ≥ 75 % | erfüllt |
+| K5 | 629 [K] | ≥ 100 | erfüllt (formal) |
+
+- Such-API ab Ende Okt. 2016; vor eForms ohne Laufzeit, Haupt-CPV und Kennung. Laufzeit vor eForms über `REF_NOTICE` in der alten
+  Ausschreibung (10 von 10, nicht zufällig). [RR], [Erg]
+- Bestimmbares Laufzeitende 2023/2024 nur ca. 70 %, ab 2025 ca. 80 %. [K]
+- K5-Verträge: Median-Laufzeit 12 Monate, 410 von 629 aus 2024. [K], [E2]
+- K2 nach Kandidatenzahl: 1–2 Kandidaten 3 von 6, mehr als 10 Kandidaten 1 von 15. Typischer Fehler: gleicher Auftraggeber, anderes
+  Objekt. [P]
+- Evaluator: 29 von 30 K2-Urteilen bestätigt. Neu gefunden: A30, der objektgleiche Vorgänger war unter den Kandidaten. 3 von 6
+  objektgleichen Paaren sind vorzeitige Neuvergaben. [E2]
+- K2-Prüfung durch Claude allein (auf Wunsch des Nutzers). Die Schwellen von K2 und K5 standen nachweislich vor den Ergebnissen fest
+  (Commit 3fa8418, 09:26 MESZ). [E2]
+
+_Interpretation:_
+- Die Hypothese ist im Wortlaut bestätigt (K1), sagt aber wenig aus: Große Auftraggeber schreiben ständig Reinigung aus.
+- Über den Auftraggeber lässt sich der Vorgängervertrag nicht zuordnen. Ob die Vorgänger auf TED überhaupt sichtbar sind, wurde
+  nicht gemessen. Die Befunde zeigen in beide Richtungen. [E2]
+- Ein Backtest nur mit eForms-Daten wäre stark verzerrt. Vorzeitige Neuvergaben sind ein Warnsignal für das Prognoseziel (A8, A16).
+
+**Entscheidung:** **Idee anpassen** (Entscheidung des Nutzers, 2026-10-23). Die Zuordnung über den Auftraggeber wird verworfen.
+Iteration 3 bleibt in Phase 2 und misst **getrennt**:
+1. die Sichtbarkeit der Vorgänger (von Hand, unter Zuschlägen und früheren Ausschreibungen),
+2. die Zuordnung über das Objekt (Adresse, Liegenschaft, Titel) auf getrennten Entwicklungs- und Testdaten.
+
+Neue Kriterien und eine harte Abbruchregel (bei geringer Sichtbarkeit: nationale Quellen oder Auftraggeber-Zyklen) werden mit
+`/iteration-start` vorab festgelegt und committet. Nicht weiter zu Phase 3.
+
+> **Abweichung von der vorab festgelegten Regel:** Die Regel „K1 < 25 % oder K2 < 50 % → Idee anpassen / zurück zu Phase 1
+> (Nachfolger auf TED kaum sichtbar, A3)“ ist ausgelöst. Ihre Optionsliste (Facility-Services-Radar, Auftraggeber-Zyklen, nationale
+> Quellen) enthielt eine Zuordnung über das Objekt nicht. Begründung der Abweichung: Die Regel hat zwei Dinge vermengt, nämlich wie
+> gut die Methode trifft (Präzision) und ob die Daten den Vorgänger überhaupt enthalten (Sichtbarkeit). A30 zeigt mindestens einen
+> Fall, in dem die Methode versagte, obwohl die Daten vorhanden waren. Die vorab genannten Optionen bleiben als Ausweg bestehen,
+> falls Iteration 3 eine zu geringe Sichtbarkeit zeigt. [E2]
+
+**Hinweise für Iteration 3** (Vorschläge des Evaluators, [E2]):
+- Population enger fassen (90911/90919, Ausschluss von Bau-, Sonder-, Fahrzeug- und Industriereinigung sowie Schädlingsbekämpfung),
+  anderes Quartal als Q2 2026, höchstens 2 Ausschreibungen je Auftraggeber.
+- „Objektgleich“ vorab definieren; der Zeitpunkt gehört nicht zur Definition.
+- 1:1-Zuordnung ohne Zeitfenster als Auswahlkriterium; frühere Ausschreibungen als Vorgängerquelle einbeziehen.
+- Zweitprüfung: Der Nutzer beurteilt mindestens 20 Paare blind.
+- A11 an einer Zufallsstichprobe prüfen; zuordenbare Paare mit bekanntem Ende zählen (Backtest-Basis laut Projektplan).
+- Parallel in Phase 1: Gespräche mit Reinigungsfirmen (A15).
