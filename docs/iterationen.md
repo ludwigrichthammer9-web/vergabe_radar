@@ -343,6 +343,16 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsf
 > „gefunden“ (objektgleich/teilmenge) gegen „nicht gefunden“ (nicht objektgleich/unklar). Der Lösungsschlüssel liegt lokal in
 > `data/processed/blindpruefung_iteration3_schluessel.csv`, SHA-256 `c45d448c11ab1d2296e63581ec1a0ca258a735d8b6e34757d5dc37556e319eaf`.
 
+> **Nachtrag 2026-10-24 (V4, vor Kenntnis des Schlüssels):** Der Nutzer hat alle 20 Paare angesehen und berichtet pauschal, er hätte
+> jedes Paar als passend oder als unsicher eingestuft. Paarweise erfasst wurde das nicht. Danach hat er Urteilsregeln geschrieben
+> ([urteilsregeln_blindpruefung.md](../reports/urteilsregeln_blindpruefung.md), Version 1). Sie entstanden also **nach** dem ersten
+> Ansehen der Paare und gelten ab diesem Commit unverändert. Weiteres Vorgehen (Entscheidung des Nutzers, als Abweichung dokumentiert):
+> (1) Ein Subagent beurteilt alle 20 Paare nach diesen Regeln in einer eigenen Datei, ohne Zugriff auf Schlüssel, Handsuche und Einzelurteile.
+> Er ist ein zusätzlicher regelbasierter Prüfer und **ersetzt nicht** den Menschen in V4 (dasselbe Modell wie Claude). (2) Der Nutzer
+> trägt seine Urteile nach denselben Regeln in `blindpruefung_iteration3.md` ein, bevor er die Datei des Agenten öffnet. **V4 zählt
+> die Urteile des Nutzers** gegen den Schlüssel (binär wie oben; zusätzlich streng/breit laut Regeln). Die pauschale erste Einschätzung
+> („alle passen“) wird im Ergebnis als Hinweis auf eine zu unscharfe Ausgangsdefinition berichtet.
+
 **Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
 explorativ); A8 (Hinweis).
 
