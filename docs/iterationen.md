@@ -353,6 +353,15 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsf
 > die Urteile des Nutzers** gegen den Schlüssel (binär wie oben; zusätzlich streng/breit laut Regeln). Die pauschale erste Einschätzung
 > („alle passen“) wird im Ergebnis als Hinweis auf eine zu unscharfe Ausgangsdefinition berichtet.
 
+> **Nachtrag 2026-10-24 (Urteilsregeln, vor dem ersten eingetragenen Urteil des Nutzers):** Der Nutzer hat die Regeln zu
+> „Version 1.1“ ausgebaut (u. a. Schwellen für Fläche und Objektlisten, Einzelstandorte, Tendenz bei „unklar“). Sie ersetzt Version 1
+> (eff8f55) und Claudes „Version 2“ (d8eb31f), deren zwei Klarstellungen sie enthält. **Die acht Kalibrierungsbeispiele der
+> Version 1.1 sind die Prüfpaare P1–P8** (Wuppertal, Berlin BGW, Stade/Harburg, Stralsund, Düsseldorf, Esslingen, Saarbrücken,
+> Springe). Nach Regel 1.1 („wird dort nicht gezählt“) fallen sie aus V4 heraus; gewertet werden **P9–P20 (n = 12)**. Die
+> Kalibrierung wurde teils nach Kenntnis der Grenzfall-Hinweise des Subagenten (Version 1) erstellt (z. B. Esslingen, Flächen).
+> Der Lösungsschlüssel ist dem Nutzer weiterhin unbekannt. Die Agentenprüfung nach Version 1 ist mit Version 1.1 nicht direkt
+> vergleichbar.
+
 **Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
 explorativ); A8 (Hinweis).
 
