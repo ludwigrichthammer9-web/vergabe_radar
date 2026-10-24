@@ -22,8 +22,6 @@ import re
 import sys
 from pathlib import Path
 
-from analyze_completeness import RAW_SEARCH_DIR, load_notices
-from zuordnung_objekt import TEST_RUN, Pool
 
 ROOT = Path(__file__).resolve().parent.parent
 LIST = ROOT / "reports" / "blindpruefung_iteration3.md"
@@ -44,6 +42,10 @@ def read_csv(path: Path) -> list[dict]:
 
 
 def build() -> None:
+    # pandas-abhängige Module nur hier laden, damit die Auswertung ohne pandas läuft
+    from analyze_completeness import RAW_SEARCH_DIR, load_notices
+    from zuordnung_objekt import TEST_RUN, Pool
+
     if LIST.exists() or KEY.exists():
         sys.exit("Prüfliste existiert bereits und wird nicht neu erzeugt.")
     gt = {r["T"]: r for r in read_csv(ROOT / "reports" / "sichtbarkeit_iteration3_gt.csv")}
@@ -87,28 +89,66 @@ def build() -> None:
     print(f"Prüfliste: {LIST}\nSchlüssel: {KEY}\nSHA-256 Schlüssel: {digest}")
 
 
-def evaluate() -> None:
+def parse_judgments(text: str) -> dict[str, tuple[str, str]]:
+    """Urteil je Paar aus einer Prüfdatei: (Kategorie, Sicherheit). Erkennt z. B. „objektgleich (mittel)“, „nicht objektgleich“."""
+    out = {}
+    for p, block in re.findall(r"(?:###\s*|Paar:\s*)(P?\d+)\b(.*?)(?=\n(?:###\s*|Paar:\s*)P?\d+\b|\Z)", text, re.S):
+        p = p if p.startswith("P") else f"P{p}"
+        m = re.search(r"Urteil:\s*\**\s*([^\n]*)", block)
+        if not m:
+            continue
+        line = m.group(1).lower()
+        if "nicht objektgleich" in line:
+            cat = "nicht objektgleich"
+        elif "teilmenge" in line:
+            cat = "teilmenge"
+        elif "objektgleich" in line:
+            cat = "objektgleich"
+        elif "unklar" in line:
+            cat = "unklar"
+        else:
+            continue
+        sicher = "hoch" if "hoch" in line else ("mittel" if "mittel" in line else "")
+        if cat == "objektgleich" and not sicher:
+            s = re.search(r"Sicherheit:\s*\**\s*(hoch|mittel)", block, re.I)
+            sicher = s.group(1).lower() if s else ""
+        out[p] = (cat, sicher)
+    return out
+
+
+def evaluate(path: Path = LIST, label: str = "Nutzer") -> None:
     key = {r["P"]: r for r in read_csv(KEY)}
-    text = LIST.read_text(encoding="utf-8")
-    user = dict(re.findall(r"### (P\d+)\n(?:.*\n){2}- Urteil: *\**([a-zA-ZäöüÄÖÜ ]+?)\**\s*\n", text))
-    missing = [p for p in key if not user.get(p, "").strip()]
+    user = parse_judgments(path.read_text(encoding="utf-8"))
+    missing = [p for p in key if p not in user]
     if missing:
-        sys.exit(f"Noch nicht beurteilt: {', '.join(missing)}")
+        sys.exit(f"Noch nicht beurteilt ({label}): {', '.join(missing)}")
     agree = 0
     for p, r in key.items():
-        u = user[p].strip().lower()
-        u_bin = "gefunden" if u in ("objektgleich", "teilmenge") else "nicht"
+        cat, sicher = user[p]
+        u_bin = "gefunden" if cat in ("objektgleich", "teilmenge") else "nicht"
         agree += u_bin == r["claude"]
-        print(f"{p} {r['T']:4} Nutzer: {u:20} → {u_bin:9} | Claude: {r['claude']:9} ({r['quelle']}) {'✓' if u_bin == r['claude'] else '✗'}")
-    print(f"\nV4 Übereinstimmung: {agree}/{len(key)} = {agree / len(key) * 100:.0f} % (Schwelle ≥ 85 %)")
+        shown = f"{cat} ({sicher})" if sicher else cat
+        print(f"{p:4} {r['T']:4} {label}: {shown:22} → {u_bin:9} | Claude: {r['claude']:9} ({r['quelle']}) "
+              f"{'✓' if u_bin == r['claude'] else '✗'}")
+    n = len(key)
+    print(f"\nV4-Zählweise (binär, vorab festgelegt): Übereinstimmung {agree}/{n} = {agree / n * 100:.0f} % (Schwelle ≥ 85 %)")
+    # Spanne laut urteilsregeln_blindpruefung.md, Schritt 4: Anteil „gefunden“ aus Sicht dieses Prüfers
+    strict = sum(1 for c, s in user.values() if c == "objektgleich" and s == "hoch")
+    broad_hits = sum(1 for c, _ in user.values() if c in ("objektgleich", "teilmenge"))
+    broad_base = sum(1 for c, _ in user.values() if c != "unklar")
+    print(f"Regeln Schritt 4 – streng: {strict}/{n} objektgleich (hoch); breit: {broad_hits}/{broad_base} (ohne {n - broad_base} unklar)")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--auswerten", action="store_true")
+    parser.add_argument("--datei", help="andere Prüfdatei auswerten, z. B. reports/blindpruefung_iteration3_agent.md")
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
-    evaluate() if args.auswerten else build()
+    if args.auswerten:
+        evaluate(ROOT / args.datei, "Agent") if args.datei else evaluate()
+    else:
+        build()
 
 
 if __name__ == "__main__":
