@@ -133,3 +133,56 @@ Der Zeitpunkt spielt keine Rolle. Rechne mit etwa 3 Minuten je Paar.
 - Urteil: 
 - Begründung: 
 
+
+## Ergänzung: P21–P28 (2026-10-24)
+
+P1–P8 sind Kalibrierungsbeispiele der Urteilsregeln (Version 1.1) und zählen nicht. Diese 8 Paare ersetzen sie.
+
+### P21
+- Ausschreibung (neu): [571136-2026](https://ted.europa.eu/de/notice/-/detail/571136-2026) – „Gebäudereinigung (nur Unterhaltsreinigung ohne Glasflächenreinigung) am Standort Bogen ab 01.02.2027 (4 Jahre)“
+- Möglicher Vorgänger: [676959-2022](https://ted.europa.eu/de/notice/-/detail/676959-2022) – „(Titel siehe Link)“
+- Urteil: 
+- Begründung: 
+
+### P22
+- Ausschreibung (neu): [613923-2026](https://ted.europa.eu/de/notice/-/detail/613923-2026) – „Reinigungsleistungen in verschiedenen Einrichtungen der Verbandsgemeinde Freinsheim“
+- Möglicher Vorgänger: [285864-2022](https://ted.europa.eu/de/notice/-/detail/285864-2022) – „(Titel siehe Link)“
+- Urteil: 
+- Begründung: 
+
+### P23
+- Ausschreibung (neu): [508130-2026](https://ted.europa.eu/de/notice/-/detail/508130-2026) – „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Treppenhaus- und Glasreinigungsleistungen) für “
+- Möglicher Vorgänger: [156628-2026](https://ted.europa.eu/de/notice/-/detail/156628-2026) – „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterhalts- und Glasreinigungsleistungen) für e“
+- Urteil: 
+- Begründung: 
+
+### P24
+- Ausschreibung (neu): [564026-2026](https://ted.europa.eu/de/notice/-/detail/564026-2026) – „Gebäude- und Glasreinigung der Justizbehörden Amberg“
+- Möglicher Vorgänger: [431363-2021](https://ted.europa.eu/de/notice/-/detail/431363-2021) – „(Titel siehe Link)“
+- Urteil: 
+- Begründung: 
+
+### P25
+- Ausschreibung (neu): [673994-2026](https://ted.europa.eu/de/notice/-/detail/673994-2026) – „26E70241 - Amtsgericht Goslar, Amtsgericht Seesen und Finanzamt Goslar/GAN (UR/GlasR) - Unterhalts- und Glasreinigung“
+- Möglicher Vorgänger: [495197-2026](https://ted.europa.eu/de/notice/-/detail/495197-2026) – „26E70164 - NLStBV GAN (UR/GlasR) und NLWKN Hildesheim (UR) - Unterhalts- und Glasreinigung“
+- Urteil: 
+- Begründung: 
+
+### P26
+- Ausschreibung (neu): [638682-2026](https://ted.europa.eu/de/notice/-/detail/638682-2026) – „Unterhalts-, Sonder- und teilweise Ergänzungsreinigung in 8 Objekten der Stadt Bielefeld für den Zeitraum vom 01.02.2027“
+- Möglicher Vorgänger: [503868-2026](https://ted.europa.eu/de/notice/-/detail/503868-2026) – „Unterhalts-, Sonder- und teilweise Ergänzungsreinigung in 8 Objekten der Stadt Bielefeld für den Zeitraum vom 01.06.2026“
+- Urteil: 
+- Begründung: 
+
+### P27
+- Ausschreibung (neu): [609162-2026](https://ted.europa.eu/de/notice/-/detail/609162-2026) – „Unterhalts-, Grund- und Glasreinigung im Rathaus und Gewandhaus der Stadt Zeitz, Altmarkt 1 und Altmarkt 16 in 06712 Zei“
+- Möglicher Vorgänger: [669356-2022](https://ted.europa.eu/de/notice/-/detail/669356-2022) – „(Titel siehe Link)“
+- Urteil: 
+- Begründung: 
+
+### P28
+- Ausschreibung (neu): [533980-2026](https://ted.europa.eu/de/notice/-/detail/533980-2026) – „Gebäudereinigung Verwaltungsobjekte“
+- Möglicher Vorgänger: [524790-2022](https://ted.europa.eu/de/notice/-/detail/524790-2022) – „(Titel siehe Link)“
+- Urteil: 
+- Begründung: 
+

@@ -361,6 +361,11 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsf
 > Kalibrierung wurde teils nach Kenntnis der Grenzfall-Hinweise des Subagenten (Version 1) erstellt (z. B. Esslingen, Flächen).
 > Der Lösungsschlüssel ist dem Nutzer weiterhin unbekannt. Die Agentenprüfung nach Version 1 ist mit Version 1.1 nicht direkt
 > vergleichbar.
+> **Ergänzung (Entscheidung des Nutzers):** 8 Ersatzpaare P21–P28 in derselben Zusammensetzung wie P1–P8 (4 „gefunden“, 4 „nicht“),
+> nur aus Testfällen, die in keinem anderen Paar vorkommen (`--ergaenzen`, Seed 20261025). Schlüssel lokal in
+> `data/processed/blindpruefung_iteration3_schluessel_ergaenzung.csv`, SHA-256
+> `59672f7ece76b5f6e8c54f3c7e43d653197cda4f23939bf3daf66778727ab4f2`. **V4 wird über P9–P28 (n = 20) gezählt.** Der Subagent
+> beurteilt P9–P28 erneut nach Version 1.1 (eigene Datei).
 
 **Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
 explorativ); A8 (Hinweis).

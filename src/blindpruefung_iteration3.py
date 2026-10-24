@@ -89,6 +89,66 @@ def build() -> None:
     print(f"Prüfliste: {LIST}\nSchlüssel: {KEY}\nSHA-256 Schlüssel: {digest}")
 
 
+KEY2 = ROOT / "data" / "processed" / "blindpruefung_iteration3_schluessel_ergaenzung.csv"
+CALIBRATION = {f"P{i}" for i in range(1, 9)}  # Kalibrierungsbeispiele der Urteilsregeln Version 1.1, zählen nicht
+NOT_POOL = {"T23": "821004-2025", "T24": "495197-2026", "T43": "156628-2026", "T46": "503868-2026",  # Einzelurteil falsch
+            "T60": "524790-2022",  # Einzelurteil unklar
+            "T28": "691452-2023", "T51": "483870-2026"}  # Handsuche unklar
+
+
+def load_raw(run: str) -> dict[str, dict]:
+    """Rohdaten einer Suche ohne pandas einlesen (pandas ist zeitweise durch Windows blockiert)."""
+    import json
+    out = {}
+    for page in sorted((ROOT / "data" / "raw" / "ted_search" / run).glob("page_*.json")):
+        for n in json.loads(page.read_text(encoding="utf-8")).get("notices", []):
+            out[n["publication-number"]] = n
+    return out
+
+
+def title_of(n: dict | None) -> str:
+    t = (n or {}).get("title-proc") or {}
+    return t.get("deu", "") if isinstance(t, dict) else ""
+
+
+def extend() -> None:
+    """Ergänzung (2026-10-24): 8 neue Paare P21–P28 als Ersatz für die Kalibrierungspaare P1–P8.
+
+    Gleiche Zusammensetzung wie P1–P8 (4 „gefunden“, 4 „nicht“), nur aus Testfällen, die noch in keinem Paar vorkommen.
+    """
+    if KEY2.exists():
+        sys.exit("Ergänzung existiert bereits und wird nicht neu erzeugt.")
+    gt = {r["T"]: r for r in read_csv(ROOT / "reports" / "sichtbarkeit_iteration3_gt.csv")}
+    used = {r["T"] for r in read_csv(KEY)}
+    rng = random.Random(SEED + 1)
+    nicht = rng.sample(sorted((t for t in NOT_POOL if t not in used), key=lambda t: int(t[1:])), 4)
+    found_pool = sorted((t for t, r in gt.items() if r["vorgaenger"] and t not in used and t not in nicht), key=lambda t: int(t[1:]))
+    gefunden = rng.sample(found_pool, 4)
+    pairs = [(t, gt[t]["vorgaenger"].split()[0], "gefunden", "Handsuche") for t in gefunden]
+    pairs += [(t, NOT_POOL[t], "nicht", "Einzelurteil" if t in ("T23", "T24", "T43", "T46", "T60") else "Handsuche unklar")
+              for t in nicht]
+    rng.shuffle(pairs)
+
+    tests = load_raw("DEU_competition_cpv9091main_20260701_20260930")
+    pool = {**load_raw("DEU_result_cpv909_20161001_20260930"), **load_raw("DEU_competition_cpv909_20161001_20260930")}
+    out = ["", "## Ergänzung: P21–P28 (2026-10-24)", "",
+           "P1–P8 sind Kalibrierungsbeispiele der Urteilsregeln (Version 1.1) und zählen nicht. Diese 8 Paare ersetzen sie.", ""]
+    keyrows = []
+    for i, (t, pn, key, source) in enumerate(pairs, 21):
+        tn = gt[t]["notice"]
+        out += [f"### P{i}",
+                f"- Ausschreibung (neu): [{tn}]({TED.format(tn)}) – „{title_of(tests.get(tn))[:120]}“",
+                f"- Möglicher Vorgänger: [{pn}]({TED.format(pn)}) – „{title_of(pool.get(pn))[:120] or '(Titel siehe Link)'}“",
+                "- Urteil: ", "- Begründung: ", ""]
+        keyrows.append([f"P{i}", t, tn, pn, key, source])
+    with LIST.open("a", encoding="utf-8") as fh:
+        fh.write("\n".join(out) + "\n")
+    with KEY2.open("w", newline="", encoding="utf-8") as fh:
+        csv.writer(fh, delimiter=";").writerows([["P", "T", "notice", "kandidat", "claude", "quelle"]] + keyrows)
+    print(f"Ergänzt: {', '.join(r[0] + '=' + r[1] for r in keyrows)}")
+    print(f"SHA-256 Ergänzungsschlüssel: {hashlib.sha256(KEY2.read_bytes()).hexdigest()}")
+
+
 def parse_judgments(text: str) -> dict[str, tuple[str, str]]:
     """Urteil je Paar aus einer Prüfdatei: (Kategorie, Sicherheit). Erkennt z. B. „objektgleich (mittel)“, „nicht objektgleich“."""
     out = {}
@@ -112,13 +172,18 @@ def parse_judgments(text: str) -> dict[str, tuple[str, str]]:
         if cat == "objektgleich" and not sicher:
             s = re.search(r"Sicherheit:\s*\**\s*(hoch|mittel)", block, re.I)
             sicher = s.group(1).lower() if s else ""
+        if cat == "unklar":
+            tend = re.search(r"eher\s+(dafür|dagegen)", block, re.I)
+            sicher = f"eher {tend.group(1).lower()}" if tend else "keine Tendenz"
         out[p] = (cat, sicher)
     return out
 
 
 def evaluate(path: Path = LIST, label: str = "Nutzer") -> None:
-    key = {r["P"]: r for r in read_csv(KEY)}
-    user = parse_judgments(path.read_text(encoding="utf-8"))
+    key = {r["P"]: r for r in read_csv(KEY) if r["P"] not in CALIBRATION}
+    if KEY2.exists():
+        key.update({r["P"]: r for r in read_csv(KEY2)})
+    user = {p: v for p, v in parse_judgments(path.read_text(encoding="utf-8")).items() if p in key}
     missing = [p for p in key if p not in user]
     if missing:
         sys.exit(f"Noch nicht beurteilt ({label}): {', '.join(missing)}")
@@ -136,16 +201,24 @@ def evaluate(path: Path = LIST, label: str = "Nutzer") -> None:
     strict = sum(1 for c, s in user.values() if c == "objektgleich" and s == "hoch")
     broad_hits = sum(1 for c, _ in user.values() if c in ("objektgleich", "teilmenge"))
     broad_base = sum(1 for c, _ in user.values() if c != "unklar")
-    print(f"Regeln Schritt 4 – streng: {strict}/{n} objektgleich (hoch); breit: {broad_hits}/{broad_base} (ohne {n - broad_base} unklar)")
+    print(f"Regeln Schritt 5 – streng: {strict}/{n} objektgleich (hoch); breit: {broad_hits}/{broad_base} (ohne {n - broad_base} unklar)")
+    tend_hits = broad_hits + sum(1 for c, s in user.values() if c == "unklar" and s == "eher dafür")
+    tend_base = sum(1 for c, s in user.values() if not (c == "unklar" and s == "keine Tendenz"))
+    print(f"Zusatz mit Tendenz: {tend_hits}/{tend_base} (ohne {n - tend_base} „unklar, keine Tendenz“)")
+    print("Anzahl je Urteil:", dict(sorted(__import__("collections").Counter(
+        f"{c} ({s})" if s else c for c, s in user.values()).items())))
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--auswerten", action="store_true")
+    parser.add_argument("--ergaenzen", action="store_true", help="8 Ersatzpaare P21–P28 anhängen (einmalig)")
     parser.add_argument("--datei", help="andere Prüfdatei auswerten, z. B. reports/blindpruefung_iteration3_agent.md")
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
-    if args.auswerten:
+    if args.ergaenzen:
+        extend()
+    elif args.auswerten:
         evaluate(ROOT / args.datei, "Agent") if args.datei else evaluate()
     else:
         build()
