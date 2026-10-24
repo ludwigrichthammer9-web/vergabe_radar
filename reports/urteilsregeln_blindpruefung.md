@@ -1,6 +1,12 @@
 # Urteilsregeln für die Blindprüfung der Zuordnung
 
-**Version 1, 2026-10-24.** Gilt für die Blindprüfung in Iteration 3 (20 Paare aus Zuschlag und möglicher Neuausschreibung).
+**Version 2, 2026-10-24.** Gilt für die Blindprüfung in Iteration 3 (20 Paare aus Zuschlag und möglicher Neuausschreibung).
+
+_Änderung gegenüber Version 1 (Entscheidung des Nutzers, vor dem ersten eingetragenen Urteil des Nutzers):_ Zwei Klarstellungen
+unter „Hinweise zum Vergleich“ (Stufe C ist weder Widerspruch noch Ausgleich; abweichende Anschrift des Beschaffers). Grund: Ein
+abweichender CPV, Name oder Titel sollte nicht als Widerspruch gelten, und eine Übereinstimmung in Stufe C darf einen Widerspruch in
+A oder B nicht aufwiegen. Version 1 ist in Git erhalten (Commit eff8f55). Der Subagent hat die 20 Paare nach Version 1 beurteilt
+(`blindpruefung_iteration3_agent.md`); die neuen Zeilen präzisieren nur, sie ändern keine Urteilsstufe.
 
 ## Zweck
 
@@ -32,6 +38,10 @@ Hinweise zum Vergleich:
 - Abweichende Namen desselben Auftraggebers (andere Abteilung, andere Schreibweise) sind **kein** Widerspruch, solange die Stadt
   oder Körperschaft dieselbe ist.
 - Eine andere **Vertragsform** (Einzelvertrag gegenüber Rahmenvereinbarung) ist kein Widerspruch zum Objekt.
+- Ein abweichender Wert in **Stufe C** (CPV, Name, Titel) ist kein Widerspruch. Eine Übereinstimmung in Stufe C gleicht einen
+  Widerspruch in Stufe A oder B nicht aus.
+- Eine abweichende **Anschrift des Beschaffers** (Sitz der Vergabestelle) bei gleicher Körperschaft ist kein Widerspruch.
+  Maßgeblich ist der Ort der Leistung, nicht die Adresse des Auftraggebers.
 - Details, die nur in **Anlagen** stehen (Flächenverzeichnis, Leistungsverzeichnis), die man nicht einsehen kann, zählen als nicht vergleichbar.
 
 ## Schritt 2: Urteil ableiten

@@ -345,7 +345,7 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsf
 
 > **Nachtrag 2026-10-24 (V4, vor Kenntnis des Schlüssels):** Der Nutzer hat alle 20 Paare angesehen und berichtet pauschal, er hätte
 > jedes Paar als passend oder als unsicher eingestuft. Paarweise erfasst wurde das nicht. Danach hat er Urteilsregeln geschrieben
-> ([urteilsregeln_blindpruefung.md](../reports/urteilsregeln_blindpruefung.md), Version 1). Sie entstanden also **nach** dem ersten
+> ([urteilsregeln_blindpruefung.md](../reports/urteilsregeln_blindpruefung.md), Version 1; am selben Tag Version 2 mit zwei Klarstellungen, Details in der Datei). Sie entstanden also **nach** dem ersten
 > Ansehen der Paare und gelten ab diesem Commit unverändert. Weiteres Vorgehen (Entscheidung des Nutzers, als Abweichung dokumentiert):
 > (1) Ein Subagent beurteilt alle 20 Paare nach diesen Regeln in einer eigenen Datei, ohne Zugriff auf Schlüssel, Handsuche und Einzelurteile.
 > Er ist ein zusätzlicher regelbasierter Prüfer und **ersetzt nicht** den Menschen in V4 (dasselbe Modell wie Claude). (2) Der Nutzer
