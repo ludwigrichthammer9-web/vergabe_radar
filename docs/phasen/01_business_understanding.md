@@ -10,18 +10,20 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 2 (Abschluss), 2026-10-23. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 3 (Abschluss), 2026-10-25. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Arbeitsnische (vorläufig): Gebäudereinigung, Haupt-CPV 909….** Die Wahl beruht nur auf Daten. Kundensicht, Wettbewerb und
-geschäftliche Erfolgskriterien fehlen noch, das Phase-1-Gate aus CRISP-DM.md ist also nicht erfüllt. Nach Iteration 2 wird die
-**Idee angepasst**: Die Prognose soll sich auf das Objekt (Liegenschaft) beziehen, nicht auf den Auftraggeber. Ob das mit TED-Daten
-geht, prüft Iteration 3.
+**Arbeitsnische (vorläufig): Gebäudereinigung, Haupt-CPV 90910/90911/90919.** Die Prognose soll sich auf das Objekt (Liegenschaft)
+beziehen. Iteration 3 zeigt: Vorgänger sind auf TED oft sichtbar, eine einfache automatische Zuordnung gelingt aber nicht. Deshalb
+kommt eine zweite Produktvariante ins Spiel, das **Produkt mit manueller Prüfung** (Kandidaten automatisch, Prüfung von Hand). Das
+Phase-1-Gate aus CRISP-DM.md ist weiterhin nicht erfüllt: Kundensicht und geschäftliche Erfolgskriterien fehlen.
 
 ### Fakten (aus den Daten)
 
 Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_20260722_20261021.md),
 **[E]** = [Evaluation Iteration 1](../../reports/evaluation_iteration1.md), **[RR]** = [rueckreichweite_909.md](../../reports/rueckreichweite_909.md),
-**[Erg]** = [ergebnis_iteration2.md](../../reports/ergebnis_iteration2.md), **[E2]** = [evaluation_iteration2.md](../../reports/evaluation_iteration2.md).
+**[Erg]** = [ergebnis_iteration2.md](../../reports/ergebnis_iteration2.md), **[E2]** = [evaluation_iteration2.md](../../reports/evaluation_iteration2.md),
+**[Z3]** = [zuordnung_iteration3.md](../../reports/zuordnung_iteration3.md), **[E3]** = [evaluation_iteration3.md](../../reports/evaluation_iteration3.md),
+**[B]** = [business.md](../business.md), **[AW]** = [auftragswerte_909.md](../../reports/auftragswerte_909.md).
 
 | Nische (Haupt-CPV) | Zuschläge in 3 Monaten | Laufzeitende bestimmbar¹ | 95-%-KI | Median-Laufzeit aus Beginn/Ende | BT-58 > 0 |
 |---|---|---|---|---|---|
@@ -34,20 +36,27 @@ Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_2026
 ¹ Enddatum vorhanden oder Beginn und Dauer vorhanden; Zeitraum 22.07.–21.10.2026. Quelle: [R §5]; KI aus [E].
 
 - Gebäudereinigung auf TED (DEU): 1.250–1.750 Zuschläge und grob 1.990–2.160 ausgeschriebene Verfahren pro Jahr. [RR]
-- Haupt-CPV 909 enthält auch Schädlingsbekämpfung, Fahrzeug- und Industriereinigung sowie einmalige Bau- und Sonderreinigung. [E2]
-- Große Auftraggeber (Städte, BImA, Bundeswehr, Länder) vergeben viele Reinigungsverträge parallel. Eine Zuordnung nur über den
-  Auftraggeber traf in 5 von 30 Fällen den richtigen Vorgänger. [Erg]
-- Unter 6 objektgleichen Paaren waren 3 vorzeitige Neuvergaben. [Erg], [E2]
-- Kundengespräche: 0. Wettbewerberprüfung: nicht begonnen.
+  Population Q3 2026 (eng abgegrenzt): 492 Ausschreibungsverfahren. [Z3]
+- **Sichtbarkeit:** 63,3 % der Ausschreibungen haben einen objektgleichen Vorgänger oder einen mit gemeinsamem Objekt auf TED, nur
+  objektgleich 48,3 %. **Automatische Zuordnung:** Präzision 45,8 %, Trefferquote 28,9 %. [Z3], [E3]
+- Unter den gefundenen Paaren sind vorzeitige Neuvergaben selten (2/36); Neuvergaben nach der Grundlaufzeit, aber vor dem Höchstende,
+  kommen öfter vor (mindestens 6). [E3]
+- Auftragswerte (eForms-Zuschläge 2024–2025, plausible Werte): Median 421.713 € je Auftrag, 167.404 € pro Jahr. [AW]
+- Zielgruppe Oberpfalz: 70 TED-Zuschläge seit eForms, 71 Firmen. Gesprächsleitfaden liegt vor. [B]
+- Ausschreibungsdienste DTAD und subreport (laut Vergleichsseiten 84–198 €/Monat); ein deutscher Dienst für auslaufende Verträge wurde
+  in zwei Suchen nicht gefunden; in Großbritannien bewirbt Stotles „expiring contracts“ ab 50 £ pro Nutzer und Monat. [B]
+- Kundengespräche: 0.
 
 ### Interpretation
 
-- Für Kunden zählt vermutlich, *welcher* Vertrag ausläuft (Objekt, Umfang, Termin), nicht nur, *dass* ein Auftraggeber wieder
-  ausschreibt. Ungeprüft, das sollen Gespräche mit Reinigungsfirmen klären (A15).
-- Eine Variante auf Ebene des Auftraggebers („Stadt X schreibt bald wieder Reinigung aus“) ginge mit den vorhandenen Daten, wäre
-  aber vermutlich weniger wert. Sie bleibt Ausweichoption.
-- Vorzeitige Neuvergaben und Verlängerungen machen das Prognoseziel „Vertragsende minus Vorlauf“ unsicherer als angenommen (A8, A16).
-- Ob die Nische geschäftlich trägt, ist weiterhin offen.
+- Für Kunden zählt vermutlich, *welcher* Vertrag ausläuft (Objekt, Umfang, Termin). Ungeprüft, das sollen Gespräche klären (A15).
+- **Ein Produkt mit manueller Prüfung ist eine ernsthafte Alternative.** Bei 46 % Präzision liefert die Regel Kandidaten, die ein
+  Mensch prüfen muss. Offen ist, wie viel Prüfaufwand je Fall entsteht und ob ein Kunde das Ergebnis dann noch günstig genug bekommt.
+- Eine Variante auf Ebene des Auftraggebers („Stadt X schreibt bald wieder aus“) bleibt Ausweichoption.
+- Das Warnsignal zu vorzeitigen Neuvergaben aus Iteration 2 hat sich nicht bestätigt; die Frage verschiebt sich zu „Grundlaufzeit
+  oder Höchstende?“ (A8, A16).
+- Der Wert eines Auftrags (etwa 167.000 € pro Jahr) ist groß gegenüber einem Dienst für 50–200 € im Monat. Ob ein früher Hinweis die
+  Gewinnchance erhöht, ist ohne Gespräche nicht belegt.
 
 ## Ideen für später
 
@@ -71,6 +80,10 @@ Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_2026
 - [ ] _(neu, Iteration 2)_ Wie eng wird die Nische gefasst (nur wiederkehrende Unterhalts- und Glasreinigung, ohne
   Schädlingsbekämpfung, Bau- und Sonderreinigung)? (A12)
 - [ ] _(neu, Iteration 2)_ Ist ein Prognoseziel „Vertragsende minus Vorlauf“ tragfähig, wenn vorzeitige Neuvergaben häufig sind (A8, A16)?
+  _Stand Iteration 3:_ Vorzeitig gegen die Grundlaufzeit nur 2/36 (Folge „> 30 % → neu bewerten“ nicht ausgelöst); offen bleibt, ob
+  das Prognoseziel die Grundlaufzeit oder das Höchstende sein soll [E3].
+- [ ] _(neu, Iteration 3)_ Trägt ein **Produkt mit manueller Prüfung** (Regel liefert Kandidaten, Prüfung von Hand)? Prüfaufwand je
+  Fall, Kosten und Zahlungsbereitschaft abschätzen, auch in den Gesprächen fragen (A1, A15).
 
 ## Entscheidungen
 
@@ -80,6 +93,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 |---|---|---|---|
 | 2026-10-22 | 1 | Gebäudereinigung (Haupt-CPV 909…) wird **vorläufige Arbeitsnische** | Häufigste Kandidaten-Nische (440 Zuschläge in 3 Monaten). Laufzeitende bei 80,9 % bestimmbar (KI 77–84 %), vergleichbar mit Winterdienst und Sicherheit. Rein datengetrieben, Kundensicht fehlt. Siehe reports/evaluation_iteration1.md |
 | 2026-10-23 | 2 | **Idee anpassen:** Prognose auf Objektebene (Liegenschaft) statt auf Auftraggeber-Ebene; Gebäudereinigung bleibt vorläufige Nische, wird aber enger abgegrenzt. Ausweichoptionen (Auftraggeber-Zyklen, nationale Quellen) bleiben bestehen. | Zuordnung über den Auftraggeber K2 = 16,7 %; siehe reports/ergebnis_iteration2.md und reports/evaluation_iteration2.md. Entscheidung des Nutzers. |
+| 2026-10-25 | 3 | Objekt-Ebene bleibt Ziel; **parallel** wird die Alternative „Produkt mit manueller Prüfung“ bewertet. Nische enger: Haupt-CPV 90910/90911/90919, Leistungsart künftig auf Los-Ebene prüfen | Zuordnung über das Objekt: Präzision 45,8 %, Trefferquote 28,9 % bei Sichtbarkeit 63,3 % ([Z3], [E3]); vorab festgelegte Folge „in Phase 2/3 bleiben, alternativ Produkt mit manueller Prüfung“. Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -121,3 +135,23 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
   das brauchen, ist offen.
 - **Übergabe an die nächste Phase:** Phase 2 (Iteration 3) misst Sichtbarkeit und Zuordnung über das Objekt. Parallel in Phase 1:
   erste Gespräche mit Reinigungsfirmen (A15), dabei auch fragen, ob Auftraggeber-Ebene reichen würde.
+
+### Iteration 3 – 2026-10-25
+
+- **Was gemacht:**
+  - Zielgruppe Oberpfalz aus TED bestimmt, Gesprächsleitfaden und Notizvorlage angelegt ([B], `src/zielgruppe_oberpfalz.py`)
+  - Schreibtisch-Recherche zu Markt und Preisen, Auftragswerte aus TED ([B] §6, [AW], `src/auftragswerte.py`)
+  - Ergebnisse aus Phase 2 für die Ausrichtung ausgewertet ([Z3], [E3])
+  - Keine Kundengespräche.
+- **Erkenntnisse – Fakten:**
+  - 70 Zuschläge und 71 Firmen in der Oberpfalz seit eForms.
+  - Median-Auftragswert 167.404 € pro Jahr.
+  - Kein deutscher Dienst für auslaufende Verträge gefunden; in Großbritannien gibt es einen (Stotles).
+  - Sichtbarkeit 63,3 %, automatische Zuordnung Präzision 45,8 %.
+- **Erkenntnisse – Interpretation:**
+  - Ein vollautomatisches Radar auf Objektebene ist mit der bisherigen Regel nicht machbar; ein Produkt mit manueller Prüfung ist
+    die naheliegende Alternative.
+  - Der Wert eines Auftrags spricht für Zahlungsbereitschaft, belegt ist sie nicht.
+- **Übergabe an die nächste Phase:** Phase 2/3 (Iteration 4) unternimmt den letzten Verbesserungsversuch der Zuordnung. Parallel in
+  Phase 1: erste Gespräche führen (Ziel 5 bis Mitte November) und das Produkt mit manueller Prüfung grob bewerten (Prüfaufwand je
+  Fall, Preis).

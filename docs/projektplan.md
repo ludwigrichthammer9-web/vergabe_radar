@@ -4,7 +4,8 @@ Grobplanung für das Gesamtprojekt, aufgeteilt in Aufgaben (A) und Unteraufgaben
 Die Detailplanung je Iteration (Hypothese, Erfolgskriterium mit Schwelle, Zeitrahmen) entsteht weiterhin mit
 `/iteration-start` und steht in `docs/iterationen.md`. Dieser Plan gibt nur die Richtung und die Abhängigkeiten vor.
 
-**Stand:** 2026-10-23. Iteration 2 abgeschlossen (Entscheidung: Idee anpassen). Nächster Schritt: Iteration 3 mit `/iteration-start`.
+**Stand:** 2026-10-25. Iteration 3 abgeschlossen (Entscheidung: in Phase 2/3 bleiben, letzter Verbesserungsversuch der Zuordnung).
+Nächster Schritt: Iteration 4 mit `/iteration-start`.
 **Zeitangaben** sind grobe Schätzungen für Arbeit neben dem Studium und werden in `/iteration-start` konkretisiert.
 **Schwellenwerte** in diesem Plan sind Vorschläge. Verbindlich werden sie erst, wenn sie **vor** der Arbeit in
 `docs/iterationen.md` stehen.
@@ -23,14 +24,16 @@ Das Projekt hat drei parallele Stränge:
 |---|---|---|---|---|
 | 1 | Machbarkeit der Daten | 1 → 2 | 1 Tag | **abgeschlossen** |
 | 2 | Zielereignis sichtbar und zuordenbar? | 2 (→ 3) | 1 Tag | **abgeschlossen** (Idee anpassen) |
-| 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2 Wochen | nächster Schritt |
-| 4 | Erste Prognose und Backtest | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
-| 5 | Verbesserung der Prognose | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
-| 6 | Erster Kundentest | 6 → 1 | 2 bis 4 Wochen | geplant |
-| 7+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | geplant |
+| 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2 Tage | **abgeschlossen** (in Phase 2/3 bleiben) |
+| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | 2 bis 3 Wochen | nächster Schritt |
+| 5 | Erste Prognose und Backtest | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
+| 6 | Verbesserung der Prognose | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
+| 7 | Erster Kundentest | 6 → 1 | 2 bis 4 Wochen | geplant |
+| 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | geplant |
 
 _Geändert am 2026-10-23 nach Iteration 2: Iteration 3 (Phase 2) eingeschoben; die Abschnitte T3–T6 unten gelten jetzt für die
 Iterationen 4–7. Ihre Nummern bleiben zur Nachvollziehbarkeit unverändert._
+_Geändert am 2026-10-25 nach Iteration 3: Iteration 4 (T2c) eingeschoben; die Abschnitte T3–T6 gelten jetzt für die Iterationen 5–8._
 
 Der Strang G läuft von Anfang an mit und wartet nicht auf die technischen Ergebnisse.
 
@@ -117,15 +120,36 @@ Objekt (als Abweichung dokumentiert in `docs/iterationen.md`).
 _Neu am 2026-10-23 nach dem Entscheidungstor von Iteration 2. Vorschläge aus `reports/evaluation_iteration2.md`; verbindlich erst nach
 `/iteration-start`._
 
-- [ ] **T2b.1** Iteration planen: Kriterien V1–V6 und Abbruchregel vorab festlegen und committen
-- [ ] **T2b.2** Population enger fassen (90911/90919, Ausschlussliste, anderes Quartal, höchstens 2 Ausschreibungen je Auftraggeber)
-- [ ] **T2b.3** Sichtbarkeit messen: Zufallsstichprobe, Handsuche mit Protokoll unter Zuschlägen **und** früheren Ausschreibungen
-- [ ] **T2b.4** Zuordnung über das Objekt (Adresse, Liegenschaft, Titel), auf Entwicklungsdaten bauen und auf Testdaten messen
-  (1:1-Zuordnung, kein Zeitfenster als Auswahlkriterium)
-- [ ] **T2b.5** Zweitprüfung: Der Nutzer beurteilt mindestens 20 Paare blind
-- [ ] **T2b.6** A11 repräsentativ: 30 zufällige Zuschläge vor eForms auf REF_NOTICE und Laufzeit prüfen
-- [ ] **T2b.7** Zuordenbare Paare mit bekanntem Vorgänger-Ende zählen und den Anteil vorzeitiger Neuvergaben messen (A16)
+- [x] **T2b.1** Iteration planen: Kriterien V1–V6 und Abbruchregel vorab festlegen und committen
+- [x] **T2b.2** Population enger fassen (90911/90919, Ausschlussliste, anderes Quartal, höchstens 2 Ausschreibungen je Auftraggeber)
+- [x] **T2b.3** Sichtbarkeit messen: Zufallsstichprobe, Handsuche mit Protokoll unter Zuschlägen **und** früheren Ausschreibungen
+  _(V1 = 63,3 %)_
+- [x] **T2b.4** Zuordnung über das Objekt (Adresse, Liegenschaft, Titel), auf Entwicklungsdaten bauen und auf Testdaten messen
+  (1:1-Zuordnung, kein Zeitfenster als Auswahlkriterium) _(V2 = 45,8 %, V3 = 28,9 %, verfehlt)_
+- [x] **T2b.5** Zweitprüfung: Der Nutzer beurteilt mindestens 20 Paare blind _(V4 = 17/20, mit Abweichungen vom Plan)_
+- [x] **T2b.6** A11 repräsentativ: 30 zufällige Zuschläge vor eForms auf REF_NOTICE und Laufzeit prüfen _(V6 = 25/30)_
+- [x] **T2b.7** Zuordenbare Paare mit bekanntem Vorgänger-Ende zählen und den Anteil vorzeitiger Neuvergaben messen (A16)
+  _(V5 = 328/Jahr, vorzeitig 2/36)_
 - [ ] **T2b.8** Abschluss: Report, Evaluator, `/iteration-ende`, Tag `iteration-3`
+  _(2026-10-25: Evaluator `reports/evaluation_iteration3.md`, Dokumente aktualisiert; Commit und Tag durch den Nutzer)_
+
+**Ergebnis 2026-10-25:** V1 knapp erfüllt, V2/V3 verfehlt. Entscheidung: in Phase 2/3 bleiben, ein letzter Verbesserungsversuch (T2c).
+
+### T2c Iteration 4: Letzter Verbesserungsversuch der Objekt-Zuordnung (Phase 2/3)
+
+_Neu am 2026-10-25 nach Iteration 3. Vorschläge aus `reports/evaluation_iteration3.md`; verbindlich erst nach `/iteration-start`._
+
+- [ ] **T2c.1** Iteration planen: Kriterien, Stichprobenumfang (etwa 60–70 Testfälle) und Abbruchkriterium vorab festlegen
+- [ ] **T2c.2** Aufräumen aus Iteration 3: Vorgänger-Enddaten T26, T56, T18 korrigieren; Belegstärke T18–T30 in `gt.csv` nachtragen;
+  Originaldatei der Nutzerurteile ins Repo
+- [ ] **T2c.3** Objekt- und Leistungsart-Merkmale auf Los-Ebene, auch vor eForms (XML, Volltextsuche `FT`)
+- [ ] **T2c.4** Regel verbessern auf Q2 + Q3 2026 (jetzt Entwicklungsdaten): Leistungsart hart prüfen, Geschwisterverfahren über
+  Objektlisten und Flächen trennen, **kein Zeitfenster**; einfrieren per Commit
+- [ ] **T2c.5** Neue Testdaten Q1 2026: Testprobe ziehen, Handsuche nach Urteilsregeln 1.1 **vor** dem Regel-Lauf
+- [ ] **T2c.6** Zweitprüfung mit frischen Paaren (vorher nicht angesehen), gezielt schwach belegte Treffer und „kein Vorgänger“-Fälle
+- [ ] **T2c.7** Saisonalität prüfen: Populationsgröße je Quartal (Hochrechnung V5)
+- [ ] **T2c.8** Parallel (Strang G): Produkt mit manueller Prüfung bewerten (Prüfaufwand je Fall, Preis)
+- [ ] **T2c.9** Abschluss: Report, Evaluator, `/iteration-ende`, Tag `iteration-4`
 
 ### T3 Iteration 3: Erste Prognose und Backtest (Phasen 3, 4, 5)
 _Jetzt Iteration 4 (geändert am 2026-10-23)._

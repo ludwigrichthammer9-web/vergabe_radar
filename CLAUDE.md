@@ -7,18 +7,18 @@ ausgeschrieben werden, basierend auf Zuschlagsbekanntmachungen aus TED
 Neuausschreibungen vorbereiten wollen (z. B. Gebäudereinigung, IT-Wartung,
 Winterdienst).
 
-## Aktuelle Phase: Iteration 3, Phase 2 (Data Understanding)
-Iteration 2 ist abgeschlossen (Entscheidung: Idee anpassen). Die Zuordnung
-über den Auftraggeber trifft den Vorgänger nur in 17 % der Fälle. Vorläufige
-Arbeitsnische bleibt Gebäudereinigung (Haupt-CPV 909…, enger abzugrenzen).
-Noch kein Modell. Als Nächstes getrennt messen:
-- Gibt es zu Ausschreibungen überhaupt einen objektgleichen Vorgänger auf TED
-  (unter Zuschlägen und früheren Ausschreibungen)?
-- Lässt sich der Vorgänger über das Objekt (Adresse, Liegenschaft, Titel)
-  automatisch zuordnen?
-Bei zu geringer Sichtbarkeit: nationale Quellen oder Auftraggeber-Zyklen.
-Daten: TED-API ab Okt. 2016; vor eForms Laufzeit nur in der XML (REF_NOTICE).
-Details: docs/iterationen.md, reports/ergebnis_iteration2.md
+## Aktuelle Phase: vor Iteration 4, Phase 2/3 (Zuordnung über das Objekt)
+Iteration 3 ist abgeschlossen (Entscheidung: in Phase 2/3 bleiben). Objektgleiche
+Vorgänger sind auf TED oft sichtbar (63 %, knapp und definitionsabhängig), die
+einfache Objekt-Regel ordnet sie aber nicht zuverlässig zu (Präzision 46 %,
+Trefferquote 29 %; Fehler meist Geschwisterverfahren, vor eForms fehlen Merkmale).
+Arbeitsnische: Gebäudereinigung, Haupt-CPV 90910/90911/90919. Noch kein Modell.
+Iteration 4 = letzter Verbesserungsversuch: Merkmale auf Los-Ebene (auch vor
+eForms aus XML/Volltextsuche), Leistungsart hart prüfen, kein Zeitfenster;
+neue Testdaten Q1 2026, Handsuche und Zweitprüfung nach Urteilsregeln 1.1 vorab.
+Parallel in Phase 1: Produkt mit manueller Prüfung bewerten, Gespräche führen.
+Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE (25/30).
+Details: docs/iterationen.md, reports/evaluation_iteration3.md
 
 ## Später geplant
 - Nische wählen, Backtest (erwartetes Auslaufdatum vs. tatsächliche

@@ -15,11 +15,12 @@ Regeln:
 |---|---|---|---|---|---|
 | 1 | Machbarkeit der Daten | 1 → 2 | 2026-10-22 | abgeschlossen | Gebäudereinigung als vorläufige Arbeitsnische; **zurück zu Phase 2** (Zielereignis und Rückreichweite prüfen) |
 | 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 | abgeschlossen | **Idee anpassen:** Zuordnung über Auftraggeber verworfen (K2 = 16,7 %); weiter in Phase 2 mit Zuordnung über das Objekt |
-| 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-11-15 | läuft | offen |
-| 4 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
-| 5 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
-| 6 | Erster Kundentest | 6 → 1 | – | geplant | – |
-| 7+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
+| 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-10-25 | abgeschlossen | **In Phase 2/3 bleiben:** V1 63,3 % (knapp, definitionsabhängig), V2 45,8 % und V3 28,9 % verfehlt; ein letzter Verbesserungsversuch der Regel auf neuen Testdaten, parallel „Produkt mit manueller Prüfung“ in Phase 1 bewerten |
+| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | – | geplant | – |
+| 5 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
+| 6 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
+| 7 | Erster Kundentest | 6 → 1 | – | geplant | – |
+| 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
 sind sie um eine Stelle verschoben. Konkretisiert werden sie mit `/iteration-start`.
@@ -27,6 +28,8 @@ _Nachtrag 2026-10-23:_ Die geplanten Zeilen (3 bis 6+) sind an den [Projektplan]
 Verbesserungs-Iteration vorsieht.
 _Nachtrag 2026-10-23 (Abschluss Iteration 2):_ Nach der Entscheidung zu Iteration 2 ist eine weitere Phase-2-Iteration (3)
 eingeschoben; die übrigen rücken um eine Stelle.
+_Nachtrag 2026-10-25 (Abschluss Iteration 3):_ Nach der Entscheidung zu Iteration 3 ist Iteration 4 (letzter Verbesserungsversuch der
+Zuordnung) eingeschoben; die übrigen rücken erneut um eine Stelle.
 
 ---
 
@@ -262,7 +265,7 @@ Neue Kriterien und eine harte Abbruchregel (bei geringer Sichtbarkeit: nationale
 
 ## Iteration 3: Sichtbarkeit der Vorgänger und Zuordnung über das Objekt
 
-**Status:** läuft seit 2026-10-24 (angelegt am 2026-10-23)
+**Status:** abgeschlossen am 2026-10-25 (angelegt am 2026-10-23, Arbeit ab 2026-10-24)
 
 **Fokus und Phasen:** Phase 2, Vorarbeit für Phase 3. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) gemäß
 Entscheidung zu Iteration 2: Die erste Prognose (jetzt Iteration 4) folgt erst, wenn eine Zuordnung über das Objekt belegt ist.
@@ -370,6 +373,67 @@ Parallel in Phase 1, nicht Teil des Kriteriums: 2–3 Gespräche mit Reinigungsf
 **Geprüfte Annahmen:** A9b, A11 (Hauptgegenstand); A3 (nur TED-Sichtbarkeit, nicht Marktanteil); A10, A12, A16 (teilweise bzw.
 explorativ); A8 (Hinweis).
 
-**Ergebnis:** offen
+**Ergebnis** _(2026-10-25)_
 
-**Entscheidung:** offen
+Quellen: **[Z3]** [zuordnung_iteration3.md](../reports/zuordnung_iteration3.md) · **[GT]** [sichtbarkeit_iteration3_gt.csv](../reports/sichtbarkeit_iteration3_gt.csv)
+und `sichtbarkeit_iteration3_teil1–4.md` · **[A11]** [a11_stichprobe.md](../reports/a11_stichprobe.md) · **[BN]**
+[blindpruefung_iteration3_nutzer.md](../reports/blindpruefung_iteration3_nutzer.md) · **[BA]**
+[blindpruefung_iteration3_agent_v1_1.md](../reports/blindpruefung_iteration3_agent_v1_1.md) · **[E3]**
+[evaluation_iteration3.md](../reports/evaluation_iteration3.md) · **[RE]** [regel_entwicklung_iteration3.md](../reports/regel_entwicklung_iteration3.md).
+
+_Fakten_
+
+| Kriterium | Ergebnis | Schwelle | formal | Urteil Evaluator [E3] |
+|---|---|---|---|---|
+| V1 Sichtbarkeit | 38/60 = 63,3 % (Wilson 50,7–74,4) [Z3]; davon 29 objektgleich, 9 Teilmenge [GT]; nur objektgleich 29/60 = 48,3 % [E3] | ≥ 50 % | erfüllt | knapp, abhängig von der Definition |
+| V2 Präzision | 11/24 = 45,8 % (Wilson 27,9–64,9) [Z3] | ≥ 80 %, Untergrenze ≥ 60 % | verfehlt | klar verfehlt |
+| V3 Trefferquote | 11/38 = 28,9 % (Wilson 17,0–44,8) [Z3] | ≥ 60 % | verfehlt | klar verfehlt |
+| V4 Zweitprüfung | Urteile des Nutzers P9–P28: 17/20 = 85 % (Wilson 64,0–94,8; κ ≈ 0,70) [BN], [E3]; Abweichungen P16, P18, P28. Regelbasierter Subagent ebenfalls 17/20 (Abweichungen P16, P17, P18) [BA] | ≥ 85 % | erfüllt (genau auf der Schwelle) | als Beleg nicht tragfähig |
+| V5 Backtest-Basis | 10/60 × 492 × 4 = 328 pro Jahr [Z3]; Enddaten T26, T56, T18 fragwürdig, robust etwa 230; nur eForms-Vorgänger etwa 98–131 [E3] | ≥ 100 pro Jahr | erfüllt | überschätzt |
+| V6 A11 | 25/30 = 83,3 % (Wilson 66,4–92,7); 2 ohne `REF_NOTICE`, 3 nur Dauer [A11] | ≥ 80 % | erfüllt | knapp, enger Geltungsbereich |
+| Explorativ: vorzeitige Neuvergaben | 2/36 = 5,6 % (Wilson 1,5–18,1; T18 Lose 8/9, T32) [E3] aus [GT] | Folge bei > 30 % | nicht ausgelöst | – |
+
+- Fehlertypen der Regel: 9 von 11 falschen Vorschlägen sind Geschwisterverfahren desselben Auftraggebers, 2 betreffen dasselbe Objekt
+  mit anderer Leistungsart (T31, T54); alle 11 sind Notices aus 2025/2026. Bei 19 von 38 gefundenen Fällen macht die Regel keinen
+  Vorschlag [E3].
+- Die meisten Vorgänger sind Bekanntmachungen vor eForms. Die Handsuche fand sie über die Volltextsuche und die XML; in den lokalen
+  Rohdaten fehlen dort Titel und Ort [GT], [E3]. Nur etwa 5 der 38 Vorgänger sind eForms-Verträge [E3].
+- Bei mindestens 10 der 38 Paare liegt zwischen Vorgänger und Testfall eine Lücke; das Glied direkt davor fehlt auf TED [E3].
+- Auf den Entwicklungsdaten hielt Claude etwa 10–11 von 12 Vorschlägen für plausibel [RE], im Test waren 11 von 24 korrekt.
+- Abweichungen vom Vorab-Plan, alle in den Nachträgen oben dokumentiert: Urteilsregeln für V4 nach dem ersten Ansehen der Paare,
+  P1–P8 als Kalibrierung ausgeschlossen und durch P21–P28 ersetzt, pauschale Ersteinschätzung des Nutzers („alle passen oder
+  unsicher“). Ergänzende Auslegungen während der Handsuche (Teil 2 und Teil 4) [E3].
+- T16 (Bauendreinigung) fällt sachlich aus der Population, weil die Ausschlussliste nur den Titel prüft [E3].
+
+_Interpretation_
+
+- **Die Hypothese ist zur Hälfte gestützt.** Objektgleiche Vorgänger sind auf TED oft sichtbar, knapp über der Schwelle und nur, wenn
+  Teilmengen mitzählen. Die einfache Regel ordnet sie aber nicht zuverlässig zu (Präzision 46 % statt 80 %).
+- **Die Regel scheitert vor allem an zwei Stellen:** an Geschwisterverfahren großer Auftraggeber und an fehlenden Objektmerkmalen vor
+  eForms. Das zweite ist eher ein Problem des Datenzugangs als der Vergleichslogik [E3].
+- **V4 = 85 % zeigt keine eindeutige Definition.** Die Regeln entstanden an denselben Paaren, und die regelfreie erste Einschätzung
+  wich stark ab. Wie im Nachtrag angekündigt, wird das als Hinweis auf eine zu unscharfe Ausgangsdefinition berichtet.
+- **Ein Zeitfenster als schnelle Lösung ist ausgeschlossen.** Es hätte zwar alle 11 Fehler entfernt, aber auch die beiden vorzeitigen
+  Neuvergaben. Damit würde A16 in die Regel eingebaut, und der Backtest wäre zirkulär [E3].
+- **V5 beschreibt eine Basis mit manueller Prüfung**, keine automatische. Ein Backtest nur mit eForms-Daten läge an der Grenze von V5.
+- **Vorzeitige Neuvergaben sind hier selten (5,6 %).** Das ist ein Gegenbeleg zum Warnsignal aus Iteration 2 (3 von 6). Die beiden
+  Auswahlen sind aber nicht vergleichbar. Neuvergaben vor dem Höchstende (nach der Grundlaufzeit) kommen häufiger vor.
+
+**Entscheidung** _(2026-10-25, Entscheidung des Nutzers nach Vorschlag von Claude und Evaluator)_
+
+**In Phase 2/3 bleiben**, gemäß der vorab festgelegten Folge „V1 ≥ 50 %, aber V2 oder V3 verfehlt“. Vermerk: V1 und V4 sind nur knapp
+und abhängig von der Definition erfüllt. Bei strengerer Lesart griffe „Definition schärfen“ bzw. „Idee anpassen“; an der Aussage
+„die Regel reicht nicht“ ändert das nichts.
+- **Iteration 4 wird der letzte Verbesserungsversuch der Zuordnung:**
+  - Objekt- und Leistungsart-Merkmale auf Los-Ebene, auch vor eForms aus XML bzw. Volltextsuche
+  - harte Prüfung der Leistungsart
+  - Geschwisterverfahren über Objektlisten und Flächen trennen, **kein Zeitfenster**
+  - Q3 2026 wird zu Entwicklungsdaten; **neue Testdaten aus Q1 2026**, etwa 60–70 Fälle
+  - Handsuche nach Urteilsregeln Version 1.1, **vor** dem Regel-Lauf
+  - V4 mit frischen, vorher nicht angesehenen Paaren, gezielt mit schwach belegten Treffern und „kein Vorgänger“-Fällen
+  - Abbruchkriterium vorab festlegen
+- **Parallel in Phase 1:** die Alternative „Produkt mit manueller Prüfung“ bewerten. Die Regel liefert dann nur Kandidaten.
+- Die erste Prognose mit Backtest wird Iteration 5.
+- A11 bleibt „vorläufig gestützt“, A9b ist für die eingefrorene Regel widerlegt; die allgemeine Objekt-Zuordnung wird als A9c weitergeführt.
+- Offen aus der Evaluation: korrigierte Enddaten für V5 (T26, T56, T18), Belegstärke T18–T30 in `gt.csv`, Originaldatei der
+  Nutzerurteile im Repo.
