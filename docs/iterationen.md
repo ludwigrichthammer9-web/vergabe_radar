@@ -438,6 +438,18 @@ und abhängig von der Definition erfüllt. Bei strengerer Lesart griffe „Defin
 - Offen aus der Evaluation: korrigierte Enddaten für V5 (T26, T56, T18), Belegstärke T18–T30 in `gt.csv`, Originaldatei der
   Nutzerurteile im Repo.
 
+> **Nachtrag 2026-10-25 (nach Abschluss, Korrekturen aus der Evaluation; Entscheidung unverändert):**
+> - **Vorgänger-Enddaten** ([vorgaenger_ende_iteration3_korrektur.csv](../reports/vorgaenger_ende_iteration3_korrektur.csv), belegt aus
+>   den Protokollen der Handsuche): T26 hatte das geplante Ende des aufgehobenen Verfahrens 462151-2026 (2031-10-31); das Ende des
+>   tatsächlichen Vorgängervertrags ist 2026-03-31, aber nicht über den Regelvorschlag erreichbar. T56 verlängert sich jährlich ohne
+>   Höchstdauer, das Ende ist unbekannt. T18 gilt nur für die Lose 8/9. **V5 korrigiert: 8/60 × 492 × 4 = 262 pro Jahr**
+>   (Wilson 136–476), Schwelle ≥ 100 weiterhin erfüllt. `reports/zuordnung_iteration3.md` bleibt als Stand des Laufs unverändert.
+> - **Belegstärke** in `sichtbarkeit_iteration3_gt.csv` für T18, T19, T21, T22, T23, T24, T26, T30 aus Teil 2 nachgetragen (Übertragungsfehler;
+>   T21 und T30 „mittel“, die übrigen „stark“). Die Auswahl der Paare für V4 erfolgte mit den leeren Feldern; `src/blindpruefung_iteration3.py`
+>   wird nicht erneut ausgeführt.
+> - **Originalurteile des Nutzers** liegen jetzt in [blindpruefung_iteration3_nutzer_original.md](../reports/blindpruefung_iteration3_nutzer_original.md)
+>   (Commit 877674d). Urteile, Sicherheit und Tendenz stimmen mit der kompakten Übertragung überein; V4 bleibt 17/20.
+
 ## Iteration 4: Letzter Verbesserungsversuch der Objekt-Zuordnung
 
 **Status:** angelegt am 2026-10-25, Arbeit ab 2026-10-26
@@ -512,6 +524,17 @@ Vorgänger-Ende) bei bestätigten Paaren (A8), Anteil vorzeitiger Neuvergaben wi
 
 Parallel in Phase 1, nicht Teil des Kriteriums: mindestens 2 Gespräche mit Reinigungsfirmen (A15), dabei auch fragen, ob eine geprüfte
 Liste ohne Automatik reicht.
+
+> **Fortschritt 2026-10-25 (Schritt 1, vor dem Regelbau und vor dem Laden der Testdaten):**
+> - Population festgelegt in `src/population_iteration4.py`: zusätzlich ausgeschlossen, wenn **alle** Los-Titel einen Ausschlussbegriff
+>   enthalten oder der Verfahrenstitel ein Bauprojekt nennt (Umbau, Neubau, Sanierung, Erweiterung, Rohbau, Modernisierung) ohne Hinweis
+>   auf wiederkehrende Reinigung. Auf den Entwicklungsdaten: Q2 unverändert 488, Q3 492 → 486 (6 einmalige Reinigungen in
+>   Bauprojekten, darunter T16). Beschreibungen (BT-24) fehlen in den Rohdaten und werden nicht geprüft.
+> - Testprobe vorab: Seed **20261026**, 70 Fälle, höchstens 2 je Auftraggeber, ohne die 223 Notices aus
+>   [bekannte_notices_iteration4.txt](../reports/bekannte_notices_iteration4.txt) (alle Notices mit Jahr 2026 in `reports/` und `docs/`).
+> - Rechercheur auf Urteilsregeln 1.1 umgestellt, mit Volltextsuche als Suche C, Herkunft des Vorgänger-Endes und Auftrag
+>   „Paarbeurteilung“ ohne Kenntnis der Herkunft (`.claude/agents/rechercheur.md`).
+> - Korrekturen zu Iteration 3 als Nachtrag dort (Enddaten, Belegstärke, Originalurteile).
 
 **Geprüfte Annahmen:** A9c (Hauptgegenstand); A3 (Wiederholung unter Version 1.1); A12 (Leistungsart auf Los-Ebene); A10, A11 (W5);
 A8, A16 (explorativ); A15, A1 (Gespräche, parallel).

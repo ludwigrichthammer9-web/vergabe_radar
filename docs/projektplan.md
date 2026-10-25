@@ -141,8 +141,8 @@ _Neu am 2026-10-25 nach Iteration 3. Vorschläge aus `reports/evaluation_iterati
 
 - [x] **T2c.1** Iteration planen: Kriterien, Stichprobenumfang (etwa 60–70 Testfälle) und Abbruchkriterium vorab festlegen
   _(2026-10-25: W1–W6, 70 Testfälle, in `docs/iterationen.md`)_
-- [ ] **T2c.2** Aufräumen aus Iteration 3: Vorgänger-Enddaten T26, T56, T18 korrigieren; Belegstärke T18–T30 in `gt.csv` nachtragen;
-  Originaldatei der Nutzerurteile ins Repo
+- [x] **T2c.2** Aufräumen aus Iteration 3: Vorgänger-Enddaten T26, T56, T18 korrigieren; Belegstärke T18–T30 in `gt.csv` nachtragen;
+  Originaldatei der Nutzerurteile ins Repo _(2026-10-25; dazu Rechercheur auf Regeln 1.1, Population Iteration 4)_
 - [ ] **T2c.3** Objekt- und Leistungsart-Merkmale auf Los-Ebene, auch vor eForms (XML, Volltextsuche `FT`)
 - [ ] **T2c.4** Regel verbessern auf Q2 + Q3 2026 (jetzt Entwicklungsdaten): Leistungsart hart prüfen, Geschwisterverfahren über
   Objektlisten und Flächen trennen, **kein Zeitfenster**; einfrieren per Commit
