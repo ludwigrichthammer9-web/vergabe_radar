@@ -546,6 +546,12 @@ Liste ohne Automatik reicht.
 >   Regelentwicklung als Kandidat oder Vorschlag ausgegeben wird, wird automatisch in `reports/dev_gesehene_q1_notices.txt` protokolliert
 >   und **nicht als Testfall gezogen**.
 
+> **Fortschritt 2026-10-25 (Schritt 3, Regel eingefroren mit diesem Commit, vor dem Ziehen der Testprobe):**
+> Regel `src/zuordnung_los.py` mit `src/los_merkmale.py`, 8 Entwicklungsläufe auf Q3 und 3 auf Q2
+> ([regel_entwicklung_iteration4.md](../reports/regel_entwicklung_iteration4.md)). Auf Q3 gegen die Handsuche aus Iteration 3:
+> 25 Vorschläge, Präzision 84–100 %, Trefferquote 55,3 %, Top 3 68,4 %. Auf Q2 nach Urteil von Claude etwa 14 von 17 korrekt.
+> Beide Werte stammen aus Entwicklungsdaten und sind optimistisch. 20 Q1-2026-Notices als gesehen protokolliert.
+
 **Geprüfte Annahmen:** A9c (Hauptgegenstand); A3 (Wiederholung unter Version 1.1); A12 (Leistungsart auf Los-Ebene); A10, A11 (W5);
 A8, A16 (explorativ); A15, A1 (Gespräche, parallel).
 

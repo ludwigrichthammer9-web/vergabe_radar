@@ -1,0 +1,192 @@
+Pool: 33282 Notices
+
+## 314645-2026 „['Neubau Kinderklinikum (EKiZ) und Wirtschaftshof – Klinikum Nürnberg Süd - Grundreinigung']“ Kand=10
+   objekt   p=4.95  r=1.0/0.25 gem=['klinikum nuernberg sued'] | 585695-2022 (2022-10-24, result, xml) „Reinigungsleistungen und Küchenhilfsleistungen in der Großküche am Klinikum Nürn“
+   objekt   p=5.033 r=1.0/0.33 gem=['klinikum nuernberg sued'] | 515398-2017 (2017-12-22, result, xml) „Reinigungs- und Küchenhilfsleistungen“
+   objekt   p=5.033 r=1.0/0.33 gem=['klinikum nuernberg sued'] | 368952-2017 (2017-09-20, competition, xml) „Reinigungs- und Küchenhilfsleistungen.“
+
+## 301101-2026 „['Ausschreibung Gebäudereinigung Stadt Bad Neustadt a. d. Saale']“ Kand=45
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 503044-2023 (2023-08-18, competition, xml) „Glasreinigung“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 538718-2021 (2021-10-22, result, xml) „Gebäudereinigung Stadt Bad Neustadt a. d. Saale“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 367241-2021 (2021-07-20, competition, xml) „Gebäudereinigung Stadt Bad Neustadt a. d. Saale“
+
+## 405581-2026 „['Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterhalts- und Glasreinigungsleistungen) für mehrere Liegenschaften in Aschaffenburg, VOEK 061-26']“ Kand=395
+   unklar   p=2.5   r=0.0/0.0 gem=[] | 143134-2026 (2026-03-02, competition, api) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   unklar   p=2.367 r=0.0/0.0 gem=[] | 156628-2026 (2026-03-06, competition, api) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   unklar   p=2.325 r=0.0/0.0 gem=[] | 178537-2026 (2026-03-16, competition, api) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+
+## 267715-2026 „['Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterhalts- und Glasreinigungsleistungen) für BAMF Oldenburg sowie das Zollamt Cuxhaven, VOEK 653-25']“ Kand=375
+   objekt   p=5.557 r=0.5/0.25 gem=['heerstr 62-64'] | 594000-2020 (2020-12-09, result, xml) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   objekt   p=5.867 r=0.5/0.5 gem=['woltmannstr 1'] | 7620-2019 (2019-01-08, result, xml) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   objekt   p=5.867 r=0.5/0.5 gem=['woltmannstr 1'] | 370658-2018 (2018-08-24, competition, xml) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   objekt   p=5.633 r=0.5/0.33 gem=['woltmannstr 1'] | 472341-2020 (2020-10-07, result, xml) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen für das “
+
+## 263135-2026 „['UHR Comeniusschule']“ Kand=207
+   unklar   p=4.056 r=0.5/0.06 gem=['comeniusschule'] | 49022-2022 (2022-01-28, result, xml) „Unterhalts- und Grundreinigung in Schulen der Landeshauptstadt Magdeburg (5 Lose“
+   unklar   p=4.056 r=0.5/0.06 gem=['comeniusschule'] | 476150-2020 (2020-10-09, competition, xml) „Unterhalts- und Grundreinigung in Schulen der Landeshauptstadt Magdeburg (5 Lose“
+   unklar   p=4.03  r=0.5/0.03 gem=['comeniusschule'] | 452713-2023 (2023-07-26, result, xml) „Unterhalts- und Grundreinigung in Schulen der Landeshauptstadt Magdeburg in 13 L“
+
+## 370259-2026 „['Gebäudereinigung']“ Kand=2
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 379747-2020 (2020-08-12, result, xml) „Gebäudereinigungsleistungen“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 150935-2020 (2020-03-30, competition, xml) „Gebäudereinigungsleistungen“
+
+## 382273-2026 „['Ausschreibungsverfahren zur Beschaffung der Unterhaltsreinigung in der Hamburger Kunsthalle sowie der Deichtorhallen Hamburg']“ Kand=34
+
+## 347393-2026 „['Grundschule Pölling, Sonnenstraße 17, Neumarkt i.d.OPf. - Reinigungsleistungen']“ Kand=52
+   objekt   p=7.2   r=1.0/1.0 gem=['grundschule poelling', 'sonnenstr 17'] | 722423-2025 (2025-10-31, result, api) „Grundschule Pölling, Sonnenstraße 17, Neumarkt i.d.OPf.“
+   objekt   p=7.2   r=1.0/1.0 gem=['grundschule poelling', 'sonnenstr 17'] | 430183-2025 (2025-07-03, competition, api) „Grundschule Pölling, Sonnenstraße 17, Neumarkt i.d.OPf.“
+   unklar   p=2.5   r=0.0/0.0 gem=[] | 132877-2017 (2017-04-08, result, xml) „Ausschreibung Reinigungsleistungen.“
+
+## 434804-2026 „['Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterhaltsreinigung) für mehrere Liegenschaften in Ober- und Niederbayern - VOEK 068-26']“ Kand=405
+   objekt   p=4.963 r=0.83/0.26 gem=['hauptzollamt landshut', 'lilienthalstr 21', 'niedermayerstr 61'] | 331001-2024 (2024-06-05, result, api) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Glasrei“
+   objekt   p=5.954 r=0.67/0.15 gem=['lilienthalstr 21', 'niedermayerstr 61', 'seilerweg 4b'] | 578260-2020 (2020-12-01, result, xml) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   objekt   p=5.954 r=0.67/0.15 gem=['lilienthalstr 21', 'niedermayerstr 61', 'seilerweg 4b'] | 111350-2020 (2020-03-06, competition, xml) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+
+## 318453-2026 „['S0326 Gebäude- und S0326_1 Fensterreinigung Manching']“ Kand=23
+   unklar   p=0.867 r=0.0/0.0 gem=[] | 369465-2022 (2022-07-08, competition, xml) „S0295 - Gebäudereinigung Manching“
+   unklar   p=0.867 r=0.0/0.0 gem=[] | 244261-2018 (2018-06-07, result, xml) „S0248 – Unterhaltsreinigung Manching“
+   unklar   p=0.867 r=0.0/0.0 gem=[] | 56924-2018 (2018-02-07, competition, xml) „S0248 - Unterhaltsreinigung Manching“
+
+## 235241-2026 „['Reinigungsleistung Kaufmännische Schule Marburg (KSM) und Martin-Luther-Schule (MLS)']“ Kand=30
+   objekt   p=6.081 r=1.0/0.67 gem=['martinlutherschule', 'savignystr 2'] | 663998-2021 (2021-12-24, result, xml) „Unterhalts-,Grund- und Vertretungsreinigung Martin-Luther-Schule“
+   objekt   p=6.081 r=1.0/0.67 gem=['martinlutherschule', 'savignystr 2'] | 437954-2021 (2021-08-30, competition, xml) „Unterhalts-,Grund- und Vertretungsreinigung Martin-Luther-Schule“
+   unklar   p=2.833 r=0.5/0.33 gem=['martinlutherschule'] | 123547-2025 (2025-02-25, result, api) „Reinigungsdienstleistungen an diversen Schulanlagen“
+
+## 417339-2026 „['UR Freizeitheim Döhren']“ Kand=90
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 398651-2026 (2026-06-10, result, api) „UR SZ Anderten“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 398333-2026 (2026-06-10, result, api) „UR GS Käthe-Paulus-Schule und JZ Kronsberg“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 398343-2026 (2026-06-10, result, api) „UR Kita Walter-Ballhause-Straße“
+
+## 439431-2026 „['Laufende Innen-, Grund-, Glas- und Kehrreinigung in der Grund- und Mittelschule und Kinderhort, Sperberstr. 85 und Mittagsbetreuung in der Langobardenstr. 15, 90459 Nürnberg']“ Kand=87
+   unklar   p=1.7   r=0.0/0.0 gem=[] | 445884-2017 (2017-11-08, result, xml) „“
+   unklar   p=1.7   r=0.0/0.0 gem=[] | 437266-2017 (2017-11-02, result, xml) „“
+   unklar   p=1.7   r=0.0/0.0 gem=[] | 179025-2017 (2017-05-11, result, xml) „“
+
+## 309841-2026 „['BLB Aachen | Landesvertretung NRW in Brüssel | Unterhaltsreinigung (005-26-00149)']“ Kand=103
+   unklar   p=0.8   r=0.0/0.0 gem=[] | 332177-2023 (2023-06-05, competition, xml) „BLB /Z /NL Aachen/Infrastrukturelle Gebäudedienstleistungen/Unterhaltsreinigung_“
+   unklar   p=0.8   r=0.0/0.0 gem=[] | 263619-2023 (2023-05-03, result, xml) „BLB /Z /NL Aachen/Infrastrukturelle Gebäudedienstleistungen/Unterhaltsreinigung/“
+   unklar   p=0.8   r=0.0/0.0 gem=[] | 687871-2022 (2022-12-09, competition, xml) „BLB /Z /NL Aachen/Infrastrukturelle Gebäudedienstleistungen/Unterhaltsreinigung/“
+
+## 297979-2026 „['Stadt Glückstadt: Ausschreibung für die Gebäudereinigung (Unterhalts-, Grund- und Glasreinigung)']“ Kand=4
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 428807-2022 (2022-08-05, competition, xml) „Stadt Glückstadt: Unterhalts- und Grundreinigung an diversen Liegenschaften“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 319989-2021 (2021-06-25, competition, xml) „Gebäude- und Glasreinigung der Stadt Glückstadt“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 313112-2017 (2017-08-09, result, xml) „Stadt Glückstadt.“
+
+## 447978-2026 „['IGM 26E1002 - Staatliches Baumanagement Braunschweig, Fachbereich Gebäudemanagement - Behördenzentrum Lüneburg, Auf der Hude 2 - Unterhalts- und Glasreinigung']“ Kand=118
+   objekt   p=4.129 r=1.0/0.09 gem=['behoerdenzentrum lueneburg'] | 165901-2019 (2019-04-09, result, xml) „18 E 10064 – Polizeidirektion Lüneburg – Gebäudereinigung und Pflege Außenanlage“
+   objekt   p=4.129 r=1.0/0.09 gem=['behoerdenzentrum lueneburg'] | 472607-2018 (2018-10-26, competition, xml) „18 E 10064 – Polizeidirektion Lüneburg – Gebäudereinigung und Pflege Außenanlage“
+   unklar   p=1.154 r=0.0/0.0 gem=[] | 531137-2021 (2021-10-19, result, xml) „20 E 10553 - Staatliches Baumanagement Braunschweig, Fachbereich Gebäudemanageme“
+
+## 251214-2026 „['UHR Emma-Kann-Grundschule']“ Kand=209
+   unklar   p=0.8   r=0.0/0.0 gem=[] | 311984-2024 (2024-05-27, competition, api) „UHR Umweltamt“
+   unklar   p=0.8   r=0.0/0.0 gem=[] | 60296-2024 (2024-01-30, result, api) „UHR Amt für Bau und Immobilien“
+   unklar   p=0.783 r=0.0/0.0 gem=[] | 678694-2025 (2025-10-15, competition, api) „UHR Sozialrathaus Höchst“
+
+## 400945-2026 „['Gde. Neuenkirchen-Vörden: Reinigungsleistungen (Unterhalts-, Grund-, Vertretungs- und Glasreinigung) kommunaler Liegenschaften']“ Kand=14
+   objekt   p=6.262 r=0.6/0.46 gem=['dammerstr 1', 'goettingerstr 10', 'grundschule neuenkirchen'] | 478494-2022 (2022-09-02, result, xml) „Gde. Neuenkirchen-Vörden: Gebäudereinigung“
+   objekt   p=6.262 r=0.6/0.46 gem=['dammerstr 1', 'goettingerstr 10', 'grundschule neuenkirchen'] | 277050-2022 (2022-05-24, competition, xml) „Gde. Neuenkirchen-Vörden: Gebäudereinigung“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 160599-2026 (2026-03-09, result, api) „Gebäudereinigungsleistungen für die Stadt Vechta“
+
+## 373542-2026 „['Gebäudereinigung in den Objekten des Landkreises Saarlouis']“ Kand=40
+   unklar   p=1.2   r=0.0/0.0 gem=[] | 437262-2023 (2023-07-19, competition, xml) „Gebäudereinigung in Objekten des Landkreises Saarlouis“
+   unklar   p=1.2   r=0.0/0.0 gem=[] | 432621-2022 (2022-08-08, result, xml) „Gebäudereinigung in Objekten des Landkreises Saarlouis“
+   unklar   p=1.2   r=0.0/0.0 gem=[] | 185375-2022 (2022-04-08, competition, xml) „Gebäudereinigung in Objekten des Landkreises Saarlouis“
+
+## 442532-2026 „['Gebäudereinigung Anmietung ehem. Kaufhaus Schocken - SIB, Niederlassung Zwickau']“ Kand=199
+   unklar   p=2.2   r=0.0/0.0 gem=[] | 67756-2026 (2026-01-29, competition, api) „Reinigung Hochschul-Technologie-Zentrum“
+   unklar   p=2.2   r=0.0/0.0 gem=[] | 644038-2025 (2025-10-02, competition, api) „HfBK DD Brühlsche Terrasse Brandschutz“
+   unklar   p=2.2   r=0.0/0.0 gem=[] | 719821-2024 (2024-11-26, result, api) „Gebäudereinigung - 5 Lose in verschiedenen Liegenschaften (siehe Fbl. 911.1_Lieg“
+
+## 249558-2026 „['Gebäudereinigung']“ Kand=13
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 221408-2022 (2022-04-27, competition, xml) „Gebäudereinigung“
+
+## 231334-2026 „['Reinigungsdienstleistungen für die Zentrale Bußgeldstelle / Polizeistation Artern']“ Kand=64
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 302098-2020 (2020-06-29, result, xml) „Reinigung WC-Gebäude AM Z-M 2020/22“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 302093-2020 (2020-06-29, result, xml) „Reinigung WC-Gebäude AM Erf 2020/22“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 302100-2020 (2020-06-29, result, xml) „Reinigung WC-Gebäude AM Hdf 2020/22“
+
+## 288489-2026 „['Unterhaltsreinigung RIM Rostock']“ Kand=198
+   unklar   p=1.2   r=0.0/0.0 gem=[] | 429861-2022 (2022-08-05, result, xml) „RV Unterhaltsreinigung RIM Rostock“
+   unklar   p=1.2   r=0.0/0.0 gem=[] | 34461-2022 (2022-01-21, competition, xml) „RV Unterhaltsreinigung RIM Rostock“
+   unklar   p=0.95  r=0.0/0.0 gem=[] | 762128-2024 (2024-12-12, result, api) „Unterhaltsreinigung RIM VZ“
+
+## 317649-2026 „['Unterhaltsreinigung AHE Glückstadt']“ Kand=84
+   unklar   p=2.2   r=0.0/0.0 gem=[] | 271499-2026 (2026-04-21, competition, api) „Unterhaltsreinigung für diverse Dienststellen in Schleswig-Holstein“
+   unklar   p=2.2   r=0.0/0.0 gem=[] | 468300-2025 (2025-07-17, result, api) „Unterhaltsreinigung für diverse Dienststellen in Schleswig-Holstein“
+   unklar   p=2.2   r=0.0/0.0 gem=[] | 205888-2025 (2025-03-31, competition, api) „Unterhaltsreinigung für diverse Dienststellen in Schleswig-Holstein“
+
+## 303367-2026 „['Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterhalts- und Glasreinigungsleistungen) für zwei Liegenschaften in Regensburg, VOEK 063-26']“ Kand=394
+   unklar   p=2.325 r=0.0/0.0 gem=[] | 120698-2026 (2026-02-20, result, api) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   unklar   p=2.325 r=0.0/0.0 gem=[] | 498374-2025 (2025-07-30, competition, api) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+   unklar   p=2.311 r=0.0/0.0 gem=[] | 789572-2025 (2025-11-28, result, api) „Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterha“
+
+## 359736-2026 „['Kunsthalle Mannheim, UR+GR']“ Kand=73
+   objekt   p=6.7   r=1.0/1.0 gem=['museum'] | 553701-2022 (2022-10-10, result, xml) „Reinigung Kunsthalle Mannheim“
+   objekt   p=6.7   r=1.0/1.0 gem=['museum'] | 255705-2022 (2022-05-13, competition, xml) „Reinigung Kunsthalle Mannheim“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 286829-2026 (2026-04-27, competition, api) „Objektreinigungen im Stadtteil Schwetzingerstadt“
+
+## 395779-2026 „['UHR Goldsteinschule']“ Kand=223
+   objekt   p=5.833 r=1.0/1.0 gem=['goldsteinschule', 'wiesenhof 109'] | 396386-2017 (2017-10-07, result, xml) „UHR Goldsteinschule [LDL020].“
+   objekt   p=5.833 r=1.0/1.0 gem=['goldsteinschule', 'wiesenhof 109'] | 240266-2017 (2017-06-24, competition, xml) „UHR Goldsteinschule [LDL020].“
+   unklar   p=2.3   r=0.0/0.0 gem=[] | 116786-2024 (2024-02-26, result, api) „UHR Helene-Lange-Schule“
+
+## 235732-2026 „['Unterhaltsreinigung für fünf Schulen und ein Verwaltungsgebäude in Pritzwalk']“ Kand=26
+   objekt   p=3.271 r=0.5/0.2 gem=['giesensdorfer weg 3', 'gymnasium pritzwalk'] | 19971-2017 (2017-01-19, result, xml) „Gymnasium Pritzwalk – Unterhaltsreinigung mit Glas- und Rahmenreinigung sowie Gr“
+   unklar   p=3.258 r=0.38/0.3 gem=['giesensdorfer weg 3', 'nordstr 18', 'oberstufenzentrum'] | 430365-2023 (2023-07-17, result, xml) „Gebäudereinigungsleistungen für Schulen des Landkreises Prignitz, Unterhaltsrein“
+   unklar   p=3.258 r=0.38/0.3 gem=['giesensdorfer weg 3', 'nordstr 18', 'oberstufenzentrum'] | 192324-2023 (2023-03-31, competition, xml) „Gebäudereinigungsleistungen für Schulen des Landkreises Prignitz, Unterhaltsrein“
+
+## 440357-2026 „['Unterhalts- sowie Glas- und Rahmenreinigung für das FA Würzburg mit der ASt Ochsenfurt']“ Kand=250
+   objekt   p=5.5   r=1.0/1.0 gem=['finanzamt wuerzburg'] | 504654-2020 (2020-10-23, result, xml) „Unterhalts- sowie Glas- und Rahmenreinigung für das FA Würzburg und der ASt Ochs“
+   objekt   p=6.2   r=1.0/1.0 gem=['finanzamt wuerzburg'] | 347149-2020 (2020-07-23, competition, xml) „Unterhalts- sowie Glas- und Rahmenreinigung für das FA Würzburg und der ASt Ochs“
+   unklar   p=0.783 r=0.0/0.0 gem=[] | 463716-2025 (2025-07-16, competition, api) „Unterhaltsreinigung für das ADBV Kulmbach mit ASt Kronach“
+
+## 294132-2026 „['Glas- und Fassadenreinigung an den NDR Standorten Lokstedt ( Los 1) und Rothenbaum (Los 2)']“ Kand=21
+   objekt   p=6.7   r=1.0/1.0 gem=['rothenbaumchaussee 132-134'] | 497252-2021 (2021-10-01, result, xml) „Glas- und Fassadenreinigung an den NDR Standorten Lokstedt und Rothenbaum“
+   objekt   p=6.7   r=1.0/1.0 gem=['rothenbaumchaussee 132-134'] | 401058-2021 (2021-08-06, competition, xml) „Glas- und Fassadenreinigung an den NDR Standorten Lokstedt und Rothenbaum“
+
+## 350702-2026 „['Unterhalts- und Glasreinigung AELF Regensburg-Schwandorf für die Dienstorte Regensburg, Nabburg, Neunburg vorm Wald, Sinzing']“ Kand=52
+   objekt   p=3.533 r=0.5/0.17 gem=['walderlebniszentrum'] | 646557-2022 (2022-11-22, result, xml) „Unterhalts- und Glasreinigung AELF Regensburg-Schwandorf -für die Dienstorte: Ve“
+   objekt   p=3.533 r=0.5/0.17 gem=['walderlebniszentrum'] | 443613-2022 (2022-08-12, competition, xml) „Unterhalts- und Glasreinigung AELF Regensburg-Schwandorf -für die Dienstorte: Ve“
+   unklar   p=3.0   r=0.5/0.5 gem=['walderlebniszentrum'] | 202718-2021 (2021-04-23, competition, xml) „Unterhalts- und Glasreinigung AELF Kaufbeuren und Füssen“
+
+## 358570-2026 „['Unterhalts- und Grundreinigung beim Polizeipräsidium Einsatz Göppingen']“ Kand=156
+   objekt   p=4.5   r=1.0/0.5 gem=['polizeipraesidium einsatz'] | 380039-2022 (2022-07-13, competition, xml) „Reinigungsdienstleistungen Standorte Mainz“
+   objekt   p=4.075 r=0.5/0.5 gem=['polizeipraesidium einsatz'] | 358963-2017 (2017-09-13, result, xml) „Göppingen, Polizeipräsidium Einsatz, Unterhalts- und Grundreinigung, Unterhalts-“
+   objekt   p=4.075 r=0.5/0.5 gem=['polizeipraesidium einsatz'] | 132602-2017 (2017-04-08, competition, xml) „Göppingen, Polizeipräsidium Einsatz, Unterhalts- und Grundreinigung, Unterhalts-“
+
+## 238288-2026 „['Reinigungsleistungen für die Staatliche Kurstadt-Grundschule Bad Frankenhausen mit Werkvertrag vom 01.08.2026 bis 12.07.2030']“ Kand=67
+   unklar   p=1.062 r=0.0/0.0 gem=[] | 198981-2017 (2017-05-26, result, xml) „Kafkastr. 9 – Grundschule; Unterhalts- und Glasreinigung.“
+   unklar   p=1.062 r=0.0/0.0 gem=[] | 189523-2017 (2017-05-19, result, xml) „Manzostraße 79, Grundschule; Unterhalts- und Glasreinigung.“
+   unklar   p=1.056 r=0.0/0.0 gem=[] | 201879-2017 (2017-05-27, competition, xml) „Reinigungsdienstleistungen an der Grundschule Obertürkheim mit TVH.“
+
+## 375982-2026 „['Unterhalts-, Grund- und Glas-/Rahmenreinigung in Dienstgebäuden der Polizei Bamberg']“ Kand=40
+   objekt   p=6.291 r=1.0/1.0 gem=['hafenstr 1', 'mannlehenweg 27', 'ringstr 28'] | 598000-2022 (2022-10-28, result, xml) „Unterhalts-, Grund- und Glasreinigung in den Dienstgebäuden Schildstraße 81, Haf“
+   objekt   p=6.2   r=1.0/1.0 gem=['hafenstr 1', 'mannlehenweg 27', 'ringstr 28'] | 437519-2022 (2022-08-10, competition, xml) „Unterhaltsreinigung, Grundreinigung und Glasreinigung“
+   objekt   p=6.2   r=1.0/1.0 gem=['hafenstr 1', 'mannlehenweg 27', 'ringstr 28'] | 353638-2018 (2018-08-11, competition, xml) „Unterhaltsreinigung, Grundreinigung und Glasreinigung“
+
+## 323581-2026 „['Gebäudereinigung für die Schule - Stiftung Aktion Sonnenschein']“ Kand=4
+
+## 350327-2026 „['Rahmenvereinbarung über Unterhalts- und Glasreinigungsleistungen am Standort Ronneburg (2 Lose)']“ Kand=34
+   unklar   p=1.033 r=0.0/0.0 gem=[] | 509877-2023 (2023-08-23, result, xml) „Rahmenvereinbarung über Unterhalts- und Glasreinigung am Standort Ronneburg (2 L“
+   unklar   p=1.033 r=0.0/0.0 gem=[] | 316721-2023 (2023-05-26, competition, xml) „Rahmenvereinbarung über Unterhalts- und Glasreinigung am Standort Ronneburg (2 L“
+   unklar   p=0.9   r=0.0/0.0 gem=[] | 398949-2019 (2019-08-23, result, xml) „Rahmenvereinbarung über Reinigungsleistungen für den Standort Ronneburg der Wism“
+
+## 443331-2026 „['Unterhaltsreinigung im Rathaus Neukölln']“ Kand=44
+   objekt   p=6.2   r=1.0/1.0 gem=['rathaus neukoelln'] | 470588-2021 (2021-09-17, result, xml) „Unterhaltsreinigung Rathaus Neukölln“
+   objekt   p=6.2   r=1.0/1.0 gem=['rathaus neukoelln'] | 299801-2021 (2021-06-15, competition, xml) „Unterhaltsreinigung Rathaus Neukölln“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 284816-2026 (2026-04-27, competition, api) „Unterhaltsreinigung in 23 Liegenschaften - Schulen, Horte, Kitas, VHS - des Bezi“
+
+## 419743-2026 „['OV-HLR-26']“ Kand=7
+   unklar   p=2.2   r=0.0/0.0 gem=[] | 404108-2020 (2020-08-28, competition, xml) „OV-Lauenburg20“
+   unklar   p=1.2   r=0.0/0.0 gem=[] | 442851-2022 (2022-08-12, competition, xml) „OV-HLR-22“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 300169-2022 (2022-06-03, competition, xml) „Glasreinigung“
+
+## 230406-2026 „['Reinigungsdienstleistungen an verschiedenen Schulen im Landkreis Mayen-Koblenz']“ Kand=46
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 9955-2026 (2026-01-08, result, api) „Reinigungsdienstleistungen Verwaltungsliegenschaften Kreisverwaltung Mayen-Koble“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 664889-2025 (2025-10-10, competition, api) „Reinigungsdienstleistungen Verwaltungsliegenschaften Kreisverwaltung Mayen-Koble“
+   unklar   p=0.7   r=0.0/0.0 gem=[] | 661220-2022 (2022-11-28, result, xml) „Unterhaltsreinigung/Glas- und Rahmenreinigung“
+
+## 352974-2026 „['UHR Kasinoschule']“ Kand=220
+   objekt   p=8.033 r=1.0/1.0 gem=['kasinoschule', 'kasinostr 4'] | 549872-2022 (2022-10-07, result, xml) „UHR Kasinoschule [LDL020]“
+   objekt   p=8.033 r=1.0/1.0 gem=['kasinoschule', 'kasinostr 4'] | 175617-2021 (2021-04-09, competition, xml) „UHR Kasinoschule [LDL020]“
+   unklar   p=2.3   r=0.0/0.0 gem=[] | 522999-2024 (2024-09-02, result, api) „UHR Paul-Ehrlich-Schule“
