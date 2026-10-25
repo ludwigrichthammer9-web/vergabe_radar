@@ -536,6 +536,16 @@ Liste ohne Automatik reicht.
 >   „Paarbeurteilung“ ohne Kenntnis der Herkunft (`.claude/agents/rechercheur.md`).
 > - Korrekturen zu Iteration 3 als Nachtrag dort (Enddaten, Belegstärke, Originalurteile).
 
+> **Fortschritt 2026-10-25 (Schritt 2, vor der Regelentwicklung):**
+> - Volltextsuche `FT` findet auch Bekanntmachungen vor eForms (Probeabfragen `data/raw/ted_probes/20261025/`); die TED-Doku sagt dazu nichts.
+> - Neu geladen mit `ted_download.py --los-texte` (Beschreibungen je Los, BT-24/BT-728): Ausschreibungen Q2 und Q3 2026 (gleiche
+>   Notices wie zuvor) sowie der Kandidatenpool der eForms-Zeit (Zuschläge und Ausschreibungen CPV 909, 25.10.2023–30.09.2026).
+> - Merkmale je Los in `src/los_merkmale.py` (Leistungsart, Flächen, Adressen, Objektnamen); `objekt_merkmale.py` bleibt für die
+>   Reproduzierbarkeit von Iteration 3 unverändert.
+> - **Festlegung zum Schutz der Testdaten:** Der Kandidatenpool enthält Ausschreibungen aus Q1 2026. Jede Q1-2026-Notice, die bei der
+>   Regelentwicklung als Kandidat oder Vorschlag ausgegeben wird, wird automatisch in `reports/dev_gesehene_q1_notices.txt` protokolliert
+>   und **nicht als Testfall gezogen**.
+
 **Geprüfte Annahmen:** A9c (Hauptgegenstand); A3 (Wiederholung unter Version 1.1); A12 (Leistungsart auf Los-Ebene); A10, A11 (W5);
 A8, A16 (explorativ); A15, A1 (Gespräche, parallel).
 

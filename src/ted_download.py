@@ -15,6 +15,8 @@ Aufruf:
     .venv\\Scripts\\python src/ted_download.py --from 20260722 --to 20261021
     .venv\\Scripts\\python src/ted_download.py --form-type competition --cpv 909 --cpv-field main-classification-proc \\
         --from 20260401 --to 20260630
+    .venv\\Scripts\\python src/ted_download.py --form-type competition --cpv 9091 --cpv-field main-classification-proc \\
+        --from 20260701 --to 20260930 --los-texte          # mit Beschreibungen je Los (Iteration 4)
 """
 
 import argparse
@@ -84,6 +86,16 @@ FIELDS = [
     "framework-maximum-value-lot",
 ]
 
+# Zusätzliche Textfelder je Los (seit Iteration 4, Schalter --los-texte; nur eForms befüllt).
+# Beschreibungen enthalten Objektlisten und Flächen (Probeabfragen data/raw/ted_probes/20261025/).
+LOT_TEXT_FIELDS = [
+    "description-lot",  # BT-24-Lot
+    "description-proc",  # BT-24-Procedure
+    "place-performance-streetline1-lot",  # BT-5101(b)
+    "place-of-performance-addtional-lot",  # BT-728 (Schreibweise laut Feldliste)
+]
+MAX_FIELD_CELLS = 10_000  # Grenze der API: Anzahl Felder × Seitengröße
+
 
 def default_period(today: date) -> tuple[date, date]:
     """Letzte 3 Monate: vom gleichen Tag vor 3 Monaten bis gestern."""
@@ -107,14 +119,16 @@ def build_query(
     )
 
 
-def run_name(country: str, date_from: str, date_to: str, form_type: str, cpv: str | None, cpv_field: str) -> str:
-    """Ordnername des Laufs. Ohne Zusatzfilter wie in Iteration 1: <land>_<von>_<bis>."""
+def run_name(
+    country: str, date_from: str, date_to: str, form_type: str, cpv: str | None, cpv_field: str, lot_texts: bool = False,
+) -> str:
+    """Ordnername des Laufs. Ohne Zusatzfilter wie in Iteration 1: <land>_<von>_<bis>; mit Los-Texten Endung _lostext."""
     parts = [country]
     if form_type != "result" or cpv:
         parts.append(form_type)
     if cpv:
         parts.append(f"cpv{cpv}" + ("main" if cpv_field == "main-classification-proc" else ""))
-    return "_".join(parts + [date_from, date_to])
+    return "_".join(parts + [date_from, date_to] + (["lostext"] if lot_texts else []))
 
 
 def post_with_retry(session: requests.Session, body: dict) -> requests.Response:
@@ -149,9 +163,15 @@ def main() -> None:
         "--cpv-field", default="classification-cpv", choices=["classification-cpv", "main-classification-proc"],
         help="classification-cpv = Haupt- oder Zusatz-CPV (auch vor eForms); main-classification-proc = Haupt-CPV (nur eForms)",
     )
+    parser.add_argument("--los-texte", action="store_true", help="zusätzlich Beschreibungen und Adresszeilen je Los laden")
     args = parser.parse_args()
 
-    out_dir = RAW_DIR / run_name(args.country, args.date_from, args.date_to, args.form_type, args.cpv, args.cpv_field)
+    fields = FIELDS + (LOT_TEXT_FIELDS if args.los_texte else [])
+    # Die API zählt ein Feld mehr als angefragt (Fehlermeldung 2026-10-25: 238 × 43 bei 42 Feldern)
+    page_size = min(PAGE_SIZE, MAX_FIELD_CELLS // (len(fields) + 1))
+    out_dir = RAW_DIR / run_name(
+        args.country, args.date_from, args.date_to, args.form_type, args.cpv, args.cpv_field, args.los_texte,
+    )
     if out_dir.exists() and any(out_dir.iterdir()):
         sys.exit(f"{out_dir} existiert bereits und ist nicht leer. Bitte löschen oder anderen Zeitraum wählen.")
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -159,8 +179,8 @@ def main() -> None:
     query = build_query(args.country, args.date_from, args.date_to, args.form_type, args.cpv, args.cpv_field)
     body = {
         "query": query,
-        "fields": FIELDS,
-        "limit": PAGE_SIZE,
+        "fields": fields,
+        "limit": page_size,
         "paginationMode": "ITERATION",
     }
     print(f"Query: {query}")
@@ -203,8 +223,8 @@ def main() -> None:
     meta = {
         "api_url": API_URL,
         "query": query,
-        "fields": FIELDS,
-        "page_size": PAGE_SIZE,
+        "fields": fields,
+        "page_size": page_size,
         "pagination_mode": "ITERATION",
         "date_from": args.date_from,
         "date_to": args.date_to,
