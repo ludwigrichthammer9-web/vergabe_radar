@@ -130,8 +130,8 @@ _Neu am 2026-10-23 nach dem Entscheidungstor von Iteration 2. Vorschläge aus `r
 - [x] **T2b.6** A11 repräsentativ: 30 zufällige Zuschläge vor eForms auf REF_NOTICE und Laufzeit prüfen _(V6 = 25/30)_
 - [x] **T2b.7** Zuordenbare Paare mit bekanntem Vorgänger-Ende zählen und den Anteil vorzeitiger Neuvergaben messen (A16)
   _(V5 = 328/Jahr, vorzeitig 2/36)_
-- [ ] **T2b.8** Abschluss: Report, Evaluator, `/iteration-ende`, Tag `iteration-3`
-  _(2026-10-25: Evaluator `reports/evaluation_iteration3.md`, Dokumente aktualisiert; Commit und Tag durch den Nutzer)_
+- [x] **T2b.8** Abschluss: Report, Evaluator, `/iteration-ende`, Tag `iteration-3`
+  _(2026-10-25: Evaluator `reports/evaluation_iteration3.md`, Dokumente aktualisiert; Commit b3c3475, Tag `iteration-3`)_
 
 **Ergebnis 2026-10-25:** V1 knapp erfüllt, V2/V3 verfehlt. Entscheidung: in Phase 2/3 bleiben, ein letzter Verbesserungsversuch (T2c).
 
@@ -139,7 +139,8 @@ _Neu am 2026-10-23 nach dem Entscheidungstor von Iteration 2. Vorschläge aus `r
 
 _Neu am 2026-10-25 nach Iteration 3. Vorschläge aus `reports/evaluation_iteration3.md`; verbindlich erst nach `/iteration-start`._
 
-- [ ] **T2c.1** Iteration planen: Kriterien, Stichprobenumfang (etwa 60–70 Testfälle) und Abbruchkriterium vorab festlegen
+- [x] **T2c.1** Iteration planen: Kriterien, Stichprobenumfang (etwa 60–70 Testfälle) und Abbruchkriterium vorab festlegen
+  _(2026-10-25: W1–W6, 70 Testfälle, in `docs/iterationen.md`)_
 - [ ] **T2c.2** Aufräumen aus Iteration 3: Vorgänger-Enddaten T26, T56, T18 korrigieren; Belegstärke T18–T30 in `gt.csv` nachtragen;
   Originaldatei der Nutzerurteile ins Repo
 - [ ] **T2c.3** Objekt- und Leistungsart-Merkmale auf Los-Ebene, auch vor eForms (XML, Volltextsuche `FT`)

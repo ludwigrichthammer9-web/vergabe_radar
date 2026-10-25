@@ -16,7 +16,7 @@ Regeln:
 | 1 | Machbarkeit der Daten | 1 → 2 | 2026-10-22 | abgeschlossen | Gebäudereinigung als vorläufige Arbeitsnische; **zurück zu Phase 2** (Zielereignis und Rückreichweite prüfen) |
 | 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 | abgeschlossen | **Idee anpassen:** Zuordnung über Auftraggeber verworfen (K2 = 16,7 %); weiter in Phase 2 mit Zuordnung über das Objekt |
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-10-25 | abgeschlossen | **In Phase 2/3 bleiben:** V1 63,3 % (knapp, definitionsabhängig), V2 45,8 % und V3 28,9 % verfehlt; ein letzter Verbesserungsversuch der Regel auf neuen Testdaten, parallel „Produkt mit manueller Prüfung“ in Phase 1 bewerten |
-| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | – | geplant | – |
+| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten Q1 2026) | 2/3 (parallel 1) | 2026-10-26 bis 2026-11-22 | angelegt | offen |
 | 5 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
 | 6 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
 | 7 | Erster Kundentest | 6 → 1 | – | geplant | – |
@@ -437,3 +437,85 @@ und abhängig von der Definition erfüllt. Bei strengerer Lesart griffe „Defin
 - A11 bleibt „vorläufig gestützt“, A9b ist für die eingefrorene Regel widerlegt; die allgemeine Objekt-Zuordnung wird als A9c weitergeführt.
 - Offen aus der Evaluation: korrigierte Enddaten für V5 (T26, T56, T18), Belegstärke T18–T30 in `gt.csv`, Originaldatei der
   Nutzerurteile im Repo.
+
+## Iteration 4: Letzter Verbesserungsversuch der Objekt-Zuordnung
+
+**Status:** angelegt am 2026-10-25, Arbeit ab 2026-10-26
+
+**Fokus und Phasen:** Phase 2/3, parallel Phase 1. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) gemäß
+Entscheidung zu Iteration 3: Die erste Prognose (jetzt Iteration 5) folgt erst, wenn eine Zuordnung belegt ist. Dies ist der **letzte**
+Regelversuch; einen dritten gibt es nicht.
+
+**Hypothese** _(vorab festgelegt am 2026-10-25, vor Kenntnis der Ergebnisse)_
+„Eine Regel, die Objektliste, Adresse, Fläche und Leistungsart auf Los-Ebene vergleicht (vor eForms aus der XML), ordnet auf neuen
+Testdaten (Ausschreibungen Q1 2026) den objektgleichen Vorgänger mit mindestens 80 % Präzision und mindestens 60 % Trefferquote zu.“
+
+**Begriffe** _(vorab festgelegt)_
+- **Population:** wie Iteration 3 (competition, Auftraggeber DEU, Haupt-CPV 90910/90911/90919, nur Originale, Stichwortliste aus
+  `src/population_iteration3.py`). **Neu:** Die Ausschlussliste wird auch auf Los-Titel und Beschreibung angewendet, nicht nur auf den
+  Titel der Bekanntmachung (Anlass: T16). Die genaue Fassung wird in Schritt 1 committet, **bevor** Testdaten angesehen werden.
+- **Testdaten:** Ausschreibungen Q1 2026 (01.01.–31.03.2026). Testprobe: **70 Zufallsfälle**, höchstens 2 je Auftraggeber, Seed wird
+  in Schritt 1 festgelegt. Ausgeschlossen sind Notices, die in einem Report von Iteration 2 oder 3 vorkommen (einige Q1-2026-Notices
+  waren dort Vorgänger-Kandidaten, z. B. 165984-2026, 156628-2026).
+- **Entwicklungsdaten:** Ausschreibungen Q2 2026 und Q3 2026. Für Q3 ist die Handsuche aus Iteration 3 der Maßstab.
+- **Vorgänger-Quellen:** wie Iteration 3 (Zuschläge und frühere Ausschreibungen auf TED, ab Okt. 2016, vor der Testausschreibung).
+- **Ground Truth:** Handsuche durch den Subagenten `rechercheur` mit festem Protokoll, **Kategorien nach
+  [Urteilsregeln Version 1.1](../reports/urteilsregeln_blindpruefung.md)** (u. a. Teilmenge = mindestens 50 % der kürzeren Objektliste
+  auf beiden Seiten belegt; andere Leistungsart = nicht objektgleich). Regelvorschläge außerhalb der Handsuche beurteilt ebenfalls der
+  Rechercheur nach Version 1.1, ohne Kenntnis der Herkunft des Paares (nicht mehr Claude).
+- **Korrekt** (W2, W3) = objektgleich (hoch oder mittel) oder teilmenge nach Version 1.1. Unklar zählt als nicht korrekt.
+- **Vorgänger-Ende:** mit Herkunft gekennzeichnet (Grundlaufzeit, Höchstende, aufgehobenes Verfahren, unbekannt). Für W5 zählt nur ein
+  bestimmbares Ende der Grundlaufzeit des tatsächlichen Vorgängervertrags.
+- **Kein Zeitfenster** in der Regel, weder als Filter noch als Score-Merkmal.
+- **Reihenfolge:** (1) Regel auf Entwicklungsdaten bauen und per Commit einfrieren, (2) erst dann Testprobe ziehen, (3) Handsuche mit
+  Protokoll abschließen und committen, (4) erst dann die Regel auf den Testdaten anwenden, (5) danach die Blindprüfung W4.
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-10-25)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| W1 Sichtbarkeit | Anteil der 70 Testfälle mit objektgleichem Vorgänger oder Teilmenge (nach Version 1.1); nur objektgleich wird zusätzlich ausgewiesen | ≥ 50 % | A3 |
+| W2 Präzision | korrekte Vorschläge / alle Vorschläge der eingefrorenen Regel | ≥ 80 % **und** Wilson-Untergrenze ≥ 60 %, bei mindestens 25 Vorschlägen | A9c |
+| W3 Trefferquote | von der Regel korrekt gefundene / in W1 gefundene Vorgänger | ≥ 60 % | A9c |
+| W4 Zweitprüfung | Übereinstimmung zwischen Nutzer und Ground Truth bei 20 frischen, vorher nicht angesehenen Paaren (binär: gefunden = objektgleich/teilmenge, nicht = nicht objektgleich/unklar) | ≥ 85 % | – |
+| W5 Backtest-Basis | korrekte Paare mit bestimmbarem Vorgänger-Ende, hochgerechnet: Anteil im Test × Populationsgröße der letzten 4 Quartale (Q4 2025 bis Q3 2026) | ≥ 100 pro Jahr | A10, A11 |
+| W6 Kandidatenliste | Anteil der W1-Fälle, bei denen der Vorgänger unter den höchstens 3 angezeigten Kandidaten der Regel ist | ≥ 70 % | A9c (Produkt mit manueller Prüfung) |
+
+Explorativ, ohne Schwelle: Prüfzeit je Paar in W4 (Nutzer notiert Minuten), Vorlaufzeit (Veröffentlichung des Testfalls bis
+Vorgänger-Ende) bei bestätigten Paaren (A8), Anteil vorzeitiger Neuvergaben wie in Iteration 3 (A16).
+
+**Was folgt aus welchem Ergebnis**
+- W4 < 85 % → W2, W3 und W6 gelten nur als Hinweis. Kein weiterer Regelversuch; Entscheidung in Phase 1 (**Idee anpassen**).
+- W1 < 30 % → **zurück zu Phase 1:** nationale Quellen oder Prognose aus Auftraggeber-Zyklen.
+- W2, W3 und W5 erfüllt (W4 erfüllt) → **weiter zu Phase 3**, danach Iteration 5 (erste Prognose und Backtest).
+- W2 oder W3 verfehlt, aber W6 ≥ 70 % und Median-Prüfzeit ≤ 5 Minuten je Paar → **Idee anpassen: Produkt mit manueller Prüfung**;
+  Iteration 5 macht den Backtest auf manuell bestätigten Paaren.
+- sonst → **zurück zu Phase 1:** Objekt-Zuordnung aufgeben; Auftraggeber-Ebene, nationale Quellen oder Projektziel neu bewerten.
+
+**Zeitrahmen:** 2026-10-26 bis 2026-11-22, etwa 6–8 Arbeitssitzungen; Nutzer etwa 1,5 Stunden für W4, dazu Gespräche.
+
+**Plan**
+1. Aufräumen und Vorarbeiten (Phase 2/3), Commit vor dem Regelbau: Enddaten T26, T56, T18 korrigieren; Belegstärke T18–T30 in
+   `reports/sichtbarkeit_iteration3_gt.csv` nachtragen; Originaldatei der Nutzerurteile ablegen; Rechercheur auf Urteilsregeln 1.1
+   umstellen (`.claude/agents/rechercheur.md`); Ausschlussliste erweitern und Testpopulation festlegen (`src/population_iteration4.py`).
+2. Merkmale auf Los-Ebene (Phase 3, `src/objekt_merkmale.py`): Objektliste, Adressen, Flächen und Leistungsart je Los, vor eForms aus
+   der XML. Vorher die TED-Doku prüfen, ob die Volltextsuche `FT` für Kandidaten vor eForms taugt.
+3. Regel auf Q2 + Q3 2026 verbessern und per Commit einfrieren (`src/zuordnung_objekt.py`, `reports/regel_entwicklung_iteration4.md`):
+   Leistungsart hart prüfen, Geschwisterverfahren über Objektlisten und Flächen trennen, kein Zeitfenster, Kandidatenliste mit
+   höchstens 3 Einträgen.
+4. Testprobe Q1 2026 ziehen, Handsuche in 5 Teilen zu je 14 Fällen, committet vor dem Regel-Lauf (`reports/sichtbarkeit_iteration4_teil*.md`).
+5. Regel auf Testdaten anwenden (W2, W3, W5, W6); Vorschläge außerhalb der Handsuche beurteilt der Rechercheur
+   (`reports/zuordnung_iteration4.md`).
+6. Blindprüfung W4: 20 frische Paare, Zusammensetzung vorab festgelegt (schwach belegte Treffer, Regelvorschläge, Fälle ohne Vorgänger
+   mit bestem Kandidaten, Zufall); Prüfzeit je Paar (`reports/blindpruefung_iteration4.md`).
+7. Report, Evaluator, `/iteration-ende`.
+
+Parallel in Phase 1, nicht Teil des Kriteriums: mindestens 2 Gespräche mit Reinigungsfirmen (A15), dabei auch fragen, ob eine geprüfte
+Liste ohne Automatik reicht.
+
+**Geprüfte Annahmen:** A9c (Hauptgegenstand); A3 (Wiederholung unter Version 1.1); A12 (Leistungsart auf Los-Ebene); A10, A11 (W5);
+A8, A16 (explorativ); A15, A1 (Gespräche, parallel).
+
+**Ergebnis:** offen
+
+**Entscheidung:** offen
