@@ -146,9 +146,11 @@ _Neu am 2026-10-25 nach Iteration 3. Vorschläge aus `reports/evaluation_iterati
 - [x] **T2c.3** Objekt- und Leistungsart-Merkmale auf Los-Ebene, auch vor eForms (XML, Volltextsuche `FT`)
 - [x] **T2c.4** Regel verbessern auf Q2 + Q3 2026 (jetzt Entwicklungsdaten): Leistungsart hart prüfen, Geschwisterverfahren über
   Objektlisten und Flächen trennen, **kein Zeitfenster**; einfrieren per Commit
-- [ ] **T2c.5** Neue Testdaten Q1 2026: Testprobe ziehen, Handsuche nach Urteilsregeln 1.1 **vor** dem Regel-Lauf
+- [x] **T2c.5** Neue Testdaten Q1 2026: Testprobe ziehen, Handsuche nach Urteilsregeln 1.1 **vor** dem Regel-Lauf
+  _(2026-10-26: 70 Fälle, Handsuche in 5 Teilen, Ground Truth d43c547; Regel-Lauf ec4733e)_
 - [ ] **T2c.6** Zweitprüfung mit frischen Paaren (vorher nicht angesehen), gezielt schwach belegte Treffer und „kein Vorgänger“-Fälle
-- [ ] **T2c.7** Saisonalität prüfen: Populationsgröße je Quartal (Hochrechnung V5)
+- [x] **T2c.7** Saisonalität prüfen: Populationsgröße je Quartal (Hochrechnung V5)
+  _(2026-10-26: Q4 2025 381, Q1 538, Q2 488, Q3 486 = 1.893 pro Jahr)_
 - [ ] **T2c.8** Parallel (Strang G): Produkt mit manueller Prüfung bewerten (Prüfaufwand je Fall, Preis)
 - [ ] **T2c.9** Abschluss: Report, Evaluator, `/iteration-ende`, Tag `iteration-4`
 
