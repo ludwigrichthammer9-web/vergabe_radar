@@ -8,6 +8,8 @@ Schreibt JSON-Dateien (Liste von Zeilen) nach data/processed/dashboard/:
 - kriterien_it4.json W1–W6 (reports/zuordnung_iteration4.md, sichtbarkeit_iteration4_gt.csv)
 - verlauf.json      Zuordnung über die Iterationen (ergebnis/evaluation der Iterationen 2–4)
 - phasen.json       Stand der CRISP-DM-Phasen (docs/phasen/01–06)
+- zeit_ist.json     Arbeitssitzungen je Iteration aus den Commit-Zeiten (git log, Untergrenze)
+- zeit_rest.json    Schätzung der verbleibenden Stunden je Block, mit Grundlage
 
 Aufruf:
     python -I src/dashboard_daten.py
@@ -15,7 +17,9 @@ Aufruf:
 
 import json
 import re
+import subprocess
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -120,11 +124,52 @@ PHASEN = [  # docs/phasen/01–06, Aktueller Stand
 ]
 
 
+SESSION_GAP = timedelta(minutes=90)  # Commits mit größerem Abstand gehören zu verschiedenen Arbeitssitzungen
+SESSION_LEAD = timedelta(minutes=30)  # Arbeit vor dem ersten Commit einer Sitzung
+
+
+def zeit_ist() -> list[dict]:
+    """Arbeitssitzungen je Iteration aus den Commit-Zeiten (Untergrenze: Arbeit ohne Commit fehlt)."""
+    def git(*args: str) -> str:
+        return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, encoding="utf-8").stdout.strip()
+    dates = [datetime.fromisoformat(d) for d in git("log", "--reverse", "--format=%ad", "--date=iso-strict").splitlines()]
+    ends = [(datetime.fromisoformat(git("log", "-1", "--format=%ad", "--date=iso-strict", f"iteration-{i}")), i)
+            for i in range(1, 9) if git("tag", "-l", f"iteration-{i}")]
+    def iteration(d: datetime) -> int:
+        return next((i for end, i in ends if d <= end), len(ends) + 1)
+    sessions: list[list[datetime]] = []
+    for d in dates:
+        if sessions and d - sessions[-1][-1] <= SESSION_GAP:
+            sessions[-1].append(d)
+        else:
+            sessions.append([d])
+    rows: dict[int, dict] = {}
+    for s in sessions:
+        r = rows.setdefault(iteration(s[0]), {"sitzungen": 0, "stunden": 0.0, "commits": 0})
+        r["sitzungen"] += 1
+        r["commits"] += len(s)
+        r["stunden"] += (s[-1] - s[0] + SESSION_LEAD).total_seconds() / 3600
+    return [{"iteration": i, "block": f"Iteration {i}", **{k: round(v, 1) if k == "stunden" else v for k, v in r.items()}}
+            for i, r in sorted(rows.items())]
+
+
+ZEIT_REST = [  # Schätzung der verbleibenden Stunden (Spanne); Grundlage je Zeile, Stand 2026-10-28
+    {"block": "Iteration 4: Blindprüfung W4", "min": 1.5, "max": 2, "grundlage": "Planwert in docs/iterationen.md (etwa 1,5 Stunden)"},
+    {"block": "Iteration 4: Abschluss", "min": 1, "max": 2, "grundlage": "Abschluss Iteration 3 (Report, Evaluator, Dokumente)"},
+    {"block": "Iteration 5: Prognose und Backtest", "min": 4, "max": 10, "grundlage": "Iterationen 2–4 laut Git 3,8–4,8 h (Untergrenze); obere Grenze geschätzt"},
+    {"block": "Iteration 6: Verbesserung", "min": 4, "max": 10, "grundlage": "wie Iteration 5"},
+    {"block": "Iteration 7: Kundentest", "min": 6, "max": 15, "grundlage": "Annahme: Liste bauen, 2–3 Pilotkunden betreuen"},
+    {"block": "Kundengespräche", "min": 5, "max": 15, "grundlage": "5–10 Gespräche je 1–1,5 h mit Vorbereitung und Protokoll"},
+    {"block": "Markt, Angebot und Preis", "min": 4, "max": 8, "grundlage": "Annahme für G1 und G3 im Projektplan"},
+    {"block": "Rechtliches vor dem ersten Verkauf", "min": 2, "max": 4, "grundlage": "Annahme für P3 im Projektplan"},
+]
+
+
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     OUT.mkdir(parents=True, exist_ok=True)
     data = {"aufgaben": aufgaben(), "annahmen": annahmen(), "iterationen": ITERATIONEN, "schritte_it4": SCHRITTE_IT4,
-            "kriterien_it4": KRITERIEN_IT4, "verlauf": VERLAUF, "phasen": PHASEN}
+            "kriterien_it4": KRITERIEN_IT4, "verlauf": VERLAUF, "phasen": PHASEN, "zeit_ist": zeit_ist(), "zeit_rest": ZEIT_REST}
     for name, rows in data.items():
         (OUT / f"{name}.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
     a = data["aufgaben"]
