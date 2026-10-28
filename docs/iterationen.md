@@ -552,6 +552,15 @@ Liste ohne Automatik reicht.
 > 25 Vorschläge, Präzision 84–100 %, Trefferquote 55,3 %, Top 3 68,4 %. Auf Q2 nach Urteil von Claude etwa 14 von 17 korrekt.
 > Beide Werte stammen aus Entwicklungsdaten und sind optimistisch. 20 Q1-2026-Notices als gesehen protokolliert.
 
+> **Fortschritt 2026-10-26 (Schritte 4 und 5):** Testprobe gezogen (e2223ea; Population Q1 2026 = 538, 70 Fälle). Handsuche in 5 Teilen
+> nach Urteilsregeln 1.1, je Teil committet, Ground Truth vor dem Regel-Lauf (d43c547). Abweichungen: U21 (Vorgänger nur mit anderem CPV
+> gefunden, nach Protokoll „kein Vorgänger“) und U27 (PLZ-Widerspruch) nachgearbeitet; lokale Suchen zählen nicht zum API-Budget
+> (Wortlaut der Agentendefinition). Regel auf Testdaten: [zuordnung_iteration4.md](../reports/zuordnung_iteration4.md) (ec4733e).
+> **Festlegung W4 (vor dem Urteil des Nutzers):** 20 Paare laut `src/blindpruefung_iteration4.py`, Seed 20261027, je Testfall
+> höchstens ein Paar: 6 Vorschläge der Regel, 6 weitere Vorgänger der Handsuche, 4 beste Kandidaten bei „unklar“, 4 erste Kandidaten der
+> Regel bei „kein Vorgänger“. Zählweise binär wie Iteration 3; Prüfzeit je Paar in Minuten. Schlüssel lokal in
+> `data/processed/blindpruefung_iteration4_schluessel.csv`, SHA-256 `45aff7a4eb2399d0aafd3ff74c330016b858026e89d8f3738df3de966dbe9bcc`.
+
 **Geprüfte Annahmen:** A9c (Hauptgegenstand); A3 (Wiederholung unter Version 1.1); A12 (Leistungsart auf Los-Ebene); A10, A11 (W5);
 A8, A16 (explorativ); A15, A1 (Gespräche, parallel).
 
