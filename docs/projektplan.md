@@ -28,12 +28,15 @@ Das Projekt hat drei parallele Stränge:
 | 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | 2 bis 3 Wochen | nächster Schritt |
 | 5 | Erste Prognose und Backtest | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
 | 6 | Verbesserung der Prognose | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
-| 7 | Erster Kundentest | 6 → 1 | 2 bis 4 Wochen | geplant |
+| 7 | Prototyp der Vertragsliste (statt Kundentest) | 6 | 1 bis 2 Wochen | geplant |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | geplant |
 
 _Geändert am 2026-10-23 nach Iteration 2: Iteration 3 (Phase 2) eingeschoben; die Abschnitte T3–T6 unten gelten jetzt für die
 Iterationen 4–7. Ihre Nummern bleiben zur Nachvollziehbarkeit unverändert._
 _Geändert am 2026-10-25 nach Iteration 3: Iteration 4 (T2c) eingeschoben; die Abschnitte T3–T6 gelten jetzt für die Iterationen 5–8._
+_Geändert am 2026-10-29 (Entscheidung des Nutzers): Kein Kundenkontakt im Projekt. Iteration 7 wird ein Prototyp der Vertragsliste
+statt eines Kundentests; Strang G bleibt nur als Schreibtisch-Recherche (G1, G3), Gespräche und Pilotkunden entfallen. A1 und A15
+bleiben dadurch ungeprüft._
 
 Der Strang G läuft von Anfang an mit und wartet nicht auf die technischen Ergebnisse.
 
@@ -203,22 +206,23 @@ _Jetzt Iteration 4 (geändert am 2026-10-23)._
   - [ ] T4.5.2 Winterdienst über mehrere Quartale prüfen (Saisonalität)
 - [ ] **T4.6 Abschluss:** Report, Evaluator, `/iteration-ende`, Tag `iteration-4`
 
-### T5 Iteration 5: Erster Kundentest (Phase 6, dann Phase 1)
+### T5 Iteration 5: Prototyp der Vertragsliste (Phase 6)
+_Jetzt Iteration 7. Bis 2026-10-28 „Erster Kundentest (Phase 6, dann Phase 1)“; geändert, weil das Projekt ohne Kundenkontakt läuft._
 
 - [ ] **T5.1 Erstes Produkt als manuelle Liste**
   - [ ] T5.1.1 Format festlegen (Tabelle oder PDF: Auftraggeber, Objekt, voraussichtliches Fenster, Quelle, Sicherheit)
   - [ ] T5.1.2 Liste für eine Region erzeugen, Stichprobe der Einträge von Hand gegenprüfen
   - [ ] T5.1.3 Quellenangabe und Hinweis auf Unsicherheit je Eintrag
-- [ ] **T5.2 Testkunden gewinnen** (siehe Strang G, G4)
+- ~~T5.2 Testkunden gewinnen (siehe Strang G, G4)~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
 - [ ] **T5.3 Pipeline automatisieren**
   - [ ] T5.3.1 Ablauf von Datenabruf bis Liste in einem Skript bündeln
   - [ ] T5.3.2 Monatlicher Lauf, Protokoll, Fehlerbehandlung
   - [ ] T5.3.3 Versand per E-Mail (zunächst manuell auslösbar)
-- [ ] **T5.4 Feedback auswerten**
-  - [ ] T5.4.1 Wurde die Liste gelesen und genutzt?
-  - [ ] T5.4.2 Welche Einträge waren nützlich, welche falsch?
-  - [ ] T5.4.3 Preisreaktion festhalten
-- [ ] **T5.5 Abschluss:** Report, Evaluator, `/iteration-ende`, Tag `iteration-5`, Feedback in Phase 1 einarbeiten
+- [ ] **T5.4 Prototyp selbst bewerten** (statt Feedback von Kunden)
+  - [ ] T5.4.1 Liste gegen den Backtest prüfen: Wie viele Einträge treffen das vorhergesagte Fenster?
+  - [ ] T5.4.2 Stichprobe von Hand: Welche Einträge sind richtig, welche falsch, und warum?
+  - ~~T5.4.3 Preisreaktion festhalten~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
+- [ ] **T5.5 Abschluss:** Report, Evaluator, `/iteration-ende`, Tag `iteration-5`, Ergebnis in Phase 1 einarbeiten
 
 ### T6 Ausbau oder Neuausrichtung (je nach Ergebnis)
 - [ ] T6.1 Weitere Nischen oder Regionen
@@ -236,29 +240,32 @@ _Jetzt Iteration 4 (geändert am 2026-10-23)._
 - [ ] G1.3 Marktgröße abschätzen: Anzahl Reinigungsfirmen im Zielbereich, Anteil der öffentlichen Aufträge
 - [ ] G1.4 Abdeckung durch TED abschätzen: Welcher Teil der Reinigungsaufträge liegt über den EU-Schwellenwerten? (A3)
 
-### G2 Kundengespräche (A1, A15)
+### G2 Kundengespräche (A1, A15) – nach G2.2 eingestellt
 - [x] G2.1 Zielgruppe festlegen (Größe, Region, Rolle: Geschäftsführung, Vertrieb, Ausschreibungsverantwortliche)
   _(2026-10-23: Oberpfalz; 71 Firmen mit TED-Zuschlägen als Startliste, dazu kleine lokale Firmen; `docs/business.md`)_
 - [x] G2.2 Gesprächsleitfaden schreiben (offene Fragen zum heutigen Vorgehen, kein Verkaufsgespräch)
   _(2026-10-23: `docs/business.md`, Abschnitt 3)_
-- [ ] G2.3 Fünf bis zehn Gespräche führen, jeweils kurz protokollieren
-- [ ] G2.4 Auswerten: Wie finden Firmen heute Ausschreibungen? Was würde ein früherer Hinweis wert sein? Wie viele Monate Vorlauf bräuchten sie?
-- [ ] G2.5 Ergebnisse in `docs/annahmen.md` (A1, A15) und Phase 1 eintragen
+- ~~G2.3 Fünf bis zehn Gespräche führen, jeweils kurz protokollieren~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
+- ~~G2.4 Auswerten: Wie finden Firmen heute Ausschreibungen? Was würde ein früherer Hinweis wert sein? Wie viele Monate Vorlauf bräuchten sie?~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
+- ~~G2.5 Ergebnisse in `docs/annahmen.md` (A1, A15) und Phase 1 eintragen~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
 
-### G3 Angebot und Preis
-- [ ] G3.1 Nutzenversprechen in einem Satz formulieren und mit Gesprächspartnern testen
-- [ ] G3.2 Preishypothese testen (zunächst grob, etwa monatliches Abo je Firma)
-- [ ] G3.3 Zahlungsbereitschaft als Aussage festhalten, nicht als Zusage werten
+### G3 Angebot und Preis (Schreibtisch-Recherche)
+- [ ] G3.1 Nutzenversprechen in einem Satz formulieren (ohne Test mit Firmen)
+- [ ] G3.2 Preishypothese aus der Recherche ableiten (Preise vergleichbarer Dienste, Wert eines Auftrags; `docs/business.md` §6)
+- ~~G3.3 Zahlungsbereitschaft als Aussage festhalten, nicht als Zusage werten~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
 
-### G4 Pilotkunden
-- [ ] G4.1 Zwei bis drei Firmen für den Kundentest in Iteration 5 gewinnen
-- [ ] G4.2 Erwartungen klären (Testphase, Feedback, Vertraulichkeit)
-- [ ] G4.3 Nach dem Test nachfragen: Würde die Firma weiterzahlen, und zu welchem Preis?
+### G4 Pilotkunden _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
+- ~~G4.1 Zwei bis drei Firmen für den Kundentest in Iteration 5 gewinnen~~
+- ~~G4.2 Erwartungen klären (Testphase, Feedback, Vertraulichkeit)~~
+- ~~G4.3 Nach dem Test nachfragen: Würde die Firma weiterzahlen, und zu welchem Preis?~~
 
 **Entscheidungstor (Vorschläge):**
 - Nach G2: Zeigt mindestens ein Teil der Gesprächspartner ein konkretes Problem und Interesse an einer Testliste → Pilot.
   Sagt niemand, dass früheres Wissen hilft, ist das ein ernstes Warnsignal, unabhängig von der Prognosegüte.
 - Nach G4: Mindestens eine Firma ist bereit zu zahlen → weiterbauen. Sonst Ausrichtung ändern oder Projekt beenden.
+
+_Nachtrag 2026-10-29: Beide Tore entfallen, weil das Projekt ohne Kundenkontakt läuft. Ob jemand für die Hinweise zahlt (A1, A15),
+bleibt ungeprüft und wird in Ergebnissen als offene Grenze genannt._
 
 ---
 
@@ -297,15 +304,16 @@ Gründungsberatung der Hochschule oder die IHK.
 ## Abhängigkeiten und kritischer Pfad
 
 ```
-T2 (Zuordnung und Historie) ──► T3 (Baseline und Backtest) ──► T4 (Verbesserung) ──► T5 (Kundentest)
-        │                                                                               ▲
-G1 + G2 (Wettbewerb, Gespräche) ───────────────────────────────────────────────────► G4 (Pilotkunden)
+T2 (Zuordnung und Historie) ──► T3 (Baseline und Backtest) ──► T4 (Verbesserung) ──► T5 (Prototyp)
+                                                                                         ▲
+G1 + G3 (Wettbewerb, Angebot und Preis als Recherche) ───────────────────────────────────┘
 ```
 
 - Iteration 3 beginnt erst, wenn das Entscheidungstor nach Iteration 2 bestanden ist.
   _Nachtrag 2026-10-23: Tor nicht bestanden; die erste Prognose (jetzt Iteration 4) beginnt erst, wenn Iteration 3 eine tragfähige
   Zuordnung über das Objekt zeigt._
 - Die Kundengespräche (G2) laufen ab sofort parallel und sind unabhängig von der Technik.
+  _Nachtrag 2026-10-29: entfällt, kein Kundenkontakt; parallel läuft nur noch die Recherche (G1, G3)._
 - P3 (Rechtliches) muss vor dem ersten bezahlten Angebot erledigt sein, nicht vor dem Pilot mit kostenloser Testliste.
 
 ## Größte Risiken (nach Annahmen)
@@ -316,7 +324,7 @@ G1 + G2 (Wettbewerb, Gespräche) ───────────────�
 | Zuordnung von Zuschlag und Neuausschreibung scheitert | A9 | T2.4 |
 | eForms-Historie reicht nicht für einen Backtest | A10, A11 | T2.3 |
 | Vorlaufzeit schwankt stark, Prognose zu ungenau | A8 | T3.2, T4.2, T4.3 |
-| Niemand zahlt für den Hinweis | A1, A15 | G2, G3, G4 |
+| Niemand zahlt für den Hinweis | A1, A15 | im Projekt nicht prüfbar (kein Kundenkontakt); G3 nur als Recherche |
 | Bestehende Anbieter decken das Feld ab | A2 | G1 |
 
 ## Fortschritt pflegen

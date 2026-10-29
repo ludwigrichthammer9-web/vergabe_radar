@@ -30,8 +30,8 @@ OUT = ROOT / "data" / "processed" / "dashboard"
 ABSCHNITT_LABEL = {"T1": "Iteration 1: Machbarkeit", "T2": "Iteration 2: Zuordnung über den Auftraggeber",
                    "T2b": "Iteration 3: Zuordnung über das Objekt", "T2c": "Iteration 4: Letzter Verbesserungsversuch",
                    "T3": "Iteration 5: Erste Prognose und Backtest", "T4": "Iteration 6: Verbesserung der Prognose",
-                   "T5": "Iteration 7: Erster Kundentest", "T6": "Iteration 8: Ausbau oder Neuausrichtung",
-                   "G1": "Wettbewerb und Markt", "G2": "Kundengespräche", "G3": "Angebot und Preis", "G4": "Pilotkunden"}
+                   "T5": "Iteration 7: Prototyp der Vertragsliste", "T6": "Iteration 8: Ausbau oder Neuausrichtung",
+                   "G1": "Wettbewerb und Markt", "G2": "Kundengespräche (eingestellt)", "G3": "Angebot und Preis (Recherche)", "G4": "Pilotkunden (entfällt)"}
 
 
 def aufgaben() -> list[dict]:
@@ -75,7 +75,7 @@ ITERATIONEN = [  # docs/iterationen.md, Übersicht (Stand 2026-10-28)
     {"nr": 4, "fokus": "Letzter Verbesserungsversuch der Zuordnung", "status": "läuft", "entscheidung": "offen (Blindprüfung W4 fehlt)"},
     {"nr": 5, "fokus": "Erste Prognose und Backtest", "status": "geplant", "entscheidung": "–"},
     {"nr": 6, "fokus": "Verbesserung der Prognose", "status": "geplant", "entscheidung": "–"},
-    {"nr": 7, "fokus": "Erster Kundentest", "status": "geplant", "entscheidung": "–"},
+    {"nr": 7, "fokus": "Prototyp der Vertragsliste", "status": "geplant", "entscheidung": "–"},
     {"nr": 8, "fokus": "Ausbau oder Neuausrichtung", "status": "geplant", "entscheidung": "–"},
 ]
 
@@ -115,12 +115,12 @@ VERLAUF = [  # Iteration 2: reports/ergebnis_iteration2.md (K2); 3: zuordnung_it
 ]
 
 PHASEN = [  # docs/phasen/01–06, Aktueller Stand
-    {"nr": 1, "phase": "Business Understanding", "stand": "begonnen", "kurz": "Nische vorläufig, 0 Kundengespräche"},
+    {"nr": 1, "phase": "Business Understanding", "stand": "begonnen", "kurz": "Nische vorläufig, Recherche ohne Kundenkontakt"},
     {"nr": 2, "phase": "Data Understanding", "stand": "aktiv", "kurz": "Sichtbarkeit und Zuordnung gemessen"},
     {"nr": 3, "phase": "Data Preparation", "stand": "aktiv", "kurz": "Merkmale je Los, Regel eingefroren"},
     {"nr": 4, "phase": "Modeling", "stand": "nicht begonnen", "kurz": "Erste Prognose in Iteration 5"},
     {"nr": 5, "phase": "Evaluation", "stand": "nicht begonnen", "kurz": "Backtest in Iteration 5"},
-    {"nr": 6, "phase": "Deployment", "stand": "nicht begonnen", "kurz": "Kundentest in Iteration 7"},
+    {"nr": 6, "phase": "Deployment", "stand": "nicht begonnen", "kurz": "Prototyp in Iteration 7"},
 ]
 
 
@@ -153,15 +153,13 @@ def zeit_ist() -> list[dict]:
             for i, r in sorted(rows.items())]
 
 
-ZEIT_REST = [  # Schätzung der verbleibenden Stunden (Spanne); Grundlage je Zeile, Stand 2026-10-28
+ZEIT_REST = [  # Schätzung der verbleibenden Stunden (Spanne); Grundlage je Zeile, Stand 2026-10-29 (ohne Kundenkontakt)
     {"block": "Iteration 4: Blindprüfung W4", "min": 1.5, "max": 2, "grundlage": "Planwert in docs/iterationen.md (etwa 1,5 Stunden)"},
     {"block": "Iteration 4: Abschluss", "min": 1, "max": 2, "grundlage": "Abschluss Iteration 3 (Report, Evaluator, Dokumente)"},
     {"block": "Iteration 5: Prognose und Backtest", "min": 4, "max": 10, "grundlage": "Iterationen 2–4 laut Git 3,8–4,8 h (Untergrenze); obere Grenze geschätzt"},
     {"block": "Iteration 6: Verbesserung", "min": 4, "max": 10, "grundlage": "wie Iteration 5"},
-    {"block": "Iteration 7: Kundentest", "min": 6, "max": 15, "grundlage": "Annahme: Liste bauen, 2–3 Pilotkunden betreuen"},
-    {"block": "Kundengespräche", "min": 5, "max": 15, "grundlage": "5–10 Gespräche je 1–1,5 h mit Vorbereitung und Protokoll"},
-    {"block": "Markt, Angebot und Preis", "min": 4, "max": 8, "grundlage": "Annahme für G1 und G3 im Projektplan"},
-    {"block": "Rechtliches vor dem ersten Verkauf", "min": 2, "max": 4, "grundlage": "Annahme für P3 im Projektplan"},
+    {"block": "Iteration 7: Prototyp", "min": 4, "max": 10, "grundlage": "wie Iteration 5; Liste bauen und gegen den Backtest prüfen"},
+    {"block": "Markt, Angebot und Preis", "min": 4, "max": 8, "grundlage": "Annahme für G1 und G3 im Projektplan (Schreibtisch-Recherche)"},
 ]
 
 

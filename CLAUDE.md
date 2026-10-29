@@ -16,7 +16,8 @@ Arbeitsnische: Gebäudereinigung, Haupt-CPV 90910/90911/90919. Noch kein Modell.
 Iteration 4 = letzter Verbesserungsversuch: Merkmale auf Los-Ebene (auch vor
 eForms aus XML/Volltextsuche), Leistungsart hart prüfen, kein Zeitfenster;
 neue Testdaten Q1 2026, Handsuche und Zweitprüfung nach Urteilsregeln 1.1 vorab.
-Parallel in Phase 1: Produkt mit manueller Prüfung bewerten, Gespräche führen.
+Parallel in Phase 1: Produkt mit manueller Prüfung bewerten (Recherche, kein Kundenkontakt;
+Iteration 7 wird Prototyp statt Kundentest, A1/A15 bleiben ungeprüft).
 Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE (25/30).
 Details: docs/iterationen.md, reports/evaluation_iteration3.md
 

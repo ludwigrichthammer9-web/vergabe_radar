@@ -74,9 +74,11 @@ Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_2026
 - [ ] Welche geschäftlichen und technischen Erfolgskriterien gelten (z. B. Trefferquote im ±3-Monats-Fenster)?
 - [ ] Wie häufig ist Kantinenbetrieb auf TED (CPV noch abzugrenzen)?
 - [ ] Zahlen Reinigungsfirmen für Vorabinformationen über auslaufende Verträge (Annahme A15)? Erste Gespräche mit Reinigungsfirmen.
+  _Stand 2026-10-29:_ im Projekt nicht prüfbar (kein Kundenkontakt); nur indirekte Hinweise aus der Recherche.
 - [ ] Liegen Reinigungsaufträge oft unter dem EU-Schwellenwert, sodass Nachfolger nicht auf TED erscheinen (A3)?
 - [ ] _(neu, Iteration 2)_ Brauchen Kunden die Prognose auf Objektebene (welche Liegenschaft, welcher Umfang), oder reicht
   „Auftraggeber X schreibt bald wieder aus“? In Gesprächen klären (A15).
+  _Stand 2026-10-29:_ ohne Gespräche nicht zu klären; der Prototyp (Iteration 7) arbeitet auf Objektebene.
 - [ ] _(neu, Iteration 2)_ Wie eng wird die Nische gefasst (nur wiederkehrende Unterhalts- und Glasreinigung, ohne
   Schädlingsbekämpfung, Bau- und Sonderreinigung)? (A12)
 - [ ] _(neu, Iteration 2)_ Ist ein Prognoseziel „Vertragsende minus Vorlauf“ tragfähig, wenn vorzeitige Neuvergaben häufig sind (A8, A16)?
@@ -84,6 +86,7 @@ Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_2026
   das Prognoseziel die Grundlaufzeit oder das Höchstende sein soll [E3].
 - [ ] _(neu, Iteration 3)_ Trägt ein **Produkt mit manueller Prüfung** (Regel liefert Kandidaten, Prüfung von Hand)? Prüfaufwand je
   Fall, Kosten und Zahlungsbereitschaft abschätzen, auch in den Gesprächen fragen (A1, A15).
+  _Stand 2026-10-29:_ Prüfaufwand über die Prüfzeit in W4, Kosten über Recherche; Zahlungsbereitschaft nicht prüfbar.
 
 ## Entscheidungen
 
@@ -93,6 +96,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 |---|---|---|---|
 | 2026-10-22 | 1 | Gebäudereinigung (Haupt-CPV 909…) wird **vorläufige Arbeitsnische** | Häufigste Kandidaten-Nische (440 Zuschläge in 3 Monaten). Laufzeitende bei 80,9 % bestimmbar (KI 77–84 %), vergleichbar mit Winterdienst und Sicherheit. Rein datengetrieben, Kundensicht fehlt. Siehe reports/evaluation_iteration1.md |
 | 2026-10-23 | 2 | **Idee anpassen:** Prognose auf Objektebene (Liegenschaft) statt auf Auftraggeber-Ebene; Gebäudereinigung bleibt vorläufige Nische, wird aber enger abgegrenzt. Ausweichoptionen (Auftraggeber-Zyklen, nationale Quellen) bleiben bestehen. | Zuordnung über den Auftraggeber K2 = 16,7 %; siehe reports/ergebnis_iteration2.md und reports/evaluation_iteration2.md. Entscheidung des Nutzers. |
+| 2026-10-29 | 4 | **Kein Kundenkontakt im Projekt.** Gespräche (G2.3–G2.5) und Pilotkunden (G4) entfallen; Markt, Wettbewerb, Angebot und Preis nur als Schreibtisch-Recherche; Iteration 7 wird Prototyp statt Kundentest; A1 und A15 bleiben ungeprüft | Studienprojekt; Kundenkontakt gehört nicht zum Projektumfang. Entscheidung des Nutzers. |
 | 2026-10-25 | 3 | Objekt-Ebene bleibt Ziel; **parallel** wird die Alternative „Produkt mit manueller Prüfung“ bewertet. Nische enger: Haupt-CPV 90910/90911/90919, Leistungsart künftig auf Los-Ebene prüfen | Zuordnung über das Objekt: Präzision 45,8 %, Trefferquote 28,9 % bei Sichtbarkeit 63,3 % ([Z3], [E3]); vorab festgelegte Folge „in Phase 2/3 bleiben, alternativ Produkt mit manueller Prüfung“. Entscheidung des Nutzers. |
 
 ## Iterationslog

@@ -19,7 +19,7 @@ Regeln:
 | 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten Q1 2026) | 2/3 (parallel 1) | 2026-10-26 bis 2026-11-22 | angelegt | offen |
 | 5 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
 | 6 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
-| 7 | Erster Kundentest | 6 → 1 | – | geplant | – |
+| 7 | Prototyp der Vertragsliste (statt Kundentest) | 6 | – | geplant | – |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
@@ -30,6 +30,8 @@ _Nachtrag 2026-10-23 (Abschluss Iteration 2):_ Nach der Entscheidung zu Iteratio
 eingeschoben; die übrigen rücken um eine Stelle.
 _Nachtrag 2026-10-25 (Abschluss Iteration 3):_ Nach der Entscheidung zu Iteration 3 ist Iteration 4 (letzter Verbesserungsversuch der
 Zuordnung) eingeschoben; die übrigen rücken erneut um eine Stelle.
+_Nachtrag 2026-10-29 (Entscheidung des Nutzers):_ Kein Kundenkontakt im Projekt. Iteration 7 wird ein Prototyp der Vertragsliste,
+selbst bewertet gegen den Backtest, statt eines Kundentests. Annahmen A1 und A15 bleiben ungeprüft (außerhalb des Projektumfangs).
 
 ---
 
@@ -560,6 +562,10 @@ Liste ohne Automatik reicht.
 > höchstens ein Paar: 6 Vorschläge der Regel, 6 weitere Vorgänger der Handsuche, 4 beste Kandidaten bei „unklar“, 4 erste Kandidaten der
 > Regel bei „kein Vorgänger“. Zählweise binär wie Iteration 3; Prüfzeit je Paar in Minuten. Schlüssel lokal in
 > `data/processed/blindpruefung_iteration4_schluessel.csv`, SHA-256 `45aff7a4eb2399d0aafd3ff74c330016b858026e89d8f3738df3de966dbe9bcc`.
+
+> **Nachtrag 2026-10-29 (Entscheidung des Nutzers, Kriterien unverändert):** Die parallel geplanten Gespräche mit Reinigungsfirmen
+> entfallen, weil das Projekt ohne Kundenkontakt läuft. Sie waren nicht Teil des Kriteriums. Die Folge „Produkt mit manueller
+> Prüfung“ bleibt bewertbar über W6 und die Prüfzeit aus W4; ob jemand dafür zahlt (A1, A15), bleibt offen.
 
 **Geprüfte Annahmen:** A9c (Hauptgegenstand); A3 (Wiederholung unter Version 1.1); A12 (Leistungsart auf Los-Ebene); A10, A11 (W5);
 A8, A16 (explorativ); A15, A1 (Gespräche, parallel).

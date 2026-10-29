@@ -31,7 +31,7 @@ flowchart LR
 
 **Aufgaben im Vergabe-Radar**
 - Zielnische festlegen (Kandidaten: Gebäudereinigung, IT-Wartung, Winterdienst, Kantinenbetrieb).
-- Kundengespräche führen (Ziel: 5 bis 10 pro Nische).
+- Kundengespräche führen (Ziel: 5 bis 10 pro Nische). _Entfällt im Projekt (2026-10-29), ersetzt durch Schreibtisch-Recherche._
 - Wettbewerber prüfen (Ausschreibungsdienste wie DTAD: Bieten sie Prognosen an?).
 - Geschäftliche und technische Erfolgskriterien festlegen.
 
@@ -156,12 +156,15 @@ flowchart LR
 | 3 | Sichtbarkeit und Zuordnung über das Objekt | 2 (→ 3) | Anteil sichtbarer Vorgänger, Präzision der Zuordnung über das Objekt |
 | 4 | Erste Prognose | 3 → 4 → 5 | Baseline-Regel mit Backtest-Kennzahlen |
 | 5 | Verbesserung | 3 → 4 → 5 | Verlängerungsoptionen und Auftraggeber-Historie, besserer Backtest |
-| 6 | Erster Kundentest | 6 → 1 | Testliste für Kunden, Feedback, Preis-Hypothese |
+| 6 | Prototyp der Vertragsliste | 6 | Liste als Prototyp, selbst bewertet gegen den Backtest |
 | 7+ | Ausbau | je nach Bewertung | weitere Nischen, Automatisierung, ggf. ML |
 
 _Angepasst am 2026-10-23:_ Nach Iteration 1 wurde eine Iteration 2 in Phase 2 eingeschoben. Die übrigen sind um eine Stelle verschoben.
 Die Grobplanung mit Aufgaben, Strängen (Technik, Geschäft, Prozess) und Entscheidungstoren steht in [projektplan.md](projektplan.md).
 _Angepasst am 2026-10-23 (Abschluss Iteration 2):_ Iteration 3 bleibt in Phase 2 (Zuordnung über das Objekt). Die übrigen rücken eine Stelle.
+
+_Angepasst am 2026-10-29:_ Kein Kundenkontakt im Projekt (Entscheidung des Nutzers). Der Kundentest wird ein Prototyp, Phase 1
+stützt sich auf Schreibtisch-Recherche; A1 und A15 (Zahlungsbereitschaft) bleiben ungeprüft.
 
 Die Gespräche mit potenziellen Kunden (Phase 1) laufen parallel zu allen
 Iterationen weiter, nicht nur am Anfang.

@@ -3,7 +3,11 @@
 Artefakt laut [CRISP-DM.md](CRISP-DM.md#1-business-understanding) (Phase 1). Angelegt am 2026-10-23.
 Prüft vor allem die Annahmen A1, A15 (Zahlungsbereitschaft) und A2 (Wettbewerb), siehe [annahmen.md](annahmen.md).
 
-## 1. Zielgruppe (vorläufig)
+> **Stand 2026-10-29 (Entscheidung des Nutzers):** Das Projekt läuft ohne Kundenkontakt. Die Abschnitte 1 bis 5 (Zielgruppe,
+> Gespräche, Leitfaden, Notizvorlage, Notizen) sind **Archiv**: nicht weiterverfolgt, aber erhalten. Aktiv bleiben Abschnitt 6
+> (Markt und Preise als Schreibtisch-Recherche) und Abschnitt 7. A1 und A15 bleiben ungeprüft.
+
+## 1. Zielgruppe (vorläufig) – Archiv
 
 - **Branche:** Gebäudereinigung (Unterhalts-, Grund-, Glasreinigung), die sich an öffentlichen Ausschreibungen beteiligt.
 - **Region:** Oberpfalz (NUTS DE23), Region des Nutzers.
@@ -24,7 +28,7 @@ Prüft vor allem die Annahmen A1, A15 (Zahlungsbereitschaft) und A2 (Wettbewerb)
 - Kleine Firmen, die nur national oder unterhalb der EU-Schwellenwerte anbieten, fehlen in dieser Liste. Sie sind für A3 wichtig
   (Wie viel des Markts sieht TED?) und sollten ebenfalls befragt werden.
 
-## 2. Vorgehen bei den Gesprächen
+## 2. Vorgehen bei den Gesprächen – Archiv
 
 - **Ziel:** 5 Gespräche bis Mitte November 2026. Davon etwa 3 mit Firmen aus der TED-Liste und 2 mit kleineren lokalen Firmen
   (z. B. über eine Suche nach „Gebäudereinigung“ und Landkreis).
@@ -35,7 +39,7 @@ Prüft vor allem die Annahmen A1, A15 (Zahlungsbereitschaft) und A2 (Wettbewerb)
   > „Ich bin Student und untersuche in einem Projekt, wie Reinigungsfirmen öffentliche Ausschreibungen finden und sich darauf
   > vorbereiten. Hätten Sie 15 Minuten für ein paar Fragen? Ich verkaufe nichts. Die Antworten verwende ich nur anonymisiert.“
 
-## 3. Gesprächsleitfaden
+## 3. Gesprächsleitfaden – Archiv
 
 Grundregel: nach **vergangenem, konkretem Verhalten** fragen, nicht nach Meinungen zu einer Idee. Erst am Ende die Idee kurz nennen.
 Antworten möglichst wörtlich notieren.
@@ -61,7 +65,7 @@ Antworten möglichst wörtlich notieren.
 11. Dürfte ich Ihnen in ein paar Wochen eine kostenlose Testliste für die Oberpfalz zeigen?
 12. Wen sollte ich noch fragen?
 
-## 4. Notizvorlage je Gespräch
+## 4. Notizvorlage je Gespräch – Archiv
 
 ```
 ### Gespräch <Nr> – <Datum>
@@ -76,7 +80,7 @@ Antworten möglichst wörtlich notieren.
 - Bezug zu Annahmen: A1 / A2 / A15 / A3 (stützt / schwächt / neutral, Begründung)
 ```
 
-## 5. Gesprächsnotizen
+## 5. Gesprächsnotizen – Archiv
 
 _Noch keine Gespräche (Stand 2026-10-23)._
 
@@ -121,6 +125,9 @@ Ersatz bzw. Ergänzung für Kundengespräche, falls diese nicht stattfinden. Pr�
 - Preis-Hypothese für das Projekt (ungeprüft): 50–150 € pro Monat und Region, also im Bereich bestehender Ausschreibungsdienste.
 
 ## 7. Erfolgskriterien (offen)
+
+_Stand 2026-10-29: ohne Gespräche werden die Erfolgskriterien aus Recherche und Backtest abgeleitet (z. B. Treffer im Zeitfenster);
+der folgende ursprüngliche Plan ist Archiv._
 
 Geschäftliche und technische Erfolgskriterien werden nach den ersten Gesprächen festgelegt, zum Beispiel der Vorlauf, den Kunden
 brauchen, und das daraus folgende Trefferfenster für den Backtest. Entscheidungstor laut [projektplan.md](projektplan.md), Strang G:

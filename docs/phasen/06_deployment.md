@@ -1,5 +1,6 @@
 # Phase 6: Deployment
 
+> _Seit 2026-10-29: im Projekt nur als Prototyp der Vertragsliste, ohne Kunden (Iteration 7)._
 > **Ziel:** Ergebnisse so bereitstellen, dass echte Kunden sie nutzen und Feedback geben (Stufen: manuelle Liste →
 > monatliche E-Mail → Dashboard).
 > **Danach:** Feedback fließt in die nächste Iteration von Phase 1.
