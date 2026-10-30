@@ -51,6 +51,29 @@ Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.m
 - Für einen Backtest werden Daten vor eForms gebraucht (A10), und die Paare müssen unabhängig geprüft sein (A18).
 - Die Grundlaufzeit allein ist kein brauchbares Prognoseziel; Verlängerungen müssen berücksichtigt werden.
 
+### Zwischenstand Iteration 5, Schritt 2 (2026-10-30): Laufzeit und Verlängerungen
+
+Quelle: **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) (`src/verlaengerung_praxis.py`),
+Definitionen aus `translations/business-term_de.xml` im eForms SDK.
+
+_Fakten_
+- Definition: BT-36 (Laufzeit) „umfasst etwaige Optionen und Verlängerungen“. BT-537 (Ende) hat keine Aussage dazu. BT-58 nennt nur
+  die **Zahl** der Verlängerungen, nicht ihre Länge; BT-57 und BT-54 sind Freitext. Vor eForms: `DATE_END`/`DURATION`,
+  `RENEWAL`/`NO_RENEWAL` und Freitext `RENEWAL_DESCR`.
+- eForms-Zuschläge Gebäudereinigung (90910/11/19, Originale, 25.10.2023–30.09.2026, n = 4.307): Enddatum 75,1 %, nur Beginn + Dauer
+  1,0 %, nur BT-538 1,4 %, keine verwertbare Laufzeit 22,4 % (erstes Los) [VP].
+- Von 3.279 mit bestimmbarem Ende haben 32,0 % BT-58 > 0; BT-58 fehlt bei 66,8 %. Bei BT-58 > 0 nennt der Text (BT-57/BT-54) in
+  82,9 % eine Länge, Höchstlaufzeit oder ein Datum (grobe Muster) [VP].
+- Wo der Text eine Höchstlaufzeit nennt, ist die Spanne Beginn bis BT-537 in 274 von 289 Fällen (94,8 %) **kürzer** [VP].
+- BT-36 neben Beginn und Ende (n = 37): gleich der Datumsspanne in 27, länger in 7 Fällen [VP].
+- Vor eForms (28 referenzierte Ausschreibungen der A11-Zufallsstichprobe): 17 verlängerbar, alle mit `RENEWAL_DESCR`, 12 davon mit
+  Länge, Höchstlaufzeit oder Datum [VP].
+
+_Interpretation_
+- BT-537 und `DATE_END` meinen in der Praxis das **Ende der Grundlaufzeit**. BT-36 ist uneinheitlich, meist ebenfalls Grundlaufzeit.
+- Das **Höchstende** muss aus dem Freitext gewonnen werden (zusammen mit BT-58). Für etwa 80 % der verlängerbaren Verträge scheint das
+  möglich; wie gut, zeigt erst die Extraktion in Schritt 3.
+
 ## Offene Fragen
 
 - [x] Wie weit zurück sind die Daten brauchbar? Zahl der 909-Zuschläge seit Ende Oktober 2023 und Verteilung ihrer Enddaten. Enthalten die Formate vor eForms Laufzeiten (A10, A11)?
@@ -92,6 +115,8 @@ Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.m
 - [ ] _(neu, Iteration 2)_ Warum ist das Laufzeitende 2023/2024 nur bei etwa 70 % bestimmbar, ab 2025 bei etwa 80 %?
 - [ ] Meinen BT-36/BT-536/BT-537 die Laufzeit mit oder ohne Verlängerungen? (eForms-Dokumentation prüfen)
   _Teilantwort 2026-10-23:_ BT-36 laut Definition **mit** Optionen und Verlängerungen; BT-537 ohne Aussage [SDK]. Praxis ungeprüft.
+  _Antwort Iteration 5 (2026-10-30):_ In der Praxis ist BT-537 das Ende der Grundlaufzeit (94,8 % kürzer als die genannte
+  Höchstlaufzeit, n = 289); BT-36 meist ebenfalls (27 von 37 gleich der Datumsspanne), teils mit Verlängerungen [VP].
 - [ ] _(neu, 2026-10-23)_ Enthalten alte Zuschläge (F03) generell keine Laufzeit, und lässt sie sich zuverlässig über `REF_NOTICE`
   aus der alten Ausschreibung (F02) holen? Bisher 1 Fall [X].
   _Stand Abschluss Iteration 2:_ 10 von 10 in nicht zufälliger Stichprobe; Zufallsstichprobe (z. B. 30 aus 2018–2023) offen [E2].
@@ -103,6 +128,8 @@ Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.m
 - [ ] Wie sieht die Befüllung auf Los-Ebene aus statt auf Notice-Ebene?
 - [x] Bedeutet `-1` „nicht veröffentlicht“? Teilweise belegt durch 2 Fälle mit FieldsPrivacy [S] (A7).
 - [ ] Wie oft stehen Verlängerungen nur im Freitext (quantifizieren statt aus einem Einzelfall verallgemeinern)?
+  _Teilantwort Iteration 5:_ Die **Länge** steht immer nur im Freitext (BT-58 ist eine Anzahl). Bei fehlendem BT-58 oder BT-58 = 0
+  erwähnen bis zu 42,4 % den Begriff „verläng…“ im Text (Obergrenze) [VP].
 - [ ] Wie häufig ist Kantinenbetrieb, und wie gut ist er befüllt?
 - [ ] Zeigen Vertragsänderungen (can-modif) ausgeübte Verlängerungen?
 - [x] Wie viele Datensätze mit verwertbarer Laufzeit gelten als „genug“? Nachträglich: ≥ 80 % bestimmbares Laufzeitende (siehe iterationen.md).

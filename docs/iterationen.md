@@ -699,6 +699,12 @@ verteilt auf mehrere Termine.
 **Geprüfte Annahmen:** A8 (Hauptgegenstand); A18 (X2); A10, A11 (X1, Herkunft der Vorgänger); A4, A13 (X4, Los-Ebene); A14 (teilweise);
 A16 (explorativ).
 
+> **Fortschritt 2026-10-30 (Schritte 1 und 2, Kriterien unverändert):** Prognoseziel und Regeln R0/R1 in `docs/business.md` §7.1
+> (d36f556; Nutzer hat die Detailregeln gelesen und freigegeben). Dokumentation und Praxis der Laufzeitfelder geprüft
+> ([verlaengerung_praxis_iteration5.md](../reports/verlaengerung_praxis_iteration5.md)): BT-537 und `DATE_END` sind in der Praxis das
+> Ende der Grundlaufzeit, BT-36 meist auch. Das Höchstende steht nur im Freitext (BT-57/BT-54, vor eForms `RENEWAL_DESCR`), Länge oder
+> Datum bei etwa 80 % der verlängerbaren Verträge erkennbar. Folge für Schritt 3: Höchstende aus dem Freitext extrahieren.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
