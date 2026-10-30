@@ -17,7 +17,7 @@ Regeln:
 | 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 | abgeschlossen | **Idee anpassen:** Zuordnung über Auftraggeber verworfen (K2 = 16,7 %); weiter in Phase 2 mit Zuordnung über das Objekt |
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-10-25 | abgeschlossen | **In Phase 2/3 bleiben:** V1 63,3 % (knapp, definitionsabhängig), V2 45,8 % und V3 28,9 % verfehlt; ein letzter Verbesserungsversuch der Regel auf neuen Testdaten, parallel „Produkt mit manueller Prüfung“ in Phase 1 bewerten |
 | 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten Q1 2026) | 2/3 (parallel 1) | 2026-10-25 bis 2026-10-30 | abgeschlossen | **Idee anpassen (Phase 1):** W4 65 % < 85 % (W2 89,5 % bei nur 19 Vorschlägen, W3 56,7 %, W1 42,9 %); keine weitere Regel, Iteration 5 baut eine Vertragsliste aus Zuschlägen |
-| 5 | Vertragsliste aus Zuschlägen: Prognoseziel, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | – | geplant | – |
+| 5 | Vertragsliste aus Zuschlägen: Prognoseziel Höchstende, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | 2026-10-31 bis 2026-11-21 (geplant) | läuft | offen |
 | 6 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
 | 7 | Prototyp der Vertragsliste (statt Kundentest) | 6 | – | geplant | – |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
@@ -623,3 +623,82 @@ Das Ergebnis ist robust: Auch mit den Urteilen des Nutzers für die strittigen P
   (etwa 43 % der Ausschreibungen mit sichtbarem Vorgänger).
 - Korrekturen als Nachtrag: W5 297 statt 189 pro Jahr, vorzeitig 3/30 statt 4 Fälle; Skript `auswertung_iteration4.py` korrigiert.
 - Neue Annahmen A3b, A17, A18; Lücke im Plan (keine Folge für W1 zwischen 30 und 50 %) als Lehre für künftige Kriterien.
+
+---
+
+## Iteration 5: Vertragsliste aus Zuschlägen, erste Prognose und Backtest
+
+**Status:** läuft (angelegt am 2026-10-30)
+
+**Fokus und Phasen:** 1 → 3 → 4 → 5. Entspricht der „ersten Prognose“ im Iterationsplan ([CRISP-DM.md](CRISP-DM.md#iterationsplan)),
+angepasst nach der Entscheidung zu Iteration 4: Kern ist eine Vertragsliste aus Zuschlägen. Die Objekt-Zuordnung dient nur noch dazu,
+Paare für den Backtest bereitzustellen, die von Hand geprüft werden. Das Prognoseziel wird in Phase 1 festgelegt, bevor gerechnet wird.
+
+**Hypothese** _(vorab festgelegt am 2026-10-30, vor Kenntnis der Ergebnisse)_
+„Bei Gebäudereinigungs-Ausschreibungen mit handgeprüftem Vorgänger erscheint die Neuausschreibung in mindestens 60 % der Fälle
+innerhalb von ±3 Monaten um das Datum, das die Regel ‚Höchstende des Vorgängers minus 6 Monate‘ vorhersagt. Die Regel trifft damit
+häufiger als die naive Referenz ‚Ende der Grundlaufzeit minus 6 Monate‘.“
+
+**Begriffe** _(vorab festgelegt)_
+- **Prognoseziel (Entscheidung des Nutzers, 2026-10-30):** Höchstende = Ende des Vorgängervertrags einschließlich aller
+  Verlängerungsoptionen. Fehlt eine Verlängerungsangabe, gilt das Ende der Grundlaufzeit.
+- **Hauptregel R1:** prognostizierte Neuausschreibung = Höchstende − 6 Monate.
+- **Referenz R0** (naive Referenz aus [projektplan.md](projektplan.md), T3.3.4): Ende der Grundlaufzeit − 6 Monate.
+- **Treffer:** Die erste Bekanntmachung des neuen Verfahrens (Testfall der Handsuche) ist innerhalb von ±3 Monaten um die
+  Prognose veröffentlicht. ±6 Monate werden zusätzlich ausgewiesen, ohne Schwelle.
+- **Keine Parameterschätzung aus den Paaren.** R0 und R1 werden in `src/model/baseline.py` eingefroren und committet, bevor sie auf
+  die Paare angewendet werden.
+- **Rollierende und unbefristete Verträge:** Der Umgang wird in Schritt 1 festgelegt und committet, bevor Prognosen berechnet werden.
+- **Backtest-Paare (Entscheidung des Nutzers):** vorhandene Paare der Handsuche aus Iteration 3 (38, Q3 2026) und Iteration 4 (30,
+  Q1 2026; davon 23 mit bestimmbarem Ende laut [sichtbarkeit_iteration4_gt.csv](../reports/sichtbarkeit_iteration4_gt.csv)), Kategorie
+  objektgleich oder Teilmenge. **Vorbehalt:** Die Vorlaufzeiten eines Teils dieser Paare wurden in Iteration 3 und 4 explorativ angesehen
+  (Iteration 4: −32 bis +26 Monate, Median etwa 6 Monate nach der Grundlaufzeit). Das hat die Wahl des Prognoseziels beeinflusst.
+- **Zweitprüfung:** Der Nutzer beurteilt alle Paare mit bestimmbarem Vorgänger-Ende nach Urteilsregeln 1.1 mit einer festen Vorlage.
+  Die Ansicht zeigt Feldnamen, eine Zeitgrenze gibt es nicht. Prognosen und Vorlaufzeiten sieht er dabei nicht. Die Vorlage wird
+  committet, bevor er prüft.
+- **Geltungsbereich:** Die Trefferquote gilt nur für Neuausschreibungen, die auf TED erscheinen. Die Präzision (Prognosen ohne
+  Nachfolger) wird in dieser Iteration nicht gemessen.
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-10-30)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| X1 Backtest-Basis | Paare, die Rechercheur **und** Nutzer als objektgleich oder Teilmenge bestätigen und deren Vorgänger-Ende (Grundlaufzeit) bestimmbar ist | ≥ 30 | A18, A10, A11 |
+| X2 Zweitprüfung | Übereinstimmung zwischen Nutzer und Rechercheur (binär wie W4) über alle geprüften Paare | ≥ 85 % (entscheidet nur über den Status von A18, kein Abbruch) | A18 |
+| X3 Trefferquote | Anteil der X1-Paare mit Treffer (±3 Monate) für R1 | ≥ 60 % **und** mindestens 10 Prozentpunkte über R0 auf denselben Paaren | A8, A14 |
+| X4 Abdeckung der Liste | Anteil der eForms-Zuschläge (Los-Ebene, Population wie Iteration 4, veröffentlicht Q4 2025 bis Q3 2026), für die R1 ein Datum liefert | ≥ 80 % | A4, A13 |
+
+Explorativ, ohne Schwelle: Anteil vorzeitiger Neuvergaben (A16), Anteil der Vorgänger aus der Zeit vor eForms (A10, A11), Treffer getrennt
+nach Herkunft des Endes (Grundlaufzeit, Höchstende) und nach Iteration (Q3 bzw. Q1 2026), Abweichung in Monaten für R0 und R1.
+
+**Was folgt aus welchem Ergebnis**
+- X1 < 30 → Backtest nicht aussagekräftig. **Zurück zu Phase 2:** frische Handsuche (z. B. Q4 2025) mit menschlicher Prüfung von Anfang an.
+- X1 ≥ 30 und X3 erfüllt → **weiter:** Iteration 6 verbessert die Prognose (Verlängerungen aus dem Freitext, Auftraggeber-Historie).
+- X1 ≥ 30 und R1 zwischen 40 und 60 % oder nicht mindestens 10 Prozentpunkte über R0 → **weiter mit Iteration 6, gezielt** auf die
+  häufigsten Fehlerursachen ausgerichtet.
+- X1 ≥ 30 und R1 < 40 % → **Idee anpassen (Phase 1):** Das Produkt wird eine Vertragsliste mit Enddaten und Zeitfenster, ohne Terminprognose.
+- X2 < 85 % → A18 bleibt ungeprüft mit Warnsignal. Der Backtest nutzt nur die von beiden bestätigten Paare (X1), das wird offen ausgewiesen.
+- X4 < 80 % → kein Abbruch. Die Abdeckung wird im Prototyp (Iteration 7) offen genannt.
+
+**Zeitrahmen:** 2026-10-31 bis 2026-11-21, etwa 5–7 Arbeitssitzungen. Der Nutzer braucht etwa 3–4 Stunden für die Zweitprüfung,
+verteilt auf mehrere Termine.
+
+**Plan**
+1. Phase 1: Prognoseziel, Trefferdefinition, Umgang mit rollierenden und unbefristeten Verträgen und die Backtest-Kennzahlen in
+   `docs/phasen/01_business_understanding.md` festschreiben und committen.
+2. Phase 2: eForms- und TED-Dokumentation prüfen (BT-36, BT-536, BT-537, BT-538, BT-57, BT-58; vor eForms `DATE_END` und Angaben zur
+   Verlängerung in F02/F05). Notiz in `docs/phasen/02_data_understanding.md`.
+3. Phase 3: Zuschlagstabelle je Los mit Ende der Grundlaufzeit, Höchstende und Herkunft (`src/prepare/vertragsliste.py`,
+   `data/processed/`, `reports/vertragsliste_iteration5.md`; X4).
+4. Phase 3/5: Backtest-Paare aus der Handsuche von Iteration 3 und 4 zusammenstellen, mit Vorgänger-Ende je Paar (vor eForms über
+   `REF_NOTICE`) (`reports/backtest_paare_iteration5.csv`). Prüfvorlage erstellen und committen.
+5. Zweitprüfung durch den Nutzer, ohne Prognosen und Vorlaufzeiten (`reports/gt_pruefung_iteration5.md`; X1, X2).
+6. Phase 4/5: R0 und R1 in `src/model/baseline.py` einfrieren und committen, dann den Backtest laufen lassen (`reports/backtest_iteration5.md`; X3).
+7. Report, Evaluator, `/iteration-ende`.
+
+**Geprüfte Annahmen:** A8 (Hauptgegenstand); A18 (X2); A10, A11 (X1, Herkunft der Vorgänger); A4, A13 (X4, Los-Ebene); A14 (teilweise);
+A16 (explorativ).
+
+**Ergebnis:** offen
+
+**Entscheidung:** offen
