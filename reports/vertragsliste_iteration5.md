@@ -14,10 +14,10 @@ _Erzeugt mit `src/prepare/vertragsliste.py`; Regeln im Kopf des Skripts und in `
 
 | Herkunft Ende der Grundlaufzeit | Lose |
 |---|---|
-| enddatum | 2861/3668 = 78,0 % |
+| enddatum | 2794/3668 = 76,2 % |
 | unbekannt | 735/3668 = 20,0 % |
+| text_zunaechst | 77/3668 = 2,1 % |
 | beginn_plus_dauer | 53/3668 = 1,4 % |
-| text_zunaechst | 10/3668 = 0,3 % |
 | unplausibel | 9/3668 = 0,2 % |
 
 ### Herkunft des Höchstendes (alle Lose mit Ende der Grundlaufzeit)
@@ -32,3 +32,18 @@ _Erzeugt mit `src/prepare/vertragsliste.py`; Regeln im Kopf des Skripts und in `
 | enddatum_ist_hoechstende | 325/7284 = 4,5 % |
 | keine_verlaengerung | 104/7284 = 1,4 % |
 | bt36_laenger | 6/7284 = 0,1 % |
+
+### Genauigkeit der Lese-Regeln
+
+- Entwicklungsstichprobe (40 Lose, vor Regel 1a): 30 richtig; Fehler führten zu Regel 1a und weiteren Mustern
+  ([hoechstende_pruefung_iteration5_entwicklung.md](hoechstende_pruefung_iteration5_entwicklung.md)).
+- Teststichprobe (60 Lose, nach dem Einfrieren gezogen, Fassung a0aa419): Höchstende 53/60 richtig, gewichtet etwa 91 %;
+  Fehler fast nur bei „unbestimmbar“ ([hoechstende_pruefung_iteration5_test.md](hoechstende_pruefung_iteration5_test.md)).
+  Urteile von Claude allein.
+
+## Interpretation
+
+- X4 liegt knapp unter der Schwelle von 80 %. Ursache ist fast nur, dass bei etwa 20 % der Lose gar keine Laufzeit angegeben ist;
+  das Höchstende spielt für X4 keine Rolle (R1 fällt auf die Grundlaufzeit zurück). Laut Vorab-Regel kein Abbruch, die
+  Abdeckung wird im Prototyp genannt.
+- Wo eine Laufzeit vorliegt, ist das Höchstende meist lesbar. Bleibt es unbestimmbar, liegt R1 eher zu früh.

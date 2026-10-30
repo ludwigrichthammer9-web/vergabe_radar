@@ -157,6 +157,11 @@ denen gerechnet wird. Was davon im Produkt nützt, ist ohne Kundengespräche nic
    Verlängerungsoption, ist das Höchstende gleich dem Ende der Grundlaufzeit.
    Wie die einzelnen Felder (BT-36, BT-57, BT-58 u. a.; vor eForms F02/F05) gelesen werden, legt Schritt 3 nach der Prüfung der
    Dokumentation (Schritt 2) fest. Die Regeln werden committet, bevor R0 und R1 eingefroren werden (Schritt 6).
+   _Präzisierung 2026-10-30 (Schritt 3, vor jeder Prognose auf Backtest-Paaren):_ Die Lese-Regeln stehen im Kopf von
+   `src/prepare/vertragsliste.py`. Zwei Abweichungen vom Wortlaut oben: (a) Statt „ausdrückliches Ende hat Vorrang“ gilt der
+   **späteste plausible Kandidat**, weil im Text auch Kündigungstermine nach der Grundlaufzeit stehen. (b) Nennt der Text das
+   Enddatum selbst als spätestes Ende, ist das Enddatum das Höchstende und die Grundlaufzeit endet früher (Regel 1a). Gelesen
+   werden BT-57, BT-54 und BT-24. Genauigkeit in einer Teststichprobe etwa 91 % ([Bericht](../reports/hoechstende_pruefung_iteration5_test.md)).
 4. **Höchstende nicht bestimmbar** (Option ohne Dauer, rollierende Verlängerung ohne Höchstdauer): R1 nimmt das Ende der Grundlaufzeit.
    Herkunft wird je Paar gekennzeichnet, Treffer werden getrennt nach Herkunft berichtet.
 5. **Unbefristete Verträge** ohne Ende der Grundlaufzeit: keine Prognose. In X4 zählen sie als nicht abgedeckt. In X3 kommen sie nicht

@@ -705,6 +705,13 @@ A16 (explorativ).
 > Ende der Grundlaufzeit, BT-36 meist auch. Das Höchstende steht nur im Freitext (BT-57/BT-54, vor eForms `RENEWAL_DESCR`), Länge oder
 > Datum bei etwa 80 % der verlängerbaren Verträge erkennbar. Folge für Schritt 3: Höchstende aus dem Freitext extrahieren.
 
+> **Fortschritt 2026-10-30 (Schritt 3, Kriterien unverändert):** Zuschlagstabelle je Los ([vertragsliste_iteration5.md](../reports/vertragsliste_iteration5.md)).
+> **X4 = 2.924/3.668 = 79,7 %** (Wilson 78,4–81,0), Schwelle 80 % knapp verfehlt; X4 hängt nur an der seit Schritt 1 festen Regel für die
+> Grundlaufzeit und wurde nicht nachjustiert. Lese-Regeln für das Höchstende auf 40 Losen entwickelt, vor der Teststichprobe eingefroren
+> (a0aa419), Test 53/60 richtig, gewichtet etwa 91 % (Urteile von Claude). Zwei Präzisierungen von §7.1 (spätester Kandidat, Regel 1a)
+> in `docs/business.md`. Nach dem Test nur noch die Erkennung der früheren Grundlaufzeit bei Regel 1a ergänzt (betrifft R0, nicht das
+> Höchstende). Backtest-Paare wurden dabei nicht angesehen (aus den Stichproben ausgeschlossen).
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen

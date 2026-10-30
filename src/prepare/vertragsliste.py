@@ -11,6 +11,11 @@ Lese-Regeln
    („endet spätestens am …“, „längstens bis zum …“, „inkl. Verlängerungen …“), ist das Enddatum das Höchstende (Herkunft
    „enddatum_ist_hoechstende“). Als GL gilt dann ein früheres Datum nach „zunächst … bis zum / am“ (Herkunft „text_zunaechst“),
    sonst bleibt GL = Enddatum (R0 und R1 fallen dann zusammen).
+   _Nach dem Testdurchgang ergänzt (e2ecbe6):_ „zunächst“ im Satzfilter und „endet (der Vertrag) am …“ als früheres Ende. Betrifft
+   nur GL in diesem Fall, nicht das getestete Höchstende.
+
+Genauigkeit des Höchstendes (Teststichprobe, Fassung a0aa419): 53/60 richtig, gewichtet etwa 91 %; Fehler fast nur bei
+„unbestimmbar“ (reports/hoechstende_pruefung_iteration5_test.md).
 2. Text = BT-57 + BT-54 + BT-24 des Loses (vor eForms RENEWAL_DESCR; die Funktion `hoechstende` nimmt jeden Text).
 3. Kandidaten für das Höchstende (alle, die gefunden werden):
    a) Datum im Text, das nach GL liegt (z. B. „spätestens zum 31.12.2027“),
@@ -68,7 +73,8 @@ RE_MAX = re.compile(rf"(?i)(maximale?n?\s*(?:gesamt)?(?:vertrags|leistungs)?(?:l
 # Enddatum ist selbst das Höchstende, wenn der Text genau dieses Datum als spätestes Ende nennt („endet spätestens am …“)
 RE_SPAETESTENS = re.compile(r"(?i)(spätestens|längstens|maximal|höchstens|inkl\.?|einschließlich|inklusive)[^.]{0,80}?"
                             r"\b(\d{1,2})\.\s?(\d{1,2})\.\s?(20\d{2})\b")
-RE_ZUNAECHST = re.compile(r"(?i)zunächst[^.]{0,60}?(?:bis\s+(?:zum\s+)?|am\s+)(\d{1,2})\.\s?(\d{1,2})\.\s?(20\d{2})\b")
+RE_ZUNAECHST = re.compile(r"(?i)(?:zunächst[^.]{0,60}?(?:bis\s+(?:zum\s+)?|am\s+)|endet\s+(?:der\s+vertrag\s+)?am\s+)"
+                          r"(\d{1,2})\.\s?(\d{1,2})\.\s?(20\d{2})\b")
 RE_LAENGE = re.compile(rf"(?i)\b(?:je(?:weils)?|um|x|×)\s+(?:weitere[nrs]?\s+)?{Z}\s*(?:\(\d+\)\s*)?(?:weitere[nrs]?\s+)?{EINHEIT}"
                        rf"|\b(ein|zwei|drei)jährige")
 RE_ANZAHL = re.compile(rf"(?i)\b{Z}\s*(?:-\s*)?(?:mal(?:ig\w*)?|fach\w*|x|×)(?!\w)|\b(einmal|zweimal|dreimal|viermal|fünfmal)(?:ig\w*)?\b"
@@ -77,7 +83,8 @@ RE_KEINE = re.compile(r"(?i)keine\s+(weiteren?\s+)?verlängerung|nicht\s+verlän
 RE_VERL = re.compile(r"(?i)verläng")
 # Nur in passenden Sätzen suchen: Beschreibungen enthalten z. B. „3 x wöchentlich“ oder Termine anderer Art.
 RE_SATZ_VERL = re.compile(r"(?i)verläng|option")
-RE_SATZ_ENDE = re.compile(r"(?i)verläng|option|spätestens|längstens|maximal|höchst|laufzeit|vertragsdauer|vertragsende|endet")
+RE_SATZ_ENDE = re.compile(r"(?i)verläng|option|spätestens|längstens|maximal|höchst|laufzeit|vertragsdauer|vertragsende|endet"
+                          r"|zunächst")
 RE_SATZGRENZE = re.compile(r"(?<=[.!?;])\s+(?=[A-ZÄÖÜ])|\n")
 
 
@@ -317,6 +324,21 @@ def main() -> None:
         "| Herkunft | Lose |",
         "|---|---|",
         *[f"| {k} | {pct(v, len(mit_gl))} |" for k, v in zaehle(mit_gl, "hoechstende_herkunft")],
+        "",
+        "### Genauigkeit der Lese-Regeln",
+        "",
+        "- Entwicklungsstichprobe (40 Lose, vor Regel 1a): 30 richtig; Fehler führten zu Regel 1a und weiteren Mustern",
+        "  ([hoechstende_pruefung_iteration5_entwicklung.md](hoechstende_pruefung_iteration5_entwicklung.md)).",
+        "- Teststichprobe (60 Lose, nach dem Einfrieren gezogen, Fassung a0aa419): Höchstende 53/60 richtig, gewichtet etwa 91 %;",
+        "  Fehler fast nur bei „unbestimmbar“ ([hoechstende_pruefung_iteration5_test.md](hoechstende_pruefung_iteration5_test.md)).",
+        "  Urteile von Claude allein.",
+        "",
+        "## Interpretation",
+        "",
+        "- X4 liegt knapp unter der Schwelle von 80 %. Ursache ist fast nur, dass bei etwa 20 % der Lose gar keine Laufzeit angegeben ist;",
+        "  das Höchstende spielt für X4 keine Rolle (R1 fällt auf die Grundlaufzeit zurück). Laut Vorab-Regel kein Abbruch, die",
+        "  Abdeckung wird im Prototyp genannt.",
+        "- Wo eine Laufzeit vorliegt, ist das Höchstende meist lesbar. Bleibt es unbestimmbar, liegt R1 eher zu früh.",
         "",
     ]
     REPORT.write_text("\n".join(lines), encoding="utf-8")

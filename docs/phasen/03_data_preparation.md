@@ -37,10 +37,30 @@ Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.m
   Leistungsart und Objektmerkmale aus `los_merkmale.py`.
 - Die Objekt-Zuordnung bleibt nur als Werkzeug, um Paare für einen Backtest vorzuschlagen, die dann von Hand geprüft werden.
 
+### Zwischenstand Iteration 5, Schritt 3 (2026-10-30): Zuschlagstabelle je Los
+
+Quellen: **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) (`src/prepare/vertragsliste.py`),
+**[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md) und `_entwicklung.md`.
+
+_Fakten_
+- Tabelle `data/processed/vertragsliste_909.csv`: 9.915 Lose aus 4.209 eForms-Zuschlägen (Population wie Iteration 4), je Los Ende der
+  Grundlaufzeit, Höchstende, Herkunft, R0, R1 [VL].
+- **X4 = 2.924/3.668 = 79,7 %** (Wilson 78,4–81,0) der Lose aus Q4 2025 bis Q3 2026 haben ein Prognosedatum; Schwelle 80 % knapp
+  verfehlt. Ohne Laufzeit: 20,0 % [VL].
+- Höchstende-Herkunft (Lose mit Grundlaufzeit): keine Angabe 32,3 %, Anzahl × Länge 22,0 %, Datum im Text 17,7 %, unbestimmbar 13,3 %,
+  Höchstlaufzeit 8,8 %, Enddatum ist Höchstende 4,5 % [VL].
+- Lese-Regeln: Entwicklung 30/40 richtig, Test 53/60 richtig (gewichtet etwa 91 %), Urteile von Claude allein [HP].
+- Bei etwa 4,5 % der Lose ist BT-537 schon das Höchstende (Text: „endet spätestens am …“) [HP].
+
+_Interpretation_
+- Die Vertragsliste ist reproduzierbar aus den Rohdaten gebaut; das Höchstende ist bei den meisten Losen lesbar.
+- X4 scheitert an fehlenden Laufzeiten, nicht an den Lese-Regeln.
+
 ## Offene Fragen
 
-- [ ] Tabelle pro Vertrag oder pro Los?
-- [ ] Wie wird das Laufzeitende vereinheitlicht (Ende direkt oder Start + Dauer, ersatzweise Veröffentlichungsdatum + Dauer)?
+- [x] Tabelle pro Vertrag oder pro Los? _Antwort Iteration 5:_ pro Los (`src/prepare/vertragsliste.py`).
+- [x] Wie wird das Laufzeitende vereinheitlicht (Ende direkt oder Start + Dauer, ersatzweise Veröffentlichungsdatum + Dauer)?
+  _Antwort Iteration 5:_ Ende direkt, sonst Beginn + Dauer; Ausnahme Regel 1a; Höchstende aus BT-58 und Freitext [VL].
 - [ ] Wie werden Verlängerungen aus dem Freitext (BT-54, BT-57) strukturiert erfasst?
 - [ ] Wie werden Auftraggeber normalisiert (gleiche Behörde, unterschiedliche Schreibweisen; ggf. über Kennungen)?
 - [ ] Wie ordnen wir Neuausschreibungen den ursprünglichen Verträgen zu (Annahme A9)?
@@ -67,6 +87,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | – | – | Noch keine Entscheidungen | – |
 | 2026-10-23 | 2 | Zuordnung über Auftraggeber + CPV wird nicht in eine Aufbereitung übernommen; Phase 3 wartet auf die Zuordnung über das Objekt (Iteration 3, Phase 2) | K2 = 16,7 % (reports/ergebnis_iteration2.md) |
 | 2026-10-25 | 3 | Die Objekt-Regel aus Iteration 3 (Commit 4497743) wird nicht in die Aufbereitung übernommen; Iteration 4 baut Merkmale auf Los-Ebene (auch vor eForms) als letzten Verbesserungsversuch | Präzision 45,8 %, Trefferquote 28,9 % (reports/zuordnung_iteration3.md, reports/evaluation_iteration3.md). Entscheidung des Nutzers. |
+| 2026-10-30 | 5 | Zuschlagstabelle je Los mit Grundlaufzeit und Höchstende; Höchstende = spätester plausibler Kandidat aus Datum, Höchstlaufzeit, BT-36 und Anzahl × Länge im Freitext; Regel 1a (Enddatum ist Höchstende) | Praxis der Felder (reports/verlaengerung_praxis_iteration5.md), Entwicklungs- und Teststichprobe (reports/hoechstende_pruefung_iteration5_*.md) |
 | 2026-10-30 | 4 | Die Regel `zuordnung_los.py` wird nicht in die Aufbereitung übernommen; Merkmale je Los (`los_merkmale.py`) und Laufzeitende mit Herkunft werden Grundlage der Zuschlagstabelle in Iteration 5 | Entscheidung „Idee anpassen“ nach Iteration 4 (reports/evaluation_iteration4.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
