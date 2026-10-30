@@ -712,6 +712,20 @@ A16 (explorativ).
 > in `docs/business.md`. Nach dem Test nur noch die Erkennung der früheren Grundlaufzeit bei Regel 1a ergänzt (betrifft R0, nicht das
 > Höchstende). Backtest-Paare wurden dabei nicht angesehen (aus den Stichproben ausgeschlossen).
 
+> **Fortschritt 2026-10-30 (Schritt 4, vor der Zweitprüfung, Kriterien unverändert):** `src/prepare/backtest_paare.py` stellt 68 Paare
+> der Handsuche zusammen (Iteration 3: 38, Iteration 4: 30; Vorgänger = jüngster Vorgänger laut GT, T26 laut Korrekturdatei). Vorgänger-Ende
+> nur aus dessen Bekanntmachungen (vor eForms über `REF_NOTICE`), Lese-Regeln aus Schritt 3. **61 Paare** haben ein bestimmbares Ende der
+> Grundlaufzeit (X1 höchstens 61); 7 ohne (U37: Verteidigungsformular F18 nicht lesbar). 55 der 68 Vorgänger stammen aus der Zeit vor
+> eForms; die Lese-Regeln wurden nur an eForms getestet (Schritt 3), bei 17 der 61 bleibt das Höchstende unbestimmbar.
+> **Festlegung zur Zweitprüfung (Präzisierung von X2, vor dem Urteil des Nutzers):** Die Vorlage enthält die 61 Paare und 10 Köder-Paare
+> (Iteration 4, Kategorie „unklar“, bester Kandidat der Handsuche, ohne in W4 gesehene Testfälle), gemischt mit Seed 20261101. Köder zählen
+> wie in W4 als „nicht gefunden“; X2 wird über alle 71 Paare gezählt und zusätzlich getrennt nach echten Paaren und Ködern ausgewiesen.
+> Grund: Ohne Köder ergäbe „alles bestätigen“ 100 %. 12 der 71 Paare hat der Nutzer in W4 schon gesehen (wird ausgewiesen).
+> Vorlage [gt_pruefung_iteration5.md](../reports/gt_pruefung_iteration5.md), Lesehilfe mit Feldnamen
+> [gt_pruefung_iteration5_lesehilfe.md](../reports/gt_pruefung_iteration5_lesehilfe.md). Schlüssel und Vorgänger-Enden lokal in
+> `data/processed/` (nicht im Git); Schlüssel `gt_pruefung_iteration5_schluessel.csv`, SHA-256
+> `05abddc9a8e450dd2fa9706bfaf06e507740ab3f0fb507d8836c340043df0b8c`.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
