@@ -124,7 +124,62 @@ Ersatz bzw. Ergänzung für Kundengespräche, falls diese nicht stattfinden. Pr�
   Information hin. Das ist allerdings ein anderer Markt mit anderer Datenlage (A2).
 - Preis-Hypothese für das Projekt (ungeprüft): 50–150 € pro Monat und Region, also im Bereich bestehender Ausschreibungsdienste.
 
-## 7. Erfolgskriterien (offen)
+## 7. Erfolgskriterien
+
+### 7.1 Prognoseziel und Backtest-Regeln (Iteration 5, festgelegt am 2026-10-30, vor jeder Berechnung)
+
+Grundlage: Hypothese und Kriterien X1–X4 in [iterationen.md](iterationen.md) (Iteration 5, Commit 25f7dd3). Hier stehen die Regeln, nach
+denen gerechnet wird. Was davon im Produkt nützt, ist ohne Kundengespräche nicht belegt (A1, A15).
+
+**Prognoseziel** _(Entscheidung des Nutzers)_
+- Vorhergesagt wird das Datum, an dem die Neuausschreibung veröffentlicht wird. Anker ist das **Höchstende** des Vorgängervertrags,
+  also das Ende einschließlich aller Verlängerungsoptionen.
+- Begründung: In Iteration 4 erschien die Neuausschreibung meist erst nach dem Ende der Grundlaufzeit (Median etwa 6 Monate danach,
+  Streuung −32 bis +26 Monate, 11 Paare; [zuordnung_iteration4.md](../reports/zuordnung_iteration4.md)). In Iteration 3 lagen mindestens
+  6 Paare zwischen Grundlaufzeit und Höchstende ([evaluation_iteration3.md](../reports/evaluation_iteration3.md)).
+  _Vorbehalt:_ Diese Werte stammen aus denselben Paaren, auf denen jetzt getestet wird.
+
+**Regeln**
+
+| | Regel | Datum |
+|---|---|---|
+| R1 (Hauptregel) | Höchstende − 6 Kalendermonate; ist das Höchstende nicht bestimmbar: Ende der Grundlaufzeit − 6 Kalendermonate | sonst keine Prognose |
+| R0 (naive Referenz) | Ende der Grundlaufzeit − 6 Kalendermonate | sonst keine Prognose |
+
+**Festlegungen**
+1. **Nur Wissen zum Zeitpunkt des Vorgänger-Zuschlags.** Quellen sind die Ausschreibung und der Zuschlag des Vorgängers. Vor eForms wird
+   die über `REF_NOTICE` verknüpfte Ausschreibung genutzt. Nicht verwendet werden spätere Bekanntmachungen wie Vertragsänderungen
+   (can-modif), die neue Ausschreibung selbst und Angaben der Handsuche über tatsächlich ausgeübte Verlängerungen (z. B. U19
+   „verlängert bis“). Begründung: Sonst flösse Wissen aus der Zukunft in die Prognose ein.
+2. **Ende der Grundlaufzeit:** Enddatum, oder Beginn + Dauer der Grundlaufzeit (Definition „bestimmbar“ wie seit Iteration 1).
+3. **Höchstende:** Ein ausdrücklich genanntes spätestes Ende oder eine Gesamthöchstlaufzeit hat Vorrang. Sonst gilt das Ende der
+   Grundlaufzeit plus alle möglichen Verlängerungen, wenn deren Dauer angegeben ist (strukturiert oder im Freitext). Gibt es keine
+   Verlängerungsoption, ist das Höchstende gleich dem Ende der Grundlaufzeit.
+   Wie die einzelnen Felder (BT-36, BT-57, BT-58 u. a.; vor eForms F02/F05) gelesen werden, legt Schritt 3 nach der Prüfung der
+   Dokumentation (Schritt 2) fest. Die Regeln werden committet, bevor R0 und R1 eingefroren werden (Schritt 6).
+4. **Höchstende nicht bestimmbar** (Option ohne Dauer, rollierende Verlängerung ohne Höchstdauer): R1 nimmt das Ende der Grundlaufzeit.
+   Herkunft wird je Paar gekennzeichnet, Treffer werden getrennt nach Herkunft berichtet.
+5. **Unbefristete Verträge** ohne Ende der Grundlaufzeit: keine Prognose. In X4 zählen sie als nicht abgedeckt. In X3 kommen sie nicht
+   vor, weil X1 ein bestimmbares Ende der Grundlaufzeit verlangt.
+6. **Mehrere Lose:** Maßgeblich sind die Lose des Vorgängers, die laut Handsuche zum Objekt gehören. Haben sie verschiedene Enden, gilt
+   das früheste. Ist keine Zuordnung möglich, gilt das früheste Ende aller Lose (gekennzeichnet).
+7. **Treffer:** Veröffentlichungsdatum des Testfalls (erste Bekanntmachung des neuen Verfahrens) liegt im Bereich
+   Prognose − 3 Kalendermonate bis Prognose + 3 Kalendermonate, Grenzen eingeschlossen. Zusätzlich ohne Schwelle: ±6 Monate und die
+   Abweichung in Monaten.
+8. **Objektgleich und Teilmenge** zählen gleich, werden aber getrennt ausgewiesen.
+
+**Kennzahlen und Schwellen:** X1–X4 wie in [iterationen.md](iterationen.md); technisches Erfolgskriterium ist X3 (R1 ≥ 60 % Treffer
+±3 Monate und mindestens 10 Prozentpunkte über R0).
+
+**Grenzen der Messung**
+- Gemessen wird nur, wie oft eine Neuausschreibung im prognostizierten Fenster liegt, **wenn** sie auf TED erscheint (Trefferquote). Wie
+  viele Prognosen ins Leere gehen (Präzision), misst Iteration 5 nicht.
+- Die Paare wurden rückwärts gesucht, also von der Ausschreibung zum Vorgänger. Ob sie für die Verträge einer Vertragsliste typisch sind,
+  ist offen.
+- Ein geschäftliches Kriterium (welcher Vorlauf und welches Fenster einem Kunden reichen) ist ohne Gespräche nicht festlegbar. Das
+  ±3-Monats-Fenster stammt aus dem Projektplan und ist eine Setzung.
+
+### 7.2 Ursprünglicher Plan (Archiv)
 
 _Stand 2026-10-29: ohne Gespräche werden die Erfolgskriterien aus Recherche und Backtest abgeleitet (z. B. Treffer im Zeitfenster);
 der folgende ursprüngliche Plan ist Archiv._

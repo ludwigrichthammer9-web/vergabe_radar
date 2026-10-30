@@ -15,8 +15,10 @@ _Stand: Iteration 4 (Abschluss), 2026-10-30. Dieser Abschnitt wird in jeder Iter
 **Arbeitsnische (vorläufig): Gebäudereinigung, Haupt-CPV 90910/90911/90919.** Nach Iteration 4 lautet die Entscheidung **Idee anpassen**:
 Die automatische Zuordnung von Ausschreibung und Vorgänger über das Objekt wird nicht weiter verbessert. Iteration 5 baut stattdessen eine
 **Vertragsliste aus Zuschlägen** (Laufzeitende meist bestimmbar) und prüft sie mit einem Backtest auf handgeprüften Paaren. Das Projekt
-läuft ohne Kundenkontakt (Entscheidung 2026-10-29); Phase 1 stützt sich auf Recherche. Das Phase-1-Gate aus CRISP-DM.md ist nicht erfüllt:
-Geschäftliche Erfolgskriterien und Prognoseziel fehlen noch.
+läuft ohne Kundenkontakt (Entscheidung 2026-10-29); Phase 1 stützt sich auf Recherche.
+_Nachtrag 2026-10-30 (Iteration 5, Schritt 1):_ Prognoseziel (Höchstende), Regeln R0/R1 und technisches Erfolgskriterium (X3) stehen in
+[business.md](../business.md) §7.1. Das Phase-1-Gate ist
+damit technisch erfüllt; ein geschäftliches Kriterium (nötiger Vorlauf aus Kundensicht) bleibt ohne Gespräche eine Setzung.
 
 ### Fakten (aus den Daten)
 
@@ -68,7 +70,9 @@ Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.m
 - [ ] _(neu, Iteration 2)_ Ist ein Prognoseziel „Vertragsende minus Vorlauf“ tragfähig, wenn vorzeitige Neuvergaben häufig sind (A8, A16)?
   _Stand Iteration 3:_ Vorzeitig gegen die Grundlaufzeit nur 2/36 (Folge „> 30 % → neu bewerten“ nicht ausgelöst); offen bleibt, ob
   das Prognoseziel die Grundlaufzeit oder das Höchstende sein soll [E3].
-- [ ] _(neu, Iteration 4)_ Welches Prognoseziel gilt (Ende der Grundlaufzeit, Höchstende oder ein Zeitfenster dazwischen)? (A8)
+- [x] _(neu, Iteration 4)_ Welches Prognoseziel gilt (Ende der Grundlaufzeit, Höchstende oder ein Zeitfenster dazwischen)? (A8)
+  _Antwort 2026-10-30:_ Höchstende − 6 Monate (R1), verglichen mit Grundlaufzeit − 6 Monate (R0); Regeln in `docs/business.md` §7.1.
+  Ob es trägt, prüft der Backtest in Iteration 5.
 - [ ] _(neu, Iteration 3)_ Trägt ein **Produkt mit manueller Prüfung** (Regel liefert Kandidaten, Prüfung von Hand)? Prüfaufwand je
   Fall, Kosten und Zahlungsbereitschaft abschätzen, auch in den Gesprächen fragen (A1, A15).
   _Stand 2026-10-29:_ Prüfaufwand über die Prüfzeit in W4, Kosten über Recherche; Zahlungsbereitschaft nicht prüfbar.
@@ -84,6 +88,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-29 | 4 | **Kein Kundenkontakt im Projekt.** Gespräche (G2.3–G2.5) und Pilotkunden (G4) entfallen; Markt, Wettbewerb, Angebot und Preis nur als Schreibtisch-Recherche; Iteration 7 wird Prototyp statt Kundentest; A1 und A15 bleiben ungeprüft | Studienprojekt; Kundenkontakt gehört nicht zum Projektumfang. Entscheidung des Nutzers. |
 | 2026-10-25 | 3 | Objekt-Ebene bleibt Ziel; **parallel** wird die Alternative „Produkt mit manueller Prüfung“ bewertet. Nische enger: Haupt-CPV 90910/90911/90919, Leistungsart künftig auf Los-Ebene prüfen | Zuordnung über das Objekt: Präzision 45,8 %, Trefferquote 28,9 % bei Sichtbarkeit 63,3 % ([Z3], [E3]); vorab festgelegte Folge „in Phase 2/3 bleiben, alternativ Produkt mit manueller Prüfung“. Entscheidung des Nutzers. |
 | 2026-10-30 | 4 | **Idee anpassen:** Keine weitere automatische Objekt-Zuordnung; Iteration 5 baut eine Vertragsliste aus Zuschlägen, Zuordnung nur als Werkzeug für einen Backtest auf handgeprüften Paaren; Prognoseziel vorher festlegen | Vorab festgelegte Folge „W4 < 85 %“ (W4 65 %); W3 56,7 %, W2-Mindestzahl verfehlt; reports/evaluation_iteration4.md. Entscheidung des Nutzers. |
+| 2026-10-30 | 5 | **Prognoseziel Höchstende:** Neuausschreibung = Höchstende − 6 Monate (R1), Referenz Grundlaufzeit − 6 Monate (R0), Treffer ±3 Monate; nur Wissen zum Zeitpunkt des Vorgänger-Zuschlags; Höchstende nicht bestimmbar → Grundlaufzeit (`docs/business.md` §7.1) | Neuausschreibungen erschienen meist nach dem Ende der Grundlaufzeit (Iteration 3 und 4, explorativ, dieselben Paare wie im Backtest). Entscheidung des Nutzers (Prognoseziel); Detailregeln von Claude, vor jeder Berechnung. |
 
 ## Iterationslog
 
