@@ -10,53 +10,37 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 3 (Abschluss), 2026-10-25. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 4 (Abschluss), 2026-10-30. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Arbeitsnische (vorläufig): Gebäudereinigung, Haupt-CPV 90910/90911/90919.** Die Prognose soll sich auf das Objekt (Liegenschaft)
-beziehen. Iteration 3 zeigt: Vorgänger sind auf TED oft sichtbar, eine einfache automatische Zuordnung gelingt aber nicht. Deshalb
-kommt eine zweite Produktvariante ins Spiel, das **Produkt mit manueller Prüfung** (Kandidaten automatisch, Prüfung von Hand). Das
-Phase-1-Gate aus CRISP-DM.md ist weiterhin nicht erfüllt: Kundensicht und geschäftliche Erfolgskriterien fehlen.
+**Arbeitsnische (vorläufig): Gebäudereinigung, Haupt-CPV 90910/90911/90919.** Nach Iteration 4 lautet die Entscheidung **Idee anpassen**:
+Die automatische Zuordnung von Ausschreibung und Vorgänger über das Objekt wird nicht weiter verbessert. Iteration 5 baut stattdessen eine
+**Vertragsliste aus Zuschlägen** (Laufzeitende meist bestimmbar) und prüft sie mit einem Backtest auf handgeprüften Paaren. Das Projekt
+läuft ohne Kundenkontakt (Entscheidung 2026-10-29); Phase 1 stützt sich auf Recherche. Das Phase-1-Gate aus CRISP-DM.md ist nicht erfüllt:
+Geschäftliche Erfolgskriterien und Prognoseziel fehlen noch.
 
 ### Fakten (aus den Daten)
 
-Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_20260722_20261021.md),
-**[E]** = [Evaluation Iteration 1](../../reports/evaluation_iteration1.md), **[RR]** = [rueckreichweite_909.md](../../reports/rueckreichweite_909.md),
-**[Erg]** = [ergebnis_iteration2.md](../../reports/ergebnis_iteration2.md), **[E2]** = [evaluation_iteration2.md](../../reports/evaluation_iteration2.md),
-**[Z3]** = [zuordnung_iteration3.md](../../reports/zuordnung_iteration3.md), **[E3]** = [evaluation_iteration3.md](../../reports/evaluation_iteration3.md),
-**[B]** = [business.md](../business.md), **[AW]** = [auftragswerte_909.md](../../reports/auftragswerte_909.md).
+Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.md) und [zuordnung_iteration4_korrektur.md](../../reports/zuordnung_iteration4_korrektur.md) · **[GT4]** [sichtbarkeit_iteration4_gt.csv](../../reports/sichtbarkeit_iteration4_gt.csv) · **[BP4]** [blindpruefung_iteration4.md](../../reports/blindpruefung_iteration4.md) · **[RE4]** [regel_entwicklung_iteration4.md](../../reports/regel_entwicklung_iteration4.md) · **[E4]** [evaluation_iteration4.md](../../reports/evaluation_iteration4.md). Ältere Quellen siehe Iterationslog.
 
-| Nische (Haupt-CPV) | Zuschläge in 3 Monaten | Laufzeitende bestimmbar¹ | 95-%-KI | Median-Laufzeit aus Beginn/Ende | BT-58 > 0 |
-|---|---|---|---|---|---|
-| Gebäudereinigung (909) | 440 | 80,9 % | 77,0–84,3 % | 36 Mon. (n = 350) | 42,0 % |
-| Winterdienst (9062, 9063) | 129 | 84,5 % | 77,3–89,7 % | 36 Mon. (n = 109) | 33,3 % |
-| Sicherheitsdienste (7971) | 137 | 83,9 % | 76,9–89,2 % | 24 Mon. (n = 115) | 42,3 % |
-| IT-Dienste (72) | 575 | 33,7 % | – | 36 Mon. (n = 185) | 34,3 % |
-| IT-Wartung/Support (503, 7225, 72267) | 47 | 29,8 % | – | 44 Mon. (n = 14) | 29,8 % |
-
-¹ Enddatum vorhanden oder Beginn und Dauer vorhanden; Zeitraum 22.07.–21.10.2026. Quelle: [R §5]; KI aus [E].
-
-- Gebäudereinigung auf TED (DEU): 1.250–1.750 Zuschläge und grob 1.990–2.160 ausgeschriebene Verfahren pro Jahr. [RR]
-  Population Q3 2026 (eng abgegrenzt): 492 Ausschreibungsverfahren. [Z3]
-- **Sichtbarkeit:** 63,3 % der Ausschreibungen haben einen objektgleichen Vorgänger oder einen mit gemeinsamem Objekt auf TED, nur
-  objektgleich 48,3 %. **Automatische Zuordnung:** Präzision 45,8 %, Trefferquote 28,9 %. [Z3], [E3]
-- Unter den gefundenen Paaren sind vorzeitige Neuvergaben selten (2/36); Neuvergaben nach der Grundlaufzeit, aber vor dem Höchstende,
-  kommen öfter vor (mindestens 6). [E3]
-- Auftragswerte (eForms-Zuschläge 2024–2025, plausible Werte): Median 421.713 € je Auftrag, 167.404 € pro Jahr. [AW]
-- Zielgruppe Oberpfalz: 70 TED-Zuschläge seit eForms, 71 Firmen. Gesprächsleitfaden liegt vor. [B]
-- Ausschreibungsdienste DTAD und subreport (laut Vergleichsseiten 84–198 €/Monat); ein deutscher Dienst für auslaufende Verträge wurde
-  in zwei Suchen nicht gefunden; in Großbritannien bewirbt Stotles „expiring contracts“ ab 50 £ pro Nutzer und Monat. [B]
-- Kundengespräche: 0.
+- Zuordnung über das Objekt (eingefrorene Regel, Testdaten Q1 2026): Präzision 17/19 = 89,5 % bei nur 19 Vorschlägen, Trefferquote
+  17/30 = 56,7 %, Vorgänger unter den Top 3 in 22/30 Fällen [Z4].
+- Sichtbarkeit nach Urteilsregeln 1.1: 30/70 = 42,9 % der Ausschreibungen haben einen objektgleichen Vorgänger oder eine Teilmenge auf TED [GT4].
+- Zweitprüfung durch den Nutzer: 13/20 = 65 % Übereinstimmung bei Median 2 Minuten je Paar [BP4].
+- Vorzeitige Neuvergaben 3/30; Vorlaufzeit bis Ende der Grundlaufzeit streut von −32 bis +26 Monaten [Z4].
+- Population Gebäudereinigung (eng): 1.893 Ausschreibungsverfahren in den letzten 4 Quartalen [Z4].
+- Markt und Preise aus der Recherche: Median-Auftragswert 167.404 € pro Jahr; Dienste für auslaufende Verträge gibt es in Großbritannien,
+  in Deutschland in zwei Suchen keinen gefunden (`docs/business.md` §6).
+- Kundengespräche: keine, und im Projekt nicht vorgesehen.
 
 ### Interpretation
 
-- Für Kunden zählt vermutlich, *welcher* Vertrag ausläuft (Objekt, Umfang, Termin). Ungeprüft, das sollen Gespräche klären (A15).
-- **Ein Produkt mit manueller Prüfung ist eine ernsthafte Alternative.** Bei 46 % Präzision liefert die Regel Kandidaten, die ein
-  Mensch prüfen muss. Offen ist, wie viel Prüfaufwand je Fall entsteht und ob ein Kunde das Ergebnis dann noch günstig genug bekommt.
-- Eine Variante auf Ebene des Auftraggebers („Stadt X schreibt bald wieder aus“) bleibt Ausweichoption.
-- Das Warnsignal zu vorzeitigen Neuvergaben aus Iteration 2 hat sich nicht bestätigt; die Frage verschiebt sich zu „Grundlaufzeit
-  oder Höchstende?“ (A8, A16).
-- Der Wert eines Auftrags (etwa 167.000 € pro Jahr) ist groß gegenüber einem Dienst für 50–200 € im Monat. Ob ein früher Hinweis die
-  Gewinnchance erhöht, ist ohne Gespräche nicht belegt.
+- Ein Radar, das zu jeder Ausschreibung automatisch den Vorgänger findet, ist mit TED-Daten und einer einfachen Regel nicht erreichbar.
+- Eine Liste auslaufender Verträge aus Zuschlägen braucht diese Zuordnung nicht. Sie ist der einfachere Weg und nutzt, was die Daten gut
+  hergeben (Laufzeitende bei rund 80 % bestimmbar).
+- Ein Produkt mit manueller Prüfung ist nicht belegt: schnell, aber in der einzigen Messung nicht zuverlässig (A17).
+- Vor Iteration 5 muss das Prognoseziel feststehen: Ende der Grundlaufzeit oder Höchstende. Die Vorlaufzeiten zeigen, dass die
+  Grundlaufzeit allein nicht trägt (A8).
+- Ob jemand für die Liste zahlt (A1, A15), bleibt ohne Kundenkontakt offen und wird als Grenze genannt.
 
 ## Ideen für später
 
@@ -84,6 +68,7 @@ Quellen: **[R]** = [Datenqualitätsreport](../../reports/datenqualitaet_DEU_2026
 - [ ] _(neu, Iteration 2)_ Ist ein Prognoseziel „Vertragsende minus Vorlauf“ tragfähig, wenn vorzeitige Neuvergaben häufig sind (A8, A16)?
   _Stand Iteration 3:_ Vorzeitig gegen die Grundlaufzeit nur 2/36 (Folge „> 30 % → neu bewerten“ nicht ausgelöst); offen bleibt, ob
   das Prognoseziel die Grundlaufzeit oder das Höchstende sein soll [E3].
+- [ ] _(neu, Iteration 4)_ Welches Prognoseziel gilt (Ende der Grundlaufzeit, Höchstende oder ein Zeitfenster dazwischen)? (A8)
 - [ ] _(neu, Iteration 3)_ Trägt ein **Produkt mit manueller Prüfung** (Regel liefert Kandidaten, Prüfung von Hand)? Prüfaufwand je
   Fall, Kosten und Zahlungsbereitschaft abschätzen, auch in den Gesprächen fragen (A1, A15).
   _Stand 2026-10-29:_ Prüfaufwand über die Prüfzeit in W4, Kosten über Recherche; Zahlungsbereitschaft nicht prüfbar.
@@ -98,6 +83,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-23 | 2 | **Idee anpassen:** Prognose auf Objektebene (Liegenschaft) statt auf Auftraggeber-Ebene; Gebäudereinigung bleibt vorläufige Nische, wird aber enger abgegrenzt. Ausweichoptionen (Auftraggeber-Zyklen, nationale Quellen) bleiben bestehen. | Zuordnung über den Auftraggeber K2 = 16,7 %; siehe reports/ergebnis_iteration2.md und reports/evaluation_iteration2.md. Entscheidung des Nutzers. |
 | 2026-10-29 | 4 | **Kein Kundenkontakt im Projekt.** Gespräche (G2.3–G2.5) und Pilotkunden (G4) entfallen; Markt, Wettbewerb, Angebot und Preis nur als Schreibtisch-Recherche; Iteration 7 wird Prototyp statt Kundentest; A1 und A15 bleiben ungeprüft | Studienprojekt; Kundenkontakt gehört nicht zum Projektumfang. Entscheidung des Nutzers. |
 | 2026-10-25 | 3 | Objekt-Ebene bleibt Ziel; **parallel** wird die Alternative „Produkt mit manueller Prüfung“ bewertet. Nische enger: Haupt-CPV 90910/90911/90919, Leistungsart künftig auf Los-Ebene prüfen | Zuordnung über das Objekt: Präzision 45,8 %, Trefferquote 28,9 % bei Sichtbarkeit 63,3 % ([Z3], [E3]); vorab festgelegte Folge „in Phase 2/3 bleiben, alternativ Produkt mit manueller Prüfung“. Entscheidung des Nutzers. |
+| 2026-10-30 | 4 | **Idee anpassen:** Keine weitere automatische Objekt-Zuordnung; Iteration 5 baut eine Vertragsliste aus Zuschlägen, Zuordnung nur als Werkzeug für einen Backtest auf handgeprüften Paaren; Prognoseziel vorher festlegen | Vorab festgelegte Folge „W4 < 85 %“ (W4 65 %); W3 56,7 %, W2-Mindestzahl verfehlt; reports/evaluation_iteration4.md. Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -159,3 +145,18 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Übergabe an die nächste Phase:** Phase 2/3 (Iteration 4) unternimmt den letzten Verbesserungsversuch der Zuordnung. Parallel in
   Phase 1: erste Gespräche führen (Ziel 5 bis Mitte November) und das Produkt mit manueller Prüfung grob bewerten (Prüfaufwand je
   Fall, Preis).
+
+### Iteration 4 – 2026-10-30
+
+- **Was gemacht:** Keine Kundengespräche (seit 2026-10-29 nicht mehr vorgesehen). Ergebnisse aus Phase 2/3 für die Ausrichtung
+  ausgewertet; Strang G auf Schreibtisch-Recherche umgestellt; Iteration 7 als Prototyp statt Kundentest geplant.
+- **Erkenntnisse – Fakten:**
+  - Zuordnung über das Objekt: Präzision 89,5 % bei 19 Vorschlägen, Trefferquote 56,7 %, Top 3 73,3 % [Z4].
+  - Sichtbarkeit 42,9 %, Zweitprüfung 65 % bei 2 Minuten je Paar [GT4], [BP4].
+  - Vorlaufzeit streut stark, vorzeitige Neuvergaben selten (3/30) [Z4].
+- **Erkenntnisse – Interpretation:**
+  - Das Produkt soll nicht mehr an einer automatischen Nachfolger-Zuordnung hängen.
+  - Eine Vertragsliste aus Zuschlägen ist der naheliegende Kern; die Prognose braucht ein klar definiertes Ziel.
+- **Übergabe an die nächste Phase:** Iteration 5 beginnt in Phase 1: Prognoseziel festlegen (Grundlaufzeit oder Höchstende, Zeitfenster),
+  Abdeckung offen benennen, dann Phase 3 (Tabelle der Zuschläge mit Laufzeitende), Phase 4 (einfache Regel) und Phase 5 (Backtest auf
+  handgeprüften Paaren, deren Ground Truth vorab unabhängig geprüft wird).

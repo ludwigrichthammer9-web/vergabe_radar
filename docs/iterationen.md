@@ -16,8 +16,8 @@ Regeln:
 | 1 | Machbarkeit der Daten | 1 → 2 | 2026-10-22 | abgeschlossen | Gebäudereinigung als vorläufige Arbeitsnische; **zurück zu Phase 2** (Zielereignis und Rückreichweite prüfen) |
 | 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 | abgeschlossen | **Idee anpassen:** Zuordnung über Auftraggeber verworfen (K2 = 16,7 %); weiter in Phase 2 mit Zuordnung über das Objekt |
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-10-25 | abgeschlossen | **In Phase 2/3 bleiben:** V1 63,3 % (knapp, definitionsabhängig), V2 45,8 % und V3 28,9 % verfehlt; ein letzter Verbesserungsversuch der Regel auf neuen Testdaten, parallel „Produkt mit manueller Prüfung“ in Phase 1 bewerten |
-| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten Q1 2026) | 2/3 (parallel 1) | 2026-10-26 bis 2026-11-22 | angelegt | offen |
-| 5 | Erste Prognose und Backtest | 3 → 4 → 5 | – | geplant | – |
+| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten Q1 2026) | 2/3 (parallel 1) | 2026-10-25 bis 2026-10-30 | abgeschlossen | **Idee anpassen (Phase 1):** W4 65 % < 85 % (W2 89,5 % bei nur 19 Vorschlägen, W3 56,7 %, W1 42,9 %); keine weitere Regel, Iteration 5 baut eine Vertragsliste aus Zuschlägen |
+| 5 | Vertragsliste aus Zuschlägen: Prognoseziel, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | – | geplant | – |
 | 6 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
 | 7 | Prototyp der Vertragsliste (statt Kundentest) | 6 | – | geplant | – |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
@@ -32,6 +32,8 @@ _Nachtrag 2026-10-25 (Abschluss Iteration 3):_ Nach der Entscheidung zu Iteratio
 Zuordnung) eingeschoben; die übrigen rücken erneut um eine Stelle.
 _Nachtrag 2026-10-29 (Entscheidung des Nutzers):_ Kein Kundenkontakt im Projekt. Iteration 7 wird ein Prototyp der Vertragsliste,
 selbst bewertet gegen den Backtest, statt eines Kundentests. Annahmen A1 und A15 bleiben ungeprüft (außerhalb des Projektumfangs).
+_Nachtrag 2026-10-30 (Abschluss Iteration 4):_ Iteration 5 wird nach der Entscheidung „Idee anpassen“ eine Vertragsliste aus Zuschlägen
+mit Backtest auf handgeprüften Paaren; die automatische Objekt-Zuordnung wird nicht weiter verbessert.
 
 ---
 
@@ -454,7 +456,7 @@ und abhängig von der Definition erfüllt. Bei strengerer Lesart griffe „Defin
 
 ## Iteration 4: Letzter Verbesserungsversuch der Objekt-Zuordnung
 
-**Status:** angelegt am 2026-10-25, Arbeit ab 2026-10-26
+**Status:** abgeschlossen am 2026-10-30 (angelegt am 2026-10-25)
 
 **Fokus und Phasen:** Phase 2/3, parallel Phase 1. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) gemäß
 Entscheidung zu Iteration 3: Die erste Prognose (jetzt Iteration 5) folgt erst, wenn eine Zuordnung belegt ist. Dies ist der **letzte**
@@ -570,6 +572,54 @@ Liste ohne Automatik reicht.
 **Geprüfte Annahmen:** A9c (Hauptgegenstand); A3 (Wiederholung unter Version 1.1); A12 (Leistungsart auf Los-Ebene); A10, A11 (W5);
 A8, A16 (explorativ); A15, A1 (Gespräche, parallel).
 
-**Ergebnis:** offen
+**Ergebnis** _(2026-10-30)_
 
-**Entscheidung:** offen
+Quellen: **[Z4]** [zuordnung_iteration4.md](../reports/zuordnung_iteration4.md) (Lauf, Commit ec4733e) und
+[zuordnung_iteration4_korrektur.md](../reports/zuordnung_iteration4_korrektur.md) (korrigierte Zählung W5 und vorzeitig) ·
+**[GT4]** [sichtbarkeit_iteration4_gt.csv](../reports/sichtbarkeit_iteration4_gt.csv) und `sichtbarkeit_iteration4_teil1–5.md` ·
+**[PB4]** [paarbeurteilung_iteration4.md](../reports/paarbeurteilung_iteration4.md) · **[BP4]** [blindpruefung_iteration4.md](../reports/blindpruefung_iteration4.md)
+· **[RE4]** [regel_entwicklung_iteration4.md](../reports/regel_entwicklung_iteration4.md) · **[E4]** [evaluation_iteration4.md](../reports/evaluation_iteration4.md).
+
+_Fakten_
+
+| Kriterium | Ergebnis | Schwelle | Urteil Evaluator [E4] |
+|---|---|---|---|
+| W1 Sichtbarkeit | 30/70 = 42,9 % (Wilson 31,9–54,5); 18 objektgleich (alle „mittel“, 0 „hoch“), 12 Teilmenge, 18 unklar (10 eher dafür), 22 kein Vorgänger [GT4] | ≥ 50 % | nicht erfüllt |
+| W2 Präzision | 17/19 = 89,5 % (Wilson 68,6–97,1); nur 19 Vorschläge; 3 Vorschläge außerhalb der Handsuche blind beurteilt [Z4], [PB4] | ≥ 80 %, Untergrenze ≥ 60 %, mindestens 25 Vorschläge | formal nicht erfüllt (Mindestzahl), nur Hinweis |
+| W3 Trefferquote | 17/30 = 56,7 % (Wilson 39,2–72,6) [Z4] | ≥ 60 % | knapp nicht erfüllt |
+| W4 Zweitprüfung | 13/20 = 65 % (Wilson 43,3–81,9; κ ≈ 0,29); Gruppen A 4/6, B 5/6, C 0/4, D 4/4 [BP4], [E4] | ≥ 85 % | nicht erfüllt |
+| W5 Backtest-Basis | 11/70 × 1.893 = 297 pro Jahr nach Korrektur (Lauf: 7/70 = 189, Parser zählte „grundlaufzeit, hoechstende“ nicht) [Z4] | ≥ 100 pro Jahr | erfüllt (Punktwert) |
+| W6 Kandidatenliste | 22/30 = 73,3 % (Wilson 55,6–85,8) [Z4] | ≥ 70 % | knapp erfüllt, nur Hinweis |
+
+- Explorativ: Prüfzeit Median 2 Minuten je Paar (49 Minuten für 20 Paare) [BP4]. Vorzeitige Neuvergabe 3/30 (U16, U66, U70; im Lauf
+  fälschlich mit U20) [Z4]. Vorlaufzeit bis Ende der Grundlaufzeit bei 11 korrekten Paaren −32 bis +26 Monate, Median etwa −6 Monate [Z4].
+- Population Q1 2026: 538 Verfahren; Population der letzten 4 Quartale 1.893 (Q4 2025 381, Q1 538, Q2 488, Q3 486) [Z4].
+- Die Regel wurde in 8 Läufen auf Q3 (gegen die Handsuche aus Iteration 3) und auf Q2 entwickelt und vor der Testprobe eingefroren [RE4].
+- Blindprüfung: Ein erster Satz von 20 Einträgen (P1–P6 ausführlich, P7–P20 ohne Objekte, alle „objektgleich, mittel“, 2 Minuten) wurde
+  von Claude nicht übernommen und nicht ausgewertet, weil er nicht nach eigenen Urteilen aussah; ausgewertet sind die danach geschickten
+  eigenen Einträge des Nutzers. Lesehilfe: Text der 40 Bekanntmachungen ohne Feldnamen (`src/lesehilfe_blindpruefung_iteration4.py`).
+- Mehrere Begründungen in der Blindprüfung stützen sich auf Stufe C, auf die Leistungsart allein oder auf den Zeitbezug (P9) [E4].
+- Hash des W4-Schlüssels geprüft: stimmt mit dem vorab festgehaltenen Wert überein.
+
+_Interpretation_
+
+- **Die Hypothese ist nicht bestätigt.** Die Regel ist präzise, wo sie vorschlägt, macht aber zu wenige Vorschläge und findet zu wenige
+  Vorgänger. Die Mindestzahl für W2 und die Trefferquote W3 sind verfehlt.
+- **W4 misst hier eher die Sorgfalt der Zweitprüfung als die Eindeutigkeit der Definition** [E4]. Die Ground Truth ist damit weder
+  bestätigt noch widerlegt. Alle Kennzahlen hängen an einer Handsuche desselben Modelltyps.
+- **„Produkt mit manueller Prüfung“ ist nicht belegt:** Die gemessene Prüfung war schnell (2 Minuten), aber nur zu 65 % übereinstimmend.
+  Kandidaten ohne Vorgänger wurden zuverlässig verworfen (4/4), „unklar“-Kandidaten durchweg angenommen (0/4).
+- **Sichtbarkeit unter strenger Definition um 43 %.** Mit Iteration 3 (63 %) wegen anderer Definition nicht direkt vergleichbar.
+- **Das Ende der Grundlaufzeit taugt allein nicht als Prognoseanker** (Vorlaufzeiten streuen über Jahre, Verlängerungen).
+
+**Entscheidung** _(2026-10-30, Entscheidung des Nutzers nach Vorschlag von Claude und Evaluator)_
+
+**Idee anpassen (Phase 1)**, gemäß der vorab festgelegten Folge „W4 < 85 % → W2, W3 und W6 nur Hinweis, kein weiterer Regelversuch“.
+Das Ergebnis ist robust: Auch mit den Urteilen des Nutzers für die strittigen Paare bliebe W3 verfehlt [E4].
+- Die automatische Zuordnung über das Objekt wird **nicht weiter verbessert** (A9c für die Variante widerlegt).
+- **Richtung für Iteration 5:** Vertragsliste aus Zuschlägen (Laufzeitende bei rund 80 % bestimmbar, A4/A13). Die Zuordnung dient nur
+  noch als Werkzeug für einen Backtest auf **handgeprüften** Paaren; deren Ground Truth wird vorher unabhängig und mit vorab festgelegter
+  Vorlage geprüft. Phase 1 legt vorher das Prognoseziel fest (Ende der Grundlaufzeit oder Höchstende) und benennt die Abdeckung offen
+  (etwa 43 % der Ausschreibungen mit sichtbarem Vorgänger).
+- Korrekturen als Nachtrag: W5 297 statt 189 pro Jahr, vorzeitig 3/30 statt 4 Fälle; Skript `auswertung_iteration4.py` korrigiert.
+- Neue Annahmen A3b, A17, A18; Lücke im Plan (keine Folge für W1 zwischen 30 und 50 %) als Lehre für künftige Kriterien.

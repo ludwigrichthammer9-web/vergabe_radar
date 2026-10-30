@@ -7,19 +7,18 @@ ausgeschrieben werden, basierend auf Zuschlagsbekanntmachungen aus TED
 Neuausschreibungen vorbereiten wollen (z. B. Gebäudereinigung, IT-Wartung,
 Winterdienst).
 
-## Aktuelle Phase: vor Iteration 4, Phase 2/3 (Zuordnung über das Objekt)
-Iteration 3 ist abgeschlossen (Entscheidung: in Phase 2/3 bleiben). Objektgleiche
-Vorgänger sind auf TED oft sichtbar (63 %, knapp und definitionsabhängig), die
-einfache Objekt-Regel ordnet sie aber nicht zuverlässig zu (Präzision 46 %,
-Trefferquote 29 %; Fehler meist Geschwisterverfahren, vor eForms fehlen Merkmale).
+## Aktuelle Phase: vor Iteration 5, zuerst Phase 1 (Idee anpassen)
+Iteration 4 ist abgeschlossen (Entscheidung: Idee anpassen). Die automatische
+Zuordnung über das Objekt wird nicht weiter verbessert: Präzision 89,5 % bei nur
+19 Vorschlägen, Trefferquote 56,7 %, Zweitprüfung durch den Nutzer 65 % (< 85 %).
+Sichtbare Vorgänger nach Urteilsregeln 1.1: 43 % der Ausschreibungen.
 Arbeitsnische: Gebäudereinigung, Haupt-CPV 90910/90911/90919. Noch kein Modell.
-Iteration 4 = letzter Verbesserungsversuch: Merkmale auf Los-Ebene (auch vor
-eForms aus XML/Volltextsuche), Leistungsart hart prüfen, kein Zeitfenster;
-neue Testdaten Q1 2026, Handsuche und Zweitprüfung nach Urteilsregeln 1.1 vorab.
-Parallel in Phase 1: Produkt mit manueller Prüfung bewerten (Recherche, kein Kundenkontakt;
-Iteration 7 wird Prototyp statt Kundentest, A1/A15 bleiben ungeprüft).
+Iteration 5 = Vertragsliste aus Zuschlägen (Laufzeitende meist bestimmbar):
+zuerst Prognoseziel festlegen (Grundlaufzeit oder Höchstende), dann Tabelle je
+Los, einfache Regel, Backtest nur auf unabhängig handgeprüften Paaren.
+Kein Kundenkontakt (Iteration 7 = Prototyp, A1/A15 bleiben ungeprüft).
 Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE (25/30).
-Details: docs/iterationen.md, reports/evaluation_iteration3.md
+Details: docs/iterationen.md, reports/evaluation_iteration4.md
 
 ## Später geplant
 - Nische wählen, Backtest (erwartetes Auslaufdatum vs. tatsächliche

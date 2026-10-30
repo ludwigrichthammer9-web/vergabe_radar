@@ -13,102 +13,43 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 3 (Abschluss), 2026-10-25. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 4 (Abschluss), 2026-10-30. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-Quellen: **[R]** `reports/datenqualitaet_DEU_20260722_20261021.md` · **[S]** `reports/stichprobe_iteration1.md` ·
-**[E1]** `reports/evaluation_iteration1.md` · **[RR]** [rueckreichweite_909.md](../../reports/rueckreichweite_909.md) ·
-**[K]** [kennzahlen_iteration2.md](../../reports/kennzahlen_iteration2.md) · **[Z]** [zuordnung_iteration2.md](../../reports/zuordnung_iteration2.md) ·
-**[P]** [k2_pruefliste.md](../../reports/k2_pruefliste.md) · **[X]** [k2_auszuege.md](../../reports/k2_auszuege.md) ·
-**[E2]** [evaluation_iteration2.md](../../reports/evaluation_iteration2.md) · **[Erg]** [ergebnis_iteration2.md](../../reports/ergebnis_iteration2.md) ·
-**[PR]** Probeabfragen vom 23.10.2026 in `data/raw/ted_probes/20261023/` · **[Sp]** OpenAPI https://ted.europa.eu/docs/v3 ·
-**[F]** Feldliste https://docs.ted.europa.eu/ODS/latest/reuse/field-list.html · **[SDK]** eForms SDK `translations/business-term_en.xml`.
-Iteration 3: **[T3]** [testfaelle_iteration3.md](../../reports/testfaelle_iteration3.md) · **[RE]** [regel_entwicklung_iteration3.md](../../reports/regel_entwicklung_iteration3.md) ·
-**[GT]** [sichtbarkeit_iteration3_gt.csv](../../reports/sichtbarkeit_iteration3_gt.csv) und `sichtbarkeit_iteration3_teil1–4.md` ·
-**[Z3]** [zuordnung_iteration3.md](../../reports/zuordnung_iteration3.md) · **[A11]** [a11_stichprobe.md](../../reports/a11_stichprobe.md) ·
-**[BN]** [blindpruefung_iteration3_nutzer.md](../../reports/blindpruefung_iteration3_nutzer.md) · **[E3]** [evaluation_iteration3.md](../../reports/evaluation_iteration3.md).
+Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.md) und [zuordnung_iteration4_korrektur.md](../../reports/zuordnung_iteration4_korrektur.md) · **[GT4]** [sichtbarkeit_iteration4_gt.csv](../../reports/sichtbarkeit_iteration4_gt.csv) · **[BP4]** [blindpruefung_iteration4.md](../../reports/blindpruefung_iteration4.md) · **[RE4]** [regel_entwicklung_iteration4.md](../../reports/regel_entwicklung_iteration4.md) · **[E4]** [evaluation_iteration4.md](../../reports/evaluation_iteration4.md). Ältere Quellen siehe Iterationslog.
 
 ### Fakten (aus den Daten)
 
-**Datenquelle**
-- TED Search API v3 (`POST https://api.ted.europa.eu/v3/notices/search`, ohne API-Key). Pro Seite höchstens 250 Notices,
-  ITERATION-Modus unbegrenzt. [Sp]
-- **Rückreichweite:** ab Ende Oktober 2016 (erste Notices 21.–28.10.2016), davor 0 Treffer. [PR q04–q09, q17]
-- **Formatwechsel:** Haupt-CPV (`main-classification-proc`) ist ab Ende Oktober 2023 befüllt, davor nie. [PR q16], [RR]
-- **Notices vor eForms:** Die API liefert nur Nummer, Datum, Formular- und Bekanntmachungstyp, CPV-Liste, Auftraggebername und Ort.
-  Laufzeit, Haupt-CPV, Kennung und Titel fehlen. [PR q11, q15] Objektangaben (Titel, Ort, Beschreibung) stehen nur in der XML bzw.
-  sind über die Volltextsuche erreichbar. [GT], [E3]
-- **Laufzeit vor eForms (A11):** Alte Zuschläge (F03/F06) enthalten keine Laufzeit (0 von 30). In einer Zufallsstichprobe von 30
-  Zuschlägen (CPV 909, DEU, 2018 bis Okt. 2023) ist das Laufzeitende über `REF_NOTICE` in der alten Ausschreibung bei **25/30 = 83,3 %**
-  (Wilson 66,4–92,7) bestimmbar; 2 ohne Verweis, 3 nur Dauer. Gemeint ist das geplante Ende der Grundlaufzeit. [A11]
-- **Definitionen:** BT-36 schließt laut eForms Optionen und Verlängerungen ein, BT-537 ist offen formuliert. [SDK]
+**Datenquelle und Datensätze**
+- TED Search API v3 ab Ende Oktober 2016; vor eForms liefert die API keine Titel, Orte und Laufzeiten, die Original-XML schon.
+  Volltextsuche `FT` findet auch Bekanntmachungen vor eForms (Probeabfragen 2026-10-25).
+- Seit Iteration 4 Downloads mit Beschreibungen je Los (`ted_download.py --los-texte`): Ausschreibungen Q4 2025 bis Q3 2026 und der
+  Kandidatenpool der eForms-Zeit (Zuschläge und Ausschreibungen CPV 909).
+- Population Gebäudereinigung (Haupt-CPV 90910/90911/90919, Originale, ohne Bauprojekte und Sonderreinigung im Titel bzw. in allen
+  Lostiteln): Q4 2025 381, Q1 2026 538, Q2 2026 488, Q3 2026 486; zusammen 1.893 pro Jahr [Z4].
 
-**Geladene Datensätze** (Rohdaten unverändert in `data/raw/`)
-- Iteration 1: alle deutschen Zuschläge 22.07.–21.10.2026 (15.706). [R]
-- Iteration 2: Gebäudereinigungs-Ausschreibungen Q2 2026 (710 Notices, 551 Verfahren) und alle Zuschläge mit CPV 909 in der CPV-Liste
-  seit Okt. 2016 (15.361). [RR], [Z]
-- Iteration 3: Gebäudereinigungs-Ausschreibungen Q3 2026 (678 Notices; Population 492 Verfahren nach Haupt-CPV 90910/90911/90919,
-  ohne Änderungen und Ausschlussbegriffe im Titel) [T3]; XML der Kandidaten und der A11-Stichprobe in `data/raw/ted_xml/`.
+**Laufzeitende bestimmbar** (aus früheren Iterationen): Q3 2026 80,9 %, Q2 2025 82,1 %, 2023/2024 rund 70 %; vor eForms über `REF_NOTICE`
+25/30 = 83,3 % (Iteration 3, A11).
 
-**Basisraten Gebäudereinigung (DEU)** [RR]
-- Zuschläge 1.250–1.750 pro Jahr, stabil. Ausschreibungs-Notices 2024/2025 je ca. 2.560–2.780, nach Abzug der Änderungen grob
-  1.990–2.160 Verfahren. Pro Zuschlag vor eForms ca. 1,1, seit eForms ca. 1,6 Ausschreibungs-Notices (ungeklärt).
-- Vorinformationen: rund 30 pro Jahr.
+**Sichtbarkeit der Vorgänger (Iteration 4, W1)** — 70 Zufallsfälle aus Q1 2026, Handsuche nach Urteilsregeln 1.1 [GT4]
+- 18 objektgleich (alle „mittel“), 12 Teilmenge, 18 unklar (10 eher dafür), 22 kein Vorgänger: **30/70 = 42,9 %** (Wilson 31,9–54,5).
+- Gefundene Vorgänger je Teil der Handsuche 5, 4, 5, 8, 8 [E4].
 
-**Laufzeitende bestimmbar (Haupt-CPV 909, Notice-Ebene)**
+**Zuordnung über Merkmale je Los (Iteration 4, eingefrorene Regel)** [Z4], [RE4]
+- 19 Vorschläge, 17 korrekt (89,5 %); Trefferquote 17/30 = 56,7 %; Vorgänger unter den Top 3 in 22/30 Fällen.
+- Backtest-Basis nach Korrektur 11/70 × 1.893 = 297 pro Jahr; mindestens 4 der Paare haben Vorgänger vor eForms.
+- Zweitprüfung durch den Nutzer 13/20 = 65 % (Median 2 Minuten); Ground Truth damit nicht menschlich bestätigt [BP4], [E4].
 
-| Fenster | Anteil | 95-%-KI | n | Quelle |
-|---|---|---|---|---|
-| Q3 2026 (Iteration 1, Schwelle nachträglich) | 80,9 % | 77,0–84,3 % | 440 | [R], [E1] |
-| Q2 2025 (K4, Schwelle vorab) | 82,1 % | 77,9–85,5 % | 390 | [K] |
-| 2023 ab 25.10. | 70,7 % | 64,7–76,1 % | 239 | [K] |
-| 2024 | 70,1 % | 67,8–72,2 % | 1.623 | [K] |
-| 2025 | 79,7 % | 77,7–81,6 % | 1.619 | [K] |
-| vor eForms 2018–2023, über `REF_NOTICE` (V6, Schwelle vorab) | 83,3 % | 66,4–92,7 % | 30 | [A11] |
-
-- Median-Laufzeit Gebäudereinigung aus Beginn/Ende 36 Monate (Q3 2026). [R]
-
-**Sichtbarkeit der Vorgänger (Iteration 3, V1)** — 60 Zufallsfälle aus Q3 2026, höchstens 2 je Auftraggeber, Handsuche durch den
-Subagenten `rechercheur` mit Protokoll, vor dem Regel-Lauf committet [T3], [GT]
-- 29 objektgleich, 9 Teilmenge, 14 kein Vorgänger, 8 unklar. Mit Teilmengen **38/60 = 63,3 %** (Wilson 50,7–74,4), nur objektgleich
-  29/60 = 48,3 % (Wilson 36,2–60,7). [Z3], [E3]
-- Bei mindestens 10 der 38 Paare fehlt das Glied direkt vor dem Testfall auf TED (Lücke zwischen Vorgänger-Ende und Testfall). [E3]
-- Nur etwa 5 der 38 Vorgänger sind eForms-Verträge, die übrigen Bekanntmachungen vor eForms. [E3]
-- 1 von 60 Testfällen ist sachfremd (T16, Bauendreinigung), weil die Ausschlussliste nur den Titel prüft. [E3]
-
-**Zuordnung über das Objekt (Iteration 3, V2/V3/V5)** — Regel `src/zuordnung_objekt.py`, auf Q2 2026 gebaut und vor den Testdaten
-eingefroren (Commit 4497743) [RE]
-- **V2 Präzision 11/24 = 45,8 %** (Wilson 27,9–64,9), **V3 Trefferquote 11/38 = 28,9 %** (Wilson 17,0–44,8). [Z3]
-- 9 von 11 falschen Vorschlägen sind Geschwisterverfahren desselben Auftraggebers, 2 dasselbe Objekt mit anderer Leistungsart (T31,
-  T54); alle 11 sind Notices aus 2025/2026. Bei 19 von 38 gefundenen Fällen kein Vorschlag. [E3]
-- Auf den Entwicklungsdaten hielt Claude etwa 10–11 von 12 Vorschlägen für plausibel (ohne Handsuche). [RE]
-- V5: 10/60 korrekt zugeordnet mit bestimmbarem Vorgänger-Ende, hochgerechnet 328 pro Jahr [Z3]. Enddaten bei T26 (Ende eines
-  aufgehobenen Verfahrens), T56 (jährliche Verlängerung, Ende unbekannt) und T18 (nur Lose 8/9) fragwürdig; robust etwa 230,
-  nur eForms-Vorgänger etwa 98–131 pro Jahr. [E3]
-- Vorzeitige Neuvergaben (Beginn ≥ 3 Monate vor Ende der Grundlaufzeit): 2/36 = 5,6 % (T18, T32). Neuvergabe nach der Grundlaufzeit,
-  aber vor dem Höchstende bei mindestens 6 Paaren. [E3]
-
-**Zweitprüfung (V4)** — Urteile des Nutzers nach Urteilsregeln Version 1.1 über P9–P28: 17/20 = 85 % (Wilson 64,0–94,8; κ ≈ 0,70);
-regelbasierter Subagent ebenfalls 17/20. Die Regeln entstanden nach dem ersten Ansehen der Paare; P1–P8 wurden Kalibrierung. [BN], [E3]
-
-**Aus Iteration 2 (Zuordnung über den Auftraggeber)** [Z], [P], [E2]
-- K1: 461 von 551 (83,7 %) haben einen früheren Zuschlag desselben Auftraggebers; K2: nur 5 von 30 objektgleich (16,7 %).
-- Haupt-CPV 909 enthält auch Schädlingsbekämpfung, Fahrzeug- und Industriereinigung sowie Bau- und Sonderreinigung. [X], [E2]
-- Backtest-Basis K5: 629 eForms-Zuschläge mit Laufzeitende bis 23.10.2026, Median-Laufzeit 12 Monate. [K]
+**Prognoseziel**
+- Vorlaufzeit bis zum Ende der Grundlaufzeit bei 11 korrekten Paaren −32 bis +26 Monate, Median etwa −6 Monate; vorzeitige Neuvergaben
+  3/30 [Z4].
 
 ### Interpretation
 
-- **Objektgleiche Vorgänger sind auf TED oft sichtbar**, aber knapp und nur, wenn Teilmengen mitzählen. Die Abbruchregel „V1 < 30 %
-  → nationale Quellen“ ist klar nicht ausgelöst, die Sichtbarkeit unter strenger Definition liegt aber um 50 %.
-- **Die einfache Objekt-Regel taugt nicht.** Sie verwechselt Geschwisterverfahren großer Auftraggeber und findet vor eForms kaum
-  etwas, weil die Objektmerkmale in den API-Daten fehlen. Das zweite ist eher ein Problem des Datenzugangs als der Vergleichslogik.
-- **Ein Zeitfenster ist keine Lösung**: Es würde vorzeitige Neuvergaben ausschließen und den Backtest zirkulär machen.
-- **Für den Backtest sind Daten vor eForms praktisch nötig** (nur etwa 5 von 38 Vorgängern sind eForms-Verträge). A11 ist dafür
-  vorläufig gestützt.
-- **Die Kategorien „objektgleich“ und „Teilmenge“ sind unscharf.** Die Definition hat sich während der Handsuche verschoben, und V4
-  belegt keine eindeutige Definition. Für Iteration 4 gelten die Urteilsregeln 1.1 vorab.
-- **Die Nische muss auf Los-Ebene über die Leistungsart abgegrenzt werden**, nicht nur über Haupt-CPV und Titel.
-- **Die 80-%-Quote für ein bestimmbares Laufzeitende gilt ab 2025** und, über `REF_NOTICE`, vorläufig auch für 2018–2023, nicht für
-  2023/2024 in eForms.
+- Vorgänger sind nach strenger Definition bei gut 40 % der Ausschreibungen sichtbar. Eine automatische Zuordnung findet davon gut die Hälfte.
+- Die Daten tragen eine **Liste auslaufender Verträge aus Zuschlägen** besser als eine Nachfolger-Zuordnung: Das Laufzeitende ist meist
+  bestimmbar, auch vor eForms über `REF_NOTICE`.
+- Für einen Backtest werden Daten vor eForms gebraucht (A10), und die Paare müssen unabhängig geprüft sein (A18).
+- Die Grundlaufzeit allein ist kein brauchbares Prognoseziel; Verlängerungen müssen berücksichtigt werden.
 
 ## Offene Fragen
 
@@ -124,8 +65,9 @@ regelbasierter Subagent ebenfalls 17/20. Die Regeln entstanden nach dem ersten A
   gesucht unter Zuschlägen **und** früheren Ausschreibungen? (A3, A9b)
   _Antwort Iteration 3:_ 38/60 = 63,3 % mit Teilmengen, 29/60 = 48,3 % nur objektgleich (Q3 2026, Definition des Rechercheurs)
   [Z3], [E3]. Unter Urteilsregeln 1.1 nicht erneut gemessen.
-- [ ] _(neu, Iteration 2)_ Lässt sich der Vorgänger automatisch über Adresse, Liegenschaftsname und Titel zuordnen, auch bei großen
+- [x] _(neu, Iteration 2)_ Lässt sich der Vorgänger automatisch über Adresse, Liegenschaftsname und Titel zuordnen, auch bei großen
   Auftraggebern (A9b)?
+  _Antwort Iteration 4:_ nicht zuverlässig genug (Präzision 89,5 % bei 19 Vorschlägen, Trefferquote 56,7 %, Zweitprüfung 65 %); nicht weiter verfolgt [Z4], [E4].
   _Stand Iteration 3:_ mit der eingefrorenen Regel **nein** (V2 45,8 %, V3 28,9 %) [Z3]. Letzter Versuch mit Merkmalen auf Los-Ebene
   in Iteration 4 (A9c).
 - [ ] _(neu, Iteration 2)_ Wie häufig sind vorzeitige Neuvergaben (A16)?
@@ -141,8 +83,10 @@ regelbasierter Subagent ebenfalls 17/20. Die Regeln entstanden nach dem ersten A
   Zeitfenster? (A9c)
 - [ ] _(neu, Iteration 3)_ Wie oft fehlt das Glied direkt vor einer Ausschreibung auf TED (Lücke bei mindestens 10 von 38), und
   was bedeutet das für die Prognose der Kette? (A3, A8)
-- [ ] _(neu, Iteration 3)_ Ist Q3 ein saisonales Hoch der Ausschreibungen (Hochrechnung „× 4“ in V5)? Populationsgrößen anderer
+- [x] _(neu, Iteration 3)_ Ist Q3 ein saisonales Hoch der Ausschreibungen (Hochrechnung „× 4“ in V5)? Populationsgrößen anderer
   Quartale vergleichen.
+  _Antwort Iteration 4:_ Q4 2025 381, Q1 2026 538, Q2 488, Q3 486; Q4 ist das schwache Quartal, Q1 das stärkste [Z4].
+- [ ] _(neu, Iteration 4)_ Wie gut ist die Ground Truth der Handsuche, unabhängig geprüft (A18)?
 - [ ] _(neu, Iteration 2)_ Warum gibt es seit eForms etwa 1,6 Ausschreibungs-Notices pro Zuschlag (vorher 1,1), auch nach Abzug der
   Änderungen etwa 1,2?
 - [ ] _(neu, Iteration 2)_ Warum ist das Laufzeitende 2023/2024 nur bei etwa 70 % bestimmbar, ab 2025 bei etwa 80 %?
@@ -187,6 +131,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-23 | 3 | Handsuche (Ground Truth) durch den Subagenten `rechercheur`, ohne Kenntnis der Regel | Trennung von Regelbau und Ground Truth; Entscheidung des Nutzers |
 | 2026-10-24 | 3 | V4 über P9–P28 nach Urteilsregeln Version 1.1; P1–P8 sind Kalibrierung | Regeln des Nutzers nach erstem Ansehen der Paare; als Abweichung in iterationen.md dokumentiert |
 | 2026-10-25 | 3 | **In Phase 2/3 bleiben:** ein letzter Verbesserungsversuch der Zuordnung (Iteration 4) mit Merkmalen auf Los-Ebene (auch vor eForms), harter Prüfung der Leistungsart und Trennung von Geschwisterverfahren ohne Zeitfenster; Q3 2026 wird Entwicklungsdaten, neue Testdaten aus Q1 2026, Handsuche und V4 nach Urteilsregeln 1.1 vorab | Vorab festgelegte Folge „V1 ≥ 50 %, V2/V3 verfehlt“ (V1 63,3 %, V2 45,8 %, V3 28,9 %); V1 und V4 nur knapp und definitionsabhängig erfüllt [E3]. Entscheidung des Nutzers. |
+| 2026-10-30 | 4 | **Idee anpassen:** Die Zuordnung über das Objekt wird nicht weiter verbessert (A9c für `zuordnung_los.py` widerlegt); Iteration 5 nutzt Zuschläge mit Laufzeitende als Kern und die Zuordnung nur für einen Backtest auf handgeprüften Paaren | W4 65 % < 85 %, W3 56,7 %, W2 bei 19 statt 25 Vorschlägen (reports/evaluation_iteration4.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -283,3 +228,23 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
   - Leistungsart hart prüfen, Geschwisterverfahren über Objektlisten und Flächen trennen, kein Zeitfenster
   - neue Testdaten aus Q1 2026, Handsuche und Zweitprüfung nach Urteilsregeln 1.1 vorab, Abbruchkriterium vorab
   - korrigierte Vorgänger-Enddaten (T26, T56, T18), Belegstärke T18–T30 in `gt.csv` nachtragen
+
+### Iteration 4 – 2026-10-30
+
+- **Was gemacht:**
+  - Population mit erweitertem Ausschluss (Lostitel, Bauprojekte), Liste bekannter Notices, Testprobe 70 Fälle Q1 2026
+    (`src/population_iteration4.py`, `src/testprobe_iteration4.py`)
+  - Downloads mit Beschreibungen je Los, Merkmale je Los (`src/ted_download.py --los-texte`, `src/los_merkmale.py`)
+  - Regel auf Q2/Q3 entwickelt und eingefroren (`src/zuordnung_los.py`, [RE4])
+  - Handsuche durch den Rechercheur nach Urteilsregeln 1.1 in 5 Teilen, Ground Truth vor dem Regel-Lauf ([GT4])
+  - Regel-Lauf, Paarbeurteilung, Blindprüfung, Auswertung mit Korrektur ([Z4], [BP4]); Evaluator ([E4])
+- **Erkenntnisse – Fakten:**
+  - W1 42,9 %, W2 17/19 (Mindestzahl 25 verfehlt), W3 56,7 %, W4 65 %, W5 297/Jahr (korrigiert), W6 73,3 %.
+  - Prüfzeit Median 2 Minuten; vorzeitig 3/30; Vorlaufzeit −32 bis +26 Monate.
+  - Population 1.893 Verfahren pro Jahr, Q4 deutlich kleiner als Q1.
+- **Erkenntnisse – Interpretation:**
+  - Die automatische Zuordnung über das Objekt erreicht die vorab festgelegten Schwellen nicht; sie wird nicht weiter verbessert.
+  - Die Ground Truth ist nicht unabhängig bestätigt; das betrifft auch die Backtest-Basis.
+- **Übergabe an die nächste Phase:** An Phase 1: Prognoseziel festlegen. An Phase 3: Tabelle der Zuschläge mit Laufzeitende je Los,
+  Herkunft des Endes (Grundlaufzeit, Höchstende, rollierend), auch vor eForms über `REF_NOTICE`. An Phase 5: Backtest nur auf Paaren mit
+  unabhängig geprüfter Ground Truth.

@@ -16,6 +16,7 @@ Explorativ: Vorlaufzeit (Veröffentlichung des Testfalls bis Vorgänger-Ende) un
 
 Aufruf:
     python -I src/auswertung_iteration4.py      # schreibt reports/zuordnung_iteration4.md
+    python -I src/auswertung_iteration4.py zuordnung_iteration4_korrektur.md   # korrigierte Fassung (2026-10-30)
 """
 
 import csv
@@ -105,7 +106,10 @@ def main() -> None:
                 stats["korrekt"] += 1
                 stats["w3"] += is_found
                 d = DATE.search(ende or "")
-                if herkunft.strip().lower() == "grundlaufzeit" and d:
+                # Korrektur 2026-10-30 (Evaluation Iteration 4): auch „grundlaufzeit, hoechstende“ zählt; nur geplante Daten aus
+                # einer Ausschreibung ohne Zuschlag („aus Ausschreibung“) zählen nicht.
+                h = herkunft.strip().lower()
+                if h.startswith("grundlaufzeit") and "aus ausschreibung" not in h and d:
                     stats["w5"] += 1
                     lead.append((g["U"], months(str(tests[r["case"]]["publication-date"])[:10], d.group(0))))
         elif is_found:
@@ -114,7 +118,8 @@ def main() -> None:
     P, k = stats["P"], stats["korrekt"]
     w2_lo = wilson(k, P)[0] if P else 0
     w5 = stats["w5"] / n_cases * pop_year
-    early = [g["U"] for g in gt.values() if g["vorzeitig"].strip().lower().startswith("ja")]
+    # Korrektur 2026-10-30: nur Fälle mit Vorgänger (W1), nicht „unklar“
+    early = [g["U"] for g in found if g["vorzeitig"].strip().lower().startswith("ja")]
 
     out = ["# Zuordnung über Merkmale je Los: Testergebnis (Iteration 4)", "",
            "Erzeugt mit `src/auswertung_iteration4.py`. Regel: `src/zuordnung_los.py`, Stand Commit 1d0e060 (eingefroren vor den Testdaten). "
@@ -141,7 +146,8 @@ def main() -> None:
         p = r["proposal"]
         out.append(f"| {g['U']} | {r['case']} | {g['kategorie']} | {g['vorgaenger'] or '–'} | {p['pn'] if p else '–'} | {status} | "
                    f"{'✓' if top_hit else ''} | {ende or ''} | {herkunft or ''} |")
-    (REPORTS / "zuordnung_iteration4.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    target = REPORTS / (sys.argv[1] if len(sys.argv) > 1 else "zuordnung_iteration4.md")
+    target.write_text("\n".join(out) + "\n", encoding="utf-8")
     print("\n".join(out[5:13]))
     if missing_pairs:
         print("Offen:", missing_pairs)

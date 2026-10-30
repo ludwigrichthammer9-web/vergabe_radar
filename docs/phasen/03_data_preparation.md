@@ -14,40 +14,28 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 3 (Abschluss), 2026-10-25. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 4 (Abschluss), 2026-10-30. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-Phase 3 ist noch nicht richtig begonnen. In Iteration 3 sind weitere Bausteine für die Aufbereitung entstanden. Iteration 4 arbeitet
-in Phase 2/3 an den Objektmerkmalen auf Los-Ebene.
+Phase 3 hat mit Iteration 4 Bausteine für Merkmale je Los bekommen. Die eigentliche Aufbereitung für die Prognose beginnt in Iteration 5,
+jetzt mit Zuschlägen und ihrem Laufzeitende als Kern.
 
 ### Fakten (aus den Daten)
 
-- `build_table()` in [src/analyze_completeness.py](../../src/analyze_completeness.py) erzeugt eine Tabelle pro Notice. Datumsfelder
-  stammen aus dem ersten Los; 15,3 % der Notices haben mehrere Lose. [R §1]
-- `end_date()` in [src/kennzahlen_iteration2.py](../../src/kennzahlen_iteration2.py) vereinheitlicht das Laufzeitende: Enddatum,
-  sonst Beginn + Dauer; Laufzeiten ≤ 0 oder > 240 Monate werden verworfen.
-  [reports/kennzahlen_iteration2.md](../../reports/kennzahlen_iteration2.md)
-- [src/k2_xml_auszug.py](../../src/k2_xml_auszug.py) liest Titel, Lose, Ort und Laufzeit aus eForms- und alter TED-XML und folgt
-  bei alten Zuschlägen `REF_NOTICE` zur alten Ausschreibung. [src/a11_stichprobe.py](../../src/a11_stichprobe.py) nutzt das für die
-  A11-Stichprobe (25/30 bestimmbar). [reports/a11_stichprobe.md](../../reports/a11_stichprobe.md)
-- _(neu, Iteration 3)_ [src/objekt_merkmale.py](../../src/objekt_merkmale.py) extrahiert Titel, Ort, PLZ und Straße je Notice (eForms
-  über die API, vor eForms über die XML, nur für Kandidaten). [src/zuordnung_objekt.py](../../src/zuordnung_objekt.py) vergleicht
-  Auftraggeber unscharf (Jaccard bzw. Überlappung der Namenswörter) und Objektwörter ohne Allerweltswörter und ohne Namen/Sitz des
-  Auftraggebers. [reports/regel_entwicklung_iteration3.md](../../reports/regel_entwicklung_iteration3.md)
-- _(neu, Iteration 3)_ Auf den Testdaten: Präzision 45,8 %, Trefferquote 28,9 %. 9 von 11 Fehlern sind Geschwisterverfahren desselben
-  Auftraggebers, 2 dasselbe Objekt mit anderer Leistungsart. Bei 19 von 38 Fällen kein Vorschlag, meist weil vor eForms Titel und Ort
-  in den Rohdaten fehlen. [reports/zuordnung_iteration3.md](../../reports/zuordnung_iteration3.md),
-  [reports/evaluation_iteration3.md](../../reports/evaluation_iteration3.md)
-- _(neu, Iteration 3)_ `auswertung_iteration3.py` nimmt als Vorgänger-Ende das Ende der Grundlaufzeit des vorgeschlagenen Notice; bei
-  T26 (aufgehobenes Verfahren) und T56 (jährliche Verlängerung) ist das falsch bzw. unbekannt. [E3]
-- `buyer-identifier` ist uneinheitlich und teils für mehrere Niederlassungen gleich. [reports/evaluation_iteration2.md](../../reports/evaluation_iteration2.md)
+Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.md) und [zuordnung_iteration4_korrektur.md](../../reports/zuordnung_iteration4_korrektur.md) · **[GT4]** [sichtbarkeit_iteration4_gt.csv](../../reports/sichtbarkeit_iteration4_gt.csv) · **[BP4]** [blindpruefung_iteration4.md](../../reports/blindpruefung_iteration4.md) · **[RE4]** [regel_entwicklung_iteration4.md](../../reports/regel_entwicklung_iteration4.md) · **[E4]** [evaluation_iteration4.md](../../reports/evaluation_iteration4.md). Ältere Quellen siehe Iterationslog.
+
+- `src/los_merkmale.py` liest je Los Leistungsart, Flächen, Adressen und Objektnamen, bei eForms aus der API (mit Beschreibungen), vor
+  eForms aus der XML.
+- `src/zuordnung_los.py` (eingefroren 1d0e060) sucht Kandidaten über Auftraggeber, PLZ, seltene Namenswörter und Volltext; im Test
+  19 Vorschläge, 17 korrekt, Trefferquote 56,7 % [Z4].
+- `src/kennzahlen_iteration2.py` (`end_date()`) vereinheitlicht das Laufzeitende; `src/a11_stichprobe.py` liest es vor eForms über
+  `REF_NOTICE`.
+- Das Vorgänger-Ende braucht eine Herkunft: Die Auswertung zählte „grundlaufzeit, hoechstende“ zunächst nicht mit (korrigiert) [E4].
 
 ### Interpretation
 
-- Merkmale auf **Los-Ebene** (Objektliste, Adresse, Fläche, Leistungsart) sind der Engpass, vor allem vor eForms. Ohne sie lassen
-  sich Geschwisterverfahren nicht trennen.
-- Das Vorgänger-Ende braucht eine Herkunftskennzeichnung (Grundlaufzeit, Höchstende, aufgehoben, unbekannt), bevor es in einen
-  Backtest geht.
-- Eine Tabelle pro Los mit vereinheitlichtem Laufzeitende bleibt das Ziel für den Backtest.
+- Für Iteration 5 wird eine Tabelle der Zuschläge je Los gebraucht: Laufzeitende mit Herkunft (Grundlaufzeit, Höchstende, rollierend),
+  Leistungsart und Objektmerkmale aus `los_merkmale.py`.
+- Die Objekt-Zuordnung bleibt nur als Werkzeug, um Paare für einen Backtest vorzuschlagen, die dann von Hand geprüft werden.
 
 ## Offene Fragen
 
@@ -79,6 +67,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | – | – | Noch keine Entscheidungen | – |
 | 2026-10-23 | 2 | Zuordnung über Auftraggeber + CPV wird nicht in eine Aufbereitung übernommen; Phase 3 wartet auf die Zuordnung über das Objekt (Iteration 3, Phase 2) | K2 = 16,7 % (reports/ergebnis_iteration2.md) |
 | 2026-10-25 | 3 | Die Objekt-Regel aus Iteration 3 (Commit 4497743) wird nicht in die Aufbereitung übernommen; Iteration 4 baut Merkmale auf Los-Ebene (auch vor eForms) als letzten Verbesserungsversuch | Präzision 45,8 %, Trefferquote 28,9 % (reports/zuordnung_iteration3.md, reports/evaluation_iteration3.md). Entscheidung des Nutzers. |
+| 2026-10-30 | 4 | Die Regel `zuordnung_los.py` wird nicht in die Aufbereitung übernommen; Merkmale je Los (`los_merkmale.py`) und Laufzeitende mit Herkunft werden Grundlage der Zuschlagstabelle in Iteration 5 | Entscheidung „Idee anpassen“ nach Iteration 4 (reports/evaluation_iteration4.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -119,3 +108,13 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
   des Laufzeitendes.
 - **Übergabe an die nächste Phase:** Iteration 4 (Phase 2/3) baut Objekt- und Leistungsart-Merkmale auf Los-Ebene, auch vor eForms,
   und misst die verbesserte Zuordnung auf neuen Testdaten. Erst danach beginnt die eigentliche Aufbereitung für den Backtest.
+
+### Iteration 4 – 2026-10-30
+
+- **Was gemacht:** Merkmale je Los (`src/los_merkmale.py`), Kandidatensuche mit Volltext und Regel (`src/zuordnung_los.py`), Download mit
+  Los-Texten (`src/ted_download.py --los-texte`), Auswertung mit Korrektur der Zählung des Vorgänger-Endes (`src/auswertung_iteration4.py`).
+- **Erkenntnisse – Fakten:** Merkmale je Los lassen sich für eForms aus den API-Feldern und vor eForms aus der XML gewinnen; Flächen
+  stehen nur bei gut einem Drittel im Text; die Herkunft des Laufzeitendes ist oft gemischt („grundlaufzeit, hoechstende“).
+- **Erkenntnisse – Interpretation:** Die Bausteine taugen für eine Zuschlagstabelle je Los; die Zuordnung taugt nur als Vorschlagswerkzeug.
+- **Übergabe an die nächste Phase:** Iteration 5 baut die Tabelle der Zuschläge mit Laufzeitende und Herkunft (auch vor eForms) als Grundlage
+  für Prognose und Backtest.

@@ -4,7 +4,8 @@ Grobplanung für das Gesamtprojekt, aufgeteilt in Aufgaben (A) und Unteraufgaben
 Die Detailplanung je Iteration (Hypothese, Erfolgskriterium mit Schwelle, Zeitrahmen) entsteht weiterhin mit
 `/iteration-start` und steht in `docs/iterationen.md`. Dieser Plan gibt nur die Richtung und die Abhängigkeiten vor.
 
-**Stand:** 2026-10-25. Iteration 3 abgeschlossen (Entscheidung: in Phase 2/3 bleiben, letzter Verbesserungsversuch der Zuordnung).
+**Stand:** 2026-10-30. Iteration 4 abgeschlossen (Entscheidung: Idee anpassen; Iteration 5 baut eine Vertragsliste aus Zuschlägen).
+_Vorheriger Stand 2026-10-25: Iteration 3 abgeschlossen (Entscheidung: in Phase 2/3 bleiben, letzter Verbesserungsversuch der Zuordnung)._
 Nächster Schritt: Iteration 4 mit `/iteration-start`.
 **Zeitangaben** sind grobe Schätzungen für Arbeit neben dem Studium und werden in `/iteration-start` konkretisiert.
 **Schwellenwerte** in diesem Plan sind Vorschläge. Verbindlich werden sie erst, wenn sie **vor** der Arbeit in
@@ -25,8 +26,8 @@ Das Projekt hat drei parallele Stränge:
 | 1 | Machbarkeit der Daten | 1 → 2 | 1 Tag | **abgeschlossen** |
 | 2 | Zielereignis sichtbar und zuordenbar? | 2 (→ 3) | 1 Tag | **abgeschlossen** (Idee anpassen) |
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2 Tage | **abgeschlossen** (in Phase 2/3 bleiben) |
-| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | 2 bis 3 Wochen | nächster Schritt |
-| 5 | Erste Prognose und Backtest | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
+| 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | 6 Tage | **abgeschlossen** (Idee anpassen) |
+| 5 | Vertragsliste aus Zuschlägen: Prognoseziel, erste Prognose, Backtest | 1 → 3 → 4 → 5 | 2 bis 3 Wochen | nächster Schritt |
 | 6 | Verbesserung der Prognose | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
 | 7 | Prototyp der Vertragsliste (statt Kundentest) | 6 | 1 bis 2 Wochen | geplant |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | geplant |
@@ -151,14 +152,20 @@ _Neu am 2026-10-25 nach Iteration 3. Vorschläge aus `reports/evaluation_iterati
   Objektlisten und Flächen trennen, **kein Zeitfenster**; einfrieren per Commit
 - [x] **T2c.5** Neue Testdaten Q1 2026: Testprobe ziehen, Handsuche nach Urteilsregeln 1.1 **vor** dem Regel-Lauf
   _(2026-10-26: 70 Fälle, Handsuche in 5 Teilen, Ground Truth d43c547; Regel-Lauf ec4733e)_
-- [ ] **T2c.6** Zweitprüfung mit frischen Paaren (vorher nicht angesehen), gezielt schwach belegte Treffer und „kein Vorgänger“-Fälle
+- [x] **T2c.6** Zweitprüfung mit frischen Paaren (vorher nicht angesehen), gezielt schwach belegte Treffer und „kein Vorgänger“-Fälle
 - [x] **T2c.7** Saisonalität prüfen: Populationsgröße je Quartal (Hochrechnung V5)
   _(2026-10-26: Q4 2025 381, Q1 538, Q2 488, Q3 486 = 1.893 pro Jahr)_
-- [ ] **T2c.8** Parallel (Strang G): Produkt mit manueller Prüfung bewerten (Prüfaufwand je Fall, Preis)
-- [ ] **T2c.9** Abschluss: Report, Evaluator, `/iteration-ende`, Tag `iteration-4`
+- [x] **T2c.8** Parallel (Strang G): Produkt mit manueller Prüfung bewerten (Prüfaufwand je Fall, Preis)
+  _(2026-10-30: Prüfzeit Median 2 Minuten, aber nur 65 % Übereinstimmung; als Annahme A17 offen, Preis nur aus Recherche)_
+- [x] **T2c.9** Abschluss: Report, Evaluator, `/iteration-ende`, Tag `iteration-4`
+  _(2026-10-30: `reports/evaluation_iteration4.md`; Commit und Tag durch den Nutzer)_
+
+**Ergebnis 2026-10-30:** W4 65 % < 85 % → Idee anpassen. W1 42,9 %, W2 17/19 (Mindestzahl 25 verfehlt), W3 56,7 %, W5 297/Jahr
+(korrigiert), W6 73,3 %. Die automatische Objekt-Zuordnung wird nicht weiter verbessert.
 
 ### T3 Iteration 3: Erste Prognose und Backtest (Phasen 3, 4, 5)
-_Jetzt Iteration 4 (geändert am 2026-10-23)._
+_Jetzt Iteration 4 (geändert am 2026-10-23)._ _Jetzt Iteration 5 (geändert am 2026-10-25). Nach Iteration 4 (2026-10-30): Kern ist eine
+Vertragsliste aus Zuschlägen; T3.1.4 nutzt die Zuordnung nur für handgeprüfte Paare; vorher Prognoseziel in Phase 1 festlegen._
 
 **Ziel:** Eine einfache Regel liefert nachweislich brauchbare Prognosen, gemessen an echten Neuausschreibungen.
 

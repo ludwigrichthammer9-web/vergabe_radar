@@ -72,8 +72,8 @@ ITERATIONEN = [  # docs/iterationen.md, Übersicht (Stand 2026-10-28)
     {"nr": 1, "fokus": "Machbarkeit der Daten", "status": "abgeschlossen", "entscheidung": "Gebäudereinigung als Arbeitsnische, zurück zu Phase 2"},
     {"nr": 2, "fokus": "Neuausschreibungen zuordenbar über den Auftraggeber?", "status": "abgeschlossen", "entscheidung": "Idee anpassen: Zuordnung über das Objekt"},
     {"nr": 3, "fokus": "Sichtbarkeit und Zuordnung über das Objekt", "status": "abgeschlossen", "entscheidung": "In Phase 2/3 bleiben, letzter Verbesserungsversuch"},
-    {"nr": 4, "fokus": "Letzter Verbesserungsversuch der Zuordnung", "status": "läuft", "entscheidung": "offen (Blindprüfung W4 fehlt)"},
-    {"nr": 5, "fokus": "Erste Prognose und Backtest", "status": "geplant", "entscheidung": "–"},
+    {"nr": 4, "fokus": "Letzter Verbesserungsversuch der Zuordnung", "status": "abgeschlossen", "entscheidung": "Idee anpassen: Zuordnung nicht weiter verbessern, Vertragsliste aus Zuschlägen"},
+    {"nr": 5, "fokus": "Vertragsliste aus Zuschlägen: Prognoseziel, Prognose, Backtest", "status": "geplant", "entscheidung": "–"},
     {"nr": 6, "fokus": "Verbesserung der Prognose", "status": "geplant", "entscheidung": "–"},
     {"nr": 7, "fokus": "Prototyp der Vertragsliste", "status": "geplant", "entscheidung": "–"},
     {"nr": 8, "fokus": "Ausbau oder Neuausrichtung", "status": "geplant", "entscheidung": "–"},
@@ -85,8 +85,8 @@ SCHRITTE_IT4 = [  # docs/iterationen.md, Iteration 4, Plan
     {"nr": 3, "schritt": "Regel verbessern und einfrieren", "status": "erledigt", "commit": "1d0e060"},
     {"nr": 4, "schritt": "Testprobe Q1 2026 und Handsuche (70 Fälle)", "status": "erledigt", "commit": "d43c547"},
     {"nr": 5, "schritt": "Regel auf Testdaten, Paarbeurteilung", "status": "erledigt", "commit": "ec4733e"},
-    {"nr": 6, "schritt": "Blindprüfung W4 durch dich (20 Paare, Prüfzeit)", "status": "in Arbeit", "commit": ""},
-    {"nr": 7, "schritt": "Report, Evaluator, /iteration-ende", "status": "offen", "commit": ""},
+    {"nr": 6, "schritt": "Blindprüfung W4 durch dich (20 Paare, Prüfzeit)", "status": "erledigt", "commit": "078d2c1"},
+    {"nr": 7, "schritt": "Report, Evaluator, /iteration-ende", "status": "erledigt", "commit": "Tag iteration-4"},
 ]
 
 KRITERIEN_IT4 = [  # reports/zuordnung_iteration4.md (ec4733e); Anteile 0–1, W5 Anzahl pro Jahr
@@ -96,10 +96,10 @@ KRITERIEN_IT4 = [  # reports/zuordnung_iteration4.md (ec4733e); Anteile 0–1, W
      "status": "knapp", "hinweis": "Quote erfüllt, aber nur 19 statt mindestens 25 Vorschläge"},
     {"id": "W3", "name": "Trefferquote", "wert": 17 / 30, "schwelle": 0.60, "max": 1, "einheit": "Anteil", "anzeige": "17 von 30",
      "status": "verfehlt", "hinweis": "Vorgänger, die die Regel korrekt findet"},
-    {"id": "W4", "name": "Zweitprüfung", "wert": None, "schwelle": 0.85, "max": 1, "einheit": "Anteil", "anzeige": "steht aus",
-     "status": "offen", "hinweis": "Deine Blindprüfung, 20 Paare"},
-    {"id": "W5", "name": "Backtest-Basis", "wert": 189, "schwelle": 100, "max": 400, "einheit": "pro Jahr", "anzeige": "189 pro Jahr",
-     "status": "erfüllt", "hinweis": "Korrekte Paare mit Vertragsende, auf 1.893 Verfahren pro Jahr hochgerechnet"},
+    {"id": "W4", "name": "Zweitprüfung", "wert": 13 / 20, "schwelle": 0.85, "max": 1, "einheit": "Anteil", "anzeige": "13 von 20",
+     "status": "verfehlt", "hinweis": "Deine Blindprüfung, 20 Paare; Prüfzeit Median 2 Minuten"},
+    {"id": "W5", "name": "Backtest-Basis", "wert": 297, "schwelle": 100, "max": 400, "einheit": "pro Jahr", "anzeige": "297 pro Jahr",
+     "status": "erfüllt", "hinweis": "Korrekte Paare mit Vertragsende, auf 1.893 Verfahren pro Jahr hochgerechnet (korrigierte Zählung)"},
     {"id": "W6", "name": "Kandidatenliste", "wert": 22 / 30, "schwelle": 0.70, "max": 1, "einheit": "Anteil", "anzeige": "22 von 30",
      "status": "erfüllt", "hinweis": "Vorgänger unter den drei besten Kandidaten"},
 ]
@@ -115,9 +115,9 @@ VERLAUF = [  # Iteration 2: reports/ergebnis_iteration2.md (K2); 3: zuordnung_it
 ]
 
 PHASEN = [  # docs/phasen/01–06, Aktueller Stand
-    {"nr": 1, "phase": "Business Understanding", "stand": "begonnen", "kurz": "Nische vorläufig, Recherche ohne Kundenkontakt"},
-    {"nr": 2, "phase": "Data Understanding", "stand": "aktiv", "kurz": "Sichtbarkeit und Zuordnung gemessen"},
-    {"nr": 3, "phase": "Data Preparation", "stand": "aktiv", "kurz": "Merkmale je Los, Regel eingefroren"},
+    {"nr": 1, "phase": "Business Understanding", "stand": "aktiv", "kurz": "Idee anpassen: Prognoseziel für die Vertragsliste festlegen"},
+    {"nr": 2, "phase": "Data Understanding", "stand": "begonnen", "kurz": "Sichtbarkeit 43 %, Zuordnung nicht weiter verfolgt"},
+    {"nr": 3, "phase": "Data Preparation", "stand": "begonnen", "kurz": "Merkmale je Los; Zuschlagstabelle in Iteration 5"},
     {"nr": 4, "phase": "Modeling", "stand": "nicht begonnen", "kurz": "Erste Prognose in Iteration 5"},
     {"nr": 5, "phase": "Evaluation", "stand": "nicht begonnen", "kurz": "Backtest in Iteration 5"},
     {"nr": 6, "phase": "Deployment", "stand": "nicht begonnen", "kurz": "Prototyp in Iteration 7"},
@@ -154,9 +154,7 @@ def zeit_ist() -> list[dict]:
 
 
 ZEIT_REST = [  # Schätzung der verbleibenden Stunden (Spanne); Grundlage je Zeile, Stand 2026-10-29 (ohne Kundenkontakt)
-    {"block": "Iteration 4: Blindprüfung W4", "min": 1.5, "max": 2, "grundlage": "Planwert in docs/iterationen.md (etwa 1,5 Stunden)"},
-    {"block": "Iteration 4: Abschluss", "min": 1, "max": 2, "grundlage": "Abschluss Iteration 3 (Report, Evaluator, Dokumente)"},
-    {"block": "Iteration 5: Prognose und Backtest", "min": 4, "max": 10, "grundlage": "Iterationen 2–4 laut Git 3,8–4,8 h (Untergrenze); obere Grenze geschätzt"},
+    {"block": "Iteration 5: Vertragsliste, Prognose, Backtest", "min": 5, "max": 12, "grundlage": "Iterationen 2–4 laut Git (Untergrenze); dazu unabhängige Prüfung der Paare; obere Grenze geschätzt"},
     {"block": "Iteration 6: Verbesserung", "min": 4, "max": 10, "grundlage": "wie Iteration 5"},
     {"block": "Iteration 7: Prototyp", "min": 4, "max": 10, "grundlage": "wie Iteration 5; Liste bauen und gegen den Backtest prüfen"},
     {"block": "Markt, Angebot und Preis", "min": 4, "max": 8, "grundlage": "Annahme für G1 und G3 im Projektplan (Schreibtisch-Recherche)"},
