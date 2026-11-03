@@ -726,6 +726,13 @@ A16 (explorativ).
 > `data/processed/` (nicht im Git); Schlüssel `gt_pruefung_iteration5_schluessel.csv`, SHA-256
 > `05abddc9a8e450dd2fa9706bfaf06e507740ab3f0fb507d8836c340043df0b8c`.
 
+> **Nachtrag 2026-11-03 (Zweitprüfung, Kriterien unverändert):** Der Nutzer hat P1–P13 ausgefüllt; P11 und P12 sind Kalibrierungsbeispiele
+> der Urteilsregeln (nicht beurteilt). Auch P60 und P62 sind identisch mit Kalibrierungsbeispielen (Düsseldorf, Wuppertal), P27, P51 und
+> P64 haben dieselbe neue Bekanntmachung wie Stade/Harburg, Esslingen und Saarbrücken (anderer Vorgänger). P11, P12, P60, P62 werden bei
+> X1 und X2 nicht gezählt, P27, P51, P64 gezählt und getrennt ausgewiesen. **Die Paare P14–P71 beurteilt ein Kommilitone des Nutzers**
+> (nach denselben Regeln); X2 vergleicht damit zwei Prüfer (P1–P13 Nutzer, übrige Kommilitone), das wird ausgewiesen. Abschluss laut
+> Nutzer am 2026-11-04. Quellenliste (`docs/quellen.md`) und Reproduzierbarkeitsanleitung (`docs/reproduzierbarkeit.md`) ergänzt.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
