@@ -9,7 +9,7 @@ _Erzeugt mit `src/prepare/auswertung_iteration7.py`. Schlüssel-Hash geprüft: `
 - **Y2 (Höchstende korrekt oder „unbestimmbar“): 29/47 = 61,7 % (Wilson 47,4–74,2)** (Schwelle ≥ 90 %).
 - **Y2b (nur Lose, bei denen die Liste ein Höchstende nennt): 24/42 = 57,1 % (Wilson 42,2–70,9)** (Schwelle ≥ 85 %).
 - Abweichungen bei Y1 (Typ Y): 11, davon 6 mit Prüfereintrag „unbekannt“ und 5 mit abweichendem Datum. Typ R: 7, davon 0 „unbekannt“.
-- Quelle laut Prüfer: {'Text': 27, 'Feld': 34, 'abweichend': 2, 'unbekannt': 32}. Hilfsmittel: {'Kalenderberechnung': 16, 'keine': 79}.
+- Quelle: {'Text': 27, 'Feld': 34, 'abweichend': 2, 'unbekannt': 32}. Bei Losen mit Nachprüfung hat der Prüfer die Quelle nicht eingetragen; sie ist von Claude nach fester Regel abgeleitet (`quelle_ableiten`). Hilfsmittel (nur erste Abgabe): {'Kalenderberechnung': 16, 'keine': 79}. In der Nachprüfung ist das Feld Hilfsmittel bei allen Einträgen leer; der Prüfer gab im Gespräch an, keine Hilfsmittel benutzt zu haben (nur Selbstangabe).
 - Nachprüfung: 38 Lose mit Eintrag, 4 Lose im Umfang ohne Eintrag (L25, L27, L31, L38; es bleibt der Eintrag der ersten Abgabe). Prüfzeit: erste Abgabe Summe 143 Minuten (Median 1), Nachprüfung 65 Minuten. Sitzungstabellen (Start und Ende) liegen nicht vor.
 
 - Y2 und Y2b mit Vorbehalt: In 15 der 47 Lose steht in der ersten Abgabe „unbestimmbar“, weil das Ende der Grundlaufzeit damals fehlte; die Nachprüfung lieferte es, das Höchstende wurde nicht neu eingetragen (nur bei Änderung gefordert). Ohne diese veralteten Einträge: Y2 29/32 = 90,6 % (Wilson 75,8–96,8), Y2b 24/27 = 88,9 % (Wilson 71,9–96,1).

@@ -234,7 +234,7 @@ def main() -> None:
         return (f"| {gl} | {h} | {r['status']} | {zelle(r['auftraggeber'], 45)} | {r['los']}: {zelle(r['los_titel'], 50)} | "
                 f"**{r['stufe']}** | {herkunft}{' · ' + ', '.join(hinweise) if hinweise else ''} | [{r['notice']}]({TED.format(r['notice'])}) |")
 
-    kopf = ["| Ende Grundlaufzeit | Höchstende | Status | Auftraggeber | Los | Stufe | Herkunft | Quelle |",
+    kopf = ["| Ende Grundlaufzeit (laut Bekanntmachung) | Höchstende (nur Hinweis) | Status | Auftraggeber | Los | Stufe | Herkunft | Quelle |",
             "|---|---|---|---|---|---|---|---|"]
     laufend = [r for r in lose if r["status"] not in ("abgelaufen", "kein Ende bekannt")]
     rest = [r for r in lose if r not in laufend]
@@ -266,6 +266,9 @@ def main() -> None:
         "und wie lange sie höchstens verlängert werden können. **Sie sagt nicht voraus, wann neu ausgeschrieben wird**; eine solche "
         "Prognose hat sich in Iteration 5 als nicht tragfähig erwiesen.",
         "",
+        "**So ist die Liste zu lesen (Abschluss Iteration 7):** Das Ende der Grundlaufzeit steht so da, wie es die Bekanntmachung angibt (bzw. wie die Lese-Regeln es daraus ablesen); "
+        "eine belastbare Fehlerquote gibt es nicht (siehe Genauigkeit unten). Das Höchstende ist nur ein Hinweis. Vor einer Entscheidung immer die verlinkte Bekanntmachung lesen.",
+        "",
         "## Fakten",
         "",
         f"- Quelle: TED-Zuschlagsbekanntmachungen (eForms) ab 25.10.2023, Haupt-CPV 90910/90911/90919, Leistungsort NUTS {REGION}* "
@@ -284,8 +287,8 @@ def main() -> None:
         f"{quote_gl} % übereinstimmend mit dem Prüfer (Wilson 62,8–86,4 %); bei Losen, deren Laufzeit im Text der Bekanntmachung "
         "steht, 12/12. **Vorbehalte:** Die Prüfung wurde gekürzt (L1 bis L50 statt 80 Lose), 4 Nachprüfungen blieben leer, und bei 5 von 38 Losen "
         "wich der abgeschriebene Feldwert von den Rohdaten ab ([abschreibecheck_iteration7.md](abschreibecheck_iteration7.md)); die Zahl ist deshalb "
-        "eine Mischung aus Fehlern der Liste und Lesefehlern der Prüfung. Bei den 15 Lose, die Regel 1b ändert, stimmten nur 8 mit dem Prüfer überein "
-        "(der Prüfer übernahm dort das Enddatum des Feldes statt des früheren Datums aus dem Text).",
+        "eine Mischung aus Fehlern der Liste und Lesefehlern der Prüfung. Bei den 15 Losen, die Regel 1b ändert, stimmten nur 8 mit dem Prüfer überein "
+        "(bei allen 7 Abweichungen hatte die Nachprüfung das Enddatum des Feldes übernommen, die Liste ein früheres Datum aus dem Text; wer recht hat, ist offen).",
         "",
         "### Unsicherheit je Eintrag (Spalte „Stufe“)",
         "",
@@ -314,8 +317,9 @@ def main() -> None:
         "",
         "## Interpretation",
         "",
-        "- Die Spalte „Stufe“ macht sichtbar, wie verlässlich ein Eintrag ist. Stufe A (Ende aus dem Text berichtigt oder Höchstende ausdrücklich genannt) "
-        "ist die sicherste; bei Stufe B, C und D lohnt ein Blick in die Bekanntmachung. Die Quoten je Stufe beruhen auf sehr wenigen Losen.",
+        "- Die Spalte „Stufe“ sagt, woher ein Eintrag stammt, nicht, wie verlässlich er ist. Für Stufe A ist die Genauigkeit **nicht belegt**: Die Quote oben stammt nur aus Zufallslosen "
+        "ohne Regel 1b; die Lose, deren Ende Regel 1b aus dem Text berichtigt (ebenfalls Stufe A), stimmten nur in 8 von 15 Fällen mit dem Prüfer überein. Bei allen Stufen lohnt ein Blick "
+        "in die Bekanntmachung. Die Quoten je Stufe beruhen auf sehr wenigen Losen. _(Korrigiert beim Abschluss von Iteration 7, 2026-11-04; vorher hieß es, Stufe A sei „die sicherste“.)_",
         "- **Regel 1b, Typ „Festlaufzeit-Datum“** (z. B. Bekanntmachung 143100-2026, Autobahn GmbH) ist **nicht** durch die Stichprobe getestet; die Einträge "
         "stehen in der Liste mit Stufe A, ohne dass ihre Genauigkeit belegt ist. Ebenso ist der Typ „feste Dauer + Option“ nur an 15 Losen mit gemischtem Ergebnis geprüft.",
         "- Zwei Fehler der Liste fielen in der Prüfung auf: Höchstende bei Bekanntmachung 557125-2026 (Liste 31.08.2037, Text 31.08.2031) und 707425-2025 "

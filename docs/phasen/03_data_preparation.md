@@ -14,33 +14,33 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 6 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 7 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-Die Zuschlagstabelle je Los ist gebaut und wurde an 60 Zufallslosen geprüft. **Zurück zu Phase 3:** Die Regel für das Ende der Grundlaufzeit verwechselt manchmal das Enddatum der Bekanntmachung mit dem Höchstende. Offen bleiben außerdem Lese-Regeln für Vorgänger vor eForms und Auftraggeber-Normalisierung.
+Die Zuschlagstabelle je Los ist gebaut; Regel 1b (Enddatum = Höchstende bei kürzerer fester Laufzeit im Text) ist eingebaut. **Die Lese-Regel wird nicht weiter verändert** (Abschluss Iteration 7, kein dritter Regelversuch). Das Ende der Grundlaufzeit gilt als „laut Bekanntmachung“, das Höchstende nur als Hinweis.
 
 Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 Iteration 6: **[LA6]** [liste_auswertung_iteration6.md](../../reports/liste_auswertung_iteration6.md) · **[E6]** [evaluation_iteration6.md](../../reports/evaluation_iteration6.md).
+Iteration 7: **[LA7]** [liste_auswertung_iteration7.md](../../reports/liste_auswertung_iteration7.md) · **[E7]** [evaluation_iteration7.md](../../reports/evaluation_iteration7.md) · **[AC7]** [abschreibecheck_iteration7.md](../../reports/abschreibecheck_iteration7.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md).
 
 ### Fakten (aus den Daten)
 
-- `src/prepare/vertragsliste.py`: 9.915 Lose aus 4.209 eForms-Zuschlägen (Population wie Iteration 4); je Los Ende der Grundlaufzeit, Höchstende, Herkunft, R0, R1 [VL].
-- Abdeckung: 2.924/3.668 = 79,7 % der Lose (Q4 2025–Q3 2026) mit Prognosedatum; 20,0 % ohne Laufzeit [VL].
-- Höchstende-Herkunft: keine Angabe 32,3 %, Anzahl × Länge 22,0 %, Datum im Text 17,7 %, unbestimmbar 13,3 %, Höchstlaufzeit 8,8 %, Enddatum = Höchstende 4,5 % [VL].
-- Lese-Regeln: Entwicklung 30/40, Test 53/60 richtig (gewichtet etwa 91 %), Urteile von Claude allein, nur eForms-Lose; „keine_verlaengerung“ ungeprüft [HP], [E5].
-- `src/prepare/backtest_paare.py`: Paare aus der Handsuche, Vorgänger-Ende aus der Bekanntmachung (vor eForms über `REF_NOTICE` aus der XML); 61 von 68 bestimmbar.
-- **Iteration 6:** Prüfung von 60 Zufallslosen (ohne KI-Hilfe laut Prüfer): Ende der Grundlaufzeit 54/60 = 90,0 % laut Auswertung, 53/60 = 88,3 % nach dem später gefundenen Fehler L60; Höchstende 55/60 = 91,7 % [LA6], [E6]. Abdeckung weiter 79,7 % [VL].
-- Fehler der Regel für das Ende der Grundlaufzeit: In L1, L42, L43, L60 (und laut Evaluator in allen Losen von 143100-2026) ist das Enddatum BT-537 schon das Höchstende; Regel 1a greift nur bei „spätestens“, „längstens“, „inkl. Verlängerungen“. Nicht erkannt: „Festlaufzeit von … bis …“, „2+1+1“, „Laufzeit von 2 Jahren“, „erste feste Laufzeit bis …“ [E6].
-- Bei 59 von 60 Losen der Stichprobe stammt das Ende der Grundlaufzeit aus dem Enddatum-Feld; die Vorlage zeigte dieses Datum (Verankerung) [E6].
+- `src/prepare/vertragsliste.py`: 9.915 Lose aus 4.209 eForms-Zuschlägen; je Los Ende der Grundlaufzeit, Höchstende, Herkunft [VL]. Abdeckung 2.924/3.668 = 79,7 % (Q4 2025–Q3 2026) [VL].
+- **Iteration 7, Regel 1b** (`kurze_festlaufzeit`, Commit 7d42a55, vor dem Ziehen): ändert 165 von 9.915 Losen (43 „text_laufzeit_option“, 122 „text_festlaufzeit“, davon 107 in 143100-2026); im Fenster 128 von 2.924 Losen. Entwicklungstest an den 60 Losen der Iteration 6: L1, L42, L43, L60 richtig, übrige unverändert.
+- Prüfung (Nutzer, ohne KI-Hilfe laut Selbstangabe): Ende der Grundlaufzeit 36/47 = 76,6 % (Wilson 62,8–86,4) der Zufallslose L1–L50; Regelwirkungs-Lose 8/15; Lose mit Quelle „Text“ 12/12 [LA7], [E7].
+- Bei 45 der 47 Zufallslose stammt das Ende der Liste aus dem Enddatum-Feld; die Nachprüfung schrieb dasselbe Feld ab. Bei keiner der 11 Abweichungen ist ein Listenfehler belegt (L26 an TED: Liste richtig) [E7], [AC7].
+- Höchstende-Fehler mit Datum: 557125-2026 (L72) und 707425-2025 (L82), nicht unabhängig geprüft [LA7], [E7].
 
 ### Interpretation
 
-- Die Vertragsliste ist reproduzierbar aus den Rohdaten gebaut und deckt etwa vier Fünftel der Lose ab; fehlende Laufzeiten bremsen, nicht die Lese-Regeln.
-- Für den Einsatz auf Verträgen vor eForms sind die Lese-Regeln nicht getestet; im Backtest 41 von 52 Vorgängern. Auch die Stichprobe der Iteration 6 enthält nur eForms-Lose (A11 nicht geprüft).
-- Die Fehlerquote beim Ende der Grundlaufzeit ist eher unterschätzt: Prüfung mit angezeigtem Listenwert, höchstens 2 Lose je Zuschlag (große Bekanntmachungen untergewichtet). Die Regel braucht vor allem Muster für „feste Laufzeit mit Option“.
+- Die Tabelle ist reproduzierbar und deckt etwa vier Fünftel der Lose ab. Ihre Genauigkeit beim Ende der Grundlaufzeit ist nicht belastbar gemessen: 76,6 % ist ein Mischmaß aus möglichen Listenfehlern und Prüfungsfehlern.
+- Regel 1b ist weder belegt noch widerlegt; der Typ „text_festlaufzeit“ ist ungetestet. Die Lese-Regeln sind weiterhin nur an eForms-Losen geprüft (A11).
+- Das Höchstende aus „Anzahl × Länge“ ist praktisch ungeprüft.
 
 ## Offene Fragen
 
-- [ ] _(neu, Iteration 6)_ Welche Formulierungen und Feldkombinationen zeigen, dass BT-537 schon das Höchstende ist (Regel 1a erweitern, z. B. BT-54 „zwei Jahre … (2+1+1)“, „Festlaufzeit von … bis …“, Beginn + Dauer im Text kürzer als Beginn–Ende)? Test nur an neuen Losen.
+- [ ] _(neu, Iteration 7)_ Stimmt Regel 1b, wenn ein zweiter, unabhängiger Leser die Originale liest (auch Typ „text_festlaufzeit“)? Nennt der Text bei Losen mit Feldübernahme eine kürzere feste Laufzeit?
+- [x] _(neu, Iteration 6)_ Welche Formulierungen und Feldkombinationen zeigen, dass BT-537 schon das Höchstende ist (Regel 1a erweitern, z. B. BT-54 „zwei Jahre … (2+1+1)“, „Festlaufzeit von … bis …“, Beginn + Dauer im Text kürzer als Beginn–Ende)? Test nur an neuen Losen.
+  _Antwort Iteration 7:_ Regel 1b (`kurze_festlaufzeit`): feste Laufzeit mit Datum oder Dauer im Text, nur bei Option/Verlängerung; Wirkung nicht belegt (8/15, Prüfdesign verzerrt) [E7].
 - [ ] _(neu, Iteration 6)_ Wie wird die Stichprobe so gezogen, dass große Bekanntmachungen (viele Lose mit derselben Formulierung) nicht untergewichtet sind?
 - [x] Tabelle pro Vertrag oder pro Los? _Antwort Iteration 5:_ pro Los (`src/prepare/vertragsliste.py`).
 - [x] Wie wird das Laufzeitende vereinheitlicht (Ende direkt oder Start + Dauer, ersatzweise Veröffentlichungsdatum + Dauer)?
@@ -75,6 +75,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-30 | 4 | Die Regel `zuordnung_los.py` wird nicht in die Aufbereitung übernommen; Merkmale je Los (`los_merkmale.py`) und Laufzeitende mit Herkunft werden Grundlage der Zuschlagstabelle in Iteration 5 | Entscheidung „Idee anpassen“ nach Iteration 4 (reports/evaluation_iteration4.md). Entscheidung des Nutzers. |
 | 2026-11-04 | 5 | Die Vertragsliste je Los (Grundlaufzeit, Höchstende, Herkunft) ist der Datenstand für Iteration 6/7; die Backtest-Paare werden nur für die Bewertung genutzt | Entscheidung „Idee anpassen“ nach Iteration 5 (reports/evaluation_iteration5.md). Entscheidung des Nutzers. |
 | 2026-11-04 | 6 | Zurück zu Phase 3: Regel für „Enddatum = Höchstende“ erweitern und vor dem Ziehen einer neuen Stichprobe committen; neue Stichprobe (ohne geprüfte Lose) mit Vorlage ohne Listenwerte | Y1 88,3 % nach Korrektur (L60), Verankerung, offene Unabhängigkeit (reports/evaluation_iteration6.md). Entscheidung des Nutzers. |
+| 2026-11-04 | 7 | Kein dritter Regelversuch: Regel 1b bleibt im Stand von Commit a93785e eingefroren; Ende der Grundlaufzeit gilt als „laut Bekanntmachung“, Höchstende nur als Hinweis | Y1 76,6 % (zwischen 70 und 90 %, vorab festgelegte Folge), Y1r 8/15, Y2/Y2b verfehlt (reports/evaluation_iteration7.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -139,3 +140,10 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Erkenntnisse – Fakten:** Ende der Grundlaufzeit 54/60 = 90,0 % laut Auswertung, 53/60 = 88,3 % nach L60; Höchstende 55/60 = 91,7 %; Abdeckung 79,7 %. Fehlertyp: Enddatum der Bekanntmachung ist schon das Höchstende (L1, L42, L43, L60; 143100-2026) (reports/liste_auswertung_iteration6.md, reports/evaluation_iteration6.md).
 - **Erkenntnisse – Interpretation:** Die Lese-Regeln tragen für das Höchstende, aber nicht für das Ende der Grundlaufzeit bei „fester Laufzeit mit Option“; die Prüfung war durch den angezeigten Listenwert verankert, die Quote ist eher eine Untergrenze der Fehler.
 - **Übergabe an die nächste Phase:** Regel 1a erweitern und vor dem Ziehen committen; neue Stichprobe mit Vorlage ohne Listenwerte und Hilfsmittel je Eintrag; danach Prototyp (Phase 6) neu erzeugen.
+
+### Iteration 7 – 2026-11-04
+
+- **Was gemacht:** Regel 1b (`kurze_festlaufzeit`) gebaut und vor dem Ziehen committet; Entwicklungstest an den 60 Losen der Iteration 6; Stichprobe (80 Zufallslose + 15 Regelwirkungs-Lose, Seed 20261106), Prüfung und Nachprüfung durch den Nutzer, Abschreibe-Check, Auswertung.
+- **Erkenntnisse – Fakten:** Regel 1b ändert 165 Lose; Y1 36/47 = 76,6 %, Y1r 8/15, Quelle „Text“ 12/12; 45 der 47 Zufallslose mit Ende aus dem Feld (reports/liste_auswertung_iteration7.md, reports/evaluation_iteration7.md).
+- **Erkenntnisse – Interpretation:** Die Prüfung konnte die Regel nicht von Lesefehlern trennen; die Regel ist weder belegt noch widerlegt. Weitere Regelarbeit lohnt ohne unabhängigen Leser nicht.
+- **Übergabe an die nächste Phase:** Liste eingefroren (a93785e) an Phase 5 (KI-Zweitlesung als reine Messung) und Phase 6 (Kennzeichnung „laut Bekanntmachung“, Höchstende als Hinweis).

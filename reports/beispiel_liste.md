@@ -4,13 +4,15 @@ _Erzeugt mit `src/report/beispiel_liste.py` (Iteration 7, Schritt 5; Lese-Regeln
 
 Die Liste zeigt öffentliche Aufträge der Gebäudereinigung mit Leistungsort in der Oberpfalz, wann ihre feste Laufzeit endet und wie lange sie höchstens verlängert werden können. **Sie sagt nicht voraus, wann neu ausgeschrieben wird**; eine solche Prognose hat sich in Iteration 5 als nicht tragfähig erwiesen.
 
+**So ist die Liste zu lesen (Abschluss Iteration 7):** Das Ende der Grundlaufzeit steht so da, wie es die Bekanntmachung angibt (bzw. wie die Lese-Regeln es daraus ablesen); eine belastbare Fehlerquote gibt es nicht (siehe Genauigkeit unten). Das Höchstende ist nur ein Hinweis. Vor einer Entscheidung immer die verlinkte Bekanntmachung lesen.
+
 ## Fakten
 
 - Quelle: TED-Zuschlagsbekanntmachungen (eForms) ab 25.10.2023, Haupt-CPV 90910/90911/90919, Leistungsort NUTS DE23* (Abruf vom 23.10.2026, `data/raw/ted_search/zielgruppe_oberpfalz_20261023/page_0001.json`), Lese-Regeln aus `src/prepare/vertragsliste.py`.
 - 70 Bekanntmachungen im Abruf, davon 3 nicht in der Vertragsliste (durch die Population von Iteration 4 ausgeschlossen: 730420-2024, 572966-2025, 695649-2026).
 - **146 Lose** in der Region, davon 108 mit Ende der Grundlaufzeit aus den Feldern (74,0 %); 0 Lose mit unklarer Region je Los. Bei 9 Bekanntmachungen ließ sich der Leistungsort nur über das eForms-XML einem Los zuordnen; 9 Lose haben Leistungsorte auch außerhalb der Oberpfalz.
 - Status zum 04.11.2026: Grundlaufzeit läuft 82, Grundlaufzeit läuft (geschätzt) 5, Verlängerungszeit möglich 4, Verlängerung offen 6, abgelaufen 16, kein Ende bekannt 33.
-- Genauigkeit insgesamt (Prüfung einer Zufallsstichprobe von 47 Losen aus ganz Deutschland, Iteration 7, [liste_auswertung_iteration7.md](liste_auswertung_iteration7.md)): Ende der Grundlaufzeit 36/47 = 76,6 % übereinstimmend mit dem Prüfer (Wilson 62,8–86,4 %); bei Losen, deren Laufzeit im Text der Bekanntmachung steht, 12/12. **Vorbehalte:** Die Prüfung wurde gekürzt (L1 bis L50 statt 80 Lose), 4 Nachprüfungen blieben leer, und bei 5 von 38 Losen wich der abgeschriebene Feldwert von den Rohdaten ab ([abschreibecheck_iteration7.md](abschreibecheck_iteration7.md)); die Zahl ist deshalb eine Mischung aus Fehlern der Liste und Lesefehlern der Prüfung. Bei den 15 Lose, die Regel 1b ändert, stimmten nur 8 mit dem Prüfer überein (der Prüfer übernahm dort das Enddatum des Feldes statt des früheren Datums aus dem Text).
+- Genauigkeit insgesamt (Prüfung einer Zufallsstichprobe von 47 Losen aus ganz Deutschland, Iteration 7, [liste_auswertung_iteration7.md](liste_auswertung_iteration7.md)): Ende der Grundlaufzeit 36/47 = 76,6 % übereinstimmend mit dem Prüfer (Wilson 62,8–86,4 %); bei Losen, deren Laufzeit im Text der Bekanntmachung steht, 12/12. **Vorbehalte:** Die Prüfung wurde gekürzt (L1 bis L50 statt 80 Lose), 4 Nachprüfungen blieben leer, und bei 5 von 38 Losen wich der abgeschriebene Feldwert von den Rohdaten ab ([abschreibecheck_iteration7.md](abschreibecheck_iteration7.md)); die Zahl ist deshalb eine Mischung aus Fehlern der Liste und Lesefehlern der Prüfung. Bei den 15 Losen, die Regel 1b ändert, stimmten nur 8 mit dem Prüfer überein (bei allen 7 Abweichungen hatte die Nachprüfung das Enddatum des Feldes übernommen, die Liste ein früheres Datum aus dem Text; wer recht hat, ist offen).
 
 ### Unsicherheit je Eintrag (Spalte „Stufe“)
 
@@ -29,7 +31,7 @@ _Die Einteilung in Stufen wurde vor dem Ziehen der Stichprobe festgelegt (2026-1
 
 Sortiert nach dem Ende der Grundlaufzeit. „Verlängerungszeit möglich“: Die feste Laufzeit ist vorbei, der Vertrag kann aber noch bis zum Höchstende laufen. Ob verlängert wurde, steht nicht in TED.
 
-| Ende Grundlaufzeit | Höchstende | Status | Auftraggeber | Los | Stufe | Herkunft | Quelle |
+| Ende Grundlaufzeit (laut Bekanntmachung) | Höchstende (nur Hinweis) | Status | Auftraggeber | Los | Stufe | Herkunft | Quelle |
 |---|---|---|---|---|---|---|---|
 | 30.09.2025 | unbestimmbar | Verlängerung offen | Stadt Regensburg | 1: 24 E 067 - Los 1 Unterhaltsreinigung - Grundreini… | **D** | Enddatum (BT-537) / Verlängerung erwähnt, Länge offen | [603742-2024](https://ted.europa.eu/de/notice/-/detail/603742-2024) |
 | 30.09.2025 | unbestimmbar | Verlängerung offen | Stadt Regensburg | 2: 24 E 067 - Los 2 Glasreinigung | **D** | Enddatum (BT-537) / Verlängerung erwähnt, Länge offen | [603742-2024](https://ted.europa.eu/de/notice/-/detail/603742-2024) |
@@ -133,7 +135,7 @@ Sortiert nach dem Ende der Grundlaufzeit. „Verlängerungszeit möglich“: Die
 
 Bei „abgelaufen“ ist auch das Höchstende vorbei (bzw. bei Stufe C die Grundlaufzeit); eine Neuausschreibung kann schon veröffentlicht sein oder der Auftrag wurde anders weitergeführt.
 
-| Ende Grundlaufzeit | Höchstende | Status | Auftraggeber | Los | Stufe | Herkunft | Quelle |
+| Ende Grundlaufzeit (laut Bekanntmachung) | Höchstende (nur Hinweis) | Status | Auftraggeber | Los | Stufe | Herkunft | Quelle |
 |---|---|---|---|---|---|---|---|
 | 30.06.2025 | 30.06.2025 | abgelaufen | Stadt Regensburg | 1: 24 E 028 - Los 1 Gebäudereinigung | **C** | Enddatum (BT-537) / keine Angabe zur Verlängerung | [383677-2024](https://ted.europa.eu/de/notice/-/detail/383677-2024) |
 | 30.06.2025 | 30.06.2025 | abgelaufen | Stadt Regensburg | 2: 24 E 028 - Los 2 Glasreinigung | **C** | Enddatum (BT-537) / keine Angabe zur Verlängerung | [383677-2024](https://ted.europa.eu/de/notice/-/detail/383677-2024) |
@@ -187,7 +189,7 @@ Bei „abgelaufen“ ist auch das Höchstende vorbei (bzw. bei Stufe C die Grund
 
 ## Interpretation
 
-- Die Spalte „Stufe“ macht sichtbar, wie verlässlich ein Eintrag ist. Stufe A (Ende aus dem Text berichtigt oder Höchstende ausdrücklich genannt) ist die sicherste; bei Stufe B, C und D lohnt ein Blick in die Bekanntmachung. Die Quoten je Stufe beruhen auf sehr wenigen Losen.
+- Die Spalte „Stufe“ sagt, woher ein Eintrag stammt, nicht, wie verlässlich er ist. Für Stufe A ist die Genauigkeit **nicht belegt**: Die Quote oben stammt nur aus Zufallslosen ohne Regel 1b; die Lose, deren Ende Regel 1b aus dem Text berichtigt (ebenfalls Stufe A), stimmten nur in 8 von 15 Fällen mit dem Prüfer überein. Bei allen Stufen lohnt ein Blick in die Bekanntmachung. Die Quoten je Stufe beruhen auf sehr wenigen Losen. _(Korrigiert beim Abschluss von Iteration 7, 2026-11-04; vorher hieß es, Stufe A sei „die sicherste“.)_
 - **Regel 1b, Typ „Festlaufzeit-Datum“** (z. B. Bekanntmachung 143100-2026, Autobahn GmbH) ist **nicht** durch die Stichprobe getestet; die Einträge stehen in der Liste mit Stufe A, ohne dass ihre Genauigkeit belegt ist. Ebenso ist der Typ „feste Dauer + Option“ nur an 15 Losen mit gemischtem Ergebnis geprüft.
 - Zwei Fehler der Liste fielen in der Prüfung auf: Höchstende bei Bekanntmachung 557125-2026 (Liste 31.08.2037, Text 31.08.2031) und 707425-2025 (Liste 31.10.2029, Text 31.10.2030); beide stehen noch so in der bundesweiten Vertragsliste (nicht in der Oberpfalz-Liste).
 - Aus der Oberpfalz liegt 1 Los der Stichprobe vor (L25). Die Liste kommt ohne Kundentest aus (A1, A15 ungeprüft); ob diese Form für einen Mittelständler nützlich ist, bleibt offen.

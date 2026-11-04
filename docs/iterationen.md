@@ -20,7 +20,7 @@ Regeln:
 | 5 | Vertragsliste aus Zuschlägen: Prognoseziel Höchstende, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | 2026-10-30 bis 2026-11-04 | abgeschlossen | **Idee anpassen:** R1 28,8 % < 40 % (Schwelle 60 %); Vertragsliste mit Enddaten bleibt Kern, keine Terminprognose |
 | 6 | Prototyp der Vertragsliste und Qualität der Enddaten (Iteration 6 und 7 zusammengelegt) | 3 → 6 → 5 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-15) | abgeschlossen | **Zurück zu Phase 3:** Y1 88,3 % nach Korrektur (L60), 90,0 % laut Auswertung, Verankerung und Unabhängigkeit offen; Y2 91,7 %, Y3 79,7 % (knapp verfehlt), Y4 Prototyp erfüllt mit bekannten Fehlern; Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe |
 | 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
-| 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen | 3 → 5 → 6 | 2026-11-05 bis 2026-11-09 (geplant) | läuft | offen |
+| 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen | 3 → 5 → 6 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-09) | abgeschlossen | **Abschluss mit diesem Stand, kein dritter Regelversuch:** Y1 36/47 = 76,6 % (Kürzung auf L1–L50), Y1r 8/15, Y2 und Y2b verfehlt, Y3 nicht sauber erfüllt, Y4 teilweise; Y1 ist ein Mischmaß aus Listen- und Prüfungsfehlern, Regel 1b weder belegt noch widerlegt; Ende der Grundlaufzeit „laut Bekanntmachung“, Höchstende nur Hinweis |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
@@ -39,6 +39,8 @@ mit Backtest auf handgeprüften Paaren; die automatische Objekt-Zuordnung wird n
 _Nachtrag 2026-11-04 (Abschluss Iteration 5):_ Nach der Entscheidung „Idee anpassen“ werden die Iterationen 6 und 7 mit `/iteration-start` neu zugeschnitten (Vertragsliste als Prototyp; eine Prognose je Auftraggeber nur, wenn Phase 1 sie begründet).
 
 _Nachtrag 2026-11-04 (Abschluss Iteration 6):_ Nach der Entscheidung „zurück zu Phase 3“ folgt eine weitere Iteration (Lese-Regel nachbessern, neue Stichprobe, Prototyp neu erzeugen); Nummer und Zuschnitt legt `/iteration-start` fest. Die Zeile 7 oben (Prototyp, „entfällt“) bleibt als historischer Stand stehen.
+
+_Nachtrag 2026-11-04 (Abschluss Iteration 7):_ Nach der Entscheidung „Abschluss mit diesem Stand“ wird die Lese-Regel nicht weiter verändert. Als letzte Iteration ist eine reine Messung geplant (KI-Zweitlesung der Stichprobe von Iteration 7 mit eingefrorener Liste); sie ersetzt das Ergebnis von Iteration 7 nicht und wird mit `/iteration-start` angelegt.
 
 ---
 
@@ -950,7 +952,7 @@ _Interpretation_
 
 ## Iteration 7 (neu): Lese-Regel „Enddatum = Höchstende“ nachbessern und Vertragsliste neu prüfen
 
-**Status:** läuft (angelegt am 2026-11-04)
+**Status:** abgeschlossen am 2026-11-04 (angelegt am 2026-11-04)
 
 **Fokus und Phasen:** 3 → 5 → 6. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) („7+ Ausbau“): Rücksprung gemäß der Entscheidung zu Iteration 6
 („zurück zu Phase 3“, vorab festgelegte Folge). Die Zeile „7“ in der Übersicht (Prototyp, entfällt) bleibt als historischer Stand stehen.
@@ -1058,6 +1060,38 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > **Offen vor dem Abschluss:** Die 4 leeren Lose und die 6 abgeschriebenen Feldwerte (L16, L18, L26, L30, L32, L48) sollen vom Prüfer nochmals im Original angesehen werden; die Einträge ändert nur der Prüfer.
 > L51 bis L95 gehen nicht in Y1, Y2, Y2b ein. Dass L57, L62, L65, L88 Regelwirkungs-Lose sind, ist dem Prüfer bekannt (ihm mitgeteilt, um die Nachprüfung zu begrenzen).
 
-**Ergebnis:** offen
+> **Nachtrag 2026-11-04 (Korrekturen beim Abschluss, nach dem Evaluator-Bericht [evaluation_iteration7.md](../reports/evaluation_iteration7.md)):**
+> (1) Befund 3 oben ist zu L65 falsch: Das Textdatum 29.06.2026 (Quelle Text) stand nur in der unfertigen ersten Datei (`reports/liste_pruefung_iteration7_urteile_abgabe1.csv`). In der maßgeblichen zweiten Abgabe stand bei L65 und L88 „unbekannt“. Richtig bleibt: Alle 7 Abweichungen der Regelwirkungs-Lose stehen in nachgeprüften Losen, in denen das Feld übernommen wurde; alle 8 Treffer stehen in Losen ohne Nachprüfung.
+> (2) Befund 2 oben („Liste = Rohdaten“) ist nur für L26 an TED bestätigt (Evaluator); für L16, L30, L32 ist es eine Annahme. Der Abschreibe-Check vergleicht mit denselben Rohdaten, aus denen die Liste stammt.
+> (3) Die Quelle der Nachprüfungs-Einträge hat der Prüfer nicht eingetragen; sie ist von Claude nach fester Regel abgeleitet (`quelle_ableiten`). Das Feld Hilfsmittel ist bei allen 38 Nachprüfungs-Einträgen leer; der Prüfer gab im Gespräch an, keine benutzt zu haben (Selbstangabe). Sitzungstabellen fehlen in beiden Abgaben.
+> (4) Die offenen Punkte („4 leere Lose und 6 abgeschriebene Feldwerte nochmals ansehen“) werden **nicht** nachgeholt (Entscheidung des Nutzers; nach Kenntnis des Ergebnisses bestünde Bestätigungsgefahr).
+> (5) Im Prototyp hieß es, Stufe A sei „die sicherste“; das ist nicht gedeckt und wurde umformuliert (`src/report/beispiel_liste.py`, `reports/beispiel_liste.md`). In `reports/liste_auswertung_iteration7.md` heißt es nicht mehr „Quelle laut Prüfer“. Die Zahlen sind unverändert.
 
-**Entscheidung:** offen
+**Ergebnis** _(2026-11-04)_
+
+_Fakten_ (Quellen: [liste_auswertung_iteration7.md](../reports/liste_auswertung_iteration7.md), **[E7]** [evaluation_iteration7.md](../reports/evaluation_iteration7.md), [beispiel_liste.md](../reports/beispiel_liste.md), [abschreibecheck_iteration7.md](../reports/abschreibecheck_iteration7.md))
+
+| | Kriterium | Ergebnis | erfüllt? |
+|---|---|---|---|
+| Y1 | Ende der Grundlaufzeit (Typ Y, L1–L50) ≥ 90 % | 36/47 = 76,6 % (Wilson 62,8–86,4) | nein |
+| Y1r | Regelwirkungs-Lose ≥ 12/15 | 8/15 | nein |
+| Y2 | Höchstende korrekt oder „unbestimmbar“ ≥ 90 % | 29/47 = 61,7 %; ohne 15 veraltete Einträge 29/32 = 90,6 % (selektiv) | nein |
+| Y2b | nur Lose mit behauptetem Höchstende ≥ 85 % | 24/42 = 57,1 %; ohne veraltete Einträge 24/27 = 88,9 % (selektiv) | nein |
+| Y3 | Verfahren | Regel, Seed und Vorlage vor dem Ziehen committet; Hilfsmittel der Nachprüfung leer, Quelle der Nachprüfung abgeleitet, keine Sitzungstabellen | nicht sauber erfüllt |
+| Y4 | Prototyp | neu erzeugt (146 Lose), Stufen vorab, 143100-2026 Lose 8, 9, 14 jetzt 31.03.2030 / 31.03.2031 (Los 8 an TED bestätigt) | teilweise |
+
+- Die 11 Y1-Abweichungen: 6 „unbekannt“ (4 leere Nachprüfungen L25, L27, L31, L38; L24 und L44 trotz abgeschriebener Felder) und 5 Datumsabweichungen (L16, L26, L30, L32 abgeschriebener Feldwert ≠ Rohdaten, L26 an TED bestätigt; L18 Tippfehler). Ein Listenfehler ist bei keiner belegt [E7].
+- Bei 45 der 47 Lose nimmt die Liste das Enddatum-Feld; der Prüfer schrieb in der Nachprüfung dasselbe Feld ab. Inhaltlich (Text gelesen) geprüft sind die 12 Lose mit Quelle „Text“: 12/12 [E7].
+- Y1r: Alle 7 Abweichungen stehen in nachgeprüften Losen mit Feldübernahme, alle 8 Treffer in Losen ohne Nachprüfung; gleiche Sachlage, gegensätzliches Urteil bei L74/L84 und L65/L88. Die 15 Lose stammen aus 9 Zuschlägen; L57, L62, L65, L88 waren dem Prüfer als Regelwirkungs-Lose bekannt [E7].
+- Beschreibend: Y1 nach Losen gewichtet 80,2 %. Echte Höchstende-Fehler mit Datum: L72, L82 (außerhalb L1–L50, nicht unabhängig geprüft).
+- Prüfzeit: erste Abgabe 143 Minuten, Median 1 Minute; A17 nicht belegt.
+
+_Interpretation_
+- Die Hypothese ist mit diesem Verfahren **nicht nachweisbar**, aber auch nicht widerlegt. Y1 ist ein Mischmaß aus möglichen Listenfehlern und Prüfungsfehlern; je nach Auflösung der Prüferfehler läge es zwischen 36/47 und 47/47 [E7].
+- Regel 1b ist weder belegt noch widerlegt: Die Daten unterscheiden nicht, ob die Nachprüfung (Feld übernommen) oder die Regel (früheres Textdatum) recht hat. Der Typ „text_festlaufzeit“ ist ungetestet.
+- Das Höchstende aus „Anzahl × Länge“ ist praktisch ungeprüft (Stufe B im Prototyp 2/5).
+- Ursache liegt zu einem großen Teil im Prüfdesign, das Claude vorgeschlagen hat (Felder versteckt, „Nachprüfung ersetzt die erste Abgabe“, Rat „Feld übernehmen“); siehe [ki_irrwege.md](ki_irrwege.md).
+
+**Entscheidung** _(Nutzer, 2026-11-04):_ **Abschluss mit diesem Stand, kein dritter Regelversuch** (vorab festgelegte Folge „Y1 zwischen 70 % und 90 %“; „weiter“ ist ausgeschlossen, „Idee anpassen“ greift nicht).
+Die Liste führt das Ende der Grundlaufzeit als „laut Bekanntmachung“, das Höchstende nur als Hinweis; die Fehlerquote wird offen genannt (Y1 76,6 % als Mischmaß). Die Prüfer-Einträge werden nicht nachträglich korrigiert.
+Als letzte Iteration folgt eine reine Messung (KI-Zweitlesung mit eingefrorener Liste), die das Ergebnis von Iteration 7 nicht ersetzt.

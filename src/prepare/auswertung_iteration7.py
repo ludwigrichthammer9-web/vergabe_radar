@@ -145,7 +145,8 @@ def main() -> None:
            f"- **Y2b (nur Lose, bei denen die Liste ein Höchstende nennt): {pct(k2b, len(yb))}** (Schwelle ≥ 85 %).",
            f"- Abweichungen bei Y1 (Typ Y): {len(Y) - k1}, davon {len(unb)} mit Prüfereintrag „unbekannt“ und {len(Y) - k1 - len(unb)} mit abweichendem Datum. "
            f"Typ R: {len(R) - kr}, davon {len(unb_r)} „unbekannt“.",
-           f"- Quelle laut Prüfer: {dict(quellen)}. Hilfsmittel: {dict(hilf)}.",
+           f"- Quelle: {dict(quellen)}. Bei Losen mit Nachprüfung hat der Prüfer die Quelle nicht eingetragen; sie ist von Claude nach fester Regel abgeleitet (`quelle_ableiten`). "
+           f"Hilfsmittel (nur erste Abgabe): {dict(hilf)}. In der Nachprüfung ist das Feld Hilfsmittel bei allen Einträgen leer; der Prüfer gab im Gespräch an, keine Hilfsmittel benutzt zu haben (nur Selbstangabe).",
            f"- Nachprüfung: {len(nach_ja)} Lose mit Eintrag, {len(nach_leer)} Lose im Umfang ohne Eintrag ({', '.join(r['L'] for r in nach_leer) or '–'}; es bleibt der Eintrag der ersten Abgabe). Prüfzeit: erste Abgabe Summe {sum(mins)} Minuten (Median {mins[len(mins) // 2]}), Nachprüfung {min_nach} Minuten. Sitzungstabellen (Start und Ende) liegen nicht vor.", "",
            f"- Y2 und Y2b mit Vorbehalt: In {len(stale)} der {len(Y)} Lose steht in der ersten Abgabe „unbestimmbar“, weil das Ende der Grundlaufzeit damals fehlte; die Nachprüfung lieferte es, das Höchstende wurde nicht neu eingetragen (nur bei Änderung gefordert). "
            f"Ohne diese veralteten Einträge: Y2 {pct(sum(r['ok2'] for r in Y2e), len(Y2e))}, Y2b {pct(sum(r['ok2'] for r in Y2e if r['nennt_h']), len([r for r in Y2e if r['nennt_h']]))}.", "",

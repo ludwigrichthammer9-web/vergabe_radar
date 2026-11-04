@@ -4,8 +4,9 @@ Grobplanung für das Gesamtprojekt, aufgeteilt in Aufgaben (A) und Unteraufgaben
 Die Detailplanung je Iteration (Hypothese, Erfolgskriterium mit Schwelle, Zeitrahmen) entsteht weiterhin mit
 `/iteration-start` und steht in `docs/iterationen.md`. Dieser Plan gibt nur die Richtung und die Abhängigkeiten vor.
 
-**Stand:** 2026-11-04. Iteration 6 abgeschlossen (Prototyp der Vertragsliste und Qualität der Enddaten; Entscheidung: **zurück zu Phase 3**, Y1 88,3 % nach Korrektur,
-Prototyp mit bekannten Fehlern). Nächster Schritt: Folge-Iteration mit `/iteration-start` (Regel „Enddatum = Höchstende“ erweitern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen).
+**Stand:** 2026-11-04. Iteration 7 abgeschlossen (Regel 1b, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugt; Entscheidung: **Abschluss mit diesem Stand, kein dritter Regelversuch**,
+Y1 76,6 % als Mischmaß aus Listen- und Prüfungsfehlern). Nächster Schritt: Iteration 8 mit `/iteration-start` (KI-Zweitlesung als reine Messung, Liste eingefroren), danach Lab-Log und Vortrag.
+_Vorheriger Stand 2026-11-04: Iteration 6 abgeschlossen (Entscheidung: zurück zu Phase 3, Y1 88,3 % nach Korrektur, Prototyp mit bekannten Fehlern)._
 _Vorheriger Stand 2026-11-04 (früher am Tag): Iteration 5 abgeschlossen (Entscheidung: Idee anpassen; Vertragsliste mit Enddaten ohne Terminprognose), Iteration 6 läuft._
 _Vorheriger Stand 2026-10-30: Iteration 4 abgeschlossen (Entscheidung: Idee anpassen; Iteration 5 baut eine Vertragsliste aus Zuschlägen)._
 **Zeitangaben** sind grobe Schätzungen für Arbeit neben dem Studium und werden in `/iteration-start` konkretisiert.
@@ -31,7 +32,9 @@ Das Projekt hat drei parallele Stränge:
 | 5 | Vertragsliste aus Zuschlägen: Prognoseziel, erste Prognose, Backtest | 1 → 3 → 4 → 5 | 6 Tage | **abgeschlossen** (Idee anpassen) |
 | 6 | Prototyp der Vertragsliste und Qualität der Enddaten (mit 7 zusammengelegt) | 3 → 6 → 5 | 1 bis 2 Wochen | abgeschlossen 2026-11-04 (zurück zu Phase 3) |
 | 7 | Prototyp der Vertragsliste (statt Kundentest) | – | – | entfällt (in Iteration 6) |
-| 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | geplant |
+| 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe, Prototyp neu | 3 → 5 → 6 | 1 Tag | abgeschlossen 2026-11-04 (Abschluss mit diesem Stand) |
+| 8 | KI-Zweitlesung der Stichprobe (reine Messung, Liste eingefroren) | 5 | 1 Tag | geplant |
+| 9+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | außerhalb des Projekts |
 
 _Geändert am 2026-10-23 nach Iteration 2: Iteration 3 (Phase 2) eingeschoben; die Abschnitte T3–T6 unten gelten jetzt für die
 Iterationen 4–7. Ihre Nummern bleiben zur Nachvollziehbarkeit unverändert._
@@ -236,7 +239,8 @@ _Jetzt Iteration 6 (mit Iteration 7 zusammengelegt am 2026-11-04). Vorher Iterat
   - [ ] T5.3.3 Versand per E-Mail (zunächst manuell auslösbar)
 - [ ] **T5.4 Prototyp selbst bewerten** (statt Feedback von Kunden)
   - [ ] T5.4.1 Liste gegen den Backtest prüfen: Wie viele Einträge treffen das vorhergesagte Fenster?
-  - [ ] T5.4.2 Stichprobe von Hand: Welche Einträge sind richtig, welche falsch, und warum?
+  - [x] T5.4.2 Stichprobe von Hand: Welche Einträge sind richtig, welche falsch, und warum?
+    _(2026-11-04: Iteration 6 (60 Lose) und Iteration 7 (47 + 15 Lose); Fehlerquote nicht belastbar, siehe [evaluation_iteration7.md](../reports/evaluation_iteration7.md))_
   - ~~T5.4.3 Preisreaktion festhalten~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
 - [ ] **T5.5 Abschluss:** Report, Evaluator, `/iteration-ende`, Tag `iteration-5`, Ergebnis in Phase 1 einarbeiten
 
