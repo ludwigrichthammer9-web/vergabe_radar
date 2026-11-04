@@ -4,9 +4,10 @@ Grobplanung für das Gesamtprojekt, aufgeteilt in Aufgaben (A) und Unteraufgaben
 Die Detailplanung je Iteration (Hypothese, Erfolgskriterium mit Schwelle, Zeitrahmen) entsteht weiterhin mit
 `/iteration-start` und steht in `docs/iterationen.md`. Dieser Plan gibt nur die Richtung und die Abhängigkeiten vor.
 
-**Stand:** 2026-10-30. Iteration 4 abgeschlossen (Entscheidung: Idee anpassen; Iteration 5 baut eine Vertragsliste aus Zuschlägen).
-_Vorheriger Stand 2026-10-25: Iteration 3 abgeschlossen (Entscheidung: in Phase 2/3 bleiben, letzter Verbesserungsversuch der Zuordnung)._
-Nächster Schritt: Iteration 4 mit `/iteration-start`.
+**Stand:** 2026-11-04. Iteration 5 abgeschlossen (Entscheidung: Idee anpassen; Vertragsliste mit Enddaten ohne Terminprognose). Iteration 6
+(Prototyp der Vertragsliste und Qualität der Enddaten, mit Iteration 7 zusammengelegt) läuft.
+_Vorheriger Stand 2026-10-30: Iteration 4 abgeschlossen (Entscheidung: Idee anpassen; Iteration 5 baut eine Vertragsliste aus Zuschlägen)._
+Nächster Schritt: Iteration 6, Schritt 3 (Prüfung der Stichprobe durch den Nutzer, ohne KI-Hilfe).
 **Zeitangaben** sind grobe Schätzungen für Arbeit neben dem Studium und werden in `/iteration-start` konkretisiert.
 **Schwellenwerte** in diesem Plan sind Vorschläge. Verbindlich werden sie erst, wenn sie **vor** der Arbeit in
 `docs/iterationen.md` stehen.
@@ -27,9 +28,9 @@ Das Projekt hat drei parallele Stränge:
 | 2 | Zielereignis sichtbar und zuordenbar? | 2 (→ 3) | 1 Tag | **abgeschlossen** (Idee anpassen) |
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2 Tage | **abgeschlossen** (in Phase 2/3 bleiben) |
 | 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | 6 Tage | **abgeschlossen** (Idee anpassen) |
-| 5 | Vertragsliste aus Zuschlägen: Prognoseziel, erste Prognose, Backtest | 1 → 3 → 4 → 5 | 2 bis 3 Wochen | nächster Schritt |
-| 6 | Verbesserung der Prognose | 3 → 4 → 5 | 2 bis 3 Wochen | geplant |
-| 7 | Prototyp der Vertragsliste (statt Kundentest) | 6 | 1 bis 2 Wochen | geplant |
+| 5 | Vertragsliste aus Zuschlägen: Prognoseziel, erste Prognose, Backtest | 1 → 3 → 4 → 5 | 6 Tage | **abgeschlossen** (Idee anpassen) |
+| 6 | Prototyp der Vertragsliste und Qualität der Enddaten (mit 7 zusammengelegt) | 3 → 6 → 5 | 1 bis 2 Wochen | **läuft** |
+| 7 | Prototyp der Vertragsliste (statt Kundentest) | – | – | entfällt (in Iteration 6) |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | geplant |
 
 _Geändert am 2026-10-23 nach Iteration 2: Iteration 3 (Phase 2) eingeschoben; die Abschnitte T3–T6 unten gelten jetzt für die
@@ -38,6 +39,9 @@ _Geändert am 2026-10-25 nach Iteration 3: Iteration 4 (T2c) eingeschoben; die A
 _Geändert am 2026-10-29 (Entscheidung des Nutzers): Kein Kundenkontakt im Projekt. Iteration 7 wird ein Prototyp der Vertragsliste
 statt eines Kundentests; Strang G bleibt nur als Schreibtisch-Recherche (G1, G3), Gespräche und Pilotkunden entfallen. A1 und A15
 bleiben dadurch ungeprüft._
+_Geändert am 2026-11-04 nach Iteration 5 (Entscheidung des Nutzers): Die Terminprognose ist verworfen (R1 28,8 %, Schwelle 60 %).
+Iteration 6 und 7 sind zusammengelegt: Abschnitt T5 (Prototyp) gilt jetzt für Iteration 6; Abschnitt T4 (Verbesserung der Prognose) ist
+zurückgestellt und wird nur aufgegriffen, wenn Phase 1 es begründet._
 
 Der Strang G läuft von Anfang an mit und wartet nicht auf die technischen Ergebnisse.
 
@@ -169,35 +173,38 @@ Vertragsliste aus Zuschlägen; T3.1.4 nutzt die Zuordnung nur für handgeprüfte
 
 **Ziel:** Eine einfache Regel liefert nachweislich brauchbare Prognosen, gemessen an echten Neuausschreibungen.
 
-- [ ] **T3.1 Datenaufbereitung (Phase 3)**
-  - [ ] T3.1.1 Tabelle auf Los-Ebene bauen (eine Zeile pro Vertrag oder Los)
-  - [ ] T3.1.2 Laufzeitende vereinheitlichen und mit Herkunft kennzeichnen (direkt, Beginn plus Dauer, unbekannt)
+- [x] **T3.1 Datenaufbereitung (Phase 3)** _(2026-11-04: Zuschlagstabelle je Los und Backtest-Paare; T3.1.3 für die Paare nicht nötig, T3.1.5 teilweise)_
+  - [x] T3.1.1 Tabelle auf Los-Ebene bauen (eine Zeile pro Vertrag oder Los)
+  - [x] T3.1.2 Laufzeitende vereinheitlichen und mit Herkunft kennzeichnen (direkt, Beginn plus Dauer, unbekannt)
   - [ ] T3.1.3 Auftraggebernamen normalisieren, wenn möglich über Kennungen
-  - [ ] T3.1.4 Zuordnung Zuschlag zu Neuausschreibung als Tabelle festschreiben
-  - [ ] T3.1.5 Skripte nach `src/prepare/` und `src/ingest/` ordnen, Bereinigungsregeln dokumentieren
-- [ ] **T3.2 Baseline-Modell (Phase 4)**
-  - [ ] T3.2.1 Vorlaufzeit aus bestätigten Paaren schätzen (Abstand Veröffentlichung Neuausschreibung zu Vertragsende)
-  - [ ] T3.2.2 Regel: erwartete Neuausschreibung = Laufzeitende minus Vorlaufzeit
-  - [ ] T3.2.3 Zwei Varianten: ohne Verlängerung und mit voll ausgeschöpften Verlängerungen
-  - [ ] T3.2.4 Umgang mit unbefristeten Verträgen festlegen
-- [ ] **T3.3 Backtest (Phase 5)**
-  - [ ] T3.3.1 Nur Verträge verwenden, deren prognostizierter Termin in der Vergangenheit liegt (keine Zensierungsfehler)
-  - [ ] T3.3.2 Kennzahlen: Trefferquote im Fenster ±3 Monate, Präzision, durchschnittlicher Vorlauf
-  - [ ] T3.3.3 Verzerrungen offenlegen (kurze Verträge überrepräsentiert, Verträge ohne Verlängerung)
-  - [ ] T3.3.4 Vergleich mit einer naiven Referenz (z. B. immer „Laufzeitende minus 6 Monate“)
-- [ ] **T3.4 Abschluss:** Report, Evaluator, `/iteration-ende`, Tag `iteration-3`
+  - [x] T3.1.4 Zuordnung Zuschlag zu Neuausschreibung als Tabelle festschreiben _(`src/prepare/backtest_paare.py`, nur handgeprüfte Paare)_
+  - [ ] T3.1.5 Skripte nach `src/prepare/` und `src/ingest/` ordnen, Bereinigungsregeln dokumentieren _(teilweise: neue Skripte in `src/prepare/` und `src/model/`, Regeln im Kopf von `vertragsliste.py`)_
+- [x] **T3.2 Baseline-Modell (Phase 4)** _(2026-11-04: `src/model/baseline.py`, R0 und R1)_
+  - ~~T3.2.1 Vorlaufzeit aus bestätigten Paaren schätzen~~ _(bewusst nicht: keine Parameterschätzung aus den Testpaaren, Vorlauf 6 Monate gesetzt)_
+  - [x] T3.2.2 Regel: erwartete Neuausschreibung = Laufzeitende minus Vorlaufzeit
+  - [x] T3.2.3 Zwei Varianten: ohne Verlängerung und mit voll ausgeschöpften Verlängerungen
+  - [x] T3.2.4 Umgang mit unbefristeten Verträgen festlegen _(docs/business.md §7.1)_
+- [x] **T3.3 Backtest (Phase 5)** _(2026-11-04: reports/backtest_iteration5.md)_
+  - [x] T3.3.1 Nur Verträge verwenden, deren prognostizierter Termin in der Vergangenheit liegt (keine Zensierungsfehler)
+  - [x] T3.3.2 Kennzahlen: Trefferquote im Fenster ±3 Monate, Präzision, durchschnittlicher Vorlauf _(Präzision nicht messbar: nur Paare mit Nachfolger)_
+  - [x] T3.3.3 Verzerrungen offenlegen (kurze Verträge überrepräsentiert, Verträge ohne Verlängerung)
+  - [x] T3.3.4 Vergleich mit einer naiven Referenz (z. B. immer „Laufzeitende minus 6 Monate“)
+- [x] **T3.4 Abschluss:** Report, Evaluator, `/iteration-ende`, Tag `iteration-3` _(2026-11-04: reports/evaluation_iteration5.md, Tag `iteration-5`)_
 
 **Entscheidungstor (Vorschläge):**
 - Trefferquote ±3 Monate mindestens 60 % und besser als die naive Referenz → weiter mit Iteration 4 (Verbesserung).
 - 40 bis 60 % → Verbesserungen in Iteration 4 gezielt auf die häufigsten Fehlerursachen ausrichten.
 - Unter 40 % → zurück zu Phase 1 oder 2: Eignet sich die Nische, oder ist das Prognoseziel falsch gewählt?
 
+_Ergebnis 2026-11-04: R1 15/52 = 28,8 %, R0 17,3 % → unter 40 %; Entscheidung „Idee anpassen“ (Vertragsliste ohne Terminprognose)._
+
 ### T4 Iteration 4: Verbesserung der Prognose (Phasen 3, 4, 5)
+_Nach Iteration 5 (2026-11-04) zurückgestellt; T4.1.1 und T4.1.2 sind mit den Lese-Regeln für das Höchstende in Iteration 5 erledigt._
 
 - [ ] **T4.1 Verlängerungen aus Freitext extrahieren**
-  - [ ] T4.1.1 Texte aus BT-54 und BT-57 sichten, typische Formulierungen sammeln
-  - [ ] T4.1.2 Regelbasierte Extraktion bauen (Anzahl, Dauer je Verlängerung, Ausübungsfrist)
-  - [ ] T4.1.3 Erfassungsquote an 30 handgeprüften Fällen messen
+  - [x] T4.1.1 Texte aus BT-54 und BT-57 sichten, typische Formulierungen sammeln
+  - [x] T4.1.2 Regelbasierte Extraktion bauen (Anzahl, Dauer je Verlängerung, Ausübungsfrist)
+  - [ ] T4.1.3 Erfassungsquote an 30 handgeprüften Fällen messen _(Iteration 5: 53/60 durch Claude; unabhängig in Iteration 6, Y2)_
 - [ ] **T4.2 Verhalten der Auftraggeber nutzen**
   - [ ] T4.2.1 Historische Ausschreibungszyklen je Auftraggeber auswerten
   - [ ] T4.2.2 Vorlaufzeit je Auftraggeber statt global schätzen
@@ -214,7 +221,7 @@ Vertragsliste aus Zuschlägen; T3.1.4 nutzt die Zuordnung nur für handgeprüfte
 - [ ] **T4.6 Abschluss:** Report, Evaluator, `/iteration-ende`, Tag `iteration-4`
 
 ### T5 Iteration 5: Prototyp der Vertragsliste (Phase 6)
-_Jetzt Iteration 7. Bis 2026-10-28 „Erster Kundentest (Phase 6, dann Phase 1)“; geändert, weil das Projekt ohne Kundenkontakt läuft._
+_Jetzt Iteration 6 (mit Iteration 7 zusammengelegt am 2026-11-04). Vorher Iteration 7. Bis 2026-10-28 „Erster Kundentest (Phase 6, dann Phase 1)“; geändert, weil das Projekt ohne Kundenkontakt läuft._
 
 - [ ] **T5.1 Erstes Produkt als manuelle Liste**
   - [ ] T5.1.1 Format festlegen (Tabelle oder PDF: Auftraggeber, Objekt, voraussichtliches Fenster, Quelle, Sicherheit)

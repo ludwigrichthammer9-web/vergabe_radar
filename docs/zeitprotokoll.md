@@ -1,6 +1,6 @@
 # Zeitprotokoll (aus der Git-Historie)
 
-_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-03. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
+_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-04. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
 
 | Iteration | Sitzungen | Commits | Stunden (Untergrenze) |
 |---|---|---|---|
@@ -8,8 +8,9 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-03. Methode: Commits mit höchste
 | 2 | 2 | 4 | 1.4 |
 | 3 | 4 | 22 | 6.3 |
 | 4 | 7 | 19 | 7.8 |
-| 5 | 2 | 8 | 2.3 |
-| **Summe** | 17 | 56 | **19.4** |
+| 5 | 3 | 18 | 3.5 |
+| 6 | 1 | 1 | 0.5 |
+| **Summe** | 19 | 67 | **21.1** |
 
 ## Iteration 1
 
@@ -51,7 +52,14 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-03. Methode: Commits mit höchste
 | Tag | Zeit | Commits | Std. | Erster / letzter Commit |
 |---|---|---|---|---|
 | 2026-10-30 | 14:08–15:24 | 7 | 1.8 | Iteration 5 angelegt: Prognoseziel Höchstende, Kriterien X1-X4 vorab / Iteration 5, Schritt 4: 68 Backtest-Paare, Vorlage zur Zweitprüfung (7 |
-| 2026-11-03 | 23:19–23:19 | 1 | 0.5 | Quellenliste, Reproduzierbarkeitsanleitung, KI-Irrwege und Bewertungsk |
+| 2026-11-03 | 23:19–23:31 | 2 | 0.7 | Quellenliste, Reproduzierbarkeitsanleitung, KI-Irrwege und Bewertungsk / Zeitprotokoll aus Git-Historie und Beitragsnachweis |
+| 2026-11-04 | 12:32–13:07 | 9 | 1.1 | Iteration 5, Schritt 5: Zweitprüfung ausgewertet, X2 = 91,0 %, X1 = 52 / Iteration 6 angelegt, Regeln Abdeckung festgelegt (vor Stichprobe) |
+
+## Iteration 6
+
+| Tag | Zeit | Commits | Std. | Erster / letzter Commit |
+|---|---|---|---|---|
+| 2026-11-04 | 13:07–13:07 | 1 | 0.5 | Iteration 6, Schritt 2: Stichprobe gezogen, Prüfvorlage, Schlüssel-Has |
 
 ## Ergänzungen von Hand (nicht im Git)
 
