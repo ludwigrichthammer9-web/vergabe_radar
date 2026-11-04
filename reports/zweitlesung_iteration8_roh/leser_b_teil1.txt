@@ -1,0 +1,26 @@
+L1;01.03.2029;01.03.2031;Der Vertrag wird für die Dauer von 36 Monaten geschlossen. Die Vereinbarung endet daher spätestens mit Ablauf des 01.03.2031 (zweimal automatische Verlängerung um je ein Jahr);ja
+L2;31.10.2029;31.10.2032;Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.10.2032;ja
+L3;31.12.2024;31.12.2027;Rahmenvertrag über eine Laufzeit von 12 Monaten mit einer dreimaligen Option (je 12 Monate); Beginn 01.01.2024; Enddatum der Laufzeit: 31/12/2027;ja
+L4;31.12.2029;31.12.2031;Beginn 01.01.2026; Enddatum der Laufzeit: 31.12.2029; Vertrag verlängert sich jeweils um ein weiteres Jahr, insgesamt höchstens zwei Jahre;ja
+L5;31.08.2029;31.08.2031;3 Jahre mit Option für eine zweimalige Verlängerung von je einem Jahr. Enddatum der Laufzeit: 31/08/2031;ja
+L6;31.05.2028;31.05.2029;Der Vertrag tritt am 01.06.2026 in Kraft und endet am 31.05.2028. Verlängerung um ein weiteres Jahr (einseitiges Recht des Auftraggebers);ja
+L7;unbekannt;12.07.2030;Die Laufzeit des Vertrages beträgt ein Jahr zum Schuljahresende mit Verlängerungsoption. Die maximale Vertragslaufzeit beträgt vier Jahre. Enddatum der Laufzeit: 12/07/2030;ja
+L8;30.06.2028;30.06.2030;Enddatum der Laufzeit: 30.06.2028; Maximal 2 Verlängerungen um je ein Jahr; Vertrag endet in jedem Fall automatisch am 30.06.2030 nach vier Jahren;ja
+L9;31.12.2027;31.12.2029;Reinigungsdienstleistungen für die Jahre 2026 und 2027 inkl. Verlängerungsoption; Enddatum 31.12.2027; zweimal je 12 Monate, endet spätestens 31.12.2029;ja
+L10;31.03.2027;31.03.2033;Enddatum der Laufzeit: 31/03/2027; Maximale Verlängerungen: 6; Spätestes Vertragsende 31.03.2033;ja
+L11;31.03.2027;31.03.2030;Datum des Beginns 01.04.2026; Enddatum der Laufzeit 31.03.2027; 3 x 12 Monate Verlängerung;ja
+L12;31.08.2028;31.08.2030;Beginn 01/09/2026; Enddatum der Laufzeit 31/08/2028; 2 x 12 Monate Verlängerung;ja
+L13;31.10.2029;keine Angabe;Datum des Beginns: 01/11/2025; Enddatum der Laufzeit: 31/10/2029; zu Verlängerung/Optionen keine Angaben (Bekanntmachung führt nur LOT-0000);ja
+L14;31.03.2030;31.03.2032;Das Vertragsverhältnis verlängert sich jeweils um ein weiteres Jahr; Der Vertrag endet spätestens am 31.03.2032, ohne dass es einer Kündigung bedarf; Enddatum der Laufzeit 31.03.2030;ja
+L15;31.07.2027;31.07.2030;Enddatum der Laufzeit: 31/07/2027; Optionsrechte des Auftraggebers zur maximal dreimaligen Vertragsverlängerung um jeweils ein Jahr (Verfahrenstitel: 07/2026 bis 07/2027 mit jährlicher Verlängerungsoption bis 07/2030);ja
+L16;30.09.2030;keine Angabe;Enddatum der Laufzeit: 30/09/2030; Dauerschuldverhältnis über vier Jahre; keine Angaben zu Verlängerung (Bekanntmachung führt nur LOT-0000/Los 2 als Position 2);ja
+L17;31.10.2029;31.10.2031;Beginn 01.11.2026; Enddatum 31.10.2029; Auftraggeber kann den Ausführungszeitraum zweimal um jeweils 12 Monate verlängern;ja
+L18;31.12.2029;31.12.2031;Maximal 2malige Verlängerung der Vertragslaufzeit nach Ablauf der 4-jährigen Vertragslaufzeit um jeweils ein weiteres Jahr; Enddatum der Laufzeit 31/12/2029;ja
+L19;31.03.2031;31.03.2033;Fünfjähriger Vertrag vom 1. April 2026 bis 31. März 2031 mit optionaler Verlängerung von zweimal 12 Monaten;ja
+L20;31.12.2029;31.12.2030;Beginn 01.01.2026, Enddatum 31.12.2029; Der Vertrag kann einmalig um ein weiteres Jahr verlängert werden;ja
+L21;31.08.2029;31.08.2031;Beginn 01.09.2026; Enddatum der Laufzeit 31.08.2029; Der Auftraggeber kann die Laufzeit zweimal um jeweils 12 Monate verlängern;ja
+L22;31.10.2029;unbestimmbar;Enddatum der Laufzeit: 31/10/2029; Maximale Verlängerungen: 1 (Länge nicht genannt);ja
+L23;31.01.2030;keine Angabe;Start 01/02/2026; Enddatum der Laufzeit 31/01/2030; Verlängerung und Optionen nicht genannt (Rahmenvereinbarung);ja
+L24;31.03.2028;31.03.2031;Beginn 01.04.2026; Grundlaufzeit 2 Jahre; dreimalige Verlängerung um jeweils ein Jahr (Enddatum nicht ausdrücklich angegeben, berechnet);ja
+L25;31.12.2029;keine Verlängerung;Beginn 01.01.2026; Enddatum der Laufzeit 31.12.2029; Verlängerung: Keine Verlängerung;ja
+HINWEIS: Zeitweise HTTP 429 (Rate-Limit), danach einzeln erneut abgerufen. WebFetch lieferte teils nur sinngemäße Wiedergaben (Zitate begrenzt), daher sind einige Zitate leicht zusammengefasst. Zu L7 steht nur "ein Jahr zum Schuljahresende", daher ist das Grundlaufzeit-Ende unbekannt. Bei L13, L16 und L23 hieß es, die Bekanntmachung enthalte keinen LOT-0001 bzw. nur LOT-0000 oder Los 2, die Zuordnung war eindeutig. Bei L8 widersprechen sich Enddatum-Feld (30.06.2028) und automatisches Ende 30.06.2030. Bei L24 ist die Bekanntmachung intern als LOT-0004 geführt. Bei L18 wurden die letzten ca. 34.000 Zeichen der Seite nicht gelesen.

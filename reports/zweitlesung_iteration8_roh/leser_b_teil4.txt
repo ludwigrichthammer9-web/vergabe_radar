@@ -1,0 +1,28 @@
+L76;31.12.2029;31.12.2030;Enddatum der Laufzeit: 31/12/2029 / Der Vertrag kann einmalig um ein weiteres Jahr verlängert werden;ja
+L77;31.08.2028;31.08.2030;für die Vertragsdauer von 3 Jahren (01.09.2025 bis 31.08.2028) zzgl. optionaler zweimaliger Verlängerung um weitere 12 Monate;ja
+L78;31.10.2029;keine Angabe;Enddatum der Laufzeit: 31/10/2029 (nur LOT-0000 vorhanden; Optionen gemäß § 132 Abs. 2 Nr. 1 GWB ohne Verlängerungsangabe);ja
+L79;31.08.2027;31.08.2030;Enddatum der Laufzeit: 31/08/2027 / Beginn: 01.09.2026 mit der Option der jährlichen Verlängerung bis max. 31.08.2030;ja
+L80;23.06.2025;21.07.2028;Die Laufzeit des Vertrages beträgt ein Jahr mit Verlängerungsoption für ein weiteres Jahr. / Vertragsbeginn ist der 24.06.2024 Vertragsende ist der 21.07.2028 (Höchstlaufzeit 4 Jahre);ja
+L81;unbekannt;unbestimmbar;Laufzeit: 2 Jahre / zweimalige Verlängerung um weitere 12 Monate (kein Beginn und kein Enddatum für das Los angegeben);ja
+L82;31.10.2028;31.10.2030;Laufzeit: 36 Monate ab 01/11/2025 / Der Vertrag endet jedoch spätestens mit Ablauf des 31. Oktober 2030 (Maximale Verlängerungen: 1);ja
+L83;20.07.2029;20.07.2030;Enddatum der Laufzeit: 20/07/2029 / Option der Verlängerung bis zu einem Jahr wenn dies ausdrücklich schriftlich durch den Auftraggeber mitgeteilt wird;ja
+L84;29.06.2026;20.07.2029;Die Laufzeit des Vertrages beträgt ein Jahr zum Schuljahresende mit Verlängerungsoption. Die maximale Vertragslaufzeit beträgt vier Jahre. spätestes Vertragsende ist der 20.07.2029;ja
+L85;31.07.2027;31.07.2033;Enddatum der Laufzeit: 31/07/2027 / Maximale Verlängerungen: 6 / Verlängerung maximal bis 7 Jahre;ja
+L86;30.06.2030;30.06.2032;Enddatum der Laufzeit: 30/06/2030 / Der Vertrag endet spätestens am 30.06.2032;ja
+L87;31.01.2028;31.01.2030;für die Vertragsdauer von 3 Jahren (01.02.2025 bis 31.01.2028) / optionaler zweimaliger Verlängerung um weitere 12 Monate;ja
+L88;29.06.2026;22.07.2029;Die Laufzeit des Vertrages beträgt ein Jahr mit Verlängerungsoption. Die maximale Vertragslaufzeit beträgt vier Jahre. spätestes Vertragsende der 22.07.2029;ja
+L89;31.12.2029;keine Angabe;Datum des Beginns: 01/01/2026 / Enddatum der Laufzeit: 31/12/2029;ja
+L90;31.01.2027;31.01.2033;frühestmögliches Ende der Dienstleistung 31.01.2027 / Die maximale Vertragslaufzeit beträgt sieben Jahre! (Beginn 01.02.2026);ja
+L91;28.11.2025;30.10.2026;Enddatum der Laufzeit: 28.11.2025 / Verlängerungsoption für 2026: Ausführungszeitraum 02.03.26 - 30.10.26;ja
+L92;31.03.2027;31.03.2031;Enddatum der Laufzeit: 31/03/2027 / Verlängerung bis zum 31.03.2028 und letztlich bis zum 31.03.2031 (maximal 4 Verlängerungen);ja
+L93;31.03.2028;keine Angabe;Enddatum der Laufzeit: 31/03/2028 (nur LOT-0000 vorhanden; keine Verlängerung erwähnt);ja
+L94;31.01.2030;keine Angabe;Enddatum der Laufzeit: 31/01/2030 (keine Verlängerung oder Option genannt);ja
+L95;31.07.2030;31.07.2032;Die Vertragsdauer: 4 Jahre vom 01.08.2026 bis 31.07.2030. Zzgl. zwei Verlängerungsoptionen um je ein Jahr bis längstens zum 31.07.2032;ja
+K1;31.03.2030;31.03.2031;Der Vertrag hat eine Festlaufzeit von 01.01.2026-31.03.2030. Der Vertrag kann optional um ein weiteres Jahr bis zum 31.03.2031 verlängert werden.;ja
+K2;31.03.2030;31.03.2031;Festlaufzeit vom 01.01.2026 bis 31.03.2030, optional um ein weiteres Jahr bis 31.03.2031 verlängerbar (Enddatum der Laufzeit: 31/03/2031);ja
+K3;31.03.2030;31.03.2031;Der Vertrag hat eine Festlaufzeit von 01.01.2026-31.03.2030. Der Vertrag kann optional um ein weiteres Jahr bis zum 31.03.2031 verlängert werden.;ja
+HINWEIS: Mehrere Abrufe lieferten zunächst HTTP 429 und wurden wiederholt, danach lief alles durch. L78, L82, L93 und L95 haben in der Bekanntmachung nur LOT-0000, ich habe dieses als Los 1 gelesen. WebFetch hat den Text durch ein Hilfsmodell zusammengefasst, die Zitate sind daher teils zusammengezogen. Bei K1 bis K3 wurde nur der erste Teil der langen Seite gelesen (bis Zeichen 100000), die Lose 8, 9 und 14 standen darin. Unsichere Stellen:
+- L80: Das Textfeld nennt 1 Jahr mit Option auf ein weiteres Jahr. Das Enddatum-Feld nennt 21.07.2028, die Höchstlaufzeit 4 Jahre. Ich habe die kürzere Festlaufzeit (1 Jahr ab 24.06.2024) als Grundlaufzeit gewertet.
+- L84 und L88: Gemeint ist "ein Jahr zum Schuljahresende". Ich habe 29.06.2026 als Ende eingesetzt (Beginn 30.06.2025 plus 1 Jahr minus 1 Tag), das tatsächliche Schuljahresende kann abweichen. Das späteste Vertragsende nennt L84 mit 20.07.2029 (Optionsfeld) und 22.07.2029 (Enddatum-Feld), L88 mit 22.07.2029.
+- L82: 36 Monate plus eine Verlängerung um ein Jahr ergäben 31.10.2029. Der Text nennt als Obergrenze aber ausdrücklich den 31.10.2030, und diesen habe ich übernommen.
+- L81: Für Los 2 sind weder Beginn noch Enddatum angegeben, nur "Laufzeit: 2 Jahre" und zweimal 12 Monate Verlängerung.
