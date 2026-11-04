@@ -733,6 +733,12 @@ A16 (explorativ).
 > (nach denselben Regeln); X2 vergleicht damit zwei Prüfer (P1–P13 Nutzer, übrige Kommilitone), das wird ausgewiesen. Abschluss laut
 > Nutzer am 2026-11-04. Quellenliste (`docs/quellen.md`) und Reproduzierbarkeitsanleitung (`docs/reproduzierbarkeit.md`) ergänzt.
 
+> **Fortschritt 2026-11-04 (Schritt 5 abgeschlossen, Kriterien unverändert):** Zweitprüfung abgegeben, Schlüssel-Hash geprüft
+> (stimmt). Auswertung [gt_pruefung_iteration5_auswertung.md](../reports/gt_pruefung_iteration5_auswertung.md): 4 Paare nicht
+> beurteilt (Kalibrierungsbeispiele P11, P12, P60, P62), **X2 = 61/67 = 91,0 %** (Wilson 81,8–95,8, κ 0,70; Schwelle ≥ 85 %),
+> **X1 = 52** bestätigte Paare mit bestimmbarem Ende (Schwelle ≥ 30). Vorbehalt: Unabhängigkeit der Prüfung durch den Kommilitonen
+> (P14–P71) offen, Minuten fehlen; A18 bleibt „ungeprüft“.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
