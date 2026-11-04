@@ -13,66 +13,32 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 4 (Abschluss), 2026-10-30. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 5 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.md) und [zuordnung_iteration4_korrektur.md](../../reports/zuordnung_iteration4_korrektur.md) · **[GT4]** [sichtbarkeit_iteration4_gt.csv](../../reports/sichtbarkeit_iteration4_gt.csv) · **[BP4]** [blindpruefung_iteration4.md](../../reports/blindpruefung_iteration4.md) · **[RE4]** [regel_entwicklung_iteration4.md](../../reports/regel_entwicklung_iteration4.md) · **[E4]** [evaluation_iteration4.md](../../reports/evaluation_iteration4.md). Ältere Quellen siehe Iterationslog.
+Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 
 ### Fakten (aus den Daten)
 
 **Datenquelle und Datensätze**
-- TED Search API v3 ab Ende Oktober 2016; vor eForms liefert die API keine Titel, Orte und Laufzeiten, die Original-XML schon.
-  Volltextsuche `FT` findet auch Bekanntmachungen vor eForms (Probeabfragen 2026-10-25).
-- Seit Iteration 4 Downloads mit Beschreibungen je Los (`ted_download.py --los-texte`): Ausschreibungen Q4 2025 bis Q3 2026 und der
-  Kandidatenpool der eForms-Zeit (Zuschläge und Ausschreibungen CPV 909).
-- Population Gebäudereinigung (Haupt-CPV 90910/90911/90919, Originale, ohne Bauprojekte und Sonderreinigung im Titel bzw. in allen
-  Lostiteln): Q4 2025 381, Q1 2026 538, Q2 2026 488, Q3 2026 486; zusammen 1.893 pro Jahr [Z4].
+- TED Search API v3 ab Ende Oktober 2016; vor eForms liefert die API keine Titel, Orte und Laufzeiten, die Original-XML schon. Volltextsuche `FT` findet auch Bekanntmachungen vor eForms.
+- Population Gebäudereinigung (Haupt-CPV 90910/90911/90919, Originale): 1.893 Verfahren pro Jahr (Q4 2025 bis Q3 2026).
 
-**Laufzeitende bestimmbar** (aus früheren Iterationen): Q3 2026 80,9 %, Q2 2025 82,1 %, 2023/2024 rund 70 %; vor eForms über `REF_NOTICE`
-25/30 = 83,3 % (Iteration 3, A11).
+**Laufzeit und Verlängerungen (Iteration 5)** [VP]
+- BT-537 und `DATE_END` bezeichnen in der Praxis das **Ende der Grundlaufzeit** (Spanne Beginn–Enddatum in 274 von 289 Fällen kürzer als die im Text genannte Höchstlaufzeit).
+  BT-36 ist uneinheitlich (27 von 37 gleich der Datumsspanne). BT-58 nennt nur die Zahl der Verlängerungen; die Länge steht im Freitext (BT-57, BT-54; vor eForms `RENEWAL_DESCR`).
+- eForms-Zuschläge (n = 4.307): Enddatum 75,1 %, nur Beginn + Dauer 1,0 %, keine verwertbare Laufzeit 22,4 %. 32,0 % mit BT-58 > 0.
 
-**Sichtbarkeit der Vorgänger (Iteration 4, W1)** — 70 Zufallsfälle aus Q1 2026, Handsuche nach Urteilsregeln 1.1 [GT4]
-- 18 objektgleich (alle „mittel“), 12 Teilmenge, 18 unklar (10 eher dafür), 22 kein Vorgänger: **30/70 = 42,9 %** (Wilson 31,9–54,5).
-- Gefundene Vorgänger je Teil der Handsuche 5, 4, 5, 8, 8 [E4].
-
-**Zuordnung über Merkmale je Los (Iteration 4, eingefrorene Regel)** [Z4], [RE4]
-- 19 Vorschläge, 17 korrekt (89,5 %); Trefferquote 17/30 = 56,7 %; Vorgänger unter den Top 3 in 22/30 Fällen.
-- Backtest-Basis nach Korrektur 11/70 × 1.893 = 297 pro Jahr; mindestens 4 der Paare haben Vorgänger vor eForms.
-- Zweitprüfung durch den Nutzer 13/20 = 65 % (Median 2 Minuten); Ground Truth damit nicht menschlich bestätigt [BP4], [E4].
-
-**Prognoseziel**
-- Vorlaufzeit bis zum Ende der Grundlaufzeit bei 11 korrekten Paaren −32 bis +26 Monate, Median etwa −6 Monate; vorzeitige Neuvergaben
-  3/30 [Z4].
+**Vorgänger-Paare (Backtest-Basis)** [BT5], [AN]
+- 68 Paare aus der Handsuche (Iteration 3 und 4), 61 mit bestimmbarem Ende der Grundlaufzeit; 52 von Rechercheur und Prüfer bestätigt. 41 der 52 Vorgänger stammen aus der Zeit vor eForms.
+- Bei 12 der 52 Paare erscheint die Neuausschreibung mehr als 24 Monate nach der Prognose (Spannen bis 95 Monate), bei 4 mehr als 24 Monate davor. Bei 10 der 12 hat derselbe
+  Auftraggeber dazwischen weitere 909-Bekanntmachungen veröffentlicht (kein Beleg für einen Zwischenvertrag am selben Objekt).
+- 40 Auftraggeber für 52 Paare; Bayern 0/5 Treffer, Bundesanstalt für Immobilienaufgaben 3/4 (kleine Zahlen).
 
 ### Interpretation
 
-- Vorgänger sind nach strenger Definition bei gut 40 % der Ausschreibungen sichtbar. Eine automatische Zuordnung findet davon gut die Hälfte.
-- Die Daten tragen eine **Liste auslaufender Verträge aus Zuschlägen** besser als eine Nachfolger-Zuordnung: Das Laufzeitende ist meist
-  bestimmbar, auch vor eForms über `REF_NOTICE`.
-- Für einen Backtest werden Daten vor eForms gebraucht (A10), und die Paare müssen unabhängig geprüft sein (A18).
-- Die Grundlaufzeit allein ist kein brauchbares Prognoseziel; Verlängerungen müssen berücksichtigt werden.
-
-### Zwischenstand Iteration 5, Schritt 2 (2026-10-30): Laufzeit und Verlängerungen
-
-Quelle: **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) (`src/verlaengerung_praxis.py`),
-Definitionen aus `translations/business-term_de.xml` im eForms SDK.
-
-_Fakten_
-- Definition: BT-36 (Laufzeit) „umfasst etwaige Optionen und Verlängerungen“. BT-537 (Ende) hat keine Aussage dazu. BT-58 nennt nur
-  die **Zahl** der Verlängerungen, nicht ihre Länge; BT-57 und BT-54 sind Freitext. Vor eForms: `DATE_END`/`DURATION`,
-  `RENEWAL`/`NO_RENEWAL` und Freitext `RENEWAL_DESCR`.
-- eForms-Zuschläge Gebäudereinigung (90910/11/19, Originale, 25.10.2023–30.09.2026, n = 4.307): Enddatum 75,1 %, nur Beginn + Dauer
-  1,0 %, nur BT-538 1,4 %, keine verwertbare Laufzeit 22,4 % (erstes Los) [VP].
-- Von 3.279 mit bestimmbarem Ende haben 32,0 % BT-58 > 0; BT-58 fehlt bei 66,8 %. Bei BT-58 > 0 nennt der Text (BT-57/BT-54) in
-  82,9 % eine Länge, Höchstlaufzeit oder ein Datum (grobe Muster) [VP].
-- Wo der Text eine Höchstlaufzeit nennt, ist die Spanne Beginn bis BT-537 in 274 von 289 Fällen (94,8 %) **kürzer** [VP].
-- BT-36 neben Beginn und Ende (n = 37): gleich der Datumsspanne in 27, länger in 7 Fällen [VP].
-- Vor eForms (28 referenzierte Ausschreibungen der A11-Zufallsstichprobe): 17 verlängerbar, alle mit `RENEWAL_DESCR`, 12 davon mit
-  Länge, Höchstlaufzeit oder Datum [VP].
-
-_Interpretation_
-- BT-537 und `DATE_END` meinen in der Praxis das **Ende der Grundlaufzeit**. BT-36 ist uneinheitlich, meist ebenfalls Grundlaufzeit.
-- Das **Höchstende** muss aus dem Freitext gewonnen werden (zusammen mit BT-58). Für etwa 80 % der verlängerbaren Verträge scheint das
-  möglich; wie gut, zeigt erst die Extraktion in Schritt 3.
+- Das Höchstende ist nur aus dem Freitext lesbar; die Grundlaufzeit steht strukturiert. Ob Optionen gezogen werden, steht nicht im Vorgänger-Zuschlag.
+- Lange Lücken deuten auf nicht-direkte Vorgänger (Zwischenverträge außerhalb TED), das Glied direkt davor fehlt auf TED oft (Iteration 3: mindestens 10 von 38).
+- Ob die Ground Truth der Handsuche stimmt, ist weiter nicht unabhängig geprüft (A18).
 
 ## Offene Fragen
 
@@ -159,6 +125,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-24 | 3 | V4 über P9–P28 nach Urteilsregeln Version 1.1; P1–P8 sind Kalibrierung | Regeln des Nutzers nach erstem Ansehen der Paare; als Abweichung in iterationen.md dokumentiert |
 | 2026-10-25 | 3 | **In Phase 2/3 bleiben:** ein letzter Verbesserungsversuch der Zuordnung (Iteration 4) mit Merkmalen auf Los-Ebene (auch vor eForms), harter Prüfung der Leistungsart und Trennung von Geschwisterverfahren ohne Zeitfenster; Q3 2026 wird Entwicklungsdaten, neue Testdaten aus Q1 2026, Handsuche und V4 nach Urteilsregeln 1.1 vorab | Vorab festgelegte Folge „V1 ≥ 50 %, V2/V3 verfehlt“ (V1 63,3 %, V2 45,8 %, V3 28,9 %); V1 und V4 nur knapp und definitionsabhängig erfüllt [E3]. Entscheidung des Nutzers. |
 | 2026-10-30 | 4 | **Idee anpassen:** Die Zuordnung über das Objekt wird nicht weiter verbessert (A9c für `zuordnung_los.py` widerlegt); Iteration 5 nutzt Zuschläge mit Laufzeitende als Kern und die Zuordnung nur für einen Backtest auf handgeprüften Paaren | W4 65 % < 85 %, W3 56,7 %, W2 bei 19 statt 25 Vorschlägen (reports/evaluation_iteration4.md). Entscheidung des Nutzers. |
+| 2026-11-04 | 5 | Das Ende der Grundlaufzeit wird aus BT-537 bzw. `DATE_END` gelesen (nicht aus BT-36); das Höchstende aus Freitext und BT-58 mit Lese-Regeln (Kopf von `src/prepare/vertragsliste.py`); Vorgänger-Ende nur aus den Bekanntmachungen des Vorgängers (keine Leckage) | Praxis der Felder (reports/verlaengerung_praxis_iteration5.md), Stichproben der Lese-Regeln (reports/hoechstende_pruefung_iteration5_*.md) |
 
 ## Iterationslog
 
@@ -275,3 +242,11 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Übergabe an die nächste Phase:** An Phase 1: Prognoseziel festlegen. An Phase 3: Tabelle der Zuschläge mit Laufzeitende je Los,
   Herkunft des Endes (Grundlaufzeit, Höchstende, rollierend), auch vor eForms über `REF_NOTICE`. An Phase 5: Backtest nur auf Paaren mit
   unabhängig geprüfter Ground Truth.
+
+### Iteration 5 – 2026-11-04
+
+- **Was gemacht:** eForms- und TED-Dokumentation zu Laufzeit und Verlängerungen geprüft und mit den Daten verglichen (`src/verlaengerung_praxis.py`); Vorgänger-Enden der Paare aus
+  den Bekanntmachungen des Vorgängers gelesen (`src/prepare/backtest_paare.py`); nachträgliche Analysen zu langen Lücken und Auftraggebern (`src/model/analyse_backtest.py`).
+- **Erkenntnisse – Fakten:** BT-537/DATE_END = Ende der Grundlaufzeit; Höchstende nur im Freitext; 12 von 52 Paaren mit Lücke über 24 Monate nach der Prognose; 41 von 52 Vorgängern vor eForms (reports/verlaengerung_praxis_iteration5.md, reports/backtest_analysen_iteration5.md).
+- **Erkenntnisse – Interpretation:** Viele Vorgänger sind nicht der direkte Vorgängervertrag; Daten vor eForms sind für den Backtest nötig.
+- **Übergabe an die nächste Phase:** An Phase 1: Liste ohne Terminprognose als Kern. An Phase 3: Vertragsliste je Los (vorhanden). Offen: Vorlauf je Auftraggeber aus der Historie (nur wenn Iteration 6 das aufgreift).

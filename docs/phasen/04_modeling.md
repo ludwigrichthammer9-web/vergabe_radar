@@ -11,19 +11,22 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 1, 2026-10-22. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 5 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Noch nicht begonnen.**
+**Baseline getestet und verfehlt.** Stufe 1 und eine Variante von Stufe 2 aus `docs/CRISP-DM.md` sind gelaufen; weitere Stufen sind nicht begründet, solange die Frage nach Nutzen und Prognoseziel offen ist.
+
+Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 
 ### Fakten (aus den Daten)
 
-- Median-Laufzeit laut BT-36: 24 Monate (n = 3.349), Quartile 8 bzw. 48 Monate. [Report §2]
-- Für die Baseline-Regel (Beginn + Laufzeit − Vorlaufzeit) ist Ende oder Dauer bei 82,0 % aller Notices vorhanden,
-  in Dienstleistungsnischen bei 90–93 %. [Report §2, §4]
+- Regeln in `src/model/baseline.py` (vor dem ersten Lauf committet): R0 = Ende der Grundlaufzeit − 6 Monate, R1 = Höchstende − 6 Monate (bei unbestimmbarem Höchstende wie R0); Treffer ±3 Monate; keine Parameterschätzung aus den Paaren.
+- Ergebnis auf 52 Paaren: R0 17,3 %, R1 28,8 % (Wilson 18,3–42,3); bei belegter Verlängerung (24 Paare) R1 10/24 gegenüber R0 4/24; ohne belegte Verlängerung beide 5/28 [BT5].
+- Kein Vorlauf-Parameter rettet das Ergebnis (Streuung zu breit) [E5].
 
 ### Interpretation
 
-- Die Baseline-Regel ist von der Datenlage her umsetzbar. Die Vorlaufzeit ist unbekannt.
+- Eine feste Vorlaufzeit auf Höchstende oder Grundlaufzeit reicht nicht. Verlängerungstext hilft (datum_text 7/14 gegenüber 1/14), löst aber das Problem nicht.
+- Offen: Vorlauf je Auftraggeber (z. B. Bayern 0/5, Bundesanstalt für Immobilienaufgaben 3/4), nur sinnvoll mit Daten zur Ausübung von Optionen.
 
 ## Offene Fragen
 
@@ -38,9 +41,17 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | Datum | Iteration | Entscheidung | Begründung |
 |---|---|---|---|
 | – | – | Noch keine Entscheidungen | – |
+| 2026-11-04 | 5 | Keine weitere Modellstufe in Iteration 5; Baseline R0/R1 eingefroren und verworfen als Terminprognose (28,8 % < 40 %) | Vorab festgelegte Folge, reports/evaluation_iteration5.md. Entscheidung des Nutzers. |
 
 ## Iterationslog
 
 <!-- Nur ergänzen, nie überschreiben. Neueste Einträge unten. -->
 
 _Noch keine Einträge._
+
+### Iteration 5 – 2026-11-04
+
+- **Was gemacht:** Baseline R0/R1 in `src/model/baseline.py` eingefroren, vor dem Lauf committet, dann Backtest auf 52 Paaren.
+- **Erkenntnisse – Fakten:** R1 15/52 = 28,8 %, R0 9/52 = 17,3 % (reports/backtest_iteration5.md).
+- **Erkenntnisse – Interpretation:** Eine einfache Regel trägt nicht; Verlängerungstext verbessert etwas.
+- **Übergabe an die nächste Phase:** Kein Modell für den Prototyp nötig (Liste mit Enddaten). Falls Iteration 6 Prognose weiterverfolgt: Auftraggeber-Verhalten und Optionsausübung.

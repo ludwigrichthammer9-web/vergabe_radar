@@ -7,18 +7,16 @@ ausgeschrieben werden, basierend auf Zuschlagsbekanntmachungen aus TED
 Neuausschreibungen vorbereiten wollen (z. B. Gebäudereinigung, IT-Wartung,
 Winterdienst).
 
-## Aktuelle Phase: vor Iteration 5, zuerst Phase 1 (Idee anpassen)
-Iteration 4 ist abgeschlossen (Entscheidung: Idee anpassen). Die automatische
-Zuordnung über das Objekt wird nicht weiter verbessert: Präzision 89,5 % bei nur
-19 Vorschlägen, Trefferquote 56,7 %, Zweitprüfung durch den Nutzer 65 % (< 85 %).
-Sichtbare Vorgänger nach Urteilsregeln 1.1: 43 % der Ausschreibungen.
-Arbeitsnische: Gebäudereinigung, Haupt-CPV 90910/90911/90919. Noch kein Modell.
-Iteration 5 = Vertragsliste aus Zuschlägen (Laufzeitende meist bestimmbar):
-zuerst Prognoseziel festlegen (Grundlaufzeit oder Höchstende), dann Tabelle je
-Los, einfache Regel, Backtest nur auf unabhängig handgeprüften Paaren.
+## Aktuelle Phase: nach Iteration 5, vor Iteration 6 (Phase 1: Idee anpassen)
+Iteration 5 ist abgeschlossen (Entscheidung: Idee anpassen). Die Punktprognose „Höchstende − 6 Monate“ trägt nicht: Trefferquote ±3 Monate
+28,8 % (Schwelle 60 %, naive Referenz 17,3 %) auf 52 handgeprüften Paaren; Abdeckung der Vertragsliste 79,7 % der Lose.
+Produktkern: Vertragsliste mit Enddaten (Grundlaufzeit, Höchstende, Herkunft) ohne Terminprognose.
+Arbeitsnische: Gebäudereinigung, Haupt-CPV 90910/90911/90919.
+Iteration 6 wird mit /iteration-start neu zugeschnitten (Kriterium für eine Liste ohne Prognose; Prognose je Auftraggeber nur bei Begründung).
 Kein Kundenkontakt (Iteration 7 = Prototyp, A1/A15 bleiben ungeprüft).
-Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE (25/30).
-Details: docs/iterationen.md, reports/evaluation_iteration4.md
+Bewertung als Leistungsnachweis: docs/bewertung_LN.md; Quellen: docs/quellen.md; Reproduzierbarkeit: docs/reproduzierbarkeit.md.
+Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE.
+Details: docs/iterationen.md, reports/evaluation_iteration5.md
 
 ## Später geplant
 - Nische wählen, Backtest (erwartetes Auslaufdatum vs. tatsächliche

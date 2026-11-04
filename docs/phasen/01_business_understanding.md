@@ -10,39 +10,31 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 4 (Abschluss), 2026-10-30. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 5 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Arbeitsnische (vorläufig): Gebäudereinigung, Haupt-CPV 90910/90911/90919.** Nach Iteration 4 lautet die Entscheidung **Idee anpassen**:
-Die automatische Zuordnung von Ausschreibung und Vorgänger über das Objekt wird nicht weiter verbessert. Iteration 5 baut stattdessen eine
-**Vertragsliste aus Zuschlägen** (Laufzeitende meist bestimmbar) und prüft sie mit einem Backtest auf handgeprüften Paaren. Das Projekt
-läuft ohne Kundenkontakt (Entscheidung 2026-10-29); Phase 1 stützt sich auf Recherche.
-_Nachtrag 2026-10-30 (Iteration 5, Schritt 1):_ Prognoseziel (Höchstende), Regeln R0/R1 und technisches Erfolgskriterium (X3) stehen in
-[business.md](../business.md) §7.1. Das Phase-1-Gate ist
-damit technisch erfüllt; ein geschäftliches Kriterium (nötiger Vorlauf aus Kundensicht) bleibt ohne Gespräche eine Setzung.
+**Arbeitsnische: Gebäudereinigung, Haupt-CPV 90910/90911/90919.** Nach Iteration 5 lautet die Entscheidung **Idee anpassen**: Die Punktprognose
+„Höchstende − 6 Monate“ trägt nicht. Der Produktkern ist eine **Vertragsliste mit Enddaten** (Ende der Grundlaufzeit, Höchstende, Herkunft) ohne
+Terminprognose. Das Projekt läuft ohne Kundenkontakt (Entscheidung 2026-10-29); ob jemand für die Liste zahlt (A1, A15), bleibt offen. Das
+Phase-1-Gate ist technisch erfüllt (Prognoseziel und Kriterien X1–X4 plus fachliches Kriterium festgelegt, `docs/business.md` §7.1).
 
 ### Fakten (aus den Daten)
 
-Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.md) und [zuordnung_iteration4_korrektur.md](../../reports/zuordnung_iteration4_korrektur.md) · **[GT4]** [sichtbarkeit_iteration4_gt.csv](../../reports/sichtbarkeit_iteration4_gt.csv) · **[BP4]** [blindpruefung_iteration4.md](../../reports/blindpruefung_iteration4.md) · **[RE4]** [regel_entwicklung_iteration4.md](../../reports/regel_entwicklung_iteration4.md) · **[E4]** [evaluation_iteration4.md](../../reports/evaluation_iteration4.md). Ältere Quellen siehe Iterationslog.
+Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 
-- Zuordnung über das Objekt (eingefrorene Regel, Testdaten Q1 2026): Präzision 17/19 = 89,5 % bei nur 19 Vorschlägen, Trefferquote
-  17/30 = 56,7 %, Vorgänger unter den Top 3 in 22/30 Fällen [Z4].
-- Sichtbarkeit nach Urteilsregeln 1.1: 30/70 = 42,9 % der Ausschreibungen haben einen objektgleichen Vorgänger oder eine Teilmenge auf TED [GT4].
-- Zweitprüfung durch den Nutzer: 13/20 = 65 % Übereinstimmung bei Median 2 Minuten je Paar [BP4].
-- Vorzeitige Neuvergaben 3/30; Vorlaufzeit bis Ende der Grundlaufzeit streut von −32 bis +26 Monaten [Z4].
-- Population Gebäudereinigung (eng): 1.893 Ausschreibungsverfahren in den letzten 4 Quartalen [Z4].
-- Markt und Preise aus der Recherche: Median-Auftragswert 167.404 € pro Jahr; Dienste für auslaufende Verträge gibt es in Großbritannien,
-  in Deutschland in zwei Suchen keinen gefunden (`docs/business.md` §6).
-- Kundengespräche: keine, und im Projekt nicht vorgesehen.
+- Backtest auf 52 handgeprüften Paaren: Treffer im Fenster ±3 Monate R1 (Höchstende − 6) 15/52 = 28,8 % (Wilson 18,3–42,3), R0 (Grundlaufzeit − 6)
+  9/52 = 17,3 %; Schwelle 60 % und +10 Prozentpunkte verfehlt [BT5]. 20 Veröffentlichungen früher, 17 später, 15 im Fenster [BT5].
+- Fachliches Kriterium (Nutzen: Vorbereitung im Fenster ±3 Monate; Schwelle ≥ 60 % und ≥ 10 Prozentpunkte über R0) vor dem Lauf festgelegt, als Setzung
+  ohne Kundenaussage gekennzeichnet (`docs/business.md` §7.1).
+- Abdeckung der Liste (Prognosedatum je Los, eForms Q4 2025 bis Q3 2026): 79,7 % (Wilson 78,4–81,0), Schwelle 80 % knapp verfehlt; ca. 20 % der Lose
+  haben keine Laufzeitangabe [VL].
+- Robustheit: ohne unbestimmbare Höchstenden 35,9 %, ohne lange Lücken 41,7 %, ein Paar je Auftraggeber 27,5 % [E5], [AN].
 
 ### Interpretation
 
-- Ein Radar, das zu jeder Ausschreibung automatisch den Vorgänger findet, ist mit TED-Daten und einer einfachen Regel nicht erreichbar.
-- Eine Liste auslaufender Verträge aus Zuschlägen braucht diese Zuordnung nicht. Sie ist der einfachere Weg und nutzt, was die Daten gut
-  hergeben (Laufzeitende bei rund 80 % bestimmbar).
-- Ein Produkt mit manueller Prüfung ist nicht belegt: schnell, aber in der einzigen Messung nicht zuverlässig (A17).
-- Vor Iteration 5 muss das Prognoseziel feststehen: Ende der Grundlaufzeit oder Höchstende. Die Vorlaufzeiten zeigen, dass die
-  Grundlaufzeit allein nicht trägt (A8).
-- Ob jemand für die Liste zahlt (A1, A15), bleibt ohne Kundenkontakt offen und wird als Grenze genannt.
+- Eine Vertragsliste mit Enddaten ist aus den TED-Daten für etwa vier Fünftel der Lose erzeugbar; der Termin der Neuausschreibung lässt sich daraus
+  mit einer einfachen Regel nicht vorhersagen (Optionen werden gezogen oder nicht, Zwischenverträge, Notverlängerungen).
+- Dass die Liste ohne Terminprognose nützt, ist nicht belegt (A1, A15) und wird im Prototyp (Iteration 7) nur selbst bewertet.
+- Die Zweitprüfung der Paare war KI-unterstützt und gilt nicht als unabhängige Bestätigung der Handsuche (A18) [ZP], [E5].
 
 ## Ideen für später
 
@@ -58,6 +50,7 @@ Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.m
 - [ ] Was ist ein Kunde bereit zu zahlen?
 - [ ] Bieten Ausschreibungsdienste (z. B. DTAD) bereits Prognosen an?
 - [ ] Welche geschäftlichen und technischen Erfolgskriterien gelten (z. B. Trefferquote im ±3-Monats-Fenster)?
+  _Antwort Iteration 5 (2026-11-04):_ technisch X1–X4, fachlich ±3 Monate, ≥ 60 % und +10 Prozentpunkte (Setzung); verfehlt (R1 28,8 %). Welches Kriterium für eine Liste ohne Terminprognose gilt, ist neu zu bestimmen.
 - [ ] Wie häufig ist Kantinenbetrieb auf TED (CPV noch abzugrenzen)?
 - [ ] Zahlen Reinigungsfirmen für Vorabinformationen über auslaufende Verträge (Annahme A15)? Erste Gespräche mit Reinigungsfirmen.
   _Stand 2026-10-29:_ im Projekt nicht prüfbar (kein Kundenkontakt); nur indirekte Hinweise aus der Recherche.
@@ -89,6 +82,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-25 | 3 | Objekt-Ebene bleibt Ziel; **parallel** wird die Alternative „Produkt mit manueller Prüfung“ bewertet. Nische enger: Haupt-CPV 90910/90911/90919, Leistungsart künftig auf Los-Ebene prüfen | Zuordnung über das Objekt: Präzision 45,8 %, Trefferquote 28,9 % bei Sichtbarkeit 63,3 % ([Z3], [E3]); vorab festgelegte Folge „in Phase 2/3 bleiben, alternativ Produkt mit manueller Prüfung“. Entscheidung des Nutzers. |
 | 2026-10-30 | 4 | **Idee anpassen:** Keine weitere automatische Objekt-Zuordnung; Iteration 5 baut eine Vertragsliste aus Zuschlägen, Zuordnung nur als Werkzeug für einen Backtest auf handgeprüften Paaren; Prognoseziel vorher festlegen | Vorab festgelegte Folge „W4 < 85 %“ (W4 65 %); W3 56,7 %, W2-Mindestzahl verfehlt; reports/evaluation_iteration4.md. Entscheidung des Nutzers. |
 | 2026-10-30 | 5 | **Prognoseziel Höchstende:** Neuausschreibung = Höchstende − 6 Monate (R1), Referenz Grundlaufzeit − 6 Monate (R0), Treffer ±3 Monate; nur Wissen zum Zeitpunkt des Vorgänger-Zuschlags; Höchstende nicht bestimmbar → Grundlaufzeit (`docs/business.md` §7.1) | Neuausschreibungen erschienen meist nach dem Ende der Grundlaufzeit (Iteration 3 und 4, explorativ, dieselben Paare wie im Backtest). Entscheidung des Nutzers (Prognoseziel); Detailregeln von Claude, vor jeder Berechnung. |
+| 2026-11-04 | 5 | **Idee anpassen:** Die Vertragsliste mit Enddaten (Grundlaufzeit, Höchstende, Herkunft) bleibt Produktkern, **ohne Terminprognose**; fachliches Kriterium (±3 Monate, ≥ 60 %, +10 Prozentpunkte) vorab als Setzung festgelegt und verfehlt | Vorab festgelegte Folge „X1 ≥ 30 und R1 < 40 %“ (R1 28,8 %); robust laut Evaluator (reports/evaluation_iteration5.md); Nutzen der Liste ohne Prognose nicht belegt. Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -165,3 +159,13 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Übergabe an die nächste Phase:** Iteration 5 beginnt in Phase 1: Prognoseziel festlegen (Grundlaufzeit oder Höchstende, Zeitfenster),
   Abdeckung offen benennen, dann Phase 3 (Tabelle der Zuschläge mit Laufzeitende), Phase 4 (einfache Regel) und Phase 5 (Backtest auf
   handgeprüften Paaren, deren Ground Truth vorab unabhängig geprüft wird).
+
+### Iteration 5 – 2026-11-04
+
+- **Was gemacht:** Prognoseziel (Höchstende), Regeln R0/R1 und fachliches Erfolgskriterium vor den Berechnungen festgelegt (`docs/business.md` §7.1); Backtest-Ergebnis
+  und Evaluator-Bericht ausgewertet. Keine Kundengespräche.
+- **Erkenntnisse – Fakten:** R1 15/52 = 28,8 %, R0 17,3 %, X3 verfehlt; X1 = 52, X2 = 91,0 % (KI-unterstützt), X4 = 79,7 % (reports/backtest_iteration5.md, reports/gt_pruefung_iteration5_auswertung.md, reports/vertragsliste_iteration5.md). Streuung in beide Richtungen.
+- **Erkenntnisse – Interpretation:** Eine Terminprognose aus Vertragsende und fester Vorlaufzeit ist nicht tragfähig; die Vertragsliste mit Enddaten bleibt als Produktkern.
+  Nutzen ohne Kundenkontakt nicht belegt.
+- **Übergabe an die nächste Phase:** Iteration 6 wird mit `/iteration-start` neu zugeschnitten. Phase 1 muss festlegen, welches Kriterium eine Liste ohne Terminprognose erfüllen soll und ob
+  ein Prognosefenster aus Auftraggeber-Verhalten (Vorlauf je Auftraggeber) einen zweiten Versuch lohnt.

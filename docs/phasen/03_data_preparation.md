@@ -14,47 +14,24 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 4 (Abschluss), 2026-10-30. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 5 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-Phase 3 hat mit Iteration 4 Bausteine für Merkmale je Los bekommen. Die eigentliche Aufbereitung für die Prognose beginnt in Iteration 5,
-jetzt mit Zuschlägen und ihrem Laufzeitende als Kern.
+Die Zuschlagstabelle je Los ist gebaut. Offen bleiben Lese-Regeln für Vorgänger vor eForms und Auftraggeber-Normalisierung.
+
+Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 
 ### Fakten (aus den Daten)
 
-Quellen: **[Z4]** [zuordnung_iteration4.md](../../reports/zuordnung_iteration4.md) und [zuordnung_iteration4_korrektur.md](../../reports/zuordnung_iteration4_korrektur.md) · **[GT4]** [sichtbarkeit_iteration4_gt.csv](../../reports/sichtbarkeit_iteration4_gt.csv) · **[BP4]** [blindpruefung_iteration4.md](../../reports/blindpruefung_iteration4.md) · **[RE4]** [regel_entwicklung_iteration4.md](../../reports/regel_entwicklung_iteration4.md) · **[E4]** [evaluation_iteration4.md](../../reports/evaluation_iteration4.md). Ältere Quellen siehe Iterationslog.
-
-- `src/los_merkmale.py` liest je Los Leistungsart, Flächen, Adressen und Objektnamen, bei eForms aus der API (mit Beschreibungen), vor
-  eForms aus der XML.
-- `src/zuordnung_los.py` (eingefroren 1d0e060) sucht Kandidaten über Auftraggeber, PLZ, seltene Namenswörter und Volltext; im Test
-  19 Vorschläge, 17 korrekt, Trefferquote 56,7 % [Z4].
-- `src/kennzahlen_iteration2.py` (`end_date()`) vereinheitlicht das Laufzeitende; `src/a11_stichprobe.py` liest es vor eForms über
-  `REF_NOTICE`.
-- Das Vorgänger-Ende braucht eine Herkunft: Die Auswertung zählte „grundlaufzeit, hoechstende“ zunächst nicht mit (korrigiert) [E4].
+- `src/prepare/vertragsliste.py`: 9.915 Lose aus 4.209 eForms-Zuschlägen (Population wie Iteration 4); je Los Ende der Grundlaufzeit, Höchstende, Herkunft, R0, R1 [VL].
+- Abdeckung: 2.924/3.668 = 79,7 % der Lose (Q4 2025–Q3 2026) mit Prognosedatum; 20,0 % ohne Laufzeit [VL].
+- Höchstende-Herkunft: keine Angabe 32,3 %, Anzahl × Länge 22,0 %, Datum im Text 17,7 %, unbestimmbar 13,3 %, Höchstlaufzeit 8,8 %, Enddatum = Höchstende 4,5 % [VL].
+- Lese-Regeln: Entwicklung 30/40, Test 53/60 richtig (gewichtet etwa 91 %), Urteile von Claude allein, nur eForms-Lose; „keine_verlaengerung“ ungeprüft [HP], [E5].
+- `src/prepare/backtest_paare.py`: Paare aus der Handsuche, Vorgänger-Ende aus der Bekanntmachung (vor eForms über `REF_NOTICE` aus der XML); 61 von 68 bestimmbar.
 
 ### Interpretation
 
-- Für Iteration 5 wird eine Tabelle der Zuschläge je Los gebraucht: Laufzeitende mit Herkunft (Grundlaufzeit, Höchstende, rollierend),
-  Leistungsart und Objektmerkmale aus `los_merkmale.py`.
-- Die Objekt-Zuordnung bleibt nur als Werkzeug, um Paare für einen Backtest vorzuschlagen, die dann von Hand geprüft werden.
-
-### Zwischenstand Iteration 5, Schritt 3 (2026-10-30): Zuschlagstabelle je Los
-
-Quellen: **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) (`src/prepare/vertragsliste.py`),
-**[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md) und `_entwicklung.md`.
-
-_Fakten_
-- Tabelle `data/processed/vertragsliste_909.csv`: 9.915 Lose aus 4.209 eForms-Zuschlägen (Population wie Iteration 4), je Los Ende der
-  Grundlaufzeit, Höchstende, Herkunft, R0, R1 [VL].
-- **X4 = 2.924/3.668 = 79,7 %** (Wilson 78,4–81,0) der Lose aus Q4 2025 bis Q3 2026 haben ein Prognosedatum; Schwelle 80 % knapp
-  verfehlt. Ohne Laufzeit: 20,0 % [VL].
-- Höchstende-Herkunft (Lose mit Grundlaufzeit): keine Angabe 32,3 %, Anzahl × Länge 22,0 %, Datum im Text 17,7 %, unbestimmbar 13,3 %,
-  Höchstlaufzeit 8,8 %, Enddatum ist Höchstende 4,5 % [VL].
-- Lese-Regeln: Entwicklung 30/40 richtig, Test 53/60 richtig (gewichtet etwa 91 %), Urteile von Claude allein [HP].
-- Bei etwa 4,5 % der Lose ist BT-537 schon das Höchstende (Text: „endet spätestens am …“) [HP].
-
-_Interpretation_
-- Die Vertragsliste ist reproduzierbar aus den Rohdaten gebaut; das Höchstende ist bei den meisten Losen lesbar.
-- X4 scheitert an fehlenden Laufzeiten, nicht an den Lese-Regeln.
+- Die Vertragsliste ist reproduzierbar aus den Rohdaten gebaut und deckt etwa vier Fünftel der Lose ab; fehlende Laufzeiten bremsen, nicht die Lese-Regeln.
+- Für den Einsatz auf Verträgen vor eForms sind die Lese-Regeln nicht getestet; im Backtest 41 von 52 Vorgängern.
 
 ## Offene Fragen
 
@@ -89,6 +66,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-25 | 3 | Die Objekt-Regel aus Iteration 3 (Commit 4497743) wird nicht in die Aufbereitung übernommen; Iteration 4 baut Merkmale auf Los-Ebene (auch vor eForms) als letzten Verbesserungsversuch | Präzision 45,8 %, Trefferquote 28,9 % (reports/zuordnung_iteration3.md, reports/evaluation_iteration3.md). Entscheidung des Nutzers. |
 | 2026-10-30 | 5 | Zuschlagstabelle je Los mit Grundlaufzeit und Höchstende; Höchstende = spätester plausibler Kandidat aus Datum, Höchstlaufzeit, BT-36 und Anzahl × Länge im Freitext; Regel 1a (Enddatum ist Höchstende) | Praxis der Felder (reports/verlaengerung_praxis_iteration5.md), Entwicklungs- und Teststichprobe (reports/hoechstende_pruefung_iteration5_*.md) |
 | 2026-10-30 | 4 | Die Regel `zuordnung_los.py` wird nicht in die Aufbereitung übernommen; Merkmale je Los (`los_merkmale.py`) und Laufzeitende mit Herkunft werden Grundlage der Zuschlagstabelle in Iteration 5 | Entscheidung „Idee anpassen“ nach Iteration 4 (reports/evaluation_iteration4.md). Entscheidung des Nutzers. |
+| 2026-11-04 | 5 | Die Vertragsliste je Los (Grundlaufzeit, Höchstende, Herkunft) ist der Datenstand für Iteration 6/7; die Backtest-Paare werden nur für die Bewertung genutzt | Entscheidung „Idee anpassen“ nach Iteration 5 (reports/evaluation_iteration5.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -139,3 +117,10 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Erkenntnisse – Interpretation:** Die Bausteine taugen für eine Zuschlagstabelle je Los; die Zuordnung taugt nur als Vorschlagswerkzeug.
 - **Übergabe an die nächste Phase:** Iteration 5 baut die Tabelle der Zuschläge mit Laufzeitende und Herkunft (auch vor eForms) als Grundlage
   für Prognose und Backtest.
+
+### Iteration 5 – 2026-11-04
+
+- **Was gemacht:** Zuschlagstabelle je Los mit Lese-Regeln für das Höchstende (Entwicklungs- und Teststichprobe); Backtest-Paare mit Vorgänger-Ende; Zweitprüfungsvorlage mit Ködern.
+- **Erkenntnisse – Fakten:** 9.915 Lose, X4 = 79,7 %, Höchstende-Genauigkeit im Test 53/60; 61 von 68 Paaren mit bestimmbarem Ende (reports/vertragsliste_iteration5.md, reports/hoechstende_pruefung_iteration5_test.md).
+- **Erkenntnisse – Interpretation:** Die Tabelle trägt eine Vertragsliste; Vorgänger vor eForms sind für die Lese-Regeln ungeprüft.
+- **Übergabe an die nächste Phase:** An Phase 6 (Prototyp, Iteration 7): Liste je Los. An Phase 4: nur bei Prognose-Variante je Auftraggeber.

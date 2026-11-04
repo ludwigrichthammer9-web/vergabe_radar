@@ -11,28 +11,22 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 2 (Abschluss), 2026-10-23. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 5 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Noch nicht begonnen.** Die Kennzahlen (Trefferquote, Präzision, Vorlauf) sind in CRISP-DM.md vorgeschlagen, aber noch
-nicht festgelegt. Iteration 2 liefert erste Hinweise zur Backtest-Basis.
+**Erster Backtest durchgeführt.** Kennzahl Trefferquote im Fenster ±3 Monate; Referenz R0; Evaluator-Prüfung liegt vor.
+
+Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 
 ### Fakten (aus den Daten)
 
-Quellen: **[K]** [kennzahlen_iteration2.md](../../reports/kennzahlen_iteration2.md), **[Erg]** [ergebnis_iteration2.md](../../reports/ergebnis_iteration2.md),
-**[E2]** [evaluation_iteration2.md](../../reports/evaluation_iteration2.md).
-
-- 629 eForms-Zuschläge (Gebäudereinigung) haben ein Laufzeitende bis 23.10.2026. Ihre Median-Laufzeit liegt bei 12 Monaten,
-  über alle eForms-Zuschläge bei 36. 410 der 629 stammen aus 2024. 187 haben eine Verlängerungsoption. [K], [E2]
-- Die Zuordnung zum Nachfolger gelang über den Auftraggeber nur in 5 von 30 Fällen. [Erg]
-- Unter 6 objektgleichen Paaren sind 3 vorzeitige Neuvergaben. Nur bei A13 ist der Vorlauf unabhängig gemessen: 5,1 Monate. [Erg], [E2]
-- Bei A2 und A16 lag das Ende der Grundlaufzeit 4,7 bzw. 2,7 Jahre vor der Neuausschreibung (Verlängerungen). [Erg]
+- Backtest-Basis: 52 von Rechercheur und Prüfer bestätigte Paare (X1), Zweitprüfung 61/67 = 91,0 % (KI-unterstützt, nicht unabhängig) [ZP].
+- Trefferquote R1 28,8 %, R0 17,3 %, Median-Abweichung R1 +0,6 Monate bei zweigipfliger Verteilung (20 früher, 17 später) [BT5].
+- Robustheit: 35,9 % ohne unbestimmbare Höchstenden, 41,7 % ohne lange Lücken, 27,5 % mit einem Paar je Auftraggeber [E5], [AN].
 
 ### Interpretation
 
-- Ein Backtest nur mit eForms-Daten würde vor allem Einjahresverträge prüfen und wäre stark verzerrt (A10). Daten vor eForms über die
-  XML sind voraussichtlich nötig (A11).
-- Für den Backtest zählen nur **zuordenbare** Paare. Deren Zahl ist noch unbekannt (Iteration 3).
-- Vorzeitige Neuvergaben und Verlängerungen müssen im Backtest eigene Kategorien bekommen, sonst werden sie als Fehlprognose gezählt.
+- Verzerrungen: Rückwärtssuche (nur auffindbare Vorgänger), Rechtszensierung, zwei kurze Beobachtungsfenster; die Quote ist keine Präzision eines späteren Produkts.
+- Der Median täuscht (Zweigipfligkeit). Die Paare messen Objektidentität, nicht den direkten Vorgänger.
 
 ## Offene Fragen
 
@@ -55,6 +49,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 |---|---|---|---|
 | – | – | Noch keine Entscheidungen | – |
 | 2026-10-23 | 2 | Backtest erst nach belegter Zuordnung über das Objekt; vorzeitige Neuvergaben werden später als eigene Kategorie geführt | K2 = 16,7 %, 3 von 6 objektgleichen Paaren vorzeitig (reports/evaluation_iteration2.md) |
+| 2026-11-04 | 5 | Trefferdefinition ±3 Monate um R0/R1; Backtest nur auf von zwei Prüfern bestätigten Paaren; Köder zur Kontrolle der Prüfung; Median nicht als Stützung werten | Vorab festgelegt (docs/business.md §7.1); Evaluator (reports/evaluation_iteration5.md) |
 
 ## Iterationslog
 
@@ -75,3 +70,10 @@ _Noch keine Einträge._
   vorzeitige Neuvergaben und Verlängerungen berücksichtigen.
 - **Übergabe an die nächste Phase:** Iteration 3 (Phase 2) zählt zuordenbare Paare mit bekanntem Vorgänger-Ende und den Anteil
   vorzeitiger Neuvergaben.
+
+### Iteration 5 – 2026-11-04
+
+- **Was gemacht:** Backtest R0/R1 auf 52 Paaren (`reports/backtest_iteration5.md`), nachträgliche Analysen (`reports/backtest_analysen_iteration5.md`), Evaluator.
+- **Erkenntnisse – Fakten:** R1 28,8 %, R0 17,3 %, X3 verfehlt; Ergebnis robust gegen Ausreißer, Vorlauf und Auftraggeber-Gewichtung (reports/evaluation_iteration5.md).
+- **Erkenntnisse – Interpretation:** Die Terminprognose „Höchstende − 6 Monate“ wird verworfen; Selektion und nicht direkte Vorgänger verzerren die Quote in unbekannter Richtung.
+- **Übergabe an die nächste Phase:** Backtest-Kennzahlen für spätere Varianten bleiben vergleichbar (gleiche Paare, gleiche Definition). Für den Prototyp: Prüfung der Liste selbst gegen den Backtest.

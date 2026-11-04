@@ -17,9 +17,9 @@ Regeln:
 | 2 | Neuausschreibungen sichtbar und zuordenbar? (Gebäudereinigung, CPV 909; Rückreichweite, Replikation A13) | 2 (Prototyp für 3) | 2026-10-23 | abgeschlossen | **Idee anpassen:** Zuordnung über Auftraggeber verworfen (K2 = 16,7 %); weiter in Phase 2 mit Zuordnung über das Objekt |
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-10-25 | abgeschlossen | **In Phase 2/3 bleiben:** V1 63,3 % (knapp, definitionsabhängig), V2 45,8 % und V3 28,9 % verfehlt; ein letzter Verbesserungsversuch der Regel auf neuen Testdaten, parallel „Produkt mit manueller Prüfung“ in Phase 1 bewerten |
 | 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten Q1 2026) | 2/3 (parallel 1) | 2026-10-25 bis 2026-10-30 | abgeschlossen | **Idee anpassen (Phase 1):** W4 65 % < 85 % (W2 89,5 % bei nur 19 Vorschlägen, W3 56,7 %, W1 42,9 %); keine weitere Regel, Iteration 5 baut eine Vertragsliste aus Zuschlägen |
-| 5 | Vertragsliste aus Zuschlägen: Prognoseziel Höchstende, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | 2026-10-31 bis 2026-11-21 (geplant) | läuft | offen |
-| 6 | Verbesserung der Prognose | 3 → 4 → 5 | – | geplant | – |
-| 7 | Prototyp der Vertragsliste (statt Kundentest) | 6 | – | geplant | – |
+| 5 | Vertragsliste aus Zuschlägen: Prognoseziel Höchstende, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | 2026-10-30 bis 2026-11-04 | abgeschlossen | **Idee anpassen:** R1 28,8 % < 40 % (Schwelle 60 %); Vertragsliste mit Enddaten bleibt Kern, keine Terminprognose |
+| 6 | Prototyp der Vertragsliste und Qualität der Enddaten (Iteration 6 und 7 zusammengelegt) | 3 → 6 → 5 | 2026-11-05 bis 2026-11-15 (geplant) | läuft | offen |
+| 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
@@ -34,6 +34,8 @@ _Nachtrag 2026-10-29 (Entscheidung des Nutzers):_ Kein Kundenkontakt im Projekt.
 selbst bewertet gegen den Backtest, statt eines Kundentests. Annahmen A1 und A15 bleiben ungeprüft (außerhalb des Projektumfangs).
 _Nachtrag 2026-10-30 (Abschluss Iteration 4):_ Iteration 5 wird nach der Entscheidung „Idee anpassen“ eine Vertragsliste aus Zuschlägen
 mit Backtest auf handgeprüften Paaren; die automatische Objekt-Zuordnung wird nicht weiter verbessert.
+
+_Nachtrag 2026-11-04 (Abschluss Iteration 5):_ Nach der Entscheidung „Idee anpassen“ werden die Iterationen 6 und 7 mit `/iteration-start` neu zugeschnitten (Vertragsliste als Prototyp; eine Prognose je Auftraggeber nur, wenn Phase 1 sie begründet).
 
 ---
 
@@ -628,7 +630,7 @@ Das Ergebnis ist robust: Auch mit den Urteilen des Nutzers für die strittigen P
 
 ## Iteration 5: Vertragsliste aus Zuschlägen, erste Prognose und Backtest
 
-**Status:** läuft (angelegt am 2026-10-30)
+**Status:** abgeschlossen am 2026-11-04 (angelegt am 2026-10-30)
 
 **Fokus und Phasen:** 1 → 3 → 4 → 5. Entspricht der „ersten Prognose“ im Iterationsplan ([CRISP-DM.md](CRISP-DM.md#iterationsplan)),
 angepasst nach der Entscheidung zu Iteration 4: Kern ist eine Vertragsliste aus Zuschlägen. Die Objekt-Zuordnung dient nur noch dazu,
@@ -753,6 +755,113 @@ A16 (explorativ).
 > Veröffentlichung mehr als 24 Monate nach der Prognose (4 weitere mehr als 24 Monate davor); ohne die späten Lücken R1 15/40 = 37,5 %, ohne
 > alle Lücken 15/36 = 41,7 %. 40 Auftraggeber für 52 Paare, bei gleicher Gewichtung je Auftraggeber R1 28,5 % (ein Paar je Auftraggeber
 > 11/40 = 27,5 %). Keines der Ergebnisse nähert X3 (≥ 60 %).
+
+**Ergebnis** _(2026-11-04)_
+
+Quellen: **[BT5]** [backtest_iteration5.md](../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../reports/evaluation_iteration5.md) ·
+**[ZP]** [gt_pruefung_iteration5_auswertung.md](../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../reports/backtest_analysen_iteration5.md) ·
+**[VL]** [vertragsliste_iteration5.md](../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../reports/verlaengerung_praxis_iteration5.md) ·
+**[HP]** [hoechstende_pruefung_iteration5_test.md](../reports/hoechstende_pruefung_iteration5_test.md).
+
+_Fakten_
+
+| Kriterium | Ergebnis | Schwelle (vorab) | Urteil Evaluator [E5] |
+|---|---|---|---|
+| X1 Backtest-Basis | 52 bestätigte Paare mit bestimmbarem Ende [ZP] | ≥ 30 | nur formal erfüllt |
+| X2 Zweitprüfung | 61/67 = 91,0 % (Wilson 81,8–95,8, κ 0,70); 9/10 Köder erkannt; KI-unterstützt [ZP] | ≥ 85 % | nur formal; blindes Bestätigen = 85,1 % |
+| **X3 Trefferquote** | **R1 15/52 = 28,8 % (Wilson 18,3–42,3), R0 9/52 = 17,3 %, Abstand +11,5 Prozentpunkte** [BT5] | **≥ 60 % und ≥ +10 Prozentpunkte** | **nicht erfüllt, robust** |
+| X4 Abdeckung | 2.924/3.668 = 79,7 % (Wilson 78,4–81,0) [VL] | ≥ 80 % | nicht erfüllt (knapp), kein Abbruch |
+| Fachliches Kriterium | gleiche Schwelle wie X3 (`docs/business.md` §7.1) | ≥ 60 %, +10 Prozentpunkte | nicht erfüllt; belegt keinen Nutzen |
+
+- Veröffentlichung relativ zur R1-Prognose: 20 mehr als 3 Monate früher, 17 später, 15 im Fenster; Median +0,6 Monate (zweigipflig) [BT5].
+- Robustheit: ohne unbestimmbare Höchstenden 35,9 %, ohne lange Lücken 41,7 %, ein Paar je Auftraggeber 27,5 %; kein Vorlauf rettet X3 [E5], [AN].
+- Das Höchstende hilft, wo der Text ein Datum nennt (7/14 gegenüber 1/14 bei R0) und bei belegter Verlängerung (10/24 gegenüber 4/24); ohne belegte Verlängerung 5/28 für beide [BT5].
+- 12 von 52 Paaren mit Veröffentlichung mehr als 24 Monate nach der Prognose (bis 95 Monate) [AN]; 41 von 52 Vorgängern vor eForms [BT5].
+- Lese-Regeln Höchstende: Entwicklung 30/40, Test 53/60 (nur eForms-Lose, Claude allein) [HP]. BT-537/DATE_END = Ende der Grundlaufzeit [VP].
+- Die Vorab-Festlegung (Hypothese, X1–X4, fachliches Kriterium, R0/R1 und Baseline-Skript vor dem Lauf committet) ist belegt (25f7dd3, f0ee271, 4ab0f36).
+
+_Interpretation_
+
+- **Die Hypothese ist widerlegt.** Die einfache Regel „Höchstende − 6 Monate“ trifft deutlich seltener als vorab verlangt; R1 ist nur besser als R0.
+- Die Fehler streuen in beide Richtungen (Optionen werden gezogen oder nicht, Zwischenverträge, nicht direkte Vorgänger); sie lassen sich aus Vorgänger-Daten allein nicht auflösen.
+- Die Zweitprüfung bestätigt die Handsuche nicht unabhängig (A18); die Paare messen Objektidentität, nicht den direkten Vorgänger [E5].
+- Selektion (Rückwärtssuche, nur auffindbare Vorgänger) und Rechtszensierung verzerren die Quote in unbekannter Richtung; sie ist keine Präzision eines späteren Produkts [E5].
+- Dass eine Vertragsliste ohne Terminprognose Nutzen hat, ist nicht belegt (A1, A15) [E5].
+
+**Entscheidung** _(2026-11-04, Entscheidung des Nutzers nach Vorschlag von Claude und Evaluator)_
+
+**Idee anpassen (Phase 1)**, gemäß der vorab festgelegten Folge „X1 ≥ 30 und R1 < 40 % → Idee anpassen“.
+- Die Punktprognose „Höchstende − 6 Monate“ wird verworfen (A8 und A14 für diese Variante widerlegt, A10 für die Variante „nur eForms-Vorgänger“).
+- **Produktkern:** Vertragsliste mit Enddaten (Ende der Grundlaufzeit, Höchstende, Herkunft; Abdeckung etwa 80 % der Lose) **ohne Terminprognose**.
+- Phase 1 bestimmt in Iteration 6, welches Kriterium eine Liste ohne Terminprognose erfüllen soll und ob ein Prognosefenster je Auftraggeber (Optionsausübung) einen zweiten Versuch lohnt.
+- A11 und A18 bleiben unverändert (A18: Zweitprüfung KI-unterstützt, nicht unabhängig); A16 bleibt „ungeprüft“ mit verstärktem Warnsignal.
+- Offen aus der Evaluation: unabhängige Handprüfung (z. B. 10 Paare ohne Hilfsmittel), Test der Lese-Regeln für Vorgänger vor eForms, Prüfung der langen Lücken auf Zwischenverträge.
+
+---
+
+## Iteration 6: Prototyp der Vertragsliste und Qualität der Enddaten
+
+**Status:** läuft (angelegt am 2026-11-04)
+
+**Fokus und Phasen:** 3 → 6 → 5. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) (dort „Verbesserung der Prognose“) gemäß der
+Entscheidung zu Iteration 5: Die Terminprognose ist verworfen, der Produktkern ist die Vertragsliste mit Enddaten. Iteration 6 und 7 (Prototyp)
+sind **zusammengelegt** (Entscheidung des Nutzers, 2026-11-04). Die geforderten zwei CRISP-DM-Zyklen sind mit den Iterationen 1 bis 5 erfüllt.
+
+**Hypothese** _(vorab festgelegt am 2026-11-04, vor Kenntnis der Ergebnisse)_
+„Eine Vertragsliste aus den eForms-Zuschlägen der Gebäudereinigung nennt in einer unabhängig von Hand geprüften Zufallsstichprobe für mindestens 90 %
+der Einträge ein korrektes Ende der Grundlaufzeit und macht beim Höchstende in höchstens 10 % der Fälle eine falsche Angabe. Dabei deckt sie
+mindestens 80 % der Lose ab.“
+
+**Begriffe** _(vorab festgelegt)_
+- **Liste:** `data/processed/vertragsliste_909.csv` aus `src/prepare/vertragsliste.py` (je Los Ende der Grundlaufzeit, Höchstende, Herkunft). Änderungen an den
+  Lese-Regeln zur Abdeckung (Schritt 1) werden committet, **bevor** die Stichprobe gezogen wird.
+- **Stichprobe:** 60 zufällige Lose (Seed vor dem Ziehen festgelegt, höchstens 2 Lose je Zuschlag), aus der Liste mit Veröffentlichung Q4 2025 bis Q3 2026; ohne
+  die Lose der früheren Stichproben (`reports/hoechstende_pruefung_iteration5_*.md`) und ohne Notices der Handsuche.
+- **Korrekt (Y1):** Das Ende der Grundlaufzeit der Liste stimmt (ein Tag Toleranz) mit der Original-Bekanntmachung überein. **Y2:** Das Höchstende ist korrekt oder als
+  „unbestimmbar“ gekennzeichnet; „Höchstende = Grundlaufzeit“ wegen „keine Angabe“ zählt als korrekt, wenn der Text keine Verlängerung nennt.
+- **Prüfung:** durch den Nutzer (oder den Kommilitonen) **ohne KI-Hilfe**, anhand der Original-Bekanntmachung (TED-Link, Texte BT-57/BT-54/BT-24); Hilfsmittel je Prüfer vermerkt.
+- **Abdeckung (Y3):** Anteil der Lose der eForms-Zuschläge (Population wie Iteration 4, veröffentlicht Q4 2025 bis Q3 2026) mit Prognosedatum bzw. Ende der Grundlaufzeit.
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-11-04)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| Y1 | Ende der Grundlaufzeit korrekt (60 Zufallslose) | ≥ 90 % | A4, A13, A11 |
+| Y2 | Höchstende korrekt oder als „unbestimmbar“ gekennzeichnet (nie falsch behauptet) | ≥ 90 % | A12 |
+| Y3 | Abdeckung der Lose mit Enddatum (Los-Ebene, Q4 2025 bis Q3 2026) | ≥ 80 % | A4, A13 |
+| Y4 | Prototyp vorhanden: Liste für eine Region mit Quelle und Unsicherheit je Eintrag | Ja/Nein | – |
+
+Explorativ, ohne Schwelle: Zahl der Lose, deren Grundlaufzeit in den nächsten 12 und 24 Monaten endet; Anteil der 52 Backtest-Paare im **vorab festgelegten**
+Beobachtungsfenster „Ende der Grundlaufzeit − 12 Monate bis Höchstende + 12 Monate“ (nur beschreibend, weil die Paare bekannt sind); 10 Paare der Handsuche, die der Prüfer ohne
+Hilfsmittel beurteilt (A18); Prüfzeit je Eintrag (A17).
+
+**Was folgt aus welchem Ergebnis**
+- Y1 bis Y4 erfüllt → **weiter:** Der Prototyp ist das Ergebnis; danach Lab-Log, Vortrag, Abschluss des Projekts. Eine eigene Iteration 7 entfällt.
+- Y1 oder Y2 verfehlt, Y1 ≥ 70 % → **zurück zu Phase 3:** Lese-Regeln nachbessern und eine neue Stichprobe ziehen (ohne Wiederverwendung der geprüften Lose).
+- Y1 < 70 % → **Idee anpassen:** Liste nur mit gesicherten Feldern (Grundlaufzeit aus BT-537), Höchstende nur als Hinweis.
+- Y3 verfehlt → **kein Abbruch,** die Abdeckung wird im Prototyp offen genannt.
+- Y4 nicht erfüllt → Phase 6 wiederholen, bevor die Iteration abgeschlossen wird.
+
+**Zeitrahmen:** 2026-11-05 bis 2026-11-15, etwa 3 bis 4 Arbeitssitzungen; Nutzer etwa 2 Stunden für die Stichprobenprüfung (ohne KI-Hilfe).
+
+**Plan**
+1. Phase 3: Abdeckung prüfen und, wenn sinnvoll, Ersatzquellen für fehlende Laufzeiten ergänzen; Regeln vorab committen (`src/prepare/vertragsliste.py`).
+2. Phase 5: Stichprobe mit 60 Losen ziehen (Seed vorab) und Prüfvorlage mit TED-Links erzeugen (`reports/liste_pruefung_iteration6.md`).
+3. Prüfung durch den Nutzer ohne KI-Hilfe (60 Lose und 10 Paare der Handsuche), Hilfsmittel vermerkt.
+4. Auswertung Y1 bis Y3 mit Schlüssel-Hash und Lese-Regeln für Vorgänger vor eForms, soweit in der Stichprobe (`reports/liste_auswertung_iteration6.md`).
+5. Phase 6: Prototyp der Liste für eine Region (z. B. Oberpfalz) als Tabelle und Markdown mit Quelle und Unsicherheit je Eintrag (`src/report/`, `reports/beispiel_liste.md`).
+6. Selbstbewertung des Prototyps, Evaluator, `/iteration-ende`.
+
+**Geprüfte Annahmen:** A4, A13 (Los-Ebene), A11 (nur soweit in der Stichprobe), A12 (Abgrenzung auf Los-Ebene), A18 (10 Paare ohne Hilfsmittel), A17 (teilweise, Prüfzeit).
+A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
+
+> **Fortschritt 2026-11-05 (Schritt 1, Kriterien Y1–Y4 unverändert, vor dem Ziehen der Stichprobe):** Analyse der 744 Lose ohne Enddatum (Q4 2025 bis Q3 2026):
+> 283 mit Dauer, aber ohne Beginn; 364 ohne Beginn und ohne Dauer (28 davon „unbefristet“); 97 mit Beginn, aber ohne Dauer (79 „unbefristet“); 9 unplausibel.
+> Um Y3 (≥ 80 %) zu erreichen, fehlen 12 Lose (2.936/3.668); das ginge nur über Schätzungen. **Festlegung:** Y3 und Y1 bleiben strikt (nur Enddatum aus den Feldern bzw.
+> Beginn + Dauer), die Abdeckung bleibt bei 79,7 % und Y3 gilt damit voraussichtlich als knapp verfehlt. Für den Prototyp gibt es zusätzlich die Spalte `gl_geschaetzt`
+> (Veröffentlichung + Dauer, wenn nur die Dauer vorliegt; 87,4 % der Lose mit Schätzung); sie wird im Prototyp als „geschätzt“ gekennzeichnet und zählt weder für Y1 noch für Y3.
+> Grund: Der Beginn liegt meist Monate nach der Veröffentlichung; eine Schätzung würde sonst als geprüftes Enddatum erscheinen. Skript `src/prepare/vertragsliste.py`
+> (neue Spalte, bestehende Spalten und X4 unverändert).
 
 **Ergebnis:** offen
 
