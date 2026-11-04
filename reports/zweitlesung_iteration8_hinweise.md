@@ -28,3 +28,8 @@ _Erzeugt mit `src/prepare/zweitlesung_iteration8_zusammenfuehren.py`. Die Hinwei
 | B2 | claude-sonnet-5-5 | SubagentHandback 1, ToolSearch 1, WebFetch 31 | – |
 | B3 | claude-sonnet-5-5 | SubagentHandback 1, ToolSearch 1, WebFetch 30 | – |
 | B4 | claude-sonnet-5-5 | SubagentHandback 1, ToolSearch 1, WebFetch 29 | – |
+
+## Evaluator, Schritt 4a (Uneinigkeiten und Z4), Schlussbemerkung unverändert
+
+Ich habe beide Uneinigkeiten an der HTML-Fassung entschieden und die 10 Z4-Lose geprüft. Gesperrte Dateien habe ich nicht geöffnet, gelesen habe ich nur `docs/iterationen.md`, Abschnitt Iteration 8. Die Zitate stammen aus den Antworten des WebFetch-Hilfsmodells.
+Die Seiten waren nicht abgeschnitten, ein Weiterlesen mit `offset` war nicht nötig. Das Hilfsmodell gibt aber höchstens 125 Zeichen am Stück wörtlich wieder und hat teils zusammengefasst, nämlich bei der Beschreibung von L87, bei den Losen 1 bis 3 von L40 in der ersten Antwort und bei der langen Beschreibung von L72, die es nicht ganz wiedergab. Bei L30, L40 und L7 habe ich deshalb noch einmal gezielt nachgefragt, mit demselben Ergebnis. Für das spätere Gesamturteil wichtig: Ich habe dasselbe Hilfsmodell benutzt wie die Leser. Eine Auslassung durch das Hilfsmodell, etwa ein übersehenes Verlängerungsfeld, würde Z4 also nicht aufdecken. Zwei Widersprüche stehen in den Bekanntmachungen selbst: Bei 404707-2026 nennen die Lose 2 und 3 „max. 31.07.2030“, obwohl das Enddatum 31/08/2030 ist, und bei 112593-2026 passen „3 + 2 × 1 Jahr“, „7 Jahre“ und das Feld 2030 nicht zusammen.
