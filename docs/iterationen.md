@@ -747,6 +747,13 @@ A16 (explorativ).
 > Nach der vorab festgelegten Folge („X1 ≥ 30 und R1 < 40 % → Idee anpassen“) bliebe die Vertragsliste ohne Terminprognose; Ergebnis,
 > Evaluator und Entscheidung folgen mit `/iteration-ende`.
 
+> **Nachtrag 2026-11-04 (Evaluator und nachträgliche Analysen, explorativ):** Bericht [evaluation_iteration5.md](../reports/evaluation_iteration5.md)
+> (X3 robust verfehlt; Zweitprüfung als unabhängige Bestätigung fraglich; „Idee anpassen“ trägt formal). Analysen laut Auflage
+> ([backtest_analysen_iteration5.md](../reports/backtest_analysen_iteration5.md), `src/model/analyse_backtest.py`): 12 von 52 Paaren mit
+> Veröffentlichung mehr als 24 Monate nach der Prognose (4 weitere mehr als 24 Monate davor); ohne die späten Lücken R1 15/40 = 37,5 %, ohne
+> alle Lücken 15/36 = 41,7 %. 40 Auftraggeber für 52 Paare, bei gleicher Gewichtung je Auftraggeber R1 28,5 % (ein Paar je Auftraggeber
+> 11/40 = 27,5 %). Keines der Ergebnisse nähert X3 (≥ 60 %).
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
