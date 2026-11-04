@@ -1045,6 +1045,10 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > **Rohwerte der zweiten Abgabe:** Y1 19/80 = 23,8 %, Y1r 8/15, Y2 51/80 = 63,8 %, Y2b 43/72 = 59,7 %; Summe 143 Minuten, Median 1 Minute. Quelle: 28 × „Text“, 67 × „unbekannt“, nie „Feld“; Hilfsmittel 79 × „keine“, 16 × „Kalenderberechnung“.
 > Wieder keine einzige Datumsabweichung (27 Datumsangaben), alle Abweichungen bei Y1 sind „unbekannt“; bei Quelle „Text“ stimmt die Liste in 19 von 20 Fällen der Hauptstichprobe (Wilson 76,4–99,1). Echte Y2-Fehler mit Datum: L72, L82. Die Einordnung der ersten Abgabe gilt unverändert.
 
+> **Nachprüfung (Schritt 3b, vor dem Ausfüllen festgelegt):** Für die 68 Lose mit „unbekannt“ erzeugt `src/prepare/nachpruefung_iteration7.py` eine verkürzte Vorlage `reports/liste_nachpruefung_iteration7.md` (SHA-256 `129c22afa0a65d80892c7150b6963854916f381966a3e0ab84a5e93bedf9dcac`), nur mit Link und Los-Titel, ohne Listenwerte.
+> Der Prüfer öffnet das TED-Original und trägt Beginn/Ende/Dauer der Felder, Ende der Grundlaufzeit, Quelle, Hilfsmittel und Minuten ein. Kriterien und Schwellen bleiben unverändert; für Lose mit Nachprüfung zählt der Nachprüfungs-Eintrag, die erste Abgabe bleibt als Rohwert dokumentiert.
+> Ich (Claude) kenne die Listenwerte; die Eingaben des Prüfers werden nicht durch mich ergänzt oder korrigiert.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
