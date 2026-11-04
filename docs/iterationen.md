@@ -21,6 +21,7 @@ Regeln:
 | 6 | Prototyp der Vertragsliste und Qualität der Enddaten (Iteration 6 und 7 zusammengelegt) | 3 → 6 → 5 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-15) | abgeschlossen | **Zurück zu Phase 3:** Y1 88,3 % nach Korrektur (L60), 90,0 % laut Auswertung, Verankerung und Unabhängigkeit offen; Y2 91,7 %, Y3 79,7 % (knapp verfehlt), Y4 Prototyp erfüllt mit bekannten Fehlern; Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe |
 | 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
 | 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen | 3 → 5 → 6 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-09) | abgeschlossen | **Abschluss mit diesem Stand, kein dritter Regelversuch:** Y1 36/47 = 76,6 % (Kürzung auf L1–L50), Y1r 8/15, Y2 und Y2b verfehlt, Y3 nicht sauber erfüllt, Y4 teilweise; Y1 ist ein Mischmaß aus Listen- und Prüfungsfehlern, Regel 1b weder belegt noch widerlegt; Ende der Grundlaufzeit „laut Bekanntmachung“, Höchstende nur Hinweis |
+| 8 | KI-Zweitlesung der Stichprobe von Iteration 7 (zwei KI-Leser, Liste eingefroren, reine Messung) | 5 | 2026-11-04 bis 2026-11-05 (geplant) | läuft | offen |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
@@ -1095,3 +1096,68 @@ _Interpretation_
 **Entscheidung** _(Nutzer, 2026-11-04):_ **Abschluss mit diesem Stand, kein dritter Regelversuch** (vorab festgelegte Folge „Y1 zwischen 70 % und 90 %“; „weiter“ ist ausgeschlossen, „Idee anpassen“ greift nicht).
 Die Liste führt das Ende der Grundlaufzeit als „laut Bekanntmachung“, das Höchstende nur als Hinweis; die Fehlerquote wird offen genannt (Y1 76,6 % als Mischmaß). Die Prüfer-Einträge werden nicht nachträglich korrigiert.
 Als letzte Iteration folgt eine reine Messung (KI-Zweitlesung mit eingefrorener Liste), die das Ergebnis von Iteration 7 nicht ersetzt.
+
+---
+
+## Iteration 8: KI-Zweitlesung der Stichprobe von Iteration 7
+
+**Status:** läuft (angelegt am 2026-11-04)
+
+**Fokus und Phasen:** nur Phase 5 (Messung). Liste und Lese-Regeln bleiben im Stand von Commit a93785e eingefroren (Entscheidung zu Iteration 7: kein dritter Regelversuch).
+Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) („7+ Ausbau“): Der Evaluator nennt eine unabhängige Lesung der Originale als das, was für ein belastbares Urteil fehlt [E7]; ohne zweiten menschlichen Prüfer ist ein KI-Leser die einfachste Lösung.
+**Diese Iteration ersetzt das Ergebnis von Iteration 7 nicht**; beide Messungen werden nebeneinander berichtet. Der Nutzer prüft nicht mehr selbst (Entscheidung des Nutzers, 2026-11-04).
+
+**Hypothese** _(vorab festgelegt am 2026-11-04, vor dem Lauf der Leser)_
+„Zwei voneinander unabhängige KI-Leser, die nur das TED-Original sehen (ohne Listenwerte und ohne Einträge des Prüfers), kommen beim Ende der Grundlaufzeit bei mindestens 90 % der 80 Zufallslose
+der Iteration 7 zum selben Datum wie die Vertragsliste.“
+
+**Begriffe** _(vorab festgelegt)_
+- **Lose:** alle 95 Lose der Iteration 7 (80 Typ Y, 15 Typ R), Nummern L1–L95 wie dort. Beschreibend zusätzlich 143100-2026 Lose 8, 9, 14 (Oberpfalz-Prototyp, Typ „text_festlaufzeit“; Entwicklungsdaten, zählt nicht).
+  Für den Typ „text_festlaufzeit“ gibt es keine Lose außerhalb der bei der Entwicklung angesehenen Bekanntmachungen (122 Lose in 9 Bekanntmachungen, alle in `reports/entwicklung_iteration7_notices.txt`); er bleibt ungetestet.
+- **Vorlage für die Leser:** je Los nur Nummer, Bekanntmachung, Los-Nummer, Los-Titel, TED-Link (`reports/zweitlesung_iteration8_vorlage.md`, SHA-256 im Commit vor dem Lauf). Keine Listenwerte, keine Prüfer-Einträge, keine Hinweise auf Typ Y/R.
+- **Leser:** zwei Subagenten in getrennten Läufen, **Leser A = Opus, Leser B = Sonnet**, ohne Kenntnis voneinander. Sie bekommen die Vorlage im Auftrag, lesen je Los die TED-Seite der Bekanntmachung (ganzer Abschnitt zur Laufzeit des Loses: Beginn, Ende, Dauer, Verlängerung, Beschreibung) und dürfen **keine Projektdateien** öffnen.
+  Je Los: Ende der Grundlaufzeit (Datum oder `unbekannt`), Höchstende (Datum, `keine Verlängerung`, `keine Angabe` oder `unbestimmbar`), wörtliches Zitat der tragenden Textstelle, Gebäudereinigung ja/nein. Die Antworten werden unverändert gespeichert (`reports/zweitlesung_iteration8_leser_a.csv`, `…_leser_b.csv`).
+  Nach dem Lauf prüft Claude in den Protokollen der Subagenten, welche Dateien sie geöffnet haben; jeder Zugriff auf Projektdateien wird im Ergebnis genannt.
+- **Vergleichswert:** Stimmen A und B überein (ein Tag Toleranz), gilt ihr Wert. Sonst entscheidet der Subagent `evaluator` am TED-Original anhand der Zitate; kann er nicht entscheiden, gilt `unklar`.
+  `unklar` und `unbekannt` beim Vergleichswert zählen als Abweichung der Liste (vorsichtig) und werden getrennt ausgewiesen.
+- **Korrekt** wie in Iteration 7: Ende der Grundlaufzeit ein Tag Toleranz; Höchstende korrekt oder Liste „unbestimmbar“, „Höchstende = Grundlaufzeit“ korrekt bei Vergleichswert „keine Verlängerung“ oder „keine Angabe“.
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-11-04)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| Z0 | Leser A und B stimmen beim Ende der Grundlaufzeit überein (95 Lose) | ≥ 90 % | A19 (neu) |
+| Z1 | Ende der Grundlaufzeit: Liste = Vergleichswert (80 Zufallslose) | ≥ 72/80 = 90 % | A4, A13 |
+| Z2 | dasselbe bei den 15 Regelwirkungs-Losen (Regel 1b, Typ „text_laufzeit_option“) | ≥ 12/15 | – |
+| Z3 | Höchstende korrekt oder „unbestimmbar“ (80 Lose) / nur Lose, bei denen die Liste ein Höchstende nennt | ≥ 90 % / ≥ 85 % | – |
+| Z4 | Kontrolle: Der Evaluator prüft 10 zufällig gezogene Übereinstimmungen von A und B am TED-Original (Seed 20261108, vor dem Lauf committet) | ≥ 9/10 bestätigt | A19 |
+
+Beschreibend, ohne Schwelle: Vergleich Liste / Vergleichswert / Prüfer der Iteration 7 für L1–L50 (Welche der 11 Abweichungen waren Listenfehler, welche Lesefehler?); Y1 nach Losen gewichtet;
+Lose, die ein Leser als „keine Gebäudereinigung“ einstuft (A12); die drei Kontroll-Lose aus 143100-2026.
+
+**Was folgt aus welchem Ergebnis**
+- Z0 oder Z4 verfehlt → die KI-Lesung taugt nicht als Prüfung; Z1 bis Z3 werden nicht gewertet, es bleibt beim Abschluss von Iteration 7.
+- Z0 bis Z4 erfüllt → **weiter (Projektabschluss):** Die Liste gilt beim Ende der Grundlaufzeit als „durch zwei KI-Lesungen gestützt, nicht von Menschen bestätigt“; Regel 1b für den Typ „text_laufzeit_option“ als gestützt. Danach Lab-Log, Vortrag.
+- Z1 zwischen 70 % und 90 % oder Z2 verfehlt (bei erfüllten Z0, Z4) → Abschluss wie Iteration 7 (Ende „laut Bekanntmachung“), Fehlerquote mit beiden Messungen und den Fehlerarten.
+- Z1 < 70 % → **Idee anpassen:** Das Ende der Grundlaufzeit erscheint in der Liste nur als Hinweis.
+- Z3 verfehlt → Höchstende bleibt nur Hinweis (wie bisher).
+- In keinem Fall wird die Regel in dieser Iteration geändert.
+
+**Zeitrahmen:** 2026-11-04 bis 2026-11-05, eine Sitzung; Aufwand des Nutzers nur für Entscheidungen.
+
+**Plan**
+1. Phase 5: Vorlage erzeugen (`src/prepare/zweitlesung_iteration8.py` → `reports/zweitlesung_iteration8_vorlage.md`), Seed für Z4 festlegen; Kriterien, Skript und SHA-256 der Vorlage **vor dem Lauf** committen.
+2. Leser A (Opus) und Leser B (Sonnet) getrennt laufen lassen; Antworten unverändert speichern; Protokolle auf Dateizugriffe prüfen.
+3. Auswertung Z0–Z3 und Dreiervergleich (`src/prepare/auswertung_iteration8.py` → `reports/zweitlesung_iteration8_auswertung.md`).
+4. Evaluator: Uneinigkeiten entscheiden und Z4 am Original prüfen, danach kritische Gesamtprüfung.
+5. `/iteration-ende`; Genauigkeitsangabe im Prototyp nur ergänzen, wenn die Folge es vorsieht.
+
+**Geprüfte Annahmen:** A4, A13 (Enddatum = Ende der Grundlaufzeit auf Los-Ebene); neu vorgeschlagen **A19** „Ein KI-Leser liest Laufzeiten aus TED-Bekanntmachungen so genau, dass er als Zweitprüfer taugt“ (Z0, Z4); A12 nur beschreibend.
+A11, A17, A18 werden nicht geprüft (nur eForms-Lose, keine menschliche Prüfzeit, keine Paare). A1 und A15 bleiben außerhalb des Projektumfangs.
+**Grenzen (vorab benannt):** Die Lese-Regel stammt ebenfalls von einer KI (Claude); gleiche Lesefehler bei Regel und Lesern sind möglich, Z4 fängt das nur teilweise ab.
+Den Zugriff auf Projektdateien kann Claude den Lesern nicht technisch sperren, nur verbieten und hinterher kontrollieren. Die 95 Lose sind Claude samt Listenwerten bekannt; die Leser bekommen sie nicht.
+
+> **Fortschritt 2026-11-04 (Schritt 1, vor dem Lauf der Leser; Kriterien unverändert):** Vorlage `reports/zweitlesung_iteration8_vorlage.md` aus `src/prepare/zweitlesung_iteration8.py` (98 Zeilen: L1–L95, K1–K3), **SHA-256 `5be683ad1fb69c6ea5ee933f6a27f06d9a6f13fc0f952444a025f0615e846450`**; Seed Z4 = 20261108 (im Skript).
+> Durchführung (festgelegt vor dem Lauf): Die TED-Detailseite lädt ihren Inhalt per JavaScript und ist für WebFetch leer (Test an 143100-2026); die Vorlage verlinkt deshalb die HTML-Fassung `ted.europa.eu/de/notice/<Nr>/html`.
+> Jeder Leser läuft in **4 Teilläufen** (L1–L25, L26–L50, L51–L75, L76–L95 + K1–K3), jeweils neuer Subagent desselben Modells; die Teilläufe von A und B wissen nichts voneinander.
+> **Zusätzliche Grenze:** WebFetch gibt die Seite über ein kleines Hilfsmodell weiter; die Leser sollen deshalb wörtliche Zitate verlangen und lange Seiten mit `offset` weiterlesen. Fehler dieses Hilfsmodells treffen beide Leser gleich und sind nur über Z4 (Evaluator am Original) teilweise erkennbar.
