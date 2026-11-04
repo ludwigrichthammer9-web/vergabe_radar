@@ -20,6 +20,7 @@ Regeln:
 | 5 | Vertragsliste aus Zuschlägen: Prognoseziel Höchstende, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | 2026-10-30 bis 2026-11-04 | abgeschlossen | **Idee anpassen:** R1 28,8 % < 40 % (Schwelle 60 %); Vertragsliste mit Enddaten bleibt Kern, keine Terminprognose |
 | 6 | Prototyp der Vertragsliste und Qualität der Enddaten (Iteration 6 und 7 zusammengelegt) | 3 → 6 → 5 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-15) | abgeschlossen | **Zurück zu Phase 3:** Y1 88,3 % nach Korrektur (L60), 90,0 % laut Auswertung, Verankerung und Unabhängigkeit offen; Y2 91,7 %, Y3 79,7 % (knapp verfehlt), Y4 Prototyp erfüllt mit bekannten Fehlern; Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe |
 | 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
+| 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen | 3 → 5 → 6 | 2026-11-05 bis 2026-11-09 (geplant) | läuft | offen |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
@@ -944,3 +945,72 @@ _Interpretation_
 - Der Prototyp wird nach den neuen Regeln neu erzeugt; bekannte Fehler (143100-2026) verschwinden dadurch oder werden gekennzeichnet.
 - A4, A11, A12, A13, A17, A18: Status unverändert, Nachweise ergänzt (siehe `docs/annahmen.md`); A1 und A15 bleiben außerhalb des Projektumfangs.
 - Die Nummerierung der Folge-Iteration (Iteration 7, Phase 3 → 5) legt `/iteration-start` fest.
+
+---
+
+## Iteration 7 (neu): Lese-Regel „Enddatum = Höchstende“ nachbessern und Vertragsliste neu prüfen
+
+**Status:** läuft (angelegt am 2026-11-04)
+
+**Fokus und Phasen:** 3 → 5 → 6. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) („7+ Ausbau“): Rücksprung gemäß der Entscheidung zu Iteration 6
+(„zurück zu Phase 3“, vorab festgelegte Folge). Die Zeile „7“ in der Übersicht (Prototyp, entfällt) bleibt als historischer Stand stehen.
+LN B (Zweierteam, Entscheidung des Nutzers 2026-11-04); die Moodle-Frist ist nicht bekannt, der Zeitrahmen ist deshalb knapp gehalten.
+
+**Hypothese** _(vorab festgelegt am 2026-11-04, vor Kenntnis der Ergebnisse)_
+„Mit einer erweiterten Lese-Regel, die ein Enddatum als Höchstende erkennt, wenn der Text eine kürzere feste Laufzeit nennt, stimmt das Ende der Grundlaufzeit der
+Vertragsliste in einer neuen, nicht gesehenen Zufallsstichprobe bei mindestens 90 % der Lose. Geprüft wird ohne Listenwerte in der Vorlage und ohne KI-Hilfe.“
+
+**Begriffe** _(vorab festgelegt)_
+- **Regel-Erweiterung:** Regel 1a in `src/prepare/vertragsliste.py` erkennt zusätzlich Formulierungen wie „Festlaufzeit von … bis …“, „2+1+1“ bzw. „zwei Jahre mit Option …“,
+  „Laufzeit von X Jahren“, „erste feste Laufzeit bis …“ und „zunächst für die Dauer von …“ ohne Datum. Die Muster und die Stufen A–F für den Prototyp werden in Schritt 1 festgelegt und
+  **committet, bevor die Stichprobe gezogen wird.** Entwicklungstest (zählt nicht): L1, L42, L43, L60 der Iteration 6.
+- **Stichprobe:** 80 zufällige Lose aus `data/processed/vertragsliste_909.csv` (Veröffentlichung Q4 2025 bis Q3 2026, Ende der Grundlaufzeit vorhanden), höchstens 2 Lose je Zuschlag.
+  Ausgeschlossen: die 60 Lose der Iteration-6-Prüfung, die Lose der Stichproben aus Iteration 5 (`reports/hoechstende_pruefung_iteration5_*.md`), die Notices der Handsuche und die
+  Bekanntmachungen der vier Entwicklungsfehler (143100-2026, 448962-2026, 418442-2026, 392720-2026). Der Seed wird **vor dem Ziehen** committet.
+- **Regelwirkung (beschreibend, ohne Schwelle):** bis zu 15 weitere Lose, bei denen die neue Regel das Ende der Grundlaufzeit gegenüber der Fassung der Iteration 6 (Commit c6c8c32) ändert;
+  Prüfung wie die Stichprobe. Sie gehören nicht zu Y1 bis Y2b.
+- **Prüfung:** durch den Nutzer **ohne KI-Hilfe** anhand der Original-Bekanntmachung (TED-Link). Die Vorlage zeigt Los-Titel, TED-Link und die Originaltexte BT-57, BT-54, BT-24, **nicht** die
+  Felder Beginn, Ende, Dauer und BT-58 und nicht die Werte der Liste. Je Eintrag: Ende der Grundlaufzeit, Höchstende, **Quelle** (Text oder Feld der Bekanntmachung), Hilfsmittel (Pflicht,
+  auch „keine“), Minuten sowie Start- und Endzeit je Sitzung. Nennt nur das Feld der Bekanntmachung ein Ende und der Text nichts, trägt der Prüfer dieses Ende mit Quelle „Feld“ ein;
+  „unbekannt“ nur, wenn weder Text noch Feld ein Ende nennen (Klarstellung nach den Auslegungsfällen L8, L48, L49 der Iteration 6). Das ausgefüllte PDF und die CSV kommen mit Hash ins Repo.
+- **Korrekt (Y1):** Das Ende der Grundlaufzeit der Liste stimmt (ein Tag Toleranz) mit dem Eintrag des Prüfers überein. **Y2:** Höchstende korrekt oder als „unbestimmbar“ gekennzeichnet;
+  „Höchstende = Grundlaufzeit“ zählt als korrekt, wenn der Prüfer „keine Verlängerung“ oder „keine Angabe“ einträgt. **Y2b:** wie Y2, aber nur für Lose, bei denen die Liste ein Höchstende nennt.
+- **Gewichtet (beschreibend):** Y1 nach Losen gewichtet (Gewicht = Lose des Zuschlags ÷ gezogene Lose desselben Zuschlags).
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-11-04)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| Y1 | Ende der Grundlaufzeit korrekt (80 Zufallslose) | ≥ 72/80 = 90 % (untere Wilson-Grenze dann etwa 81 %) | A4, A13 |
+| Y2 | Höchstende korrekt oder „unbestimmbar“ (80 Zufallslose) | ≥ 90 % | A12 |
+| Y2b | Höchstende korrekt, nur Lose mit behauptetem Höchstende | ≥ 85 % | A12 |
+| Y3 | Verfahren eingehalten: Regel und Seed vor dem Ziehen committet, Vorlage ohne Listenwerte, Hilfsmittel je Eintrag vermerkt | Ja/Nein | A17 |
+| Y4 | Prototyp neu erzeugt, die Fehler in 143100-2026 (Lose 8, 9, 14 der Oberpfalz-Liste) behoben, Stufen vorab definiert | Ja/Nein | – |
+
+Die Abdeckung (79,7 %) ändert sich durch die Regel nicht und ist kein Kriterium; sie wird im Prototyp offen genannt.
+Beschreibend, ohne Schwelle: Y1 nach Losen gewichtet; Y1 nur für Lose, bei denen der Text etwas zur Laufzeit sagt (Quelle „Text“); Prüfzeit je Los; Regelwirkung an den bis zu 15 geänderten Losen.
+
+**Was folgt aus welchem Ergebnis**
+- Y1 bis Y4 erfüllt → **weiter:** Der neu erzeugte Prototyp ist das Ergebnis; danach Lab-Log, Vortrag, Abschluss des Projekts.
+- Y1 zwischen 70 % und 90 % → **kein dritter Regelversuch:** Die Liste führt das Ende der Grundlaufzeit als „laut Bekanntmachung“, die Fehlerquote wird offen genannt, das Projekt wird mit diesem Stand abgeschlossen.
+- Y1 < 70 % → **Idee anpassen:** Liste nur mit gesicherten Feldern, das Ende der Grundlaufzeit nur als Hinweis.
+- Y1 erfüllt, Y2 oder Y2b verfehlt → Höchstende nur als Hinweis kennzeichnen.
+- Y3 oder Y4 nicht erfüllt → den Schritt wiederholen, bevor die Iteration abgeschlossen wird.
+
+**Zeitrahmen:** 2026-11-05 bis 2026-11-09, etwa 3 bis 4 Arbeitssitzungen; Nutzer etwa 5 bis 6 Stunden für die Prüfung der 80 Lose und etwa 40 Minuten für die Regelwirkungs-Lose (ohne KI-Hilfe).
+
+**Plan**
+1. Phase 3: Regel 1a erweitern, Stufen A–F für den Prototyp festlegen, Entwicklungstest an L1, L42, L43, L60; Regeländerung committen (`src/prepare/vertragsliste.py`).
+2. Phase 3/5: Seed committen, danach 80 Lose und bis zu 15 Regelwirkungs-Lose ziehen; Vorlage ohne Listenwerte; Schlüssel lokal, SHA-256 von Schlüssel und Vorlage im Commit (`src/prepare/stichprobe_iteration7.py`, `reports/liste_pruefung_iteration7.md`).
+3. Prüfung durch den Nutzer ohne KI-Hilfe mit Quelle, Hilfsmittel und Zeitprotokoll je Eintrag; PDF und CSV ins Repo.
+4. Phase 5: Auswertung Y1, Y2, Y2b und beschreibende Kennzahlen (`src/prepare/auswertung_iteration7.py`, `reports/liste_auswertung_iteration7.md`).
+5. Phase 6: Prototyp der Oberpfalz-Liste mit den neuen Regeln und den vorab definierten Stufen neu erzeugen (`src/report/beispiel_liste.py`).
+6. Selbstbewertung, Evaluator, `docs/ki_irrwege.md` ergänzen (Aufbaufehler in Teil B der Iteration 6, verankerte Vorlage, falsche Aussage zu L6), `/iteration-ende`.
+
+**Geprüfte Annahmen:** A4, A13 (Los-Ebene, Enddatum = Grundlaufzeit?), A12 (nur Hinweis), A17 (Prüfzeit mit Zeitprotokoll).
+A11 bleibt ungeprüft (auch diese Stichprobe enthält nur eForms-Lose). **A18 wird in dieser Iteration nicht geprüft** (die Paare gehören zum verworfenen Backtest; ein weiterer Test hätte nur mit Paaren Sinn, die der Prüfer noch nicht kennt); A18 bleibt als offene Grenze stehen.
+A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
+
+**Ergebnis:** offen
+
+**Entscheidung:** offen
