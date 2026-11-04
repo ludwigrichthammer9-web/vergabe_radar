@@ -1,10 +1,10 @@
-"""Iteration 6, Schritt 5 (Phase 6): Prototyp der Vertragsliste für eine Region (Oberpfalz, NUTS DE23) mit Quelle und Unsicherheit je Eintrag (Y4).
+"""Iteration 7, Schritt 5 (Phase 6; Fassung der Iteration 6 neu erzeugt): Prototyp der Vertragsliste für eine Region (Oberpfalz, NUTS DE23) mit Quelle und Unsicherheit je Eintrag (Y4).
 
 Eingaben (keine neue API-Abfrage):
 - data/processed/vertragsliste_909.csv aus src/prepare/vertragsliste.py (Ende der Grundlaufzeit, Höchstende, Herkunft je Los)
 - data/raw/ted_search/zielgruppe_oberpfalz_20261023/page_0001.json (unverändert gespeicherter Abruf mit Leistungsort
   place-of-performance-subdiv-lot = DE23*, Zuschläge 25.10.2023 bis 23.10.2026; deckt den Zeitraum der Liste ab)
-- Prüfung der Stichprobe (src/prepare/auswertung_iteration6.bewertung) für die Fehlerquote je Unsicherheitsstufe
+- Prüfung der Stichprobe der Iteration 7 (src/prepare/auswertung_iteration7.bewertung, Typ Y, L1 bis L50) für die Fehlerquote je Unsicherheitsstufe
 
 Regeln
 1. Region je Los: NUTS-Codes der Bekanntmachung werden wie in vertragsliste.je_los den Losen zugeordnet. Ein Los gehört zur Liste,
@@ -13,7 +13,7 @@ Regeln
    CountrySubentityCode; Adresse aus dem Feld `links` der API-Antwort, XML unverändert in data/raw/ted_xml/beispiel_liste_20261104/).
    Das Los gehört dazu, wenn mindestens einer seiner Codes mit DE23 beginnt. Zuordnung XML-Los zu Listen-Los über den Lostitel,
    sonst über die Reihenfolge. Scheitert das, bleiben alle Lose drin und werden markiert („Region je Los unklar“).
-2. Unsicherheitsstufe je Eintrag nach der Herkunft (Einteilung nach Kenntnis der Prüfergebnisse, also nachträglich):
+2. Unsicherheitsstufe je Eintrag nach der Herkunft (Einteilung für Iteration 7 vor dem Ziehen der Stichprobe festgelegt, 2026-11-04):
    A Höchstende steht ausdrücklich im Text oder Feld; B Höchstende = Anzahl × Länge der Verlängerungen; C keine Angabe zur
    Verlängerung (Höchstende = Grundlaufzeit angenommen); D Verlängerung erwähnt, Länge offen; E Ende nur geschätzt
    (Veröffentlichung + Dauer, ungeprüft); F kein Ende bekannt.
@@ -39,7 +39,8 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "src" / "prepare"))
 
-from auswertung_iteration6 import bewertung, wilson  # noqa: E402
+from auswertung_iteration6 import wilson  # noqa: E402
+from auswertung_iteration7 import MAX_Y, bewertung  # noqa: E402
 from vertragsliste import je_los  # noqa: E402
 
 LISTE = ROOT / "data" / "processed" / "vertragsliste_909.csv"
@@ -50,10 +51,6 @@ OUT_CSV = ROOT / "reports" / "beispiel_liste_oberpfalz.csv"
 REGION, REGION_NAME = "DE23", "Oberpfalz"
 STICHTAG = date(2026, 11, 4)
 TED = "https://ted.europa.eu/de/notice/-/detail/{}"
-# Fehler, die erst nach der Auswertung auffielen (Evaluator, Abschluss Iteration 6; Prüfer und Liste nannten beide 30.06.2030, der Text
-# sagt „2+1+1“, also Grundlaufzeit bis 30.06.2028). Die Auswertung (auswertung_iteration6.py) bleibt unverändert, hier wird nur korrigiert.
-KORREKTUREN = {"L60": {"ok1": False}}
-
 GL_TEXT = {"enddatum": "Enddatum (BT-537)", "beginn_plus_dauer": "Beginn + Dauer (BT-536 + BT-36)",
            "text_zunaechst": "Text „zunächst bis …“", "text_festlaufzeit": "Text „Festlaufzeit bis …“",
            "text_laufzeit_option": "Text: feste Dauer + Option", "unbekannt": "–", "unplausibel": "Felder unplausibel"}
@@ -171,18 +168,22 @@ def region_lose(liste: list[dict]) -> tuple[list[dict], dict]:
 
 
 def stichprobe() -> list[dict]:
+    """Zufallslose des Typs Y der Iteration 7 (L1 bis L50 nach der vorab festgelegten Kürzung); `stale`: Höchstende des Prüfers veraltet (siehe Auswertung)."""
     rows, _ = bewertung()
-    return [{**r, **KORREKTUREN.get(r["L"], {})} for r in rows]
+    y = [r for r in rows if r["typ"] == "Y" and int(r["L"][1:]) <= MAX_Y]
+    return [{**r, "stale": r["nach"] == "ja" and r["h_p"].strip().lower() == "unbestimmbar" and r["nennt_h"]} for r in y]
 
 
-def stufen_stichprobe(rows: list[dict]) -> dict[str, tuple[int, int, int]]:
-    """Je Stufe: Lose der Stichprobe, davon Ende der Grundlaufzeit korrekt (Y1), Höchstende korrekt (Y2)."""
-    out = defaultdict(lambda: [0, 0, 0])
+def stufen_stichprobe(rows: list[dict]) -> dict[str, tuple[int, int, int, int]]:
+    """Je Stufe: Lose der Stichprobe, davon Ende der Grundlaufzeit korrekt (Y1); Lose mit aktuellem Höchstende-Eintrag und davon korrekt (Y2)."""
+    out = defaultdict(lambda: [0, 0, 0, 0])
     for r in rows:
         s = out[stufe(r)]
         s[0] += 1
         s[1] += r["ok1"]
-        s[2] += r["ok2"]
+        if not r["stale"]:
+            s[2] += 1
+            s[3] += r["ok2"]
     return {k: tuple(v) for k, v in out.items()}
 
 
@@ -208,6 +209,7 @@ def main() -> None:
     in_region = {(r["notice"], str(r["los"])) for r in lose}
     geprueft = [r["L"] for r in stich_rows if (r["notice"], str(r["los"])) in in_region]
     k_gl = sum(r["ok1"] for r in stich_rows)
+    quote_gl = f"{100 * k_gl / len(stich_rows):.1f}".replace(".", ",")
 
     felder = ["notice", "ted_link", "veroeffentlicht", "auftraggeber", "los", "los_titel", "nuts", "nuts_quelle", "region_eindeutig", "auch_ausserhalb", "beginn",
               "gl_ende", "gl_herkunft", "hoechstende", "hoechstende_herkunft", "gl_geschaetzt", "stufe", "status", "liste_eindeutig"]
@@ -250,14 +252,14 @@ def main() -> None:
 
     legende = ["| Stufe | Bedeutung | Einträge hier | Stichprobe: Lose | Ende GL korrekt | Höchstende korrekt |", "|---|---|---|---|---|---|"]
     for s in "ABCDEF":
-        n, k1, k2 = stich.get(s, (0, 0, 0))
+        n, k1, n2, k2 = stich.get(s, (0, 0, 0, 0))
         legende.append(f"| **{s}** | {STUFE_TEXT[s]} | {zaehl[s]} | {n or '–'} | {quote(k1, n) if n else 'ungeprüft'} | "
-                       f"{quote(k2, n) if n else 'ungeprüft'} |")
+                       f"{quote(k2, n2) if n2 else 'ungeprüft'} |")
 
     md = [
         f"# Vertragsliste Gebäudereinigung {REGION_NAME} (Prototyp, Stand {STICHTAG.strftime('%d.%m.%Y')})",
         "",
-        "_Erzeugt mit `src/report/beispiel_liste.py` (Iteration 6, Schritt 5). Tabelle zum Weiterverarbeiten: "
+        "_Erzeugt mit `src/report/beispiel_liste.py` (Iteration 7, Schritt 5; Lese-Regeln mit Regel 1b). Tabelle zum Weiterverarbeiten: "
         f"[{OUT_CSV.name}]({OUT_CSV.name})._",
         "",
         "Die Liste zeigt öffentliche Aufträge der Gebäudereinigung mit Leistungsort in der Oberpfalz, wann ihre feste Laufzeit endet "
@@ -277,21 +279,22 @@ def main() -> None:
         f"- Status zum {STICHTAG.strftime('%d.%m.%Y')}: " + ", ".join(
             f"{s} {sum(1 for r in lose if r['status'] == s)}" for s in
             ("Grundlaufzeit läuft", "Grundlaufzeit läuft (geschätzt)", "Verlängerungszeit möglich", "Verlängerung offen", "abgelaufen", "kein Ende bekannt")) + ".",
-        f"- Genauigkeit insgesamt (Prüfung einer Zufallsstichprobe von {alle_stich} Losen aus ganz Deutschland, Iteration 6): Ende der "
-        f"Grundlaufzeit laut Auswertung 54/60 = 90,0 % korrekt, nach einem später gefundenen Fehler (L60) {k_gl}/{alle_stich} = "
-        f"{100 * k_gl / alle_stich:.1f}".replace(".", ",") + " %; Höchstende 91,7 % korrekt oder als unbestimmbar gekennzeichnet "
-        "([liste_auswertung_iteration6.md](liste_auswertung_iteration6.md)). **Vorbehalt:** Das Feld „Hilfsmittel“ blieb leer "
-        "(der Prüfer gibt mündlich an, ohne KI-Hilfe geprüft zu haben), und die Vorlage zeigte das Enddatum der Liste an; die Zahl ist "
-        "eher eine Untergrenze der Fehler als eine Genauigkeit.",
+        f"- Genauigkeit insgesamt (Prüfung einer Zufallsstichprobe von {alle_stich} Losen aus ganz Deutschland, Iteration 7, "
+        f"[liste_auswertung_iteration7.md](liste_auswertung_iteration7.md)): Ende der Grundlaufzeit {k_gl}/{alle_stich} = "
+        f"{quote_gl} % übereinstimmend mit dem Prüfer (Wilson 62,8–86,4 %); bei Losen, deren Laufzeit im Text der Bekanntmachung "
+        "steht, 12/12. **Vorbehalte:** Die Prüfung wurde gekürzt (L1 bis L50 statt 80 Lose), 4 Nachprüfungen blieben leer, und bei 5 von 38 Losen "
+        "wich der abgeschriebene Feldwert von den Rohdaten ab ([abschreibecheck_iteration7.md](abschreibecheck_iteration7.md)); die Zahl ist deshalb "
+        "eine Mischung aus Fehlern der Liste und Lesefehlern der Prüfung. Bei den 15 Lose, die Regel 1b ändert, stimmten nur 8 mit dem Prüfer überein "
+        "(der Prüfer übernahm dort das Enddatum des Feldes statt des früheren Datums aus dem Text).",
         "",
         "### Unsicherheit je Eintrag (Spalte „Stufe“)",
         "",
         *legende,
         "",
-        "_Die Einteilung in Stufen ist nach Kenntnis der Prüfergebnisse entstanden. Die Quoten je Stufe beruhen auf wenigen Losen (Klammer: "
-        "95-%-Wilson-Intervall) und stammen überwiegend nicht aus der Oberpfalz. „Ende GL korrekt“ zählt einen Eintrag „unbekannt“ des "
-        "Prüfers als Abweichung (L8, L48, L49, alle Stufe C) und enthält die Korrektur zu L60 (Stufe D). „Höchstende korrekt“ ist bei Stufe D "
-        "per Definition 100 %, weil „unbestimmbar“ immer als korrekt zählt._",
+        "_Die Einteilung in Stufen wurde vor dem Ziehen der Stichprobe festgelegt (2026-11-04). Die Quoten je Stufe beruhen auf wenigen Losen (Klammer: 95-%-Wilson-Intervall) und stammen "
+        "nicht aus der Oberpfalz. „Ende GL korrekt“ zählt einen Eintrag „unbekannt“ des Prüfers (4 leer gebliebene Nachprüfungen) und Lesefehler beim Abschreiben der Felder als Abweichung. "
+        "„Höchstende korrekt“ ist ohne die 15 Lose berechnet, bei denen das Höchstende des Prüfers vor der Nachprüfung eingetragen wurde (veraltet); bei Stufe D ist es per Definition 100 %, "
+        "weil „unbestimmbar“ immer als korrekt zählt._",
         "",
         "## Laufende Verträge",
         "",
@@ -311,14 +314,13 @@ def main() -> None:
         "",
         "## Interpretation",
         "",
-        "- Die Spalte „Stufe“ macht sichtbar, wie verlässlich ein Eintrag ist. Fehler beim Ende der Grundlaufzeit traten in der "
-        "Stichprobe vor allem auf, wenn das Enddatum der Bekanntmachung schon das Höchstende war (Stufe B, ein Fall in Stufe D); in "
-        "Stufe C gab es drei Auslegungsfälle („unbekannt“ des Prüfers). Bei Stufe B, C und D lohnt ein Blick in die Bekanntmachung. "
-        "Bekannte Fehler stehen weiter in der Liste, z. B. Bekanntmachung 143100-2026 (Autobahn GmbH): Dort steht die Festlaufzeit nur im "
-        "Text, das Enddatum ist ein Jahr später.",
-        "- Die Prüfung der Stichprobe ist durch den Prüfer mündlich als ohne KI-Hilfe angegeben, aber nicht in der Vorlage vermerkt; Teil B "
-        "(Paare) stammte aus schon bekannten Paaren und zählt nicht. Die Zahlen sind deshalb vorläufig.",
-        f"- Aus der Oberpfalz liegt {len(geprueft)} Los der Stichprobe vor ({', '.join(geprueft) or '–'}); mehr wurde dort nicht geprüft. "
+        "- Die Spalte „Stufe“ macht sichtbar, wie verlässlich ein Eintrag ist. Stufe A (Ende aus dem Text berichtigt oder Höchstende ausdrücklich genannt) "
+        "ist die sicherste; bei Stufe B, C und D lohnt ein Blick in die Bekanntmachung. Die Quoten je Stufe beruhen auf sehr wenigen Losen.",
+        "- **Regel 1b, Typ „Festlaufzeit-Datum“** (z. B. Bekanntmachung 143100-2026, Autobahn GmbH) ist **nicht** durch die Stichprobe getestet; die Einträge "
+        "stehen in der Liste mit Stufe A, ohne dass ihre Genauigkeit belegt ist. Ebenso ist der Typ „feste Dauer + Option“ nur an 15 Losen mit gemischtem Ergebnis geprüft.",
+        "- Zwei Fehler der Liste fielen in der Prüfung auf: Höchstende bei Bekanntmachung 557125-2026 (Liste 31.08.2037, Text 31.08.2031) und 707425-2025 "
+        "(Liste 31.10.2029, Text 31.10.2030); beide stehen noch so in der bundesweiten Vertragsliste (nicht in der Oberpfalz-Liste).",
+        f"- Aus der Oberpfalz liegt {len(geprueft)} Los der Stichprobe vor ({', '.join(geprueft) or '–'}). "
         "Die Liste kommt ohne Kundentest aus (A1, A15 ungeprüft); ob diese Form für einen Mittelständler nützlich ist, bleibt offen.",
         "",
     ]

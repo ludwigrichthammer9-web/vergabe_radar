@@ -1,6 +1,6 @@
 # Vertragsliste Gebäudereinigung Oberpfalz (Prototyp, Stand 04.11.2026)
 
-_Erzeugt mit `src/report/beispiel_liste.py` (Iteration 6, Schritt 5). Tabelle zum Weiterverarbeiten: [beispiel_liste_oberpfalz.csv](beispiel_liste_oberpfalz.csv)._
+_Erzeugt mit `src/report/beispiel_liste.py` (Iteration 7, Schritt 5; Lese-Regeln mit Regel 1b). Tabelle zum Weiterverarbeiten: [beispiel_liste_oberpfalz.csv](beispiel_liste_oberpfalz.csv)._
 
 Die Liste zeigt öffentliche Aufträge der Gebäudereinigung mit Leistungsort in der Oberpfalz, wann ihre feste Laufzeit endet und wie lange sie höchstens verlängert werden können. **Sie sagt nicht voraus, wann neu ausgeschrieben wird**; eine solche Prognose hat sich in Iteration 5 als nicht tragfähig erwiesen.
 
@@ -10,20 +10,20 @@ Die Liste zeigt öffentliche Aufträge der Gebäudereinigung mit Leistungsort in
 - 70 Bekanntmachungen im Abruf, davon 3 nicht in der Vertragsliste (durch die Population von Iteration 4 ausgeschlossen: 730420-2024, 572966-2025, 695649-2026).
 - **146 Lose** in der Region, davon 108 mit Ende der Grundlaufzeit aus den Feldern (74,0 %); 0 Lose mit unklarer Region je Los. Bei 9 Bekanntmachungen ließ sich der Leistungsort nur über das eForms-XML einem Los zuordnen; 9 Lose haben Leistungsorte auch außerhalb der Oberpfalz.
 - Status zum 04.11.2026: Grundlaufzeit läuft 82, Grundlaufzeit läuft (geschätzt) 5, Verlängerungszeit möglich 4, Verlängerung offen 6, abgelaufen 16, kein Ende bekannt 33.
-- Genauigkeit insgesamt (Prüfung einer Zufallsstichprobe von 60 Losen aus ganz Deutschland, Iteration 6): Ende der Grundlaufzeit laut Auswertung 54/60 = 90,0 % korrekt, nach einem später gefundenen Fehler (L60) 53/60 = 88,3 %; Höchstende 91,7 % korrekt oder als unbestimmbar gekennzeichnet ([liste_auswertung_iteration6.md](liste_auswertung_iteration6.md)). **Vorbehalt:** Das Feld „Hilfsmittel“ blieb leer (der Prüfer gibt mündlich an, ohne KI-Hilfe geprüft zu haben), und die Vorlage zeigte das Enddatum der Liste an; die Zahl ist eher eine Untergrenze der Fehler als eine Genauigkeit.
+- Genauigkeit insgesamt (Prüfung einer Zufallsstichprobe von 47 Losen aus ganz Deutschland, Iteration 7, [liste_auswertung_iteration7.md](liste_auswertung_iteration7.md)): Ende der Grundlaufzeit 36/47 = 76,6 % übereinstimmend mit dem Prüfer (Wilson 62,8–86,4 %); bei Losen, deren Laufzeit im Text der Bekanntmachung steht, 12/12. **Vorbehalte:** Die Prüfung wurde gekürzt (L1 bis L50 statt 80 Lose), 4 Nachprüfungen blieben leer, und bei 5 von 38 Losen wich der abgeschriebene Feldwert von den Rohdaten ab ([abschreibecheck_iteration7.md](abschreibecheck_iteration7.md)); die Zahl ist deshalb eine Mischung aus Fehlern der Liste und Lesefehlern der Prüfung. Bei den 15 Lose, die Regel 1b ändert, stimmten nur 8 mit dem Prüfer überein (der Prüfer übernahm dort das Enddatum des Feldes statt des früheren Datums aus dem Text).
 
 ### Unsicherheit je Eintrag (Spalte „Stufe“)
 
 | Stufe | Bedeutung | Einträge hier | Stichprobe: Lose | Ende GL korrekt | Höchstende korrekt |
 |---|---|---|---|---|---|
-| **A** | Höchstende steht ausdrücklich im Text oder Feld | 59 | 19 | 19/19 (83–100 %) | 19/19 (83–100 %) |
-| **B** | Höchstende berechnet aus Anzahl × Länge der Verlängerungen; das Enddatum kann schon das Höchstende sein | 6 | 16 | 13/16 (57–93 %) | 13/16 (57–93 %) |
-| **C** | keine Angabe zur Verlängerung; Höchstende = Grundlaufzeit angenommen, Verlängerung im Volltext möglich | 33 | 16 | 13/16 (57–93 %) | 14/16 (64–97 %) |
-| **D** | Verlängerung erwähnt, aber Länge oder Anzahl fehlt; Höchstende unbestimmbar | 10 | 9 | 8/9 (56–98 %) | 9/9 (70–100 %) |
+| **A** | Höchstende steht ausdrücklich im Text oder Feld, oder das Ende der Grundlaufzeit wurde aus dem Text berichtigt | 64 | 12 | 11/12 (65–99 %) | 11/11 (74–100 %) |
+| **B** | Höchstende berechnet aus Anzahl × Länge der Verlängerungen; das Enddatum kann schon das Höchstende sein | 2 | 18 | 12/18 (44–84 %) | 2/5 (12–77 %) |
+| **C** | keine Angabe zur Verlängerung; Höchstende = Grundlaufzeit angenommen, Verlängerung im Volltext möglich | 33 | 12 | 8/12 (39–86 %) | 11/11 (74–100 %) |
+| **D** | Verlängerung erwähnt, aber Länge oder Anzahl fehlt; Höchstende unbestimmbar | 9 | 5 | 5/5 (57–100 %) | 5/5 (57–100 %) |
 | **E** | Ende nur geschätzt (Veröffentlichung + Dauer), ungeprüft | 5 | – | ungeprüft | ungeprüft |
 | **F** | kein Ende in der Bekanntmachung | 33 | – | ungeprüft | ungeprüft |
 
-_Die Einteilung in Stufen ist nach Kenntnis der Prüfergebnisse entstanden. Die Quoten je Stufe beruhen auf wenigen Losen (Klammer: 95-%-Wilson-Intervall) und stammen überwiegend nicht aus der Oberpfalz. „Ende GL korrekt“ zählt einen Eintrag „unbekannt“ des Prüfers als Abweichung (L8, L48, L49, alle Stufe C) und enthält die Korrektur zu L60 (Stufe D). „Höchstende korrekt“ ist bei Stufe D per Definition 100 %, weil „unbestimmbar“ immer als korrekt zählt._
+_Die Einteilung in Stufen wurde vor dem Ziehen der Stichprobe festgelegt (2026-11-04). Die Quoten je Stufe beruhen auf wenigen Losen (Klammer: 95-%-Wilson-Intervall) und stammen nicht aus der Oberpfalz. „Ende GL korrekt“ zählt einen Eintrag „unbekannt“ des Prüfers (4 leer gebliebene Nachprüfungen) und Lesefehler beim Abschreiben der Felder als Abweichung. „Höchstende korrekt“ ist ohne die 15 Lose berechnet, bei denen das Höchstende des Prüfers vor der Nachprüfung eingetragen wurde (veraltet); bei Stufe D ist es per Definition 100 %, weil „unbestimmbar“ immer als korrekt zählt._
 
 ## Laufende Verträge
 
@@ -53,6 +53,7 @@ Sortiert nach dem Ende der Grundlaufzeit. „Verlängerungszeit möglich“: Die
 | 14.09.2027 | 14.09.2029 | Grundlaufzeit läuft | Stadt Regensburg | 2: 62-2025-023 - Los 2 Vertretungsreinigung Ost | **A** | Enddatum (BT-537) / Datum im Text | [570596-2025](https://ted.europa.eu/de/notice/-/detail/570596-2025) |
 | 14.09.2027 | 14.09.2029 | Grundlaufzeit läuft | Stadt Regensburg | 3: 62-2025-023 - Los 3 Vertretungsreinigung Süd | **A** | Enddatum (BT-537) / Datum im Text | [570596-2025](https://ted.europa.eu/de/notice/-/detail/570596-2025) |
 | 14.09.2027 | 14.09.2029 | Grundlaufzeit läuft | Stadt Regensburg | 4: 62-2025-023 - Los 4 Vertretungsreinigung West | **A** | Enddatum (BT-537) / Datum im Text | [570596-2025](https://ted.europa.eu/de/notice/-/detail/570596-2025) |
+| 31.12.2027 | 31.12.2028 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 7: UR-Los 7-NL Südbayern | **A** | Text „Festlaufzeit bis …“ / Datum im Text · Leistungsorte auch außerhalb der Oberpfalz | [686226-2024](https://ted.europa.eu/de/notice/-/detail/686226-2024) |
 | 31.12.2027 | 31.12.2029 | Grundlaufzeit läuft | Landkreis Tirschenreuth | 1: Los 1: UR, SB, IR, GR | **A** | Enddatum (BT-537) / Datum im Text | [687086-2025](https://ted.europa.eu/de/notice/-/detail/687086-2025) |
 | 31.12.2027 | 31.12.2029 | Grundlaufzeit läuft | Landkreis Tirschenreuth | 2: Los 2: UR, SB, IR, GR | **A** | Enddatum (BT-537) / Datum im Text | [687086-2025](https://ted.europa.eu/de/notice/-/detail/687086-2025) |
 | 31.12.2027 | 31.12.2029 | Grundlaufzeit läuft | Landkreis Tirschenreuth | 3: Los 3: UR, GR | **A** | Enddatum (BT-537) / Datum im Text | [687086-2025](https://ted.europa.eu/de/notice/-/detail/687086-2025) |
@@ -77,7 +78,6 @@ Sortiert nach dem Ende der Grundlaufzeit. „Verlängerungszeit möglich“: Die
 | 31.12.2028 | 31.12.2028 | Grundlaufzeit läuft | Bundeswehr-Dienstleistungszentrum Amberg | 1: Gebäudereinigung Standort Weiden | **C** | Enddatum (BT-537) / keine Angabe zur Verlängerung | [521598-2024](https://ted.europa.eu/de/notice/-/detail/521598-2024) |
 | 31.12.2028 | 31.12.2031 | Grundlaufzeit läuft | Freistaat Bayern vertreten durch das Bayeris… | 1: Unterhaltsreinigung | **A** | Text „zunächst bis …“ / Enddatum ist laut Text das späteste Ende | [664142-2025](https://ted.europa.eu/de/notice/-/detail/664142-2025) |
 | 31.12.2028 | 31.12.2031 | Grundlaufzeit läuft | Freistaat Bayern vertreten durch das Bayeris… | 2: Glas- und Rahmenreinigung | **A** | Text „zunächst bis …“ / Enddatum ist laut Text das späteste Ende | [664142-2025](https://ted.europa.eu/de/notice/-/detail/664142-2025) |
-| 31.12.2028 | unbestimmbar | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 7: UR-Los 7-NL Südbayern | **D** | Enddatum (BT-537) / Verlängerung erwähnt, Länge offen · Leistungsorte auch außerhalb der Oberpfalz | [686226-2024](https://ted.europa.eu/de/notice/-/detail/686226-2024) |
 | 31.12.2028 | 31.12.2028 | Grundlaufzeit läuft | Stadt Amberg | 1: Unterhalts- und Grundreinigung Realschule und Ras… | **C** | Enddatum (BT-537) / keine Angabe zur Verlängerung | [691398-2024](https://ted.europa.eu/de/notice/-/detail/691398-2024) |
 | 31.12.2028 | 31.12.2028 | Grundlaufzeit läuft | Stadt Amberg | 2: Unterhalts- und Grundreinigung Dreifaltigkeitssch… | **C** | Enddatum (BT-537) / keine Angabe zur Verlängerung | [691398-2024](https://ted.europa.eu/de/notice/-/detail/691398-2024) |
 | 31.12.2028 | 31.12.2028 | Grundlaufzeit läuft | Stadt Amberg | 3: Unterhalts- und Grundreinigung Ausweichschulgebäu… | **C** | Enddatum (BT-537) / keine Angabe zur Verlängerung | [691398-2024](https://ted.europa.eu/de/notice/-/detail/691398-2024) |
@@ -94,6 +94,10 @@ Sortiert nach dem Ende der Grundlaufzeit. „Verlängerungszeit möglich“: Die
 | 31.10.2029 | 31.10.2032 | Grundlaufzeit läuft | Freistaat Bayern vertreten durch das Bayeris… | 1: Unterhaltsreinigung für die HföD Kastl | **A** | Text „zunächst bis …“ / Enddatum ist laut Text das späteste Ende | [585202-2026](https://ted.europa.eu/de/notice/-/detail/585202-2026) |
 | 31.12.2029 | 31.12.2031 | Grundlaufzeit läuft | Bundesanstalt für Immobilienaufgaben | 10: Los 10: Unterhalts- und Glasreinigungsleistungen | **A** | Enddatum (BT-537) / Datum im Text | [689574-2025](https://ted.europa.eu/de/notice/-/detail/689574-2025) |
 | 31.12.2029 | 31.12.2029 | Grundlaufzeit läuft | Bezirk Oberpfalz | 1: Unterhaltsreinigung-202502 | **A** | Enddatum (BT-537) / keine Verlängerung laut Text/BT-58 | [720415-2025](https://ted.europa.eu/de/notice/-/detail/720415-2025) |
+| 31.03.2030 | 31.03.2031 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 8: Nordbayern | **A** | Text „Festlaufzeit bis …“ / Datum im Text | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
+| 31.03.2030 | 31.03.2031 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 9: Nordbayern | **A** | Text „Festlaufzeit bis …“ / Datum im Text | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
+| 31.03.2030 | 31.03.2031 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 14: Nordbayern | **A** | Text „Festlaufzeit bis …“ / Datum im Text | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
+| 31.03.2030 | 31.03.2031 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 56: Südbayern | **A** | Text „Festlaufzeit bis …“ / Datum im Text · Leistungsorte auch außerhalb der Oberpfalz | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
 | 31.03.2030 | 31.03.2032 | Grundlaufzeit läuft | Bundesanstalt für Immobilienaufgaben | 1: Los 1: Unterhaltsreinigungsleistungen | **A** | Enddatum (BT-537) / Datum im Text | [689574-2025](https://ted.europa.eu/de/notice/-/detail/689574-2025) |
 | 31.03.2030 | 31.03.2032 | Grundlaufzeit läuft | Bundesanstalt für Immobilienaufgaben | 2: Los 2: Unterhaltsreinigungsleistungen | **A** | Enddatum (BT-537) / Datum im Text | [689574-2025](https://ted.europa.eu/de/notice/-/detail/689574-2025) |
 | 31.03.2030 | 31.03.2032 | Grundlaufzeit läuft | Bundesanstalt für Immobilienaufgaben | 3: Los 3: Unterhalts- und Innenglasreinigungsleistun… | **A** | Enddatum (BT-537) / Datum im Text | [689574-2025](https://ted.europa.eu/de/notice/-/detail/689574-2025) |
@@ -123,10 +127,6 @@ Sortiert nach dem Ende der Grundlaufzeit. „Verlängerungszeit möglich“: Die
 | 31.12.2030 | 31.12.2032 | Grundlaufzeit läuft | Bundesanstalt für Immobilienaufgaben | 1: Los 1: Unterhalts- und Grundreinigung | **A** | Enddatum (BT-537) / Höchstlaufzeit im Text | [617709-2026](https://ted.europa.eu/de/notice/-/detail/617709-2026) |
 | 31.12.2030 | 31.12.2032 | Grundlaufzeit läuft | Bundesanstalt für Immobilienaufgaben | 2: Los 2: Unterhalts- und Grundreinigung | **A** | Enddatum (BT-537) / Höchstlaufzeit im Text | [617709-2026](https://ted.europa.eu/de/notice/-/detail/617709-2026) |
 | 31.12.2030 | 31.12.2032 | Grundlaufzeit läuft | Bundesanstalt für Immobilienaufgaben | 3: Los 3: Glas- und Rahmenreinigung | **A** | Enddatum (BT-537) / Höchstlaufzeit im Text | [617709-2026](https://ted.europa.eu/de/notice/-/detail/617709-2026) |
-| 31.03.2031 | 31.03.2032 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 8: Nordbayern | **B** | Enddatum (BT-537) / Anzahl × Länge der Verlängerungen | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
-| 31.03.2031 | 31.03.2032 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 9: Nordbayern | **B** | Enddatum (BT-537) / Anzahl × Länge der Verlängerungen | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
-| 31.03.2031 | 31.03.2032 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 14: Nordbayern | **B** | Enddatum (BT-537) / Anzahl × Länge der Verlängerungen | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
-| 31.03.2031 | 31.03.2032 | Grundlaufzeit läuft | Die Autobahn GmbH des Bundes | 56: Südbayern | **B** | Enddatum (BT-537) / Anzahl × Länge der Verlängerungen · Leistungsorte auch außerhalb der Oberpfalz | [143100-2026](https://ted.europa.eu/de/notice/-/detail/143100-2026) |
 | 30.09.2031 | unbestimmbar | Grundlaufzeit läuft | Universität Regensburg als staatliche Einric… | 1: Unterhaltsreinigung Außenstellen | **D** | Beginn + Dauer (BT-536 + BT-36) / Verlängerung erwähnt, Länge offen | [533946-2026](https://ted.europa.eu/de/notice/-/detail/533946-2026) |
 
 ## Abgelaufen oder ohne Ende
@@ -187,6 +187,7 @@ Bei „abgelaufen“ ist auch das Höchstende vorbei (bzw. bei Stufe C die Grund
 
 ## Interpretation
 
-- Die Spalte „Stufe“ macht sichtbar, wie verlässlich ein Eintrag ist. Fehler beim Ende der Grundlaufzeit traten in der Stichprobe vor allem auf, wenn das Enddatum der Bekanntmachung schon das Höchstende war (Stufe B, ein Fall in Stufe D); in Stufe C gab es drei Auslegungsfälle („unbekannt“ des Prüfers). Bei Stufe B, C und D lohnt ein Blick in die Bekanntmachung. Bekannte Fehler stehen weiter in der Liste, z. B. Bekanntmachung 143100-2026 (Autobahn GmbH): Dort steht die Festlaufzeit nur im Text, das Enddatum ist ein Jahr später.
-- Die Prüfung der Stichprobe ist durch den Prüfer mündlich als ohne KI-Hilfe angegeben, aber nicht in der Vorlage vermerkt; Teil B (Paare) stammte aus schon bekannten Paaren und zählt nicht. Die Zahlen sind deshalb vorläufig.
-- Aus der Oberpfalz liegt 1 Los der Stichprobe vor (L6); mehr wurde dort nicht geprüft. Die Liste kommt ohne Kundentest aus (A1, A15 ungeprüft); ob diese Form für einen Mittelständler nützlich ist, bleibt offen.
+- Die Spalte „Stufe“ macht sichtbar, wie verlässlich ein Eintrag ist. Stufe A (Ende aus dem Text berichtigt oder Höchstende ausdrücklich genannt) ist die sicherste; bei Stufe B, C und D lohnt ein Blick in die Bekanntmachung. Die Quoten je Stufe beruhen auf sehr wenigen Losen.
+- **Regel 1b, Typ „Festlaufzeit-Datum“** (z. B. Bekanntmachung 143100-2026, Autobahn GmbH) ist **nicht** durch die Stichprobe getestet; die Einträge stehen in der Liste mit Stufe A, ohne dass ihre Genauigkeit belegt ist. Ebenso ist der Typ „feste Dauer + Option“ nur an 15 Losen mit gemischtem Ergebnis geprüft.
+- Zwei Fehler der Liste fielen in der Prüfung auf: Höchstende bei Bekanntmachung 557125-2026 (Liste 31.08.2037, Text 31.08.2031) und 707425-2025 (Liste 31.10.2029, Text 31.10.2030); beide stehen noch so in der bundesweiten Vertragsliste (nicht in der Oberpfalz-Liste).
+- Aus der Oberpfalz liegt 1 Los der Stichprobe vor (L25). Die Liste kommt ohne Kundentest aus (A1, A15 ungeprüft); ob diese Form für einen Mittelständler nützlich ist, bleibt offen.
