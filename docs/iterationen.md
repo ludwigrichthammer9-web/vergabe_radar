@@ -1021,6 +1021,17 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > Ende der Grundlaufzeit aus dem Text berichtigt → A; sonst nach Herkunft des Höchstendes (Anzahl × Länge → B, keine Angabe → C, unbestimmbar → D, übrige → A); ohne Ende E (nur geschätzt) oder F.
 > **Interpretation/Vorbehalt:** Die Regel ist bewusst eng; Fehler außerhalb dieses Musters (z. B. L56 mit Verlängerung nur im Volltext) fängt sie nicht. Bei 412612-2025 trifft sie das Richtige teils zufällig (Länge der Verlängerung als Dauer gelesen, vom Konsistenztest abgesichert). Ob sie neue Fehler erzeugt, zeigt erst die Prüfung.
 
+> **Fortschritt 2026-11-04 (Schritt 2, Stichprobe gezogen; vor der Prüfung):** Seed 20261106 und Skript `src/prepare/stichprobe_iteration7.py` wurden **vor dem Ziehen** committet (c7fb0c0).
+> Gezogen: 80 Lose aus 76 Zuschlägen (Pool 2.527 Lose aus 1.218 Zuschlägen) und 15 Regelwirkungs-Lose aus 9 Zuschlägen (Pool 15, alle genommen), gemischt und nummeriert als L1 bis L95.
+> Vorlage [liste_pruefung_iteration7.md](../reports/liste_pruefung_iteration7.md) (ohne Listenwerte, kein Feld zu Beginn/Ende/Dauer/BT-58; geprüft); Schlüssel lokal, **SHA-256 `eade66c033ab13d541dda2f7af3f5b074f1b5a4587e711f6a29e0ba1916ddf9b`**;
+> SHA-256 der Vorlage `3ec40816384384f350dda99607d5e4763f543b93de73dbc5160c7eed84edc85c`.
+> **Befund zur Zusammensetzung:** Regel 1b ändert im Fenster Q4 2025 bis Q3 2026 128 von 2.924 Losen (12 Bekanntmachungen). Die Hauptstichprobe enthält davon **kein einziges** (fast alle stecken in den ausgeschlossenen Entwicklungs- und angesehenen
+> Bekanntmachungen). Die 15 Regelwirkungs-Lose sind alle von der Herkunft „text_laufzeit_option“; der Typ „text_festlaufzeit“ (z. B. 143100-2026) ist nur durch die Entwicklungslose L1 und L43 belegt und bleibt **ungetestet**.
+> **Folge, vor der Prüfung festgelegt (Ergänzung der Kriterien, keine Änderung von Y1 bis Y4; ohne Kenntnis der Ergebnisse):** Y1, Y2 und Y2b messen die Liste für Lose, die die Regel nicht ändert, plus die Fehler, die die Regel nicht erkennt; sie belegen die Regel selbst nicht.
+> Neu: **Y1r (Regelwirkung):** mindestens 12/15 der Regelwirkungs-Lose haben ein korrektes Ende der Grundlaufzeit (nur Typ „text_laufzeit_option“). Beschreibend: Gesamtschätzung für das Fenster = (128 · a_R + 2.796 · a_Y) / 2.924 mit a_R aus den 15 und a_Y aus den 80 Losen.
+> „Weiter“ gilt nur, wenn Y1, Y1r, Y2, Y2b, Y3 und Y4 erfüllt sind; bei verfehltem Y1r gilt die Folge „Y1 zwischen 70 % und 90 %“ (Ende der Grundlaufzeit bei Losen mit Herkunft Regel 1b als „laut Bekanntmachung“ kennzeichnen, kein dritter Regelversuch).
+> Der Typ „text_festlaufzeit“ wird im Abschluss als ungetestet benannt.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
