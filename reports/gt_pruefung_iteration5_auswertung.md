@@ -43,3 +43,10 @@ _Stand 2026-11-04. Urteile: [gt_pruefung_iteration5_urteile.csv](gt_pruefung_ite
 ## Folgen für A18 (Status)
 A18 bleibt **ungeprüft, mit gestütztem Hinweis**: X2 = 91 % bei zwei Prüfern, Unabhängigkeit des Kommilitonen nicht belegt.
 Aus dem Ergebnis folgt keine Statusänderung ohne die Klärung oben.
+
+## Nachtrag 2026-11-04: Hilfsmittel bei der Zweitprüfung
+Angabe des Nutzers auf Nachfrage: Die Prüfung wurde **durch KI unterstützt**; die KI hat die Urteile und Begründungen nach Angabe des Nutzers
+„nur noch etwas schärfen“ lassen. Für beide Prüfer (Nutzer P1–P13, Kommilitone P14–P71) ist damit nicht ausgeschlossen, dass die Formulierungen
+und Details von einem Modell stammen. Der Anteil der KI an den Urteilen selbst ist nicht belegt. Folge: X2 = 91 % gilt als **nicht unabhängige**
+Bestätigung der Handsuche (A18 bleibt „ungeprüft“); X1 = 52 bleibt die Backtest-Basis, mit diesem Vorbehalt.
+
