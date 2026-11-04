@@ -1032,6 +1032,14 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > „Weiter“ gilt nur, wenn Y1, Y1r, Y2, Y2b, Y3 und Y4 erfüllt sind; bei verfehltem Y1r gilt die Folge „Y1 zwischen 70 % und 90 %“ (Ende der Grundlaufzeit bei Losen mit Herkunft Regel 1b als „laut Bekanntmachung“ kennzeichnen, kein dritter Regelversuch).
 > Der Typ „text_festlaufzeit“ wird im Abschluss als ungetestet benannt.
 
+> **Fortschritt 2026-11-04 (Schritt 3/4, Prüfung abgegeben und ausgewertet; Gültigkeit offen):** Der Nutzer gab die ausgefüllte Datei (95 Lose, Summe 137 Minuten, Median 1 Minute je Los, Hilfsmittel: 81 × „keine“, 14 × „Kalender“) zurück.
+> Einträge nach `reports/liste_pruefung_iteration7_urteile.csv` übertragen; Schlüssel-Hash vor dem Öffnen geprüft (eade66c0…df9b). Auswertung: `reports/liste_auswertung_iteration7.md`.
+> **Rohwerte nach den vorab festgelegten Regeln:** Y1 20/80 = 25,0 %, Y1r 10/15, Y2 52/80 = 65,0 %, Y2b 44/72 = 61,1 %. **Alle 65 Abweichungen bei Y1 sind Einträge „unbekannt“; bei den 30 Datumsangaben des Prüfers gibt es keine einzige Abweichung.**
+> Die Quelle „Feld“ wurde nie vergeben, 60 der „unbekannt“-Einträge betreffen Lose mit Enddatum aus den Feldern (BT-537 bzw. Beginn + Dauer), die die Vorlage absichtlich nicht zeigt. Die Prüfzeit passt zu einem Lesen der Auszüge ohne Öffnen der TED-Originale.
+> In der abgegebenen Datei steht bei jedem Los eine Zeile „XML-Felder: Start=- | Ende(BT-537)=- | Dauer(BT-36)=-“, die weder in der Vorlage (SHA-256 3ec40816…) noch im Skript vorkommt; die Sitzungstabelle fehlt. Herkunft der Zeile ist zu klären (betrifft Y3, Verfahren).
+> **Interpretation (vorläufig):** Die Rohwerte messen hier vor allem, ob die Laufzeit im Auszug steht, nicht die Genauigkeit der Liste. Echte Fehler mit Datum bei Y2: L72 (Liste 31.08.2037, Prüfer 31.08.2031) und L82 (Liste 31.10.2029, Prüfer 31.10.2030).
+> Entscheidung über die Folge (Y1 verfehlt → „zwischen 70 % und 90 %“ bzw. „< 70 %“) erst nach Klärung, ob die 65 Lose im Original nachgeprüft werden.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
