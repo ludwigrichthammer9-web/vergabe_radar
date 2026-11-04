@@ -1048,6 +1048,9 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > **Nachprüfung (Schritt 3b, vor dem Ausfüllen festgelegt):** Für die 68 Lose mit „unbekannt“ erzeugt `src/prepare/nachpruefung_iteration7.py` eine verkürzte Vorlage `reports/liste_nachpruefung_iteration7.md` (SHA-256 `129c22afa0a65d80892c7150b6963854916f381966a3e0ab84a5e93bedf9dcac`), nur mit Link und Los-Titel, ohne Listenwerte.
 > Der Prüfer öffnet das TED-Original und trägt Beginn/Ende/Dauer der Felder, Ende der Grundlaufzeit, Quelle, Hilfsmittel und Minuten ein. Kriterien und Schwellen bleiben unverändert; für Lose mit Nachprüfung zählt der Nachprüfungs-Eintrag, die erste Abgabe bleibt als Rohwert dokumentiert.
 > Ich (Claude) kenne die Listenwerte; die Eingaben des Prüfers werden nicht durch mich ergänzt oder korrigiert.
+> **Kürzung der Nachprüfung (Abweichung vom Plan, festgelegt vor dem Ergebnis der Nachprüfung):** Der Prüfer hat die Nachprüfung bis L50 gemacht und will nicht alle 68 Lose prüfen. Die Nummern sind zufällig gemischt; **L1 bis L50 sind eine Zufallsteilmenge** (47 Lose Typ Y, 3 Typ R).
+> Y1, Y2, Y2b werden **nur für L1 bis L50 (Typ Y)** ausgewertet, Schwellen prozentual unverändert (90 %, 90 %, 85 %), mit Wilson-Intervall. Für Y1r werden zusätzlich die 4 offenen Regelwirkungs-Lose **L57, L62, L65, L88** nachgeprüft; Damit liegt für alle 15 Regelwirkungs-Lose ein Eintrag mit Datum oder Nachprüfung vor; **Y1r bleibt unverändert (≥ 12/15)**, ausgewertet mit dem Eintrag der Nachprüfung, wo es sie gibt, sonst mit der ersten Abgabe.
+> L51 bis L95 gehen nicht in Y1, Y2, Y2b ein. Dass L57, L62, L65, L88 Regelwirkungs-Lose sind, ist dem Prüfer bekannt (ihm mitgeteilt, um die Nachprüfung zu begrenzen).
 
 **Ergebnis:** offen
 
