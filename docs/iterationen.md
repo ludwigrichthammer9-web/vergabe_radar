@@ -1011,6 +1011,16 @@ Beschreibend, ohne Schwelle: Y1 nach Losen gewichtet; Y1 nur für Lose, bei dene
 A11 bleibt ungeprüft (auch diese Stichprobe enthält nur eForms-Lose). **A18 wird in dieser Iteration nicht geprüft** (die Paare gehören zum verworfenen Backtest; ein weiterer Test hätte nur mit Paaren Sinn, die der Prüfer noch nicht kennt); A18 bleibt als offene Grenze stehen.
 A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 
+> **Fortschritt 2026-11-04 (Schritt 1, Regel 1b erweitert; Kriterien unverändert, vor dem Ziehen der Stichprobe):** Regel 1b in `src/prepare/vertragsliste.py` (`kurze_festlaufzeit`, Beschreibung im Kopf des Skripts).
+> Zwei Fälle: (a) Datum der festen Laufzeit im Text („Festlaufzeit von … bis …“, „erste feste Laufzeit bis …“, „zunächst … bis“) mehr als 20 Tage vor dem Enddatum; (b) feste Dauer im Text („Vertragsdauer beträgt zwei Jahre“, „Laufzeit von 2 Jahren“, „(2+1+1)“),
+> Beginn + Dauer mehr als 31 Tage vor dem Enddatum und das Enddatum passt (± 31 Tage) zu Anzahl × Länge, Höchstlaufzeit, BT-36 oder der Summe. Beide nur bei Verlängerung/Option im Text; erklärt eine genannte Dauer das Enddatum schon, greift die Regel nicht.
+> Entwicklungstest `src/prepare/entwicklungstest_iteration7.py` (zählt nicht): An den 60 Losen der Iteration 6 (Eingaben der Vorlage, Soll = Prüfer, L60 korrigiert) werden genau L1, L42, L43, L60 richtig, die übrigen 56 bleiben unverändert.
+> Die erste Fassung machte L6, L14 und L46 falsch (Kündigungsfristen als Dauer gelesen, Datum im Text als Beleg) und wurde deshalb eingeschränkt (Dauer ≥ 12 Monate, keine Fristen, Datum im Text zählt nicht als Beleg, kein Eingreifen bei erklärter Dauer).
+> Wirkung auf die Liste: 165 von 9.915 Losen ändern das Ende der Grundlaufzeit (43 Herkunft „text_laufzeit_option“, 122 „text_festlaufzeit“), 107 davon in der Bekanntmachung 143100-2026; 28 Bekanntmachungen betroffen.
+> Beim Entwickeln habe ich etwa 20 Bekanntmachungen einzeln angesehen (`reports/entwicklung_iteration7_notices.txt`); sie bleiben aus der Stichprobe und der Regelwirkungs-Stichprobe ausgeschlossen. Stufen A–F für den Prototyp sind in `src/report/beispiel_liste.py` (`stufe`) festgelegt:
+> Ende der Grundlaufzeit aus dem Text berichtigt → A; sonst nach Herkunft des Höchstendes (Anzahl × Länge → B, keine Angabe → C, unbestimmbar → D, übrige → A); ohne Ende E (nur geschätzt) oder F.
+> **Interpretation/Vorbehalt:** Die Regel ist bewusst eng; Fehler außerhalb dieses Musters (z. B. L56 mit Verlängerung nur im Volltext) fängt sie nicht. Bei 412612-2025 trifft sie das Richtige teils zufällig (Länge der Verlängerung als Dauer gelesen, vom Konsistenztest abgesichert). Ob sie neue Fehler erzeugt, zeigt erst die Prüfung.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen

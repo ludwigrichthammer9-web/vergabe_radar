@@ -14,6 +14,13 @@ Lese-Regeln
    _Nach dem Testdurchgang ergänzt (e2ecbe6):_ „zunächst“ im Satzfilter und „endet (der Vertrag) am …“ als früheres Ende. Betrifft
    nur GL in diesem Fall, nicht das getestete Höchstende.
 
+1b. Ausnahme (Iteration 7, nach der Prüfung der Iteration 6; Fehlertyp „Enddatum der Bekanntmachung ist schon das Höchstende“, L1, L42, L43, L60):
+   Nennt der Text eine kürzere feste Laufzeit, gilt diese als Ende der Grundlaufzeit (`kurze_festlaufzeit`). (a) Herkunft „text_festlaufzeit“: ein Datum nach
+   „Festlaufzeit“, „feste Laufzeit“, „Grundlaufzeit“, „zunächst … bis“ liegt mehr als 20 Tage vor dem Enddatum; das Höchstende kommt wie sonst aus dem Text,
+   sonst gilt das Enddatum. (b) Herkunft „text_laufzeit_option“: eine feste Dauer („Vertragsdauer beträgt zwei Jahre“, „Laufzeit von 2 Jahren“, „(2+1+1)“) ergibt mit dem Beginn
+   ein Ende mehr als 31 Tage vor dem Enddatum (Dauer mindestens 12 Monate, keine Fristen), und das Enddatum passt (± 31 Tage) zum Höchstende aus Anzahl × Länge,
+   Höchstlaufzeit, BT-36 oder der Summe (ein Datum im Text zählt nicht, es wäre meist das Enddatum selbst); Höchstende = Enddatum. Beide nur, wenn der Text von Verlängerung oder Option spricht. Regel 1a hat Vorrang. Vor dem Ziehen der Stichprobe der Iteration 7 festgelegt.
+
 Genauigkeit des Höchstendes (Teststichprobe, Fassung a0aa419): 53/60 richtig, gewichtet etwa 91 %; Fehler fast nur bei
 „unbestimmbar“ (reports/hoechstende_pruefung_iteration5_test.md).
 2. Text = BT-57 + BT-54 + BT-24 des Loses (vor eForms RENEWAL_DESCR; die Funktion `hoechstende` nimmt jeden Text).
@@ -86,6 +93,15 @@ RE_SATZ_VERL = re.compile(r"(?i)verläng|option")
 RE_SATZ_ENDE = re.compile(r"(?i)verläng|option|spätestens|längstens|maximal|höchst|laufzeit|vertragsdauer|vertragsende|endet"
                           r"|zunächst")
 RE_SATZGRENZE = re.compile(r"(?<=[.!?;])\s+(?=[A-ZÄÖÜ])|\n")
+# Regel 1b (Iteration 7): kurze feste Laufzeit im Text. Datum: „Festlaufzeit von 01.01.2026-31.03.2030“, „erste feste Laufzeit bis zum 14.07.2028“.
+_D = r"(\d{1,2})\.\s?(\d{1,2})\.\s?(20\d{2})"
+RE_FEST_DATUM = re.compile(rf"(?i)(?:fest\s*laufzeit|feste\s+laufzeit|grundlaufzeit|mindestlaufzeit|erstlaufzeit)\s*(?:des\s+vertrage?s\s+)?"
+                           rf"(?:von|bis(?:\s+zum)?|ist|beträgt|:)?\s*(?:{_D}\s*(?:-|–|bis(?:\s+zum)?)\s*)?{_D}")
+# Dauer: „Die Vertragsdauer beträgt zwei Jahre …“, „Laufzeit von 2 Jahren“, „für die Dauer von 4 Jahren“ (nicht „maximale/gesamte/längstens …“).
+RE_BASIS_DAUER = re.compile(rf"(?i)(?:(?:vertrags)?laufzeit|vertragsdauer|beauftragung|vertragsverhältnis|vertrag)[^.]{{0,60}}?"
+                            rf"\b(?:von|beträgt|dauer\s+von)\s+{Z}\s*(?:\(\d+\)\s*)?{EINHEIT}")
+RE_BASIS_AUSSCHLUSS = re.compile(r"(?i)(maximal|gesamt|insgesamt|längstens|höchstens|spätestens|bis\s+zu)\w*\s*\w*\s*$")
+RE_SUMME = re.compile(r"\(\s*(\d{1,2}(?:\s*\+\s*\d{1,2})+)\s*\)")  # „(2+1+1)“ = 2 Jahre fest, dann 1 + 1 Jahr Option
 
 
 def saetze(text: str, muster: re.Pattern) -> str:
@@ -189,9 +205,54 @@ def hoechstende(gl: date | None, beginn: date | None, text: str, anzahl: int | N
     return None, "unbestimmbar"
 
 
+def kurze_festlaufzeit(beginn: date | None, gl: date, text: str, anzahl: int | None,
+                       dauer_monate: int | None) -> tuple[date, str] | None:
+    """Regel 1b: Das Enddatum ist laut Text schon das Höchstende; liefert das frühere Ende der festen Laufzeit und die Herkunft.
+    (a) „text_festlaufzeit“: Der Text nennt ein Datum der festen Laufzeit, das mehr als 20 Tage vor dem Enddatum liegt.
+    (b) „text_laufzeit_option“: Der Text nennt eine feste Dauer (oder „2+1+1“), Beginn + Dauer liegt mehr als 31 Tage vor dem Enddatum, und das
+        Enddatum passt (± 31 Tage) zu einem Höchstende, das sich aus Anzahl × Länge, Höchstlaufzeit, Datum im Text oder der Summe ergibt.
+    Beide nur, wenn der Text von Verlängerung oder Option spricht."""
+    if not saetze(text, RE_SATZ_VERL):
+        return None
+    dauern, summen = [], []
+    if beginn is not None:
+        for m in RE_BASIS_DAUER.finditer(text):
+            if (RE_BASIS_AUSSCHLUSS.search(text[max(0, m.start() - 25):m.start()])
+                    or re.search(r"(?i)frist|kündig|widerspr|maximal|gesamt|längstens|höchstens|spätestens|bis\s+zu", m.group(0))):
+                continue
+            n = zahl(m.group(1))
+            if n and 12 <= (mo := _in_monate(n, m.group(3))) <= MAX_MONATE:  # unter 12 Monaten meist Fristen, keine feste Laufzeit
+                dauern.append(mo)
+        if "jahr" in text.lower():
+            for m in RE_SUMME.finditer(text):
+                teile = [int(t) for t in re.split(r"\s*\+\s*", m.group(1))]
+                if all(0 < t <= 10 for t in teile) and sum(teile) <= 20:
+                    dauern.append(12 * teile[0])
+                    summen.append(ende_nach_monaten(beginn, 12 * sum(teile)))
+        # Erklärt eine genannte Dauer das Enddatum schon (Beginn + Dauer ≈ Enddatum), ist es die Grundlaufzeit; ein anderes Datum im Text
+        # gehört dann meist zu einem anderen Los oder Objekt.
+        if any(abs((ende_nach_monaten(beginn, mo) - gl).days) <= 31 for mo in dauern):
+            return None
+    daten = [_datum(*m.groups()[3:]) for m in RE_FEST_DATUM.finditer(text)] + [_datum(*m.groups()) for m in RE_ZUNAECHST.finditer(text)]
+    fruehere = [d for d in daten if d and (beginn is None or d > beginn) and d < gl - timedelta(days=20)]
+    if fruehere:
+        return max(fruehere), "text_festlaufzeit"
+    if beginn is None:
+        return None
+    for mo in sorted(set(dauern)):
+        gl_neu = ende_nach_monaten(beginn, mo)
+        if gl_neu >= gl - timedelta(days=31):
+            continue
+        # Datum im Text zählt nicht: Das Enddatum steht meist selbst im Text und würde die Prüfung trivial erfüllen.
+        hoechst = [d for d, q in kandidaten(gl_neu, beginn, text, anzahl, dauer_monate) if q != "datum_text"] + summen
+        if any(abs((d - gl).days) <= 31 for d in hoechst):
+            return gl_neu, "text_laufzeit_option"
+    return None
+
+
 def laufzeit(beginn: date | None, ende: date | None, dauer_monate: int | None, text: str, anzahl: int | None,
              verlaengerbar: bool | None) -> tuple[date | None, str, date | None, str]:
-    """Ende der Grundlaufzeit und Höchstende mit Herkunft (Lese-Regeln 1, 3, 4 und 1a)."""
+    """Ende der Grundlaufzeit und Höchstende mit Herkunft (Lese-Regeln 1, 3, 4, 1a und 1b)."""
     gl, gl_h = grundlaufzeit(beginn, ende, dauer_monate)
     if gl:
         text_ende = saetze(text, RE_SATZ_ENDE)
@@ -201,6 +262,14 @@ def laufzeit(beginn: date | None, ende: date | None, dauer_monate: int | None, t
             if frueher:
                 return max(frueher), "text_zunaechst", gl, "enddatum_ist_hoechstende"
             return gl, gl_h, gl, "enddatum_ist_hoechstende"
+        if gl_h == "enddatum" and (neu := kurze_festlaufzeit(beginn, gl, text, anzahl, dauer_monate)):
+            gl_neu, gl_neu_h = neu
+            if gl_neu_h == "text_laufzeit_option":
+                return gl_neu, gl_neu_h, gl, "enddatum_ist_hoechstende"
+            h, h_h = hoechstende(gl_neu, beginn, text, anzahl, dauer_monate, verlaengerbar)
+            if h is None or h <= gl_neu:  # keine Angabe zum Höchstende: das spätere Enddatum der Bekanntmachung gilt als Höchstende
+                return gl_neu, gl_neu_h, gl, "enddatum_ist_hoechstende"
+            return gl_neu, gl_neu_h, h, h_h
     h, h_h = hoechstende(gl, beginn, text, anzahl, dauer_monate, verlaengerbar)
     return gl, gl_h, h, h_h
 

@@ -1,0 +1,25 @@
+# Notices, die bei der Entwicklung der Regel 1b (Iteration 7, Schritt 1) einzeln angesehen wurden.
+# Sie kommen nicht in die Stichprobe für Y1 bis Y2b und nicht in die Regelwirkungs-Stichprobe (Schritt 2).
+# Die ersten vier sind die Entwicklungsfehler der Iteration 6 (L1, L42, L43, L60).
+143100-2026
+448962-2026
+418442-2026
+392720-2026
+# Beim Prüfen der geänderten Lose angesehen
+318563-2026
+686226-2024
+772862-2024
+521559-2026
+606343-2024
+189063-2026
+282493-2024
+191628-2025
+387077-2024
+764749-2025
+758702-2025
+412612-2025
+47655-2025
+758724-2024
+612313-2026
+294227-2025
+799157-2025

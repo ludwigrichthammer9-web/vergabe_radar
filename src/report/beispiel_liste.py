@@ -55,13 +55,14 @@ TED = "https://ted.europa.eu/de/notice/-/detail/{}"
 KORREKTUREN = {"L60": {"ok1": False}}
 
 GL_TEXT = {"enddatum": "Enddatum (BT-537)", "beginn_plus_dauer": "Beginn + Dauer (BT-536 + BT-36)",
-           "text_zunaechst": "Text „zunächst bis …“", "unbekannt": "–", "unplausibel": "Felder unplausibel"}
+           "text_zunaechst": "Text „zunächst bis …“", "text_festlaufzeit": "Text „Festlaufzeit bis …“",
+           "text_laufzeit_option": "Text: feste Dauer + Option", "unbekannt": "–", "unplausibel": "Felder unplausibel"}
 H_TEXT = {"datum_text": "Datum im Text", "hoechstlaufzeit_text": "Höchstlaufzeit im Text", "bt36_laenger": "Dauer BT-36",
           "anzahl_x_laenge": "Anzahl × Länge der Verlängerungen", "keine_verlaengerung": "keine Verlängerung laut Text/BT-58",
           "keine_angabe": "keine Angabe zur Verlängerung", "unbestimmbar": "Verlängerung erwähnt, Länge offen",
           "enddatum_ist_hoechstende": "Enddatum ist laut Text das späteste Ende", "keine_grundlaufzeit": "–"}
 STUFE_TEXT = {
-    "A": "Höchstende steht ausdrücklich im Text oder Feld",
+    "A": "Höchstende steht ausdrücklich im Text oder Feld, oder das Ende der Grundlaufzeit wurde aus dem Text berichtigt",
     "B": "Höchstende berechnet aus Anzahl × Länge der Verlängerungen; das Enddatum kann schon das Höchstende sein",
     "C": "keine Angabe zur Verlängerung; Höchstende = Grundlaufzeit angenommen, Verlängerung im Volltext möglich",
     "D": "Verlängerung erwähnt, aber Länge oder Anzahl fehlt; Höchstende unbestimmbar",
@@ -70,9 +71,16 @@ STUFE_TEXT = {
 }
 
 
+TEXT_GL = {"text_zunaechst", "text_festlaufzeit", "text_laufzeit_option"}  # Ende der Grundlaufzeit aus dem Text berichtigt (Regeln 1a, 1b)
+
+
 def stufe(r: dict) -> str:
+    """Stufen A–F, für Iteration 7 vor dem Ziehen der Stichprobe festgelegt (2026-11-04): Ende der Grundlaufzeit aus dem Text → A; sonst nach
+    Herkunft des Höchstendes (Anzahl × Länge → B, keine Angabe → C, unbestimmbar → D, alles andere → A); ohne Ende E (nur geschätzt) oder F."""
     if not r["gl_ende"]:
         return "E" if r.get("gl_geschaetzt") else "F"
+    if r["gl_herkunft"] in TEXT_GL:
+        return "A"
     return {"anzahl_x_laenge": "B", "keine_angabe": "C", "unbestimmbar": "D"}.get(r["hoechstende_herkunft"], "A")
 
 
