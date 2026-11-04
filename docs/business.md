@@ -176,6 +176,16 @@ denen gerechnet wird. Was davon im Produkt nützt, ist ohne Kundengespräche nic
 **Kennzahlen und Schwellen:** X1–X4 wie in [iterationen.md](iterationen.md); technisches Erfolgskriterium ist X3 (R1 ≥ 60 % Treffer
 ±3 Monate und mindestens 10 Prozentpunkte über R0).
 
+**Fachliches Erfolgskriterium** _(festgelegt 2026-11-04, vor dem Backtest-Lauf; Vorschlag von Claude, bestätigt vom Nutzer)_
+- **Nutzen:** Ein Eintrag der Vertragsliste hilft einem Reinigungsbetrieb, wenn die Neuausschreibung im Fenster von **±3 Monaten** um das
+  prognostizierte Datum erscheint: Der Betrieb kann Angebot, Referenzen und Personal gezielt vorbereiten, statt Bekanntmachungen
+  dauernd zu beobachten.
+- **Schwelle:** Die Liste gilt als brauchbar, wenn R1 in **mindestens 60 %** der Fälle im Fenster trifft **und** mindestens **10 Prozentpunkte
+  besser** ist als die naive Referenz R0. Unter 40 % taugt sie nicht als Terminprognose; die Liste bliebe dann ein Verzeichnis mit Enddaten.
+- **Setzung, nicht belegt:** Das Fenster von ±3 Monaten stammt aus dem Projektplan; ohne Kundengespräche (A1, A15) ist nicht belegt, welches
+  Fenster und welche Quote ein Betrieb braucht. Der Wert der Liste bleibt eine Annahme.
+- Gilt zusammen mit den technischen Kriterien X1–X4 (`docs/iterationen.md`, Iteration 5).
+
 **Grenzen der Messung**
 - Gemessen wird nur, wie oft eine Neuausschreibung im prognostizierten Fenster liegt, **wenn** sie auf TED erscheint (Trefferquote). Wie
   viele Prognosen ins Leere gehen (Präzision), misst Iteration 5 nicht.
