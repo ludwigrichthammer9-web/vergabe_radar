@@ -118,10 +118,10 @@ def main() -> None:
         "[gt_pruefung_iteration5_auswertung.md](gt_pruefung_iteration5_auswertung.md)).",
         f"- Parameter: Vorlauf {VORLAUF_MONATE} Monate, Fenster ±{FENSTER_MONATE} Monate; keine Schätzung aus den Paaren.", "",
         "| | Treffer ±3 Monate | ±6 Monate (ohne Schwelle) | Median Abweichung (Monate, Veröffentlichung − Prognose) |", "|---|---|---|---|",
-        f"| **R0** Grundlaufzeit − 6 | {pct(k0, n)} | {pct(sum(r['t0w'] for r in rows), n)} | {median([r['d0'] for r in rows]):+.1f} |".replace(".", ",", 0),
-        f"| **R1** Höchstende − 6 | {pct(k1, n)} | {pct(sum(r['t1w'] for r in rows), n)} | {median([r['d1'] for r in rows]):+.1f} |", "",
-        f"**X3:** R1 {q1:.1f} % (Schwelle ≥ 60 %), Abstand zu R0 {q1 - q0:+.1f} Prozentpunkte (Schwelle ≥ +10) → "
-        f"**{'erfüllt' if x3 else 'nicht erfüllt'}**.".replace(".", ","), "",
+        f"| **R0** Grundlaufzeit − 6 | {pct(k0, n)} | {pct(sum(r['t0w'] for r in rows), n)} | {median([r['d0'] for r in rows]):+.1f} |".replace(".", ","),
+        f"| **R1** Höchstende − 6 | {pct(k1, n)} | {pct(sum(r['t1w'] for r in rows), n)} | {median([r['d1'] for r in rows]):+.1f} |".replace(".", ","), "",
+        f"**X3:** R1 {q1:.1f} % (Schwelle ≥ 60 %), Abstand zu R0 {q1 - q0:+.1f} Prozentpunkte (Schwelle ≥ +10) → ".replace(".", ",") +
+        f"**{'erfüllt' if x3 else 'nicht erfüllt'}**.", "",
         "### Aufschlüsselung (explorativ, ohne Schwelle)", "",
         "| Gruppe | n | R0 Treffer | R1 Treffer | Differenz (Prozentpunkte) |", "|---|---|---|---|---|",
     ]

@@ -739,6 +739,14 @@ A16 (explorativ).
 > **X1 = 52** bestätigte Paare mit bestimmbarem Ende (Schwelle ≥ 30). Vorbehalt: Unabhängigkeit der Prüfung durch den Kommilitonen
 > (P14–P71) offen, Minuten fehlen; A18 bleibt „ungeprüft“.
 
+> **Fortschritt 2026-11-04 (Schritt 6, Backtest gelaufen, Kriterien unverändert):** Fachliches Kriterium (Nutzen, Schwelle) in
+> `docs/business.md` §7.1 vor dem Lauf festgelegt (f0ee271); `src/model/baseline.py` vor dem ersten Lauf committet (4ab0f36); danach nur
+> Zahlenformat im Report geändert, Ergebnis identisch. Report [backtest_iteration5.md](../reports/backtest_iteration5.md):
+> **R1 15/52 = 28,8 % (Wilson 18,3–42,3), R0 9/52 = 17,3 %, Abstand +11,5 Prozentpunkte → X3 nicht erfüllt** (Schwelle ≥ 60 %).
+> Median-Abweichung R1 +0,6 Monate, aber breit gestreut: 20 Veröffentlichungen mehr als 3 Monate vor, 17 mehr als 3 Monate nach der Prognose.
+> Nach der vorab festgelegten Folge („X1 ≥ 30 und R1 < 40 % → Idee anpassen“) bliebe die Vertragsliste ohne Terminprognose; Ergebnis,
+> Evaluator und Entscheidung folgen mit `/iteration-ende`.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
