@@ -44,8 +44,9 @@ Genauigkeit des Höchstendes (Teststichprobe, Fassung a0aa419): 53/60 richtig, g
 6. Lose: Die API liefert je Feld eine Liste. Ist sie so lang wie die Liste der Lostitel, wird sie Los für Los zugeordnet. Ist sie
    kürzer und alle Werte gleich, gilt der Wert für alle Lose; sonst bleibt das Feld leer (Herkunft „liste_unvollstaendig“).
 
-Aufruf:  python src/prepare/vertragsliste.py
-Ausgabe: data/processed/vertragsliste_909.csv, reports/vertragsliste_iteration5.md (Kennzahl X4)
+Aufruf:  python src/prepare/vertragsliste.py [Berichtspfad]
+Ausgabe: data/processed/vertragsliste_909.csv, reports/vertragsliste_iteration5.md (Kennzahl X4) bzw. der angegebene Berichtspfad
+         (Iteration 7: reports/vertragsliste_iteration7.md; die Fassung der Iteration 6 liegt als vertragsliste_909_iteration6.csv)
 """
 
 import calendar
@@ -418,8 +419,9 @@ def main() -> None:
         "- Wo eine Laufzeit vorliegt, ist das Höchstende meist lesbar. Bleibt es unbestimmbar, liegt R1 eher zu früh.",
         "",
     ]
-    REPORT.write_text("\n".join(lines), encoding="utf-8")
-    print(f"{len(rows)} Lose; X4 = {pct(mit_r1, len(x4), True)}; Report: {REPORT}")
+    ziel = Path(sys.argv[1]) if len(sys.argv) > 1 else REPORT  # optional: anderer Berichtspfad, damit der Bericht der Iteration 5 bleibt
+    ziel.write_text("\n".join(lines), encoding="utf-8")
+    print(f"{len(rows)} Lose; X4 = {pct(mit_r1, len(x4), True)}; Report: {ziel}")
 
 
 if __name__ == "__main__":

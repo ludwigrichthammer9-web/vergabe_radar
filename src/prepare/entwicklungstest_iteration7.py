@@ -63,7 +63,7 @@ def main() -> None:
     print("Abweichungen vom Soll (Dev-Lose müssen richtig sein, andere dürfen nicht falsch werden):", probleme or "keine")
 
     alt = {}
-    with (ROOT / "data" / "processed" / "vertragsliste_909.csv").open(encoding="utf-8") as f:
+    with (ROOT / "data" / "processed" / "vertragsliste_909_iteration6.csv").open(encoding="utf-8") as f:
         for r in csv.DictReader(f, delimiter=";"):
             alt[(r["notice"], r["los"])] = r["gl_ende"]
     zaehl, n, ausser = Counter(), 0, 0
