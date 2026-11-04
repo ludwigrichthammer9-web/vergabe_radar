@@ -257,12 +257,16 @@ def zeilen(notice: dict) -> list[dict]:
         verl = None if bt58 is None else bt58 > 0
         gl, gl_h, h, h_h = laufzeit(beginn, ende, dauer, text, bt58 if bt58 else None, verl)
         r0, r1 = prognosen(gl, h)
+        # Iteration 6: Ende nur geschätzt (Veröffentlichung + Dauer), wenn kein Beginn und kein Enddatum, aber eine Dauer vorliegt.
+        # Zählt weder für die Abdeckung Y3 noch für die Genauigkeit Y1; Spalte nur für den Prototyp (als „geschätzt“ zu kennzeichnen).
+        pub = iso(notice.get("publication-date", ""))
+        geschaetzt = ende_nach_monaten(pub, dauer) if (gl is None and dauer and 0 < dauer <= MAX_MONATE and pub) else ""
         out.append({
             "notice": notice["publication-number"], "veroeffentlicht": str(notice.get("publication-date", ""))[:10],
             "auftraggeber": (_liste(notice.get("buyer-name")) or [""])[0], "los": i + 1, "los_titel": titel[i][:120],
             "beginn": beginn or "", "gl_ende": gl or "", "gl_herkunft": gl_h, "bt58": "" if bt58 is None else bt58,
             "hoechstende": h or "", "hoechstende_herkunft": h_h, "r0": r0 or "", "r1": r1 or "",
-            "liste_eindeutig": eindeutig,
+            "liste_eindeutig": eindeutig, "gl_geschaetzt": geschaetzt,
         })
     return out
 
@@ -293,6 +297,7 @@ def main() -> None:
 
     x4 = [r for r in rows if X4_VON <= r["veroeffentlicht"] <= X4_BIS]
     mit_r1 = sum(1 for r in x4 if r["r1"])
+    mit_geschaetzt = sum(1 for r in x4 if r["r1"] or r["gl_geschaetzt"])
     def zaehle(rs, key):
         out = {}
         for r in rs:
@@ -314,6 +319,9 @@ def main() -> None:
         f"### X4 Abdeckung (Lose aus Zuschlägen, veröffentlicht {X4_VON} bis {X4_BIS})",
         "",
         f"**R1 liefert ein Datum: {pct(mit_r1, len(x4), True)}** (Schwelle ≥ 80 %, vorab festgelegt).",
+        "",
+        f"Zusätzlich (Iteration 6, nur Hinweis, zählt nicht für X4/Y3): mit **geschätztem** Ende (Veröffentlichung + Dauer, wenn nur die Dauer vorliegt) "
+        f"{pct(mit_geschaetzt, len(x4), True)}.",
         "",
         "| Herkunft Ende der Grundlaufzeit | Lose |",
         "|---|---|",

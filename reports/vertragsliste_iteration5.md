@@ -12,6 +12,8 @@ _Erzeugt mit `src/prepare/vertragsliste.py`; Regeln im Kopf des Skripts und in `
 
 **R1 liefert ein Datum: 2924/3668 = 79,7 % (Wilson 78,4–81,0)** (Schwelle ≥ 80 %, vorab festgelegt).
 
+Zusätzlich (Iteration 6, nur Hinweis, zählt nicht für X4/Y3): mit **geschätztem** Ende (Veröffentlichung + Dauer, wenn nur die Dauer vorliegt) 3207/3668 = 87,4 % (Wilson 86,3–88,5).
+
 | Herkunft Ende der Grundlaufzeit | Lose |
 |---|---|
 | enddatum | 2794/3668 = 76,2 % |
