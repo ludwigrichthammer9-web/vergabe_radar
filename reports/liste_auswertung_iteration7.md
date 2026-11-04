@@ -4,27 +4,27 @@ _Erzeugt mit `src/prepare/auswertung_iteration7.py`. Schlüssel-Hash geprüft: `
 
 ## Fakten
 
-- **Y1 (80 Zufallslose, Ende der Grundlaufzeit): 20/80 = 25,0 % (Wilson 16,8–35,5)** (Schwelle ≥ 72/80 = 90 %).
-- **Y1r (15 Regelwirkungs-Lose): 10/15 = 66,7 % (Wilson 41,7–84,8)** (Schwelle ≥ 12/15).
-- **Y2 (Höchstende korrekt oder „unbestimmbar“): 52/80 = 65,0 % (Wilson 54,1–74,5)** (Schwelle ≥ 90 %).
-- **Y2b (nur Lose, bei denen die Liste ein Höchstende nennt): 44/72 = 61,1 % (Wilson 49,6–71,5)** (Schwelle ≥ 85 %).
-- Abweichungen bei Y1 (Typ Y): 60, davon 60 mit Prüfereintrag „unbekannt“ und 0 mit abweichendem Datum. Typ R: 5, davon 5 „unbekannt“.
-- Quelle laut Prüfer: {'Text': 76, 'unbekannt': 19}. Hilfsmittel: {'Kalender': 14, 'keine': 81}.
-- Prüfzeit je Los: Median 1 Minuten, Summe 137 Minuten für 95 Lose. Eine Sitzungstabelle (Start und Ende) liegt in der abgegebenen Datei nicht vor.
+- **Y1 (80 Zufallslose, Ende der Grundlaufzeit): 19/80 = 23,8 % (Wilson 15,8–34,1)** (Schwelle ≥ 72/80 = 90 %).
+- **Y1r (15 Regelwirkungs-Lose): 8/15 = 53,3 % (Wilson 30,1–75,2)** (Schwelle ≥ 12/15).
+- **Y2 (Höchstende korrekt oder „unbestimmbar“): 51/80 = 63,8 % (Wilson 52,8–73,4)** (Schwelle ≥ 90 %).
+- **Y2b (nur Lose, bei denen die Liste ein Höchstende nennt): 43/72 = 59,7 % (Wilson 48,2–70,3)** (Schwelle ≥ 85 %).
+- Abweichungen bei Y1 (Typ Y): 61, davon 61 mit Prüfereintrag „unbekannt“ und 0 mit abweichendem Datum. Typ R: 7, davon 7 „unbekannt“.
+- Quelle laut Prüfer: {'Text': 28, 'unbekannt': 67}. Hilfsmittel: {'Kalenderberechnung': 16, 'keine': 79}.
+- Prüfzeit je Los: Median 1 Minuten, Summe 143 Minuten für 95 Lose. Eine Sitzungstabelle (Start und Ende) liegt in der abgegebenen Datei nicht vor.
 
 ### Beschreibend (ohne Schwelle)
 
-- Y1 nach Losen gewichtet: 29,7 %.
-- Y1 nur für Lose mit Quelle „Text“ (Typ Y): 20/61 = 32,8 % (Wilson 22,3–45,3).
-- Gesamtschätzung für das Fenster = (128 · 0.667 + 2.796 · 0.250) / 2.924 = 26,8 %.
+- Y1 nach Losen gewichtet: 29,0 %.
+- Y1 nur für Lose mit Quelle „Text“ (Typ Y): 19/20 = 95,0 % (Wilson 76,4–99,1).
+- Gesamtschätzung für das Fenster = (128 · 0.533 + 2.796 · 0.237) / 2.924 = 25,0 %.
 
 ### Y1 nach Herkunft des Enddatums der Liste
 
 | Typ | Herkunft | Lose | korrekt | davon Prüfer „unbekannt“ |
 |---|---|---|---|---|
-| R | text_laufzeit_option | 15 | 10 | 5 |
+| R | text_laufzeit_option | 15 | 8 | 7 |
 | Y | beginn_plus_dauer | 2 | 0 | 2 |
-| Y | enddatum | 76 | 18 | 58 |
+| Y | enddatum | 76 | 17 | 59 |
 | Y | text_zunaechst | 2 | 2 | 0 |
 
 ### Abweichungen mit abweichendem Datum
@@ -51,6 +51,7 @@ _Erzeugt mit `src/prepare/auswertung_iteration7.py`. Schlüssel-Hash geprüft: `
 | L34 | 460218-2026, 5 | 2030-06-30 (anzahl_x_laenge) | unbestimmbar |
 | L35 | 831847-2025, 2 | 2030-01-31 (anzahl_x_laenge) | unbestimmbar |
 | L38 | 787336-2025, 7 | 2031-12-31 (anzahl_x_laenge) | unbestimmbar |
+| L41 | 397515-2026, 1 | 2031-06-30 (keine_angabe) | unbestimmbar |
 | L42 | 655547-2025, 3 | 2029-11-30 (anzahl_x_laenge) | unbestimmbar |
 | L45 | 612858-2026, 1 | 2030-09-30 (anzahl_x_laenge) | unbestimmbar |
 | L54 | 209475-2026, 1 | 2030-03-31 (anzahl_x_laenge) | unbestimmbar |
@@ -67,8 +68,8 @@ _Erzeugt mit `src/prepare/auswertung_iteration7.py`. Schlüssel-Hash geprüft: `
 
 ## Interpretation (Vorbehalt: Gültigkeit der Prüfung offen)
 
-- **Kein einziges abweichendes Datum:** Wo der Prüfer ein Ende der Grundlaufzeit eintrug (30 Einträge), stimmt die Liste in allen Fällen. Die Y1-Quote entsteht allein durch Einträge „unbekannt“ (65).
-- 60 dieser Einträge betreffen Lose, deren Ende die Liste aus den Feldern der Bekanntmachung (BT-537 bzw. Beginn + Dauer) nimmt. Die Vorlage zeigt diese Felder absichtlich nicht (kein Verankern an der Liste); sie sind nur im Original auf TED sichtbar. Die Quelle „Feld“ wurde kein einziges Mal vergeben (Quellen: {'Text': 76, 'unbekannt': 19}), die mittlere Prüfzeit liegt bei 1 Minute je Los. Das spricht dafür, dass die Originale nicht geöffnet wurden und nur die Auszüge der Vorlage gelesen wurden. Dann misst Y1 hier nicht die Genauigkeit der Liste, sondern wie viele Laufzeiten im Auszug stehen.
-- Y2: 26 von 28 Abweichungen sind Folgefehler derselben Ursache (Liste nennt ein Höchstende aus Anzahl × Länge, der Prüfer kennt das Ende der Grundlaufzeit nicht und trägt „unbestimmbar“ ein). Echte Abweichungen mit Datum: L72, L82.
+- **Kein einziges abweichendes Datum:** Wo der Prüfer ein Ende der Grundlaufzeit eintrug (27 Einträge), stimmt die Liste in allen Fällen. Die Y1-Quote entsteht allein durch Einträge „unbekannt“ (68).
+- 61 dieser Einträge betreffen Lose, deren Ende die Liste aus den Feldern der Bekanntmachung (BT-537 bzw. Beginn + Dauer) nimmt. Die Vorlage zeigt diese Felder absichtlich nicht (kein Verankern an der Liste); sie sind nur im Original auf TED sichtbar. Die Quelle „Feld“ wurde kein einziges Mal vergeben (Quellen: {'Text': 28, 'unbekannt': 67}), die mittlere Prüfzeit liegt bei 1 Minute je Los. Das spricht dafür, dass die Originale nicht geöffnet wurden und nur die Auszüge der Vorlage gelesen wurden. Dann misst Y1 hier nicht die Genauigkeit der Liste, sondern wie viele Laufzeiten im Auszug stehen.
+- Y2: 27 von 29 Abweichungen sind Folgefehler derselben Ursache (Liste nennt ein Höchstende aus Anzahl × Länge, der Prüfer kennt das Ende der Grundlaufzeit nicht und trägt „unbestimmbar“ ein). Echte Abweichungen mit Datum: L72, L82.
 - Belastbar sind nur: die Treffer bei den Datumsangaben des Prüfers, die Y2-Abweichungen mit Datum und die Zahl der Lose, deren Laufzeit im Auszug steht. Ob Y1 erfüllt ist, lässt sich mit dieser Eingabe nicht entscheiden; dafür müssten die Lose mit „unbekannt“ im Original geprüft werden.
 

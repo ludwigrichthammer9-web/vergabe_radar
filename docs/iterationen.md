@@ -1040,6 +1040,11 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > **Interpretation (vorläufig):** Die Rohwerte messen hier vor allem, ob die Laufzeit im Auszug steht, nicht die Genauigkeit der Liste. Echte Fehler mit Datum bei Y2: L72 (Liste 31.08.2037, Prüfer 31.08.2031) und L82 (Liste 31.10.2029, Prüfer 31.10.2030).
 > Entscheidung über die Folge (Y1 verfehlt → „zwischen 70 % und 90 %“ bzw. „< 70 %“) erst nach Klärung, ob die 65 Lose im Original nachgeprüft werden.
 
+> **Nachtrag 2026-11-04 (zweite Abgabe ersetzt die erste):** Der Nutzer teilte mit, die erste Datei sei eine unfertige Version gewesen, und gab eine zweite Datei ab (ohne die Zeile „XML-Felder“, im Format der Vorlage; damit ist die offene Frage zur Zeile erledigt).
+> Die erste Abgabe bleibt als `reports/liste_pruefung_iteration7_urteile_abgabe1.csv` erhalten (Auswertung im Commit d684471); maßgeblich ist `reports/liste_pruefung_iteration7_urteile.csv`. Die Sitzungstabelle fehlt auch in der zweiten Datei.
+> **Rohwerte der zweiten Abgabe:** Y1 19/80 = 23,8 %, Y1r 8/15, Y2 51/80 = 63,8 %, Y2b 43/72 = 59,7 %; Summe 143 Minuten, Median 1 Minute. Quelle: 28 × „Text“, 67 × „unbekannt“, nie „Feld“; Hilfsmittel 79 × „keine“, 16 × „Kalenderberechnung“.
+> Wieder keine einzige Datumsabweichung (27 Datumsangaben), alle Abweichungen bei Y1 sind „unbekannt“; bei Quelle „Text“ stimmt die Liste in 19 von 20 Fällen der Hauptstichprobe (Wilson 76,4–99,1). Echte Y2-Fehler mit Datum: L72, L82. Die Einordnung der ersten Abgabe gilt unverändert.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
