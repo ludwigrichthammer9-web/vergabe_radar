@@ -19,206 +19,206 @@ Je Los eintragen:
 ### L3: [108370-2024](https://ted.europa.eu/de/notice/-/detail/108370-2024), Los 1
 
 - Los-Titel: Unterhaltsreinigung (Los 2 – Unterhaltsreinigung Jentower)
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
-- Quelle: 
+- Beginn (Feld): 01.01.2024
+- Ende (Feld): 31.12.2027
+- Dauer (Feld): 2 Jahre
+- Ende der Grundlaufzeit: 31.12.2027
+- Quelle: ted
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 4
 
 ### L4: [724979-2025](https://ted.europa.eu/de/notice/-/detail/724979-2025), Los 1
 
 - Los-Titel: Durchführung der Unterhaltsreinigung an Schulen in Hainburg, Seligenstadt und Mainhausen
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.01.2026
+- Ende (Feld): 31.12.2029
+- Dauer (Feld): Drei Jahre
+- Ende der Grundlaufzeit: 31.12.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 4
 
 ### L5: [538350-2026](https://ted.europa.eu/de/notice/-/detail/538350-2026), Los 3
 
 - Los-Titel: Glasreinigung für beide Gebäude
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.09.2026
+- Ende (Feld): 31.08.2031
+- Dauer (Feld): 5 Jahre
+- Ende der Grundlaufzeit: 31.08.2031
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L7: [340183-2026](https://ted.europa.eu/de/notice/-/detail/340183-2026), Los 1
 
 - Los-Titel: Fachlos 1 - Unterhalts- und Grundreinigung gesamt
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 04.07.2026
+- Ende (Feld): 12.07.2030
+- Dauer (Feld): knapp 4 Jahre
+- Ende der Grundlaufzeit: 12.07.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L10: [25467-2026](https://ted.europa.eu/de/notice/-/detail/25467-2026), Los 2
 
 - Los-Titel: Glasreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01/04/2026 
+- Ende (Feld): 31/03/2027
+- Dauer (Feld): 1 Jahr
+- Ende der Grundlaufzeit: 31/03/2027
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L11: [813327-2025](https://ted.europa.eu/de/notice/-/detail/813327-2025), Los 1
 
 - Los-Titel: LOS 1 Unterhaltsreinigung gemäß Leistungsbeschreibung
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01/04/2026 
+- Ende (Feld): 31/03/2027
+- Dauer (Feld): 1 Jahr
+- Ende der Grundlaufzeit: 31/03/2027
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L12: [427959-2026](https://ted.europa.eu/de/notice/-/detail/427959-2026), Los 1
 
 - Los-Titel: Los 1 Unterhaltsreinigung gemäß Leistungsbeschreibung
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01/09/2026
+- Ende (Feld): 31/08/2028
+- Dauer (Feld): 2 Jahre
+- Ende der Grundlaufzeit: 31/08/2028
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L13: [734674-2025](https://ted.europa.eu/de/notice/-/detail/734674-2025), Los 1
 
 - Los-Titel: Reinigungsleistungen LWL-Freilichtmuseum Detmold
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.11.2025
+- Ende (Feld): 31.10.2029
+- Dauer (Feld): 4 Jahre
+- Ende der Grundlaufzeit: 31.10.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2 Minuten
 
 ### L14: [746381-2025](https://ted.europa.eu/de/notice/-/detail/746381-2025), Los 6
 
 - Los-Titel: Los 6: Unterhalts- und Glasreinigungsleistungen
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.04.2026
+- Ende (Feld): 31.03.2030
+- Dauer (Feld): 4 Jahre
+- Ende der Grundlaufzeit: 31.03.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L16: [423541-2026](https://ted.europa.eu/de/notice/-/detail/423541-2026), Los 2
 
 - Los-Titel: Position 2
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.10.2026
+- Ende (Feld): 31.08.2030
+- Dauer (Feld): 4 Jahre
+- Ende der Grundlaufzeit:  31.08.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L17: [326312-2026](https://ted.europa.eu/de/notice/-/detail/326312-2026), Los 1
 
 - Los-Titel: Gebäudeunterhaltsreinigung ab 01.11.2026
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.11.2026
+- Ende (Feld): 31.10.2029
+- Dauer (Feld): 3 Jahre
+- Ende der Grundlaufzeit: 31.10.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L18: [787336-2025](https://ted.europa.eu/de/notice/-/detail/787336-2025), Los 10
 
 - Los-Titel: Los_10_Region_Flensburg_Glasreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.01.2026
+- Ende (Feld): 31.12.2029
+- Dauer (Feld): 3 Jahre
+- Ende der Grundlaufzeit: 31.10.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L20: [771566-2025](https://ted.europa.eu/de/notice/-/detail/771566-2025), Los 1
 
 - Los-Titel: Eschwege 1
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.01.2026
+- Ende (Feld): 31.12.2029
+- Dauer (Feld): 3 Jahre
+- Ende der Grundlaufzeit: 31.12.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L21: [403178-2026](https://ted.europa.eu/de/notice/-/detail/403178-2026), Los 2
 
 - Los-Titel: Los 2
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.09.2026
+- Ende (Feld): 31.08.2029
+- Dauer (Feld): 3 Jahre
+- Ende der Grundlaufzeit: 31.08.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L22: [721411-2025](https://ted.europa.eu/de/notice/-/detail/721411-2025), Los 2
 
 - Los-Titel: Glasreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.11.2025
+- Ende (Feld): 31.10.2029
+- Dauer (Feld): 4 Jahre
+- Ende der Grundlaufzeit: 31.10.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L23: [779668-2025](https://ted.europa.eu/de/notice/-/detail/779668-2025), Los 3
 
 - Los-Titel: Unterhaltsreinigung - RZ Bad Kissingen, Kliniken Rhön und Saale
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.02.2026
+- Ende (Feld): 31.01.2030
+- Dauer (Feld): 4 Jahre
+- Ende der Grundlaufzeit: 31.01.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L24: [109604-2026](https://ted.europa.eu/de/notice/-/detail/109604-2026), Los 3
 
 - Los-Titel: Los 3: Schulstandort Hinter Burg (Mayen): Unterhalts-, Sonder- und Grundreinigungen
-- Beginn (Feld): 
-- Ende (Feld): 
-- Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Beginn (Feld): 01.04.2026
+- Ende (Feld): unbekannt
+- Dauer (Feld): 2 Jahre
+- Ende der Grundlaufzeit: unbekannt
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L25: [720415-2025](https://ted.europa.eu/de/notice/-/detail/720415-2025), Los 1
 
@@ -235,14 +235,14 @@ Je Los eintragen:
 ### L26: [650531-2026](https://ted.europa.eu/de/notice/-/detail/650531-2026), Los 2
 
 - Los-Titel: Glasreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.01.2026
+- Ende (Feld): 31.12.2029
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 31.12.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L27: [116801-2026](https://ted.europa.eu/de/notice/-/detail/116801-2026), Los 6
 
@@ -259,14 +259,14 @@ Je Los eintragen:
 ### L30: [444388-2026](https://ted.europa.eu/de/notice/-/detail/444388-2026), Los 1
 
 - Los-Titel: Unterhaltsreinigung 1
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.03.2026
+- Ende (Feld): 28.02.2029
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 28.02.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L31: [253014-2026](https://ted.europa.eu/de/notice/-/detail/253014-2026), Los 1
 
@@ -283,58 +283,58 @@ Je Los eintragen:
 ### L32: [581750-2026](https://ted.europa.eu/de/notice/-/detail/581750-2026), Los 1
 
 - Los-Titel: UHR Ziehenschule
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.05.2026
+- Ende (Feld): 30.04.2029
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 30.04.2029
 - Quelle: 
-- Höchstende (nur bei Änderung): 
+- Höchstende (nur bei Änderung): 2 Verlängerungen maximal
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L33: [112593-2026](https://ted.europa.eu/de/notice/-/detail/112593-2026), Los 1
 
 - Los-Titel: Unterhaltsreinigung Haus des Jugendrechts Nord Frankfurt
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.04.2026
+- Ende (Feld): 31.03.2030
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 31.03.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L34: [460218-2026](https://ted.europa.eu/de/notice/-/detail/460218-2026), Los 5
 
 - Los-Titel: Los 5
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.07.2026
+- Ende (Feld): 30.06.2028
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 30.06.2028
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L35: [831847-2025](https://ted.europa.eu/de/notice/-/detail/831847-2025), Los 2
 
 - Los-Titel: Los 2 - Unterhaltsreinigung Serviceregion Ruhrgebiet
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.02.2026
+- Ende (Feld): 31.01.2028
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 31.01.2028
 - Quelle: 
-- Höchstende (nur bei Änderung): 
+- Höchstende (nur bei Änderung): Weitere Informationen zur Verlängerung: 1)Los 1 = Standort Bocholt 1. Vertragslaufzeit (25 Monate) 01.01.2026 bis 31.01.2028 Los 1 = Standort Borken 1. Vertragslaufzeit (24 Monate) 01.02.2026 bis 31.01.2028 2)Standardmäßig beträgt die Hauptvertragslaufzeit 24 Monate. Die Vertragszeiten verlängern sich längstens zweimal um jeweils 12 Monate automatisch, soweit nicht sechs Monate vor dem jeweiligen Vertragsende schriftlich von einer der beiden Vertragsparteien gekündigt wurde.
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L37: [661584-2026](https://ted.europa.eu/de/notice/-/detail/661584-2026), Los 4
 
 - Los-Titel: 4
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.08.2026
+- Ende (Feld): 31.07.2030
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 31/07/2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
@@ -350,127 +350,127 @@ Je Los eintragen:
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L40: [404707-2026](https://ted.europa.eu/de/notice/-/detail/404707-2026), Los 4
 
 - Los-Titel: Unterhaltsreinigung - Kulmbach
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.07.2026
+- Ende (Feld): 31.08.2030
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 31.08.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L41: [397515-2026](https://ted.europa.eu/de/notice/-/detail/397515-2026), Los 1
 
 - Los-Titel: Unterhaltsreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.07.2026
+- Ende (Feld): 30.06.2031
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 30/06/2031
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L42: [655547-2025](https://ted.europa.eu/de/notice/-/detail/655547-2025), Los 3
 
 - Los-Titel: Glasreinigung Gebrüder Grimm Grundschule, Hort Schatztruhe und OTZ
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.12.2025
+- Ende (Feld): 30.11.2026
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 30.11.2026
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L43: [487852-2026](https://ted.europa.eu/de/notice/-/detail/487852-2026), Los 1
 
 - Los-Titel: GR 001_2026
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 09.07.2026
+- Ende (Feld): 03.07.2030
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 03.07.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L44: [59540-2026](https://ted.europa.eu/de/notice/-/detail/59540-2026), Los 1
 
 - Los-Titel: Gebäudereinigung Pfanzeltplatz 10
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.03.2026
+- Ende (Feld): 28.02.2030
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: unbekannt
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L45: [612858-2026](https://ted.europa.eu/de/notice/-/detail/612858-2026), Los 1
 
 - Los-Titel: UHR Goldsteinschule
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.10.2026
+- Ende (Feld): 30.09.2027
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 30.09.2027
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L46: [860721-2025](https://ted.europa.eu/de/notice/-/detail/860721-2025), Los 5
 
 - Los-Titel: Los 5
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.02.2026
+- Ende (Feld): 31.01.2031
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 31.01.2031
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L48: [381423-2026](https://ted.europa.eu/de/notice/-/detail/381423-2026), Los 2
 
 - Los-Titel: Glasreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 13.07.2026
+- Ende (Feld): 12.07.2026
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 12/07/2027
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L49: [104444-2024](https://ted.europa.eu/de/notice/-/detail/104444-2024), Los 1
 
 - Los-Titel: Unterhaltsreinigung (Los 1 – Unterhaltsreinigung Microcerse Center Jena)
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.01.2024
+- Ende (Feld): 31.12.2027
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 31.12.2027
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L50: [269649-2026](https://ted.europa.eu/de/notice/-/detail/269649-2026), Los 1
 
 - Los-Titel: Gebäudereinigung Landshamerstraße 30
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.05.2026
+- Ende (Feld): 30.04.2030
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 30/04/2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L51: [474548-2026](https://ted.europa.eu/de/notice/-/detail/474548-2026), Los 1
 
@@ -511,14 +511,14 @@ Je Los eintragen:
 ### L57: [340183-2026](https://ted.europa.eu/de/notice/-/detail/340183-2026), Los 2
 
 - Los-Titel: Fachlos 2 - Glas- und Rahmenreinigung gesamt
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 04.07.2026
+- Ende (Feld): 12.07.2030
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 12.07.2030
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L58: [231978-2026](https://ted.europa.eu/de/notice/-/detail/231978-2026), Los 1
 
@@ -559,14 +559,14 @@ Je Los eintragen:
 ### L62: [108077-2024](https://ted.europa.eu/de/notice/-/detail/108077-2024), Los 1
 
 - Los-Titel: Unterhaltsreinigung CEECII und AWZ, Jena
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 01.03.2024
+- Ende (Feld): 29.02.2028
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 29.02.2028
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 2
 
 ### L63: [648136-2025](https://ted.europa.eu/de/notice/-/detail/648136-2025), Los 3
 
@@ -583,14 +583,14 @@ Je Los eintragen:
 ### L65: [360180-2025](https://ted.europa.eu/de/notice/-/detail/360180-2025), Los 1
 
 - Los-Titel: Fachlos 1 - Unterhalts- und Grundreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 30/06/2025
+- Ende (Feld): 22/07/2029
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 22/07/2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
-- Minuten: 
+- Minuten: 1
 
 ### L66: [468079-2026](https://ted.europa.eu/de/notice/-/detail/468079-2026), Los 2
 
@@ -763,10 +763,10 @@ Je Los eintragen:
 ### L88: [360180-2025](https://ted.europa.eu/de/notice/-/detail/360180-2025), Los 2
 
 - Los-Titel: Fachlos 2 - Glas- und Rahmenreinigung
-- Beginn (Feld): 
-- Ende (Feld): 
+- Beginn (Feld): 30.06.2025
+- Ende (Feld): 22.07.2029
 - Dauer (Feld): 
-- Ende der Grundlaufzeit: 
+- Ende der Grundlaufzeit: 22.07.2029
 - Quelle: 
 - Höchstende (nur bei Änderung): 
 - Hilfsmittel: 
