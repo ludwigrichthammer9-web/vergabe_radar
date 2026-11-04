@@ -863,6 +863,12 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > Grund: Der Beginn liegt meist Monate nach der Veröffentlichung; eine Schätzung würde sonst als geprüftes Enddatum erscheinen. Skript `src/prepare/vertragsliste.py`
 > (neue Spalte, bestehende Spalten und X4 unverändert).
 
+> **Fortschritt 2026-11-05 (Schritt 2, Stichprobe gezogen, Kriterien unverändert):** Regeln committet (6baaab5), danach `src/prepare/stichprobe_iteration6.py` mit Seed 20261105:
+> 60 Lose aus 59 Zuschlägen (Pool 2.885 Lose) und 10 Paare der Handsuche (aus den 57 gewerteten Paaren der Zweitprüfung Iteration 5). Vorlage
+> [liste_pruefung_iteration6.md](../reports/liste_pruefung_iteration6.md); Schlüssel lokal in `data/processed/liste_pruefung_iteration6_schluessel.csv`,
+> **SHA-256 `3de3e81270ee2488f8b8b2f60c42d4f7271eb196bfcf7e8aa92809a0ba689d0e`**. Hinweis: Die Auszüge zeigen die Rohfelder (Beginn, Ende, Dauer, BT-58); das kann
+> den Prüfer beeinflussen (Verankerung). Er trägt Ende der Grundlaufzeit und Höchstende nach dem Originaltext selbst ein; Hilfsmittel werden vermerkt.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
