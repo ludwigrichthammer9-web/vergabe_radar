@@ -869,6 +869,15 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > **SHA-256 `3de3e81270ee2488f8b8b2f60c42d4f7271eb196bfcf7e8aa92809a0ba689d0e`**. Hinweis: Die Auszüge zeigen die Rohfelder (Beginn, Ende, Dauer, BT-58); das kann
 > den Prüfer beeinflussen (Verankerung). Er trägt Ende der Grundlaufzeit und Höchstende nach dem Originaltext selbst ein; Hilfsmittel werden vermerkt.
 
+> **Fortschritt 2026-11-04 (Schritte 3 und 4, Kriterien unverändert):** Prüfung abgegeben (PDF `Iteration6_Blindpruefung_TeilA_und_TeilB_vollstaendig.pdf`),
+> Einträge in [liste_pruefung_iteration6_urteile.csv](../reports/liste_pruefung_iteration6_urteile.csv) übertragen, Schlüssel-Hash geprüft (stimmt).
+> Auswertung [liste_auswertung_iteration6.md](../reports/liste_auswertung_iteration6.md) (`src/prepare/auswertung_iteration6.py`):
+> **Y1 = 54/60 = 90,0 %** (Wilson 79,9–95,3; Schwelle ≥ 90 %, genau erreicht), **Y2 = 55/60 = 91,7 %** (Wilson 81,9–96,4). Echte Fehler der Liste: L1, L42, L43
+> (Enddatum ist das Höchstende, Regel 1a greift nicht) und L56; drei Auslegungsfälle („unbekannt“ beim Prüfer, L8, L48, L49). Prüfzeit Median 3 Minuten.
+> **Vorbehalte:** (1) Das Feld „Hilfsmittel“ ist in allen 60 Einträgen leer; ob Teil A ohne KI-Hilfe entstand, ist nicht vermerkt. (2) **Teil B (10 Paare) ist nicht
+> unabhängig:** Urteil, Sicherheit und Begründung aller 10 Paare stimmen wörtlich mit der KI-unterstützten Zweitprüfung von Iteration 5 überein (P55, P14, P16, P21, P29,
+> P1, P53, P34, P4, P30); Teil B zählt nicht als Prüfung ohne Hilfsmittel (A18 unverändert). Klärung beim Nutzer offen.
+
 **Ergebnis:** offen
 
 **Entscheidung:** offen
