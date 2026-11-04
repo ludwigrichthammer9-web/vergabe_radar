@@ -14,11 +14,12 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 5 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 6 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-Die Zuschlagstabelle je Los ist gebaut. Offen bleiben Lese-Regeln für Vorgänger vor eForms und Auftraggeber-Normalisierung.
+Die Zuschlagstabelle je Los ist gebaut und wurde an 60 Zufallslosen geprüft. **Zurück zu Phase 3:** Die Regel für das Ende der Grundlaufzeit verwechselt manchmal das Enddatum der Bekanntmachung mit dem Höchstende. Offen bleiben außerdem Lese-Regeln für Vorgänger vor eForms und Auftraggeber-Normalisierung.
 
 Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
+Iteration 6: **[LA6]** [liste_auswertung_iteration6.md](../../reports/liste_auswertung_iteration6.md) · **[E6]** [evaluation_iteration6.md](../../reports/evaluation_iteration6.md).
 
 ### Fakten (aus den Daten)
 
@@ -27,14 +28,20 @@ Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md
 - Höchstende-Herkunft: keine Angabe 32,3 %, Anzahl × Länge 22,0 %, Datum im Text 17,7 %, unbestimmbar 13,3 %, Höchstlaufzeit 8,8 %, Enddatum = Höchstende 4,5 % [VL].
 - Lese-Regeln: Entwicklung 30/40, Test 53/60 richtig (gewichtet etwa 91 %), Urteile von Claude allein, nur eForms-Lose; „keine_verlaengerung“ ungeprüft [HP], [E5].
 - `src/prepare/backtest_paare.py`: Paare aus der Handsuche, Vorgänger-Ende aus der Bekanntmachung (vor eForms über `REF_NOTICE` aus der XML); 61 von 68 bestimmbar.
+- **Iteration 6:** Prüfung von 60 Zufallslosen (ohne KI-Hilfe laut Prüfer): Ende der Grundlaufzeit 54/60 = 90,0 % laut Auswertung, 53/60 = 88,3 % nach dem später gefundenen Fehler L60; Höchstende 55/60 = 91,7 % [LA6], [E6]. Abdeckung weiter 79,7 % [VL].
+- Fehler der Regel für das Ende der Grundlaufzeit: In L1, L42, L43, L60 (und laut Evaluator in allen Losen von 143100-2026) ist das Enddatum BT-537 schon das Höchstende; Regel 1a greift nur bei „spätestens“, „längstens“, „inkl. Verlängerungen“. Nicht erkannt: „Festlaufzeit von … bis …“, „2+1+1“, „Laufzeit von 2 Jahren“, „erste feste Laufzeit bis …“ [E6].
+- Bei 59 von 60 Losen der Stichprobe stammt das Ende der Grundlaufzeit aus dem Enddatum-Feld; die Vorlage zeigte dieses Datum (Verankerung) [E6].
 
 ### Interpretation
 
 - Die Vertragsliste ist reproduzierbar aus den Rohdaten gebaut und deckt etwa vier Fünftel der Lose ab; fehlende Laufzeiten bremsen, nicht die Lese-Regeln.
-- Für den Einsatz auf Verträgen vor eForms sind die Lese-Regeln nicht getestet; im Backtest 41 von 52 Vorgängern.
+- Für den Einsatz auf Verträgen vor eForms sind die Lese-Regeln nicht getestet; im Backtest 41 von 52 Vorgängern. Auch die Stichprobe der Iteration 6 enthält nur eForms-Lose (A11 nicht geprüft).
+- Die Fehlerquote beim Ende der Grundlaufzeit ist eher unterschätzt: Prüfung mit angezeigtem Listenwert, höchstens 2 Lose je Zuschlag (große Bekanntmachungen untergewichtet). Die Regel braucht vor allem Muster für „feste Laufzeit mit Option“.
 
 ## Offene Fragen
 
+- [ ] _(neu, Iteration 6)_ Welche Formulierungen und Feldkombinationen zeigen, dass BT-537 schon das Höchstende ist (Regel 1a erweitern, z. B. BT-54 „zwei Jahre … (2+1+1)“, „Festlaufzeit von … bis …“, Beginn + Dauer im Text kürzer als Beginn–Ende)? Test nur an neuen Losen.
+- [ ] _(neu, Iteration 6)_ Wie wird die Stichprobe so gezogen, dass große Bekanntmachungen (viele Lose mit derselben Formulierung) nicht untergewichtet sind?
 - [x] Tabelle pro Vertrag oder pro Los? _Antwort Iteration 5:_ pro Los (`src/prepare/vertragsliste.py`).
 - [x] Wie wird das Laufzeitende vereinheitlicht (Ende direkt oder Start + Dauer, ersatzweise Veröffentlichungsdatum + Dauer)?
   _Antwort Iteration 5:_ Ende direkt, sonst Beginn + Dauer; Ausnahme Regel 1a; Höchstende aus BT-58 und Freitext [VL].
@@ -67,6 +74,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-10-30 | 5 | Zuschlagstabelle je Los mit Grundlaufzeit und Höchstende; Höchstende = spätester plausibler Kandidat aus Datum, Höchstlaufzeit, BT-36 und Anzahl × Länge im Freitext; Regel 1a (Enddatum ist Höchstende) | Praxis der Felder (reports/verlaengerung_praxis_iteration5.md), Entwicklungs- und Teststichprobe (reports/hoechstende_pruefung_iteration5_*.md) |
 | 2026-10-30 | 4 | Die Regel `zuordnung_los.py` wird nicht in die Aufbereitung übernommen; Merkmale je Los (`los_merkmale.py`) und Laufzeitende mit Herkunft werden Grundlage der Zuschlagstabelle in Iteration 5 | Entscheidung „Idee anpassen“ nach Iteration 4 (reports/evaluation_iteration4.md). Entscheidung des Nutzers. |
 | 2026-11-04 | 5 | Die Vertragsliste je Los (Grundlaufzeit, Höchstende, Herkunft) ist der Datenstand für Iteration 6/7; die Backtest-Paare werden nur für die Bewertung genutzt | Entscheidung „Idee anpassen“ nach Iteration 5 (reports/evaluation_iteration5.md). Entscheidung des Nutzers. |
+| 2026-11-04 | 6 | Zurück zu Phase 3: Regel für „Enddatum = Höchstende“ erweitern und vor dem Ziehen einer neuen Stichprobe committen; neue Stichprobe (ohne geprüfte Lose) mit Vorlage ohne Listenwerte | Y1 88,3 % nach Korrektur (L60), Verankerung, offene Unabhängigkeit (reports/evaluation_iteration6.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -124,3 +132,10 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Erkenntnisse – Fakten:** 9.915 Lose, X4 = 79,7 %, Höchstende-Genauigkeit im Test 53/60; 61 von 68 Paaren mit bestimmbarem Ende (reports/vertragsliste_iteration5.md, reports/hoechstende_pruefung_iteration5_test.md).
 - **Erkenntnisse – Interpretation:** Die Tabelle trägt eine Vertragsliste; Vorgänger vor eForms sind für die Lese-Regeln ungeprüft.
 - **Übergabe an die nächste Phase:** An Phase 6 (Prototyp, Iteration 7): Liste je Los. An Phase 4: nur bei Prognose-Variante je Auftraggeber.
+
+### Iteration 6 – 2026-11-04
+
+- **Was gemacht:** Abdeckung der 744 Lose ohne Enddatum analysiert (neue Spalte `gl_geschaetzt` nur für den Prototyp, zählt nicht); Stichprobe von 60 Zufallslosen mit Seed (`src/prepare/stichprobe_iteration6.py`), Prüfung durch den Nutzer, Auswertung (`src/prepare/auswertung_iteration6.py`), Evaluator.
+- **Erkenntnisse – Fakten:** Ende der Grundlaufzeit 54/60 = 90,0 % laut Auswertung, 53/60 = 88,3 % nach L60; Höchstende 55/60 = 91,7 %; Abdeckung 79,7 %. Fehlertyp: Enddatum der Bekanntmachung ist schon das Höchstende (L1, L42, L43, L60; 143100-2026) (reports/liste_auswertung_iteration6.md, reports/evaluation_iteration6.md).
+- **Erkenntnisse – Interpretation:** Die Lese-Regeln tragen für das Höchstende, aber nicht für das Ende der Grundlaufzeit bei „fester Laufzeit mit Option“; die Prüfung war durch den angezeigten Listenwert verankert, die Quote ist eher eine Untergrenze der Fehler.
+- **Übergabe an die nächste Phase:** Regel 1a erweitern und vor dem Ziehen committen; neue Stichprobe mit Vorlage ohne Listenwerte und Hilfsmittel je Eintrag; danach Prototyp (Phase 6) neu erzeugen.

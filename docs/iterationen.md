@@ -18,7 +18,7 @@ Regeln:
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2026-10-24 bis 2026-10-25 | abgeschlossen | **In Phase 2/3 bleiben:** V1 63,3 % (knapp, definitionsabhängig), V2 45,8 % und V3 28,9 % verfehlt; ein letzter Verbesserungsversuch der Regel auf neuen Testdaten, parallel „Produkt mit manueller Prüfung“ in Phase 1 bewerten |
 | 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten Q1 2026) | 2/3 (parallel 1) | 2026-10-25 bis 2026-10-30 | abgeschlossen | **Idee anpassen (Phase 1):** W4 65 % < 85 % (W2 89,5 % bei nur 19 Vorschlägen, W3 56,7 %, W1 42,9 %); keine weitere Regel, Iteration 5 baut eine Vertragsliste aus Zuschlägen |
 | 5 | Vertragsliste aus Zuschlägen: Prognoseziel Höchstende, erste Prognose, Backtest auf handgeprüften Paaren | 1 → 3 → 4 → 5 | 2026-10-30 bis 2026-11-04 | abgeschlossen | **Idee anpassen:** R1 28,8 % < 40 % (Schwelle 60 %); Vertragsliste mit Enddaten bleibt Kern, keine Terminprognose |
-| 6 | Prototyp der Vertragsliste und Qualität der Enddaten (Iteration 6 und 7 zusammengelegt) | 3 → 6 → 5 | 2026-11-05 bis 2026-11-15 (geplant) | läuft | offen |
+| 6 | Prototyp der Vertragsliste und Qualität der Enddaten (Iteration 6 und 7 zusammengelegt) | 3 → 6 → 5 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-15) | abgeschlossen | **Zurück zu Phase 3:** Y1 88,3 % nach Korrektur (L60), 90,0 % laut Auswertung, Verankerung und Unabhängigkeit offen; Y2 91,7 %, Y3 79,7 % (knapp verfehlt), Y4 Prototyp erfüllt mit bekannten Fehlern; Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe |
 | 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
 
@@ -36,6 +36,8 @@ _Nachtrag 2026-10-30 (Abschluss Iteration 4):_ Iteration 5 wird nach der Entsche
 mit Backtest auf handgeprüften Paaren; die automatische Objekt-Zuordnung wird nicht weiter verbessert.
 
 _Nachtrag 2026-11-04 (Abschluss Iteration 5):_ Nach der Entscheidung „Idee anpassen“ werden die Iterationen 6 und 7 mit `/iteration-start` neu zugeschnitten (Vertragsliste als Prototyp; eine Prognose je Auftraggeber nur, wenn Phase 1 sie begründet).
+
+_Nachtrag 2026-11-04 (Abschluss Iteration 6):_ Nach der Entscheidung „zurück zu Phase 3“ folgt eine weitere Iteration (Lese-Regel nachbessern, neue Stichprobe, Prototyp neu erzeugen); Nummer und Zuschnitt legt `/iteration-start` fest. Die Zeile 7 oben (Prototyp, „entfällt“) bleibt als historischer Stand stehen.
 
 ---
 
@@ -801,7 +803,7 @@ _Interpretation_
 
 ## Iteration 6: Prototyp der Vertragsliste und Qualität der Enddaten
 
-**Status:** läuft (angelegt am 2026-11-04)
+**Status:** abgeschlossen (angelegt und abgeschlossen am 2026-11-04)
 
 **Fokus und Phasen:** 3 → 6 → 5. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) (dort „Verbesserung der Prognose“) gemäß der
 Entscheidung zu Iteration 5: Die Terminprognose ist verworfen, der Produktkern ist die Vertragsliste mit Enddaten. Iteration 6 und 7 (Prototyp)
@@ -878,6 +880,67 @@ A1 und A15 bleiben außerhalb des Projektumfangs (kein Kundenkontakt).
 > unabhängig:** Urteil, Sicherheit und Begründung aller 10 Paare stimmen wörtlich mit der KI-unterstützten Zweitprüfung von Iteration 5 überein (P55, P14, P16, P21, P29,
 > P1, P53, P34, P4, P30); Teil B zählt nicht als Prüfung ohne Hilfsmittel (A18 unverändert). Klärung beim Nutzer offen.
 
-**Ergebnis:** offen
+> **Fortschritt 2026-11-04 (Schritt 5, Prototyp, Kriterien unverändert):** [beispiel_liste.md](../reports/beispiel_liste.md) und
+> [beispiel_liste_oberpfalz.csv](../reports/beispiel_liste_oberpfalz.csv) aus `src/report/beispiel_liste.py`: Oberpfalz (NUTS DE23), Stichtag 04.11.2026,
+> **146 Lose** aus 67 Zuschlägen (70 im Abruf vom 23.10.2026, 3 durch die Population ausgeschlossen); je Eintrag TED-Link, Herkunft von Grundlaufzeit und
+> Höchstende sowie eine Unsicherheitsstufe A–F. 108 Lose (74,0 %) mit Ende der Grundlaufzeit aus den Feldern, 5 nur geschätzt, 33 ohne Ende.
+> Fakten zur Umsetzung: Region je Los bei 9 Bekanntmachungen erst über das eForms-XML zuordenbar (die Such-API liefert die NUTS-Codes als flache Liste);
+> XML unverändert in `data/raw/ted_xml/beispiel_liste_20261104/` (Adresse aus dem Feld `links` der API-Antwort). `auswertung_iteration6.py` nur umgebaut
+> (Funktion `bewertung`), Bericht unverändert.
+> **Interpretation/Vorbehalt:** Die Stufen und ihre Quoten (A 19/19, B 13/16, C 13/16, D 9/9 beim Ende der Grundlaufzeit) sind **nach** Kenntnis der
+> Prüfergebnisse eingeteilt und beruhen auf der bundesweiten Stichprobe, nicht auf der Oberpfalz; kein Eintrag der Oberpfalz wurde geprüft. Y4 aus eigener Sicht
+> erfüllt; Selbstbewertung und Evaluator stehen aus (Schritt 6).
 
-**Entscheidung:** offen
+> **Fortschritt 2026-11-04 (Abschluss, Nachträge und Korrekturen; frühere Einträge bleiben stehen):**
+> - Evaluator-Bericht: [evaluation_iteration6.md](../reports/evaluation_iteration6.md). Das Abgabe-PDF liegt jetzt im Repo ([liste_pruefung_iteration6_abgabe.pdf](../reports/liste_pruefung_iteration6_abgabe.pdf));
+>   alle 60 Einträge der Urteils-CSV stimmen mit dem PDF überein (Übertragung geprüft).
+> - **Angaben des Nutzers:** Teil A (60 Lose) ohne KI-Hilfe geprüft (mündlich; im Feld „Hilfsmittel“ nicht vermerkt, die beiden Vorbehalte (1) bleiben deshalb als „nicht belegt“ stehen).
+>   Teil B aus der Zweitprüfung Iteration 5 übernommen, weil es dieselben Paare waren; **Ursache war mein Aufbau in Schritt 2** (die 10 Paare wurden aus den 57 schon bekannten Paaren gezogen).
+>   Prüfzeit: „Habe davor schon gearbeitet, aber nicht durchgängig“ (auf die Frage nach Arbeit vor dem Commit um 13:07); die 163 Minuten sind eine Selbstangabe.
+> - **Korrektur zu Schritt 5:** „Kein Eintrag der Oberpfalz wurde geprüft“ war falsch; L6 (617709-2026, Los 3) steht in der Liste. `beispiel_liste.md` nennt das jetzt.
+> - **Korrektur zu Schritt 1:** Bis 80 % fehlen 11 Lose (2.935/3.668), nicht 12.
+> - **Korrektur zu Schritt 4 (Evaluator, nachgeprüft):** L60 (392720-2026) ist ein Fehler der Liste und des Prüfers: Der Text nennt „zwei Jahre … (2+1+1)“, die Grundlaufzeit endet am 30.06.2028,
+>   nicht am 30.06.2030. Y1 = **53/60 = 88,3 %** (Wilson 77,8–94,2). Die Auswertung `liste_auswertung_iteration6.md` bleibt unverändert (54/60 laut Prüfereintrag); die Korrektur gilt nur im Prototyp und hier.
+>   Die Deutungen zu L43 und L56 in der Auswertung sind durch die Stichprobe nicht gedeckt (L43: das Feld 14.08.2028 ist weder Grundlaufzeit noch Höchstende; L56: Verlängerung im Originaltext laut Evaluator nicht auffindbar, Abruf über Zusammenfassung).
+> - Explorativ (Skript im Repo, [explorativ_iteration6.md](../reports/explorativ_iteration6.md)): bundesweit 1.368 Lose mit Ende der Grundlaufzeit in den nächsten 12 Monaten und 3.024 in 24 Monaten;
+>   32/52 Backtest-Paare im Fenster „Ende GL − 12 Monate bis Höchstende + 12 Monate“ (für unbestimmbare Höchstenden Obergrenze GL + 12 Monate, **nicht vorab festgelegt**; nur beschreibend).
+>   Prüfzeit-Median 2,5 Minuten (nicht 3; das Skript nimmt den oberen Median).
+
+**Ergebnis** _(2026-11-04, nach Evaluator)_
+
+_Fakten_
+
+| Kriterium | Ergebnis | Schwelle | Urteil |
+|---|---|---|---|
+| Y1 Ende der Grundlaufzeit | 54/60 = 90,0 % (Wilson 79,9–95,3) laut Auswertung [LA]; **53/60 = 88,3 %** (Wilson 77,8–94,2) nach dem Fehler L60 [E6] | ≥ 90 % | **verfehlt** nach Korrektur; auch ohne Korrektur nur genau auf der Schwelle |
+| Y2 Höchstende korrekt oder „unbestimmbar“ | 55/60 = 91,7 % (Wilson 81,9–96,4) [LA]; nur auf die 51 Lose bezogen, bei denen die Liste ein Höchstende nennt: 46/51 = 90,2 % [E6] | ≥ 90 % | formal erfüllt, wenig Spielraum |
+| Y3 Abdeckung | 2.924/3.668 = 79,7 % (Wilson 78,4–81,0) [VL] | ≥ 80 % | verfehlt (knapp), vorab: kein Abbruch |
+| Y4 Prototyp | [beispiel_liste.md](../reports/beispiel_liste.md): Oberpfalz, 146 Lose, je Eintrag TED-Link, Herkunft, Status, Stufe A–F [BL] | Ja/Nein | erfüllt; die Liste enthält bekannte Fehler |
+
+- Prüfung: 60 Lose, Prüfer ohne KI-Hilfe laut eigener Angabe (Feld „Hilfsmittel“ leer), Prüfzeit Median 2,5 Minuten, Summe 163 Minuten (Selbstangabe) [LA], [E6].
+- Die Vorlage zeigte das Enddatum der Liste; bei 59 von 60 Losen stammt das Ende der Grundlaufzeit der Liste aus diesem Feld (`gl_herkunft = enddatum`) [E6].
+- Fehler der Liste beim Ende der Grundlaufzeit: L1, L42, L43, L60 (Enddatum der Bekanntmachung ist schon das Höchstende) und drei Auslegungsfälle (L8, L48, L49, „unbekannt“ beim Prüfer). L56: Prüfer und Liste nennen 31.12.2028 als Ende, der Prüfer als Höchstende 31.12.2030; die Liste „keine Angabe“ [LA], [E6].
+- Teil B (10 Paare) wörtlich identisch mit der KI-unterstützten Zweitprüfung Iteration 5; zählt nicht für A18 [LA], Antwort des Nutzers.
+- Hypothese und Kriterien blieben seit 6baaab5 unverändert (Diff geprüft, [E6] Abschnitt 7). Die Stichprobe wurde nach den Regeln vom 13:07 gezogen; der Seed wurde im selben Commit festgehalten wie die Stichprobe.
+- In der Stichprobe liegen 0 Lose vor eForms (A11 nicht geprüft); je Zuschlag höchstens 2 Lose, große Bekanntmachungen sind untergewichtet (z. B. 143100-2026 mit mehr als 56 Losen).
+- Prototyp: bei 143100-2026 stehen in der Oberpfalz-Liste die Lose 8, 9 und 14 mit Enddatum ein Jahr nach der laut Text festen Laufzeit (Stufe B) [E6].
+- Quellen: [LA] [liste_auswertung_iteration6.md](../reports/liste_auswertung_iteration6.md) · [VL] [vertragsliste_iteration5.md](../reports/vertragsliste_iteration5.md) · [BL] [beispiel_liste.md](../reports/beispiel_liste.md) · [E6] [evaluation_iteration6.md](../reports/evaluation_iteration6.md).
+
+_Interpretation_
+
+- **Die Hypothese ist nicht bestätigt.** Y1 liegt nach der Korrektur unter der Schwelle; ohne Korrektur liegt es genau darauf und ist wegen der Verankerung (Vorlage zeigt das Enddatum der Liste) und der offenen Unabhängigkeit kaum aussagekräftig. Die Quote ist eher eine Untergrenze der Fehler als eine Genauigkeit.
+- **Fehlertyp „Enddatum der Bekanntmachung = Höchstende“:** Er tritt bei L1, L42, L43 und L60 auf und in der Bekanntmachung 143100-2026 vermutlich in allen Losen. Regel 1a erkennt nur „spätestens“, „längstens“ und „inkl. Verlängerungen“; Formulierungen wie „Festlaufzeit von … bis …“, „2+1+1“, „Laufzeit von 2 Jahren“, „erste feste Laufzeit bis …“ und „zunächst für die Dauer von …“ ohne Datum greifen nicht. Das ist der Ansatz für Phase 3.
+- Dass Y2 erreicht wird, liegt zu einem guten Teil an der Kategorie „unbestimmbar“ (9 von 60 Einträgen, bei 8 davon gab der Prüfer ein Datum an): Die Liste ist dort vorsichtig, aber nicht informativ.
+- Y3 bringt keine neue Messung; ein Ersatzweg über „Veröffentlichung + Dauer“ erreicht 87,4 %, zählt aber nicht und ist ungenau.
+- Die Unsicherheitsstufen im Prototyp (nach Kenntnis der Prüfergebnisse eingeteilt, kleine Zahlen je Stufe) helfen beim Lesen, ersetzen aber keine Prüfung.
+- Dass eine Vertragsliste ohne Terminprognose Nutzen hat, ist weiter nicht belegt (A1, A15, außerhalb des Projektumfangs).
+
+**Entscheidung** _(2026-11-04, Entscheidung des Nutzers nach Vorschlag von Claude und Evaluator)_
+
+**Zurück zu Phase 3.** Gemäß der vorab festgelegten Folge „Y1 oder Y2 verfehlt, Y1 ≥ 70 % → zurück zu Phase 3: Lese-Regeln nachbessern und eine neue Stichprobe ziehen (ohne Wiederverwendung der geprüften Lose)“.
+- Die Lese-Regel für „Enddatum = Höchstende“ wird um die oben genannten Formulierungen erweitert und **vor dem Ziehen** der neuen Stichprobe committet.
+- Die neue Stichprobe (60 Lose, ohne die geprüften Lose und ohne Notices der früheren Stichproben) wird mit festem Seed gezogen, der **vor** dem Ziehen committet wird. Die Vorlage zeigt **keine** Felder der Liste (Beginn, Ende, Dauer, BT-58), nur den Originaltext und den TED-Link; die Hilfsmittel werden je Eintrag vermerkt. Die Stichprobe berücksichtigt große Bekanntmachungen (z. B. Gewichtung oder getrennte Auswertung).
+- Teil B (A18) wird nur mit Paaren wiederholt, die der Prüfer noch **nicht** gesehen hat, oder entfällt.
+- Der Prototyp wird nach den neuen Regeln neu erzeugt; bekannte Fehler (143100-2026) verschwinden dadurch oder werden gekennzeichnet.
+- A4, A11, A12, A13, A17, A18: Status unverändert, Nachweise ergänzt (siehe `docs/annahmen.md`); A1 und A15 bleiben außerhalb des Projektumfangs.
+- Die Nummerierung der Folge-Iteration (Iteration 7, Phase 3 → 5) legt `/iteration-start` fest.

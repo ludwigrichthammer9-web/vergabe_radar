@@ -11,25 +11,31 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 5 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 6 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Erster Backtest durchgeführt.** Kennzahl Trefferquote im Fenster ±3 Monate; Referenz R0; Evaluator-Prüfung liegt vor.
+**Zwei Messungen liegen vor:** der Backtest der Terminprognose (Iteration 5, verworfen) und die Handprüfung der Vertragsliste an 60 Zufallslosen (Iteration 6, Y1 bis Y4). Beide wurden vom Evaluator geprüft; die Liste muss nach der Evaluation zurück in Phase 3.
 
 Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
+Iteration 6: **[LA6]** [liste_auswertung_iteration6.md](../../reports/liste_auswertung_iteration6.md) · **[E6]** [evaluation_iteration6.md](../../reports/evaluation_iteration6.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md) · **[XP6]** [explorativ_iteration6.md](../../reports/explorativ_iteration6.md).
 
 ### Fakten (aus den Daten)
 
 - Backtest-Basis: 52 von Rechercheur und Prüfer bestätigte Paare (X1), Zweitprüfung 61/67 = 91,0 % (KI-unterstützt, nicht unabhängig) [ZP].
 - Trefferquote R1 28,8 %, R0 17,3 %, Median-Abweichung R1 +0,6 Monate bei zweigipfliger Verteilung (20 früher, 17 später) [BT5].
 - Robustheit: 35,9 % ohne unbestimmbare Höchstenden, 41,7 % ohne lange Lücken, 27,5 % mit einem Paar je Auftraggeber [E5], [AN].
+- **Iteration 6 (Qualität der Liste, 60 Zufallslose, Prüfer ohne KI-Hilfe laut eigener Angabe):** Y1 Ende der Grundlaufzeit 54/60 = 90,0 % laut Auswertung, **53/60 = 88,3 %** (Wilson 77,8–94,2) nach dem Fehler L60; Y2 Höchstende 55/60 = 91,7 % (nur auf die 51 Lose mit behauptetem Höchstende bezogen: 46/51 = 90,2 %); Y3 Abdeckung 79,7 %; Y4 Prototyp vorhanden [LA6], [E6], [VL], [BL].
+- Explorativ: bundesweit 1.368 Lose mit Ende der Grundlaufzeit in den nächsten 12 Monaten, 3.024 in 24 Monaten; 32/52 Backtest-Paare im Fenster „GL − 12 bis Höchstende + 12 Monate“ (Regel für unbestimmbare Höchstenden nicht vorab festgelegt) [XP6].
 
 ### Interpretation
 
 - Verzerrungen: Rückwärtssuche (nur auffindbare Vorgänger), Rechtszensierung, zwei kurze Beobachtungsfenster; die Quote ist keine Präzision eines späteren Produkts.
 - Der Median täuscht (Zweigipfligkeit). Die Paare messen Objektidentität, nicht den direkten Vorgänger.
+- **Iteration 6:** Y1 ist nicht belastbar: Die Vorlage zeigte das Enddatum der Liste (bei 59 von 60 Losen der Wert der Liste), die Stichprobe enthält 0 Lose vor eForms, große Bekanntmachungen sind untergewichtet, und das Feld „Hilfsmittel“ blieb leer. Die Quote ist eher eine Untergrenze der Fehler. Y2 profitiert von der Kategorie „unbestimmbar“. Eine Prüfung der Unabhängigkeit (A18) hat Teil B wegen eines Aufbaufehlers nicht geleistet.
 
 ## Offene Fragen
 
+- [ ] _(neu, Iteration 6)_ Wie wird die Genauigkeit der Liste ohne Verankerung gemessen (Vorlage ohne Listenwerte), mit Vor-eForms-Losen und mit nach Losen gewichteten großen Bekanntmachungen?
+- [ ] _(neu, Iteration 6)_ Wie wird A18 wirklich unabhängig geprüft (Paare, die der Prüfer noch nicht kennt)?
 - [ ] Welches Zeitfenster gilt als Treffer (z. B. ±3 Monate)? Das wird in Phase 1 festgelegt.
 - [ ] Reicht die eForms-Historie für einen aussagekräftigen Backtest, oder brauchen wir ältere TED-Daten (Annahme A10, A11)?
 - [ ] Wie gehen wir mit Verträgen um, die nicht neu ausgeschrieben wurden (Verlängerung, Wegfall, nationale Vergabe)?
@@ -50,6 +56,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | – | – | Noch keine Entscheidungen | – |
 | 2026-10-23 | 2 | Backtest erst nach belegter Zuordnung über das Objekt; vorzeitige Neuvergaben werden später als eigene Kategorie geführt | K2 = 16,7 %, 3 von 6 objektgleichen Paaren vorzeitig (reports/evaluation_iteration2.md) |
 | 2026-11-04 | 5 | Trefferdefinition ±3 Monate um R0/R1; Backtest nur auf von zwei Prüfern bestätigten Paaren; Köder zur Kontrolle der Prüfung; Median nicht als Stützung werten | Vorab festgelegt (docs/business.md §7.1); Evaluator (reports/evaluation_iteration5.md) |
+| 2026-11-04 | 6 | Y1 gilt nach der Korrektur um L60 als verfehlt (53/60 = 88,3 %); Y2 formal erfüllt; Y3 knapp verfehlt; die Prüfung wird mit Vorlage ohne Listenwerte wiederholt | Evaluator (reports/evaluation_iteration6.md); Entscheidung des Nutzers „zurück zu Phase 3“ |
 
 ## Iterationslog
 
@@ -77,3 +84,10 @@ _Noch keine Einträge._
 - **Erkenntnisse – Fakten:** R1 28,8 %, R0 17,3 %, X3 verfehlt; Ergebnis robust gegen Ausreißer, Vorlauf und Auftraggeber-Gewichtung (reports/evaluation_iteration5.md).
 - **Erkenntnisse – Interpretation:** Die Terminprognose „Höchstende − 6 Monate“ wird verworfen; Selektion und nicht direkte Vorgänger verzerren die Quote in unbekannter Richtung.
 - **Übergabe an die nächste Phase:** Backtest-Kennzahlen für spätere Varianten bleiben vergleichbar (gleiche Paare, gleiche Definition). Für den Prototyp: Prüfung der Liste selbst gegen den Backtest.
+
+### Iteration 6 – 2026-11-04
+
+- **Was gemacht:** Handprüfung der Vertragsliste an 60 Zufallslosen ausgewertet (Y1, Y2), Abdeckung Y3 aus Iteration 5 übernommen, Prototyp bewertet (Y4), Evaluator; explorative Kennzahlen als Skript (`src/prepare/explorativ_iteration6.py`).
+- **Erkenntnisse – Fakten:** Y1 54/60 = 90,0 % laut Auswertung und 53/60 = 88,3 % nach L60; Y2 55/60 = 91,7 %; Y3 79,7 %; Y4 erfüllt mit bekannten Fehlern im Prototyp. Hypothese und Kriterien seit 6baaab5 unverändert (reports/liste_auswertung_iteration6.md, reports/evaluation_iteration6.md).
+- **Erkenntnisse – Interpretation:** Die Hypothese ist nicht bestätigt. Y1 ist durch Verankerung und fehlende Vor-eForms-Lose nicht belastbar, Y2 durch „unbestimmbar“ begünstigt. Ob eine Liste ohne Prognose Nutzen hat, bleibt offen (A1, A15 außerhalb des Projektumfangs).
+- **Übergabe an die nächste Phase:** Zurück zu Phase 3 (Regel erweitern, neue Stichprobe ohne Listenwerte); danach erneute Evaluation mit denselben Kriterien Y1 bis Y3 an neuen Losen.

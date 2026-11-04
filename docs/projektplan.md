@@ -4,10 +4,10 @@ Grobplanung für das Gesamtprojekt, aufgeteilt in Aufgaben (A) und Unteraufgaben
 Die Detailplanung je Iteration (Hypothese, Erfolgskriterium mit Schwelle, Zeitrahmen) entsteht weiterhin mit
 `/iteration-start` und steht in `docs/iterationen.md`. Dieser Plan gibt nur die Richtung und die Abhängigkeiten vor.
 
-**Stand:** 2026-11-04. Iteration 5 abgeschlossen (Entscheidung: Idee anpassen; Vertragsliste mit Enddaten ohne Terminprognose). Iteration 6
-(Prototyp der Vertragsliste und Qualität der Enddaten, mit Iteration 7 zusammengelegt) läuft.
+**Stand:** 2026-11-04. Iteration 6 abgeschlossen (Prototyp der Vertragsliste und Qualität der Enddaten; Entscheidung: **zurück zu Phase 3**, Y1 88,3 % nach Korrektur,
+Prototyp mit bekannten Fehlern). Nächster Schritt: Folge-Iteration mit `/iteration-start` (Regel „Enddatum = Höchstende“ erweitern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen).
+_Vorheriger Stand 2026-11-04 (früher am Tag): Iteration 5 abgeschlossen (Entscheidung: Idee anpassen; Vertragsliste mit Enddaten ohne Terminprognose), Iteration 6 läuft._
 _Vorheriger Stand 2026-10-30: Iteration 4 abgeschlossen (Entscheidung: Idee anpassen; Iteration 5 baut eine Vertragsliste aus Zuschlägen)._
-Nächster Schritt: Iteration 6, Schritt 3 (Prüfung der Stichprobe durch den Nutzer, ohne KI-Hilfe).
 **Zeitangaben** sind grobe Schätzungen für Arbeit neben dem Studium und werden in `/iteration-start` konkretisiert.
 **Schwellenwerte** in diesem Plan sind Vorschläge. Verbindlich werden sie erst, wenn sie **vor** der Arbeit in
 `docs/iterationen.md` stehen.
@@ -29,7 +29,7 @@ Das Projekt hat drei parallele Stränge:
 | 3 | Sichtbarkeit der Vorgänger und Zuordnung über das Objekt | 2 (→ 3) | 2 Tage | **abgeschlossen** (in Phase 2/3 bleiben) |
 | 4 | Letzter Verbesserungsversuch der Objekt-Zuordnung (neue Testdaten) | 2/3 | 6 Tage | **abgeschlossen** (Idee anpassen) |
 | 5 | Vertragsliste aus Zuschlägen: Prognoseziel, erste Prognose, Backtest | 1 → 3 → 4 → 5 | 6 Tage | **abgeschlossen** (Idee anpassen) |
-| 6 | Prototyp der Vertragsliste und Qualität der Enddaten (mit 7 zusammengelegt) | 3 → 6 → 5 | 1 bis 2 Wochen | **läuft** |
+| 6 | Prototyp der Vertragsliste und Qualität der Enddaten (mit 7 zusammengelegt) | 3 → 6 → 5 | 1 bis 2 Wochen | abgeschlossen 2026-11-04 (zurück zu Phase 3) |
 | 7 | Prototyp der Vertragsliste (statt Kundentest) | – | – | entfällt (in Iteration 6) |
 | 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | geplant |
 
@@ -224,9 +224,11 @@ _Nach Iteration 5 (2026-11-04) zurückgestellt; T4.1.1 und T4.1.2 sind mit den L
 _Jetzt Iteration 6 (mit Iteration 7 zusammengelegt am 2026-11-04). Vorher Iteration 7. Bis 2026-10-28 „Erster Kundentest (Phase 6, dann Phase 1)“; geändert, weil das Projekt ohne Kundenkontakt läuft._
 
 - [ ] **T5.1 Erstes Produkt als manuelle Liste**
-  - [ ] T5.1.1 Format festlegen (Tabelle oder PDF: Auftraggeber, Objekt, voraussichtliches Fenster, Quelle, Sicherheit)
+  - [x] T5.1.1 Format festlegen (Tabelle oder PDF: Auftraggeber, Objekt, voraussichtliches Fenster, Quelle, Sicherheit)
+    _(2026-11-04: Markdown + CSV; statt „voraussichtliches Fenster“ Ende der Grundlaufzeit, Höchstende und Status, weil die Prognose in Iteration 5 verworfen wurde)_
   - [ ] T5.1.2 Liste für eine Region erzeugen, Stichprobe der Einträge von Hand gegenprüfen
-  - [ ] T5.1.3 Quellenangabe und Hinweis auf Unsicherheit je Eintrag
+    _(2026-11-04: Liste Oberpfalz erzeugt, [beispiel_liste.md](../reports/beispiel_liste.md); von Hand geprüft nur die bundesweite Stichprobe, kein Eintrag der Oberpfalz)_
+  - [x] T5.1.3 Quellenangabe und Hinweis auf Unsicherheit je Eintrag _(TED-Link, Herkunft, Stufe A–F)_
 - ~~T5.2 Testkunden gewinnen (siehe Strang G, G4)~~ _(entfällt 2026-10-29: kein Kundenkontakt im Projekt)_
 - [ ] **T5.3 Pipeline automatisieren**
   - [ ] T5.3.1 Ablauf von Datenabruf bis Liste in einem Skript bündeln

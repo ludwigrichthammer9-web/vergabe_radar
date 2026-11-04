@@ -46,7 +46,9 @@ def pct(k: int, n: int) -> str:
     return f"{k}/{n} = {100 * k / n:.1f} % (Wilson {100 * lo:.1f}–{100 * hi:.1f})".replace(".", ",")
 
 
-def main() -> None:
+def bewertung() -> tuple[list[dict], str]:
+    """Je Los Schlüssel und Prüfereintrag mit ok1 (Y1) und ok2 (Y2); zweiter Wert der geprüfte Schlüssel-Hash.
+    Auch von src/report/beispiel_liste.py genutzt (Unsicherheit je Herkunft)."""
     sha = hashlib.sha256(SCHLUESSEL.read_bytes()).hexdigest()
     assert sha == SHA_VORAB, "Schlüssel verändert"
     with SCHLUESSEL.open(encoding="utf-8") as f:
@@ -70,6 +72,11 @@ def main() -> None:
         else:
             ok2 = False
         rows.append({**k, "gl_p": p["gl_pruefer"], "h_p": hp_raw, "ok1": ok1, "ok2": ok2, "min": p["minuten"], "hilf": p["hilfsmittel"]})
+    return rows, sha
+
+
+def main() -> None:
+    rows, sha = bewertung()
     n = len(rows)
     k1, k2 = sum(r["ok1"] for r in rows), sum(r["ok2"] for r in rows)
     unbekannt = [r for r in rows if not r["ok1"] and r["gl_p"].strip().lower() == "unbekannt"]

@@ -7,16 +7,19 @@ ausgeschrieben werden, basierend auf Zuschlagsbekanntmachungen aus TED
 Neuausschreibungen vorbereiten wollen (z. B. Gebäudereinigung, IT-Wartung,
 Winterdienst).
 
-## Aktuelle Phase: nach Iteration 5, vor Iteration 6 (Phase 1: Idee anpassen)
+## Aktuelle Phase: nach Iteration 6, vor Iteration 7 (zurück zu Phase 3)
 Iteration 5 ist abgeschlossen (Entscheidung: Idee anpassen). Die Punktprognose „Höchstende − 6 Monate“ trägt nicht: Trefferquote ±3 Monate
 28,8 % (Schwelle 60 %, naive Referenz 17,3 %) auf 52 handgeprüften Paaren; Abdeckung der Vertragsliste 79,7 % der Lose.
 Produktkern: Vertragsliste mit Enddaten (Grundlaufzeit, Höchstende, Herkunft) ohne Terminprognose.
 Arbeitsnische: Gebäudereinigung, Haupt-CPV 90910/90911/90919.
-Iteration 6 wird mit /iteration-start neu zugeschnitten (Kriterium für eine Liste ohne Prognose; Prognose je Auftraggeber nur bei Begründung).
-Kein Kundenkontakt (Iteration 7 = Prototyp, A1/A15 bleiben ungeprüft).
+Iteration 6 ist abgeschlossen (Entscheidung: zurück zu Phase 3). Prüfung an 60 Zufallslosen: Ende der Grundlaufzeit 54/60 = 90,0 % laut Auswertung,
+53/60 = 88,3 % nach dem Fehler L60 (Schwelle 90 %); Höchstende 91,7 %; Abdeckung 79,7 % (Schwelle 80 %); Prototyp der Liste (Oberpfalz) vorhanden, mit bekannten Fehlern.
+Fehlertyp: Das Enddatum der Bekanntmachung ist manchmal schon das Höchstende. Iteration 7 (mit /iteration-start): Regel erweitern und vor dem Ziehen committen,
+neue Stichprobe ohne Listenwerte in der Vorlage, Hilfsmittel je Eintrag vermerken, Prototyp neu erzeugen.
+Kein Kundenkontakt (A1/A15 bleiben ungeprüft).
 Bewertung als Leistungsnachweis: docs/bewertung_LN.md; Quellen: docs/quellen.md; Reproduzierbarkeit: docs/reproduzierbarkeit.md.
 Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE.
-Details: docs/iterationen.md, reports/evaluation_iteration5.md
+Details: docs/iterationen.md, reports/evaluation_iteration5.md, reports/evaluation_iteration6.md
 
 ## Später geplant
 - Nische wählen, Backtest (erwartetes Auslaufdatum vs. tatsächliche
