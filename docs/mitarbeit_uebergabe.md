@@ -1,13 +1,13 @@
 # Mitarbeit am Vergabe-Radar: Einstieg und Übergabe
 
-_Für Teammitglieder, die neu einsteigen (und für deren Claude Code). Stand 2026-11-05, nach Iteration 9, Iteration 10 läuft. Wenn du Claude Code benutzt: Lass es zuerst `CLAUDE.md`, diese Datei, `docs/iterationen.md` (Übersicht und Iteration 10) und `docs/business.md` §8 lesen._
+_Für Teammitglieder, die neu einsteigen (und für deren Claude Code). Stand 2026-11-06: Iteration 10 und 10b abgeschlossen, Paket A, B, C, F und Wizard-of-Oz-Blatt vorbereitet (nicht durchgeführt). Wenn du Claude Code benutzt: Lass es zuerst `CLAUDE.md`, diese Datei, `docs/iterationen.md` (Übersicht und Iteration 10) und `docs/business.md` §8 lesen._
 
 ## 1. Worum es geht (in fünf Sätzen)
 
 - **Idee:** Aus Zuschlagsbekanntmachungen auf TED (EU-Amtsblatt) eine Liste öffentlicher Gebäudereinigungsverträge in Deutschland mit Vertragsende erzeugen; Zielgruppe Reinigungsbetriebe, die sich früh auf Neuausschreibungen vorbereiten wollen.
 - **Ergebnisse:** Eine Terminprognose der Neuausschreibung trägt nicht (28,8 % Treffer im Fenster ±3 Monate, Schwelle 60 %). Das Ende der Grundlaufzeit der Liste stimmt zu 94,3 % mit zwei KI-Lesern überein (Mensch 14/15); das Höchstende ist nur ein Hinweis.
-- **Neu (Business Understanding):** Es gibt die Liste kostenlos bei Vergabeweiser und günstig bei AusschreibungsRadar (`docs/business.md` §8). Die Gespräche (3) zeigen Zahlungsbereitschaft nur für Wettbewerbsdaten (Auftragnehmer, alte Preise).
-- **Aktuell:** Iteration 10 vergleicht Vergabeweiser mit unserer Liste an den 70 Zufallslosen der Iteration 9 (Kriterien W1 bis W7 in `docs/iterationen.md`). Danach: Lab-Log und Folien anpassen, abgeben.
+- **Neu (Business Understanding):** Es gibt die Liste kostenlos bei Vergabeweiser und günstig bei AusschreibungsRadar (`docs/business.md` §8). Die Gespräche (3) zeigen Zahlungsbereitschaft in einem von drei Gesprächen (ein größerer Betrieb), gespalten, und nur für Wettbewerbsdaten (Auftragnehmer, alte Preise). Gesamturteil: Produkt als eigenes Angebot nicht belegt.
+- **Aktuell:** Iteration 10 und 10b (Vergleich mit Vergabeweiser, W1 bis W9) sind abgeschlossen, ebenso die Pakete A, B, C, F. Das Wizard-of-Oz-Blatt (`docs/wizard_of_oz_blatt.md`, erzeugt mit `src/report/wizard_of_oz_blatt.py`) ist vorbereitet, aber nicht durchgeführt. Offen bis zur Abgabe: Namen auf Folie 1 eintragen, TED-Rechtsseite selbst bestätigen, Datenlink, Probevortrag.
 - **Bewertung:** Leistungsnachweis B (Zweierteam, Big Data Analytics, OTH Amberg-Weiden): 15 Minuten Vortrag, höchstens 12 Folien, Lab-Log. Kriterien in `docs/bewertung_LN.md`.
 
 ## 2. Einrichten (Windows, Python 3.12)
@@ -72,14 +72,14 @@ python -m venv .venv
 
 ## 7. Wo gerade Hilfe gebraucht wird (Vorschlag zur Aufteilung)
 
-Stand 2026-11-05. Ludwig führt Iteration 10 zu Ende (Auswertung W1 bis W4, Evaluator, Ergebnis in `docs/iterationen.md`, Lab-Log, Folien).
+Stand 2026-11-06. Iteration 10 und 10b sind ausgewertet (`docs/iterationen.md`), Lab-Log, Folien und Webseite sind erzeugt. Offen sind die Punkte unten.
 
 | Aufgabe | Aufwand | Dateien | Hinweis |
 |---|---|---|---|
 | Prototyp-Webseite prüfen und verbessern (Filter, Standardsortierung nach laufenden Verträgen, Texte, Handy-Ansicht) | 1–2 Std. | `src/report/webseite.py` | Regionennamen der NUTS-Codes sind aus dem Gedächtnis eingetragen und müssen gegen Eurostat geprüft werden |
-| Lizenz der TED-Daten klären und in `docs/quellen.md` und im Lab-Log eintragen; Datenlink für die Abgabe festlegen | 1 Std. | `docs/quellen.md`, `docs/lab_log_vorlage.md` | K.-o.-Kriterium: Datensatz ohne Quellenangabe |
-| Weitere Gespräche (Ziel: 2 bis 3 zusätzliche Stimmen, auch Betriebe ohne öffentliche Aufträge) | je 15 Min. | Blatt `docs/telefonnotizen_iteration10.md`, dann `docs/business.md` §8.9 | Notizen ohne Namen von Personen |
-| Folien durchgehen: Verständlichkeit, Dramaturgie, Zeit (15 Minuten, ≤ 12 Folien) | 1 Std. | `src/report/vortrag.py` (Folien sind Code) | Neuer Erzählbogen nach Iteration 10 wird mit Ludwig abgestimmt |
+| Lizenz der TED-Daten: Wortlaut der Rechtsseite (ted.europa.eu/en/legal-notice) selbst bestätigen (Eintrag steht in `docs/quellen.md`: laut Rechtsseite frei wiederverwendbar, vor Abgabe zu bestätigen); Datenlink für die Abgabe festlegen | 0,5 Std. | `docs/quellen.md`, `docs/lab_log_vorlage.md` | K.-o.-Kriterium: Datensatz ohne Quellenangabe |
+| Wizard-of-Oz-Gespräche (3 bis 5 Betriebe, auch ein Betrieb ohne öffentliche Aufträge; Einwilligung vorher klären; Ergebnis nur Hinweis) | je 15 Min. | Blatt `docs/wizard_of_oz_blatt.md`, Notizblatt `docs/telefonnotizen_iteration10.md`, dann `docs/business.md` §8.9 | Notizen ohne Namen von Personen; ohne Antworten bleibt es „vorbereitet, nicht durchgeführt“ |
+| Folien durchgehen: Verständlichkeit, Dramaturgie, Zeit (15 Minuten, 12 Folien); Namen auf Folie 1 eintragen | 1 Std. | `src/report/vortrag.py` (Folien sind Code) | Mit Ludwig abstimmen |
 | Probevortrag und Fragerunde üben (Methodenfrage, Live-Nachweis im Werkzeug, Transferfrage) | 1 Std. | `docs/bewertung_LN.md` | Live-Nachweis: `git log`, Skripte öffnen, Regel zeigen |
 | Dashboard zum Projektverlauf (nur, wenn der Dozent es verlangt; **erst fragen**) | offen | `src/dashboard_daten.py` | Ersetzt das Lab-Log nicht (Bogen sagt „PDF/Web-App“) |
 
@@ -98,4 +98,4 @@ Die „Erinnerungen“ von Claude (Dateien unter `~/.claude/projects/…`) liege
 
 > „Lies CLAUDE.md, docs/mitarbeit_uebergabe.md, docs/iterationen.md (Übersicht und Iteration 10) und docs/business.md §8. Ich arbeite im Zweierteam mit Ludwig am Vergabe-Radar (Leistungsnachweis B). Halte dich an die Regeln dort (Kriterien vor dem Ergebnis, Rohdaten unverändert, Fakten und Deutung trennen). Frage nach, bevor du etwas committest oder pushst.“
 
-Offene Entscheidungen, die bei Ludwig liegen: Kernbotschaft des Vortrags nach Iteration 10 (je nach W1), ob ein Dashboard gebaut wird (Rückfrage beim Dozenten), Abgabeformat (PDF/Web-App).
+Offene Entscheidungen, die bei Ludwig liegen: ob ein Dashboard gebaut wird (Rückfrage beim Dozenten), Abgabeformat (PDF/Web-App).

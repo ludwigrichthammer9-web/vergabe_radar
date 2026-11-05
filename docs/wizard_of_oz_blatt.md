@@ -1,12 +1,33 @@
 # Blatt für das Gespräch: fünf Aufträge, würden Sie bieten?
 
-_Für ein kurzes Gespräch mit einem Reinigungsbetrieb (10 bis 15 Minuten). Keine Namen von Personen notieren, Betrieb nur beschreibend (Größe, Region). Die Aufträge sind echte, laufende Verträge aus der Oberpfalz-Liste (TED-Zuschlagsbekanntmachungen); gezeigt werden nur Auftraggeber, Los, Laufzeit und der Link zur Bekanntmachung. Auswahl: Seed 20261117, höchstens ein Los je Auftraggeber (Skript `src/report/wizard_of_oz_blatt.py`)._
+_Für ein kurzes Gespräch mit einem Reinigungsbetrieb (10 bis 15 Minuten). Keine Namen von Personen notieren, Betrieb nur beschreibend (Größe, Region). Die Aufträge sind echte, laufende Verträge aus der Oberpfalz-Liste (TED-Zuschlagsbekanntmachungen); gezeigt werden nur Auftraggeber, Los, Text der Bekanntmachung, Laufzeit und der Link zur Bekanntmachung. Auswahl: Seed 20261117, höchstens ein Los je Auftraggeber, bevorzugt Ende der Grundlaufzeit 2027-01-01 bis 2029-12-31 (Skript `src/report/wizard_of_oz_blatt.py`)._
+
+**Stichprobe und Stand:** 3 bis 5 Betriebe, auch ein Betrieb ohne öffentliche Aufträge. Einwilligung vorher klären. Ergebnis nur als Hinweis. Bis zur Abgabe nur „vorbereitet, nicht durchgeführt“, falls keine Antworten vorliegen.
+
+**Vorab festgelegte Schwelle für die Auswertung:** Ein Textfilter lohnt sich, wenn bei mindestens 3 von 5 Aufträgen die Entscheidungsgründe aus dem gezeigten Text ablesbar waren; sonst reichen Entfernung und Laufzeit.
 
 **Einstieg (zum Ablesen):** „Ich zeige Ihnen fünf Aufträge, die in einigen Jahren wieder ausgeschrieben werden könnten. Sagen Sie mir bitte zu jedem, ob Sie dafür grundsätzlich bieten würden, und warum oder warum nicht. Es gibt keine falschen Antworten.“
 
 ## Auftrag 1
+- Auftraggeber: Universität Regensburg als staatliche Einrichtung in Vertretung des Freistaates Bayern
+- Los: Unterhaltsreinigung Campus Nord
+- Text der Bekanntmachung: Unterhaltsreinigung Campus Süd Los 2 Interimsvergabe 01.10.26-31.01.27
+- Randfall (Hinweis für die Gesprächsführung): Interimsvergabe (kurze Übergangsleistung), Beschreibung in der Bekanntmachung teils widersprüchlich
+- Region: Regensburg (Stadt)
+- Laufzeit: 2026-10-01 bis 2027-07-31 (Ende der Grundlaufzeit laut Bekanntmachung; Höchstende: nicht bekannt)
+- Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/527230-2026
+
+| Frage | Antwort (wörtlich) |
+|---|---|
+| Würden Sie bieten? (ja / nein / vielleicht) | |
+| Warum? (Entfernung, Personal, Größe, Kapazität, Bürokratie, Preis, anderes) | |
+| Was müssten Sie noch wissen, um zu entscheiden? | |
+
+## Auftrag 2
 - Auftraggeber: Stadt Regensburg
 - Los: 62-2025-023 - Los 2 Vertretungsreinigung Ost
+- Text der Bekanntmachung: Revierweise Ausführung von Unterhaltsreinigung und Mittagsdienste vertretungsweise für die Reinigungskräfte der Stadt Regensburg: Los 2 - Vertretungsreinigung Objekte Ost
+- Randfall (Hinweis für die Gesprächsführung): Vertretungsreinigung (Springerleistung für Reinigungskräfte des Auftraggebers)
 - Region: Regensburg (Stadt)
 - Laufzeit: 2025-09-15 bis 2027-09-14 (Ende der Grundlaufzeit laut Bekanntmachung; Höchstende: 2029-09-14)
 - Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/570596-2025
@@ -17,9 +38,11 @@ _Für ein kurzes Gespräch mit einem Reinigungsbetrieb (10 bis 15 Minuten). Kein
 | Warum? (Entfernung, Personal, Größe, Kapazität, Bürokratie, Preis, anderes) | |
 | Was müssten Sie noch wissen, um zu entscheiden? | |
 
-## Auftrag 2
+## Auftrag 3
 - Auftraggeber: Fraunhofer-Gesellschaft - Einkauf B12
 - Los: Los 2 Fensterreinigung gem. Leistungsbeschreibung
+- Text der Bekanntmachung: keine Beschreibung in der Bekanntmachung
+- Randfall (Hinweis für die Gesprächsführung): nur Fenster-/Glasreinigung (Teilleistung), keine Unterhaltsreinigung
 - Region: Amberg-Sulzbach
 - Laufzeit: 2026-08-01 bis 2028-07-31 (Ende der Grundlaufzeit laut Bekanntmachung; Höchstende: 2028-07-31)
 - Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/310648-2026
@@ -30,9 +53,10 @@ _Für ein kurzes Gespräch mit einem Reinigungsbetrieb (10 bis 15 Minuten). Kein
 | Warum? (Entfernung, Personal, Größe, Kapazität, Bürokratie, Preis, anderes) | |
 | Was müssten Sie noch wissen, um zu entscheiden? | |
 
-## Auftrag 3
+## Auftrag 4
 - Auftraggeber: Stadt Amberg
 - Los: Unterhalts- und Grundreinigung Realschule und Raseliushaus
+- Text der Bekanntmachung: Los 1 Unterhalts- und Grundreinigung Realschule und Raseliushaus Los 2 Unterhalts- und Grundreinigung Dreifaltigkeitsschule und Jugendzentrum Los 3 Unterhalts- und Grundreinigung Baureferat, Luitpoldschule u. Ausweichschule am Bgm. Bartelt-Platz 4 Los 4 Glasreinigung Dreifaltigkeitsschule Jugendzentrum Realschule Baureferat Luitpoldschule …
 - Region: Amberg (Stadt)
 - Laufzeit: 2025-01-01 bis 2028-12-31 (Ende der Grundlaufzeit laut Bekanntmachung; Höchstende: 2028-12-31)
 - Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/691398-2024
@@ -43,25 +67,13 @@ _Für ein kurzes Gespräch mit einem Reinigungsbetrieb (10 bis 15 Minuten). Kein
 | Warum? (Entfernung, Personal, Größe, Kapazität, Bürokratie, Preis, anderes) | |
 | Was müssten Sie noch wissen, um zu entscheiden? | |
 
-## Auftrag 4
-- Auftraggeber: Bundesanstalt für Immobilienaufgaben
-- Los: Los 3: Unterhalts- und Innenglasreinigungsleistungen
-- Region: Neustadt a. d. Waldnaab
-- Laufzeit: 2026-04-01 bis 2030-03-31 (Ende der Grundlaufzeit laut Bekanntmachung; Höchstende: 2032-03-31)
-- Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/689574-2025
-
-| Frage | Antwort (wörtlich) |
-|---|---|
-| Würden Sie bieten? (ja / nein / vielleicht) | |
-| Warum? (Entfernung, Personal, Größe, Kapazität, Bürokratie, Preis, anderes) | |
-| Was müssten Sie noch wissen, um zu entscheiden? | |
-
 ## Auftrag 5
-- Auftraggeber: Die Autobahn GmbH des Bundes
-- Los: Nordbayern
-- Region: Schwandorf
-- Laufzeit: 2026-01-01 bis 2030-03-31 (Ende der Grundlaufzeit laut Bekanntmachung; Höchstende: 2031-03-31)
-- Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/143100-2026
+- Auftraggeber: Bundesanstalt für Immobilienaufgaben
+- Los: Offenes Verfahren (EU-weit) zur Vergabe Gebäudereinigungsleistungen (Unterhalts- und Glasreinigungsleistungen) für versc
+- Text der Bekanntmachung: - Unterhaltsreinigung: Reinigungsgesamtflächen von 7.002,94 qm Fußbodenfläche und eine jährliche Reinigungsfläche von 559.953,61 qm. - Grund-/Intensivreinigung - Bedarfsleistungen
+- Region: Regensburg (Stadt)
+- Laufzeit: 2025-04-01 bis 2029-03-31 (Ende der Grundlaufzeit laut Bekanntmachung; Höchstende: 2031-03-31)
+- Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/656919-2024
 
 | Frage | Antwort (wörtlich) |
 |---|---|
@@ -81,5 +93,6 @@ _Für ein kurzes Gespräch mit einem Reinigungsbetrieb (10 bis 15 Minuten). Kein
 
 - Für wie viele der fünf Aufträge konnte der Betrieb **allein mit den gezeigten Angaben** entscheiden? ____ von 5
 - Welche Gründe kamen vor, die **nicht** aus Bekanntmachungsfeldern (Ort, Laufzeit, Auftraggeber) ablesbar sind? (z. B. Personal, Kapazität, Bürokratie, Fläche): ____
-- Was folgt daraus für einen Profilfilter? Wenn die meisten Gründe nicht aus den Feldern ablesbar sind, kann ein Filter nur Entfernung und Laufzeit abbilden und braucht keine KI; wenn sie aus dem Text der Bekanntmachung ablesbar sind, wäre ein Textfilter sinnvoll: ____
+- Gründe aus dem gezeigten Text ablesbar bei ____ von 5 Aufträgen (Schwelle: mindestens 3 von 5 → Textfilter lohnt sich; sonst reichen Entfernung und Laufzeit).
+- Was folgt daraus für einen Profilfilter? Nach der vorab festgelegten Schwelle: ____
 - Bezug zu den Annahmen: A1 / A15 (stützt, schwächt, neutral, kurz begründen): ____

@@ -1,5 +1,7 @@
 # Paket B: Abdeckungstest unterhalb der EU-Schwelle (A3), Oberpfalz
 
+**Hinweis (2026-11-05): Die erste Auswertung (0 von 84, B1 „verfehlt“) ist ein Filterartefakt und gilt nicht; siehe reports/oeffentlichevergabe_robustheit.md und docs/iterationen.md (Ergebnis Paket B).**
+
 Stand: 2026-11-05. Kriterien B1 bis B5 stehen vorab in `docs/iterationen.md` (Abschnitt „Paket B“) und wurden nicht geändert. Skript: `src/oeffentlichevergabe_test.py`; Ausgabe je Los: `reports/oeffentlichevergabe_test_los.csv`.
 
 ## 1. Fakten
