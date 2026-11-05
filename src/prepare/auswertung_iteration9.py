@@ -267,12 +267,24 @@ def main() -> None:
             f"- Herkunft des Endes in der Liste (V-Lose): {dict(Counter(schl[n]['gl_herkunft'] for n in vlose))}.", "",
             "### Abweichungen der Liste vom Vergleichswert (V-Lose)", "",
             "| N | Gruppe | Herkunft | Liste GL | Vergleichswert GL | Leser A | Leser B | Liste Höchstende | Vergleichswert Höchstende |", "|---|---|---|---|---|---|---|---|---|"]
+    # Nachtrag (nach der Auswertung ergänzt, nicht vorab festgelegt): einfache Basisregel „Ende der Grundlaufzeit = Feld EndDate des Loses“ (Wert aus der Lesung von Leser A),
+    # gemessen am selben Vergleichswert, um den Nutzen der Regeln einzuordnen.
+    basis = {n: (lambda d: ("datum", d) if d else ("unbekannt", None))(datum(antworten["a"][n]["feld_enddatum"])) for n in schl}
+    ok_basis = {n: ok_gl(basis[n], v[n]["gl"]) for n in schl}
+    only_regeln = [n for n in z if ok_neu[n] and not ok_basis[n]]
+    only_basis = [n for n in z if ok_basis[n] and not ok_neu[n]]
+    nachtrag = ["", "### Nachtrag: Basisregel „Ende = Feld EndDate“ (nach der Auswertung ergänzt, nicht vorab festgelegt)", "",
+            f"- Z-Lose: Basisregel {pct(sum(ok_basis[n] for n in z), len(z))}; neue Fassung {pct(k1, len(z))}; alte Fassung {pct(sum(ok_alt[n] for n in z), len(z))}.",
+            f"- R- und M-Lose: Basisregel {pct(sum(ok_basis[n] for n in rm), len(rm))}; neue Fassung {pct(k2, len(rm))}; alte Fassung {pct(sum(ok_alt[n] for n in rm), len(rm))}.",
+            f"- Z-Lose, bei denen nur die neue Fassung trifft, nicht die Basisregel: {', '.join(only_regeln) or '–'}; nur die Basisregel trifft: {', '.join(only_basis) or '–'}.",
+            "- Lesehinweis: Der Feldwert stammt aus der Lesung von Leser A und ist auch Teil des Vergleichswerts (Schritt 4 der Definition); die Basisregel ist damit nahe am Vergleichswert. Sie zeigt, wie viel die Textregeln über das Feld hinaus leisten."]
     wert = lambda t: str(t[1]) if t[1] else t[0]  # noqa: E731
     for n in vlose:
         if not v[n]["ntg"] and (not ok_neu[n] or not h_ok[n]):
             s = schl[n]
             out.append(f"| {n} | {s['gruppe']} | {s['gl_herkunft']} | {s['gl_ende'] or '–'}{'' if ok_neu[n] else ' ✗'} | {wert(v[n]['gl'])} | {wert(v[n]['ga'])} | {wert(v[n]['gb'])} | "
                        f"{s['hoechstende'] or s['hoechstende_herkunft']}{'' if h_ok[n] else ' ✗'} | {wert(v[n]['h'])} |")
+    out += nachtrag
     REPORT.write_text("\n".join(out) + "\n", encoding="utf-8")
     print(f"V1 {k1}/{len(z)}, V2 {k2}/{len(rm)}, V5 {einig}/{len(schl)}, V7 {len(kz)}")
 

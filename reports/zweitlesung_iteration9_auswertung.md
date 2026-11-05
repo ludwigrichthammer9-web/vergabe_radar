@@ -40,3 +40,10 @@ _Erzeugt mit `src/prepare/auswertung_iteration9.py`. Schlüssel-SHA-256 `9dbf5c1
 | N5 | M | enddatum | 2026-08-31 ✗ | 2027-05-31 | 2027-05-31 | 2027-05-31 | unbestimmbar | unbestimmbar |
 | N28 | M | enddatum | 2029-12-31 | 2029-12-31 | 2029-12-31 | 2029-12-31 | 2031-12-31 ✗ | 2030-12-31 |
 | N79 | M | enddatum | 2030-07-31 ✗ | 2028-07-31 | 2028-07-31 | 2028-07-31 | 2032-07-31 ✗ | 2030-07-31 |
+
+### Nachtrag: Basisregel „Ende = Feld EndDate“ (nach der Auswertung ergänzt, nicht vorab festgelegt)
+
+- Z-Lose: Basisregel 63/70 = 90,0 % (Wilson 80,8–95,1); neue Fassung 66/70 = 94,3 % (Wilson 86,2–97,8); alte Fassung 65/70 = 92,9 % (Wilson 84,3–96,9).
+- R- und M-Lose: Basisregel 25/30 = 83,3 % (Wilson 66,4–92,7); neue Fassung 28/30 = 93,3 % (Wilson 78,7–98,2); alte Fassung 26/30 = 86,7 % (Wilson 70,3–94,7).
+- Z-Lose, bei denen nur die neue Fassung trifft, nicht die Basisregel: N9, N11, N23; nur die Basisregel trifft: –.
+- Lesehinweis: Der Feldwert stammt aus der Lesung von Leser A und ist auch Teil des Vergleichswerts (Schritt 4 der Definition); die Basisregel ist damit nahe am Vergleichswert. Sie zeigt, wie viel die Textregeln über das Feld hinaus leisten.
