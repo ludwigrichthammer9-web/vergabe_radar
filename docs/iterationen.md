@@ -1387,3 +1387,47 @@ _(Ergebnis 2026-11-05: drei Gespräche geführt, 2 Reinigungsbetriebe und 1 Verg
 **Geprüfte Annahmen:** A2 (Wettbewerb, schon widerlegt: hier Qualität statt Existenz), A3 (Abdeckung durch TED), A15 und A1 nur beschreibend über W5.
 **Grenzen (vorab benannt):** Der Vergleichswert nimmt wie die Liste standardmäßig das Feld „Enddatum“ (teilweise zirkulär, Iteration 9); die Lese-Regeln der Liste wurden an TED-Texten entwickelt, die Leser lasen TED-XML. Beides kann die eigene Liste begünstigen. Die Stichprobe enthält nur TED-Lose (oberhalb der EU-Schwelle); über die Qualität von Vergabeweiser unterhalb der Schwelle sagt sie nichts.
 **Entwicklungstest (zählt mit, offen ausgewiesen):** Beim Test der Zuordnung wurde der Vergabeweiser-Eintrag zu 105754-2026 abgerufen; diese Bekanntmachung enthält das Z-Los N81 (`ends_on` 2027-12-31). Claude kennt die Listenwerte und den Vergleichswert der Stichprobe; der Vergleich läuft deshalb nur per Skript, ohne Handentscheid.
+
+> **Nachtrag 2026-11-05 (Iteration 10, Listenfehler Uni Regensburg, 527230-2026):** Die Liste nennt bei den Losen Campus Süd und Campus Nord als Ende der Grundlaufzeit den 31.07.2027 (Herkunft `beginn_plus_dauer`, Beginn 01.10.2026 + 10 Monate) und das Höchstende „unbestimmbar“. Die Bekanntmachung beschreibt eine Interimsvergabe „01.10.26 – 31.01.27 mit 6 Monaten Option“ (`description-proc`, `description-lot`, `option-description-lot` mit 6 Monaten); die 10 Monate im Dauerfeld sind also die **Gesamtdauer einschließlich Option** (4 + 6). Richtig wären Ende der Grundlaufzeit 31.01.2027 und Höchstende 31.07.2027. Ursache: Die Regel `beginn_plus_dauer` nimmt das Dauerfeld als Grundlaufzeit (derselbe Fehlertyp wie „Datum ist schon Höchstende“ aus Iteration 6, hier mit der Dauer). Umfang: Von 24 Bekanntmachungen (49 Lose) der Liste mit dieser Herkunft zeigt nur diese ein Datum oder eine Option im Text, die der Dauer widerspricht (grobe Textprüfung, andere Formulierungen sind nicht ausgeschlossen); 697344-2025 (Bezirk Oberfranken, „vom 1.1.2026 bis 31.12.2027 mit zweimaliger Verlängerungsoption“) ist richtig. Das Los ist in keiner Stichprobe der Iterationen 6 bis 10 enthalten (Schlüsseldateien geprüft). **Folge:** Die Liste (Fassung 9) bleibt eingefroren, die Messungen werden nicht geändert; der Fall wird als offene Fehlerart im Lab-Log genannt. Der Prototyp zeigt diese beiden Lose mit dem Ende 31.07.2027, das ist das Höchstende.
+
+## Iteration 10b: größere Stichprobe zum Vergleich Liste gegen Vergabeweiser (Nachtrag zu Iteration 10, Entscheidung des Nutzers 2026-11-05)
+
+**Status:** läuft. **Anlass:** Der Evaluator (`reports/evaluation_iteration10.md`) bezeichnet die Differenz +8 auf 70 Losen als überwiegend Verfahrens- gegen Losebene und nennt eine zweite, größere Stichprobe (mindestens 150 Lose) als fehlenden Beleg. Die Entscheidung zu Iteration 10 bleibt offen, bis 10b ausgewertet ist.
+
+**Hypothese** _(vorab festgelegt 2026-11-05, vor dem Ziehen)_
+„Auf einer neuen Stichprobe von mindestens 150 Losen trifft die Liste das Ende der Grundlaufzeit häufiger als Vergabeweiser, und der Unterschied reicht über die Granularität (Verfahren statt Los) hinaus.“
+
+**Begriffe**
+- **Stichprobe:** 160 Lose, Seed **20261112**, aus `data/processed/vertragsliste_909.csv` (Fassung 9): Lose mit Zuschlag (`zuschlag` = ja) und mit Ende der Grundlaufzeit in der Liste, höchstens 2 Lose je Bekanntmachung. Ausgeschlossen: alle Bekanntmachungen der Schlüsseldateien der Iterationen 6, 7 und 9 (`data/processed/liste_pruefung_iteration6_schluessel.csv`, `liste_pruefung_iteration7_schluessel.csv`, `stichprobe_iteration9_schluessel.csv`), die Entwicklungslisten `reports/entwicklung_iteration7_notices.txt` und `reports/entwicklung_iteration9_notices.txt`, 527230-2026 und 105754-2026. Skript `src/prepare/stichprobe_iteration10b.py` (Skript und Seed committet vor dem Ziehen); Schlüssel lokal, SHA-256 im Commit.
+- **Zuordnung zu Vergabeweiser** und **Wert von Vergabeweiser je Los:** wie in Iteration 10 (Wege 1, 2, 3; `ends_on`, sonst Beginn + Dauer − 1 Tag). Abruf gedrosselt, eine Abfrage je 61 s.
+- **Diskordante Lose:** Liste und Vergabeweiser weichen um mehr als einen Tag voneinander ab, oder eine Seite hat kein Datum. Nur diese Lose werden von zwei KI-Lesern (A, B) ohne Angabe der Quelle gelesen (Rohtext wie in Iteration 9, `src/prepare/rohtext_iteration9.py`; Anweisung und neutrale Definition aus Iteration 9 unverändert; bei Uneinigkeit entscheidet der Evaluator blind am Rohtext). Übereinstimmende Lose (Liste = Vergabeweiser) zählen als „beide gleich“ und gehen in die Differenz nicht ein.
+- **Vergleichswert:** wie Iteration 9 (neutrale Definition). Ein Mensch (Kommilitone) kann 15 diskordante Lose gegenlesen (beschreibend).
+- **Ursachenklassen** (vorab, je diskordantem Los eine): (a) Losebene: Vergabeweisers Datum entspricht dem Ende eines anderen Loses desselben Verfahrens; (b) Höchstende: Vergabeweisers Datum entspricht dem späten Ende einschließlich Optionen; (c) fehlendes Datum bei einer Seite; (d) Abweichung 2 bis 5 Tage; (e) andere.
+
+**Erfolgskriterium** _(vorab festgelegt)_
+
+| | Kriterium | Schwelle |
+|---|---|---|
+| W8a | Vorsprung der Liste auf Losebene: (Lose, in denen nur die Liste richtig ist) − (nur Vergabeweiser richtig) | ≥ 10 % der Stichprobe (≥ 16 Lose) **und** exakter zweiseitiger McNemar-Test p < 0,05 |
+| W8b | wie W8a, aber Vergabeweiser gilt als richtig, wenn sein Datum dem Ende irgendeines Loses desselben Verfahrens entspricht (Ursachenklasse a als richtig) | ≥ 5 % der Stichprobe (≥ 8 Lose) und p < 0,05 |
+| W9 | Ursachenverteilung der diskordanten Lose (a bis e), Anteil je Klasse | beschreibend |
+| W10 | Abdeckung: Anteil der Stichprobe, für die Vergabeweiser keinen Eintrag hat | beschreibend |
+| W11 | Verfahren: Seed, Skript, Kriterien vor dem Ziehen committet; Rohdaten unverändert; Abweichungen offen | Ja/Nein |
+
+**Was folgt**
+- W8a und W8b erfüllt: „Vorsprung auf Losebene und über die Granularität hinaus belegt (zwei Stichproben)“; Positionierung als Qualitäts- oder Nischenanbieter, Nachfrage offen.
+- W8a erfüllt, W8b verfehlt: Vorsprung nur auf Losebene (Produktmerkmal), nicht als Lesequalität belegt.
+- W8a verfehlt: kein belegter Vorteil; die Aussage „kein Vorteil gegenüber Vergabeweiser“ gilt weiter (mit Einschränkung der Stichprobengröße).
+- In allen Fällen: Entscheidung zu Iteration 10 und 10b gemeinsam, dann Projektabschluss.
+
+**Grenzen (vorab benannt):** Leser und Regeln aus derselben Modellfamilie; die Prüfung nur der diskordanten Lose setzt voraus, dass bei übereinstimmenden Losen beide richtig oder beide falsch liegen (die Differenz der Treffer bleibt davon unberührt); nur eForms-Lose oberhalb der EU-Schwelle; die Wahl der Losebene (W8a) ist nicht neutral, deshalb W8b.
+
+## Pakete A, C und F (Nachtrag zu Iteration 10; Entscheidung des Nutzers 2026-11-05)
+
+Ziel: Business Understanding stärken, ohne die Iterationen 1 bis 10 zu ändern. Jedes Paket schreibt neue Dateien. Grundlage: Prüfbericht zum Masterdokument (nicht im Repo) und `docs/business.md` §8.9.
+
+| Paket | Inhalt | Eingaben | Ausgabe | Abnahme (vorab) |
+|---|---|---|---|---|
+| A | Wettbewerbsbild der 130 Oberpfalz-Lose aus TED: Zuschlagsempfänger, Zuschlagswert, Zahl der Angebote | `reports/beispiel_liste_oberpfalz.csv`, `data/raw/ted_search/…zielgruppe_oberpfalz_20261023`, `…DEU_result_cpv909_…lostext`, TED-XML (fehlende nachladen nach `data/raw/ted_xml/wettbewerbsbild_20261105/`) | `src/prepare/wettbewerbsbild_oberpfalz.py`, `reports/wettbewerbsbild_oberpfalz.md`, `.csv` | Anteil je Feld mit Nenner 130, Platzhalter (≤ 1 €) getrennt, Fakten und Deutung getrennt, Handabgleich von 5 Losen (Seed 20261113 vorab im Skript) gegen die Bekanntmachung |
+| C | Ursachen der 33 Lose ohne Ende (Stufe F); Suche nach weiteren Fällen vom Typ „Dauerfeld = Gesamtdauer einschließlich Option“ (527230-2026) in der Liste | `reports/beispiel_liste_oberpfalz.csv`, `vertragsliste_909.csv`, `data/raw/ted_search/*lostext` | `reports/stufe_f_ursachen.md` | alle 33 Lose einer Ursache mit Bekanntmachungsnummer zugeordnet; Zählung der Verdachtsfälle für den Fehlertyp mit Liste der geprüften Bekanntmachungen |
+| F | Optionsanalyse: Wie oft kam die Neuausschreibung vor dem Höchstende (Option nicht gezogen)? Vergleich mit der Aussage der Vergabestelle („fast immer verlängert“) | `data/processed/backtest_paare_iteration5.csv`, `reports/backtest_iteration5.md` | `reports/optionsanalyse.md` | Anteil mit Wilson-Intervall und Nenner; Fakten und Deutung getrennt; ausdrücklich „52 Paare, Hinweis“ |
