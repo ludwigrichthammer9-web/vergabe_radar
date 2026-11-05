@@ -296,4 +296,38 @@ _Vorab festgelegt am 2026-11-05. Zwei bis drei Gespräche à etwa 10 Minuten: Re
 2. Wie oft verlängern Sie statt neu auszuschreiben, und wovon hängt das ab?
 3. Bekommen Sie zu wenige Angebote? Würden Sie es begrüßen, wenn Firmen früher wüssten, dass ein Vertrag ausläuft?
 
-**Notiz je Gespräch:** Wer (beschreibend), Datum, Antworten möglichst wörtlich, Bezug zu A1/A15 (stützt, schwächt, neutral). Ablage: `docs/business.md` §8.9 (wird nach den Gesprächen angelegt).
+**Notiz je Gespräch:** Wer (beschreibend), Datum, Antworten möglichst wörtlich, Bezug zu A1/A15 (stützt, schwächt, neutral). Ablage: `docs/business.md` §8.9.
+
+### 8.9 Ergebnisse der Gespräche (Iteration 10, W5; geführt vom Nutzer am 2026-11-05, Notizen von ihm, hier übertragen)
+
+_Fakten sind die Aussagen der Gesprächspartner, Zitate wörtlich nach den Notizen des Nutzers; es sind **drei** Gespräche, keine Stichprobe. Namen von Personen und Firmen wurden nicht notiert (eine empfohlene Firma ist hier bewusst nicht genannt). Die Einordnung zu A1, A15, A3 im Anschluss stammt von Claude, nicht von den Gesprächspartnern._
+
+**Fakten**
+
+| | Gespräch 1 | Gespräch 2 | Gespräch 3 |
+|---|---|---|---|
+| Wer | Reinigungsbetrieb, ca. 120 Beschäftigte, Landkreis Schwandorf; Vertriebsleitung/Kalkulator; 14 Min. | Reinigungsbetrieb, 15 Beschäftigte, Stadt Amberg; Inhaberin; 8 Min. | Landratsamt (mittelgroß), Oberpfalz; Leitung Vergabestelle; 12 Min. |
+| Wie sie Ausschreibungen finden | DTAD (knapp 1.500 € pro Jahr, Suchprofile), gelegentlich Bayerisches Vergabeportal | Webseiten von Stadt und Landkreis alle paar Wochen, Lokalteil der Zeitung; „zahlen für keine Portale“ | – |
+| Letzte Ausschreibung | Berufsschule vor drei Wochen; Meldung 28 Tage vor Abgabe; eng bei der Objektbegehung (ein Termin, bester Vorarbeiter krank), Kalkulation nachts | Kindergarten im Vorjahr; „tausend Eigenerklärungen“, ein Wochenende | – |
+| Entscheidung mitzubieten | „Hauptsächlich Entfernung und Personal“ (über 40 km nicht; Kräfte für Früh-/Abendzeiten nötig) | Kapazität des Teams, kein Einstellen für unsicheren Auftrag, direkter Umkreis | – |
+| Wissen über Vertragsenden | „Nur bei denen, die wir selbst haben oder … knapp verloren haben. Ansonsten ist das eine Blackbox.“ | „Nein“, nur Flurfunk | – |
+| Vergabeweiser / AusschreibungsRadar | „vom Hörensagen“, nicht abonniert; im DTAD kennt er keine Listen auslaufender Verträge | „Nie gehört“ | – |
+| Früherer Hinweis (6–12 Monate) | „Absolut“: Personal in der Zielregion früher suchen (Social Media, Aushänge); nach Zuschlag „schwitzt man Blut und Wasser“ | „Eigentlich nicht“: Kapazitäten in 6 Monaten nicht planbar (Schwangerschaft, Kündigung) | Gewünscht: Bei der letzten Unterhaltsreinigung für ein Gymnasium genau zwei Bieter, vor fünf Jahren fünf bis sechs; mehr Bieter halte die Preise realistisch |
+| Wofür Zahlung | Alte Preise und aktueller Auftragnehmer („wenn der aktuelle Dienstleister bei 18 Euro pro Stunde lag, brauche ich gar nicht erst mitbieten“); Enddaten „nett für die Planung“; Aufpreis beim Portal, klang nach etwa 50–100 € pro Monat extra (Einschätzung des Nutzers, kein genannter Betrag) | „Für gar nichts in dem Bereich“; braucht Hilfe bei den Formblättern, nicht beim Finden | – |
+| Vergabestelle: Planung | – | – | Fachbereich beginnt etwa 9 Monate vor Vertragsende mit dem Leistungsverzeichnis; Veröffentlichung „meist 3 bis 4 Monate vor Start“ |
+| Vergabestelle: Verlängern | – | – | „Fast immer, wenn eine Verlängerungsoption im Vertrag steht“; meist 2 Jahre fest plus 1 Jahr Option; „Neu ausschreiben ist ein enormer Aufwand“ |
+| Vergabestelle: Schwelle | – | – | „Sehr oft“ national vergeben („alles unter 221.000 Euro“), vor allem Außenstellen, Jugendzentren, kleinere Schulen als Einzellose, um den regionalen Mittelstand zu fördern |
+
+Anrufe: 9, erreicht 4, Absagen 2, Gespräche 3 (laut Notizen); Zeitaufwand 105 Minuten (Vorbereitung, Anrufe, Abtippen).
+_Nachfrage an den Nutzer offen:_ 4 erreicht bei 3 Gesprächen und 2 Absagen; die vierte erreichte Person ist nicht beschrieben.
+_Hinweis zur Schwelle:_ Der Gesprächspartner nennt 221.000 €. Der Schwellenwert für Dienstleistungen von Kommunen und Ländern beträgt seit 01.01.2026 216.000 € (Vergabeblog, §8.1); 221.000 € galt nach unserem Kenntnisstand für 2024/2025 (nicht nachgeprüft). Das ändert die Aussage nicht.
+
+**Interpretation (Claude; n = 3, Hinweise, keine Belege)**
+
+1. **A1/A15 gespalten, nach Betriebsgröße:** Der größere Betrieb (120 Beschäftigte) sieht Nutzen in früher Information (Personalsuche), zahlen würde er aber eher für Wettbewerbsdaten als für Enddaten. Der Kleinbetrieb (15 Beschäftigte) hätte von sechs bis zwölf Monaten Vorlauf nichts und will für Informationen nichts zahlen; sein Engpass ist die Bürokratie. Die Zielgruppe „Mittelstand“ ist damit enger als gedacht (größere Betriebe, die für Kommunen und Behörden bieten).
+2. **Was der Kunde bezahlen würde, ist nicht die Liste, sondern das Wettbewerbsbild** (aktueller Auftragnehmer, alte Preise). Das stützt die Richtung aus dem BWL-Gutachten (§8.5). Genau das zeigen Vergabeweiser (Zuschlagsempfänger, Zahl der Angebote, Zuschlagssummen) und AusschreibungsRadar (Zuschlagsempfänger, Wettbewerber-Tracking in Business ab 79 € pro Monat) schon.
+3. **Bekanntheit statt Funktion?** Keiner der beiden Betriebe nutzt einen der Dienste; einer kennt sie vom Hörensagen, die andere gar nicht. Der Betrieb mit Abo nutzt DTAD. Das deutet eher auf ein Vertriebs- und Bekanntheitsproblem der Konkurrenz als auf eine Lücke im Angebot. Das ist eine Hypothese; die Zahl der Gespräche trägt keinen Schluss.
+4. **Die Vergabestelle bestätigt die Grenze der Terminprognose:** Verlängerung ist der Normalfall (zwei Jahre plus Option), das Vertragsende ist also kein Neuausschreibungstermin; geplant wird etwa 9 Monate vor Vertragsende, veröffentlicht meist 3 bis 4 Monate vor Start. Das passt zu Iteration 5 (28,8 %) und zeigt, warum das **Höchstende** (nicht das Ende der Grundlaufzeit) für die Planung zählt, das die Liste nur als Hinweis führt.
+5. **Aus Sicht der Auftraggeber gibt es einen Bedarf:** Bieterzahl sinkt (zwei statt fünf bis sechs). Das stützt einen zweiten Markt (Vergabestellen oder Bietermarketing), auf den die Recherche schon hinwies (§8.5, Benchmark für Vergabestellen). Die Aussage stammt von einer einzigen Stelle.
+6. **A3:** Die Vergabestelle vergibt Reinigung „sehr oft“ unterhalb der EU-Schwelle (Einzellose), also nicht auf TED. Das stützt die Lücke unserer Datenbasis (Kleinaufträge fehlen) und spricht für Vergabeweiser, das auch unterschwellige Bekanntmachungen führt.
+7. **Folgerung für die Positionierung (Entwurf, abhängig von W1):** Eine reine Liste der Vertragsenden trägt nicht. Der Nutzen liegt eher bei größeren Betrieben (Personal- und Kalkulationsplanung) und bei Vergabestellen; Zahlungsbereitschaft zeigt sich nur für Wettbewerbsdaten, die es bereits gibt.
