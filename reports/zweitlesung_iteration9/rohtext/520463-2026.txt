@@ -1,0 +1,24 @@
+Bekanntmachung 520463-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung (Unterhalts-, Grund-, Glas- und Rahmenreinigung) Landkreis Börde Verwaltungsgebäude, Triftstraße 9-10, in Oschersleben
+Beschreibung (Description): Gebäudereinigung (Unterhalts-, Grund-, Glas- und Rahmenreinigung) Landkreis Börde Verwaltungsgebäude, Triftstraße 9-10, in Oschersleben
+Hinweis (Note): Angebote dürfen ausschließlich verschlüsselt über das Bietertool eingereicht werden. Angebote, die per E-Mail oder über die Funktion "Kommunikation" eingehen, werden aufgrund der Nichteinhaltung der Form gemäß § 57 Absatz 1 Nr. 1 VgV ausgeschlossen. Sprache(n), in der (denen) Angebote oder Teilnahmeanträge, sowie sämtliche Unterlagen eingereicht werden können: Deutsch Die in den Ausschreibungs-/Vergabeunterlagen enthaltenen Dokumente und Informationen sind vertraulich zu behandeln und dürfen ausschließlich zur Angebotserstellung/Auftragsausführung verwendet werden. Die Weitergabe an nicht am Verfahren beteiligte Dritte ist untersagt. Das Leistungsverzeichnis liegt nicht im GAEB-Format vor. Wie den Angaben unter Punkt 3.7 in den Bewerbungsbedingungen (Formblatt VHB 632EU_Bewerbungsbedingungen EU) zu entnehmen ist, sind die Preise im Leistungsverzeichnis mit höchstens drei Nachkommastellen anzugeben. Zuschlagskriterien: Los 1: Angebotspreis 50%, Reinigungsstunden 40%, Stundenverrechnungssatz 10%, Los 2 : Angebotspreis 100% Grundsätzlich erfolgt die Kommunikation mittels der Vergabeplattform, über die Funktion "Nachrichten" und in deutscher Sprache. Mit der Freischaltung für dieses Vergabeverfahren auf der Vergabeplattform verpflichten Sie sich, das Nachrichtenpostfach des " Bietercockpits" der Vergabeplattform für den Empfang rechtserheblicher Erklärungen in diesem Vergabeverfahren zu nutzen. Etwaige abweichende Mitteilungen/Informationen des Portalbetreibers sind unerheblich. Gem. DSGVO Art. 6 Abs. 1 b werden im Rahmen des Vergabeverfahrens zur Verfügung gestellte, auch personenbezogene Informationen und Daten erfasst, organisiert, gespeichert, verwendet und gelöscht. Nach Abschluss des Vergabeverfahrens, des Förder- und Rechnungsprüfungsverfahrens und nach Ablauf der gesetzlichen Aufbewahrungsfrist werden die Daten gelöscht. Gemäß § 6 Abs. 1 WRegG ist ein öffentlicher Auftraggeber nach § 99 des Gesetzes gegen Wettbewerbsbeschränkungen verpflichtet, vor der Erteilung des Zuschlags in einem Verfahren über die Vergabe öffentlicher Aufträge mit einem geschätzten Auftragswert ab 30.000 Euro ohne Umsatzsteuer bei der Registerbehörde abzufragen, ob im Wettbewerbsregister Eintragungen zu demjenigen Bieter, an den der öffentliche Auftraggeber den Auftrag zu vergeben beabsichtigt, gespeichert sind. Die Auftragserteilung erfolgt durch den nachfolgenden Auftraggeber: Landkreis Börde - Bornsche Straße 2 39340 Haldensleben Für Los 1 gilt bei einer Punktegleichheit wird der angebotene Stundenverrechnungssatz als Entscheidungshilfe hinzugezogen. Der Bieter mit dem geringeren Stundenverrechnungssatz erhält den Zuschlag. Bei einer Preisgleichheit im Los 2 wird der angebotene Stundenverrechnungssatz als Entscheidungshilfe hinzugezogen. Der Bieter mit dem geringeren Stundenverrechnungssatz erhält den Zuschlag.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Fachlos 1 - Unterhalts- und Grundreinigung
+Beschreibung (Description): Los 1: Unterhalts- und Grundreinigung
+Hinweis (Note): Unterhaltsreinigung nach Reinigungsplan: - täglich min. 10 Reinigungsstunden Grundreinigung: - nach Bedarf
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2030-12-31
+Beschreibung der Optionen (OptionsDescription): Die Laufzeit des Vertrages beträgt ein Jahr. Sofern der Vertrag nicht 3 Monate vor Vertragsjahresende gekündigt wird verlängert er sich automatisch um ein weiteres Jahr, maximal um 3 Jahre. Fristbeginn ist der 01.01.2027; spätestes Vertragsende der 31.12.2030
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Fachlos 2 - Glas- und Rahmenreinigung
+Beschreibung (Description): Los 2: Glas-und Rahmenreinigung
+Hinweis (Note): Glas- und Rahmenreinigung nach Reinigungsplan -3x jährlich
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2030-12-31
+Beschreibung der Optionen (OptionsDescription): Die Laufzeit des Vertrages beträgt ein Jahr. Sofern der Vertrag nicht 3 Monate vor Vertragsjahresende gekündigt wird verlängert er sich automatisch um ein weiteres Jahr, maximal um 3 Jahre. Fristbeginn ist der 01.01.2027; spätestes Vertragsende der 31.12.2030
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

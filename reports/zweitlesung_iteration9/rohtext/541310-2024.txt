@@ -1,0 +1,18 @@
+Bekanntmachung 541310-2024 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigungsdienstleistung
+Beschreibung (Description): Reinigungsdienstleistungen an der Louis-Leitz-Schule und dem Dillmann-Gymnasium.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Louis-Leitz-Schule
+Beschreibung (Description): Siehe Vergabeunterlagen
+Beginn (StartDate): 2024-12-01
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Dillmann-Gymnasium
+Beschreibung (Description): Siehe Vergabeunterlagen
+Beginn (StartDate): 2024-12-01
+Enddatum (EndDate): 2026-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

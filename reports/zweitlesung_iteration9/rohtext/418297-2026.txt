@@ -1,0 +1,42 @@
+Bekanntmachung 418297-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Rahmenvertrag Gebäudeunterhaltsreinigung ab 01.01.2027
+Beschreibung (Description): Rahmenvertrag Gebäudeunterhaltsreinigung
+Hinweis (Note): Die Ausschreibung erfolgt losweise, wobei ein Los die zu erbringenden Unterhaltsreinigungsstunden für einen Stadtbezirk enthält. Die Rahmenvereinbarung wird pro Los mit mehreren Bietern geschlossen. Ein Bieter kann Angebote auf alle Lose abgeben und auch in jedem Los einen Zuschlag erhalten. Jedoch kann ein Bieter maximal in zwei Losen den ersten Rang belegen. Eine Begrenzung/Einschränkung der Zuschläge für die nachfolgenden Ränge (Rang 2-11) erfolgt nicht. Die mit den Vergabeunterlagen übermittelten tabellarischen Preisblanketten (Excel-Dateien) sind ausgefüllt mit dem Angebot einzureichen. Gegebenenfalls nachträglich veröffentlichte und nicht mit einer neuen Version der Unterlagen verbundene Preisblanketten sind zu editieren und in das Angebot zu importieren. Ein Angebot, welches ohne Preisblanketten eingereicht wird, wird wegen Unvollständigkeit sofort ausgeschlossen. Für jeden im Preisblankett angegebenen Stundenverrechnungssatz ist eine Stundenverrechnungssatzkalkulation nach Vorlage der aktuellen Formblätter des Bundesinnungsverbandes einzureichen. Wird in verschiedenen Losen/Preisblanketten der gleiche Stundenverrechnungssatz angeboten, reicht die einmalige Einreichung je Stundenverrechnungssatz. Die Excel-Dateien sind dabei im zur Verfügung gestellten Format Excel2016 zu speichern, da eine andere Version hier ggf. nicht gelesen werden kann. Mit der Abgabe eines Angebotes bestätigt der Bieter, dass er alle Dokumente der Vergabeunterlagen, insbesondere die Leistungsbeschreibung, die besonderen Vertragsbedingungen und alle Anlagen gelesen, verstanden und akzeptiert hat, sowie bis zur Angebotsabgabe alle Unklarheiten durch Nachfragen und darauf erfolgte Antworten beseitigt wurden.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Bezirk 1
+Beschreibung (Description): Bitte tragen Sie an dieser Stelle die Gesamtsumme pro Jahr aus der beiliegenden excel-Datei "Los 1_Bezirk1-Preisblankett.xlsx" ein. Das System errechnet dann die Summe für die möglichen vier Vertragsjahre automatisch. Achtung!! Die vorbezeichnete excel-Datei ist vollständig ausgefüllt Ihrem Angebot beizufügen, anderenfalls kann Ihr Angebot nicht gewertet werden.
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): (1) Die vertraglich bestimmten Leistungen sind im Ausführungszeitraum von 24 Monaten zu erbringen. Der Vertragszeitraum startet zum 01.01.2027 und endet zum 31.12.2029. (2) Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Bezirk 2
+Beschreibung (Description): Bitte tragen Sie an dieser Stelle die Gesamtsumme pro Jahr aus der beiliegenden excel-Datei "Los 2_Bezirk3-Preisblankett.xlsx" ein. Das System errechnet dann die Summe für die möglichen vier Vertragsjahre automatisch. Achtung!! Die vorbezeichnete excel-Datei ist vollständig ausgefüllt Ihrem Angebot beizufügen, anderenfalls kann Ihr Angebot nicht gewertet werden.
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): (1) Die vertraglich bestimmten Leistungen sind im Ausführungszeitraum von 24 Monaten zu erbringen. Der Vertragszeitraum startet zum 01.01.2027 und endet zum 31.12.2029. (2) Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Bezirk 3
+Beschreibung (Description): Bitte tragen Sie an dieser Stelle die Gesamtsumme pro Jahr aus der beiliegenden excel-Datei "Los 3_Bezirk6-Preisblankett.xlsx" ein. Das System errechnet dann die Summe für die möglichen vier Vertragsjahre automatisch. Achtung!! Die vorbezeichnete excel-Datei ist vollständig ausgefüllt Ihrem Angebot beizufügen, anderenfalls kann Ihr Angebot nicht gewertet werden.
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): (1) Die vertraglich bestimmten Leistungen sind im Ausführungszeitraum von 24 Monaten zu erbringen. Der Vertragszeitraum startet zum 01.01.2027 und endet zum 31.12.2029. (2) Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Bezirk 4
+Beschreibung (Description): Bitte tragen Sie an dieser Stelle die Gesamtsumme pro Jahr aus der beiliegenden excel-Datei "Los 4_Bezirk9-Preisblankett.xlsx" ein. Das System errechnet dann die Summe für die möglichen vier Vertragsjahre automatisch. Achtung!! Die vorbezeichnete excel-Datei ist vollständig ausgefüllt Ihrem Angebot beizufügen, anderenfalls kann Ihr Angebot nicht gewertet werden.
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): (1) Die vertraglich bestimmten Leistungen sind im Ausführungszeitraum von 24 Monaten zu erbringen. Der Vertragszeitraum startet zum 01.01.2027 und endet zum 31.12.2029. (2) Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

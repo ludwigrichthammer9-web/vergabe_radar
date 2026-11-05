@@ -1,0 +1,26 @@
+Bekanntmachung 150456-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigung von PWC Anlagen 2026 - 2028
+Beschreibung (Description): Reinigung von PWC Anlagen 2026 - 2028
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1: AM Diedenbergen, AM Heidesheim u. AM Idstein
+Beschreibung (Description): Reinigung von PWC-Anlagen entlang der Autobahnen im Zuständigkeitsbereich der Außenstelle Wiesbaden (AM Diedenbergen, AM Heidesheim und AM Idstein).
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2: AM Darmstadt u. AM Rodgau
+Beschreibung (Description): Reinigung von PWC-Anlagen entlang der Autobahnen im Zuständigkeitsbereich der Außenstelle Darmstadt (AM Darmstadt und AM Rodgau).
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3: AM Frankfurt, AM Langenselbold u. AM Reiskirchen
+Beschreibung (Description): Reinigung von PWC-Anlagen entlang der Autobahnen im Zuständigkeitsbereich der Außenstelle Frankfurt/Gelnhausen (AM Frankfurt, AM Langenselbold und AM Reiskirchen).
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

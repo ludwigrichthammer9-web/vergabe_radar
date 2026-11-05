@@ -1,0 +1,14 @@
+Bekanntmachung 177588-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): RV Reinigung von Regenentwässerungsanlagen inkl. digitale Datenerfassung 2026-2029
+Beschreibung (Description): Rahmenvertrag Laufzeit beträgt 3 Jahre Angabe in Höchstmengen pro Jahr: - 600 Stk. Reinigung von Straßenabläufen <= 0,25 m³ - 300 Stk. Reinigung von Straßenabläufen ab 0,25 m³ bis 1,40 m³ - 180 m Reinigung der Anschlussleitungen von DN 150 bis DN 250 - 500 Stk. Reinigung von Schlammeimer aus Stahl verzinkt nach DIN 4052 - 20 Stk. Reinigung von Sickerschächten - 30 Stk. Reinigung von Regenwasserschächten - 20 Stk. Reinigung von Schmutzfänger Stahl verzinkt - 2.550 m Reinigung von Rohrleitungen versch. Rohrdurchmesser - 5 Stk. Probennahme und Analyse - Entsorgungskosten für verschiedene Abfallarten - 500 m Kanalinspektion mittels hochauflösender Kamera - 100 m Kanalinspektion mittels 3D Scanner Kamera - 90 Stk. Schachtinspektion Bestand, maximale Tiefe 3 Meter - 10 Stk. Schachtinspektion Bestand, maximale Tiefe 6 Meter - 100 Stk. Betriebszustandskontrolle der Haltungen mit elektrischem Kanalspiegel - 100 Stk. Vermessung von Schachtbauwerken - 30 Stk. Bestandsaufnahme von RW-Versickerungsanlagen Weitere Positionen entnehmen Sie bitte dem Leistungsverzeichnis
+Hinweis (Note): #Bekanntmachungs-ID: CXP9YM0HA33# Der Auftraggeber behält sich vor, unvollständige, nicht wie gefordert abgegebene bzw. fehlende Nachweise, Erklärungen oder sonstige Angaben des Bewerbers/Bieters nachzufordern. Ein Anspruch auf eine derartige Handhabung besteht nicht. Insbesondere kann der Auftraggeber aus Gründen der Gleichbehandlung und/oder zeitlichen Erwägungen unvollständige Angebote vom Vergabeverfahren ausschließen.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): RV Reinigung von Regenentwässerungsanlagen inkl. digitale Datenerfassung 2026-2029
+Beschreibung (Description): Es wird ein Rahmenvertrag für eine Laufzeit von drei Jahren geschlossen. Der Rahmenvertrag endet nach Ablauf der Laufzeit oder mit Erreichen der Höchstmenge automatisch. Eine Mindestabnahme-menge wird nicht garantiert. Die Leistungsabrufe werden in Form von Einzelabrufen getätigt. Hinweis: Das Leistungsverzeichnis sieht die Höchstmengen für je ein Jahr vor, der Rahmenvertrag wird jedoch für drei Jahre geschlossen.
+Hinweis (Note): In der Zeit zwischen dem 20.12.2025-04.01.2026 werden Bieterfragen aufgrund der Weihnachts- und Urlaubszeit nicht beantwortet. Eine Beantwortung von bereits gestellten Bieterfragen findet ab dem 05.01.2026 statt.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2029-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , , , , 

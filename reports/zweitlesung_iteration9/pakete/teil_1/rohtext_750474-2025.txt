@@ -1,0 +1,14 @@
+Bekanntmachung 750474-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung, Grundreinigung optional und Winterdienst - Sekundarschule Am Schillerpark, einschließlich Sporthalle
+Beschreibung (Description): Unterhaltsreinigung, Grundreinigung optional und Winterdienst an Schulen - Sekundarschule "Am Schillerpark", einschließlich Sporthalle
+
+## Los 1 der Liste: LOT-0000
+Titel (Name): Unterhaltsreinigung, Grundreinigung optional und Winterdienst - Sekundarschule Am Schillerpark, einschließlich Sporthalle
+Beschreibung (Description): Unterhaltsreinigung von Fußbodenflächen ca. 4.227 m², Umfang der Grundreinigung Fläche ca. 1.508 m², Glasinnenflächen ca. 207 m² (Aufmaß einseitig), Winterdienst ca. 334,50 m², Grundreinigung optional an 1 Standort in Dessau-Roßlau
+Hinweis (Note): Nach § 9 Abs. 3 VgV müssen Vorinfo, Auftragsbekanntmachung und Vergabeunterlagen jedem Interessierten ohne Registrierung zugänglich sein. Eine freiwillige Registrierung ist jedoch zulässig. Sie bietet Unternehmen den Vorteil, dass sie automatisch über Änderungen an den Vergabeunterlagen oder über Antworten auf Fragen zum Vergabeverfahren informiert werden. Unternehmen ohne Registrierung müssen sich selbständig informieren (Holschuld). Voraussichtlicher Tag der Absendung der Unterlagen Tag: 16.07.2025 Ende für die Beantragung von Klarstellungen und zusätzlichen Auskünften für die Angebotsabgabe: 13.08.2025 Auch eine schriftliche Rechnungslegung wird akzeptiert. Bindefrist: 11.11.2025 Ausführungsfristen: Beginn: 01.01.2026 Ende: 31.12.2026 mit Verlängerungsoption um jeweils 1 Jahr für maximal 4 Jahre
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Beschreibung der Optionen (OptionsDescription): mit Verlängerungsoption um jeweils 1 Jahr für maximal 4 Jahre
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

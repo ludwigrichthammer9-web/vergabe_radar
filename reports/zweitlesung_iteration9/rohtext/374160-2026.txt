@@ -1,0 +1,33 @@
+Bekanntmachung 374160-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung in verschiedenen Objekten der Stadt Oldenburg
+Beschreibung (Description): Unterhaltsreinigung in der Zeit 16.07.2026 bis zum 18.07.2031 in verschiedenen Objekten der Stadt Oldenburg (Oldb), darunter u.a Verwaltungsgebäude, Schulen, Kindertagesstätten, im nördlichen bzw. südlichen Stadtgebiet mit insgesamt rund 92.000 m² Reinigungsfläche, aufgeteilt in vier Losen.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Nord 1
+Beschreibung (Description): Für die Ermittlung des wirtschaftlichsten Angebotes nutzen wir die erweiterte Richtwertmethode nach UfAB VI mit einem Schwankungsbereich von 3%. Zur Ermittlung der Leistungspunkte werden die Kriterien Werterhaltung und Pflege der Bodenbeläge, Qualitätssicherungsmaßnahmen (Objektleitung, Schulungsmaßnahmen, Umgang mit Mängeln, eingesetztes Personal und verwendete Materialien und Maschinen) und Maßnahmen zur Reduzierung der Umweltbelastungen herangezogen. Den Ausschlag bei einem Stichentscheid gibt der Preis.
+Beginn (StartDate): 2026-07-16
+Enddatum (EndDate): 2031-07-18
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Nord 2
+Beschreibung (Description): Für die Ermittlung des wirtschaftlichsten Angebotes nutzen wir die erweiterte Richtwertmethode nach UfAB VI mit einem Schwankungsbereich von 3%. Zur Ermittlung der Leistungspunkte werden die Kriterien Werterhaltung und Pflege der Bodenbeläge, Qualitätssicherungsmaßnahmen (Objektleitung, Schulungsmaßnahmen, Umgang mit Mängeln, eingesetztes Personal und verwendete Materialien und Maschinen) und Maßnahmen zur Reduzierung der Umweltbelastungen herangezogen. Den Ausschlag bei einem Stichentscheid gibt der Preis.
+Beginn (StartDate): 2026-07-16
+Enddatum (EndDate): 2031-07-18
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Süd 1
+Beschreibung (Description): Für die Ermittlung des wirtschaftlichsten Angebotes nutzen wir die erweiterte Richtwertmethode nach UfAB VI mit einem Schwankungsbereich von 3%. Zur Ermittlung der Leistungspunkte werden die Kriterien Werterhaltung und Pflege der Bodenbeläge, Qualitätssicherungsmaßnahmen (Objektleitung, Schulungsmaßnahmen, Umgang mit Mängeln, eingesetztes Personal und verwendete Materialien und Maschinen) und Maßnahmen zur Reduzierung der Umweltbelastungen herangezogen. Den Ausschlag bei einem Stichentscheid gibt der Preis.
+Beginn (StartDate): 2026-07-16
+Enddatum (EndDate): 2031-07-18
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Süd 2
+Beschreibung (Description): Für die Ermittlung des wirtschaftlichsten Angebotes nutzen wir die erweiterte Richtwertmethode nach UfAB VI mit einem Schwankungsbereich von 3%. Zur Ermittlung der Leistungspunkte werden die Kriterien Werterhaltung und Pflege der Bodenbeläge, Qualitätssicherungsmaßnahmen (Objektleitung, Schulungsmaßnahmen, Umgang mit Mängeln, eingesetztes Personal und verwendete Materialien und Maschinen) und Maßnahmen zur Reduzierung der Umweltbelastungen herangezogen. Den Ausschlag bei einem Stichentscheid gibt der Preis.
+Beginn (StartDate): 2026-07-16
+Enddatum (EndDate): 2031-07-18
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

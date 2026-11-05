@@ -1,0 +1,13 @@
+Bekanntmachung 473724-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung - Justizvollzugsanstalt Dresden
+Beschreibung (Description): Unterhaltsreinigung, Glasflächenreinigung, Grundreinigung, Sonderleistungen
+Hinweis (Note): 1.) EIGNUNGSNACHWEISE: Der Nachweis der unter "Eignungskriterien" genannten Eigenerklärungen/Nachweise kann wie folgt erfolgen: Präqualifizierte Unternehmen können, sofern die geforderten Angaben mit den Eintragungen in der Präqualifizierungsdatenbank übereinstimmen, den Nachweis der Eignung durch Angabe der PQ-Verzeichnisnummer führen. Fehlende Angaben müssen ergänzt werden. Nicht Präqualifizierte Unternehmen führen den Nachweis anhand des Formblattes 901 (Eigenerklärungen zur Eignung), welches den Vergabeunterlagen beiliegt. 2.) VERGABEUNTERLAGEN: Die Vergabeunterlagen werden ausschließlich und kostenfrei auf der Vergabeplattform http://www.sachsen-vergabe.de zum Download bereitgestellt. Ggf. erforderliche Nachsendungen und Änderungen von Vergabeunterlagen werden ebenfalls in diesem Portal in elektronischer Form zur Verfügung gestellt. 3.) Sofern das Angebot von einer WERKSTSTT FÜR BEHINDERTE oder einem INKLUSIONSBETRIEB abgegeben wird, ist der Nachweis der Eigenschaft als Werkstatt für Behinderte oder Inklusionsbetrieb mit dem Angebot einzureichen (siehe Ziff. 6 der Aufforderung zur Abgabe eines Angebotes) 4.) BIETERANFRAGEN: Bieteranfragen sollen möglichst bis spätestens zum 11.05.2026 um 12:00 Uhr über die Vergabeplattform gestellt werden. Nicht rechtzeitig gestellte Bieteranfragen können unbeantwortet bleiben.
+
+## Los 1 der Liste: LOT-0000
+Titel (Name): Gebäudereinigung - Justizvollzugsanstalt Dresden
+Beschreibung (Description): siehe Auftragsbekanntmachung
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2033-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

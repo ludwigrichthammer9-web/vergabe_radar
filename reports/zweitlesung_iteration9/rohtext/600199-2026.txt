@@ -1,0 +1,33 @@
+Bekanntmachung 600199-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- sowie Glas-und Rahmenreinigung für das ADBV Freyung mit ASt Zwiesel
+Beschreibung (Description): Unterhalts- sowie Glas- und Rahmenreinigung für das Amt für Digitalisierung, Bereitband und Vermessung in Freyung und deren Außenstelle in Zwiesel
+Hinweis (Note): Die Ausschreibung ist auf dem bayerischen Vergabeportal https://www.auftraege.bayern.de/ veröffentlicht. Das Vergabeverfahren wird ausschließlich elektronisch abgewickelt. Die Teilnahme an einer Besichtigung der örtlichen Gegebenheiten ist für die Erstellung des Angebots notwendig und daher zwingende Voraussetzung der Angebotsabgabe. Innerhalb der Angebotsfrist wird für jeden Bewerber eine Objektbesichtigung stattfinden. Angebote von Bietern, die an keiner Objektbesichtigung teilgenommen haben, werden ausgeschlossen.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung ADBV Freyung
+Beschreibung (Description): Unterhaltsreinigung für das Amt für Digitalisierung, Breitband und Vermessung in Freyung
+Hinweis (Note): Grundfläche: ca.1.290,11 qm, Jahresreinigungsfläche ca. 159.366,34 qm Der Angebots- bzw. Auftragswert wird zur Wahrung von berechtigten Geschäftsinteressen und des Wettbewerbs nicht angezeigt (Hinweis dazu auch auf § 39 Abs. 6 VgV).
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2032-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt am 01.01.2027 in Kraft und gilt zunächst bis zum 31.12.2029. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.12.2032.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhaltsreinigung ASt Zwiesel
+Beschreibung (Description): Unterhaltsreinigung für die Außenstelle Zwiesel des ADBV Freyung
+Hinweis (Note): Grundfläche: ca. 1.026,37 qm, Jahresreinigungsfläche ca. 107.780,43 qm Der Angebots- bzw. Auftragswert wird zur Wahrung von berechtigten Geschäftsinteressen und des Wettbewerbs nicht angezeigt (Hinweis dazu auch auf § 39 Abs. 6 VgV).
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2032-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt am 01.01.2027 in Kraft und gilt zunächst bis zum 31.12.2029. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.12.2032.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Glasreinigung ADBV Freyung mit ASt Zwiesel
+Beschreibung (Description): Glas- und Rahmenreinigung für das ADBV Freyung und deren Außenstelle Zwiesel
+Hinweis (Note): Fläche: ca. 293,26 qm Der Angebots- bzw. Auftragswert wird zur Wahrung von berechtigten Geschäftsinteressen und des Wettbewerbs nicht angezeigt (Hinweis dazu auch auf § 39 Abs. 6 VgV).
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2032-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt am 01.01.2027 in Kraft und gilt zunächst bis zum 31.12.2029. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.12.2032.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

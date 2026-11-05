@@ -1,0 +1,50 @@
+Bekanntmachung 792749-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigungsdienstleistung für diverse Objekte im Landkreis Nordwestmecklenburg
+Beschreibung (Description): Los 1: Unterhaltsreinigung, Glas- und Rahmenreinigung; Verwaltungssitz Malzfabrik; Börzower Weg 3, 23936 Grevesmühlen Los 2: Unterhaltsreinigung, Glas- und Rahmenreinigung; Straßenverkehrsamt; Schweriner Landstraße 6-8, 23936 Grevesmühlen Los 3: Unterhaltsreinigung Kreissitz; Rostocker Straße 76, 23970 Wismar Los 4: Unterhaltsreinigung Verwaltungssitz 1. und 2. OG; Altwismarstraße 7-17, 23970 Wismar Los 5: Unterhaltsreinigung; Zulassungsstelle Wismar; Am kleinen Stadtfeld 6, 23966 Wismar
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1: Unterhaltsreinigung und Glas- und Rahmenreinigung
+Beschreibung (Description): Unterhaltsreinigung und Glas- und Rahmenreinigung für den Verwaltungssitz Malzfabrik;
+Hinweis (Note): #Besonders auch geeignet für:startup#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Beschreibung der Optionen (OptionsDescription): mit optionaler Verlängerungsmöglichkeit von zwei weiteren Jahren (bis 31.12.2029)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2 Unterhaltsreinigung und Glas- und Rahmenreinigung Straßenverkehrsamt
+Beschreibung (Description): Los 2: Unterhaltsreinigung, Glas- und Rahmenreinigung für das Straßenverkehrsamt des Landkreises Nordwestmecklenburg
+Hinweis (Note): #Besonders auch geeignet für:startup#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Beschreibung der Optionen (OptionsDescription): mit optionaler Verlängerungsmöglichkeit von zwei weiteren Jahren (bis 31.12.2029)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3: Unterhaltsreinigung Kreissitz
+Beschreibung (Description): Unterhaltsreinigung des Kreissitzes in Wismar
+Hinweis (Note): #Besonders auch geeignet für:startup#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Beschreibung der Optionen (OptionsDescription): mit optionaler Verlängerungsmöglichkeit von zwei weiteren Jahren (bis 31.12.2029)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los 4: Unterhaltsreinigung Verwaltungssitz Altwismarstraße in Wismar
+Beschreibung (Description): Unterhaltsreinigung des Verwaltungssitzes Altwismarstraße im 1. und 2. OG
+Hinweis (Note): #Besonders auch geeignet für:startup#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Beschreibung der Optionen (OptionsDescription): mit optionaler Verlängerungsmöglichkeit von zwei weiteren Jahren (bis 31.12.2029)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Los 5: Unterhaltsreinigung der Zulassungsstelle Wismar
+Beschreibung (Description): Unterhaltsreinigung der Zulassungsstelle des Landkreises Nordwestmecklenburgs in Wismar
+Hinweis (Note): #Besonders auch geeignet für:startup#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Beschreibung der Optionen (OptionsDescription): mit optionaler Verlängerungsmöglichkeit von zwei weiteren Jahren (bis 31.12.2029)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

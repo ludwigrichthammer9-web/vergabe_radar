@@ -1,0 +1,78 @@
+Bekanntmachung 511911-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Ausschreibung Glas-, Jalousie- und Fassadenreinigung bei der AOK Baden-Württemberg
+Beschreibung (Description): Ausschreibung Glas-, Jalousie- und Fassadenreinigung bei der AOK Baden-Württemberg.
+Hinweis (Note): Bekanntmachungs-ID: CXP4YH05QW9
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Südlicher-Oberrhein inkl. Lahr, Schwarzwaldstr. 39 (Hauptverwaltung)
+Beschreibung (Description): Mit der vorliegenden Ausschreibung sollen die Leistungen der Glas-, Jalousie und Fassadenreinigung für alle Bezirksdirektionen und der Hauptverwaltung der AOK Baden-Württemberg vergeben werden. Die Ausschreibung ist in 13 Lose unterteilt Die einzelnen Verträge beginnen zwischen dem 01.08.2025 und 01.05.2026. Alle Verträge laufen einheitlich bis zum 31.07.2027. Anschließend gibt es eine Option auf Verlängerung um zwei (2) Jahre bis maximal 31.07.2029. Die Einzelheiten der jeweils ge-schuldeten Leistungen ergeben sich aus der Leistungsbeschreibung (Anlage 2).
+Dauer (DurationMeasure): 24 MONTH
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): Es gibt eine Option auf Verlängerung um zwei (2) Jahre bis maximal 31.07.2029.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Ulm-Biberach
+Beschreibung (Description): Mit der vorliegenden Ausschreibung sollen die Leistungen der Glas-, Jalousie und Fassadenreinigung für alle Bezirksdirektionen und der Hauptverwaltung der AOK Baden-Württemberg vergeben werden. Die Ausschreibung ist in 13 Lose unterteilt Die einzelnen Verträge beginnen zwischen dem 01.08.2025 und 01.05.2026. Alle Verträge laufen einheitlich bis zum 31.07.2027. Anschließend gibt es eine Option auf Verlängerung um zwei (2) Jahre bis maximal 31.07.2029. Die Einzelheiten der jeweils ge-schuldeten Leistungen ergeben sich aus der Leistungsbeschreibung (Anlage 2).
+Dauer (DurationMeasure): 24 MONTH
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): Es gibt eine Option auf Verlängerung um zwei (2) Jahre bis maximal 31.07.2029.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Heilbronn-Franken
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Hochrhein-Bodensee
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-07-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Ludwigsburg-Rems-Murr inkl. Projekthaus (Hauptverwaltung)
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Mittlerer-Oberrhein
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Neckar-Alb
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Neckar-Fils
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Nordschwarzwald
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Ostwürttemberg
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 11 der Liste: LOT-0011 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Rhein-Neckar-Odenwald
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 12 der Liste: LOT-0012 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Schwarzwald-Baar-Heuberg
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 13 der Liste: LOT-0013 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas-, Jalousie und Fassadenreinigung, Bezirksdirektion Stuttgart-Böblingen
+Dauer (DurationMeasure): 24 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

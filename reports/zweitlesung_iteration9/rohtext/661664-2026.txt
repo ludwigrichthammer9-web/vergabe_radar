@@ -1,0 +1,17 @@
+Bekanntmachung 661664-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): UHR Viktoria-Luise-Schule
+Beschreibung (Description): Unterhaltsreinigung: 6.720,91 m²; + Grundreinigung: 26.883,64 m²; + Schulhofreinigung: 4.420,00 m² (1x wöchtl.) + Reinigungsfachkraft: 3.124,80 Stunden (4,00 Std. täglich, Mo. - Fr). + Stundenkontingent: 3.500,00 Stunden
+Hinweis (Note): Das Formblatt ''Verpflichtungserklärung zu Tariftreue und Mindestentgelt bei öffentlichen Aufträgen nach dem Hessischen Vergabe- und Tariftreuegesetz'' ist mit den Angebotsunterlagen einzureichen. Kostenloser Download der Vergabeunterlagen und Angebotsabgabe unter www.vergabe.stadt-frankfurt.de Für das Angebot sind die von der Vergabestelle vorgegebenen Vordrucke zu verwenden. Die Angebote müssen alle geforderten Angaben, Erklärungen und Preise enthalten. Von der in § 56 Abs. 2 VgV vorgesehenen Möglichkeit zum Nachreichen geforderter Erklärungen und Nachweise wird die Vergabestelle absehen. Unvollständige Angebote werden demzufolge ohne Nachforderung zwingend ausgeschlossen. Wir weisen ausdrücklich darauf hin, dass folgende Unterlagen zwingend mit dem Angebot einzureichen sind: 1. Unterlagen gemäß Bieter-Checkliste 2. Eigenerklärung zur Eignung Liefer- /Dienstleistungen 3. Bestätigung der Objektbesichtigung 4. Stundenverrechnungssätze: Mischsatz, geringfügig Beschäftigte, Midi-Beschäftigte, Sozialversichungspflichtig Beschäftigte, Reinigungsfachkraft, Vorarbeiter, Objektleiter 5. Kriterien Unterweisung UVV (vollständig ausgefüllt) 6. Formblatt Referenzen (drei Seiten) 7. Verpflichtungserklärung zur Tariftreue und Mindestentgelt bei öffentlichen Aufträgen gemäss HVTG 8. RUS Sanktion Art 5K Zusätzliche Angaben und Nachweise: 4.1 Niederlassung im Rhein-Main-Gebiet (ca. 40 km Umkreis Frankfurt)? - Wenn ja, Adresse angeben - Wenn nein, ausführliche Darstellung, wie die vertragsgemäße Leistungserbringung sichergestellt werden soll 4.2 Darstellung bzw. Auflistung der Gesamtgeräteausstattung im Betrieb Es ist der aktuelle, zum Zeitpunkt des Ausführungsbeginns gültige, Tariflohn anzugeben. Erläuterung zum Wertungsschema: Wertungsschema: 1. Erläuterung zum Kriterium Preis: Das zur Angebotsabgabe zugelassene Angebot mit dem niedrigsten Preis erhält den Zuschlag. Angebote die Rabatte oder Skonto enthalten werden ausgeschlossen!
+
+## Los 1 der Liste: LOT-0000
+Titel (Name): UHR Viktoria-Luise-Schule
+Beschreibung (Description): Unterhaltsreinigung: 6.720,91 m²; + Grundreinigung: 26.883,64 m²; + Schulhofreinigung: 4.420,00 m² (1x wöchtl.) + Reinigungsfachkraft: 3.124,80 Stunden (4,00 Std. täglich, Mo. - Fr). + Stundenkontingent: 3.500,00 Stunden
+Hinweis (Note): Ende der Bindefrist: 30.09.2026
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2027-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Optionen (OptionsDescription): Die Laufzeit der Beauftragung beträgt ein Jahr mit der Option zur dreimaligen Verlängerung um jeweils ein weiteres Jahr. Sofern vom Auftragsgeber nicht spätestens bis sechs Monate vor Ablauf des jeweiligen Jahres erklärt wird, die Option nicht ziehen zu wollen, verlängert sich die Beauftragung automatisch um jeweils ein weiteres Jahr. Nach maximal vier Jahren endet der Vertrag automatisch.
+Beschreibung der Verlängerung (Renewal): Es werden keine weiteren Optionen eingeräumt
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

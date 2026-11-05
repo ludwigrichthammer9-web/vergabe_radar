@@ -1,0 +1,50 @@
+Bekanntmachung 298648-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung diverser Liegenschaften für das Amt Kisdorf
+Beschreibung (Description): Gegenstand dieser Ausschreibung sind Unterhaltsreinigungsarbeiten, die für das Amt Kisdorf in diversen Liegenschaften ausgeführt werden sollen. Die Ausschreibung wird in vier Lose aufgeteilt, es gibt keine Loslimitierung.
+Hinweis (Note): Die Auftragswerte in dieser Bekanntmachung wurden aus technischen Gründen mit 1 € angegeben. Gemäß § 39 Absatz 6 VgV werden diese Daten nicht veröffentlicht.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Wakendorf II
+Beschreibung (Description): Gegenstand dieser Ausschreibung sind Unterhaltsreinigungsarbeiten, die für das Amt Kisdorf im Los 1 Wakendorf II ausgeführt werden sollen.
+Hinweis (Note): #Besonders auch geeignet für:selbst# Bietergemeinschaften sind zugelassen. Die in der Angebotsaufforderung genannten Nachweise sind auch für alle Parteien einer Bietergemeinschaft mit dem Angebot vorzulegen. Alle Partner einer Bietergemeinschaft müssen das Angebot mit den dazugehörigen Vergabeunterlagen unterzeichnet einreichen sowie einen Konsortialführer benennen.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich automatisch um jeweils ein weiteres Jahr, sofern der Vertrag seitens des Auftraggebers nicht mit einer Frist von 3 Monaten vor Vertragsende gekündigt wird.
+Beschreibung der Verlängerung (Renewal): Die Gesamtlaufzeit ist jedoch begrenzt auf maximal 4 Jahre.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Kattendorf Winsen Oersdorf
+Beschreibung (Description): Gegenstand dieser Ausschreibung sind Unterhaltsreinigungsarbeiten, die für das Amt Kisdorf im Los 2 Kattendorf Winsen Oersdorf ausgeführt werden sollen.
+Hinweis (Note): #Besonders auch geeignet für:selbst# Bietergemeinschaften sind zugelassen. Die in der Angebotsaufforderung genannten Nachweise sind auch für alle Parteien einer Bietergemeinschaft mit dem Angebot vorzulegen. Alle Partner einer Bietergemeinschaft müssen das Angebot mit den dazugehörigen Vergabeunterlagen unterzeichnet einreichen sowie einen Konsortialführer benennen.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich automatisch um jeweils ein weiteres Jahr, sofern der Vertrag seitens des Auftraggebers nicht mit einer Frist von 3 Monaten vor Vertragsende gekündigt wird.
+Beschreibung der Verlängerung (Renewal): Die Gesamtlaufzeit ist jedoch begrenzt auf maximal 4 Jahre.
+Ergebnis des Loses (TenderResultCode): open-nw
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Struvenhuetten Sievershuetten
+Beschreibung (Description): Gegenstand dieser Ausschreibung sind Unterhaltsreinigungsarbeiten, die für das Amt Kisdorf im Los 3 Struvenhuetten Sievershuetten ausgeführt werden sollen.
+Hinweis (Note): #Besonders auch geeignet für:selbst# Bietergemeinschaften sind zugelassen. Die in der Angebotsaufforderung genannten Nachweise sind auch für alle Parteien einer Bietergemeinschaft mit dem Angebot vorzulegen. Alle Partner einer Bietergemeinschaft müssen das Angebot mit den dazugehörigen Vergabeunterlagen unterzeichnet einreichen sowie einen Konsortialführer benennen.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich automatisch um jeweils ein weiteres Jahr, sofern der Vertrag seitens des Auftraggebers nicht mit einer Frist von 3 Monaten vor Vertragsende gekündigt wird.
+Beschreibung der Verlängerung (Renewal): Die Gesamtlaufzeit ist jedoch begrenzt auf maximal 4 Jahre.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Kisdorf
+Beschreibung (Description): Gegenstand dieser Ausschreibung sind Unterhaltsreinigungsarbeiten, die für das Amt Kisdorf im Los 4 Kisdorf ausgeführt werden sollen.
+Hinweis (Note): #Besonders auch geeignet für:selbst# Bietergemeinschaften sind zugelassen. Die in der Angebotsaufforderung genannten Nachweise sind auch für alle Parteien einer Bietergemeinschaft mit dem Angebot vorzulegen. Alle Partner einer Bietergemeinschaft müssen das Angebot mit den dazugehörigen Vergabeunterlagen unterzeichnet einreichen sowie einen Konsortialführer benennen.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich automatisch um jeweils ein weiteres Jahr, sofern der Vertrag seitens des Auftraggebers nicht mit einer Frist von 3 Monaten vor Vertragsende gekündigt wird.
+Beschreibung der Verlängerung (Renewal): Die Gesamtlaufzeit ist jedoch begrenzt auf maximal 4 Jahre.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 

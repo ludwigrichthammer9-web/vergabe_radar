@@ -1,0 +1,12 @@
+Bekanntmachung 480534-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigungsdienstleistungen für die Bezirksverwaltung
+Beschreibung (Description): Offenes Verfahren zur Vergabe von Unterhalts-, Glas- sowie bedarfsabhängigen Sonderreinigungsleistungen. Auftragsgegenstand sind Reinigungsdienstleistungen in den Verwaltungsgebäuden des Bezirks Oberbayern am Hauptsitz Prinzregentenstraße 14, 80538 München, sowie an den Standorten Dingolfingerstraße 15, 81673 München und Leibstraße 104, 85540 Haar.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Reinigungsdienstleistungen für die Bezirksverwaltung
+Beschreibung (Description): Offenes Verfahren zur Vergabe von Unterhalts-, Glas- sowie bedarfsabhängigen Sonderreinigungsleistungen. Auftragsgegenstand sind Reinigungsdienstleistungen in den Verwaltungsgebäuden des Bezirks Oberbayern am Hauptsitz Prinzregentenstraße 14, 80538 München, sowie an den Standorten Dingolfingerstraße 15, 81673 München und Leibstraße 104, 85540 Haar.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2030-09-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

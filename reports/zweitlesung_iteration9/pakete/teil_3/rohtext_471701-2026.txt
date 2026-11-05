@@ -1,0 +1,28 @@
+Bekanntmachung 471701-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Betreuung/Reinigung öffentlicher WC-Anlagen
+Beschreibung (Description): Betreuung/Reinigung öffentlicher WC-Anlagen
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): WC-Anlage "Lorenzkirche"
+Beschreibung (Description): U-Bahnhof (Anlage im U-Bahnhof) Königstrasse
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): Verlängerungsoption bis max. 31.07.2030
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): WC-Anlage "Hauptbahnhof"
+Beschreibung (Description): Bahnhofsplatz, Fußgängerunterführung-Bahnhof
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): WC-Anlage "Rathaus"
+Beschreibung (Description): Hauptmarkt 18 (Rathaus)
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

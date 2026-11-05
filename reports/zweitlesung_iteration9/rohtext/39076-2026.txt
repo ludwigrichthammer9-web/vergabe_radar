@@ -1,0 +1,47 @@
+Bekanntmachung 39076-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung an den Liegenschaften der Stiftung Bauhaus Dessau
+Beschreibung (Description): Das Bauhausgebäude, das Atelierhaus (Hotelbetrieb) und das Bauhaus Museum Dessau sind ebenso wie die Meisterhäuser ganzjährig für Besucher*innen geöffnet. Hinzu kommen angemietete Räume in der Brauerei (Brauereistraße). Für all diese Standorte sucht die SBD Dienstleistende, welche die regelmäßige Unterhaltsreinigung sicherstellen. Zusätzlich werden Dienstleistende gesucht, die die tägliche Präsenzreinigung an sämtlichen Liegenschaften (die Ausführungsorte sind im jeweiligen Los genannt) übernehmen.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Bauhausgebäude
+Beschreibung (Description): Tägliche Unterhaltsreinigung im Bauhausgebäude
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Prellerhaus
+Beschreibung (Description): Tägliche Unterhaltsreinigung im Prellerhaus
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Meisterhäuser
+Beschreibung (Description): Tägliche Unterhaltsreinigung in den Meisterhäusern
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Alte Brauerei
+Beschreibung (Description): Tägliche Unterhaltsreinigung in der alten Brauerei
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Bauhausmuseum
+Beschreibung (Description): Tägliche Unterhaltsreinigung im Bauhausmuseum
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): Präsenzreinigung
+Beschreibung (Description): Tägliche Präsenzreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , 

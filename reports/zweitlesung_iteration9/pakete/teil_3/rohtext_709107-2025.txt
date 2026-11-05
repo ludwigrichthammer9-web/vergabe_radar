@@ -1,0 +1,51 @@
+Bekanntmachung 709107-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung von Objekten in Erftstadt
+Beschreibung (Description): Gebäudereinigung in 81 städtischen Gebäuden. Unterhalts- und Grundreinigung, Glas- und Rahmenreinigung
+Hinweis (Note): #Bekanntmachungs-ID: CXPTYR5DXE3#
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts-, Grund-, Sonderreinigung und Tagesdienst
+Beschreibung (Description): Unterhaltsreinigung Grundreinigung (auf Abruf) Sonderreinigung (auf Abruf) Tagesdienst Glasreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Verlängerungsoption 1: 01.01.2030 - 31.12.2030 Verlängerungsoption 2: 01.01.2031 - 31.12.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhalts-, Grund-, Sonderreinigung und Tagesdienst
+Beschreibung (Description): Unterhaltsreinigung Grundreinigung (auf Abruf) Sonderreinigung (auf Abruf) Tagesdienst Glasreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Verlängerungsoption 1: 01.01.2030 - 31.12.2030 Verlängerungsoption 2: 01.01.2031 - 31.12.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Unterhalts-, Grund-, Sonderreinigung und Tagesdienst
+Beschreibung (Description): Unterhaltsreinigung Grundreinigung (auf Abruf) Sonderreinigung (auf Abruf) Tagesdienst Glasreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Verlängerungsoption 1: 01.01.2030 - 31.12.2030 Verlängerungsoption 2: 01.01.2031 - 31.12.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Unterhalts-, Grund-, Sonderreinigung und Tagesdienst
+Beschreibung (Description): Unterhaltsreinigung Grundreinigung (auf Abruf) Sonderreinigung (auf Abruf) Tagesdienst Glasreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Verlängerungsoption 1: 01.01.2030 - 31.12.2030 Verlängerungsoption 2: 01.01.2031 - 31.12.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Unterhaltsreinigung Grundreinigung (auf Abruf) Sonderreinigung (auf Abruf) Tagesdienst Glasreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Verlängerungsoption 1: 01.01.2030 - 31.12.2030 Verlängerungsoption 2: 01.01.2031 - 31.12.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , 

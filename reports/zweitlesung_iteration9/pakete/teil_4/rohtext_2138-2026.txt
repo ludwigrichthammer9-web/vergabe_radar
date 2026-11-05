@@ -1,0 +1,45 @@
+Bekanntmachung 2138-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Nottuln Gebäudereinigung
+Beschreibung (Description): Unterhalts-, Grundreinigung in verschiedenen Objekten mit ca. 29.600 m² Reinigungsfläche
+Hinweis (Note): Der Auftraggeber empfiehlt sich einen Überblick über die Objekte zu verschaffen. Die Objektbesichtigungen finden am 08. + 09. + 10. + 11.04.2024 statt. Sie ist nicht verpflichtend. Bieter, die teilnehmen wollen, müssen sich bis zum 03.04.2024 für zwei der Wunsch-Termine per e-Mail anmelden. Der tatsächliche Termin wird anschließend mitgeteilt. Eine spätere Anmeldung ist nicht möglich. Fragen/Einwändungen müssen bis 12.04.2024 beim Vergabeportal eingehen. Die Vergabeunterlagen sind bei der Vergabeplattform https://www.subreport.de/ unter https://www.subreport.de/E51396425 herunterladbar. Es ist vom Bieter eine EMail-Adresse für die Kommunikation anzugeben. Bei Weitergabe der Vergabeunterlagen und -dateien an Dritte, ist der Anfordernde der Vergabeunterlagen dafür verantwortlich, dass die Vergabeunterlagen und alle weiteren Informationen, die die Vergabestelle bereitstellt, rechtzeitig, vollständig und unverändert an die Bieter weitergegeben werden. Wir empfehlen die Vergabeunterlagen frühzeitig von vorgenannter Plattform herunterzuladen. Bieter, die die Vergabeunterlagen spät herunterladen und bearbeiten, müssen damit rechnen, dass sie keine Antworten mehr zu Fragen bezüglich der Vergabeunterlagen erhalten und dass der Auftraggeber auf ihre Hinweise z. B. zu Unrichtigkeiten nicht reagiert, wenn keine ausreichende Zeit für die Bearbeitung der Fragen bleibt und die rechtzeitige Information der Bieter nicht mehr erfolgen kann. Enthalten die Vergabeunterlagen Fehler oder Unklarheiten, die der Bieter erkennt oder erkennen kann, so hat er den Auftraggeber unverzüglich schriftlich über die Nachrichtenfunktion der Vergabeplattform darauf hinzuweisen, auch wenn er den Hinweis schon vorher in anderer Form gegeben hat. Diese Fragen oder Einwände müssen unverzüglich, spätestens bis zum 12.04.2024 bei der zuvor genannten Plattform eingegangen sein. Die Bearbeitung und Beantwortung erfolgt von der ausschreibenden Stelle, Montag - Donnerstag von 8.00 - 15.30 Uhr, Freitag 8.00 - 11.30 Uhr, schriftlich (nicht telefonisch) auf zuvor genannter Plattform. Die Angebote sind ausschließlich elektronisch über die Angebotsfunktion der Vergabeplattform an die in den Vergabeunterlagen angegebene Adresse, zu senden. Aufwändungen der Angebotserstellung und Angebotsversendung werden nicht vergütet.Der Auftraggeber behält sich vor die Referenzen zu überprüfen. Auf entsprechende Aufforderung im Rahmen der Aufklärung ist: Der Name und eine Emailadresse des Referenzgebers anzugeben. Der Auftraggeber wird im Rahmen einer Eigenaufklärung den Referenzgeber einmalig per Email, zur Bestätigung der Referenz auffordern Der Bieter trägt das Risiko, dass der Referenzgeber die Referenz nicht innerhalb von 10 Tagen bestätigt und der Bieter aufgrund der fehlenden Referenzbestätigung ausgeschlossen wird. ODER: Es ist vom Auftragnehmer eine entsprechende Bestätigung der Referenzgeber mit den geforderten Angaben innerhalb der Frist von 10 Tagen vorzulegen. Das Formblatt für die Bestätigung der Referenz durch den Referenzgeber hierzu ist zu verwenden. Verstöße gegen diese Vorgabe führen zum Ausschluss des Angebotes. Näheres siehe Vergabeunterlagen. Jeder Bieter kann für die Unterhaltsreinigung den Zuschlag auf maximal 2 Lose erhalten. Ist das Angebot des Bieters für mehr als zwei Lose der Unterhaltsreinigung das wirtschaftlichste Angebot gemäß den Vergabeunterlagen, erhält er den Zuschlag für die Lose der Unterhaltsreinigung, bei welchen er die jeweils höchste Gesamtpunktzahl der von ihm abgegebenen Angebote auf die einzelnen Lose der Unterhaltsreinigung erhalten hat. Hat der Bieter bei mehr als zwei Losen der Unterhaltsreinigung die gleiche Punktzahl erhält er den Zuschlag auf die Lose der Unterhaltsreinigung, bei welchen er das günstigere Angebot (in Prozent) hinsichtlich der Bewertung der Unterhaltsreinigung im Vergleich zum Bieter mit der Rangfolge 2 des jeweiligen Loses hat. (Es gilt der Abstand in Prozent zum Nächstbieter).
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung in diversen Objekten mit ca. 9.300 m² Reinigungsfläche
+Hinweis (Note): — Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG - Nutzung des digitalen Qualitätsmesssystems Ko-CLEAN digital der Kommunal Agentur NRW, vor Zuschlagserteilung ist der Nutzungsvertrag unterzeichnet über die Vergabeplattform einzureichen. - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2024-08-16
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung in diversen Objekten mit ca. 8.700 m² Reinigungsfläche
+Hinweis (Note): — Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG - Nutzung des digitalen Qualitätsmesssystems Ko- CLEAN digital der Kommunal Agentur NRW, vor Zuschlagserteilung ist der Nutzungsvertrag unterzeichnet über die Vergabeplattform einzureichen. - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2024-08-16
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung in diversen Objekten mit ca. 5.300 m² Reinigungsfläche
+Hinweis (Note): — Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG - Nutzung des digitalen Qualitätsmesssystems Ko- CLEAN digital der Kommunal Agentur NRW, vor Zuschlagserteilung ist der Nutzungsvertrag unterzeichnet über die Vergabeplattform einzureichen. - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2024-08-16
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung in diversen Objekten mit ca. 6.300 m² Reinigungsfläche
+Hinweis (Note): — Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG - Nutzung des digitalen Qualitätsmesssystems Ko- CLEAN digital der Kommunal Agentur NRW, vor Zuschlagserteilung ist der Nutzungsvertrag unterzeichnet über die Vergabeplattform einzureichen. - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2024-08-16
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

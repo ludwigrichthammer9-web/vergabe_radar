@@ -1,0 +1,23 @@
+Bekanntmachung 825382-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung PZGL
+Beschreibung (Description): Unterhalts-, Grundreinigung sowie Glas- und Rahmenreinigung
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts-, Grundreinigung
+Beschreibung (Description): Unterhalts-, Grundreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung um jeweils ein weiteres Jahr möglich
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Glas- und Rahmenreinigung
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung um jeweils ein weiteres Jahr möglich
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

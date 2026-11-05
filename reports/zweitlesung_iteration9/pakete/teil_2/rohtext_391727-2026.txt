@@ -1,0 +1,41 @@
+Bekanntmachung 391727-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Grundreinigung + Glasreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung + Glasreinigung
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Untehalts-/ Grundreinigng
+Beschreibung (Description): Bad Rappenau, Zimmerhof und Heinsheim
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerungsoption zwei Mal um je ein Jahr
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Untehalts-/ Grundreinigng
+Beschreibung (Description): Fürfeld und Treschklingen
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerungsoption zwei Mal um je ein Jahr
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Untehalts-/ Grundreinigng
+Beschreibung (Description): Babstadt, Grombach und Obergimpern
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerungsoption zwei Mal um je ein Jahr
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Glas-/ Rahmenreinigung
+Beschreibung (Description): Stadtgebiet Bad Rappenau
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerungsoption zwei Mal um je ein Jahr
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

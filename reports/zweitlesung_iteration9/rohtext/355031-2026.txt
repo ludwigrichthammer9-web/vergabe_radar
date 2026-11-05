@@ -1,0 +1,19 @@
+Bekanntmachung 355031-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudeunterhaltsreinigung des MRI in Kiel und Schädtbek
+Beschreibung (Description): Gebäudeunterhaltsreinigung des MRI in Kiel und Schädtbek
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Leistungszeitraum 01. Juni 2026 bis 31. Mai 2030
+Beschreibung (Description): Auftragsgegenstand ist die Durchführung der Gebäudeunterhaltsreinigung in den Räumen der Liegenschaft des Max Rubner-Instituts, Bundesforschungsinstitut für Ernährung und Landwirtschaft (MRI), Hermann-Weigmann-Straße 1, 24103 Kiel.
+Beginn (StartDate): 2026-06-01
+Enddatum (EndDate): 2030-05-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Leistungszeitraum 01. Juni 2026 bis 31. Mai 2030
+Beschreibung (Description): Auftragsgegenstand ist die Durchführung der Gebäudeunterhaltsreinigung in den Räumen der Liegenschaft des Max Rubner-Instituts, Bundesforschungsinstitut für Ernährung und Lebensmittel (MRI), in der Versuchseinrichtung Schädtbek 5, 24232 Dobersdorf.
+Beginn (StartDate): 2026-06-01
+Enddatum (EndDate): 2030-05-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

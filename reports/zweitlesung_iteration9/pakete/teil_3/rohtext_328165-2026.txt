@@ -1,0 +1,80 @@
+Bekanntmachung 328165-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung 2026 Städtische Gebäude
+Beschreibung (Description): Unterhaltsreinigung, teilweise Fenster-, Grundreinigung sowie Kehr- und Winterdienst in Städtischen Gebäuden
+Hinweis (Note): Beabsichtigt der Bieter, sich bei der Erfüllung eines Auftrages der Fähigkeiten anderer Unternehmen zu bedienen, muss er dem Auftraggeber hinsichtlich der Eignung nachweisen, dass er über die Fähigkeiten und Mittel der anderen Unternehmen verfügen kann. Er hat entsprechende Erklärungen dieser Unternehmen vorzulegen. Kommen Nachunternehmer zum Einsatz, sind mit der Abgabe des Angebotes die Leistungen an Nachunternehmer in VgV 8 Angebot zu nennen.
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 1: Gebäudereinigung Forstbetriebshof Schweinsberg
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 2: Gebäudereinigung Sporthalle Grundschule Alt Böckingen und Bauhof Böckingen und Grundschule Alt Böckingen incl. Container und
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 3: Gebäudereinigung Olgagrippe mit Early Exellence Center
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 4: Gebäudereinigung Pestalozzischule
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 5: Gebäudereinigung Kita Charlottenstraße
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 6: Gebäudereinigung Sporthalle Mönchseegymnasium
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 7: Gebäudereinigung Sporthalle Justinus Kerner Gymnasium und Justinus Kerner Gymnasium und Schulzentrum JKG Sontheim Ost
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 8 der Liste: LOT-0008
+Titel (Name): LOS 8: Gebäudereinigung Stauwehrhalle
+Beschreibung (Description): Unterhaltsreinigung, teilweise Fenster-, Grundreinigung sowie Kehr- und Winterdienst
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag beginnt am 01.04.2026 und hat eine Laufzeit bis zum 31.03.2027. Er verlängert sich jeweils um einen weiteren Monat, wenn er nicht spätestens drei Monate vor seinem Ablauf gekündigt wird.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 9: Gebäudereinigung Außenstelle Helene Lange Realschule und Planungs- und Baurechtsamt Abt. Umwelt- und Arbeitsschutz
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 10 : Gebäudereinigung Mörikerealschule und GTB und Mörike Realschule Sporthalle, Leistungszentrum
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 11 der Liste: LOT-0011 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 11: Gebäudereinigung Neckartalschule Neckartalschule Interimslösung Container Dammschule
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 12 der Liste: LOT-0012 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): LOS 12: Gebäudereinigung Sporthalle Augärtle und Au- Kindergarten und Quartierszentrum Ellwangerstr. (Augärtle)
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

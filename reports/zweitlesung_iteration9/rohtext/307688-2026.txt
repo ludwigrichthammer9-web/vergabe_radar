@@ -1,0 +1,55 @@
+Bekanntmachung 307688-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts-, Grund- und Glasreinigung für den Landkreis Bautzen
+Beschreibung (Description): Unterhalts-, Grund- und Glasreinigung für den Landkreis Bautzen
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts-, Grund- und Glasreinigung für den Landkreis Bautzen - Gymnasium und Sporthalle Großröhrsdorf, Oberschule Rödertal
+Beschreibung (Description): Unterhalts- und Grundreinigung diverser Liegenschaften des Landkreises Bautzen mit rund 2,0 Mio. m² Jahresreinigungsfläche
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-07-06
+Enddatum (EndDate): 2029-07-20
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Eine Verlängerung um zweimal ein Jahr ist möglich, wenn der Vertrag nicht sechs Monate vor Ablauf der jeweiligen Vertragslaufzeit gekündigt wird.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhalts-, Grund- und Glasreinigung für den Landkreis Bautzen - Sorbisches Schul- und Begegnungszentrum und Mehrzweckgebäude Bautzen, Oberschule und Sporthalle Baruth
+Beschreibung (Description): Unterhalts- und Grundreinigung diverser Liegenschaften des Landkreises Bautzen mit rund 2,6 Mio. m² Jahresreinigungsfläche
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-07-06
+Enddatum (EndDate): 2029-07-20
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Eine Verlängerung um zweimal ein Jahr ist möglich, wenn der Vertrag nicht sechs Monate vor Ablauf der jeweiligen Vertragslaufzeit gekündigt wird.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Unterhalts-, Grund- und Glasreinigung für den Landkreis Bautzen - 2. Oberschule Kamenz
+Beschreibung (Description): Unterhalts- und Grundreinigung diverser Liegenschaften des Landkreises Bautzen mit rund 960 Tsd. m² Jahresreinigungsfläche
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-07-06
+Enddatum (EndDate): 2029-07-20
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Eine Verlängerung um zweimal ein Jahr ist möglich, wenn der Vertrag nicht sechs Monate vor Ablauf der jeweiligen Vertragslaufzeit gekündigt wird.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Unterhalts-, Grund- und Glasreinigung für den Landkreis Bautzen - Oberschule und Sporthalle Lauta
+Beschreibung (Description): Unterhalts- und Grundreinigung diverser Liegenschaften des Landkreises Bautzen mit rund 823 Tsd. m² Jahresreinigungsfläche
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-07-06
+Enddatum (EndDate): 2029-07-20
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Eine Verlängerung um zweimal ein Jahr ist möglich, wenn der Vertrag nicht sechs Monate vor Ablauf der jeweiligen Vertragslaufzeit gekündigt wird.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Glas- und Rahmenreinigung der Objekte aus den Losen 1-4
+Beschreibung (Description): Glas- und Rahmenreinigung diverser Liegenschaften des Landkreises Bautzen mit rund 8.000 m² Glasflächen
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-07-06
+Enddatum (EndDate): 2029-07-20
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Eine Verlängerung um zweimal ein Jahr ist möglich, wenn der Vertrag nicht sechs Monate vor Ablauf der jeweiligen Vertragslaufzeit gekündigt wird.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

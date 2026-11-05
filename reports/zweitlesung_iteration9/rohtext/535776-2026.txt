@@ -1,0 +1,77 @@
+Bekanntmachung 535776-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts-, Grund- und Glasreinigung sowie Schließdienst im Kulturzentrum Großenhain in verschiedenen Objekten der Stadt Großen
+Beschreibung (Description): Unterhalts-, Grund- und Glasreinigung sowie Schließdienst im Kulturzentrum Großenhain in verschiedenen Objekten der Stadt Großenhain
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1 Unterhalts- und Grundreinigung sowie Schließdienst
+Beschreibung (Description): Unterhalts- und Grundreinigung sowie Schließdienst: - Rathaus; - Kulturzentrum Großenhain öffentliches WC und - Rathaus öffentliches WC Apothekergasse .
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2 Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung: - Grundschule Zabeltitz und - Grundschule Zabeltitz Turnhalle.
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3 Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung: - 1. Grundschule; - Werner-von-Siemens-Gymnasium Großenhain Haus 1 und - Werner-von-Siemens-Gymnasium Großenhain Turnhalle Haus 1.
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los 4 Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung: - 2. Grundschule Bobersberg; - 1. Oberschule Am Kupferberg; - 2. Grundschule Bobersberg Turnhalle und - 1. Oberschule Am Kupferberg Turnhalle.
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Los 5 Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung: - Schule mit dem Förderschwerpunkt Lernen Großenhain und - Werner-von-Siemens-Gymnasium Großenhain Haus 2.
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): Los 6 Glasreinigung
+Beschreibung (Description): Glasreinigung: - Rathaus; - Grundschule Zabeltitz; - Grundschule Zabeltitz Turnhalle; - 1. Grundschule; - Werner-von-Siemens-Gymnasium Großenhain Haus 1 und - Werner-von-Siemens-Gymnasium Großenhain Turnhalle Haus 1.
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 7 der Liste: LOT-0007
+Titel (Name): Los 7 Glasreinigung
+Beschreibung (Description): Glasreinigung: - 2. Grundschule Bobersberg; - 1. Oberschule Am Kupferberg; - Schule mit dem Förderschwerpunkt Lernen Großenhain und - Werner-von-Siemens-Gymnasium Großenhain Haus 2.
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 8 der Liste: LOT-0008
+Titel (Name): Los 8 Glasreinigung
+Beschreibung (Description): Glasreinigung: - 4. Grundschule Am Schacht und - 2. Oberschule Am Schacht.
+Hinweis (Note): Eine Objektbesichtigung ist am 07.04.2026 von 10:00 Uhr bis 12:00 Uhr, am 08.04.2026 von 10:00 Uhr bis 12:00 Uhr und 09.04.2026 von 10:00 Uhr bis 12:00 Uhr. Die Objektbesichtigung ist verpflichtend und vor Ort ist der beigefügte Vordruck oder eine selbst angefertigte Unterlage von einem Vertreter der Stadt Großenhain unterzeichnen zu lassen. Für die Objektbesichtigung melden Sie sich bitte bei Frau Richter per Tel. 03522 304247.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 0
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

@@ -1,0 +1,21 @@
+Bekanntmachung 199184-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): 2025-73 Gebäude- und Unterhaltsreinigung im PREVIER, HH
+Beschreibung (Description): Auftragsgegenstand ist die Erbringen von Glas- und Rahmenreinigung (Los 2) und Unterhaltsreinigungen (Los 1) für das gemeinsame Präventionszentrum (PREVIER) der BGW und VBG. Die Einzelheiten ergeben sich aus den Vergabeunterlagen, insbesondere aus der Leistungsbeschreibung und dem Vertrag.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): 2025-73 Unterhaltsreinigung im PREVIER, HH
+Beschreibung (Description): Auftragsgegenstand ist die Erbringen von Unterhaltsreinigungen (Los 1) für das gemeinsame Präventionszentrum (PREVIER) der BGW und VBG.
+Beginn (StartDate): 2026-03-31
+Dauer (DurationMeasure): 24 MONTH
+Beschreibung der Optionen (OptionsDescription): Der Vertrag kann zwei Mal um jeweils 12 Monate, bis max. zum 30.03.2030, verlängert werden
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): 2025-73 Gebäude- und Unterhaltsreinigung im PREVIER, HH
+Beschreibung (Description): Auftragsgegenstand ist die Erbringen von Glas- und Rahmenreinigung (Los 2) für das gemeinsame Präventionszentrum (PREVIER) der BGW und VBG.
+Beginn (StartDate): 2026-03-31
+Dauer (DurationMeasure): 24 MONTH
+Beschreibung der Optionen (OptionsDescription): Der Vertrag kann zwei Mal um jeweils 12 Monate, bis max. zum 30.03.2030, verlängert werden
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

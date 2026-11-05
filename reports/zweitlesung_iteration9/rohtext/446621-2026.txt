@@ -1,0 +1,24 @@
+Bekanntmachung 446621-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Glasreinigung der Essener Dienstgebäude
+Beschreibung (Description): Gegenstand der ausgeschriebenen Leistung ist die Unterhaltsreinigung von 3 Objekten mit einer Jahresreinigungsfläche von ca. 2.200.00 Quadratmetern. Sowie die Glasreinigung mit einer Reinigungsfläche von ca. 19.300 Quadratmetern.
+Hinweis (Note): #Bekanntmachungs-ID: CXS0Y5PYT1YE7ZDB# Eine Angebotsabgabe ist ausschließlich in elektronischer Form zulässig. Schriftliche Angebote können nicht gewertet werden Hinweis: Das Angebot ist kostenlos zu erstellen. Die Angebotserstellung wird nicht vergütet. Das Angebot für Los 1 wird wie folgt bewertet: 40 % Preis; 30 % Umfang der Reinigung; 10% Qualitätssicherungskonzept (QSK), 10% Nachhaltigkeits- und Umweltkonzept (ESG), 10% Implementierungskonzept Das Angebot für Los wird wie folgt bewertet: 100 % Preis Aus Gründen der Transparenz und Gleichbehandlung findet die laufende Kommunikation über das Vergabeverfahren ausschließlich über die Kommunikationsfunktion des Vergabemarktplatzes (VMP) Metropole Ruhr statt. Andere Wege der Kommunikation sind ausgeschlossen. Wir empfehlen Ihnen eine freiwillige Registrierung auf dem Vergabemarktplatz Metropole Ruhr. Diese bietet Ihnen den Vorteil, dass Sie automatisch über Änderungen an den Teilnahme-/Vergabeunterlagen oder über Antworten zum Verfahren informiert werden. Zur Kommunikation mit der Vergabestelle und zur elektronischen Einreichung des Teilnahmeantrages/Angebotes ist eine Registrierung zwingend. Verfügen mehrere Angebote gleichzeitig über den identischen, niedrigsten Preis wird derjenige Bieter, der den Zuschlag erhält, im Vieraugen-Prinzip ausgelost. Bieter haben einen Bewertungspreis anzugeben, der neben dem vom Auftraggeber an den Bieter zu zahlenden Nettoangebotspreis auch die vom Auftraggeber zu tragende Umsatzsteuer und zwar unabhängig von der jeweils bestehenden persönlichen Steuerschuld umfasst.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung
+Beschreibung (Description): Unterhaltsreinigung von 3 Verwaltungsgebäuden mit rund 2.200.000 Quadratmetern Jahresreinigungsfläche. Zuschlagskriterien: 40 % Preis; 30 % Umfang der Reinigung; 10% Qualitätssicherungskonzept (QSK), 10% Nachhaltigkeits- und Umweltkonzept (ESG), 10% Implementierungskonzept
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2031-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis beginnt am 01.01.2027 und endet zum 30.06.2031. Eine zweimalige Verlängerung um jeweils 12 Monate ist möglich. Der Vertrag verlängert sich stillschweigend jeweils um ein weiteres Jahr, wenn er nicht sechs Monate vor Ablauf des 30.06.2031 bzw. vor Ablauf des 30.06.2032 gekündigt wird. Bei einem der insgesamt drei Objekte ist der Reinigungsbeginn erst der 01.01.2028.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Glas- und Rahmenreinigung von 3 Verwaltungsgebäuden mit rund 19.300 Quadratme-tern Jahresreinigungsfläche. Für die Bewertung des Loses 2 (Glas- und Rahmenreinigung) ist der Preis das einzige Kriterium.
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2031-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis beginnt am 01.01.2027 und endet zum 30.06.2031. Eine zweimalige Verlängerung um jeweils 12 Monate ist möglich. Der Vertrag verlängert sich stillschweigend jeweils um ein weiteres Jahr, wenn er nicht sechs Monate vor Ablauf des 30.06.2031 bzw. vor Ablauf des 30.06.2032 gekündigt wird. Bei einem der insgesamt drei Objekte ist der Reinigungsbeginn erst der 01.01.2028.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 

@@ -1,0 +1,68 @@
+Bekanntmachung 808856-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Grundreinigung in Schulen, Sporthallen, Verwaltungs- und Kulturgebäuden sowie anderen Gebäuden der Stadt Pasewalk
+Beschreibung (Description): Unterhalts- und Grundreinigung
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Grundschule Ueckertal
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Europaschule Arnold-Zweig
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Sporthalle Arnold-Zweig
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Grundschule Mitte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Ueckersporthalle und Städtische Turnhalle
+Beschreibung (Description): Die Leistungen sind komplett entsprechend der beigefügten Leistungs- und Tätigkeitsbeschreibung auszuführen. Die zur Reinigung eingesetzten Maschinen, Geräte und Gegenstände sind vom AN beizubringen und müssen dem Stand der Technik entsprechen. Der AN hat zudem die Reinigungs- und Pflegemittel für die auszuführenden Arbeiten zu stellen. Auch der Unterhalt dieser Maschinen und Geräte gehen zu seinen Lasten. Das benötigte Verbrauchsmaterial für die Erbringung der Leistung ist durch den Auftragnehmer bereit zu stellen. Anderes Verbrauchsmaterial (z. B. Toilettenpapier, Papierhandtücher, Handseife, etc.) werden vom AG gestellt. Die zur Durchführung der Reinigungsleistungen erforderlichen Medien (Wasser, Strom) werden vom Auftraggeber unentgeltlich zur Verfügung gestellt. Der Auftraggeber stellt dem Auftragnehmer eine geeignete Abstellfläche für die Reinigungsgeräte und -materialien zur Verfügung.
+Hinweis (Note): #Besonders auch geeignet für:freelance#, #Besonders auch geeignet für:startup#, #Besonders auch geeignet für:other-sme#, #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Beschreibung der Optionen (OptionsDescription): Die AG sind berechtigt, die Vertragslaufzeit durch einseitige Erklärung (Optionserklärung) einmalig um 1 Jahr zu den bisherigen Bedingungen dieses Vertrages, bis maximal zum 31.12.2027 zu verlängern (Optionsrecht).
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Rathaus und Caravanstellplatz
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Stadthaus und öffentliche Toilette am Markt
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Stadtteilzentrum und Freiwillige Feuerwehr
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Museum, Stadtbibliothek und Kulturforum „Historisches U"
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Eigenbetrieb Abwasserbeseitigung Pasewalk
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2026-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

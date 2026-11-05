@@ -1,0 +1,51 @@
+Bekanntmachung 239965-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Glasreinigung
+Beschreibung (Description): Die Reinigungsleistungen (Unterhalts- und Glasreinigungen) für die Geschäftsbereiche und Standorte der KBB GmbH.
+Hinweis (Note): #Bekanntmachungs-ID: CXP4YTJMFRT#
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Internationale Filmfestspiele Berlin (IFB)
+Beschreibung (Description): Das Los 1 umfasst die Unterhaltsreinigungsleistungen für die Büros der Internationalen Filmfestspiele Berlin (IFB), welche sich am Potsdamer Platz 11, in der Potsdamer Straße 5 im 3, 4 und 5 Obergeschoss und in der Voxstraße 3 in 10719 Berlin befinden.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Verlängerung (Renewal): Die Lose zur Unterhaltsreinigung und Glasreinigung sollen jeweils für den Zeitraum vom 01.04.2026 bis zum 31.03.2028 vergeben werden und mit der Option zur Verlängerung vom 01.04.2028 bis zum 31.03.2030 vom 01.04.2030 bis zum 31.03.2032 sowie vom 31.03.2032 bis zum 01.04.2033 (insgesamt 84 Monate) verbunden werden..
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Berliner Festspiele (BFS)
+Beschreibung (Description): Im Rahmen der Unterhaltsreinigung für das Los 2 ist die Unterhaltsreinigung und die Außenreinigung für das Haus der Berliner Festspiele (HdBFS), sowie die Reinigung des Außenlagers (Mertensstraße 63-115, 13587 Berlin) durchzuführen.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Verlängerung (Renewal): Die Lose zur Unterhaltsreinigung und Glasreinigung sollen jeweils für den Zeitraum vom 01.04.2026 bis zum 31.03.2028 vergeben werden und mit der Option zur Verlängerung vom 01.04.2028 bis zum 31.03.2030 vom 01.04.2030 bis zum 31.03.2032 sowie vom 31.03.2032 bis zum 01.04.2033 (insgesamt 84 Monate) verbunden werden..
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Haus der Kulturen der Welt (HKW)
+Beschreibung (Description): Die Leistung umfasst die Unterhaltsreinigung und die Außenreinigung und die Schnee- und Glättebeseitigung im HKW.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Verlängerung (Renewal): Die Lose zur Unterhaltsreinigung und Glasreinigung sollen jeweils für den Zeitraum vom 01.04.2026 bis zum 31.03.2028 vergeben werden und mit der Option zur Verlängerung vom 01.04.2028 bis zum 31.03.2030 vom 01.04.2030 bis zum 31.03.2032 sowie vom 31.03.2032 bis zum 01.04.2033 (insgesamt 84 Monate) verbunden werden..
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Martin-Gropius-Bau (MGB)
+Beschreibung (Description): Die Leistung umfasst die Unterhaltsreinigung im MGB.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Verlängerung (Renewal): Die Lose zur Unterhaltsreinigung und Glasreinigung sollen jeweils für den Zeitraum vom 01.04.2026 bis zum 31.03.2028 vergeben werden und mit der Option zur Verlängerung vom 01.04.2028 bis zum 31.03.2030 vom 01.04.2030 bis zum 31.03.2032 sowie vom 31.03.2032 bis zum 01.04.2033 (insgesamt 84 Monate) verbunden werden..
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Glasreinigung alle Geschäftsbereiche
+Beschreibung (Description): Das Los Glasreinigung umfasst Glasreinigungsleistungen im Haus der Kulturen der Welt, bei den Berliner Festspielen, im Martin-Gropius- Bau und bei den Internationalen Filmfestspielen Berlin und die Zentrale der KBB GmbH. Martin-Gropius-Baus (MGB) in der Niederkirchnerstraße 7/ Ecke Stresemannstr. 110, 10963 Berlin Internationale Filmfestspiele Berlin: Gebäude B1 (Potsdamer Platz 11), 10719 Berlin / Gebäude A2 (PotsdamerStraße 5, 3.OG und 4./5. OG), 10719 Berlin Gebäude A3 (Voxstraße 3), 10719 Berlin
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Verlängerung (Renewal): Die Lose zur Unterhaltsreinigung und Glasreinigung sollen jeweils für den Zeitraum vom 01.04.2026 bis zum 31.03.2028 vergeben werden und mit der Option zur Verlängerung vom 01.04.2028 bis zum 31.03.2030 vom 01.04.2030 bis zum 31.03.2032 sowie vom 31.03.2032 bis zum 01.04.2033 (insgesamt 84 Monate) verbunden werden..
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , 

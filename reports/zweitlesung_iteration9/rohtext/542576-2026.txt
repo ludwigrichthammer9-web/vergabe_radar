@@ -1,0 +1,12 @@
+Bekanntmachung 542576-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts-, Grund- und Glasreinigung
+Beschreibung (Description): Unterhalts-, Grund- und Glasreinigung
+
+## Los 1 der Liste: LOT-0000
+Titel (Name): Unterhalts-, Grund- und Glasreinigung
+Beschreibung (Description): Fläche der UHR pro Monat ca. : 24.180 m² Grundfläche für Grundreinigung ca. : 4.920 m² Glasfläche einseitig gemessen ca. : 1.140 m²
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2031-08-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

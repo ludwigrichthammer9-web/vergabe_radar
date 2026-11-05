@@ -1,0 +1,63 @@
+Bekanntmachung 20090-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Glasreinigung AELF Krumbach-Mindelheim
+Beschreibung (Description): Der Freistaat Bayern, vertreten durch das Amt für Ernährung, Landwirtschaft und Forsten Krumbach-Mindelheim, schreibt die Unterhaltsreinigung sowie die Glas- und Rahmenreinigung für die Objekte - Dienststelle Bahnhofstr. 14, 87719 Mindelheim (Los 1 - UHR und Los 2 - GRR) - Dienststelle Hallstattstr. 1, 87719 Mindelheim (Los 3 - UHR und Los 4 - GRR) - Dienststelle Jahnstr 4, 86381 Krumbach (Los 5 UHR) - WEZ (Walderlebniszentrum) Hauptstraße 15a, 89297 Roggenburg (Los 6 - UHR und Los 7 - GRR) - Dienststelle Mindelheimer Straße 22, 86381 Krumbach (Los 8 - UHR und Los 9 - GRR) aus. Los 1 Die UHR der Dienststelle Bahnhofstraße Mindelheim umfasst eine Jahresreinigungsfläche in Höhe von 43.202,23 m². Los 2 Die GRR der Dienststelle Bahnhofstraße Mindelheim umfasst eine Jahresreinigungsfläche in Höhe von 109,02 m². Los 3 Die UHR der Dienststelle Hallstattstraße Mindelheim umfasst eine Jahresreinigungsfläche in Höhe von 87.231,38 m². Los 4 Die GRR der Dienststelle Hallstattstraße Mindelheim umfasst eine Jahresreinigungsfläche in Höhe von 174,80 m². Los 5 Die UHR der Dienststelle Jahnstraße Krumbach umfasst eine Jahresreinigungsfläche in Höhe von 129.446,48 m². Für die Jahnstraße wird keine GRR benötigt. Los 6 Die UHR des WEZ (Walderlebniszentrum) Roggenburg umfasst eine Jahresreinigungsfläche in Höhe von 7.782,73 m². Los 7 Die GRR des WEZ (Walderlebniszentrum) umfasst eine Jahresreinigungsfläche in Höhe von 150,87 m². Los 8 Die UHR der Dienststelle Mindelheimer Straße Krumbach umfasst eine Jahresreinigungsfläche in Höhe von 46.082,91 m². Los 9 Die GRR der Dienststelle Mindelheimer Straße Krumbach umfasst eine Jahresreinigungsfläche in Höhe von 86,46 m². Der Zuschlag erfolgt für die Lose der UHR auf Grundlage der Freien Verhältniswahl 40 % Preis und 60 % Leistung. Der Zuschlag erfolgt für die Lose der GRR auf den niedrigsten Preis. Die angestrebte Vertragslaufzeit für die Lose 1 bis 9 beträgt bis zu 5 Jahre. Eine Objektbesichtigung ist fakultativ (freiwillig) möglich. Näheres zur Anmeldefrist siehe Vergabeunterlagen.
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS (Oberschwelle) Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Verpflichtungserklärung anderer Unternehmen Verpflichtungserklärung nichtbeamteter Personen
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 1 - Unterhaltsreinigung Bahnhofstraße Mindelheim
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 2 - Glas- und Rahmenreinigung Bahnhofstraße Mindelheim
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3 - Unterhaltsreinigung Hallstattstraße Mindelheim
+Beschreibung (Description): Die UHR der Dienststelle Hallstattstraße Mindelheim umfasst eine Jahresreinigungsfläche in Höhe von 87.231,38 m². Weitere Informationen entnehmen Sie bitte der Objektbeschreibung und den Vergabeunterlagen. Die angestrebte Vertragslaufzeit beträgt bis zu 5 Jahre.
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich um – Verlängerungsoption 1) ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und um – Verlängerungsoption 2) ebenfalls ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird, endet jedoch spätestens mit Ablauf des 31.01.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 4 - Glas- und Rahmenreinigung Hallstattstraße Mindelheim
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 5 - Unterhaltsreinigung Jahnstraße Krumbach
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 6 - Unterhaltsreinigung WEZ Hauptstraße Roggenburg
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 7 - Glas- und Rahmenreinigung WEZ Hauptstraße Roggenburg
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 8 - Unterhaltsreinigung Mindelheimer Straße Krumbach
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 9 - Glas- und Rahmenreinigung Mindelheimer Straße Krumbach
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2029-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

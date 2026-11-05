@@ -1,0 +1,86 @@
+Bekanntmachung 661861-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung - Montabaur
+Beschreibung (Description): Die Ausschreibung bezieht sich auf die Leistungen: - Unterhaltsreinigung, - Glas-/ Rahmenreinigung Die ausgeschriebenen Leistungen werden in acht Lose aufgeteilt. Die Bildung der Lose erfolgt unter Berücksichtigung mengenmäßiger, örtlicher sowie fachlicher Gesichtspunkte. Die Kindergärten befinden sich im Eigentum der Stadt und werden durch diese beauftragt. Die übrigen Objekte sind der Verbandsgemeinde zugeordnet. Details zu Intervallen, Arten und Umfängen der zu erbringenden Leistungen sind der Leistungsbeschreibung nebst Anlagen insbesondere den Preisblättern zu entnehmen. Der Auftraggeber behält sich vor, die zu reinigenden Flächen und Intervalle ohne neues Vergabeverfahren im Rahmen des § 132 GWB Abs. 2 bis 4 zu erhöhen und/oder zu reduzieren. Die Abgabe von Angeboten kann für ein Los, mehrere oder alle Lose erfolgen. Innerhalb der Lose sind jedoch alle Objekte mit allen Einzelleistungen anzubieten. Die Vergabe der Leistungen erfolgt je Los. Die Einzelvergabe von Objekten ist nicht vorgesehen. Die Vergabe der Leistungen der Unterhaltsreinigung (Lose 1 bis 7) an einen Bieter ist beschränkt. Ein Bieter erhält den Zuschlag für maximal drei dieser Lose.
+Hinweis (Note): #Bekanntmachungs-ID: CXP4Y3NMVQK#
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung - Los 1
+Beschreibung (Description): Für Los 1 gilt: Die Grundfläche der Objekte beträgt 3.780 m². Die jährliche Reinigungsfläche beträgt ca. 735.000 m².
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas-/Rahmenreinigung - Los 8
+Beschreibung (Description): Für Los 8 gilt: Die Glasflächen (lichtes Rohbaumaß, einseitig gemessen) der Objekte beträgt ca. 9.170 m². Die Reinigung der Flächen erfolgt zweimal jährlich in der Regel beidseitig.
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Unterhaltsreinigung - Los 2
+Beschreibung (Description): Für Los 2 gilt: Die Grundfläche der Objekte beträgt 5.135 m². Die jährliche Reinigungsfläche beträgt ca. 995.000 m². Leistungsbeginn abweichend von den anderen Losen.
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Unterhaltsreinigung - Los 3
+Beschreibung (Description): Für Los 3 gilt: Die Grundfläche der Objekte beträgt 3.500 m². Die jährliche Reinigungsfläche beträgt ca. 515.000 m².
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Unterhaltsreinigung - Los 4
+Beschreibung (Description): Für Los 4 gilt: Die Grundfläche der Objekte beträgt 10.365 m². Die jährliche Reinigungsfläche beträgt ca. 1.340.000 m².
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): Unterhaltsreinigung - Los 5
+Beschreibung (Description): Für Los 5 gilt: Die Grundfläche der Objekte beträgt 7.135 m². Die jährliche Reinigungsfläche beträgt ca. 960.000 m².
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 7 der Liste: LOT-0007
+Titel (Name): Unterhaltsreinigung - Los 6
+Beschreibung (Description): Für Los 6 gilt: Die Grundfläche der Objekte beträgt 6.930 m². Die jährliche Reinigungsfläche beträgt ca. 930.000 m².
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 8 der Liste: LOT-0008
+Titel (Name): Unterhaltsreinigung - Los 7
+Beschreibung (Description): Für Los 7 gilt: Die Grundfläche der Objekte beträgt 4.800 m². Die jährliche Reinigungsfläche beträgt ca. 680.000 m².
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit we-gen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um je-weils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Mo-naten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

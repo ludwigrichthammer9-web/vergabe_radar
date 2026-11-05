@@ -1,0 +1,111 @@
+Bekanntmachung 795258-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Bundesstadt Bonn: Glas- und Rahmengrundreinigung in 17 Losen
+Beschreibung (Description): Glas- und Rahmengrundreinigung an Gebäuden der Stadt Bonn
+Hinweis (Note): #Bekanntmachungs-ID: CXTSYYDYTJDJJ4F5# Sämtliche Vergabeunterlagen stellen wir ausschließlich über das Portal Vergabemarktplatz Rheinland kostenlos zur Verfügung, eine postalische oder elektronische Versendung erfolgt nicht. Bieterfragen werden unter Wahrung der Anonymität des Fragestellers über den Kommunikationsbereich des Verfahrens im o.g. Portal für alle Teilnehmer beantwortet. Bieterfragen sind ausschließlich über diesen Kommunikationsweg einzureichen. Ausführliche Informationen sowie Anleitungen zum Vergabemarktplatz und zur Elektronischen Angebotsabgabe über das Bietertool finden Sie im Service Support Center von Cosinex unter https://support.cosinex.de/ Weitere hilfreiche Informationen zur Abgabe eines elektronischen Angebotes können Sie zudem aus dem gleichnamigen Dokument in den Vergabeunterlagen entnehmen.
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 15 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas- und Rahmengrundreinigung 20 Objekte
+Beschreibung (Description): Glas- und Rahmengrundreinigung an Gebäuden der Stadt Bonn
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): 12 Monate Verlängerungsoption
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 3 der Liste: LOT-0003 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 22 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 23 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 28 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 42 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 37Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 36 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 24 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 29 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 11 der Liste: LOT-0011 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 15 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 12 der Liste: LOT-0012 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 23 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 13 der Liste: LOT-0013 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 36 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 14 der Liste: LOT-0014 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 117 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 15 der Liste: LOT-0015 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 24 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 16 der Liste: LOT-0016 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 16 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 17 der Liste: LOT-0017 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Glas- und Rahmengrundreinigung 15 Objekte
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 

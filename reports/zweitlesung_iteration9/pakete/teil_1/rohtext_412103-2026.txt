@@ -1,0 +1,46 @@
+Bekanntmachung 412103-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigung - LWL-Förderschulen
+Beschreibung (Description): Übernahme der Unterhalts- und /oder Glas-und Rahmenreinigung an den LWL-Förderschulstandorten in Olpe und Hemer (Lose 1 und 4), Münster, Mettingen und Rekenl (Lose 2 und 5) sowie Soest (Los 3). Details sind den Vergabeunterlagen zu entnehmen.
+Hinweis (Note): Zusätzliche Informationen sind in elektronischer Form bei der o.g. Ansprechperson spätestens anzufordern bis zum 02.04.2026. Es wird darauf hingewiesen, dass ein Auszug aus dem Wettbewerbsregister vom Auftraggeber über den Bieter eingeholt wird, der den Zuschlag erhalten soll. Es gilt deutsches Recht.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung Olpe und Hemer
+Beschreibung (Description): Ziel der Ausschreibung ist es, einen kompetente und zuverlässige Auftragnehmer zu finden, ab dem 01.08.2026 die Unterhaltsreinigung in den organisatorisch zum LWL-Regionalzentrum Schule und Bildung Olpe gehörenden Schulen in Olpe und Hemer übernimmt.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt mit Zuschlagserteilung in Kraft und endet spätestens am 31.07.2030. Er kann unter Einhaltung einer Kündigungsfrist von 6 Monaten zum Ende des jeweiligen Vertragsjahres durch beide Vertragsparteien schriftlich gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhaltsreinigung Münster, Mettingen und Reken
+Beschreibung (Description): Ziel der Ausschreibung ist es, einen kompetente und zuverlässige Auftragnehmer zu finden, ab dem 01.08.2026 die Unterhaltsreinigung in den organisatorisch zum LWL-Regionalzentrum Schule und Bildung Münster gehörenden Schulen in Münster, Mettingen und Reken übernimmt.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt mit Zuschlagserteilung in Kraft und endet spätestens am 31.07.2030. Er kann unter Einhaltung einer Kündigungsfrist von 6 Monaten zum Ende des jeweiligen Vertragsjahres durch beide Vertragsparteien schriftlich gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Unterhaltsreinigung Soest
+Beschreibung (Description): Ziel der Ausschreibung ist es, einen kompetente und zuverlässige Auftragnehmer zu finden, ab dem 01.09.2026 die Unterhaltsreinigung in den organisatorisch zum LWL-Regionalzentrum Schule und Bildung Soesr gehörenden Schulen und Einrichtungen in Soest übernimmt.
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2030-08-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt mit Zuschlagserteilung in Kraft und endet spätestens am 31.08.2030. Er kann unter Einhaltung einer Kündigungsfrist von 6 Monaten zum Ende des jeweiligen Vertragsjahres durch beide Vertragsparteien schriftlich gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Glasreinigung Olpe und Hemer
+Beschreibung (Description): Ziel der Ausschreibung ist es, einen kompetente und zuverlässige Auftragnehmer zu finden, ab dem 01.09.2026 die Glas- und Rahmenreinigung in den organisatorisch zum LWL-Regionalzentrum Schule und Bildung Olpe gehörenden Schulen in Olpe und Hemer übernimmt.
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2030-08-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt mit Zuschlagserteilung in Kraft und endet spätestens am 31.08.2030. Er kann unter Einhaltung einer Kündigungsfrist von 6 Monaten zum Ende des jeweiligen Vertragsjahres durch beide Vertragsparteien schriftlich gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Glasreinigung Münster, Mettingen und Reken
+Beschreibung (Description): Ziel der Ausschreibung ist es, einen kompetente und zuverlässige Auftragnehmer zu finden, ab dem 01.09.2026 die Glas- und Rahmenreinigung in den organisatorisch zum LWL-Regionalzentrum Schule und Bildung Münster gehörenden Schulen in Münster, Mettingen und Reken übernimmt.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt mit Zuschlagserteilung in Kraft und endet spätestens am 31.08.2030. Er kann unter Einhaltung einer Kündigungsfrist von 6 Monaten zum Ende des jeweiligen Vertragsjahres durch beide Vertragsparteien schriftlich gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

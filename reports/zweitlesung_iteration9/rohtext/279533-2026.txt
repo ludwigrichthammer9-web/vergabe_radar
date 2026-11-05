@@ -1,0 +1,51 @@
+Bekanntmachung 279533-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung DSHS
+Beschreibung (Description): Unterhaltsreinigung an der Deutschen Sporthochschule Köln
+Hinweis (Note): #Bekanntmachungs-ID: CXPNYRVDVTT#
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Hauptgebäude/IGII-V/ZB, etc.
+Beschreibung (Description): Der AG überträgt dem AN ab 01.08.2026 die Gebäudereinigung in den in der Objektliste (siehe auch Summenblatt der Kalkulationsdatei) näher bezeichneten Objekten. Die genauen Reinigungsflächen und Leistungswerte sind der Anlage ERK (Einzelraumkalkulation) zu entnehmen.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich 2-mal um ein Jahr, wenn er nicht vom AG mit einer Frist von 3 Monaten zu Ende der jeweiligen Vertragslaufzeit gekündigt wird. Der Vertrag endet spätestens nach Ablauf von 6 Jahren, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Wohnheime
+Beschreibung (Description): Der AG überträgt dem AN ab 01.08.2026 die Gebäudereinigung in den in der Objektliste (siehe auch Summenblatt der Kalkulationsdatei) näher bezeichneten Objekten. Die genauen Reinigungsflächen und Leistungswerte sind der Anlage ERK (Einzelraumkalkulation) zu entnehmen.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich 2-mal um ein Jahr, wenn er nicht vom AG mit einer Frist von 3 Monaten zu Ende der jeweiligen Vertragslaufzeit gekündigt wird. Der Vertrag endet spätestens nach Ablauf von 6 Jahren, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Sporthallen/LAA, etc.
+Beschreibung (Description): Der AG überträgt dem AN ab 01.08.2026 die Gebäudereinigung in den in der Objektliste (siehe auch Summenblatt der Kalkulationsdatei) näher bezeichneten Objekten. Die genauen Reinigungsflächen und Leistungswerte sind der Anlage ERK (Einzelraumkalkulation) zu entnehmen.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich 2-mal um ein Jahr, wenn er nicht vom AG mit einer Frist von 3 Monaten zu Ende der jeweiligen Vertragslaufzeit gekündigt wird. Der Vertrag endet spätestens nach Ablauf von 6 Jahren, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): NawiMedi
+Beschreibung (Description): Der AG überträgt dem AN ab 01.08.2026 die Gebäudereinigung in den in der Objektliste (siehe auch Summenblatt der Kalkulationsdatei) näher bezeichneten Objekten. Die genauen Reinigungsflächen und Leistungswerte sind der Anlage ERK (Einzelraumkalkulation) zu entnehmen.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich 2-mal um ein Jahr, wenn er nicht vom AG mit einer Frist von 3 Monaten zu Ende der jeweiligen Vertragslaufzeit gekündigt wird. Der Vertrag endet spätestens nach Ablauf von 6 Jahren, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): HockeyJudo-Zentrum/Unterkunftshaus
+Beschreibung (Description): Der AG überträgt dem AN ab 01.08.2026 die Gebäudereinigung in den in der Objektliste (siehe auch Summenblatt der Kalkulationsdatei) näher bezeichneten Objekten. Die genauen Reinigungsflächen und Leistungswerte sind der Anlage ERK (Einzelraumkalkulation) zu entnehmen.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich 2-mal um ein Jahr, wenn er nicht vom AG mit einer Frist von 3 Monaten zu Ende der jeweiligen Vertragslaufzeit gekündigt wird. Der Vertrag endet spätestens nach Ablauf von 6 Jahren, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

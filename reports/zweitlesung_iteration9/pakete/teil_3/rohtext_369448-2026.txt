@@ -1,0 +1,55 @@
+Bekanntmachung 369448-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): AZ 25630 Paket 30 Gebäudereinigung in 30 Objekten
+Beschreibung (Description): AZ 25630 Paket 30 Gebäudereinigung in 30 Objekten
+Hinweis (Note): Die Angebotsöffnung ist nicht öffentlich. Im Bereich "Information über die öffentliche Öffnung, Datum der Angebotsöffnung (BT-132)" muss aufgrund einer Vorgabe der Europäischen Union ein Datum eingetragen werden. Es dient ausschließlich als Information über den Angebotsöffnungstermin. Rechtzeitig gestellte Fragen werden nach § 20 Absatz 3 Nummer 1 VgV bis sechs Tage vor Ablauf der Angebotsfrist beantwortet.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1
+Beschreibung (Description): Objekt 1: GE Burgwiesenstraße 125 (21.697,07 m²)
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2031-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2
+Beschreibung (Description): Objekt 1: RS Petersenstraße 7 (4.902,24 m²) Objekt 2: GS Diesterwegstraße 69 (2.282,55 m²) Objekt 3: KT Robertstraße 23 (1.223,11 m²) Objekt 4: FR Lehmbacher Weg (136,00 m²)
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2031-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3
+Beschreibung (Description): Objekt 1: GS Am Feldrain 10 (4.089,79 m²) Objekt 2: GS Peter-Grieß-Straße 5 - 7 (2.008,72 m²) Objekt 3: KT Peter-Grieß-Straße 8 (1.124,70 m²) Objekt 4: KT Wiesdorfer Straße.24 (508,54 m²) Objekt 5: FW Am Feldrain 10 /Gerätehaus FFW (166,21 m²) Objekt 6: FR Flittarder Deichweg (77,31 m²)
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2031-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los 4
+Beschreibung (Description): Objekt 1: BK Neuhöffer Straße 12 (1.783,41 m²) Objekt 2: BS Eumeniusstraße 4 / montags - freitags (912,40 m²) Objekt 3: BS Eumeniusstraße 4 / samstags (1.349,64 m²) Objekt 4: BÜZ-JU Tempelstraße 41 (1.170,59 m²) Objekt 5: BSA Alfred-Schütte-Allee 31 (601,07 m²) Objekt 6: BK Heinrichstraße 51 (306,13 m²) Objekt 7: FW Alfred-Schütte-Allee 2 / Deutzer Hafen / Löschbootstation (211,07 m²)
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2031-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Los 5
+Beschreibung (Description): Objekt 1: GS Wendelinstraße 64 (2.456,55 m²) Objekt 2: KT Weyertal 113 (879,96 m²) Objekt 3. KT Kirchenhof 9 (559,22 m²) Objekt 4: KT Stolberger Straße 403 (471,01 m²) Objekt 5: FR Kirchenhof (40,50 m²)
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2031-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): Los 6
+Beschreibung (Description): Objekt 1: KT Kalk-Mülheimer-Straße216 (1.214,09 m²) Objekt 2: BÜZ Kalk-Mülheimer-Straße 58 (864,25 m²) Objekt 3: KT Kalk-Mülheimer-Straße278 (647,64 m²) Objekt 4: KT Kalk-Mülheimer-Straße 162 (377,22 m²) Objekt 5: VG Remscheider Straße 32 / montags - freitags (125,15 m²) Objekt 6: VG Remscheider Straße 32 / Sommerferien (24,94 m²) Objekt 7: AU Solinger Straße (86,70 m²)
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2031-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 7 der Liste: LOT-0007
+Titel (Name): Los 7
+Beschreibung (Description): Objekt 1: RS Euskirchener Straße 50 (3.900,96 m²) Objekt 2: KT Elzstraße 8 - 10 (875,31 m²)
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2031-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

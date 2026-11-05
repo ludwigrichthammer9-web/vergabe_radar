@@ -1,0 +1,42 @@
+Bekanntmachung 149458-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Ausschreibung Gebäudereinigung - DIPF | Leibniz-Institut für Bildungsforschung und Bildungsinformation
+Beschreibung (Description): Das DIPF | Leibniz-Institut für Bildungsforschung und Bildungsinformation benötigt die Unterhaltsreinigung (UR) sowie die Glas- und Rahmenreinigung (GLR) für die Standorte Frankfurt am Main und Berlin, unterteilt in 4 Lose: Los 1: UR am Standort Frankfurt am Main Los 2: UR am Standort Berlin Los 3: GLR am Standort Frankfurt am Main Los 4: GLR am Standort Berlin
+Hinweis (Note): Aufgrund der Komplexität der Objekte, den räumlichen Gegebenheiten, den Arbeitsbedingungen, den Arbeitsschutzanforderungen und den unterschiedlichsten Materialbeschaffenheiten ist eine Objektbesichtigung zwingend durchzuführen.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): UR Frankfurt
+Beschreibung (Description): Objektbeschreibung, Los 1: Das DIPF Leibniz-Institut benötigt die Unterhaltsreinigung (UR) für sein Gebäude. Das Los 1 umfasst folgendes Objekt für die Leistungserbringung: Objektbezeichnung mit Anschrift: DIPF Leibniz-Institut für Bildungsforschung und Bildungsinformation Rostocker Straße 6 60323 Frankfurt am Main Leistung: UR Bodenfläche: 12.065,79 qm
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Die Vertragslaufzeit verlängert sich jeweils um ein weiteres Jahr, wenn der Vertrag nicht spätestens bis 30.09.2027 bzw. bis 30.09.2028 schriftlich gekündigt wird. Er endet in jedem Fall automatisch nach 4 Jahren am 31.03.2030. Es bedarf keiner gesonderten Kündigung.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): UR Berlin
+Beschreibung (Description): Das DIPF Leibniz-Institut benötigt die Unterhaltsreinigung (UR) für sein Gebäude. Das Los 2 umfasst folgendes Objekt für die Leistungserbringung: DIPF Leibniz-Institut für Bildungsforschung und Bildungsinformation Warschauer Straße 34-36 10243 Berlin Leistung UR Bodenfläche: 6.163,94 qm
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Die Vertragslaufzeit verlängert sich jeweils um ein weiteres Jahr, wenn der Vertrag nicht spätestens bis 30.09.2027 bzw. bis 30.09.2028 schriftlich gekündigt wird. Er endet in jedem Fall automatisch nach 4 Jahren am 31.03.2030. Es bedarf keiner gesonderten Kündigung.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): GLR Frankfurt
+Beschreibung (Description): Das DIPF Leibniz-Institut benötigt die Glas- und Rahmenreinigung (GLR) für sein Gebäude. Das Los 3 umfasst folgendes Objekt für die Leistungserbringung: DIPF Leibniz-Institut für Bildungsforschung und Bildungsinformation Rostocker Straße 6 60323 Frankfurt am Main Leistung: GLR Glasfläche: 3.234,93qm
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Die Vertragslaufzeit verlängert sich jeweils um ein weiteres Jahr, wenn der Vertrag nicht spätestens bis 30.09.2027 bzw. bis 30.09.2028 schriftlich gekündigt wird. Er endet in jedem Fall automatisch nach 4 Jahren am 31.03.2030. Es bedarf keiner gesonderten Kündigung.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): GLR Berlin
+Beschreibung (Description): Das DIPF Leibniz-Institut benötigt die Glas- und Rahmenreinigung (GLR) für sein Gebäude. Das Los 4 umfasst folgendes Objekt für die Leistungserbringung: DIPF Leibniz-Institut für Bildungsforschung und Bildungsinformation Warschauer Straße 34-36 10243 Berlin Leistung: GLR Glasfläche: 828,7qm
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Die Vertragslaufzeit verlängert sich jeweils um ein weiteres Jahr, wenn der Vertrag nicht spätestens bis 30.09.2027 bzw. bis 30.09.2028 schriftlich gekündigt wird. Er endet in jedem Fall automatisch nach 4 Jahren am 31.03.2030. Es bedarf keiner gesonderten Kündigung.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

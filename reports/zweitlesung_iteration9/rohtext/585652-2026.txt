@@ -1,0 +1,60 @@
+Bekanntmachung 585652-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigung PWC-Anlagen
+Beschreibung (Description): Reinigung PWC-Anlagen Rosenheim, Hohenbrunn, Holzkirchen, Siegsdorf, Freising und München Nord u. West
+Hinweis (Note): Hinweis zur Geltung der Verordnung (EU) 2022/2560 über den Binnenmarkt verzerrende drittstaatliche Subventionen (nachfolgend: FSR): Sind die Bedingungen für die Meldung finanzieller Zuwendungen gemäß Artikel 28 Absätze 1 und 2 FSR erfüllt, so ist ein Bewerber/Bieter verpflichtet, alle drittstaatlichen finanziellen Zuwendungen nach Artikel 28 Absatz 1 Buchstabe b FSR zu melden. In allen anderen Fällen ist ein Bewerber/Bieter verpflichtet eine Erklärung abzugeben, in der er alle erhaltenen drittstaatlichen finanziellen Zuwendungen aufführt und zu bestätigen, dass die erhaltenen drittstaatlichen finanziellen Zuwendungen keiner Meldepflicht nach Artikel 28 Absatz 1 Buchstabe b FSR unterliegen. Für die Meldung bzw. Erklärung ist das den Vergabeunterlagen beigefügte Formular nach Anhang II der Durchführungsverordnung (EU) 2023/1441 zur Festlegung detaillierter Vorschriften für die Durchführung von Verfahren nach der Verordnung (EU) 2022/2560 (nachfolgend: Durchführungsverordnung) unter Beachtung der Vorgaben der FSR sowie der Durchführungsverordnung zu verwenden. Sofern ein Teilnahmewettbewerb durchgeführt wird, ist die Meldung oder Erklärung sowohl mit dem Teilnahmeantrag als auch (nochmals) mit dem Angebot einzureichen. Im Übrigen mit dem Angebot. Auf die Gründe für die Ablehnung / den Ausschluss eines Teilnahmeantrags oder Angebots gemäß Art. 29 Abs. 3, Art. 29 Abs. 4 und Art. 31 Abs. 2 FSR wird hingewiesen.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Rosenheim A8 Ost / A93
+Beschreibung (Description): Reinigung PWC-Anlagen
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils ein Jahr, falls nicht vorher gekündigt
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Hohenbrunn
+Beschreibung (Description): Reinigung PWC-Anlagen
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils ein Jahr, falls nicht vorher gekündigt
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Holzkirchen
+Beschreibung (Description): Reinigung PWC-Anlagen
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils ein Jahr, falls nicht vorher gekündigt
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Siegsdorf
+Beschreibung (Description): Reinigung PWC-Anlagen
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils ein Jahr, falls nicht vorher gekündigt
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Freising
+Beschreibung (Description): Reinigung PWC-Anlagen
+Beginn (StartDate): 2026-12-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils ein Jahr, falls nicht vorher gekündigt
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): München Nord / München West
+Beschreibung (Description): Reinigung PWC-Anlagen
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): zweimalig um jeweils ein Jahr, falls nicht vorher gekündigt
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

@@ -1,0 +1,63 @@
+Bekanntmachung 713016-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Abschluss eines Vertrags über die Gebäudereinigung zur Durchführung der Unterhalts- sowie optionalen Grundreinigung auf vier Jahre ab dem 01.02.2026 in verschiedenen Objekten (u.a. Am Höfling 14)
+Beschreibung (Description): Abschluss eines Vertrags über die Gebäudereinigung zur Durchführung der Unterhalts- sowie optionalen Grundreinigung auf vier Jahre ab dem 01.02.2026 in den Objekten: Los 1 - GGS, Am Höfling 14, 52066 Aachen Los 2 - Kita, Händelstraße 10, 52074 Aachen Los 2 - Turnhalle, Händelstraße 10, 52074 Aachen Los 2 - Übergangswohnheim, Vaalser Straße 332, 52074 Aachen Los 2 - Friedhof West I, Vaalser Straße 334, 52074 Aachen [nur GR] Los 2 - Friedhof West II, Vaalser Straße 334, 52074 Aachen Los 3 - GHS, Obere Drimbornstraße 50, 52066 Aachen Los 4 - Kita, Passstraße 123, 52070 Aachen Los 5 - VHS Erweiterungsgebäude, Peterstraße 21-25, 52062 Aachen Los 5 - VHS Verwaltungsgebäude, Peterstraße 21-25, 52062 Aachen Los 6 - Verwaltungsgebäude, Sophienstraße 16-20, 52070 Aachen Los 7 - 4. Aachener Gesamtschule, Heinzenstraße 19, 52062 Aachen Los 8 - Feuerwache, Adenauerallee 231, 52066 Aachen Los 9 - Friedhof, Lintertweg 10-12, 52076 Aachen Los 9 - Waldfriedhof, Monschauer Straße 65, 52076 Aachen Los 9 - Flüchtlingsunterkunft, Werkstraße 16, 52076 Aachen Für das Objekt GGS, Am Höfling 14, 52066 Aachen (Los 1) wird außerdem die optionale Ferienreinigung ausgeschrieben. Für die Objekte Kita, Händelstraße 10, 52074 Aachen (Los 2), Friedhof West I, Vaalser Straße 334, 52074 Aachen (Los 2), Kita, Passstraße 123, 52070 Aachen (Los 4) und Waldfriedhof, Monschauer Straße 65, 52076 Aachen (Los 9) wird außerdem die optionale Bedarfsreinigung ausgeschrieben.
+Hinweis (Note): #Bekanntmachungs-ID: CXT2YYBYTS9LLQ7D# 1. Als Sicherheit wird gefordert: - Sicherheitsleistungen werden nicht gefordert 2. Die Bindefrist beginnt mit dem Ablauf der Angebotsfrist und läuft am 01.12.2025 ab. Bis dahin ist das Unternehmen an sein Angebot gebunden. 3. Die Unterlagen stehen ausschließlich als kostenloser Download unter http://www.vergaben-wirtschaftsregion-aachen.de/VMPSatellite/company/welcome.do zur Verfügung. Die Weitergabe der Ausschreibungsunterlagen an Dritte sowie die gewerbliche Nutzung der Ausschreibungsunterlagen sind nicht gestattet. 4. Auskünfte über die Vergabeunterlagen sind schriftlich über das Vergabeportal der Wirtschaftsregion Aachen zu beantragen! 5. Zuschlagskriterien sind der Preis (50 Punkte) und die Produktivstunden (50 Punkte). Preis und Produktivstunden setzen sich zusammen aus dem jährlichen Preis bzw. den jährlichen Stunden der Unterhaltsreinigung zuzüglich 17% des Preises bzw. der Stunden für die Grundreinigung des Gesamtobjektes. 6. Loslimitierung: Gemäß der "Besonderen Bewerbungsbedingungen, Punkt 9" gilt eine Loslimitierung in Form einer Zuschlagslimitierung. Ein Bieter kann ein Angebot auf ein Los, auf mehrere oder auf alle Lose abgeben. Jeder Bieter kann aufgrund der Zuschlagslimitierung für max. 60% der ausgeschriebenen Lose den Zuschlag erhalten. Diese Regelung findet jedoch erst ab dem 4. Los Anwendung bzw. es gilt ein Minimum von drei Losen. 7. Es wird vertraglich eine Probezeit von 6 Monaten, gerechnet ab dem ersten Tag der Leistungserbringung, festgelegt.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): GGS, Am Höfling 14, 52066 Aachen
+Beschreibung (Description): Die Gebäudereinigung in den Objekten der Stadt Aachen umfasst die fachgerechte Reinigung aller Räume und Flächen gemäß den Leistungsverzeichnissen im Umfang der vorgeschriebenen Reinigungshäufigkeiten. Nach Art und Umfang ist durch die durchzuführende Reinigung nach jeweils aktuellem Stand der Gesetzgebung und des Verordnungswesens ein optisch und hygienisch einwandfreier Zustand aller zu reinigenden Flächen sicherzustellen. Darüber hinaus sind alle Reinigungsverfahren zu unterlassen, die eine Werterhaltung der Bausubstanz und der Einrichtung schädigen oder beeinträchtigen. Weitere Informationen vgl. Leistungsbeschreibung
+Hinweis (Note): Loslimitierung: Gemäß der "Besonderen Bewerbungsbedingungen, Punkt 9" gilt eine Loslimitierung in Form einer Zuschlagslimitierung. Ein Bieter kann ein Angebot auf ein Los, auf mehrere oder auf alle Lose abgeben. Jeder Bieter kann aufgrund der Zuschlagslimitierung für max. 60% der ausgeschriebenen Lose den Zuschlag erhalten. Diese Regelung findet jedoch erst ab dem 4. Los Anwendung bzw. es gilt ein Minimum von drei Losen.
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Beschreibung der Optionen (OptionsDescription): optionale Grundreinigung der Gebäude, Für das Objekt GGS, Am Höfling 14, 52066 Aachen (Los 1) wird außerdem die optionale Ferienreinigung ausgeschrieben. Für die Objekte Kita, Händelstraße 10, 52074 Aachen (Los 2), Friedhof West I, Vaalser Straße 334, 52074 Aachen (Los 2), Kita, Passstraße 123, 52070 Aachen (Los 4) und Waldfriedhof, Monschauer Straße 65, 52076 Aachen (Los 9) wird außerdem die optionale Bedarfsreinigung ausgeschrieben.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 2 der Liste: LOT-0002 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Kita, Händelstraße 10, 52074 Aachen u.a.
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 3 der Liste: LOT-0003 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): GHS, Obere Drimbornstraße 50, 52066 Aachen
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Kita, Passstraße 123, 52070 Aachen
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): VHS Erweiterungsgeb., Peterstr. 21-25, 52062 Aachen u.a.
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Verwaltungsgebäude, Sophienstraße 16-20, 52070 Aachen
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): 4. Aachener Gesamtschule, Heinzenstraße 19, 52062 Aachen
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Feuerwache, Adenauerallee 231, 52066 Aachen
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Friedhof, Lintertweg 10-12, 52076 Aachen u.a.
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Ergebnis des Loses (TenderResultCode): clos-nw; Angebote (ReceivedSubmissionsStatistics): , 

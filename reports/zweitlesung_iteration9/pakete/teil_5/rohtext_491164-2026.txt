@@ -1,0 +1,29 @@
+Bekanntmachung 491164-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): 4 Schulen an 5 Standorten im Bereich des Lahn-Dill-Kreises; Unterhalts- und Grundreinigung
+Beschreibung (Description): Reinigungsdienstleistungen
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Gemeinde Lahnau - 1 Schule
+Beschreibung (Description): Unterhalts- und Grundreinigung der Grundschule an der Lahnaue sowie der Turnhalle Grundschule an der Lahnaue
+Beginn (StartDate): 2026-06-29
+Enddatum (EndDate): 2030-07-19
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich jeweils um ein Jahr, sofern er nicht drei Monate vor Ablauf gekündigt wird. Er verlängert sich immer bis zu Beginn der hessischen Sommerferien, letzter Schultag. Siehe hierzu auch § 20 Absatz 1 des Muster_Reinigungsvertrages.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Stadt Solms - 2 Schulen
+Beschreibung (Description): Unterhalts- und Grundreinigung der Grundschule Burgsolms und der Gesamtschule Solms, sowie der Turnhalle Gesamtschule Solms
+Beginn (StartDate): 2026-06-29
+Enddatum (EndDate): 2030-07-19
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich jeweils um ein Jahr, sofern er nicht drei Monate vor Ablauf gekündigt wird. Er verlängert sich immer bis zu Beginn der hessischen Sommerferien, letzter Schultag. Siehe hierzu auch § 20 Absatz 1 des Muster_Reinigungsvertrages.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Stadt Wetzlar - 1 Schule mit zwei Standorten
+Beschreibung (Description): Unterhalts- und Grundreinigung der Käthe-Kollwirtz Schule und der Außenstelle der Käthe-Kollwitz-Schule, sowie der Turnhalle Käthe-Kollwitz-Schule
+Beginn (StartDate): 2026-06-29
+Enddatum (EndDate): 2030-07-19
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich jeweils um ein Jahr, sofern er nicht drei Monate vor Ablauf gekündigt wird. Er verlängert sich immer bis zu Beginn der hessischen Sommerferien, letzter Schultag. Siehe hierzu auch § 20 Absatz 1 des Muster_Reinigungsvertrages.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

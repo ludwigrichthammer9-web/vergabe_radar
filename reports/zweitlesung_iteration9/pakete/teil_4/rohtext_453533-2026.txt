@@ -1,0 +1,33 @@
+Bekanntmachung 453533-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigung (auch Glas/Rahmen) von Gebäuden der Stadt Wegberg
+Beschreibung (Description): Reinigung (auch Glas/Rahmen) von Gebäuden der Stadt Wegberg
+Hinweis (Note): 1. Der AG weist darauf hin, dass allein der Inhalt der vorliegenden europaweiten Veröffentlichung im Supplement zum Amtsblatt der EU maßgeblich ist, wenn die Bekanntmachung zusätzlich in weiteren Bekanntmachungsmedien veröffentlicht wird und der Bekanntmachungstext in diesen zusätzlichen Bekanntmachungen nicht vollständig, unrichtig, verändert oder mit weiteren Angaben wiedergegeben wird; 2. Die Vergabeunterlagen werden ausschließlich elektronisch auf dem o.g. Vergabeportal zur Verfügung gestellt. Die Beantwortung von Fragen zum Verfahren sowie sämtliche Kommunikation zwischen den Beteiligten und der Vergabestelle erfolgt ausschließlich über das o. g. Vergabeportal. Beteiligte sind daher im eigenen Interesse gehalten, die dort für diese eingerichteten Postfächer regelmäßig auf neue Informationen der Vergabestelle zu kontrollieren; 3. Jeder Bewerber / jedes Mitglied der Bewerbergemeinschaft hat die in dieser Bekanntmachung genannten Nachweise und Erklärungen entsprechend vorzulegen. 4. Jeder Bewerber / jedes Mitglied der Bewerbergemeinschaft hat mit dem Angebot zusätzlich die Eigenerklärung-Sanktionen-EU (unterschrieben) und die Abfrage KMU vorzulegen. 5. Jeder Bewerber hat zur Wertung der Angebote für Los 1 und 2 folgendes mit einzureichen: Konzept zur Auftragsorganisation, bestehend aus der Beantwortung des Fragenkataloges "Konzeptbewertung", siehe Anlage "Erläuterung Zuschlagskriterien". Der Fragenkatalog beinhaltet Fragen zu 1. Startup-Phase vor Reinigungsstart (Unterkriterien: Arbeitsgruppe, Rekrutierung und Ausbildung der Reinigungskräfte, Auswahl von Maschinen und Material) 2. Reinigungsorganisation (Unterkriterien: Personalbedarfsplanung, Personalausfall, Reklamationsprozess, Erreichbarkeiten Objektleiter und Vorarbeiter) 3. QM-Konzept (Unterkriterien: Qualitätsprüfungen, Optimierungen Ergebnisqualität) 4. Umwelt- und Nachhaltigkeitsaspekte (Unterkriterien: Sicherstellung des Konzepts, Umweltfreundlichkeit der Reinigungsprozesse). Das Konzept darf maximal 25 DIN A4 Seiten inklusive Anlagen umfassen und muss eine Schriftgröße von mindestens 10 Pt. (Ergänzungsempfehlung, vgl. weiterhin dazu auch Anmerkung in den Erläuterungen zur Zuschlagswertung) haben. Bei Überschreitung der Seitenzahl bzw. Unterschreitung der Schriftgröße wird Ihr Konzept zur Auftragsorganisation nicht gewertet.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung 10 Objekte.
+Beginn (StartDate): 2026-07-20
+Enddatum (EndDate): 2028-07-09
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich nach Ablauf der Grundlaufzeit jeweils stillschweigend um ein weiteres Vertragsjahr, zunächst bis zum 01.07.2029 und anschließend bis zum 23.06.2030, sofern der AG den Vertrag nicht mit einer Frist von sechs Monaten zum Ende der Grundlaufzeit oder zum Ende der ersten Vertragsverlängerung schriftlich kündigt. Mit Ablauf der zweiten Verlängerung endet der Vertrag, ohne dass es einer gesonderten Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung 3 Objekte.
+Beginn (StartDate): 2026-07-20
+Enddatum (EndDate): 2028-07-09
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich nach Ablauf der Grundlaufzeit jeweils stillschweigend um ein weiteres Vertragsjahr, zunächst bis zum 01.07.2029 und anschließend bis zum 23.06.2030, sofern der AG den Vertrag nicht mit einer Frist von sechs Monaten zum Ende der Grundlaufzeit oder zum Ende der ersten Vertragsverlängerung schriftlich kündigt. Mit Ablauf der zweiten Verlängerung endet der Vertrag, ohne dass es einer gesonderten Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Glasreinigung
+Beschreibung (Description): Glasreinigung 34 Einzelobjekte, Reinigung 2x im Jahr (Schulen in Herbst- und Osterferien), beidseitig, Flächen je Reinigung (einseitig gemessen): Außenglas =10.006 m2, im Gebäude innenliegende Scheiben =1.091 m2
+Beginn (StartDate): 2026-07-20
+Enddatum (EndDate): 2028-07-09
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich nach Ablauf der Grundlaufzeit jeweils stillschweigend um ein weiteres Vertragsjahr, zunächst bis zum 01.07.2029 und anschließend bis zum 23.06.2030, sofern der AG den Vertrag nicht mit einer Frist von sechs Monaten zum Ende der Grundlaufzeit oder zum Ende der ersten Vertragsverlängerung schriftlich kündigt. Mit Ablauf der zweiten Verlängerung endet der Vertrag, ohne dass es einer gesonderten Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

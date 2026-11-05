@@ -1,0 +1,21 @@
+Bekanntmachung 63836-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung Gerichte Greifswald und Stralsund
+Beschreibung (Description): Unterhaltsreinigung Gerichte Greifswald und Stralsund
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1 Unterhaltsreinigung Gerichte Greifswald
+Beschreibung (Description): Unterhaltsreinigung Gerichte Greifswald und Stralsund
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-02-02
+Enddatum (EndDate): 2027-01-29
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2 Unterhaltsreinigung Gericht Stralsund
+Beschreibung (Description): Unterhaltsreinigung Gerichte Greifswald und Stralsund
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-02-02
+Enddatum (EndDate): 2027-01-29
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

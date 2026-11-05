@@ -1,0 +1,22 @@
+Bekanntmachung 428627-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Glasreinigung
+Beschreibung (Description): Unterhalts- und Glasreinigung an den Hochschul- und Verwaltungsgebäuden der Burg Giebichenstein Kunsthochschule Halle.
+Hinweis (Note): Die Bewerbungsunterlagen stehen über die digitale Vergabeplattform bis zum Ablauf der unter IV.2.2 genannten Frist zum Herunterladen bereit und sind nur auf diesem Wege erhältlich. Die Bewerber müssen sich eigenverantwortlich über ggf. nachgereichte Dokumente über die Vergabeplattform informieren. Die Angebotsabgabe erfolgt über die Vergabeplattform. Das Verfahren wird elektronisch durchgeführt. Eine postalische oder eigenhändige Abgabe des Angebots ist nicht zulässig. Fragen zum Verfahren sind grundsätzlich nur über die Vergabeplattform zu stellen. Die Frist zur Beantwortung von Fragen zur Ausschreibung endet am 10.05.2026.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts-, Grund-, und Sonderreinigung
+Beschreibung (Description): Unterhalts-, Grund-, und Sonderreinigung nach Leistungsverzeichnis und Reinigungsturnus sowie sonstigen Angaben gemäß 06-01 Leistungsbeschreibung Los 1
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2031-08-31
+Beschreibung der Optionen (OptionsDescription): Die Vergabe erfolgt für einen Auftragszeitraum von 2 Jahren mit einer Verlängerungsoption von 3 x einem Jahr. Der Auftraggeber nimmt die Verlängerung für das folgende Vertragsjahr in Anspruch, wenn nicht 6 Monate vor Ende des laufenden Vertragsjahres eine anderslautende Mitteilung an den Auftragnehmer erfolgt. Der allgemeine Auftragszeitraum inkl. Verlängerungsoption ist vom 01.09.2026 bis 31.08.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Glas- und Rahmenreinigung an Hochschulgebäuden und Verwaltungsgebäudengemäß 06-02 Leistungsbeschreibung Los 2
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2031-08-31
+Beschreibung der Optionen (OptionsDescription): Die Vergabe erfolgt für einen Auftragszeitraum von 2 Jahren mit einer Verlängerungsoption von 3 x einem Jahr. Der Auftraggeber nimmt die Verlängerung für das folgende Vertragsjahr in Anspruch, wenn nicht 6 Monate vor Ende des laufenden Vertragsjahres eine anderslautende Mitteilung an den Auftragnehmer erfolgt. Der allgemeine Auftragszeitraum inkl. Verlängerungsoption ist vom 01.09.2026 bis 31.08.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

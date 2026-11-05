@@ -1,0 +1,26 @@
+Bekanntmachung 667031-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung in diversen Objekten im Stadtgebiet Gelsenkirchen - in 2 Losen
+Beschreibung (Description): Durchführung der Unterhaltsreinigung in verschiedenen Objekten der GELSENDIENSTE im gesamten Stadtgebiet Gelsenkirchen. Aufteilung in 2 Lose Laufzeit: voraussichtlich ab 01.10.2025 - 30.09.2026 zzgl. optionaler Verlängerung
+Hinweis (Note): Bekanntmachungs-ID: CXPSYY1D3GV
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Block 07
+Beschreibung (Description): Durchführung der regelmäßigen Unterhaltsreinigung. Zusätzlich mit separat abzurufenden Sonderreinigungsstunden inkl. Verbrauchsmaterial und Geräte, bei z.B.: Pandemiebedingten zusätzlichen Desinfektionen der Kontaktflächen. Sowie die separat abzurufenden Grundreinigungen in den durch GELSENDIENSTE betreuten Objekte.
+Hinweis (Note): Reinigungszeiten: Falls in den Objektblättern keine besonderen Zeiten ausgewiesen sind, müssen diese nach Zuschlagserteilung mit den Objektverantwortlichen abgestimmt werden. In der Regel finden die Reinigungen nach dem täglichen Betrieb statt. Informationen zu Waschmaschinen & Trockner: Die Aufstellung von Waschmaschinen/Trocknern ist Objektabhängig und kann erst nach Rücksprache mit dem Objektverantwortlichen erfolgen. In Tageseinrichtungen für Kinder ist dieses nicht möglich. In der Regel muss die Abholung und Lieferung der Textilien über den Dienstleiter organisiert werden.
+Beginn (StartDate): 2025-10-01
+Enddatum (EndDate): 2026-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Verlängerung (Renewal): Nach Ablauf der Erstlaufzeit verlängert sich der Vertrag stillschweigend um weitere zwölf Monate, sofern er nicht drei Monate vor Ablauf der Frist durch den AG in Textform gekündigt wird. Die maximale Gesamtlaufzeit dieses Vertrages, einschließlich aller Verlängerungszeiträume, ist auf vier Jahre ab dem Beginn des Vertragsverhältnisses begrenzt. Nach Ablauf dieser Frist endet der Vertrag automatisch, ohne dass es einer Kündigung bedarf. Die Verlängerung erfolgt unter den zu dieser Ausschreibung festgelegten Bedingungen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Block 22
+Beschreibung (Description): Durchführung der regelmäßigen Unterhaltsreinigung. Zusätzlich mit separat abzurufenden Sonderreinigungsstunden inkl. Verbrauchsmaterial und Geräte, bei z.B.: Pandemiebedingten zusätzlichen Desinfektionen der Kontaktflächen. Sowie die separat abzurufenden Grundreinigungen in den durch GELSENDIENSTE betreuten Objekte.
+Hinweis (Note): Reinigungszeiten: Falls in den Objektblättern keine besonderen Zeiten ausgewiesen sind, müssen diese nach Zuschlagserteilung mit den Objektverantwortlichen abgestimmt werden. In der Regel finden die Reinigungen nach dem täglichen Betrieb statt. Informationen zu Waschmaschinen & Trockner: Die Aufstellung von Waschmaschinen/Trocknern ist Objektabhängig und kann erst nach Rücksprache mit dem Objektverantwortlichen erfolgen. In Tageseinrichtungen für Kinder ist dieses nicht möglich. In der Regel muss die Abholung und Lieferung der Textilien über den Dienstleiter organisiert werden.
+Beginn (StartDate): 2025-10-01
+Enddatum (EndDate): 2026-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 3
+Beschreibung der Verlängerung (Renewal): Nach Ablauf der Erstlaufzeit verlängert sich der Vertrag stillschweigend um weitere zwölf Monate, sofern er nicht drei Monate vor Ablauf der Frist durch den AG in Textform gekündigt wird. Die maximale Gesamtlaufzeit dieses Vertrages, einschließlich aller Verlängerungszeiträume, ist auf vier Jahre ab dem Beginn des Vertragsverhältnisses begrenzt. Nach Ablauf dieser Frist endet der Vertrag automatisch, ohne dass es einer Kündigung bedarf. Die Verlängerung erfolgt unter den zu dieser Ausschreibung festgelegten Bedingungen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

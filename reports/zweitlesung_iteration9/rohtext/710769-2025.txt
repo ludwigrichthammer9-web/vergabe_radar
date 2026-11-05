@@ -1,0 +1,42 @@
+Bekanntmachung 710769-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Unterhalts- und Glasreinigungsleistungen) für die FKS, BFB Mittelelbe in Dessau, das BStU Magdeburg und das FKS in Sangerhausen, Bundesanstalt für Immobilienaufgaben, Direktion Magdeburg - VOEK 143-25
+Beschreibung (Description): Unterhalts- und Glasreinigungsleistungen
+Hinweis (Note): 1) Gemäß Verordnung (EU) 2022/576 dürfen ab dem 9. April 2022 keine öffentlichen Aufträge oder Konzessionen an Personen oder Unternehmen vergeben werden, die einen Bezug zu Russland im Sinne dieser Vorschrift aufweisen. Dies betrifft nicht nur Bieter und Teilnehmer, sondern auch Unterauftragnehmer, Eignungsverleiher und Lieferanten, die mit mehr als 10% am Auftragswert beteiligt sind. 2) Ortsbesichtigungen sind freiwillig und erfolgen nur nach Absprache. Besichtigungstermine sind vorab mit der für das Objekt zuständigen Ansprechperson gemäß Anlage A-01 "Bewerbungsbedingungen" zu vereinbaren. Ortsbesichtigungen können nur im Zeitraum vom 02.06.2025 bis 13.06.2025 durchgeführt werden. Die Besichtigungstermine müssen bis spätestens 5 Kalendertage vorher vereinbart werden. Die Zuweisung eines Termins erfolgt in der Reihenfolge des Eingangs der Anmeldungen. Nur von der Auftraggeberin bestätigte Termine werden durchgeführt. Die Vertreter des Teilnehmers müssen bei der Ortsbesichtigung ein gültiges amtliches Ausweisdokument mit sich führen. Fragen zu den Vergabeunterlagen werden im Termin zur Ortsbesichtigung nicht beantwortet. 3.1) Anfragen zu den Vergabeunterlagen sind unter Verwendung des beigefügten Formblatts „FB Frage-Antwort“ ausschließlich über die e-Vergabe-Plattform (www.evergabe-online.de) einzureichen. Anfragen, die auf anderem Weg übermittelt werden, können nicht berücksichtigt werden. Die Teilnehmer werden gebeten, Anfragen bis spätestens 17.06.2025 zu stellen, damit zusätzliche Informationen rechtzeitig vor Ablauf der Angebotsfrist erteilt werden können. Auskünfte werden den Teilnehmern in anonymisierter Form mitgeteilt.Telefonische Auskünfte werden nicht erteilt. 3.2) Bei technischen Fragen zur e-Vergabe-Plattform wenden Sie sich bitte an den e-Vergabe HelpDesk: Telefon: +49 (0) 22899 610 1234 E-Mail: ticket@bescha.bund.de Geschäftszeiten: Montag bis Donnerstag: 08:00 bis 16:00 Uhr, Freitag: 08:00 bis 14:00 Uhr
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1: Unterhalts-, Grund- und Glasreinigung
+Beschreibung (Description): Die jährliche Reinigungsfläche für die regelmäßige Unterhaltsreinigung beträgt 71.701,84 m² und für die Glasreinigung 56,96 m² (laut Preisblatt).
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 4
+Beschreibung der Optionen (OptionsDescription): Das Vertragsverhältnis verlängert sich jeweils um ein weiteres Jahr, sofern die Auftraggeberin einer Fortsetzung nicht mit einer Frist von sechs Monaten vor Ablauf der Vertragsdauer widerspricht. Die Widerspruchsfrist für die Auftragnehmerin beträgt neun Monate vor Ablauf der Vertragslaufzeit. Der Widerspruch muss schriftlich erfolgen. Der Vertrag endet spätestens am 31.03.2032, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2: Unterhalts-, Grund- und Glasreinigung
+Beschreibung (Description): Die jährliche Reinigungsfläche für die regelmäßige Unterhaltsreinigung beträgt 33.821,85 m² und für die Glasreinigung 104,08 m² (laut Preisblatt).
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Das Vertragsverhältnis verlängert sich jeweils um ein weiteres Jahr, sofern die Auftraggeberin einer Fortsetzung nicht mit einer Frist von sechs Monaten vor Ablauf der Vertragsdauer widerspricht. Die Widerspruchsfrist für die Auftragnehmerin beträgt neun Monate vor Ablauf der Vertragslaufzeit. Der Widerspruch muss schriftlich erfolgen. Der Vertrag endet spätestens am 31.03.2032, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3: Unterhalts- und Grundreinigung
+Beschreibung (Description): Die Unterhaltsreinigung umfasst eine Fußbodenfläche von 3.484,72 m² und eine jährliche Reinigungsfläche von 199.149,70 m² (laut Preisblatt).
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2030-01-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Das Vertragsverhältnis verlängert sich jeweils um ein weiteres Jahr, sofern die Auftraggeberin einer Fortsetzung nicht mit einer Frist von sechs Monaten vor Ablauf der Vertragsdauer widerspricht. Die Widerspruchsfrist für die Auftragnehmerin beträgt neun Monate vor Ablauf der Vertragslaufzeit. Der Widerspruch muss schriftlich erfolgen. Der Vertrag endet spätestens am 31.01.2032, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los 4: Unterhalts-, Grund- und Glasreinigung
+Beschreibung (Description): Die jährliche Reinigungsfläche für die regelmäßige Unterhaltsreinigung beträgt 74.393,18 m² und für die Glasreinigung 305,14 m² (laut Preisblatt).
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 4
+Beschreibung der Optionen (OptionsDescription): Das Vertragsverhältnis verlängert sich jeweils um ein weiteres Jahr, sofern die Auftraggeberin einer Fortsetzung nicht mit einer Frist von sechs Monaten vor Ablauf der Vertragsdauer widerspricht. Die Widerspruchsfrist für die Auftragnehmerin beträgt neun Monate vor Ablauf der Vertragslaufzeit. Der Widerspruch muss schriftlich erfolgen. Der Vertrag endet spätestens am 30.09.2032, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

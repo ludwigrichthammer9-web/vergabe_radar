@@ -1,0 +1,40 @@
+Bekanntmachung 248450-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigung der WC-Anlagen auf Autobahnrastplätzen 2026/2027
+Beschreibung (Description): Reinigung der WC-Anlagen auf Autobahnrastplätzen 2026/2027
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Bereich Autobahnmeisterei Öhringen
+Beschreibung (Description): Reinigung von 5 WC-Anlagen auf Autobahnrastplätzen
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Bereich Autobahnmeisterei Herrenberg
+Beschreibung (Description): Reinigung von 3 WC-Anlagen auf Autobahnrastplätzen
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Bereich Autobahnmeisterei Ludwigsburg
+Beschreibung (Description): Reinigung von 6 WC-Anlagen auf Autobahnrastplätzen
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Bereich Autobahnmeisterei Kirchheim
+Beschreibung (Description): Reinigung von 5 WC-Anlagen auf Autobahnrastplätzen
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Bereich Autobahnmeisterei Ulm-Dornstadt
+Beschreibung (Description): Reinigung von 5 WC-Anlagen auf Autobahnrastplätzen
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2027-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

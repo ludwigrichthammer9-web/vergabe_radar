@@ -1,0 +1,13 @@
+Bekanntmachung 440545-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung Gefahrenabwehrzentrum, Am Anger 28, 07743 Jena
+Beschreibung (Description): Ausführung von Gebäudereinigungsleistungen Tagesreinigung ist bereits etabliert.
+Hinweis (Note): #Bekanntmachungs-ID: CXVKYYDYTVG4UALZ# Das Aufstellen von Waschmaschinen und Trocknungsgeräten ist im Objekt nicht gestattet! Eine Objektbesichtigung ist nicht zwingend vorgeschrieben, wird jedoch besonders empfohlen. Für eine Besichtigung vereinbaren Sie bitte telefonisch bis spätestens 13.03.2026 einen Termin mit dem zuständigen Hausmeister vor Ort. Servicezeiten: 08:00 Uhr bis 15:00 Uhr Kontaktdaten: Herr Ziegler: 0162 2663455 Herr Bärschneider: 0174 1762463
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Gebäudereinigung Gefahrenabwehrzentrum, Am Anger 28, 07743 Jena
+Beschreibung (Description): Ausführung von Gebäudereinigungsleistung nach Leistungsverzeichnis Leistung: Gebäudereinigung und Winterdienst Laufzeit: 43 Monate Beginn: 01.05.2026
+Beginn (StartDate): 2026-05-01
+Enddatum (EndDate): 2029-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 

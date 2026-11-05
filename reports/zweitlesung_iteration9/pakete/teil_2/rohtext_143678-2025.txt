@@ -1,0 +1,30 @@
+Bekanntmachung 143678-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Europaweite Ausschreibung für Reinigungsleistungen für städtische Gebäude und Einrichtungen
+Beschreibung (Description): Gegenstand der vom AG ausgeschriebenen Leistung ist die Unterhalts- und Grundreinigung von 29 Objekten mit einer Jahresreinigungsfläche von ca. 2,1 Mio. Quadratmetern und einer Grundreinigungsfläche von ca. 8.000 Quadratmetern. Die Glas- und Rahmenreinigung mit einer Reinigungsfläche von ca. 43.000 Quadratmetern. Sowie der Winterdienst mit einer zu räumenden Fläche von ca. 9.300 Quadratmetern.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhaltsreinigung in 29 Objekten mit rund 2,1 Mio. Quadratmetern Jahresreinigungsfläche sowie ca. 8.000 Quadratmetern Grundreinigungsfläche
+Dauer (DurationMeasure): 48 MONTH
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Zweimalige Verlängerungsoption für je 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Glas­ und Rahmenreinigung in 54 Objekten mit einer Reinigungsfläche von ca. 43.000 Quadratmetern.
+Dauer (DurationMeasure): 48 MONTH
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Zweimalige Verlängerungsoption für je 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Winter- und Streudienst
+Beschreibung (Description): Winter- und Streudienst bei 25 Liegenschaften mit einer zu räumenden Fläche von ca. 9.500 Quadratmetern.
+Beginn (StartDate): 2025-04-01
+Enddatum (EndDate): 2029-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Zweimalige Verlängerungsoption für je 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

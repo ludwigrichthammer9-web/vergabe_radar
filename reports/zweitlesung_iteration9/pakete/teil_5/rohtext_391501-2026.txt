@@ -1,0 +1,39 @@
+Bekanntmachung 391501-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Vergabe von Unterhalts-, Grund- und Glasreinigungsarbeiten für die Stadtverwaltung Schorndorf
+Beschreibung (Description): Gegenstand der vorliegenden Ausschreibung ist die Vergabe der Unterhalts-, Grund- und Glasreinigungsarbeiten für diverse Objekte der Stadtverwaltung Schorndorf.
+Hinweis (Note): #Bekanntmachungs-ID: CXS0Y44YT231659M# Die Vergabeunterlagen sind unter der in der EU Bekanntmachung angegebenen Internetadresse abrufbar. Dort werden auch Antworten auf Bieterfragen sowie aktualisierte oder weitere Informationen und Unterlagen zu dem Verfahren zur Verfügung gestellt. Interessenten an dem Verfahren müssen sicherstellen, dass sie regelmäßig und insbesondere unmittelbar vor Abgabe ihres Angebots sowie vor Ablauf der Angebotsfrist prüfen, ob seitens der Vergabestelle zusätzliche Informationen oder Unterlagen zur Verfügung gestellt wurden, welche für die Abgabe des Angebots zu beachten sind. Interessenten haben die Möglichkeit, sich für das Verfahren freizuschalten/zu registrieren. Registrierte Unternehmen werden über die Veröffentlichung zusätzlicher Informationen und Unterlagen informiert. Eine Verpflichtung zur Registrierung besteht nicht. Bekanntmachungs-ID: CXS0Y44YT7XWMANL Informationen zur elektronischen Rechnung: Für eine elektronische Rechnungsstellung verwenden Sie bitte ausschließlich den Zentralen Rechnungseingang Baden-Württemberg, den Sie zusammen mit weiteren Informationen unter https://service-bw.de/erechnung erreichen. Ihr Rechnungsdokument muss dazu im Standard XRechnung oder einem anderen der Norm EN 16931 entsprechenden Format erstellt werden und im Feld Buyer-Reference (BT-10) unsere Leitweg-ID 08119067-A8469-82 aufweisen. Es gelten die über https://service-bw.de/erechnung einsehbaren Nutzungsbedingungen des Zentralen Rechnungseingangs Baden-Württemberg in der zum Zeitpunkt der Einbringung der elektronischen Rechnung gültigen Fassung.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Laufende Unterhalts- und Grundreinigung
+Beschreibung (Description): Laufende Unterhalts- und Grundreinigung
+Hinweis (Note): Die Vergabeentscheidung und Zuschlagserteilung stehen unter dem Vorbehalt der Zustimmung des zuständigen Gemeinderats. Geplant ist, dass die Entscheidung über die erfolgte Vergabe am 07. Mai 2026 getroffen wird.
+Beginn (StartDate): 2026-06-01
+Enddatum (EndDate): 2030-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag beginnt am 01.06.2026 und hat eine Festlaufzeit von 2 Jahren bis zum 30.06.2028. Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat. Der Vertrag hat somit eine Gesamtlaufzeit von maximal 4 Jahren und endet spätestens am 30.06.2030. Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit wegen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beschreibung der Verlängerung (Renewal): Der Vertrag beginnt am 01.06.2026 und hat eine Festlaufzeit von 2 Jahren bis zum 30.06.2028. Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat. Der Vertrag hat somit eine Gesamtlaufzeit von maximal 4 Jahren und endet spätestens am 30.06.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Laufende Unterhalts- und Grundreinigung
+Beschreibung (Description): Laufende Unterhalts- und Grundreinigung
+Hinweis (Note): Die Vergabeentscheidung und Zuschlagserteilung stehen unter dem Vorbehalt der Zustimmung des zuständigen Gemeinderats. Geplant ist, dass die Entscheidung über die erfolgte Vergabe am 07. Mai 2026 getroffen wird.
+Beginn (StartDate): 2026-06-01
+Enddatum (EndDate): 2030-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag beginnt am 01.06.2026 und hat eine Festlaufzeit von 2 Jahren bis zum 30.06.2028. Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat. Der Vertrag hat somit eine Gesamtlaufzeit von maximal 4 Jahren und endet spätestens am 30.06.2030. Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit wegen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beschreibung der Verlängerung (Renewal): Der Vertrag beginnt am 01.06.2026 und hat eine Festlaufzeit von 2 Jahren bis zum 30.06.2028. Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat. Der Vertrag hat somit eine Gesamtlaufzeit von maximal 4 Jahren und endet spätestens am 30.06.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Glas- und Rahmenreinigung
+Hinweis (Note): Die Vergabeentscheidung und Zuschlagserteilung stehen unter dem Vorbehalt der Zustimmung des zuständigen Gemeinderats. Geplant ist, dass die Entscheidung über die erfolgte Vergabe am 07. Mai 2026 getroffen wird.
+Beginn (StartDate): 2026-06-01
+Enddatum (EndDate): 2030-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag beginnt am 01.06.2026 und hat eine Festlaufzeit von 2 Jahren bis zum 30.06.2028. Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat. Der Vertrag hat somit eine Gesamtlaufzeit von maximal 4 Jahren und endet spätestens am 30.06.2030. Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit wegen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beschreibung der Verlängerung (Renewal): Der Vertrag beginnt am 01.06.2026 und hat eine Festlaufzeit von 2 Jahren bis zum 30.06.2028. Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat. Der Vertrag hat somit eine Gesamtlaufzeit von maximal 4 Jahren und endet spätestens am 30.06.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 

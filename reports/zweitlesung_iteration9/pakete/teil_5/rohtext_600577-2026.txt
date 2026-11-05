@@ -1,0 +1,41 @@
+Bekanntmachung 600577-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung ab 01.10.2026 in 4 Losen
+Beschreibung (Description): Unterhaltsreinigung ab 01.10.2026 in 4 Losen
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1
+Beschreibung (Description): Unterhaltsreinigung in 3 Objekten
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2029-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2
+Beschreibung (Description): Unterhaltsreinigung in 3 Objekten
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2029-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3
+Beschreibung (Description): Unterhaltsreinigung in 6 Objekten
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2029-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los 4
+Beschreibung (Description): Unterhaltsreinigung in 5 Objekten
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2029-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der AG hat die Option, den Ausführungszeitraum unter unveränderten Konditionen zweimalig um 12 Monate zu verlängern. Die Ausübung der Option muss spätestens 3 Monate vor Ablauf des Ausführungszeitraums in Textform erfolgen.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

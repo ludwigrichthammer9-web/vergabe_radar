@@ -1,0 +1,35 @@
+Bekanntmachung 582700-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung in 23 Liegenschaften - Schulen, Horte, Kitas, VHS - des Bezirksamtes Neukölln von Berlin
+Beschreibung (Description): Unterhaltsreinigung in 23 Liegenschaften - Schulen, Horte, Kitas, VHS - des Bezirksamtes Neukölln von Berlin
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 9
+Beschreibung (Description): Unterhaltsreinigung in 23 Liegenschaften Schulen, Horte, Kitas, VHS des Bezirksamtes Neukölln von Berlin
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2028-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): Der Vertrag beginnt am 01.08.2026 und wird für die Dauer von 12 Monaten geschlossen. Es wird eine Probezeit von sechs Monaten ab Vertragsbeginn vereinbart. Innerhalb dieses Zeitraumes kann der Vertrag von beiden Seiten mit einer Frist von zwei Wochen zum Ende eines Kalendermonats ohne Angaben von Gründen gekündigt werden. Der Vertrag verlängert sich um ein Jahr, wenn er nicht sechs Monate vor Vertragsablauf durch eine der Vertragsparteien gekündigt wird. Die Laufzeit des Vertrages endet nach spätestens zwei Jahren, also mit Ablauf des 31.07.2028 ohne dass es einer gesonderten Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 11
+Beschreibung (Description): Unterhaltsreinigung in 23 Liegenschaften Schulen, Horte, Kitas, VHS des Bezirksamtes Neukölln von Berlin
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2028-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): Der Vertrag beginnt am 01.08.2026 und wird für die Dauer von 12 Monaten geschlossen. Es wird eine Probezeit von sechs Monaten ab Vertragsbeginn vereinbart. Innerhalb dieses Zeitraumes kann der Vertrag von beiden Seiten mit einer Frist von zwei Wochen zum Ende eines Kalendermonats ohne Angaben von Gründen gekündigt werden. Der Vertrag verlängert sich um ein Jahr, wenn er nicht sechs Monate vor Vertragsablauf durch eine der Vertragsparteien gekündigt wird. Die Laufzeit des Vertrages endet nach spätestens zwei Jahren, also mit Ablauf des 31.07.2028 ohne dass es einer gesonderten Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 15
+Beschreibung (Description): Unterhaltsreinigung in 23 Liegenschaften Schulen, Horte, Kitas, VHS des Bezirksamtes Neukölln von Berlin
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2028-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): Der Vertrag beginnt am 01.08.2026 und wird für die Dauer von 12 Monaten geschlossen. Es wird eine Probezeit von sechs Monaten ab Vertragsbeginn vereinbart. Innerhalb dieses Zeitraumes kann der Vertrag von beiden Seiten mit einer Frist von zwei Wochen zum Ende eines Kalendermonats ohne Angaben von Gründen gekündigt werden. Der Vertrag verlängert sich um ein Jahr, wenn er nicht sechs Monate vor Vertragsablauf durch eine der Vertragsparteien gekündigt wird. Die Laufzeit des Vertrages endet nach spätestens zwei Jahren, also mit Ablauf des 31.07.2028 ohne dass es einer gesonderten Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

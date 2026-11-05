@@ -1,0 +1,70 @@
+Bekanntmachung 72651-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Ennepe-Ruhr-Kreis -Gebäudereinigung
+Beschreibung (Description): Unterhaltsreinigung, Grundreinigung und Glasreinigung in verschiedenen öffentlichen Objekten mit ca. 102.900 m² Reinigungsfläche und 23.100 m² Glasfläche in 10 Losen
+Hinweis (Note): Fragen/Einwändungen müssen bis 05.09.2025 beim Vergabeportal eingehen. Die Vergabeunterlagen sind bei der Vergabeplattform https://www.subreport.de/ unter der zuvor genannten Nr. herunterladbar. Es ist vom Bieter eine E-Mailadresse für die Kommunikation anzugeben. Bei Weitergabe der Vergabeunterlagen und -dateien an Dritte, ist der Anfordernde der Vergabeunterlagen dafür verantwortlich, dass die Vergabeunterlagen und alle weiteren Informationen, die die Vergabestelle bereitstellt, rechtzeitig, vollständig und unverändert an die Bieter weitergegeben werden. Wir empfehlen die Vergabeunterlagen frühzeitig von vorgenannter Plattform herunterzuladen. Bieter, die die Vergabeunterlagen spät herunterladen und bearbeiten, müssen damit rechnen, dass sie keine Antworten mehr zu Fragen bezüglich der Vergabeunterlagen erhalten und dass der Auftraggeber auf Ihre Hinweise z. B. zu Unrichtigkeiten nicht reagiert, wenn keine ausreichende Zeit für die Bearbeitung der Fragen bleibt und die rechtzeitige Information der Bieter nicht mehr erfolgen kann. Enthalten die Vergabeunterlagen Fehler oder Unklarheiten, die der Bieter erkennt oder erkennen kann, so hat er den Auftraggeber unverzüglich schriftlich über die Nachrichtenfunktion der Vergabeplattform darauf hinzuweisen, auch wenn er den Hinweis schon vorher in anderer Form gegeben hat. Diese Fragen oder Einwände müssen unverzüglich, spätestens bis zum oben genannten Termin bei der zuvor genannten Plattform eingegangen sein. Die Bearbeitung und Beantwortung erfolgt von der ausschreibenden Stelle, Montag - Donnerstag von 8.00 - 15.30 Uhr, Freitag 8.00 - 11.30 Uhr, schriftlich (nicht telefonisch) auf zuvor genannter Plattform. Die Angebote sind ausschließlich elektronisch über die Angebotsfunktion der Vergabeplattform an die in den Vergabeunterlagen angegebene Adresse, zu senden. Nachreichungen oder Aufklärungen und sonstige Nachrichten (außer Anmeldung zur Besichtigung) nach Submission, sind ausschließlich über die Nachrichtenfunktion zu senden. Aufwändungen der Angebotserstellung und Angebotsversendung werden nicht vergütet. Der Auftraggeber behält sich vor die Referenzen zu überprüfen. Auf entsprechende Aufforderung im Rahmen der Aufklärung ist: Der Name und eine E-Mailadresse des Referenzgebers anzugeben. Der Auftraggeber wird im Rahmen einer Eigenaufklärung den Referenzgeber einmalig per E-Mail, zur Bestätigung der Referenz auffordern. Der Bieter trägt das Risiko, dass der Referenzgeber die Referenz nicht innerhalb von 10 Tagen bestätigt und der Bieter aufgrund der fehlenden Referenzbestätigung ausgeschlossen wird. ODER: Es ist vom Auftragnehmer eine entsprechende Bestätigung der Referenzgeber mit den geforderten Angaben innerhalb der Frist von 10 Tagen vorzulegen. Das Formblatt für die Bestätigung der Referenz durch den Referenzgeber hierzu ist zu verwenden. Verstöße gegen diese Vorgabe führen zum Ausschluss des Angebotes. - Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Der Auftraggeber behält sich gemäß § 132 Absatz 2 Nr. 3 VgV für den Fall, dass der zunächst beauftragte Auftragnehmer innerhalb der ersten sechs Monate nach Vertragsbeginn ausfällt oder das Vertragsverhältnis endet (z. B. durch Kündigung oder sonstige Beendigungsgründe) vor, den im Vergabeverfahren zweitplatzierten Bieter auf Grundlage seines Angebotes mit der Leistungserbringung zu beauftragen. Näheres siehe Vergabeunterlagen.
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 1 Unterhalts- und Grundreinigung in Witten und Herdecke
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 2 Unterhaltsreinigung- und Grundreinigung in verschiedenen Objekten in Schwelm
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3 Unterhalts- und Grundreinigung in Ennepetal und Gevelsberg
+Beschreibung (Description): Beschreibung: Unterhalts- und Grundreinigung in diversen Objekten mit ca. 15.000 m² Reinigungsfläche
+Hinweis (Note): - Nutzung des digitalen Qualitätsmesssystems Ko-CLEAN digital der Kommunal Agentur NRW. Vor Zuschlagserteilung ist der Nutzungsvertrag zu Ko-CLEAN und der Auftragsverarbeitungsvertrag hierzu, unterzeichnet über die Vergabeplattform einzureichen. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen. Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Verlängerung zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 4 Unterhalts- und Grundreinigung in Sprockhövel
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 5 Unterhalts- und Grundreinigung in Hattingen
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 6 Unterhaltsreinigung- und Grundreinigung in verschiedenen Objekten in Schwelm
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 7 Unterhaltsreinigung- und Grundreinigung in einem Objekt in Ennepetal
+Beginn (StartDate): 2027-03-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los A Glas- und Rahmenreinigung in diversen Liegenschaften
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los B Glas- und Rahmenreinigung in diversen Liegenschaften
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los C: Glas- und Rahmenreinigung in diversen Liegenschaften
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2030-03-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

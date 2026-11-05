@@ -1,0 +1,66 @@
+Bekanntmachung 220298-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Glasreinigung Staatliche Führungsakademie für Ernährung, Landwirtschaft und Forsten für die Dienstorte in Landshut, Marktredwitz und Regen
+Beschreibung (Description): Der Freistaat Bayern, vertreten durch die Staatliche Führungsakademie für Ernährung, Landwirtschaft und Forsten, schreibt die Unterhalts- Grund- und Glasrahmenreinigung für die Dienstorte - Landshut, Porschestraße 5a, 84030 Landshut (Los 1 - Unterhalts- und Grundreinigung und Los 2 - GRR) - Marktredwitz, Fabrikstraße 6, 95615 Marktredwitz (Los 3 - UHR und Los 4 - GRR) - Regen, Bodenmaiser Straße 46, 94209 Regen (Los 5 - UHR und Los 6 - GRR) aus. Los 1 Die UHR (Unterhalts- und Grundreinigung) des Dienstortes Landshut umfasst eine Grundreinigungsfläche von rund 4.258 m². Die Jahresreinigungsfläche beträgt rund 400.024 m². Los 2 Die GRR (Glasrahmenreinigung) des Dienstortes Landshut umfasst eine Grundfläche von rund 1.058 m². Die Jahresreinigungsfläche beträgt rund 2.116 m². Los 3 Die UHR (Unterhaltsreinigung) des Dienstortes Marktredwitz umfasst eine Grundreinigungsfläche von rund 2.820 m². Die Jahresreinigungsfläche beträgt rund 273.574 m². Los 4 GRR des Dienstortes Marktredwitz umfasst eine Grundfläche von rund 518 m². Die Jahresreinigungsfläche beträgt rund 1.037 m². Los 5 Die UHR (Unterhaltsreinigung) des Dienstortes Regen umfasst eine Grundreinigungsfläche von rund 883 m². Die Jahresreinigungsfläche beträgt rund 95.547 m². Los 6 GRR des Dienstortes Regen umfasst eine Grundfläche von rund 161 m². Die Jahresreinigungsfläche beträgt rund 161 m². Der Zuschlag erfolgt für die Lose 1, 3 und 5 UHR auf Grundlage der Freien Verhältniswahl 40% Preis und 60% Leistung. Der Zuschlag erfolgt für die Lose 2, 4 und 6 GRR auf das Angebot mit dem niedrigsten Preis. Die angestrebte Vertragslaufzeit für die Lose 1 und 2 (Landshut) und 5 und 6 (Regen) beträgt bis zu 4 Jahre. Die angestrebte Vertragslaufzeit für die Lose 3 und 4 (Marktredwitz) beträgt bis zu 4 Jahre und 1 Monat. Eine Objektbesichtigung der Dienststellen in Landshut und Regen ist fakultativ (freiwillig) möglich. Näheres zur Anmeldefrist siehe Vergabeunterlagen. Da sich die Dienststelle in Marktredwitz derzeit noch im Bau befindet, ist eine Objektbesichtigung nicht möglich. Die Angebotsabgabe erfolgt aufgrund Aktenlage.
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS (Oberschwelle) Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Verpflichtungserklärung anderer Unternehmen Verpflichtungserklärungen nichtbeamteter Personen Erklärung zum Mindestlohn Geheimhaltungsvereinbarung
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): UHR und Grundreinigung Dienstort Landshut
+Beschreibung (Description): Die Unterhalts- und Grundreinigung des Dienstortes Landshut, Porschestraße 5a, 84030 Landshut umfasst eine Grundreinigungsfläche von rund 4.258 m². Die Jahresreinigungsfläche beträgt rund 400.024 m².
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS (Oberschwelle) Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Verpflichtungserklärung anderer Unternehmen Geheimhaltungsvereinbarung Verpflichtungserklärungen nichtbeamteter Personen Das Verfahren ist für kleine und mittlere Unternehmen (KMU) geeignet.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-04-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag kommt mit Erteilung des Zuschlags zustande. Die Leistungspflicht beginnt mit Zuschlag, nicht jedoch vor dem 01.05.2026. Der Vertrag verlängert sich um – Verlängerungsoption 1) ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und um – Verlängerungsoption 2) ebenfalls ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird, endet jedoch spätestens mit Ablauf des 30.04.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): GRR Dienstort Landshut
+Beschreibung (Description): Die Glas- und Rahmenreinigung incl. Falze und Beschläge des Dienstortes Landshut, Porschestraße 5a, 84030 Landshut umfasst eine Grundfläche von rund 1.058 m². Die Jahresreinigungsfläche beträgt rund 2.116 m².
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS (Oberschwelle) Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Verpflichtungserklärung anderer Unternehmen Geheimhaltungsvereinbarung Verpflichtungserklärungen nichtbeamteter Personen Das Verfahren ist für kleine und mittlere Unternehmen (KMU) geeignet.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-04-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag kommt mit Erteilung des Zuschlags zustande. Die Leistungspflicht beginnt mit Zuschlag, nicht jedoch vor dem 01.05.2026. Der Vertrag verlängert sich um – Verlängerungsoption 1) ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und um – Verlängerungsoption 2) ebenfalls ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird, endet jedoch spätestens mit Ablauf des 30.04.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): UHR Dienstort Marktredwitz
+Beschreibung (Description): Die Unterhaltsreinigung des Dienstortes Marktredwitz umfasst eine Grundreinigungsfläche von rund 2.820 m². Die Jahresreinigungsfläche beträgt rund 273.574 m².
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Verpflichtungserklärung anderer Unternehmen Geheimhaltungsvereinbarung Verpflichtungserklärungen nichtbeamteter Personen Das Verfahren ist für kleine und mittlere Unternehmen (KMU) geeignet.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-04-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich um – Verlängerungsoption 1) ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und um – Verlängerungsoption 2) ebenfalls ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird, endet jedoch spätestens mit Ablauf des 30.04.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): GRR Dienstort Marktredwitz
+Beschreibung (Description): Die Die Glas- und Rahmenreinigung incl. Falze und Beschläge des Dienstortes Marktredwitz umfasst eine Grundfläche von rund 518 m². Die Jahresreinigungsfläche beträgt rund 1.037 m²
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Vereinbarung zur Auftragsverarbeitung Verpflichtungserklärung anderer Unternehmen Geheimhaltungsvereinbarung Verpflichtungserklärungen nichtbeamteter Personen Das Verfahren ist für kleine und mittlere Unternehmen (KMU) geeignet.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-04-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich um – Verlängerungsoption 1) ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und um – Verlängerungsoption 2) ebenfalls ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird, endet jedoch spätestens mit Ablauf des 30.04.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): UHR Dienstort Regen
+Beschreibung (Description): Die Unterhaltsreinigung des Dienstortes Regen, Bodenmaiser Straße 46, 94209 Regen umfasst eine Grundreinigungsfläche von rund883 m². Die Jahresreinigungsfläche beträgt rund 95.547 m².
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Vereinbarung zur Auftragsverarbeitung Verpflichtungserklärung anderer Unternehmen Geheimhaltungsvereinbarung Verpflichtungserklärungen nichtbeamteter Personen Das Verfahren ist für kleine und mittlere Unternehmen (KMU) geeignet.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-04-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag kommt mit Erteilung des Zuschlags zustande. Die Leistungspflicht beginnt mit Zuschlag, nicht jedoch vor dem 01.05.2026. Der Vertrag verlängert sich um – Verlängerungsoption 1) ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und um – Verlängerungsoption 2) ebenfalls ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird, endet jedoch spätestens mit Ablauf des 30.04.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): GRR Dienstort Regen
+Beschreibung (Description): Die Glas- und Rahmenreinigung incl. Falze und Beschläge des Dienstortes Regen, Bodenmaiser Straße 46, 94209 Regen umfasst eine Grundfläche von rund 161 m². Die Jahresreinigungsfläche beträgt rund 161 m².
+Hinweis (Note): Es sind folgende Erklärung durch die Bieter abzugeben: Eigenerklärung zum Nichtvorliegen von Ausschlussgründen Eigenerklärung RUS Eigenerklärung Unterauftragnehmer Information zu statistischen Angaben Verpflichtungserklärung anderer Unternehmen Geheimhaltungsvereinbarung Verpflichtungserklärungen nichtbeamteter Personen Das Verfahren ist für kleine und mittlere Unternehmen (KMU) geeignet.
+Beginn (StartDate): 2026-04-01
+Enddatum (EndDate): 2028-04-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Der Vertrag kommt mit Erteilung des Zuschlags zustande. Die Leistungspflicht beginnt mit Zuschlag, nicht jedoch vor dem 01.05.2026. Der Vertrag verlängert sich um – Verlängerungsoption 1) ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und um – Verlängerungsoption 2) ebenfalls ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird, endet jedoch spätestens mit Ablauf des 30.04.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

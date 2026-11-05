@@ -1,0 +1,86 @@
+Bekanntmachung 832634-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhaltsreinigung verschiedener Gebäude der Stadt Gummersbach für die Jahre 2026-2028
+Beschreibung (Description): Ausgeschrieben wird die Unterhaltsreinigung in 13 unterschiedlichen Losen in Abhängigkeit einer örtlichen Nähe. Die Lose sind unterschiedlich groß, so dass auch kleinere Unternehmen teilnehmen können. Die Objekte sind in erster Linie Schulen, Kindergärten, Bauhöfe und das Rathaus.
+Hinweis (Note): #Bekanntmachungs-ID: CXPTYDUDXPD# Sämtliche Vergabeunterlagen stellen wir ausschließlich über das Portal Vergabemarktplatz Rheinland kostenlos zur Verfügung, eine postalische oder elektronische Versendung erfolgt nicht. Bieterfragen werden unter Wahrung der Anonymität des Fragestellers über den Kommunikationsbereich des Verfahrens im o.g. Portal für alle Teilnehmer beantwortet. Bieterfragen sind ausschließlich über diesen Kommunikationsweg einzureichen. Ausführliche Informationen sowie Anleitungen zum Vergabemarktplatz und zur Elektronischen Angebotsabgabe über das Bietertool finden Sie im Service Support Center von Cosinex unter https://support.cosinex.de/. Weitere hilfreiche Informationen zur Abgabe eines elektronischen Angebotes können Sie zudem aus dem Dokument in den Vergabeunterlagen entnehmen.
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Kiga Bernberg 2, Kindergarten Bernberg Süd, GGS Bernberg, Begegnungszentrum Bernberg
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Kindergarten Dieringhausen, Kindergarten Dieringhausen-Familienzentrum, Jugentreff Martinstraße
+Beschreibung (Description): Gebäudereinigung in verschiedenen städtischen Objekten (Schulen, Kindergärten, Bauhöfe und das Rathaus), 13 Lose
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Kindergarten Hand in Hand - Ackermanngelände, Lindengymnasium - Grotenbach, Lindenforum im Lindengymnasium
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Kindergarten Lantenbach, Kindergarten Lieberhausen, GGS Becke
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): GGS Steinenbrück, Kindergarten Strombach
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): GGS Derschlag, GS Derschlag
+Beschreibung (Description): Gebäudereinigung in verschiedenen städtischen Objekten (Schulen, Kindergärten, Bauhöfe und das Rathaus), 13 Lose
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): GGS Hülsenbusch, Turnhalle Peisel
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): GGS Körnerstraße, RS Hepel, Gerhard Kienbaum Sporthalle
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): GGS Niederseßmar
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Eugen-Haas-Sporthalle, Lindengymnasium - Moltkestraße
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 11 der Liste: LOT-0011 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Rathaus, Bürogebäude La Roche sur Yon, Nebengebäude Bismarkplatz
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 12 der Liste: LOT-0012 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Bauhof Rospe, Feuerwehr Gummersbach, Stadtwache-Steinmüller, Stellwerk Gummersbach, Jugendtreff Innenstadt
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 13 der Liste: LOT-0013 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): GGS Windhagen, Bauhof Steinenbrück, RS Steinberg
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

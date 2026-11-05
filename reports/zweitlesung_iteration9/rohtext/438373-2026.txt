@@ -1,0 +1,14 @@
+Bekanntmachung 438373-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Vertretungsreinigungen in städtischen Objekten - Vertretungsreinigung
+Beschreibung (Description): Vertretungsreinigung in städtischen Objekten in Saarbrücken
+
+## Los 1 der Liste: LOT-0000
+Titel (Name): Vertretungsreinigungen in städtischen Objekten - Vertretungsreinigung
+Beschreibung (Description): Gestellung von Vertretungsreiniger*innen für städtische Reiniger*innen im Krankheits- und Urlaubsfällen auf Abruf in 17 städtischen Objekten mit 27 Revieren im Stadtgebiet von Saarbrücken.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2028-09-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Auftraggeber ist berechtigt, den Vertrag zweimal um jeweils 12 Monate zu verlängern. Die maximale Vertragslaufzeit beträgt 48 Monate.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

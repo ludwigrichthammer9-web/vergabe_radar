@@ -1,0 +1,23 @@
+Bekanntmachung 220594-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigungsdienstleistungen in den Gebäuden des Hessischen Rundfunks am Standort Frankfurt am Main
+Beschreibung (Description): Unterhaltsreinigung von 119.000 qm Nutzfläche sowie Reinigung bei professionellen Veranstaltungen sowie Auf-/Um- und Abbauten von Bestuhlung.
+Hinweis (Note): Mit dem Angebot einzureichende Unterlagen:  Angebotsschreiben des Bieters  Selbstauskunft des Bieters  Angaben des Bieters zu den Eignungskriterien (vom Bieter zu erstellen)  Nachweis von Referenzen  Nachweis der Besichtigung  Eigenerklärung gemäß § 48 VgV  Eigenerklärung über das Nichtvorliegen von Ausschlussgründen nach § 123 und § 124 des Gesetzes gegen Wettbewerbsbeschränkungen (GWB)  Eigenerklärung zur Verordnung (EU) 2022/576  Eigenerklärung zum Einsatz der Reinigungsstunden  Beschreibung der Objektorganisation und des Qualitätsmanagements des Bieters  Preisblätter Unterhaltsreinigung  Preisblätter Veranstaltungsbegleitende Reinigung  Eigenerklärung zu Artikel 5k der Verordnung (EU) Nr. 833/2014
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung
+Beschreibung (Description): Unterhaltsreinigung für ca. 119.000 qm Nutzfläche, davon ca. 7 .000 qm Studiofläche, 23.000 qm Verkehrsfläche und 29.000 qm Bedarfsreinigung. In einzelnen Bereichen erfolgt die Erbringung regemäßig anfallender Leistungen über Tageskräfte des AN für: Reinigungskraft Studiobereiche, Tageskraft für Papierentsorgung, Tageskräfte für Außenbereichsreinigung
+Beginn (StartDate): 2026-05-01
+Enddatum (EndDate): 2028-04-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Zweimalige Verlängerungsoption um jeweil ein Jahr
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Veranstaltungsbegleitende Reinigung
+Beschreibung (Description): Professionelle Veranstaltungen in den Versammlungsstätten auf dem Gelände des Hessischen Rundfunks im Bereich Reinigung Auf-/Um- und Abbauten von Bestuhlungen betreuen.
+Beginn (StartDate): 2026-05-01
+Enddatum (EndDate): 2028-04-30
+Beschreibung der Optionen (OptionsDescription): Zweimalige Verlängerungsoption um jeweils ein Jahr
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

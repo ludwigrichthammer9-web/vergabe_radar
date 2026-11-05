@@ -1,0 +1,80 @@
+Bekanntmachung 117357-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigung WC-Anlagen von Rastanlagen NLO, Los 1-4 AM Thüringen, Los 5-12 AM Sachsen-Anhalt
+Beschreibung (Description): Reinigung WC-Anlagen von Rastanlagen NLO, Los 1-4 AM Thüringen, Los 5-12 AM Sachsen-Anhalt
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Breitenworbis
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2027-07-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Erfurt
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2027-07-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): AM Hermsdorf
+Beschreibung (Description): Die Autobahn GmbH des Bundes beabsichtigt die Vergabe der Reingungsdienstleistungen der PWC-Anlagen im Zuständigkeitsgebiet der Niederlassung Ost, hier im Bereich der Autobahnmeisterei Hermsdorf. Der Vertrag beinhaltet die Sichtprüfung der WC-Gebäude, die Funktionsprüfung der Armaturen, Spender, Türen und Einbauteile sowie die Reinigung der gesamten WC-Anlagen einschließlich Desinfektionsmaßnahmen. Vertragslaufzeit Los 3: 01.08.2026 - 31.07.2027 Der Vertrag kann optional durch den Auftraggeber 2-mal um jeweils ein Jahr verlängert werden.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2027-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag kann optional durch den Auftraggeber 2-mal um jeweils ein Jahr verlängert werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Zella-Mehlis
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2027-07-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Börde
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Dessau
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Oberröblingen
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Peißen
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Plötzkau
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Theeßen
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 11 der Liste: LOT-0011 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Weißenfels
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 12 der Liste: LOT-0012 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): AM Wernigerode
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-02-28
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

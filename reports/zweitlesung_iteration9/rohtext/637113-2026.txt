@@ -1,0 +1,30 @@
+Bekanntmachung 637113-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Objektgruppe 3: Unterhaltsreinigung und Einpflege
+Beschreibung (Description): Objektgruppe 3: Los 1 und 2: Unterhaltreinigung von Schulgebäuden / Turnhallen inkl. Einpflege Los 3: Unterhaltreinigung Verwaltungsgebäude
+Hinweis (Note): #Bekanntmachungs-ID: CXPWYYSLKRY#
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Liegenschaften Schulgebäude Los 1 inkl. Turnhallen
+Beschreibung (Description): Unterhaltreinigung von Schulgebäuden / Turnhallen inkl. Einpflege sowie eines Verwaltungsgebäudes
+Beginn (StartDate): 2026-10-17
+Enddatum (EndDate): 2029-07-01
+Beschreibung der Optionen (OptionsDescription): Es gelten die Bestimmungen des § 132 Auftragsänderungen während der Vertragslaufzeit des Gesetzes gegen Wettbewerbsbeschränkungen (GWB).
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Liegenschaften Schulgebäude Los 2 inkl. Turnhallen
+Beschreibung (Description): Unterhaltreinigung von Schulgebäuden / Turnhallen inkl. Einpflege sowie eines Verwaltungsgebäudes
+Beginn (StartDate): 2026-10-17
+Enddatum (EndDate): 2029-07-01
+Beschreibung der Optionen (OptionsDescription): Es gelten die Bestimmungen des § 132 Auftragsänderungen während der Vertragslaufzeit des Gesetzes gegen Wettbewerbsbeschränkungen (GWB).
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Verwaltungsgebäude
+Beschreibung (Description): Unterhaltreinigung von Schulgebäuden / Turnhallen inkl. Einpflege sowie eines Verwaltungsgebäudes
+Beginn (StartDate): 2026-10-17
+Enddatum (EndDate): 2029-07-01
+Beschreibung der Optionen (OptionsDescription): Es gelten die Bestimmungen des § 132 Auftragsänderungen während der Vertragslaufzeit des Gesetzes gegen Wettbewerbsbeschränkungen (GWB).
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , , , , , , 

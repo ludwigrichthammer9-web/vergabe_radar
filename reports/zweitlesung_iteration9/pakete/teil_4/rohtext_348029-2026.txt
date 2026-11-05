@@ -1,0 +1,21 @@
+Bekanntmachung 348029-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Ausschreibung Gebäudereinigung Gesamtschule Mittelkreis
+Beschreibung (Description): Der Zweckverband Gesamtschule Mittelkreis schreibt die Unterhalts-, Grund- und Glasreinigung der Gesamtschule inkl. Sporthalle aus.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Ausschreibung Unterhalts- und Grundreinigung Gesamtschule Mittelkreis
+Beschreibung (Description): Der Zweckverband Gesamtschule Mittelkreis schreibt die Unterhalts- und Grundreinigung der Gesamtschule inkl. Sporthalle aus.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Beschreibung der Optionen (OptionsDescription): Option auf Verlängerung um jeweils ein Jahr. Bei Ziehen der Option bleiben die Preise gleich und werden maximal durch eine Preisgleitklausel verändert. Die maximale Vertragslaufzeit beträgt fünf Jahre. Danach endet der Vertrag automatisch zum 31.07.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Ausschreibung Glasreinigung Gesamtschule Mittelkreis
+Beschreibung (Description): Der Zweckverband Gesamtschule Mittelkreis schreibt die Glasreinigung der Gesamtschule inkl. Sporthalle aus.
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2029-07-31
+Beschreibung der Optionen (OptionsDescription): Option auf Verlängerung um jeweils ein Jahr. Bei Ziehen der Option bleiben die Preise gleich und werden maximal durch eine Preisgleitklausel verändert. Die maximale Vertragslaufzeit beträgt fünf Jahre. Danach endet der Vertrag automatisch zum 31.07.2031
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

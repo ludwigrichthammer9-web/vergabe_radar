@@ -1,0 +1,37 @@
+Bekanntmachung 346929-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts-, Grund- und Glasreinigung an Wohn- und Geschäftsgebäuden der Strausberger Wohnungsbaugesellschaft mbH im Stadtgebiet
+Beschreibung (Description): Gegenstand des Vergabeverfahrens ist die Erbringung der Unterhalts-, Grund- und Glasreinigung für und im Namen der Strausberger Wohnungsbaugesellschaft mbH an und in Wohn- und Geschäftsgebäuden der Strausberger Wohnungsbaugesellschaft mbH im Stadtgebiet Strausberg durch einen qualifizierten Auftragnehmer. Das Vergabeverfahren umfasst die Lose I, II, III und IV. Den einzelnen Losen I bis IV sind die jeweils zu reinigenden Objekte gemäß jeweiliger Objektliste zugewiesen. Gegenstand der einzelnen Lose I bis IV sind jeweils Unterhaltsreinigungsleistungen in Eingangsbereichen (Haueingangstüren, Fußroste/Fußmatten, Eingangsbeleuchtung, Klingelanlage, Hausaushangs- und Briefkästen), Treppenhausbereichen (Treppen und Podeste einschließlich Tritt- und Setzstufen, Fußböden und Scheuerleisten, Handläufe, Licht- und Klingeltaster, Fensterbretter, Wände und Decken, Heizkörper, Treppenhausgeländer, Türen/Zargen einschließlich Seitenteile, Lampen), Aufzügen (sofern vorhanden, einschließlich Aufzugskabinen, Aufzugstüren, Türführungsschienen) und Kellergängen. Darüber hinaus sind Gegenstand der einzelnen Lose I bis IV jeweils Glasreinigungsleistungen (Treppenhausfenster, Fenster in den Kellergängen und Fenster in den zugänglichen Gemeinschaftsräumen, Hof- und Nebentüren, Glasschächte Aufzüge), Grundreinigungsleistungen (Fußbodenbeläge im Treppenhaus und Aufzug) und Sonderreinigungsleistungen. Die Reinigungsleistungen sind turnusmäßig in Woche, Monat, Quartal, Halbjahr oder Jahr gemäß Leistungsverzeichnis durchzuführen. Sonderreinigungsleistungen sind bei Bedarf auszuführen. Der Vertrag bzw. die Verträge beginnen am 01.07.2026 und enden am 30.06.2028. Es ist eine zweimalige Verlängerung der Vertragslaufzeit(en) um jeweils 1 Jahr vorgesehen.
+Hinweis (Note): Der Zuschlag wird auf die insgesamt wirtschaftlichste Kombination aller Lose unter Berücksichtigung der Vorgaben zur Loslimitierung erteilt. Ist das Angebot eines Bieters in mehr Losen als der angegebenen Höchstzahl der Lose das wirtschaftlichste Angebot, wird die unter Berücksichtigung der Rangfolge wirtschaftlichste Kombination aller Lose ermittelt. In jedem Fall erhält dieser Bieter solche Lose, in denen sein Angebot das wirtschaftlichste ist. Die Differenzen zum jeweils nächstgünstigen Angebot werden ermittelt; hierbei bleiben Differenzen solcher Angebote unberücksichtigt, die von Bietern eingereicht wurden, die bereits in mehr Losen das wirtschaftlichste Angebot haben als der angegebenen Höchstzahl. Der Zuschlag wird auf die insgesamt wirtschaftlichste Kombination aller Lose erteilt. Als Beispiel für die methodische Vorgehensweise bei der Loslimitierung/Loskombination siehe Anlage 9.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los I
+Beschreibung (Description): Gegenstand des Loses 1 ist die Erbringung der Unterhalts-, Grund- und Glasreinigung für und im Namen der Strausberger Wohnungsbaugesellschaft mbH an und in Wohn- und Geschäftsgebäuden der Strausberger Wohnungsbaugesellschaft mbH im Stadtgebiet Strausberg. Die in diesem Los jeweils zu reinigenden Objekte ergeben sich aus der Objektliste. Die Objektliste ist in Aufgänge unterteilt, in denen der komplette Aufgang zu reinigen ist und in denen die Reinigung auf einzelnen Etagen erfolgt. Umfang der Unterhaltsreinigung: Bodenfläche Treppenhäuser 7.370,00 m2, Bodenfläche Kellergänge 2.861,65 m2, Bodenfläche Aufzüge 17,60 m2, Spiegelfläche Aufzüge 12,34 m2. Umfang Glasreinigung: Fensterflächen 1.202,29 m2. Umfang Grundreinigung: Bodenfläche Treppenhäuser und Aufzüge 7.387,60 m2. Sonderreinigung bei Bedarf.
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2028-06-30
+Beschreibung der Optionen (OptionsDescription): Es wird eine zweimalige Verlängerung der Vertragslaufzeit um jeweils 1 Jahr vereinbart, sofern nicht der Auftraggeber mit einer Frist von drei Monaten vor Ablauf der jeweiligen Vertragslaufzeit die Kündigung erklärt.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los II
+Beschreibung (Description): Gegenstand des Loses 2 ist die Erbringung der Unterhalts-, Grund- und Glasreinigung für und im Namen der Strausberger Wohnungsbaugesellschaft mbH an und in Wohn- und Geschäftsgebäuden der Strausberger Wohnungsbaugesellschaft mbH im Stadtgebiet Strausberg. Umfang der Unterhaltsreinigung: Bodenfläche Treppenhäuser 8.019,98m2, Bodenfläche Kellergänge 1.992,50 m2, Bodenfläche Aufzüge 25,60 m2, Spiegelfläche Aufzüge 46,08 m2. Umfang Glasreinigung: Fensterflächen 380,30 m2, Glasschachtflächen Aufzüge 962,88 m2. Umfang Grundreinigung: Bodenfläche Treppenhäuser und Aufzüge 8.045,58 m2. Sonderreinigung bei Bedarf.
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2028-06-30
+Beschreibung der Optionen (OptionsDescription): Es wird eine zweimalige Verlängerung der Vertragslaufzeit um jeweils 1 Jahr vereinbart, sofern nicht der Auftraggeber mit einer Frist von drei Monaten vor Ablauf der jeweiligen Vertragslaufzeit die Kündigung erklärt.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los III
+Beschreibung (Description): Gegenstand des Loses 3 ist die Erbringung der Unterhalts-, Grund- und Glasreinigung für und im Namen der Strausberger Wohnungsbaugesellschaft mbH an und in Wohn- und Geschäftsgebäuden der Strausberger Wohnungsbaugesellschaft mbH im Stadtgebiet Strausberg. Die in diesem Los jeweils zu reinigenden Objekte ergeben sich aus der Objektliste. Umfang der Unterhaltsreinigung: Bodenfläche Treppenhäuser 2.909,80 m2, Bodenfläche Kellergänge 1.068,28 m2, Bodenfläche Aufzüge 11,20 m2, Spiegelfläche Aufzüge 8,40 m2. Umfang Glasreinigung: Fensterflächen 383,68 m2. Umfang Grundreinigung: Bodenfläche Treppenhäuser und Aufzüge 2.921,00 m2. Sonderreinigung bei Bedarf.
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2028-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los IV
+Beschreibung (Description): Gegenstand des Loses 4 ist die Erbringung der Unterhalts-, Grund- und Glasreinigung für und im Namen der Strausberger Wohnungsbaugesellschaft mbH an und in Wohn- und Geschäftsgebäuden der Strausberger Wohnungsbaugesellschaft mbH im Stadtgebiet Strausberg. Die in diesem Los jeweils zu reinigenden Objekte ergeben sich aus der Objektliste. Umfang der Unterhaltsreinigung: Bodenfläche Treppenhäuser 7.771,04 m2, Bodenfläche Kellergänge 2.208,01 m2, Bodenfläche Aufzüge 46,12 m2, Spiegelfläche Aufzüge 75,20 m2. Umfang Glasreinigung: Fensterflächen 585,20 m2, Glasschachtflächen Aufzüge 1.504,50 m2. Umfang Grundreinigung: Bodenfläche Treppenhäuser und Aufzüge 7.817,16 m2. Sonderreinigung bei Bedarf.
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2028-06-30
+Beschreibung der Optionen (OptionsDescription): Es wird eine zweimalige Verlängerung der Vertragslaufzeit um jeweils 1 Jahr vereinbart, sofern nicht der Auftraggeber mit einer Frist von drei Monaten vor Ablauf der jeweiligen Vertragslaufzeit die Kündigung erklärt.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

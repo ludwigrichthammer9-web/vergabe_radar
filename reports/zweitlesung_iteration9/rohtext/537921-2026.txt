@@ -1,0 +1,38 @@
+Bekanntmachung 537921-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung
+Beschreibung (Description): Ausführung der Unterhalts-, Grund- und Glasreinigung in verschiedenen städtischen Gebäuden
+Hinweis (Note): Nachweise, die nach der jeweiligen Liste unter I Wertungsbedingungen und Zuschlagskriterien je Los auf der letzten Seite, mit dem Angebot einzureichen sind, werden nicht nachgefordert. Das Fehlen führt zum Ausschluss des Angebots.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Los I: Unterhalts- und Grundreinigung in 6 Gebäuden auf einer Fläche von ca. 14.869,13 m²
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2030-09-30
+Beschreibung der Optionen (OptionsDescription): V Allgemeine Vertragsbedingungen Nr. 4 Der Auftragsstart ist für Los I - Los IV der 01. Oktober 2026. Der Reinigungsvertrag wird für die Dauer von 4 Jahren ab Auftragsstart abgeschlossen und kann erstmals zum Ablauf des vierten Jahres mit einer Frist von 3 Monaten gekündigt werden. Nach Ablauf des 4. Jahres kann der Vertrag mit einer Frist von 3 Monaten zum Monatsende gekündigt werden. Der Vertrag verlängert sich somit jeweils um ein Jahr, wenn er nicht rechtzeitig gekündigt wird. Innerhalb von 6 Monaten nach Beginn des Vertragsverhältnisses (Probezeit) kann der Vertrag von beiden Seiten mit einer Frist von 4 Wochen zum Monatsende gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Los II: Unterhalts- und Grundreinigung in 5 Gebäuden auf einer Fläche von ca. 18.002,58 m²
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2030-09-30
+Beschreibung der Optionen (OptionsDescription): V Allgemeine Vertragsbedingungen Nr. 4 Der Auftragsstart ist für Los I - Los IV der 01. Oktober 2026. Der Reinigungsvertrag wird für die Dauer von 4 Jahren ab Auftragsstart abgeschlossen und kann erstmals zum Ablauf des vierten Jahres mit einer Frist von 3 Monaten gekündigt werden. Nach Ablauf des 4. Jahres kann der Vertrag mit einer Frist von 3 Monaten zum Monatsende gekündigt werden. Der Vertrag verlängert sich somit jeweils um ein Jahr, wenn er nicht rechtzeitig gekündigt wird. Innerhalb von 6 Monaten nach Beginn des Vertragsverhältnisses (Probezeit) kann der Vertrag von beiden Seiten mit einer Frist von 4 Wochen zum Monatsende gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Unterhalts- und Grundreinigung
+Beschreibung (Description): Los III: Unterhalts- und Grundreinigung in 18 Gebäuden auf einer Fläche von ca. 8.875,34 m²
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2030-09-30
+Beschreibung der Optionen (OptionsDescription): V Allgemeine Vertragsbedingungen Nr. 4 Der Auftragsstart ist für Los I - Los IV der 01. Oktober 2026. Der Reinigungsvertrag wird für die Dauer von 4 Jahren ab Auftragsstart abgeschlossen und kann erstmals zum Ablauf des vierten Jahres mit einer Frist von 3 Monaten gekündigt werden. Nach Ablauf des 4. Jahres kann der Vertrag mit einer Frist von 3 Monaten zum Monatsende gekündigt werden. Der Vertrag verlängert sich somit jeweils um ein Jahr, wenn er nicht rechtzeitig gekündigt wird. Innerhalb von 6 Monaten nach Beginn des Vertragsverhältnisses (Probezeit) kann der Vertrag von beiden Seiten mit einer Frist von 4 Wochen zum Monatsende gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Glasreinigung
+Beschreibung (Description): Los IV: Glasreinigung in 31 Gebäuden auf einer Fläche von ca. 13.441,89 m²
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2030-09-30
+Beschreibung der Optionen (OptionsDescription): V Allgemeine Vertragsbedingungen Nr. 4 Der Auftragsstart ist für Los I - Los IV der 01. Oktober 2026. Der Reinigungsvertrag wird für die Dauer von 4 Jahren ab Auftragsstart abgeschlossen und kann erstmals zum Ablauf des vierten Jahres mit einer Frist von 3 Monaten gekündigt werden. Nach Ablauf des 4. Jahres kann der Vertrag mit einer Frist von 3 Monaten zum Monatsende gekündigt werden. Der Vertrag verlängert sich somit jeweils um ein Jahr, wenn er nicht rechtzeitig gekündigt wird. Innerhalb von 6 Monaten nach Beginn des Vertragsverhältnisses (Probezeit) kann der Vertrag von beiden Seiten mit einer Frist von 4 Wochen zum Monatsende gekündigt werden.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

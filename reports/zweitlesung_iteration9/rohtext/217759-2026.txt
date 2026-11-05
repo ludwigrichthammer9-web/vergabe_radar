@@ -1,0 +1,13 @@
+Bekanntmachung 217759-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Glasreinigung
+Beschreibung (Description): Bei der Fördern & Wohnen AöR (F&W) besteht der Bedarf an einer Rahmenvereinbarung mit einem Vertragspartner über die Glasreinigung (Außen- & Innenglas) an ihren Standorten. Hierzu ist die Leistung zusammengetragen und zu dieser Ausschreibung zusammengefasst worden. Alle zu reinigenden Flächen sind erfasst und mit einem der Nutzung entsprechenden Reinigungsstandard und -zyklus ( 2 x jährlich) hinterlegt. Ziel der Ausschreibugn ist der Abschhluss einer Rahmenvereinbarung mit einer Laufzeit von zwei Jahren mit optionaler Verlängerung um 2 x 1 Jahr.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Glasreinigung
+Beschreibung (Description): Bei der Fördern & Wohnen AöR (F&W) besteht der Bedarf an einer Rahmenvereinbarung mit einem Vertragspartner über die Glasreinigung (Außen- & Innenglas) an ihren Standorten. Hierzu ist die Leistung zusammengetragen und zu dieser Ausschreibung zusammengefasst worden. Alle zu reinigenden Flächen sind erfasst und mit einem der Nutzung entsprechenden Reinigungsstandard und -zyklus ( 2 x jährlich) hinterlegt. Ziel der Ausschreibugn ist der Abschhluss einer Rahmenvereinbarung mit einer Laufzeit von zwei Jahren mit optionaler Verlängerung um 2 x 1 Jahr.
+Beginn (StartDate): 2026-03-26
+Enddatum (EndDate): 2028-02-28
+Beschreibung der Optionen (OptionsDescription): Verlängerung um 2 mal 1 Jahr möglich
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

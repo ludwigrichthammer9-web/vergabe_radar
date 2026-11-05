@@ -1,0 +1,33 @@
+Bekanntmachung 489062-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): SL 21-26O - Reinigungsdienstleistungen an den Standorten Stralsund, Ribnitz-Damgarten und Bergen auf Rügen des Eigenbetrieb Jobcenter
+Beschreibung (Description): Der Eigenbetrieb Jobcenter Vorpommern-Rügen beabsichtigte die Reinigungsdienstleistungen Unterhaltsreinigung - Grundreinigung und Sonderleistungen bei Bedarf für die Standorte Stralsund, Bergen auf Rügen und Ribnitz-Damgarten an einen externen Dienstleister zu vergeben.
+Hinweis (Note): #Bekanntmachungs-ID: CXVHYD3YT1NMSPQS# 1. Das Preisblatt je Los ( Anlage 4) ist auszufüllen, zusätzlich zum Formblatt 633 Angebotsschreiben). 2. Die Anlage 3 - Raumbuch ist für jedes Los einzeln auszufüllen. 3. Die Anlage 5 - Firmendarstellung ist für jedes Los einzeln auszufüllen. 4. Die Anlage 7 - Stundenverrechnungssatz ist für jedes Los einzeln auszufüllen. 5. Wertungskriterien sind zusammengefasst: Preis zu 50%; Service/ Qualität zu 40%; Umwelt/ Nachhaltigkeit zu 10% (alle Details siehe Anlage 6 - Bewertungsmatrix und Formblatt 227-Zuschlagskriterien) 6. Abweichend von den Bewerbungsbedingungen (632 EU) Nr. 3.7 werden auch Rabatte gewertet, die unter der Bedingung der gemeinsamen Vergabe von mehreren Losen gewährt und in einer Anlage zum Angebotsschreiben gemacht werden.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1 - Standort Stralsund
+Beschreibung (Description): Reinigungsdienstleistungen Unterhaltsreinigung - Grundreinigung und Sonderleistungen bei Bedarf
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2030-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): 1 Jahr Verlängerung möglich
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2 - Standort Ribnitz-Damgarten
+Beschreibung (Description): Reinigungsdienstleistungen Unterhaltsreinigung - Grundreinigung und Sonderleistungen bei Bedarf
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2030-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): 1 Jahr Verlängerung möglich
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3 - Standort Bergen auf Rügen
+Beschreibung (Description): Reinigungsdienstleistungen Unterhaltsreinigung - Grundreinigung und Sonderleistungen bei Bedarf
+Beginn (StartDate): 2027-01-01
+Enddatum (EndDate): 2029-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Verlängerung (Renewal): 2 Jahre Verlängerung möglich
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , , 

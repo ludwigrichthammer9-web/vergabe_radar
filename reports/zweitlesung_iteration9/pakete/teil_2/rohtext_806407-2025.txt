@@ -1,0 +1,60 @@
+Bekanntmachung 806407-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Grundreinigung in Schulen, Sporthallen und sonstigen öffentlichen Gebäuden des Kreises Dithmarschen - Ausschreibung in 6 Losen
+Beschreibung (Description): Der Kreis Dithmarschen beabsichtigt die Leistungen der Unterhalts- und Grundreinigung für seine Liegenschaften zum 01.01.2026 nach VgV / GWB zu vergeben. Die Vergabe erfolgt nach Auftragslosen wie nachfolgend beschrieben.
+Hinweis (Note): 1. Der Auftraggeber wird vor Erteilung des Zuschlages ab einem Auftragswert von 30.000 € ohne Umsatzsteuer eine Abfrage beim Wettbewerbsregister des Bundes vornehmen. 2. Reinigung Objekt Feuerwehrgerätehaus Hemmingstedt voraussichtlich nur bis 31.12.2027 3. Es wird empfohlen, sich vor der Abgabe eines Angebotes von dem Umfang und der Art der Ausführung, von der Beschaffenheit, den örtlichen Gegebenheiten und Verhältnissen in den Gebäuden zu überzeugen und bei der Kalkulation hierauf Rücksicht zu nehmen. Forderungen aus Unkenntnis der Objekte können nicht berücksichtigt werden. Auf Anfrage ist eine Objektbesichtigung möglich. Weitere Informationen entnehmen Sie bitte der Anlage Losaufteilung, Adressen der Objekte und Ansprechpartner für Besichtigungen. 4. Selbständige Besichtigung Informationspavillon Dusenddüwelswarf ohne Terminvereinbarung.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1 - Unterhalts und Grundreinigung Kreishaus Heide, Stettiner Straße 30, 25746 Heide und Büropark Westküste, Rungholtstraße 9, 25746 Heide
+Beschreibung (Description): Mit Los 1 werden die Dienstleistungen für Unterhalts- und Grundreinigung in den Gebäuden Kreishaus Heide mit einer Gesamtfläche von ca. 10.826 m² und Büropark Westküste mit einer Gesamtfläche von ca. 3.958,57 m² ausgeschrieben.
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich danach jeweils um ein Jahr, wenn er nicht mit einer Frist von 6 Monaten gekündigt wurde, maximal um 2 Jahre. Der Vertrag endet spätestens am 31.12.2030, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2 - Unterhalts- und Grundreinigung in den Gebäuden Werner-Heisenberg-Gymnasium mit Sporthalle, Rosenstraße 41, 25746 Heide, Gesundheitsamt im Westküstenklinikum, Esmarchstraße 50, 25746 Heide, Ärzte- und Gesundheitszentrum, Esmarchstraße 51-53, 25746 Heide und Büro Außenstelle Landvogt-Johannsen-Straße 11, 25746 Heide
+Beschreibung (Description): Mit Los 2 werden die Dienstleistungen für die Unterhalts- und Grundreinigung in folgenden Gebäuden ausgeschrieben: WHG: Fläche Grundreinigung 7.019,39 m² + 3.314,67 m² Sporthalle = 10.334,06 m² WHG: Fläche 8.073,54 m² Unterhaltsreinigung + 3.314,67 m² Sporthalle = 10.334,06 m² Kreisgesundheitsamt: Unterhaltsreinigung 891,39 m² Ärzte- und Gesundheitszentrum: Unterhaltsreinigung 258,02 m² Außenstelle Landvogt-Johannsen-Straße: Unterhaltsreinigung 607,70m²
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich danach jeweils um ein Jahr, wenn er nicht mit einer Frist von 6 Monaten gekündigt wurde, maximal um 2 Jahre. Der Vertrag endet spätestens am 31.12.2030, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3 - Unterhalts- und Grundreinigung Meldorfer Gelehrtenschule (MGS), An den Anlagen 16, 25704 Meldorf, Förderzentrum Astrid-Lindgren-Schule (ALS) Standort Altbau, Escher Weg 69, und Standort Neubau Bruhnstraße 25, 25704 Meldorf
+Beschreibung (Description): Mit Los 3 werden die Dienstleistungen für die Unterhalts- und Grundreinigung in folgenden Gebäuden ausgeschrieben: MGS: Grundreinigung 6.055,01 m² + 1.194,52 m² Sporthalle = 7.249,53 m² MGS: Unterhaltsreinigung 6.395,09 m² + 1.191,52 m² Sporthalle = 7.249,53 m² ALS Altbau: Grundreinigung 2.608,72 m² + 591,77 m² Sporthalle = 3.200,49 m² ALS Altbau: Unterhaltsreinigung 2.608,72 m² + 591,77 m² = 3.200,49 m² ALS Neubau: Grundreinigung 1.660,54 m² ALS Neubau: Unterhaltsreinigung 1.660,54 m²
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich danach jeweils um ein Jahr, wenn er nicht mit einer Frist von 6 Monaten gekündigt wurde, maximal um 2 Jahre. Der Vertrag endet spätestens am 31.12.2030, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los 4 - Unterhalts- und Grundreinigung Ausbildungszentrum Meldorf 1, Bojestraße 3, 25704 Meldorf, Wohnheim Meldorf, Marschstraße 30d, 25704 Meldorf, Dithmarscher Landesmuseum, Bütjestraße 2-4, 25704 Meldorf, Informationspavillon an der Dusenddüwelswarf, Dehling, 25704 Epenwöhrden und Feuerwehrgerätehaus, Kirchspielsweg 9, 25770 Hemmingstedt (nur bis ca. 31.12.2027)
+Beschreibung (Description): Mit Los 4 werden die Dienstleistungen für die Unterhalts- und Grundreinigung in folgenden Gebäuden ausgeschrieben: AZM: Grundreinigung 862,65 m² AZM: Unterhaltsreinigung: 862,65 m² Wohnheim: Grundreinigung 458,02 m² Wohnheim: Unterhaltsreinigung 880,49 m² DLM: Grundreinigung 4.972,08 m² DLM: Unterhaltsreinigung 5.495,20 m² Infopavillon D.: Unterhaltsreinigung mit Glasreinigung! 18 m² Feuerwehrgerätehaus H.: Unterhaltsreinigung 510,67 m² Hinweise: -Das Informationspavillon kann ohne Terminvereinbarung selbständig besichtigt werden. -Reinigung Feuerwehrgerätehaus Hemmingstedt voraussichtlich nur bis 31.12.2027.
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich danach jeweils um ein Jahr, wenn er nicht mit einer Frist von 6 Monaten gekündigt wurde, maximal um 2 Jahre. Der Vertrag endet spätestens am 31.12.2030, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Los 5 - BerufsBildungsZentrum Dithmarschen (BBZ) - Standort Meldorf mit Sporthalle und Neubau, Friedrichhöfer Straße 31, 25704 Meldorf und Standort Heide mit Sporthalle, Waldschlößchenstraße 48-52, 25746 Heide
+Beschreibung (Description): Mit Los 5 werden die Dienstleistungen für die Unterhalts- und Grundreinigung in folgenden Gebäuden ausgeschrieben: BBZ M.: Grundreinigung 16.205,51 m² + 1.657,04 m² Sporthalle = 17.862,55 m² BBZ M: Unterhaltsreinigung 16.205,51 m² + 1.657,04 m² Sporthalle = 17.862,55 m² BBZ H: Grundreinigung 9.065,05 m² + 1.671,26 m² = 10.588,28 m² BBZ H: Unterhaltsreinigung 8.917,02 m² + 1.671,26 m² = 10.588,28 m² BBZ H. Neubau: Grundreinigung 6.828,55 m² BBZ H. Neubau: Unterhaltsreinigung 6.828,55 m²
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich danach jeweils um ein Jahr, wenn er nicht mit einer Frist von 6 Monaten gekündigt wurde, maximal um 2 Jahre. Der Vertrag endet spätestens am 31.12.2030, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): Los 6 - Gymnasium Marne mit Sporthalle, Bürgermeister-Plambeck-Straße 9, 25709 Marne, Feuerwehrtechnische Zentrale (FTZ), Am Sportplatz 8, 25693 St. Michaelisdonn und Sozialzentrum Süd, Röntgenstraße 2, 25541 Brunsbüttel
+Beschreibung (Description): Mit Los 6 werden die Dienstleistungen für die Unterhalts- und Grundreinigung in folgenden Gebäuden ausgeschrieben: GM: Grundreinigung 4.586,68 m² + 1.020,08 m² = 5.603,76 m² GM: Unterhaltsreinigung 4.586,68 m² + 1.020,08 m² = 5.603,76 m² FTZ: Grundreinigung 138,33 m² FTZ: Unterhaltsreinigung 827,16 m² Außenstelle Sozialzentrum Süd: Unterhaltsreinigung 436,98 m²
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2028-12-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich danach jeweils um ein Jahr, wenn er nicht mit einer Frist von 6 Monaten gekündigt wurde, maximal um 2 Jahre. Der Vertrag endet spätestens am 31.12.2030, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

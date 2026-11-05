@@ -1,0 +1,86 @@
+Bekanntmachung 105754-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Glas- und Rahmenreinigung in Objekten der Stadt Halle (Saale)
+Beschreibung (Description): Glas- und Rahmenreinigung in Objekten der Stadt Halle (Saale) 2026-2027
+Hinweis (Note): Die Vergabeunterlagen werden ausschließlich bereitgestellt auf der elektronischen Vergabeplattform: https://www.ausschreibung.swh.de/NetServer/. Die Verfahrenskommunikation wird ebenfalls ausschließlich elektronisch über die Vergabeplattform abgewickelt. Fragen sind ausschließlich hierüber an die Vergabestelle zu richten. Bieterinformationen werden ebenfalls in diesem Portal in elektronischer Form zur Verfügung gestellt. Eine Registrierung auf der Vergabeplattform ist freiwillig, birgt jedoch bei Nichtregistrierung ein Risiko für den Bieter, ein Angebot auf der Grundlage veralteter Vergabeunterlagen erstellt zu haben und daher im weiteren Verlauf vom Verfahren ausgeschlossen zu werden.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1
+Beschreibung (Description): 25 Objekte mit einer Jahresreinigungsfläche von ca. 16.730 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): open-nw
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2
+Beschreibung (Description): 18 Objekte mit einer Jahresreinigungsfläche von ca. 12.705 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): open-nw
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3
+Beschreibung (Description): 14 Objekte mit einer Jahresreinigungsfläche von ca. 17.138 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Los 4
+Beschreibung (Description): 20 Objekte mit einer Jahresreinigungsfläche von ca. 15.832 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Los 5
+Beschreibung (Description): 10 Objekte mit einer Jahresreinigungsfläche von ca. 14.304 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): Los 6
+Beschreibung (Description): 17 Objekte mit einer Jahresreinigungsfläche von ca. 14.418 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 7 der Liste: LOT-0007
+Titel (Name): Los 7
+Beschreibung (Description): 19 Objekte mit einer Jahresreinigungsfläche von ca. 15.382 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 8 der Liste: LOT-0008
+Titel (Name): Los 8
+Beschreibung (Description): 15 Objekte mit einer Jahresreinigungsfläche von ca. 15.610 m²
+Hinweis (Note): - Rechnungsstellung: monatlich; - Zahlung: 14 Kalendertage 2% Skonto, 30 Kalendertage netto
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Beschreibung der Optionen (OptionsDescription): Die HWS kann Ihrerseits den Vertrag einseitig um ein weiteres Jahr bis zum 31.12.2028 verlängern, sofern diese Verlängerung spätestens 3 Monate vor Ende des Vertrages angekündigt ist.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

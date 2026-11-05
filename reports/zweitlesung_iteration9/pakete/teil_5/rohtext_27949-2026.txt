@@ -1,0 +1,30 @@
+Bekanntmachung 27949-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Glas- / Unterhaltsreinigung im Mainova Verbund
+Beschreibung (Description): Glas- / Unterhaltsreinigung auf den Liegenschaften im Mainova Verbund
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1 - Unterhaltsreinigung für die allgemeine Liegenschaften
+Beschreibung (Description): Los 1 - Unterhaltsreinigung für die allgemeine Liegenschaften Hier den Gesamtbetrag eintragen. Die Einzelpreise sind in den Kalkulationsunterlagen einzutragen.
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2034-02-28
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 8
+Beschreibung der Verlängerung (Renewal): Der Vertrag verlängert sich über die Erstlaufzeit hinaus um jeweils ein weiteres Jahr, längstens bis zu einer Gesamtlaufzeit von acht Jahren.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2 - Glasreinigung für die allgemeine Liegenschaften
+Beschreibung (Description): Los 2 - Glasreinigung für die allgemeine Liegenschaften Hier den Gesamtbetrag eintragen. Die Einzelpreise sind in den Kalkulationsunterlagen einzutragen.
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2034-02-28
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 8
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3 - Unterhaltsreinigung und Glasreinigung für die Kraftwerksliegenschaften
+Beschreibung (Description): Los 3 - Unterhaltsreinigung und Glasreinigung für die Kraftwerksliegenschaften Hier den Gesamtbetrag eintragen. Die Einzelpreise sind in den Kalkulationsunterlagen einzutragen.
+Beginn (StartDate): 2026-03-01
+Enddatum (EndDate): 2034-02-28
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 8
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

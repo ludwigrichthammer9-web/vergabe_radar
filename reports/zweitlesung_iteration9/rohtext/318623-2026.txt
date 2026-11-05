@@ -1,0 +1,13 @@
+Bekanntmachung 318623-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Abschluss Rahmenvereinbarung Gebäudereinigung für die Liegenschaften des BwDLZ Aachen im Standortbereich Aachen
+Beschreibung (Description): 6002992433-BwDLZ Aachen
+Hinweis (Note): Die zur Nutzung der e-Vergabe-Plattform einzusetzenden elektronischen Mittel sind die Clients der e-Vergabe-Plattform und die elektronischen Werkzeuge der e-Vergabe-Plattform. Diese werden über die mit "Anwendungen" bezeichneten Menüpunkte auf www.evergabe-online.de zur Verfügung gestellt. Hierzu gehören für Unternehmen der Angebots-Assistenten (AnA) und der Signatur-Client für Bieter (Sig-Client) für elektronische Signaturen sowie das LV-Cockpit (www.lv-cockpit.de). Die technischen Parameter zur Einreichung von Teilnahmeanträgen, Angeboten und Interessensbestätigungen verwendeten elektronischen Mittel sind durch die Clients der e-Vergabe-Plattform und die elektronischen Werkzeuge der e-Vergabe-Plattform bestimmt. Verwendete Verschlüsselungs- und Zeiterfassungsverfahren sind Bestandteil der Clients der e-Vergabe-Plattform sowie der Plattform selber und der elektronischen Werkzeuge der e-Vergabe-Plattform. Weitergehende Informationen stehen auf https://www.evergabe-online.info bereit.
+
+## Los 1 der Liste: LOT-0000
+Titel (Name): Abschluss Rahmenvereinbarung Gebäudereinigung für die Liegenschaften des BwDLZ Aachen im Standortbereich Aachen
+Beschreibung (Description): Gebäudereinigung für die Liegenschaften des BwDLZ Aachen im Standortbereich Aachen: - Lützow-Kaserne einfache Reinigungsfläche gesamt: 33.786,79m² - Theodor-Körner-Kaserne einfache Reinigungsfläche gesamt: 16.100,55m² - Dr. Leo Löwenstein-Kaserne einfache Reinigungsfläche gesamt: 29.531,49m² - Offizierheim Gut Neuhaus einfache Reinigungsfläche gesamt: 1.557,13m² - Dienststellengebäude BwDLZ Aachen Debyestr einfache Reinigungsfläche gesamt: 3.130,40m²
+Beginn (StartDate): 2026-08-01
+Enddatum (EndDate): 2030-07-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

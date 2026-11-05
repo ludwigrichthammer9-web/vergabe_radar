@@ -1,0 +1,60 @@
+Bekanntmachung 555604-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): 26-0163 Gebäudereinigung in städtischen Objekten - Reinigungsarbeiten in städtischen Objekten - Kernstadt I / Detmerode / Westhagen
+Beschreibung (Description): Reinigungsarbeiten in städtischen Objekten in den Gebieten Kernstadt I, Detmerode und Westhagen.
+Hinweis (Note): #Bekanntmachungs-ID: CXP4YD2MQSE#
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Kernstadt I - Gebäudereinigung
+Beschreibung (Description): -
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2030-10-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Eine Verlängerung um zweimal ein Jahr ist möglich.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Kernstadt I - Glasreinigung
+Beschreibung (Description): -
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2030-10-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Eine Verlängerung um zweimal ein Jahr ist möglich.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Westhagen - Gebäudereinigung
+Beschreibung (Description): -
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2030-10-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Eine Verlängerung um zweimal ein Jahr ist möglich.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Westhagen - Glasreiniung
+Beschreibung (Description): -
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2030-10-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Eine Verlängerung um zweimal ein Jahr ist möglich.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 5 der Liste: LOT-0005
+Titel (Name): Detmerode - Gebäudereinigung
+Beschreibung (Description): -
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2030-10-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Eine Verlängerung um zweimal ein Jahr ist möglich.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 6 der Liste: LOT-0006
+Titel (Name): Detmerode - Glasreinigung
+Beschreibung (Description): -
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2030-10-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Eine Verlängerung um zweimal ein Jahr ist möglich.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

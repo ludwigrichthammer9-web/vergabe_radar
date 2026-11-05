@@ -1,0 +1,21 @@
+Bekanntmachung 251654-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Glasreinigung für die Justizgebäude in der Stadelbergerstr. 5 und Fürstenfelderstr. 40a in 82256 Fürstenfeldbruck
+Beschreibung (Description): Die Unterhaltsreinigung in den oben genannten Justizgebäuden umfasst die textilen und nichttextilen Fußbodenbeläge, sanitären Anlagen sowie Gegenstände der Raumausstattung und Raumeinrichtung. Die Glasreinigung in den oben genannten Justizgebäuden umfasst das allseitige Reinigen sämtlicher Glasflächen (Brandschutztüren, Pfortentrennwände und Oberlichten) der Rahmen, Stöcke (innen und außen), sowie der Fensterbänke. Die vertraglich durchzuführende Reinigung der Gebäude gliedert sich daher in Unterhaltsreinigung, Glasreinigung und Regiereinigung. Zu reinigende Bodenfläche: 5.121,03 m² Zu reinigende Glasfläche: 1.059,34 m²
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung
+Beschreibung (Description): Die Unterhaltsreinigung in den oben genannten Justizgebäuden umfasst die textilen und nichttextilen Fußbodenbeläge, sanitären Anlagen sowie Gegenstände der Raumausstattung und Raumeinrichtung.
+Beginn (StartDate): 2026-05-01
+Enddatum (EndDate): 2031-04-30
+Beschreibung der Optionen (OptionsDescription): siehe Produkte/Leistungen
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glasreinigung
+Beschreibung (Description): Die Glasreinigung in den oben genannten Justizgebäuden umfasst das allseitige Reinigen sämtlicher Glasflächen (Brandschutztüren, Pfortentrennwände und Oberlichten) der Rahmen, Stöcke (innen und außen), sowie der Fensterbänke.
+Beginn (StartDate): 2026-05-01
+Enddatum (EndDate): 2031-04-30
+Beschreibung der Optionen (OptionsDescription): keine Optionen
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

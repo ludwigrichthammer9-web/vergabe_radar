@@ -1,0 +1,36 @@
+Bekanntmachung 728855-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung in Objekten der Stadt Netphen
+Beschreibung (Description): Die Ausschreibung bezieht sich auf die Unterhalts-, Grund-, und Vertretungsreinigungsleistungen sowie Glas-/Rahmenreinigungen an und in Objekten der der Stadt Netphen. Die Leistungen fallen in drei Losen an. Die Aufteilung der Lose ist unter mengenmäßigen und fachlichen Gesichtspunkten erfolgt. Details zu Intervallen, Arten und Umfängen der zu erbringenden Leistungen sind der Leistungsbeschreibung nebst Anlagen insbesondere den Preisblättern zu entnehmen. Der Auftraggeber behält sich vor, die zu reinigenden Flächen und Intervalle ohne neues Vergabeverfahren im Rahmen des § 132 GWB Abs. 2 bis 4 zu erhöhen und/oder zu reduzieren. Die Abgabe von Angeboten kann für ein Los, mehrere oder alle Lose erfolgen. Innerhalb der Lose sind jedoch alle Objekte mit allen Einzelleistungen anzubieten. Die Vergabe der Leistungen erfolgt je Los. Die Einzelvergabe von Objekten ist nicht vorgesehen.
+Hinweis (Note): #Bekanntmachungs-ID: CXP4Y3NMY9K#
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Los 1: Unterhalts-/Grund-/Vertretungsreinigung
+Beschreibung (Description): Los 1 umfasst Unterhalts-, Grund- und Vertretungsreinigungsarbeiten. Die Objekte verfügen über eine Grundfläche von ca. 15.000 m² und einer jährlichen Reinigungsfläche im Rahmen der Unterhaltsreinigung von ca. 1.700.000 m². Zudem ca. 900 Stunden jährlich für Grund- und Vertretungsreinigungen.
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit wegen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Los 2: Unterhalts-/Grundreinigung
+Beschreibung (Description): Los 2 umfasst Unterhalts- und Grundreinigungsarbeiten. Die Objekte verfügen über eine Grundfläche von ca. 17.500 m² und einer jährlichen Reinigungsfläche im Rahmen der Unterhaltsreinigung von ca. 1.900.000 m². Zudem ca. 600 Stunden jährlich für Grundreinigungen.
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit wegen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Los 3: Glas-/Rahmenreinigung
+Beschreibung (Description): Los 3 umfasst die Glas-/Rahmenreinigung in den Objekten der Stadt Netphen. Die Gesamtfläche der Glasflächen (einseitig gemessen, lichtes Rohbaumaß) beträgt ca. 8.800 m². Die Glas- /Rahmenreinigung erfolgt zweimal jährlich.
+Hinweis (Note): Für den Fall, dass ein Ausschreibungsgewinner innerhalb der vertraglich festgelegten Probezeit wegen Kündigung, Insolvenz oder aus anderem Grund endgültig ausfällt, behält sich der AG vor, die verbleibenden Leistungen den übrigen Bietern in der Reihenfolge des Ausschreibungsergebnisses bis Gesamtrang 5 auf der Grundlage ihrer Angebote anzutragen.
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2027-12-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Verlängerung (Renewal): Das Vertragsverhältnis verlängert sich danach maximal zweimal automatisch um jeweils ein weiteres Jahr, sofern nicht eine der Parteien zuvor mit einer Frist von 6 Monaten zum Monatsende gekündigt hat.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , 

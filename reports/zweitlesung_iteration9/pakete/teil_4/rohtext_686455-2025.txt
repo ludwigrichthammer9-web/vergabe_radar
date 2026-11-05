@@ -1,0 +1,36 @@
+Bekanntmachung 686455-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigungsleistungen gemeindeeigener Objekte
+Beschreibung (Description): Reinigungsleistungen gemeindeeigener Objekte
+Hinweis (Note): Der Auftraggeber verfährt nach der Vergabeverordnung (VgV) in Verbindung mit dem Gesetz gegen Wettberwerbsbeschränkung (GWB). . Vorgesehener Zeitablauf: Veröffentlichung: 17.07.2025 Submission: 02.09.2025 10 Uhr Bindefrist: 23.10.2025 Vertragsbeginn: 01.01.2026 . Der öffentliche Auftraggeber behält sich das Recht vor, den Auftrag auf der Grundlage der ursprünglichen Angebote zu vergeben, ohne Verhandlungen durchzuführen. . Der Auftraggeber stellt die Vergabeplattform in Koorperation mit dem Staatsanzeiger Baden-Württemberg / vergabe24.de zur Verfügung. Die Nutzungsbedingungen der Vergabeplattform (Staatsanzeiger Baden-Württemberg / vergabe24.de), Bestandteil der Vergabeunterlagen, hat der Bewerber / Bieter zu beachten. . Es besteht keine Pflicht des Bewerbers / Bieters sich auf der Vergabeplattform des Auftraggebers (Staatsanzeiger Baden-Württemberg / vergabe24.de) anzumelden. Die Vergabestelle empfiehlt dies jedoch, so dass der Bewerber / Bieter jederzeit über Nachschreiben der Vergabestelle bzw. geänderte Vergabeunterlagen informiert ist. Meldet sich der Bewerber / Bieter nicht auf der Vergabeplattform an, so ist der Bewerber / Bieter selbst für die Informationsbeschaffung über Nachschreiben der Vergabestelle bzw. geänderte Vergabeunterlagen verantwortlich, z.B. durch regelmäßige Überprüfung des Links auf die Vergabeunterlagen gemäß dieser Veröffentlichung im EU-Amtsblatt, siehe Link unter Rubrik -Auftragsunterlagen- (BT-15). Über diesen Link werden stets ALLE Versionen der Vergabeunterlagen zur Verfügung und aufgelistet. Der nicht auf der Vergabeplattform angemeldete Bewerber / Bieter ist alleinig dafür verantwortlich die gerade aktuellen Vergabeunterlagen auf der Vergabeplattform des Auftraggebers (Staatsanzeiger Baden-Württemberg / vergabe24.de) zu verwendenden. Orientierungshilfe bietet hierbei das Inhaltsverzeichnis und der Fragen-/Antwortenkatalog, jeweils im aktuellen Stand. . Für die Abgabe der Bewerbung (Teilnahmeantrag) / des Angebots ist die Anmeldung auf der Vergabeplattform (Staatsanzeiger Baden-Württemberg / vergabe24.de) des Auftraggebers zwingend notwendig, um die geforderte elektronische Abgabe der Bewerbung (Teilnahmeantrag) / des Angebots zu gewährleisten und den Bewerber / Bieter eindeutig zu identifizieren. Die Bewerbung (Teilnahmeantrag) / das Angebot sind ausschließlich elektronisch (in Textform, mit fortgeschrittener Signatur oder mit qualifizierter Signatur) über die eingerichtet Vergabeplattform (Staatsanzeiger Baden-Württemberg / vergabe24.de) einzureichen. Eine Abgabe der Bewerbung (Teilnahmeantrag) / des Angebots per E-Mail oder per Fax ist nicht möglich und hat den Ausschluss vom weiteren Verfahren zur Folge. . Weitere Details sind den Vergabeunterlagen zu entnehmen. Link zu den Zuschlagskriterien: https://acrobat.adobe.com/id/urn:aaid:sc:EU:41e106cc-c9b9-40fc-b8ca-07b0346a420f
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhalts- und Grundreinigung | OT Graben
+Beschreibung (Description): Unterhalts- und Grundreinigung in 10 Objekten
+Hinweis (Note): Die Durchführung der Leistungen hat gem. § 6 Abs. 2 VgV unabhängig von Ausführungs- und Lieferinteressen zu erfolgen. Siehe Zuschlagskriterien: https://acrobat.adobe.com/id/urn:aaid:sc:EU:41e106cc-c9b9-40fc-b8ca-07b0346a420f
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Es erfolgt zunächst die Beauftragung vom 01.01.2026 - 31.07.2028 mit der Option auf zweimalige Verlängerung um jeweils 1 Jahr (01.08.2028 -31.07.2029; 01.08.2029 -31.07.2030)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhalts- und Grundreinigung | OT Neudorf
+Beschreibung (Description): Unterhalts- und Grundreinigung in 5 Objekten
+Hinweis (Note): Die Durchführung der Leistungen hat gem. § 6 Abs. 2 VgV unabhängig von Ausführungs- und Lieferinteressen zu erfolgen. . Siehe Zuschlagskriterien: https://acrobat.adobe.com/id/urn:aaid:sc:EU:41e106cc-c9b9-40fc-b8ca-07b0346a420f
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Es erfolgt zunächst die Beauftragung vom 01.01.2026 - 31.07.2028 mit der Option auf zweimalige Verlängerung im jeweils 1 Jahr (01.08.2028 -31.07.2029; 01.08.2029 -31.07.2030)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Glas- und Rahmenreinigung ein mal im Jahr von 19 Objekten
+Hinweis (Note): Die Durchführung der Leistungen hat gem. § 6 Abs. 2 VgV unabhängig von Ausführungs- und Lieferinteressen zu erfolgen. . Siehe Zuschlagskriterien: https://acrobat.adobe.com/id/urn:aaid:sc:EU:41e106cc-c9b9-40fc-b8ca-07b0346a420f
+Beginn (StartDate): 2026-01-01
+Enddatum (EndDate): 2030-07-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Es erfolgt zunächst die Beauftragung vom 01.01.2026 - 31.07.2028 mit der Option auf zweimalige Verlängerung im jeweils 1 Jahr (01.08.2028 -31.07.2029; 01.08.2029 -31.07.2030)
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

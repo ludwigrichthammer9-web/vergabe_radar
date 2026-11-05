@@ -1,0 +1,42 @@
+Bekanntmachung 413340-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): IGM 25E1013 - Staatliches Baumanagement Braunschweig, Fachbereich Gebäudemanagement - Polizeiinspektion Salzgitter/Peine/Wolfenbüttel - Unterhalts- und Glasreinigung
+Beschreibung (Description): Polizeiinspektion Salzgitter/Peine/Wolfenbüttel - Unterhalts- und Glasreinigung
+Hinweis (Note): #Bekanntmachungs-ID: CXQ6YY5RAW8# Anforderungen an elektronische Mittel Zur Nutzung der E-Vergabeplattform und damit auch zur Abgabe elektronischer Angebote sind lediglich ein Internetzugang sowie ein aktueller Internet-Browser erforderlich. Hierbei werden ausschließlich HTML- und Javascript-konforme Standardtechnologien und keinerlei Add-Ons/plugins verwendet. Für die Abgabe elektronischer Angebote wird innerhalb der E-Vergabeplattform ein kostenfreies Bietertool bereitgestellt. Das Bietertool ist eine Desktop-Anwendung, welche sich automatisch installiert. Hiermit wird eine lokale Verschlüsselung der Angebote sichergestellt. Voraussetzung für die Nutzung des Bietertools ist eine entsprechende Java-Laufzeitumgebung (JRE), welche kostenfrei unter http://www.java.com/ bezogen werden kann, sofern diese nicht bereits auf dem Rechner installiert ist. Elektronische Angebote, die über das Bietertool abgegeben werden, werden mit einem elektronischen Zeitstempel versehen. Hinweis zum Datenschutz Personenbezogene Daten werden vom Staatlichen Baumanagement Niedersachsen (SBN) nur gemäß den Bestimmungen des geltenden Datenschutzrechts verarbeitet. Die Hinweise zum Datenschutz sind auf der Homepage des SBN (https://www.nlbl.niedersachsen.de/startseite/service/datenschutz/datenschutzerklarung-157346.html) zu finden.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung Bereich Salzgitter
+Beschreibung (Description): Bereich Salzgitter: 1. Polizeiinspektion Lebenstedt 2. Polizeikommissariat Bad 3. Polizeistation Baddeckenstedt 4. Polizeistation Gebhardshagen 5. Polizeistation Thiede Fläche Unterhaltsreinigung: 7.434,37 m²
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2027-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 6
+Beschreibung der Verlängerung (Renewal): Spätestes Vertragsende 30.06.2033
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Unterhaltsreinigung Bereich Peine
+Beschreibung (Description): Bereich Peine: 1. Polizeikommissariat Peine 2. Polizeistation Vechelde 3. Polizeistation Ilsede 4. Polizeistation Edemissen 5. Polizeistation Hohenhameln 6. Polizeistation Vöhrum Fläche Unterhaltsreinigung: 3.769,49 m²
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2027-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 6
+Beschreibung der Verlängerung (Renewal): Spätestes Vertragsende 30.06.2033
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Unterhaltsreinigung Bereich Wolfenbüttel
+Beschreibung (Description): Bereich Wolfenbüttel: 1. Polizeikommissariat Wolfenbüttel 2. Polizeistation Cremlingen 3. Polizeistation Schöppenstedt 4. Polizeistation Schladen 5. Polizeistation Sickte Fläche Unterhaltsreinigung: 4.108,27 m²
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2027-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 6
+Beschreibung der Verlängerung (Renewal): Spätestes Vertragsende 30.06.2033
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Glasreinigung Polizeiinspektion Salzgitter/Peine/Wolfenbüttel
+Beschreibung (Description): Fläche Glasreinigung: 2.626,52 m²
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2027-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 6
+Beschreibung der Verlängerung (Renewal): Spätestes Vertragsende 30.06.2033
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

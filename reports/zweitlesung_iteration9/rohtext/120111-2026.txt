@@ -1,0 +1,14 @@
+Bekanntmachung 120111-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Landkreis-Gymnasium St. Annen Annaberg-Buchholz, Pestalozzistraße 9, 09456 Annaberg-Buchholz_Unterhalts- und Grundreinigung
+Beschreibung (Description): Landkreis-Gymnasium St. Annen Annaberg-Buchholz, Pestalozzistraße 9, 09456 Annaberg-Buchholz_Unterhalts- und Grundreinigung
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Landkreis-Gymnasium St. Annen Annaberg-Buchholz, Pestalozzistraße 9, 09456 Annaberg-Buchholz_Unterhalts- und Grundreinigung
+Beschreibung (Description): Landkreis-Gymnasium St. Annen Annaberg-Buchholz, Pestalozzistraße 9, 09456 Annaberg-Buchholz, Unterhalts- und Grundreinigung
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2026-02-01
+Enddatum (EndDate): 2027-01-31
+Beschreibung der Optionen (OptionsDescription): Vertrag mit Option der Verlängerung
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

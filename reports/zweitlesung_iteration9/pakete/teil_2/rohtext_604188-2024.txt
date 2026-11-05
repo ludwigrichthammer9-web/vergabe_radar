@@ -1,0 +1,19 @@
+Bekanntmachung 604188-2024 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung 2025 - 2029
+Beschreibung (Description): Ausgeschrieben wird in zwei Losen die Unterhalts-, Grund- und Sonderreinigung sowie die Glas-, Rahmen- und Falzreinigung.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Gebäudereinigung (Unterhaltsreinigung, Grundreinigung, Sonderreinigung)
+Beschreibung (Description): Die Leistung umfasst die Unterhalts-, Grund- und Sonderreinigung in den Gebäuden des Auftraggebers
+Beginn (StartDate): 2025-02-01
+Enddatum (EndDate): 2027-01-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung um 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glas-, Rahmen- und Falzreinigung
+Beschreibung (Description): Die Leistung umfasst die Glas-, Rahmen- und Falzreinigung sosohl an der Außenhaust als auch im Innenbereich der Gebäude.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

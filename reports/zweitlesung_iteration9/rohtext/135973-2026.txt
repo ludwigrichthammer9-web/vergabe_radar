@@ -1,0 +1,46 @@
+Bekanntmachung 135973-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts-/Grund- und Glasreinigungen Stadt Burgdorf
+Beschreibung (Description): Reinigungsleistung
+Hinweis (Note): Die Ortsbesichtigung ist nicht zwingend vorgeschrieben. Unternehmensfragen sollen bis spätestens 10 Tage vor Ablauf der Angebotsfrist gestellt werden. Bitte beachten Sie, dass die Abgabe von elektronischen Angeboten ausschließlich über das Vergabeportal eVergabe möglich ist. Die Abgabe von Angeboten auf andere Weise elektronisch (z. B. per E-Mail oder Fax) wird nicht akzeptiert! Ebenso unzulässig ist die Abgabe in Papierform.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Objekte in Burgdorf
+Beschreibung (Description): Unterhalts-/Grundreinigung Objekte in Burgdorf von 3 Verwaltungsgebäuden, Hallenfreibad und Gymnasium mit zwei zugehörigen Sporthallen sowie zwei öffentlichen WC`s.
+Hinweis (Note): Objektbesichtigungen sind NICHT zwingend erforderlich.
+Beginn (StartDate): 2026-03-02
+Enddatum (EndDate): 2029-02-28
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag endet am 28.02.2029 und verlängert sich danach max. 2x um jeweils ein Jahr, wenn er nicht mit einer Frist von 6 Monaten (31.08.) gekündigt wurde. Der Vertrag endet spätestens am 28.02.2031, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Objekte in Burgdorf, Ramlingen, Ehlershausen und Otze
+Beschreibung (Description): Unterhalts-/Grundreinigung Objekte in Burgdorf, Otze, Ramlingen und Ehlershausen von zwei Rathäusern, drei Häusern der Jugend, Bauhof, Stadtbücherei, Soziale Gruppe, eine Kindertagesstätte , einer Kinderkrippe, sowie einer Schule mit zugehöriger Sporthalle sowie zwei Sporthallen von denen in einer regelmäßig eine Haftmittelentfernung stattfinden muss.
+Hinweis (Note): Objektbesichtigungen sind NICHT zwingend erforderlich.
+Beginn (StartDate): 2026-03-02
+Enddatum (EndDate): 2029-02-28
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag endet am 28.02.2029 und verlängert sich danach max. 2x um jeweils ein Jahr, wenn er nicht mit einer Frist von 6 Monaten (31.08.) gekündigt wurde. Der Vertrag endet spätestens am 28.02.2031, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 der Liste: LOT-0003
+Titel (Name): Glasreinigung für die Objekte aus Los 1
+Beschreibung (Description): Glasreinigung Objekte in Burgdorf von 3 Verwaltungsgebäuden, Hallenfreibad und Gymnasium mit zwei zugehörigen Sporthallen sowie zwei öffentlichen WC`s.
+Hinweis (Note): Objektbesichtigungen sind NICHT zwingend erforderlich.
+Beginn (StartDate): 2026-03-02
+Enddatum (EndDate): 2029-02-28
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag endet am 28.02.2029 und verlängert sich danach max. 2x um jeweils ein Jahr, wenn er nicht mit einer Frist von 6 Monaten (31.08.) gekündigt wurde. Der Vertrag endet spätestens am 28.02.2031, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 der Liste: LOT-0004
+Titel (Name): Glasreinigung für die Objekte aus Los 2
+Beschreibung (Description): Glasreinigung Objekte in Burgdorf, Otze, Ramlingen und Ehlershausen von zwei Rathäusern, drei Häusern der Jugend, Bauhof, Stadtbücherei, Soziale Gruppe, eine Kindertagesstätte , einer Kinderkrippe, sowie einer Schule mit zugehöriger Sporthalle sowie zwei Sporthallen.
+Hinweis (Note): Objektbesichtigungen sind NICHT zwingend erforderlich.
+Beginn (StartDate): 2026-03-02
+Enddatum (EndDate): 2029-02-28
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Vertrag endet am 28.02.2029 und verlängert sich danach max. 2x um jeweils ein Jahr, wenn er nicht mit einer Frist von 6 Monaten (31.08.) gekündigt wurde. Der Vertrag endet spätestens am 28.02.2031, ohne dass es einer Kündigung bedarf.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

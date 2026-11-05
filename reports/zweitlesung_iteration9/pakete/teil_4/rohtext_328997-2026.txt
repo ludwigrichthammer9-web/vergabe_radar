@@ -1,0 +1,22 @@
+Bekanntmachung 328997-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Objektreinigung 2026
+Beschreibung (Description): Beschreibung: Im Rahmen der vorliegenden Ausschreibung soll ein Vertragspartner ermittelt werden, der die Objektreinigung in der Zeit vom 01.09.2026 bis zum 31.08.2029, sowie mit einer Verlängerungsklausel, von 1 x 1 Jahr (ab dem 01.09.2029 bis 31.08.2030) für das Blindeninstitut Rückersdorf übernehmen kann. Die Verlängerungsklausel kann ausschließlich im gegenseitigen Einvernehmen stattfinden. Der Auftrag wird losweise vergeben. LOS 1: Unterhaltsreinigung und GrundreinigungLOS 2: GlasreinigungDer im Verfahren ermittelte Auftragnehmer hat die Objektreinigung nach einem vom AG vorgelegten Leistungsverzeichnis und dem vorgegebenen Reinigungsrhythmus zu gewährleisten.
+Hinweis (Note): Der Bieter hat anzugeben inwieweit sein Unternehmen einen Bezug zu Russland hat. Dafür ist die “Eigenerklärung Bezug Russland“ (FB 127/L127/III.127) auszufüllen und als Teil des Angebotes abzugeben. Diese Erklärung ist auch für Unterauftragnehmer, Lieferanten oder Eignungsverleiher gem. den Bedingungen der Erklärung abzugeben.
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Objektreinigung 2026 - Unterhaltsreinigung und Grundreinigung
+Beschreibung (Description): Im Rahmen der vorliegenden Ausschreibung soll ein Vertragspartner ermittelt werden, der die Objektreinigung in der Zeit vom 01.09.2026 bis zum 31.08.2029, sowie mit einer Verlängerungsklausel, von 1 x 1 Jahr (ab dem 01.09.2029 bis 31.08.2030) für das Blindeninstitut Rückersdorf übernehmen kann. Die Verlängerungsklausel kann ausschließlich im gegenseitigen Einvernehmen stattfinden. Der Auftrag wird losweise vergeben. LOS 1: Unterhaltsreinigung und GrundreinigungLOS 2: GlasreinigungDer im Verfahren ermittelte Auftragnehmer hat die Objektreinigung nach einem vom AG vorgelegten Leistungsverzeichnis und dem vorgegebenen Reinigungsrhythmus zu gewährleisten.
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2029-08-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Objektreinigung 2026 - Glasreinigung
+Beschreibung (Description): Im Rahmen der vorliegenden Ausschreibung soll ein Vertragspartner ermittelt werden, der die Objektreinigung in der Zeit vom 01.09.2026 bis zum 31.08.2029, sowie mit einer Verlängerungsklausel, von 1 x 1 Jahr (ab dem 01.09.2029 bis 31.08.2030) für das Blindeninstitut Rückersdorf übernehmen kann. Die Verlängerungsklausel kann ausschließlich im gegenseitigen Einvernehmen stattfinden. Der Auftrag wird losweise vergeben. LOS 1: Unterhaltsreinigung und GrundreinigungLOS 2: GlasreinigungDer im Verfahren ermittelte Auftragnehmer hat die Objektreinigung nach einem vom AG vorgelegten Leistungsverzeichnis und dem vorgegebenen Reinigungsrhythmus zu gewährleisten.
+Beginn (StartDate): 2026-09-01
+Enddatum (EndDate): 2029-08-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 1
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

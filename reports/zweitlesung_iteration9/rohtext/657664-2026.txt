@@ -1,0 +1,94 @@
+Bekanntmachung 657664-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Reinigungsleistungen im Netz der rnv
+Beschreibung (Description): Es handelt sich um verschiedene leistungsorientierte Unterhaltsreinigungen incl. Sonderreinigungen sowie Glas- und Rahmenreinigungen an Bus- und Stadtbahnhaltestellen und die Durchführung des Winterdiensts im Verkehrsnetz der Rhein-Neckar-Verkehr GmbH. Die Leistung wird in folgende Lose aufgeteilt: Los 1 "Unterhaltsreinigung LU" Los 2 "FGU + Spritzschutz MA" Los 3 "FGU + Spritzschutz LU" Los 4 "FGU RHB" Los 5 "FGU + Spritzschutz OEG" Los 6 "Gleisbettreinigung inkl. Sakra MA" Los 7 "Gleisbettreinigung inkl. Sakra OEG" Los 8 "Gleisbettreinigung inkl. Sakra“ Los 9 "Haltestellenreinigung“ Los 10 "Winterdienst Haltestellen LU“ Los 11 "Winterdienst Haltestellen OEG" Los 12 "Winterdienst Haltestellen RHB" Los 13 "Unterhaltsreinigung MA" Los 14 "Maschinelle Bodenreinigung inklusive Kaugummientfernung"
+Hinweis (Note): Die Auftraggeberin wird die fristgerecht eingehenden Teilnahmeanträge anhand der in den Eignungskriterien der Bekanntmachung geforderten Nachweise und Eigenerklärungen formell und inhaltlich prüfen und bewerten. Die Nachforderung fehlender Nachweise und Eigenerklärungen nach § 51 Abs. 2 S. 1 SektVO bleibt vorbehalten. Bei den Bewerbern, deren Teilnahmeantrag die formale Vollständigkeitsprüfung bestanden hat, schließt sich die materielle Prüfung an, ob aufgrund der vorgelegten Nachweise und Erklärungen die Eignung der Bewerber zu bejahen ist. Sollte die Durchführung der Eignungsprüfung ergeben, dass mehr als 5 Bewerber die Eignungsvoraussetzungen erfüllen, so wird die Auftraggeberin die Teilnahmeanträge auf Basis der in den Eignungskriterien genannten Nachweise und Eigenerklärungen in eine qualitative Rangfolge bringen. Der Schwerpunkt der Bewertung wird dabei auf der Qualität der Referenzen liegen. Nähere Informationen hierzu sind in dem Verfahrensbrief und den Formularen "Eigenerklärung zur Eignung" je Los in den Vergabeunterlagen erläutert. Die Vergabeunterlagen werden ausschließlich in elektronischer Form zur Verfügung gestellt. Die Angebotsabgabe sowie jeglicher Schriftverkehr mit der Vergabestelle erfolgt ausschließlich in elektronischer Form über die Vergabeplattform www.deutsche-evergabe.de. Das Fristende zur Stellung von Bewerber-/Bieterfragen wird in den Vergabeunterlagen bekanntgegeben.
+
+## Los 1 der Liste: LOT-0001 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 1 "Unterhaltsreinigung LU
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 der Liste: LOT-0002 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 2 "FGU + Spritzschutz MA"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 der Liste: LOT-0003 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 3 "FGU + Spritzschutz LU"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 4 der Liste: LOT-0004 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 4 "FGU RHB“
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 5 der Liste: LOT-0005 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 5 "FGU + Spritzschutz OEG"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 6 der Liste: LOT-0006 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 6 "Gleisbettreinigung inkl. Sakra MA"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 7 der Liste: LOT-0007 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 7 "Gleisbettreinigung inkl. Sakra OEG"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 8 der Liste: LOT-0008 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 8 "Gleisbettreinigung inkl. Sakra LU““
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 9 der Liste: LOT-0009 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 9 "Haltestellenreinigung OEG"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 10 der Liste: LOT-0010 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 10 "Winterdienst Haltestellen LU“
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 11 der Liste: LOT-0011 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 11 "Winterdienst Eisenbahnhaltestellen OEG"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 12 der Liste: LOT-0012
+Titel (Name): Los 12 "Winterdienst Eisenbahnhaltestellen RHB"
+Beschreibung (Description): Das Los 12 umfasst folgende Leistungen: Bedarfsorientierter Winterdienst (Schneeräumen und Bestreuen) an verschiedenen Haltestellen auf der Linie der Rhein-Haardtbahn. Die Gesamtfläche beträgt aktuell ca. 4.200 m²
+Hinweis (Note): Es gilt deutsches Recht. Jegliche Kommunikation mit dem AG oder dessen Vertreter hat in deutscher Sprache zu erfolgen.
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Der Auftraggeber ist berechtigt, die Laufzeit der Rahmenvereinbarung einseitig zweimal, um jeweils ein weiteres Jahr, zu verlängern. Die Verlängerung erfolgt durch schriftliche Mitteilung des Auftraggebers an den Auftragnehmer spätestens drei Monate vor Ablauf der jeweiligen Vertragslaufzeit. Der Auftragnehmer hat keinen Anspruch auf eine Verlängerung.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 13 der Liste: LOT-0013 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los13 "Unterhaltsreinigung MA"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 14 der Liste: LOT-0014 (gekürzt: nur Titel und Datumsfelder)
+Titel (Name): Los 14 "Maschinelle Bodenreinigung inklusive Kaugummientfernung"
+Beginn (StartDate): 2026-11-01
+Enddatum (EndDate): 2029-10-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

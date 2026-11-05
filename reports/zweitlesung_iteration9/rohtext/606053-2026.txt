@@ -1,0 +1,19 @@
+Bekanntmachung 606053-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- und Glasreinigung für das Justizgebäude Tändelmarkt 5 in 86720 Nördlingen
+Beschreibung (Description): Die Unterhaltsreinigung im oben genannten Justizgebäude umfasst die textilen und nichttextilen Fußbodenbeläge, sanitären Anlagen sowie Gegenstände der Raumausstattung und Raumeinrichtung. Die Glasreinigung im oben genannten Justizgebäuden umfasst das allseitige Reinigen sämtlicher Glasflächen (Brandschutztüren, Pfortentrennwände und Oberlichten) der Rahmen, Stöcke (innen und außen), sowie der Fensterbänke. Die vertraglich durchzuführende Reinigung des Gebäudes gliedert sich daher in Innenreinigung, Glasreinigung und Regiereinigung. Zu reinigende Bodenfläche: 5.041,87 m² Zu reinigende Glasfläche: 856,73 m ²
+
+## Los 1 der Liste: LOT-0001
+Titel (Name): Unterhaltsreinigung
+Beschreibung (Description): Die Unterhaltsreinigung in den oben genannten Justizgebäuden umfasst die textilen und nichttextilen Fußbodenbeläge, sanitären Anlagen sowie Gegenstände der Raumausstattung und Raumeinrichtung.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2031-09-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 der Liste: LOT-0002
+Titel (Name): Glasreinigung
+Beschreibung (Description): Die Glasreinigung in den oben genannten Justizgebäuden umfasst das allseitige Reinigen sämtlicher Glasflächen (Brandschutztüren, Pfortentrennwände und Oberlichten) der Rahmen, Stöcke (innen und außen), sowie der Fensterbänke.
+Beginn (StartDate): 2026-10-01
+Enddatum (EndDate): 2031-09-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
