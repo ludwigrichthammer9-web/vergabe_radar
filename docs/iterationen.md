@@ -22,7 +22,8 @@ Regeln:
 | 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
 | 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen | 3 → 5 → 6 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-09) | abgeschlossen | **Abschluss mit diesem Stand, kein dritter Regelversuch:** Y1 36/47 = 76,6 % (Kürzung auf L1–L50), Y1r 8/15, Y2 und Y2b verfehlt, Y3 nicht sauber erfüllt, Y4 teilweise; Y1 ist ein Mischmaß aus Listen- und Prüfungsfehlern, Regel 1b weder belegt noch widerlegt; Ende der Grundlaufzeit „laut Bekanntmachung“, Höchstende nur Hinweis |
 | 8 | KI-Zweitlesung der Stichprobe von Iteration 7 (zwei KI-Leser, Liste eingefroren, reine Messung) | 5 | 2026-11-04 bis 2026-11-05 | abgeschlossen | **Weiter (Projektabschluss), eingeschränkt formuliert:** Z0 94/95, Z1 77/80, Z3 75/80 und 67/72, Z4 10/10 erfüllt; Z2 14/15, bei einheitlichem Maßstab 11/15 (verfehlt); Leser nicht unabhängig, nicht von Menschen bestätigt |
-| 9+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | außerhalb des Projekts | – |
+| 9 | Verbesserte Liste, neue Stichprobe, KI-Lesung ohne die Grenzen der Iteration 8 (Rohtext, Fakten statt Anleitung, eigene Sitzung, menschliche Kontrolle an 15 Losen) | 3 → 5 → 6 | 2026-11-05 bis etwa 2026-11-12 (geplant) | läuft | offen |
+| 10+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | außerhalb des Projekts | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
 sind sie um eine Stelle verschoben. Konkretisiert werden sie mit `/iteration-start`.
@@ -1193,3 +1194,68 @@ _Interpretation_
 
 **Entscheidung** _(Nutzer, 2026-11-05):_ **Weiter, Projektabschluss, eingeschränkt formuliert.** Die Liste gilt beim Ende der Grundlaufzeit als „durch zwei KI-Lesungen gestützt (77/80), nicht von Menschen bestätigt, Leser nicht unabhängig“.
 Z2 wird mit beiden Zahlen berichtet (14/15 und 11/15). Die neuen Fehlerarten (L5, L81 Regel 6, L69/L72 Lose ohne Zuschlag, L72/L82 Höchstende) bleiben als offene Grenzen für das Lab-Log; die Regel wird nicht mehr geändert. Keine weitere Iteration.
+
+---
+
+## Iteration 9: Verbesserte Liste, neue Stichprobe, KI-Lesung ohne die Grenzen der Iteration 8
+
+**Status:** läuft (angelegt am 2026-11-05)
+
+**Fokus und Phasen:** 3 → 5 → 6. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) („7+ Ausbau“): Die in Iteration 8 gefundenen Fehlerarten sind bekannt und günstig zu beheben, der Nutzer hat noch etwa eine Woche.
+Die Messung läuft diesmal mit einem Aufbau, der die Grenzen der Iteration 8 behebt, soweit das ohne zweiten unabhängigen Menschen möglich ist. LN B, Zweierteam. Iteration 8 und ihr Ergebnis bleiben unverändert stehen.
+
+**Ausgangslage (Fakten aus Iteration 8 [E8]):** Fehlerarten der Liste: „3 Jahre mit Option“ nicht als Grundlaufzeit erkannt (L5), Regel 6 überträgt einen Einzelwert auf andere Lose (L81), „um 3 Jahre“ als Länge je Verlängerung gelesen (L72), Datum mit Monatsnamen nicht erkannt (L82), Lose ohne Zuschlag stehen in der Liste (L69, L72).
+Grenzen der Lesung in Iteration 8: Hilfsmodell des Abrufwerkzeugs kürzt und fasst zusammen; die Leser hatten `CLAUDE.md` mit dem Fehlertyp im Kontext; die Vorlage gab Regel 1b als Anweisung vor; Schuljahres-Fälle nicht tagesgenau; Kontrolle nicht blind; gleiche Modellfamilie.
+
+**Hypothese** _(vorab festgelegt am 2026-11-05, vor jeder Regeländerung)_
+„Nach Behebung der in Iteration 8 gefundenen Fehlerarten stimmt das Ende der Grundlaufzeit der Liste in einer neuen, ungesehenen Stichprobe bei mindestens 90 % der Lose mit einem Vergleichswert zweier KI-Leser überein. Die Leser lesen in einer Sitzung ohne Projektkontext Rohtexte der Bekanntmachung und tragen nur Fakten ein.“
+
+**Begriffe** _(vorab festgelegt)_
+- **Stichprobe:** 100 Lose, Seed wird vor dem Ziehen committet. **70 Zufallslose** (höchstens 2 je Zuschlag) und **30 geschichtete Lose:** 10 aus Bekanntmachungen, in denen nur ein Teil der Lose Laufzeitfelder hat (Regel 6), 10, deren Ende der Grundlaufzeit sich durch die neuen Regeln gegenüber der Fassung a93785e ändert, 10 aus Bekanntmachungen mit mehreren Losen.
+  Ausgeschlossen: die 95 Lose der Iteration 7 und 8, alle Bekanntmachungen, die beim Entwickeln der neuen Regeln angesehen werden (Liste vor dem Ziehen committet), und die Bekanntmachungen der Entwicklungsfälle. Schlüssel lokal, SHA-256 im Commit.
+- **Rohtext:** Ein Skript lädt die TED-Bekanntmachung als XML unverändert nach `data/raw` und schneidet je Los den vollständigen Text aller Laufzeit-, Options- und Beschreibungsfelder mit Los-Kennung heraus. Die Zuordnung Los zu Titel nimmt der Leser vor, nicht die Regel (unabhängig von Regel 6).
+  Ein Hilfsmodell zwischen Leser und Text entfällt. Das Skript wird vor dem Lauf an Stichproben geprüft, die Prüfung wird offen ausgewiesen.
+- **Leser:** A = Opus, B = Sonnet, je in neuen Sitzungen des Nutzers in einem leeren Ordner **ohne `CLAUDE.md`** (Nachweis über `/memory`), je Teil eine neue Sitzung. Die Anweisung wird vorab committet und unverändert eingefügt.
+  Die Leser tragen nur **Fakten** mit Zitat ein: Beginn, Dauer der festen Laufzeit, Verlängerungen (Anzahl, Länge), genanntes spätestes Ende, Widersprüche, „nicht tagesgenau“, „kein Zuschlag erteilt“, Gebäudereinigung ja/nein. Die Projektregel („die kürzere gilt“) steht nicht in der Anweisung.
+- **Vergleichswert:** wird aus den Fakten mit einer **vorab committeten, neutralen Definition** berechnet (Ende der Grundlaufzeit = Ende der ersten festen Laufzeit ohne Optionen; Beginn + Dauer − 1 Tag). Stimmen A und B überein (ein Tag Toleranz), gilt ihr Wert; sonst entscheidet der Evaluator blind am Rohtext, ersatzweise `unklar` (zählt als Abweichung der Liste).
+- **Nicht tagesgenau:** Fälle, bei denen ein Leser „nicht tagesgenau“ einträgt (z. B. „zum Schuljahresende“), kommen aus Zähler und Nenner heraus und werden einzeln ausgewiesen.
+- **Menschliche Kontrolle:** Der Kommilitone liest 15 Lose (Zufallsauswahl aus der Stichprobe, Seed vorab), ohne Listenwerte, im TED-Original, und trägt Ende der Grundlaufzeit und Höchstende ein.
+- **Korrekt** wie in Iteration 8: Ende der Grundlaufzeit mit einem Tag Toleranz; Höchstende korrekt oder Liste „unbestimmbar“, „Höchstende = Grundlaufzeit“ korrekt bei Vergleichswert „keine Verlängerung“ oder „keine Angabe“. Zusätzlich streng: „unbestimmbar“ zählt nicht automatisch als korrekt (beschreibend, beide Werte berichtet).
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-11-05)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| V1 | Ende der Grundlaufzeit: Liste = Vergleichswert, 70 Zufallslose | ≥ 63/70 = 90 % | A4, A13 |
+| V2 | dasselbe, 30 geschichtete Lose | ≥ 24/30 = 80 % | A4, A13 |
+| V3 | Die neue Fassung ist auf den Zufallslosen nicht schlechter als die alte Fassung (a93785e), gemessen am selben Vergleichswert | Ja/Nein | – |
+| V4 | Höchstende korrekt oder „unbestimmbar“ (Zufallslose) / nur Lose mit behauptetem Höchstende | ≥ 90 % / ≥ 85 % | – |
+| V5 | Leser A und B stimmen bei den Fakten überein (Ende der Grundlaufzeit, 100 Lose) | ≥ 90 % | A19 |
+| V6 | Menschliche Kontrolle: Der Vergleichswert stimmt mit dem Kommilitonen bei 15 Losen überein | ≥ 13/15 | A19 |
+| V7 | Lose ohne Zuschlag: keines davon steht in den 100 Losen der neuen Liste; Anteil in der alten Liste wird gezählt (beschreibend) | 0 von 100 | A20 |
+| V8 | Verfahren: Regeln, Seed, Anweisung, Definition und Kriterien vor dem Lauf committet; Sitzung ohne `CLAUDE.md` nachweisbar; Rohtexte unverändert | Ja/Nein | A19 |
+
+Beschreibend, ohne Schwelle: Z-Vergleich mit der alten Fassung je Fehlerart, Anteil der neuen Fehlerarten in der Population, Lose mit „nicht tagesgenau“, Einstufung „Gebäudereinigung ja/nein“ (A12), Vergleich Mensch / Leser / Liste an den 15 Losen.
+
+**Was folgt aus welchem Ergebnis**
+- V1 bis V8 erfüllt → **weiter:** Die neue Fassung wird der Prototyp (neu erzeugt, Stufen unverändert); Lab-Log und Folien aktualisieren, Projekt abschließen.
+- V1 zwischen 70 % und 90 %, V2 zwischen 60 % und 80 % oder V3 verfehlt → **Abschluss mit der Fassung a93785e als Prototyp;** die neue Fassung wird als Ausblick genannt, beide Messungen werden offen berichtet.
+- V1 < 70 % → **zurück zu Phase 3** mit dem Fehlerbild; eine weitere Iteration nur, wenn Zeit bleibt. Der Prototyp bleibt a93785e.
+- V6 verfehlt → das Ergebnis gilt als „nur KI-gestützt“; der Prototyp folgt V1 bis V4.
+- V7 verfehlt → Filter für Lose ohne Zuschlag nachbessern, bevor die Iteration abgeschlossen wird.
+- V8 oder V5 nicht erfüllt → den Schritt wiederholen, bevor die Iteration abgeschlossen wird.
+
+**Zeitrahmen:** 2026-11-05 bis etwa 2026-11-12, rund 5 Arbeitstage. Aufwand des Nutzers etwa 2 bis 3 Stunden für die Leser-Sitzungen, Kommilitone etwa 30 Minuten.
+
+**Plan**
+1. Phase 3: Fehlerarten beheben (Lose ohne Zuschlag filtern, Regel 6 einschränken, Monatsnamen, „N Jahre mit Option“, „um N Jahre“) in `src/prepare/vertragsliste.py`; Entwicklungstest an den 95 Losen aus Iteration 7 und 8 (zählt nicht); Regel einfrieren und committen; Liste der angesehenen Bekanntmachungen committen.
+2. Phase 3/5: Seed committen, danach Stichprobe ziehen (`src/prepare/stichprobe_iteration9.py`); Schlüssel lokal, SHA-256 im Commit.
+3. Phase 5: Skript für die Rohtexte (`src/prepare/rohtext_iteration9.py`), Anweisung für die Leser, Blatt für den Kommilitonen, neutrale Definition des Vergleichswerts und Auswertungsskript (`src/prepare/auswertung_iteration9.py`); alles **vor dem Lauf** committen.
+4. Phase 5: KI-Lesung in den Sitzungen des Nutzers (A und B, je 4 bis 5 Teile); der Kommilitone liest 15 Lose. Rohantworten unverändert nach `reports/zweitlesung_iteration9_roh/`.
+5. Phase 5: Auswertung V1 bis V8; Kontrolle des Evaluators blind am Rohtext; Gesamtprüfung durch den Evaluator.
+6. Phase 6: Prototyp neu erzeugen (falls die Folge es vorsieht), Lab-Log und Folien aktualisieren.
+7. `/iteration-ende`.
+
+**Geprüfte Annahmen:** A4, A13 (Ende der Grundlaufzeit auf Los-Ebene), A19 (KI-Leser als Zweitprüfer, diesmal mit menschlicher Kontrolle), A20 (Anteil Lose ohne Zuschlag). A12 nur beschreibend. A11, A17, A18 bleiben ungeprüft; A1 und A15 außerhalb des Projektumfangs.
+**Grenzen (vorab benannt):** Regel, Leser und Evaluator stammen aus derselben Modellfamilie; V6 mit 15 Losen ist ein menschlicher Anker, aber statistisch dünn. Das Skript für die Rohtexte und die neutrale Definition stammen von Claude; ein Fehler dort träfe beide Leser gleich, deshalb werden beide vorab an Stichproben geprüft und offen ausgewiesen.
+Claude kennt die Listenwerte der Stichprobe; die Leser bekommen sie nicht. Der Nachweis „ohne `CLAUDE.md`“ stützt sich auf die Angabe des Nutzers und die Ausgabe von `/memory`.
