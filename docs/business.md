@@ -270,3 +270,30 @@ Beide geprüften deutschen Anbieter schreiben ausdrücklich, dass der Auftraggeb
 - Die Sichtung der Wettbewerber (Projektplan G1.1) war früh geplant und ist erst jetzt erfolgt; die Suche vom 2026-10-24 (Abschnitt 6) fand die deutschen Anbieter nicht. Das ist ein Versäumnis im Business Understanding und wird im Lab-Log offen genannt.
 - **Ehrliche Einordnung:** Das Projekt zeigt, wie genau sich Vertragsenden aus TED lesen lassen und dass sich der Termin der Neuausschreibung mit einem festen Abstand nicht vorhersagen lässt. Ein eigenständiges Geschäftsmodell für die Liste lässt sich daraus nicht ableiten.
 - **Was in der Restzeit noch möglich wäre** (Entscheidung beim Nutzer): (1) drei bis fünf kurze Gespräche mit Reinigungsbetrieben aus der Oberpfalz-Liste, einer Vergabestelle und der Auftragsberatung Bayern, mit der Frage, ob sie Vergabeweiser oder AusschreibungsRadar kennen und was ihnen fehlt; (2) eine Stichprobe: für 10 bis 20 Lose der Oberpfalz-Liste das Vertragsende bei Vergabeweiser nachsehen und vergleichen (zeigt, ob unsere Lesequalität einen Unterschied macht).
+
+_Nachtrag 2026-11-05:_ Beides wird in Iteration 10 umgesetzt (`docs/iterationen.md`); der Vergleich (2) läuft per Skript über die API von Vergabeweiser an den 70 Zufallslosen der Iteration 9 statt an der Oberpfalz-Liste, weil es dort schon einen festen Vergleichswert gibt.
+
+### 8.7 Nachtrag: Marktzahlen bei Vergabeweiser (Fakt, 2026-11-05)
+
+Die API von Vergabeweiser liefert kostenlos auch Marktzahlen je Gewerk und Region (`/market`, Rohantwort `data/raw/vergabeweiser_20261105/market_gebaeudereinigung_bayern.json`). Für Gebäudereinigung in Bayern: 470 Ausschreibungen in 12 Monaten; 1.805 vergebene Lose mit Angebotszahl, im Median 7 Angebote, 77 Lose mit nur einem Angebot; Zuschlagssummen (n = 594) im Median 129.050 €, Quartile 30.748 € / 438.459 €; dazu eine Liste der Firmen mit den meisten Zuschlägen.
+**Interpretation:** Auch das „Wettbewerbsbild“ (Amtsinhaber, Bieterzahl, Zuschlagswerte), das das BWL-Gutachten als beste Positionierung empfahl (§8.5), gibt es dort schon kostenlos. Die Zeile in §8.5 ist damit noch schwächer als dort beschrieben.
+
+### 8.8 Kurzleitfaden für Telefonate (Iteration 10, W5)
+
+_Vorab festgelegt am 2026-11-05. Zwei bis drei Gespräche à etwa 10 Minuten: Reinigungsbetriebe aus der Oberpfalz-Liste (Gewinner in `reports/beispiel_liste_oberpfalz.csv` stehen nicht in der Liste; Betriebe über die Webseite der Auftraggeber oder die Innung finden) oder eine Vergabestelle (z. B. Stadt Regensburg). Kein Verkaufsgespräch, Kurzvorstellung wie in Abschnitt 2. Notizen ohne Namen von Personen; Firmen nur beschreibend („Reinigungsfirma, ~50 Beschäftigte, Landkreis Cham“)._
+
+**An Reinigungsbetriebe**
+1. Wie erfahren Sie heute von öffentlichen Ausschreibungen? Welche Dienste oder Portale nutzen Sie, was zahlen Sie dafür?
+2. Erzählen Sie von der letzten öffentlichen Ausschreibung, bei der Sie mitgeboten haben: Wann haben Sie davon erfahren, wo wurde es eng?
+3. Woran entscheiden Sie, ob Sie mitbieten? (Preis, Gegner, Objektgröße, Personal, Entfernung)
+4. Wissen Sie, wann Reinigungsverträge bei Auftraggebern in Ihrer Region auslaufen? Woher?
+5. Kennen Sie Vergabeweiser oder AusschreibungsRadar? Falls ja: Nutzen Sie die Liste auslaufender Verträge, und was fehlt Ihnen dort?
+6. Hätte Ihnen ein früherer Hinweis (6–12 Monate) bei einem konkreten Auftrag etwas gebracht? Was hätten Sie anders gemacht?
+7. Wofür würden Sie zahlen, wenn überhaupt: genauere Enddaten je Los, Gegner und Preise der letzten Vergabe, Hilfe bei der Kalkulation, nichts davon?
+
+**An eine Vergabestelle**
+1. Wie planen Sie die Neuausschreibung eines Reinigungsvertrags: Wie viele Monate vor Vertragsende fangen Sie an?
+2. Wie oft verlängern Sie statt neu auszuschreiben, und wovon hängt das ab?
+3. Bekommen Sie zu wenige Angebote? Würden Sie es begrüßen, wenn Firmen früher wüssten, dass ein Vertrag ausläuft?
+
+**Notiz je Gespräch:** Wer (beschreibend), Datum, Antworten möglichst wörtlich, Bezug zu A1/A15 (stützt, schwächt, neutral). Ablage: `docs/business.md` §8.9 (wird nach den Gesprächen angelegt).
