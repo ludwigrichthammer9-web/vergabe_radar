@@ -164,14 +164,17 @@ def main() -> None:
         help="classification-cpv = Haupt- oder Zusatz-CPV (auch vor eForms); main-classification-proc = Haupt-CPV (nur eForms)",
     )
     parser.add_argument("--los-texte", action="store_true", help="zusätzlich Beschreibungen und Adresszeilen je Los laden")
+    parser.add_argument("--felder", help="nur diese Felder laden (Komma getrennt), z. B. für Nachlieferungen; Ordner erhält die Endung _felder (Iteration 9)")
     args = parser.parse_args()
 
-    fields = FIELDS + (LOT_TEXT_FIELDS if args.los_texte else [])
+    fields = args.felder.split(",") if args.felder else FIELDS + (LOT_TEXT_FIELDS if args.los_texte else [])
     # Die API zählt ein Feld mehr als angefragt (Fehlermeldung 2026-10-25: 238 × 43 bei 42 Feldern)
     page_size = min(PAGE_SIZE, MAX_FIELD_CELLS // (len(fields) + 1))
     out_dir = RAW_DIR / run_name(
         args.country, args.date_from, args.date_to, args.form_type, args.cpv, args.cpv_field, args.los_texte,
     )
+    if args.felder:
+        out_dir = out_dir.with_name(out_dir.name + "_felder")
     if out_dir.exists() and any(out_dir.iterdir()):
         sys.exit(f"{out_dir} existiert bereits und ist nicht leer. Bitte löschen oder anderen Zeitraum wählen.")
     out_dir.mkdir(parents=True, exist_ok=True)

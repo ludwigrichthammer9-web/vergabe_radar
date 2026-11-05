@@ -42,7 +42,15 @@ Genauigkeit des Höchstendes (Teststichprobe, Fassung a0aa419): 53/60 richtig, g
    - sonst (Verlängerung erwähnt, aber nicht bezifferbar, z. B. rollierend ohne Höchstzahl) → Höchstende unbestimmbar.
 5. R0 = GL − 6 Monate; R1 = Höchstende − 6 Monate, bei unbestimmbarem Höchstende GL − 6 Monate (§7.1, Festlegung 4).
 6. Lose: Die API liefert je Feld eine Liste. Ist sie so lang wie die Liste der Lostitel, wird sie Los für Los zugeordnet. Ist sie
-   kürzer und alle Werte gleich, gilt der Wert für alle Lose; sonst bleibt das Feld leer (Herkunft „liste_unvollstaendig“).
+   kürzer und alle Werte gleich, gilt der Wert für alle Lose. **Iteration 9: Bei Beginn, Ende und Dauer bleibt das Feld bei kürzerer Liste leer**
+   (Herkunft „liste_unvollstaendig“); bis Iteration 8 galt der Einzelwert auch dort für alle Lose (Fehler L81: Wert von Los 1 für Los 2). Textfelder wie bisher.
+Iteration 9 (nach den Fehlerarten der Iteration 8; vor dem Ziehen der Stichprobe festgelegt, docs/iterationen.md):
+7. Lose ohne Zuschlag (`winner-selection-status` ≠ „selec-w“, Zuordnung über `result-lot-identifier`; Nachlieferung in
+   data/raw/ted_search/DEU_result_cpv909_20231025_20260930_felder) kommen nicht in die Liste. Ohne Status bleibt das Los drin (Spalte `zuschlag` = „unbekannt“).
+8. Datumsangaben im Text mit Monatsnamen („31. Oktober 2030“) oder Schrägstrichen („31/10/2030“) werden vor dem Lesen in „31.10.2030“ umgeschrieben.
+9. „maximal um 3 Jahre verlängert“ (Gesamtdauer der Verlängerungen, nicht je Verlängerung): Kandidat GL + 36 Monate (Herkunft „gesamt_verlaengerung_text“),
+   nicht Anzahl × Länge.
+10. Regel 1b (b) erkennt zusätzlich „3 Jahre mit Option …“, „… zzgl. optionaler Verlängerung“ ohne Schlüsselwort wie „Laufzeit“ vor der Dauer.
 
 Aufruf:  python src/prepare/vertragsliste.py [Berichtspfad]
 Ausgabe: data/processed/vertragsliste_909.csv, reports/vertragsliste_iteration5.md (Kennzahl X4) bzw. der angegebene Berichtspfad
@@ -63,6 +71,7 @@ from kennzahlen_iteration2 import wilson  # noqa: E402
 from population_iteration4 import exclusion_reason  # noqa: E402
 
 RUN = "DEU_result_cpv909_20231025_20260930_lostext"
+RUN_ZUSCHLAG = "DEU_result_cpv909_20231025_20260930_felder"  # Iteration 9: winner-selection-status, result-lot-identifier (Nachlieferung)
 OUT_CSV = PROJECT_ROOT / "data" / "processed" / "vertragsliste_909.csv"
 REPORT = PROJECT_ROOT / "reports" / "vertragsliste_iteration5.md"
 X4_VON, X4_BIS = "2025-10-01", "2026-09-30"
@@ -102,11 +111,27 @@ RE_FEST_DATUM = re.compile(rf"(?i)(?:fest\s*laufzeit|feste\s+laufzeit|grundlaufz
 RE_BASIS_DAUER = re.compile(rf"(?i)(?:(?:vertrags)?laufzeit|vertragsdauer|beauftragung|vertragsverhältnis|vertrag)[^.]{{0,60}}?"
                             rf"\b(?:von|beträgt|dauer\s+von)\s+{Z}\s*(?:\(\d+\)\s*)?{EINHEIT}")
 RE_BASIS_AUSSCHLUSS = re.compile(r"(?i)(maximal|gesamt|insgesamt|längstens|höchstens|spätestens|bis\s+zu)\w*\s*\w*\s*$")
+# Regel 10 (Iteration 9): „3 Jahre mit Option für …“, „vier Jahre zzgl. optionaler Verlängerung“ (kein Schlüsselwort vor der Dauer).
+RE_DAUER_MIT_OPTION = re.compile(rf"(?i)(?<![\w.])(?:für\s+(?:die\s+(?:dauer|zeit)\s+von\s+)?)?{Z}\s*(?:\(\d+\)\s*)?{EINHEIT}\s*,?\s*"
+                                 rf"(?:mit|zzgl\.?|zuzüglich|plus)\s+(?:der\s+|einer\s+|einem\s+)?(?:optionale[nr]?\b|option|verlängerung)")
+# Regel 9: „maximal um 3 Jahre“ als Gesamtdauer der Verlängerungen (direkt vor „um“ steht maximal/höchstens/insgesamt/längstens)
+RE_GESAMT_VOR = re.compile(r"(?i)(maximal|höchstens|insgesamt|längstens)\s+$")
+# Regel 8: Monatsnamen und Schrägstriche
+MONATE = {"januar": 1, "februar": 2, "märz": 3, "maerz": 3, "april": 4, "mai": 5, "juni": 6, "juli": 7, "august": 8, "september": 9,
+          "oktober": 10, "november": 11, "dezember": 12}
+RE_DATUM_NAME = re.compile(r"(?i)\b(\d{1,2})\.?\s*(" + "|".join(MONATE) + r")\s+(20\d{2})\b")
+RE_DATUM_SCHRAEG = re.compile(r"\b(\d{1,2})/(\d{1,2})/(20\d{2})\b")
 RE_SUMME = re.compile(r"\(\s*(\d{1,2}(?:\s*\+\s*\d{1,2})+)\s*\)")  # „(2+1+1)“ = 2 Jahre fest, dann 1 + 1 Jahr Option
 
 
 def saetze(text: str, muster: re.Pattern) -> str:
     return " ".join(s for s in RE_SATZGRENZE.split(text) if muster.search(s))
+
+
+def normalisiere(text: str) -> str:
+    """Regel 8: Monatsnamen- und Schrägstrich-Daten als „T.M.JJJJ“ schreiben."""
+    text = RE_DATUM_NAME.sub(lambda m: f"{int(m.group(1))}.{MONATE[m.group(2).lower()]}.{m.group(3)}", text)
+    return RE_DATUM_SCHRAEG.sub(lambda m: f"{int(m.group(1))}.{int(m.group(2))}.{m.group(3)}", text)
 
 
 def zahl(s: str) -> int | None:
@@ -177,7 +202,12 @@ def kandidaten(gl: date, beginn: date | None, text: str, anzahl: int | None, dau
         if m.group(4):
             laengen.append(12 * zahl(m.group(4)))
         elif (n := zahl(m.group(1))):
-            laengen.append(_in_monate(n, m.group(3)))
+            monate_ = _in_monate(n, m.group(3))
+            if m.group(0).lower().startswith("um") and RE_GESAMT_VOR.search(text_verl[max(0, m.start() - 15):m.start()]):
+                if 0 < monate_ <= MAX_NACH_GL:  # Regel 9: Gesamtdauer aller Verlängerungen
+                    out.append((plus_monate(gl, monate_), "gesamt_verlaengerung_text"))
+                continue
+            laengen.append(monate_)
     if not anzahl:
         for m in RE_ANZAHL.finditer(text_verl):
             n = zahl(next(g for g in m.groups() if g))
@@ -223,6 +253,12 @@ def kurze_festlaufzeit(beginn: date | None, gl: date, text: str, anzahl: int | N
                 continue
             n = zahl(m.group(1))
             if n and 12 <= (mo := _in_monate(n, m.group(3))) <= MAX_MONATE:  # unter 12 Monaten meist Fristen, keine feste Laufzeit
+                dauern.append(mo)
+        for m in RE_DAUER_MIT_OPTION.finditer(text):  # Regel 10
+            if RE_BASIS_AUSSCHLUSS.search(text[max(0, m.start() - 25):m.start()]):
+                continue
+            n = zahl(m.group(1))
+            if n and 12 <= (mo := _in_monate(n, m.group(3))) <= MAX_MONATE:
                 dauern.append(mo)
         if "jahr" in text.lower():
             for m in RE_SUMME.finditer(text):
@@ -292,11 +328,15 @@ def _liste(value) -> list:
     return value if isinstance(value, list) else [value]
 
 
-def je_los(notice: dict, feld: str, n_lose: int) -> tuple[list, bool]:
-    """Werte eines Feldes je Los; zweiter Wert False, wenn die Liste nicht eindeutig zuzuordnen war."""
+def je_los(notice: dict, feld: str, n_lose: int, strikt: bool = False) -> tuple[list, bool]:
+    """Werte eines Feldes je Los; zweiter Wert False, wenn die Liste nicht eindeutig zuzuordnen war.
+    `strikt` (Iteration 9, Regel 6): bei kürzerer Liste bleibt das Feld leer, auch wenn alle Werte gleich sind. Gilt für Beginn, Ende und
+    Dauer (Fehler L81); bei Textfeldern gilt ein einzelner Text weiter für alle Lose (ein Text für das ganze Verfahren)."""
     werte = _liste(notice.get(feld))
     if len(werte) == n_lose or not werte:
         return (werte or [None] * n_lose), True
+    if strikt and len(werte) < n_lose:
+        return [None] * n_lose, False
     if len(set(map(str, werte))) == 1:
         return [werte[0]] * n_lose, True
     return [None] * n_lose, False
@@ -308,22 +348,49 @@ def _dauer(p) -> int | None:
     return int(p["value"]) * {"YEAR": 12, "MONTH": 1}.get(p.get("unit"), 0) or None
 
 
+_ZUSCHLAG: dict[str, dict] | None = None
+
+
+def zuschlag_je_los(pub: str, n: int) -> list[str]:
+    """Regel 7: „ja“ (selec-w), „nein“ (kein Gewinner gewählt) oder „unbekannt“ je Los. Die Status stehen in der Reihenfolge der Ergebnis-Lose;
+    sortiert nach `result-lot-identifier` gehört der i-te zu Los i + 1 (Titelreihenfolge = Reihenfolge der Los-Kennungen)."""
+    global _ZUSCHLAG
+    if _ZUSCHLAG is None:
+        _ZUSCHLAG = {}
+        ordner = RAW_SEARCH_DIR / RUN_ZUSCHLAG
+        for f in sorted(ordner.glob("page_*.json")) if ordner.exists() else []:
+            for x in load_page(f):
+                _ZUSCHLAG[x["publication-number"]] = x
+    x = _ZUSCHLAG.get(pub)
+    status, ids = (_liste(x.get("winner-selection-status")), _liste(x.get("result-lot-identifier"))) if x else ([], [])
+    if x and len(status) == len(ids) == n:
+        geordnet = [st for _, st in sorted(zip(ids, status))]
+        return ["ja" if st == "selec-w" else "nein" for st in geordnet]
+    return ["unbekannt"] * n
+
+
+def load_page(f: Path) -> list[dict]:
+    import json
+    return json.loads(f.read_text(encoding="utf-8")).get("notices", [])
+
+
 def zeilen(notice: dict) -> list[dict]:
     titel = [str(t) for t in _liste(notice.get("title-lot"))] or [""]
     n = len(titel)
+    zuschlag = zuschlag_je_los(notice["publication-number"], n)
     felder = {}
     eindeutig = True
     for key, feld in (("beginn", "contract-duration-start-date-lot"), ("ende", "contract-duration-end-date-lot"),
                       ("dauer", "contract-duration-period-lot"), ("bt58", "renewal-maximum-lot"),
                       ("bt57", "renewal-description-lot"), ("bt54", "option-description-lot"), ("bt24", "description-lot")):
-        felder[key], ok = je_los(notice, feld, n)
+        felder[key], ok = je_los(notice, feld, n, strikt=key in ("beginn", "ende", "dauer"))
         eindeutig &= ok
     out = []
     for i in range(n):
         beginn, ende, dauer = iso(felder["beginn"][i]) if felder["beginn"][i] else None, \
             iso(felder["ende"][i]) if felder["ende"][i] else None, _dauer(felder["dauer"][i])
         bt58 = int(felder["bt58"][i]) if str(felder["bt58"][i] or "").isdigit() else None
-        text = " ".join(str(felder[k][i] or "") for k in ("bt57", "bt54", "bt24"))
+        text = normalisiere(" ".join(str(felder[k][i] or "") for k in ("bt57", "bt54", "bt24")))
         verl = None if bt58 is None else bt58 > 0
         gl, gl_h, h, h_h = laufzeit(beginn, ende, dauer, text, bt58 if bt58 else None, verl)
         r0, r1 = prognosen(gl, h)
@@ -336,7 +403,7 @@ def zeilen(notice: dict) -> list[dict]:
             "auftraggeber": (_liste(notice.get("buyer-name")) or [""])[0], "los": i + 1, "los_titel": titel[i][:120],
             "beginn": beginn or "", "gl_ende": gl or "", "gl_herkunft": gl_h, "bt58": "" if bt58 is None else bt58,
             "hoechstende": h or "", "hoechstende_herkunft": h_h, "r0": r0 or "", "r1": r1 or "",
-            "liste_eindeutig": eindeutig, "gl_geschaetzt": geschaetzt,
+            "liste_eindeutig": eindeutig, "gl_geschaetzt": geschaetzt, "zuschlag": zuschlag[i],
         })
     return out
 
@@ -359,6 +426,8 @@ def main() -> None:
             ausgeschlossen += 1
             continue
         rows.extend(zeilen(x))
+    ohne_zuschlag = sum(1 for r in rows if r["zuschlag"] == "nein")
+    rows = [r for r in rows if r["zuschlag"] != "nein"]  # Regel 7
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     with OUT_CSV.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]), delimiter=";")
@@ -385,6 +454,7 @@ def main() -> None:
         f"{ausgeschlossen} Notices ausgeschlossen.",
         f"- Tabelle: {len(rows)} Lose aus {len({r['notice'] for r in rows})} Zuschlägen (`{OUT_CSV.relative_to(PROJECT_ROOT).as_posix()}`, nicht im Git).",
         f"- Lose mit nicht eindeutig zuordenbarer Feldliste: {sum(1 for r in rows if not r['liste_eindeutig'])}.",
+        f"- Regel 7 (Iteration 9): {ohne_zuschlag} Lose ohne Zuschlag aus der Liste genommen; Status unbekannt bei {sum(1 for r in rows if r['zuschlag'] == 'unbekannt')} Losen.",
         "",
         f"### X4 Abdeckung (Lose aus Zuschlägen, veröffentlicht {X4_VON} bis {X4_BIS})",
         "",

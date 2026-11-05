@@ -1,0 +1,10 @@
+# Bekanntmachungen, die bei der Entwicklung der Regeln der Iteration 9 angesehen oder besprochen wurden (Fehlerarten aus Iteration 8).
+# Sie kommen nicht in die Stichprobe der Iteration 9. Zusätzlich werden alle Bekanntmachungen der 95 Lose der Iteration 7 und 8 und die Liste
+# `reports/entwicklung_iteration7_notices.txt` ausgeschlossen (siehe src/prepare/stichprobe_iteration9.py).
+538350-2026
+10154-2026
+557125-2026
+707425-2025
+506823-2026
+269649-2026
+143100-2026
