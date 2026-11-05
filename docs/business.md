@@ -231,6 +231,17 @@ Angaben mit **(geprüft)** hat Claude am 2026-11-05 selbst auf der Seite nachgel
 | Tussell | UK | Vertragsdaten, Wettbewerber; über 300 Firmenkunden (Eigenangabe) | Behördenverträge 18.000–29.000 £ pro Jahr | [Contracts Finder](https://www.contractsfinder.service.gov.uk/Notice/871b5dc1-ab3f-4d0d-a884-da4f997cae6a) |
 | GovSpend | US | Modul „Expiring Contracts“ | geschätzt 11.600–15.000 USD pro Jahr (Angabe eines Wettbewerbers) | [GovSpend](https://govspend.com/?p=17171) |
 
+**Funktionen und Preise von AusschreibungsRadar** (Fakt; Preisseite [ausschreibungsradar.com/preise](https://ausschreibungsradar.com/preise/), von Claude am 2026-11-05 gelesen; alle Preise netto, monatlich kündbar):
+
+| Stufe | Preis pro Monat | Funktionen laut Preisseite |
+|---|---|---|
+| Free | 0 € | Suche, KI-Kurzanalyse, wöchentlicher Alert |
+| Starter | 29 € | 3 Suchprofile mit täglichen Alerts, **volle KI-Eignungsanalyse**, Fristen-Dashboard |
+| Business | 79 € | **Match-Score, Bid/No-Bid-Check**, CRM-Pipeline, Wettbewerber-Tracking |
+| Professional | 149 € | Preis-Kalkulator, Angebots-Fahrplan, CSV-Export |
+
+_Relevanz (Interpretation):_ Ein Profilfilter („Eignung“, „Match“) wird dort schon angeboten, und zwar ab der Stufe Starter beziehungsweise Business. Er gehört damit nicht zu dem, was eine Liste auslaufender Verträge allein abheben könnte.
+
 Beide geprüften deutschen Anbieter schreiben ausdrücklich, dass der Auftraggeber entscheidet, ob und wann neu ausgeschrieben wird.
 
 ### 8.3 Fakten aus dem eigenen Projekt, die für die Bewertung zählen
