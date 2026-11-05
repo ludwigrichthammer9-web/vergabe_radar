@@ -24,7 +24,7 @@ def main() -> None:
     commits = [(datetime.fromisoformat(d), s) for d, s in
                (line.split("|", 1) for line in git("log", "--reverse", "--format=%ad|%s", "--date=iso-strict").splitlines())]
     ends = [(datetime.fromisoformat(git("log", "-1", "--format=%ad", "--date=iso-strict", f"iteration-{i}")), i)
-            for i in range(1, 9) if git("tag", "-l", f"iteration-{i}")]
+            for i in range(1, 10) if git("tag", "-l", f"iteration-{i}")]
 
     def iteration(d: datetime) -> int:
         return next((i for end, i in ends if d <= end), len(ends) + 1)

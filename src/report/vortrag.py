@@ -1,6 +1,6 @@
 """Foliengerüst für den Vortrag (LN B: 15 min, höchstens 12 Folien) mit Sprechernotizen.
 
-Zahlen aus docs/iterationen.md und reports/evaluation_iteration5.md bis 8. Jede Folie hat Notizen: Zeit, Kernaussage, „Zeig-mir-wo“.
+Zahlen aus docs/iterationen.md und reports/evaluation_iteration5.md bis 9. Jede Folie hat Notizen: Zeit, Kernaussage, „Zeig-mir-wo“.
 Aufruf:  .venv\\Scripts\\python -I src/report/vortrag.py      Ausgabe: docs/vortrag/vortrag_vergabe_radar.pptx
 """
 
@@ -147,26 +147,26 @@ box(s, 0.5, 4.1, 9, 0.5, "Nische: Gebäudereinigung (Haupt-CPV 90910/90911/90919
 s = new_slide("Daten: TED, Laufzeit oft vorhanden",
               "ZEIT 1:15. TED veröffentlicht Zuschläge der EU-weiten Vergaben. Wir nutzen eForms ab Herbst 2023 über die Search-API; Rohdaten unverändert in data/raw. Fakten: Laufzeitende bei 90,0 % der "
               "Zuschläge der Gebäudereinigung (großzügig), streng bestimmbar 80,9 %. Verlängerungsoptionen stehen aber nur bei 18,9 % im strukturierten Feld BT-58 (Annahme A5 widerlegt), der Rest im Freitext. "
-              "Datensatz: 9.915 Lose, bewusst größer als der Richtwert, weil jedes Los ein Vertrag ist. QUELLE: docs/quellen.md. ZEIG-MIR-WO: reports/datenqualitaet_DEU_20260722_20261021.md.")
+              "Datensatz: 9.915 Lose abgerufen, davon 590 ohne Zuschlag entfernt (Iteration 9): 9.325 Lose in der Liste, bewusst größer als der Richtwert, weil jedes Los ein Vertrag ist. QUELLE: docs/quellen.md. ZEIG-MIR-WO: reports/datenqualitaet_DEU_20260722_20261021.md.")
 balken(s, 0.5, 1.2, 5.7, 3.4, ["Laufzeitende bestimmbar (großzügig)", "Laufzeitende streng bestimmbar", "Verlängerung im Feld BT-58"], [90.0, 80.9, 18.9], [TEAL, TEAL, RED], "Befüllung der Felder")
 rect(s, 6.4, 1.3, 3.1, 3.2, PALE, name="Merkkasten")
-box(s, 6.6, 1.5, 2.7, 2.8, [[("9.915 Lose", {"bold": True})], "aus 4.209 Zuschlägen, eForms ab 2023", "", [("Verlängerungen stehen meist im Freitext", {"bold": True})], "Lese-Regeln nötig, geprüft nur an eForms"], size=14, name="Merktext")
+box(s, 6.6, 1.5, 2.7, 2.8, [[("9.325 Lose", {"bold": True})], "aus 4.011 Zuschlägen, eForms ab 2023 (590 Lose ohne Zuschlag entfernt)", "", [("Verlängerungen stehen meist im Freitext", {"bold": True})], "Lese-Regeln nötig, geprüft nur an eForms"], size=14, name="Merktext")
 box(s, 0.5, 4.8, 7, 0.3, "Quelle: TED Search API v3, Stichprobe Q4 2025 bis Q3 2026", size=10, color=GREY)
 
 # 4 Verlauf
-s = new_slide("Acht Iterationen, drei Zyklen",
-              "ZEIT 1:00. CRISP-DM nicht einmal linear: acht Iterationen in drei Zyklen mit Rücksprüngen. Jede endete mit einer Entscheidung gegen vorab festgelegte Schwellen: weiter, zurück zu Phase X "
-              "oder Idee anpassen. Fünfmal wurde die Idee angepasst oder zurückgesprungen. ZEIG-MIR-WO: docs/iterationen.md Übersichtstabelle; Zeitaufwand 29,4 Stunden (Untergrenze, docs/zeitprotokoll.md).")
-for t, x, w, f in (("Zyklus 1: Zuordnung zum Vorgänger", 0.5, 4.5, TEAL), ("Zyklus 2: Prognose", 5.1, 1.1, AMBER), ("Zyklus 3: Qualität der Liste", 6.3, 3.2, GREEN)):
+s = new_slide("Neun Iterationen, drei Zyklen",
+              "ZEIT 1:00. CRISP-DM nicht einmal linear: neun Iterationen in drei Zyklen mit Rücksprüngen. Jede endete mit einer Entscheidung gegen vorab festgelegte Schwellen: weiter, zurück zu Phase X "
+              "oder Idee anpassen. Fünfmal wurde die Idee angepasst oder zurückgesprungen. ZEIG-MIR-WO: docs/iterationen.md Übersichtstabelle; Zeitaufwand 31,8 Stunden (Untergrenze, docs/zeitprotokoll.md).")
+for t, x, w, f in (("Zyklus 1: Zuordnung zum Vorgänger", 0.5, 3.95, TEAL), ("Zyklus 2: Prognose", 4.5, 0.95, AMBER), ("Zyklus 3: Qualität der Liste", 5.5, 4.0, GREEN)):
     rect(s, x, 1.3, w, 0.55, f, name=t)
     box(s, x + 0.08, 1.3, w - 0.12, 0.55, t, size=11, bold=True, color=WHITE, anchor=MSO_ANCHOR.MIDDLE)
-its = [("1", "Machbarkeit"), ("2", "Auftraggeber + CPV"), ("3", "Objekt-Regel"), ("4", "Letzter Versuch"), ("5", "Backtest"), ("6", "Erste Handprüfung"), ("7", "Regel 1b"), ("8", "KI-Zweitlesung")]
+its = [("1", "Machbarkeit"), ("2", "Auftraggeber + CPV"), ("3", "Objekt-Regel"), ("4", "Letzter Versuch"), ("5", "Backtest"), ("6", "Erste Handprüfung"), ("7", "Regel 1b"), ("8", "KI-Zweitlesung"), ("9", "Neue Stichprobe")]
 for i, (n, l) in enumerate(its):
-    x = 0.5 + i * 1.13
-    rect(s, x + 0.25, 2.2, 0.6, 0.6, TEAL, MSO_SHAPE.OVAL, "Iteration " + n)
-    box(s, x + 0.25, 2.2, 0.6, 0.6, n, size=18, bold=True, color=WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    box(s, x, 2.95, 1.1, 0.6, l, size=12, align=PP_ALIGN.CENTER)
-box(s, 0.5, 3.9, 9, 0.7, "Idee angepasst nach Iteration 1, 2, 4, 5; zurück zu Phase 3 nach Iteration 6; Abschluss mit Einschränkung nach 7 und 8", size=14, color=GREY)
+    x = 0.5 + i * 1.0
+    rect(s, x + 0.2, 2.2, 0.6, 0.6, TEAL, MSO_SHAPE.OVAL, "Iteration " + n)
+    box(s, x + 0.2, 2.2, 0.6, 0.6, n, size=18, bold=True, color=WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    box(s, x, 2.95, 1.0, 0.6, l, size=11, align=PP_ALIGN.CENTER)
+box(s, 0.5, 3.9, 9, 0.7, "Idee angepasst nach Iteration 1, 2, 4, 5; zurück zu Phase 3 nach Iteration 6; Abschluss mit Einschränkung nach 7, 8 und 9", size=14, color=GREY)
 
 # 5 Irrweg Zuordnung
 s = new_slide("Irrweg: Neuausschreibung zuordnen",
@@ -191,11 +191,11 @@ box(s, 6.7, 1.5, 2.6, 2.6, [[("52 geprüfte Paare", {"bold": True})], "20 frühe
 # 7 Wende
 s = new_slide("Neue Frage: Wann endet ein Vertrag?",
               "ZEIT 1:15. Aus dem Rückschlag wird ein anderes Produkt: Statt den Neuausschreibungstermin vorherzusagen, zeigen wir, wann ein Vertrag laut Bekanntmachung endet (Ende der Grundlaufzeit) und wie "
-              "lange er höchstens verlängert werden kann. Die Liste deckt 79,7 % der Lose ab. Prototyp für die Oberpfalz: 146 Lose. Jeder Eintrag hat einen TED-Link und eine Stufe A bis F (Herkunft der Angabe). "
+              "lange er höchstens verlängert werden kann. Die Liste (Fassung der Iteration 9, 9.325 Lose) deckt 79,4 % der Lose ab. Prototyp für die Oberpfalz: 130 Lose. Jeder Eintrag hat einen TED-Link und eine Stufe A bis F (Herkunft der Angabe). "
               "Keine Prognose. ZEIG-MIR-WO: reports/beispiel_liste.md, src/report/beispiel_liste.py.")
 zeilen = [("Ende Grundlaufzeit (laut Bekanntmachung)", "Höchstende (nur Hinweis)", "Auftraggeber", "Stufe", "Quelle"),
-          ("31.07.2027", "31.07.2029", "Stadt Regensburg", "A", "271497-2025"),
-          ("14.09.2027", "14.09.2029", "Stadt Regensburg", "A", "570596-2025")]
+          ("14.09.2027", "14.09.2029", "Stadt Regensburg", "A", "570596-2025"),
+          ("31.08.2028", "31.08.2030", "REWAG Regensburg", "A", "622498-2025")]
 tbl = s.shapes.add_table(3, 5, Inches(0.5), Inches(1.3), Inches(9), Inches(1.4))
 tbl.name = "Beispielliste"
 for c, w in enumerate((2.6, 2.0, 1.9, 0.7, 1.8)):
@@ -210,24 +210,24 @@ for r, zeile in enumerate(zeilen):
         para.runs[0].font.color.rgb = WHITE if r == 0 else INK
         cell.fill.solid()
         cell.fill.fore_color.rgb = TEAL if r == 0 else PALE
-stat(s, 0.5, 3.1, 2.8, "79,7 %", "der Lose mit bestimmbarem Ende", TEAL, "Abdeckung")
-stat(s, 3.6, 3.1, 2.8, "146", "Lose im Prototyp (Oberpfalz)", TEAL, "Lose")
+stat(s, 0.5, 3.1, 2.8, "79,4 %", "der Lose mit bestimmbarem Ende", TEAL, "Abdeckung")
+stat(s, 3.6, 3.1, 2.8, "130", "Lose im Prototyp (Oberpfalz)", TEAL, "Lose")
 stat(s, 6.7, 3.1, 2.8, "A–F", "Stufe je Eintrag: woher stammt die Angabe", AMBER, "Stufe")
 
 # 8 Qualität messen
-s = new_slide("Wie genau ist die Liste? Drei Messungen",
-              "ZEIT 1:45. Wichtigste Folie zur Einordnung. Drei Messungen, drei verschiedene Dinge: Iteration 6, Handprüfung von 60 Zufallslosen, aber die Vorlage zeigte den Listenwert (Verankerung): 88,3 %. "
+s = new_slide("Wie genau ist die Liste? Vier Messungen",
+              "ZEIT 1:45. Wichtigste Folie zur Einordnung. Vier Messungen, vier verschiedene Dinge: Iteration 6, Handprüfung von 60 Zufallslosen, aber die Vorlage zeigte den Listenwert (Verankerung): 88,3 %. "
               "Iteration 7, Handprüfung ohne Listenwerte, Nachprüfung im Original: 76,6 %, ein Mischmaß aus Listenfehlern und Prüfungsfehlern (Felder abgeschrieben). Iteration 8, zwei KI-Leser (Opus, Sonnet): "
-              "77 von 80, 96,2 %. Wichtig: Die Zahlen sind NICHT vergleichbar und keine davon ist eine belastbare Fehlerquote. Alle Schwellen standen vorab fest. "
-              "ZEIG-MIR-WO: reports/evaluation_iteration6.md, 7, 8.")
-balken(s, 0.5, 1.2, 5.7, 3.0, ["Iteration 6: Hand, Listenwert sichtbar", "Iteration 7: Hand, ohne Listenwert", "Iteration 8: zwei KI-Leser"], [88.3, 76.6, 96.2], [AMBER, RED, TEAL], "Ende der Grundlaufzeit stimmt")
+              "77 von 80, 96,2 %. Iteration 9, neue Stichprobe, Rohtext ohne Projektkontext, überarbeitete Liste (Regeln 6 bis 10): 66 von 70 Zufallslosen = 94,3 %, Kommilitone 14 von 15; Höchstende 87,1 % (Schwelle 90 % verfehlt), ein Los mit unveröffentlichtem Ergebnis (V7) und Lücken im Verfahren (V8 teilweise). Alte Fassung auf denselben Losen 65 von 70, bloßes Feld 63 von 70: Der Nutzen der neuen Regeln ist nicht gesichert, der Vergleichswert teilweise zirkulär. Wichtig: Die Zahlen sind NICHT vergleichbar und keine davon ist eine belastbare Fehlerquote. Alle Schwellen standen vorab fest. "
+              "ZEIG-MIR-WO: reports/evaluation_iteration6.md, 7, 8, 9.")
+balken(s, 0.5, 1.2, 5.7, 3.0, ["Iteration 6: Hand, Listenwert sichtbar", "Iteration 7: Hand, ohne Listenwert", "Iteration 8: zwei KI-Leser", "Iteration 9: KI-Leser, neue Stichprobe"], [88.3, 76.6, 96.2, 94.3], [AMBER, RED, TEAL, TEAL], "Ende der Grundlaufzeit stimmt")
 rect(s, 6.4, 1.3, 3.1, 3.3, PALE, name="Schwächen Karte")
-box(s, 6.6, 1.5, 2.7, 3.0, [[("Jede Messung hat eine Schwäche", {"bold": True})], "6: verankert", "7: Mischmaß aus Listen- und Prüffehlern", "8: Leser nicht unabhängig", "", [("Eine belastbare Fehlerquote bleibt offen", {"bold": True})]], size=14, space=4, name="Schwächen")
-box(s, 0.5, 4.4, 5.7, 0.3, "Schwelle jeweils 90 %; Iteration 7 mit gekürzter Stichprobe (47 Lose)", size=11, color=GREY)
+box(s, 6.6, 1.5, 2.7, 3.0, [[("Jede Messung hat eine Schwäche", {"bold": True})], "6: verankert", "7: Mischmaß aus Listen- und Prüffehlern", "8: Leser nicht unabhängig", "9: Vergleichswert teils zirkulär, Mensch nur 14/15", "", [("Eine belastbare Fehlerquote bleibt offen", {"bold": True})]], size=13, space=3, name="Schwächen")
+box(s, 0.5, 4.4, 5.7, 0.3, "Schwelle jeweils 90 %; Iteration 7 mit gekürzter Stichprobe (47 Lose); Iteration 9: 70 Zufallslose", size=11, color=GREY)
 
 # 9 KI-Irrwege
 s = new_slide("KI-Irrwege, die wir gefunden haben",
-              "ZEIT 1:30. Claude Code hat Regeln, Stichproben und Auswertungen mitgebaut. Vier Beispiele aus docs/ki_irrwege.md (19 Einträge): (1) Prüfer und Regel stammen von derselben Hand: gefunden vom Evaluator "
+              "ZEIT 1:30. Claude Code hat Regeln, Stichproben und Auswertungen mitgebaut. Vier Beispiele aus docs/ki_irrwege.md (23 Einträge): (1) Prüfer und Regel stammen von derselben Hand: gefunden vom Evaluator "
               "in Iteration 2, Folge: Handsuche durch getrennten Subagenten. (2) Entwicklung 10–11 von 12 plausibel, im Test 11 von 24: gefunden im Test, Folge: Regel verworfen. (3) Felder in der Vorlage versteckt, "
               "damit nichts verankert; dadurch 65 von 95 Einträge „unbekannt“ (Y1 zunächst 25 %): gefunden in der Auswertung, Folge: Nachprüfung im Original. (4) Leser „blind“ genannt, hatten aber die "
               "Projektbeschreibung im Kontext: gefunden vom Evaluator, Folge: offen im Ergebnis genannt. Kernpunkt: Ein eigener Subagent (Evaluator) prüft jede Iteration kritisch. ZEIG-MIR-WO: docs/ki_irrwege.md.")
@@ -246,7 +246,7 @@ s = new_slide("Trennung von Entwicklung und Test",
               "ZEIT 1:00. LIVE-NACHWEIS (Fragenrunde vorbereiten): Regel 1b und der Seed 20261106 wurden VOR dem Ziehen der Stichprobe committet (Commits 7d42a55, c7fb0c0, dann a87dc1f). Der Schlüssel der "
               "Stichprobe liegt lokal, sein SHA-256 steht im Commit (eade66c0…). Entwicklungsfälle (L1, L42, L43, L60) und angesehene Bekanntmachungen sind aus der Stichprobe ausgeschlossen. Kriterien Z0 bis Z4 "
               "der Iteration 8 vor dem Lauf committet (6fe4e38), Auswertungsskript vor den Antworten (9645fa8). ZEIG-MIR-WO: git log --oneline, .git/logs/HEAD, src/prepare/stichprobe_iteration7.py. "
-              "Ehrlich: Die Leser kannten den Fehlertyp.")
+              "Iteration 9 genauso: Regeln a03a4a8, Seed und Skript 4521952, Auswertungsskript b3b1471, Antworten erst e1726e7; Lücke: das Lauf-Skript der Leser wurde erst mit den Antworten committet. Ehrlich: In Iteration 8 kannten die Leser den Fehlertyp.")
 for i, (h, c) in enumerate((("Regel und Seed committen", "7d42a55, c7fb0c0"), ("Stichprobe ziehen", "a87dc1f, Hash des Schlüssels"), ("Prüfen ohne Listenwerte", "Vorlage ohne Ende-Spalte"), ("Auswerten gegen vorab Schwellen", "Y1–Y4, Z0–Z4"))):
     x = 0.5 + i * 2.3
     rect(s, x, 1.5, 2.1, 2.3, PALE, name=f"Schritt {i + 1}")
@@ -258,12 +258,12 @@ box(s, 0.5, 4.2, 9, 0.4, "Nachweis in der Fragenrunde: git log und die Reihenfol
 
 # 11 Empfehlung und Grenzen
 s = new_slide("Empfehlung und Grenzen",
-              "ZEIT 1:15. Ampel statt Fazit-Folie voller Text. GRÜN: Die Liste ist als Ausgangspunkt nutzbar, immer mit Blick in die verlinkte Bekanntmachung; 77 von 80 Zufallslosen stimmen mit zwei KI-Lesungen "
-              "überein. GELB: Höchstende nur Hinweis; Schuljahres-Verträge (Landkreis Börde) nicht tagesgenau; Lose ohne Zuschlag (L69, L72) und Übertragung von Einzelwerten auf andere Lose (L81) stecken in der Liste; "
-              "Leser nicht unabhängig. ROT: Terminprognose, „die Liste ist korrekt“, Nachfrage und Zahlungsbereitschaft. Transferfrage vorbereiten: andere Nische = gleiche Pipeline, aber Lese-Regeln neu testen; "
-              "doppeltes Volumen = Abruf und Prüfung skalieren, menschliche Prüfung nicht. ZEIG-MIR-WO: docs/annahmen.md, reports/evaluation_iteration8.md.")
-ampel = (("Ja", GREEN, ["Liste „laut Bekanntmachung“ als Ausgangspunkt", "Link zur Bekanntmachung prüfen", "77 von 80 durch KI-Lesung gestützt"]),
-         ("Mit Vorsicht", AMBER, ["Höchstende nur als Hinweis", "Schuljahres-Verträge nicht tagesgenau", "Lose ohne Zuschlag, Zuordnungsfehler"]),
+              "ZEIT 1:15. Ampel statt Fazit-Folie voller Text. GRÜN: Die Liste ist als Ausgangspunkt nutzbar, immer mit Blick in die verlinkte Bekanntmachung; 94,3 % der Zufallslose der Iteration 9 stimmen mit zwei KI-Lesungen "
+              "überein, ein Kommilitone bestätigt 14 von 15. GELB: Höchstende nur Hinweis (87,1 %, oft zu hoch); Schuljahres-Verträge nicht tagesgenau; unveröffentlichte Ergebnisse (unpublished, N51) werden nicht erkannt; die Fehlerarten der Iteration 8 sind "
+              "behoben, aber nicht bestätigt; Leser nicht unabhängig, Vergleichswert teils zirkulär. ROT: Terminprognose, „die Liste ist korrekt“, Nachfrage und Zahlungsbereitschaft. Transferfrage vorbereiten: andere Nische = gleiche Pipeline, aber Lese-Regeln neu testen; "
+              "doppeltes Volumen = Abruf und Prüfung skalieren, menschliche Prüfung nicht. ZEIG-MIR-WO: docs/annahmen.md, reports/evaluation_iteration9.md.")
+ampel = (("Ja", GREEN, ["Liste „laut Bekanntmachung“ als Ausgangspunkt", "Link zur Bekanntmachung prüfen", "94,3 % wie zwei KI-Leser, Mensch 14/15"]),
+         ("Mit Vorsicht", AMBER, ["Höchstende nur als Hinweis", "Schuljahres-Verträge nicht tagesgenau", "Unveröffentlichte Ergebnisse (N51)"]),
          ("Nein", RED, ["Terminprognose", "„Die Liste ist korrekt“", "Nachfrage und Preis (nicht geprüft)"]))
 for i, (h, f, pts) in enumerate(ampel):
     x = 0.5 + i * 3.1
@@ -277,7 +277,7 @@ s = new_slide("", "ZEIT 0:45. Kernbotschaft in einem Satz wiederholen, dann Brü
               "Live-Nachweis (git log, Regel in src/prepare/vertragsliste.py öffnen), Transferfrage (andere Nische, doppeltes Volumen).", dark=True)
 box(s, 0.6, 0.6, 8.8, 0.8, "Fazit", size=36, bold=True, color=AMBER, font=HEAD, name="Fazit Titel")
 box(s, 0.6, 1.6, 8.6, 1.9, "Den Termin einer Neuausschreibung sagen TED-Daten nicht vorher (28,8 % statt 60 %). Brauchbar ist eine Liste, wann Verträge laut Bekanntmachung enden. "
-    "Wie genau sie ist, bleibt offen: Hand- und KI-Prüfung stützen sie, ohne sie zu beweisen.", size=22, color=WHITE, name="Kernbotschaft")
+    "Zuletzt stimmt sie zu 94,3 % mit zwei KI-Lesern überein (Mensch 14/15). Wie genau sie wirklich ist, bleibt offen: Prüfungen stützen sie, ohne sie zu beweisen.", size=22, color=WHITE, name="Kernbotschaft")
 box(s, 0.6, 3.9, 8.6, 0.9, [[("Nächster Schritt: ", {"bold": True, "color": AMBER}), ("menschliche Zweitlesung der Problemgruppen und ein Gespräch mit zwei bis drei Reinigungsfirmen", {"color": SOFT})]], size=16, name="Nächster Schritt")
 
 OUT.parent.mkdir(parents=True, exist_ok=True)

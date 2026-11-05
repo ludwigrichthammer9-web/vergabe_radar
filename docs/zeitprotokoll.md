@@ -12,7 +12,8 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchste
 | 6 | 1 | 4 | 3.6 |
 | 7 | 3 | 12 | 4.4 |
 | 8 | 2 | 5 | 1.3 |
-| **Summe** | 24 | 87 | **29.9** |
+| 9 | 2 | 10 | 1.9 |
+| **Summe** | 26 | 97 | **31.8** |
 
 ## Iteration 1
 
@@ -77,6 +78,13 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchste
 |---|---|---|---|---|
 | 2026-11-04 | 23:39–23:54 | 4 | 0.8 | Iteration 8 angelegt: KI-Zweitlesung, Kriterien und Vorlage (vor dem L / Iteration 8: Evaluator-Entscheide, Z4 und Auswertung |
 | 2026-11-05 | 09:02–09:02 | 1 | 0.5 | Iteration 8 abgeschlossen: weiter, Projektabschluss |
+
+## Iteration 9
+
+| Tag | Zeit | Commits | Std. | Erster / letzter Commit |
+|---|---|---|---|---|
+| 2026-11-05 | 09:02–09:33 | 6 | 1.0 | Lab-Log und Foliengerüst für den Vortrag / Iteration 9: Nachtrag zum Pfad des Schlüssels |
+| 2026-11-05 | 14:08–14:31 | 4 | 0.9 | Iteration 9, Schritt 4: Antworten der Leser und des Kommilitonen (unve / Iteration 9 abgeschlossen: weiter, Projektabschluss |
 
 ## Ergänzungen von Hand (nicht im Git)
 

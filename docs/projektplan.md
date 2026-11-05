@@ -255,9 +255,11 @@ _Jetzt Iteration 6 (mit Iteration 7 zusammengelegt am 2026-11-04). Vorher Iterat
 ## Strang G: Geschäft
 
 ### G1 Wettbewerb und Markt prüfen (A2, A3)
-- [ ] G1.1 Ausschreibungsdienste sichten (z. B. DTAD, Vergabeportale, kommerzielle Anbieter): Bieten sie Prognosen?
-- [ ] G1.2 Funktionen und Preise festhalten, Lücken benennen
-- [ ] G1.3 Marktgröße abschätzen: Anzahl Reinigungsfirmen im Zielbereich, Anteil der öffentlichen Aufträge
+- [x] G1.1 Ausschreibungsdienste sichten (z. B. DTAD, Vergabeportale, kommerzielle Anbieter): Bieten sie Prognosen?
+  _(2026-11-05, verspätet: ja, Vergabeweiser kostenlos, AusschreibungsRadar mit Schätzung des Termins; A2 widerlegt; `docs/business.md` §8)_
+- [x] G1.2 Funktionen und Preise festhalten, Lücken benennen _(2026-11-05: `docs/business.md` §8.2)_
+- [x] G1.3 Marktgröße abschätzen: Anzahl Reinigungsfirmen im Zielbereich, Anteil der öffentlichen Aufträge
+  _(2026-11-05: grobe Schätzung mit offenen Annahmen, `docs/business.md` §8.4; Anteil öffentlicher Aufträge am Umsatz nicht gefunden)_
 - [ ] G1.4 Abdeckung durch TED abschätzen: Welcher Teil der Reinigungsaufträge liegt über den EU-Schwellenwerten? (A3)
 
 ### G2 Kundengespräche (A1, A15) – nach G2.2 eingestellt

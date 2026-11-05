@@ -203,3 +203,70 @@ Geschäftliche und technische Erfolgskriterien werden nach den ersten Gespräche
 brauchen, und das daraus folgende Trefferfenster für den Backtest. Entscheidungstor laut [projektplan.md](projektplan.md), Strang G:
 Zeigt mindestens ein Teil der Gesprächspartner ein konkretes Problem und Interesse an einer Testliste, folgt ein Pilot. Sagt niemand,
 dass früheres Wissen hilft, ist das ein ernstes Warnsignal.
+
+## 8. Markt, Wettbewerb und Positionierung (Nachtrag nach Iteration 9, 2026-11-05)
+
+_Anlass: Der Dozent verlangt mehr Gewicht auf Business Understanding. Grundlage: Web-Recherche eines Recherche-Agenten und ein kritisches Gutachten eines zweiten Agenten aus BWL-Sicht (beide 2026-11-05, ohne Kundenkontakt).
+Angaben mit **(geprüft)** hat Claude am 2026-11-05 selbst auf der Seite nachgelesen; alle anderen stammen aus der Recherche des Agenten und sind nicht einzeln nachgeprüft. Abschnitt 6 bleibt als früherer Stand stehen; seine Aussage „keinen deutschen Dienst für auslaufende Verträge gefunden“ ist überholt._
+
+### 8.1 Fakten: Wie Reinigungsfirmen heute an öffentliche Aufträge kommen
+
+- **Kostenlos:** Bekanntmachungsservice [oeffentlichevergabe.de](https://www.oeffentlichevergabe.de) (Datenservice Öffentlicher Einkauf, BeschA; ober- und unterschwellig, Suchvorlagen mit ELSTER-Konto, Open Data als eForms-DE, OCDS und CSV, [BeschA](https://www.bescha.bund.de/DE/E-Beschaffung/Datenservice/Oeffentlicher-Einkauf_node.html)); Suchprofile mit E-Mail-Alarm auf TED; IHK-Ausschreibungsdienste.
+- **Kostenpflichtig:** Ausschreibungsdienste wie subreport (84–198 € pro Monat zzgl. USt., [Produktübersicht](https://subreport.de/ausschreibungen/produktuebersicht/)), DTAD (nur über den Vertrieb), evergabe.de (83 € pro Monat).
+- **Eignung:** Präqualifikation über das AVPQ der IHKs, gültig 1 Jahr, z. B. 90 € bei der IHK Stuttgart ([IHK Stuttgart](https://www.ihk.de/stuttgart/fuer-unternehmen/oe-ausschreibungen/service-unternehmen/pq-vol-verfahren-avpq-678374)).
+- **Zuschlagskriterien:** Der BIV empfiehlt Preis und Qualität je 50 %, Objektbesichtigung und mindestens 30 Tage Angebotsfrist ([BIV-Empfehlungen Mai 2026](https://www.die-gebaeudedienstleister.de/wp-content/uploads/2026/05/BIV_Vergabe-Empfehlungen_oeffentlVergabe_Mai26.pdf)); vergeben werde in der Praxis „überwiegend nach dem günstigsten Preis“ ([Vergabeblog 28.01.2026](https://vergabeblog.de/2026-01-28/reinigungsdienste-bundesinnungsverband-veroeffentlicht-empfehlungen-zur-oeffentlichen-vergabe/)). Laut Vergabestatistik 2024 wurden 63 % aller Vergaben nur nach Preis entschieden ([cosinex, Zusammenfassung des BMWE-Berichts](https://blog.cosinex.de/2026/08/27/vergabestatistik-bericht-2024/)).
+- **Umfrage KOINNO 2025** (n = 62 KMU und Start-ups, alle Branchen; nur die Zusammenfassung gelesen, [cosinex](https://blog.cosinex.de/2025/07/07/startups-und-kmu-in-der-oeffentlichen-beschaffung/)): Knapp die Hälfte findet selten passende Ausschreibungen; 56 % wurden schon vor einer Ausschreibung vom Auftraggeber kontaktiert (Markterkundung).
+- **Branche:** rund 35.000 Betriebe, 658.000 Beschäftigte, 27,5 Mrd. € Umsatz (BIV-Branchenreport 2025 über [DHZ](https://www.deutsche-handwerks-zeitung.de/?p=364247)). BIV-Konjunkturumfrage Frühjahr 2026 (n = 250): 16 % erwarten ein positives Jahr, 49 % haben Kunden oder Aufträge verloren ([BIV](https://www.die-gebaeudedienstleister.de/wp-content/uploads/2026/04/260414_Deutschlands-personalintensivstes-Handwerk-im-Stimmungstief-1.pdf)). Den Anteil öffentlicher Auftraggeber am Branchenumsatz hat die Recherche nicht gefunden.
+- **Abdeckung durch TED:** EU-Schwellenwert für Dienstleistungen 2026/2027: 216.000 € (Kommunen, Länder), 140.000 € (oberste Bundesbehörden) ([Vergabeblog 21.01.2026](https://vergabeblog.de/2026-01-21/eu-schwellenwerte-wurden-zum-01-01-2026-angepasst/)). Über alle Branchen lagen 2024 88 % der Vergaben unter der Schwelle (cosinex, s. o.); für Reinigung allein nicht gefunden.
+
+### 8.2 Fakten: Wettbewerber mit Funktion „auslaufende Verträge“
+
+| Anbieter | Land | Was er zeigt | Preis | Quelle |
+|---|---|---|---|---|
+| **Vergabeweiser** | DE | 10.265 Verträge, die in 12 Monaten enden, davon **1.005 Gebäudereinigung**; je Vertrag Zuschlagsempfänger, Zahl der Angebote, Verlängerungsoptionen, Erinnerung per E-Mail; Daten ober- und unterschwellig seit 12/2022 | kostenlos | [vergabeweiser.de/geplant](https://vergabeweiser.de/geplant) **(geprüft)** |
+| **AusschreibungsRadar** | DE/AT | rund 26.000 Aufträge mit Laufzeitende in 1 bis 18 Monaten, „verlängerbar“ markiert, geschätzter Ausschreibungsmonat („Median 111 Tage vor Vertragsbeginn“, mit Fragezeichen) | 0–149 € pro Monat | [Vertragsende](https://ausschreibungsradar.com/vertragsende/) **(geprüft)**, [Preise](https://ausschreibungsradar.com/preise/) |
+| aufträge.io | DACH | 43.373 Verträge mit Ende in 12 Monaten, Analyse der bisherigen Gewinner | auf Anfrage | [auftraege.io](https://www.auftraege.io/) |
+| TenderRender | DE | Vorhersage auslaufender Verträge (6/12/24 Monate) | ab 300 € pro Monat (Eigenangabe) | [Blog](https://www.tenderrender.com/de/blog/ausschreibungen-verwalten-software) |
+| Stotles | UK | „expiring contracts“ mit Prognose; Series A rund 10 Mio. £ (2025) | ab etwa 50 £ pro Monat | [stotles.com/pricing](https://www.stotles.com/pricing) |
+| Tussell | UK | Vertragsdaten, Wettbewerber; über 300 Firmenkunden (Eigenangabe) | Behördenverträge 18.000–29.000 £ pro Jahr | [Contracts Finder](https://www.contractsfinder.service.gov.uk/Notice/871b5dc1-ab3f-4d0d-a884-da4f997cae6a) |
+| GovSpend | US | Modul „Expiring Contracts“ | geschätzt 11.600–15.000 USD pro Jahr (Angabe eines Wettbewerbers) | [GovSpend](https://govspend.com/?p=17171) |
+
+Beide geprüften deutschen Anbieter schreiben ausdrücklich, dass der Auftraggeber entscheidet, ob und wann neu ausgeschrieben wird.
+
+### 8.3 Fakten aus dem eigenen Projekt, die für die Bewertung zählen
+
+- Die Liste nutzt nur TED (oberhalb der EU-Schwelle) und nur eForms-Zuschläge ab Oktober 2023 (9.325 Lose, [vertragsliste_iteration9.md](../reports/vertragsliste_iteration9.md)).
+- Die meisten Vorgänger heutiger Neuausschreibungen stammen aus der Zeit vor eForms: 55 von 68 Backtest-Vorgängern ([ki_irrwege.md](ki_irrwege.md)), nur etwa 5 von 38 Vorgängern in Iteration 3 (A10). Einen objektgleichen Vorgänger auf TED hatten 63,3 % (A3).
+- Die Liste enthält weder Zuschlagsempfänger noch Wert noch Zahl der Angebote (Kopfzeile von [beispiel_liste_oberpfalz.csv](../reports/beispiel_liste_oberpfalz.csv)); die Rohdaten enthalten diese Felder.
+- Terminprognose ±3 Monate 28,8 % (Iteration 5); Ende der Grundlaufzeit zu 94,3 % wie zwei KI-Leser, Höchstende nur Hinweis (Iteration 9).
+
+### 8.4 Interpretation: Was aus Unternehmersicht keinen Sinn ergibt
+
+1. **Das Kernprodukt gibt es schon, kostenlos und mit mehr Abdeckung** (kritisch). Vergabeweiser zeigt Vertragsenden in der Gebäudereinigung samt Zuschlagsempfänger und Bieterzahl, ober- und unterschwellig. Unsere Liste ist enger (nur TED) und hat weniger Felder. Ein Markteintritt mit der Liste allein ergibt keinen Sinn.
+2. **Das Kundenproblem ist eine Setzung** (kritisch). Neuausschreibungen sind öffentlich, mit mindestens 30 Tagen Frist, und Suchdienste dafür gibt es kostenlos. Der Engpass der Betriebe liegt nach den Quellen eher beim Preis (Vergabe überwiegend nach Preis), bei Personal und Eignung und bei der Frage, wo sich ein Angebot lohnt. Ob „früher wissen“ hilft, ist ohne Gespräche nicht belegt (A1, A15).
+3. **Die Liste sieht die nahe Zukunft kaum** (kritisch). Die Verträge, die in den nächsten 6 bis 18 Monaten neu ausgeschrieben werden, wurden meist vor eForms vergeben und fehlen; die Lücke schließt sich erst über die Jahre.
+4. **Vertragsende ist kein Termin** (mittel). Verlängerungen, Kündigungsfristen und Eigenreinigung verschieben die Neuausschreibung. Das betrifft alle Anbieter gleich; die Wettbewerber weisen es ebenso aus.
+5. **Marktgröße** (mittel; grobe Schätzung des Gutachtens, Annahmen offen): Bei 3.000 bis 6.000 Betrieben, die öffentlich bieten (Annahme 10–20 % von rund 30.000), und 1.200 € pro Jahr läge das gesamte Potenzial bei 3,6–7,2 Mio. €; für ein Zweierteam ohne Vertrieb realistisch 40 bis 200 Kunden (50.000–240.000 € pro Jahr). Gegen kostenlose Konkurrenz ist auch das fraglich.
+6. **Kundenbindung** (mittel). Die Liste ändert sich langsam; nach dem ersten Blick gibt es wenig Grund, monatlich zu zahlen.
+
+### 8.5 Interpretation: Mehrwert und mögliche Positionierung
+
+- **Was vom Mehrwert bleibt:** (a) gemessene Lesequalität auf Losebene (Ende der Grundlaufzeit, Regel 1b „Enddatum ist schon Höchstende“, Lose ohne Zuschlag); keiner der geprüften Wettbewerber veröffentlicht, wie genau seine Vertragsenden sind. (b) Der Backtest-Beleg, dass ein fester Abstand den Termin nicht vorhersagt (28,8 %). (c) Ein sauber dokumentiertes Prüfverfahren (Seeds, Hashes, Evaluator). Das ist ein Mehrwert für das Studium und für einen Datenanbieter, kaum direkt für einen Reinigungsbetrieb.
+- **Positionierungen im Vergleich** (Bewertung des Gutachtens, ergänzt um die Wettbewerbslage):
+
+| Richtung | Einschätzung |
+|---|---|
+| Liste der Vertragsenden als eigenes Produkt | nicht tragfähig: kostenlos vorhanden (Vergabeweiser) |
+| Wettbewerbsbild für die Entscheidung „bieten oder nicht, zu welchem Preis“ (Amtsinhaber, Jahreswert, Bieterzahl, Fenster frühestens bis spätestens) | inhaltlich am stärksten, aber Vergabeweiser zeigt Amtsinhaber und Bieterzahl schon; ein Vorsprung bliebe nur bei Preis-Benchmarks (Jahreswert je Auftraggeber; nur 45 % der Zuschläge mit plausiblem Wert) |
+| Datenqualität als Zulieferung (Lese-Regeln, Prüfverfahren) für bestehende Dienste | realistischster Weg; kleiner Markt, Käufer können nachbauen |
+| Beratung oder Jahresreport für Reinigungsbetriebe über Innung oder Auftragsberatung | der Kanal wäre der Vorteil, nicht die Technik; Zahlungsbereitschaft offen |
+| Benchmark für Vergabestellen (Auftragswertschätzung) | denkbarer Zweitmarkt, kleine Budgets |
+
+- **Was einen vom Markt abheben könnte:** nicht die Daten (offen, CC0), sondern Branchentiefe in einer Nische (z. B. Objektart, Leistungsumfang, Jahreswert je Auftraggeber), nachgewiesene Datenqualität und ein Vertriebskanal über Verband oder Kammer. Keiner dieser Punkte ist im Projekt geprüft.
+
+### 8.6 Folgen für das Projekt
+
+- **A2 widerlegt** (siehe `docs/annahmen.md`): Deutsche Dienste zeigen auslaufende Verträge, einer schätzt auch den Ausschreibungstermin.
+- Die Sichtung der Wettbewerber (Projektplan G1.1) war früh geplant und ist erst jetzt erfolgt; die Suche vom 2026-10-24 (Abschnitt 6) fand die deutschen Anbieter nicht. Das ist ein Versäumnis im Business Understanding und wird im Lab-Log offen genannt.
+- **Ehrliche Einordnung:** Das Projekt zeigt, wie genau sich Vertragsenden aus TED lesen lassen und dass sich der Termin der Neuausschreibung mit einem festen Abstand nicht vorhersagen lässt. Ein eigenständiges Geschäftsmodell für die Liste lässt sich daraus nicht ableiten.
+- **Was in der Restzeit noch möglich wäre** (Entscheidung beim Nutzer): (1) drei bis fünf kurze Gespräche mit Reinigungsbetrieben aus der Oberpfalz-Liste, einer Vergabestelle und der Auftragsberatung Bayern, mit der Frage, ob sie Vergabeweiser oder AusschreibungsRadar kennen und was ihnen fehlt; (2) eine Stichprobe: für 10 bis 20 Lose der Oberpfalz-Liste das Vertragsende bei Vergabeweiser nachsehen und vergleichen (zeigt, ob unsere Lesequalität einen Unterschied macht).
