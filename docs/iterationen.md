@@ -24,6 +24,7 @@ Regeln:
 | 8 | KI-Zweitlesung der Stichprobe von Iteration 7 (zwei KI-Leser, Liste eingefroren, reine Messung) | 5 | 2026-11-04 bis 2026-11-05 | abgeschlossen | **Weiter (Projektabschluss), eingeschränkt formuliert:** Z0 94/95, Z1 77/80, Z3 75/80 und 67/72, Z4 10/10 erfüllt; Z2 14/15, bei einheitlichem Maßstab 11/15 (verfehlt); Leser nicht unabhängig, nicht von Menschen bestätigt |
 | 9 | Verbesserte Liste, neue Stichprobe, KI-Lesung ohne die Grenzen der Iteration 8 (Rohtext, Fakten statt Anleitung, eigene Sitzung, menschliche Kontrolle an 15 Losen) | 3 → 5 → 6 | 2026-11-05 | abgeschlossen | **Weiter (Projektabschluss), eingeschränkt formuliert:** V1 66/70, V2 28/30, V3 erfüllt (66 gegen 65), V5 110/110, V6 14/15; V4 und V7 verfehlt, V8 teilweise; Prototyp = Fassung der Iteration 9, Höchstende nur Hinweis |
 | 10+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | außerhalb des Projekts | – |
+| 10 | Rücksprung zu Business Understanding: Wettbewerb (Vergabeweiser) gegen die eigene Liste am Vergleichswert der Iteration 9 | 1 → 5 | 2026-11-05 bis etwa 2026-11-08 | läuft | offen |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
 sind sie um eine Stelle verschoben. Konkretisiert werden sie mit `/iteration-start`.
@@ -45,6 +46,8 @@ _Nachtrag 2026-11-04 (Abschluss Iteration 6):_ Nach der Entscheidung „zurück 
 _Nachtrag 2026-11-04 (Abschluss Iteration 7):_ Nach der Entscheidung „Abschluss mit diesem Stand“ wird die Lese-Regel nicht weiter verändert. Als letzte Iteration ist eine reine Messung geplant (KI-Zweitlesung der Stichprobe von Iteration 7 mit eingefrorener Liste); sie ersetzt das Ergebnis von Iteration 7 nicht und wird mit `/iteration-start` angelegt.
 
 _Nachtrag 2026-11-05 (Abschluss Iteration 8):_ Nach der Entscheidung „weiter (Projektabschluss)“ folgt keine weitere Iteration; offene Grenzen kommen ins Lab-Log. Die Zeile „8+“ ist damit gegenstandslos („9+“, außerhalb des Projekts).
+
+_Nachtrag 2026-11-05 (nach Abschluss Iteration 9):_ Der Dozent verlangt mehr Gewicht auf Business Understanding. Die Recherche dazu (`docs/business.md` §8) hat einen kostenlosen Wettbewerber gefunden, der eine Liste auslaufender Verträge zeigt (A2 widerlegt). Abweichend von „keine weitere Iteration“ (Iteration 8 und 9) folgt deshalb Iteration 10 als Rücksprung zu Phase 1, Entscheidung des Nutzers am 2026-11-05. Die Zeile „10+“ bleibt als früherer Stand stehen.
 
 ---
 
@@ -1329,3 +1332,56 @@ _Interpretation_
 
 **Entscheidung (2026-11-05, Nutzer): Weiter, Projektabschluss, eingeschränkt formuliert.** Die Fassung der Iteration 9 (Regeln 1 bis 10) wird der Prototyp. Das Höchstende bleibt Hinweis. V4, V7 und V8 werden offen als verfehlt bzw. teilweise berichtet. Keine weitere Iteration.
 Abweichung von den vorab festgelegten Folgen, offen begründet: V7 verlangte „Filter nachbessern“, die Ursache lag aber in der Anweisung an die Leser, nicht im Filter; V8 „teilweise“ wird nicht wiederholt, sondern mit den Nachträgen ausgewiesen; für V4 gab es keine Folge.
+
+## Iteration 10: Rücksprung zu Business Understanding – Wettbewerber gegen eigene Liste
+
+**Status:** läuft (angelegt am 2026-11-05)
+
+**Fokus und Phasen:** 1 → 5. Anlass: Der Dozent verlangt mehr Gewicht auf Business Understanding; die Recherche vom 2026-11-05 ([business.md §8](business.md)) zeigt, dass Vergabeweiser (kostenlos) und AusschreibungsRadar Listen auslaufender Verträge anbieten (A2 widerlegt).
+Offen ist, ob die eigene Liste einen messbaren Vorteil hat. Iteration 9 bleibt unverändert; ihre Stichprobe und ihr Vergleichswert werden als fester Maßstab wiederverwendet, es wird nichts neu beurteilt.
+
+**Ausgangslage (Fakten):**
+- Vergabeweiser bietet eine kostenlose API (`https://vergabeweiser.de/api/v1`, OpenAPI-Beschreibung unverändert in `data/raw/vergabeweiser_20261105/openapi.json`, abgerufen 2026-11-05; ohne Schlüssel 60 Abfragen pro Stunde; Aufbereitung CC BY 4.0).
+- Das Vertragsende steht dort je Verfahren (`ends_on`, „laut Bekanntmachung, ohne Verlängerungen“), nicht je Los; Lose haben nur Titel, Schätzwert und Angebotszahl (Test an zwei Einträgen).
+- Zuordnung: Die TED-Zuschlagsbekanntmachung verweist auf die frühere Auftragsbekanntmachung (`cac:NoticeDocumentReference`); die ersten 8 Zeichen von deren eForms-Kennung (`notice-id`) sind die Vergabeweiser-ID. Die Kennung der Zuschlagsbekanntmachung selbst und die `ContractFolderID` ergeben 404 (Test an 105754-2026 und am Eintrag 0a0a7543).
+
+**Hypothese** _(vorab festgelegt am 2026-11-05, vor dem Abruf der Stichprobe bei Vergabeweiser)_
+„Beim Ende der Grundlaufzeit stimmt Vergabeweiser auf den 70 Zufallslosen (Z) der Iteration 9 seltener mit dem Vergleichswert der Iteration 9 überein als die Liste der Fassung 9 (66/70).“
+
+**Begriffe** _(vorab festgelegt)_
+- **Stichprobe:** die 70 Z-Lose der Iteration 9 (Schlüssel `data/processed/stichprobe_iteration9_schluessel.csv`, SHA-256 `9dbf5c1a…`), Zähler und Nenner wie V1.
+- **Vergleichswert:** unverändert aus Iteration 9 (neutrale Definition aus den Fakten der Leser A und B, bei Uneinigkeit Entscheid des Evaluators, `reports/zweitlesung_iteration9_entscheide.csv`), berechnet mit `src/prepare/auswertung_iteration9.py`.
+- **Zuordnung (Skript, ohne Handentscheid), Kandidaten in dieser Reihenfolge:** (1) alle `NoticeDocumentReference`-Nummern der Zuschlagsbekanntmachung → TED-XML dieser Bekanntmachungen (unverändert nach `data/raw/ted_xml/vergleich_iteration10/`) → `notice-id`; (2) Auftragsbekanntmachungen mit derselben Verfahrenskennung (`ContractFolderID` = `procedure-identifier`, BT-04) aus den gespeicherten TED-Abfragen `data/raw/ted_search/*competition*`, früheste zuerst → `notice-identifier` (BT-701); (3) die `notice-id` der Zuschlagsbekanntmachung selbst. Je Kandidat Abfrage `GET /tenders/{erste 8 Zeichen}` (Antwort unverändert nach `data/raw/vergabeweiser_20261105/`). Der erste Treffer mit Status 200 gilt. Kein Treffer: „nicht gefunden“. Keine Suche über Titel oder Auftraggeber. Weg (2) wurde nach dem Trockenlauf ergänzt (61 von 69 Z-Bekanntmachungen ohne Verweis), vor jedem Abruf der Stichprobe.
+- **Wert von Vergabeweiser je Los:** `ends_on` des Verfahrens; fehlt es, `starts_on` + `duration_months` − 1 Tag; sonst „kein Wert“. Derselbe Wert gilt für alle Lose des Verfahrens.
+- **Korrekt (für Liste und Vergabeweiser gleich):** Datum gleich dem Vergleichswert mit einem Tag Toleranz (wie V1); „kein Wert“ ist korrekt nur, wenn der Vergleichswert ebenfalls kein Datum ist. Zusätzlich wird die Zählung wie V1 berichtet (dort zählt „kein Datum“ nie als Treffer; Liste 66/70).
+- **Gemeinsame Lose:** Z-Lose, bei denen Vergabeweiser einen Eintrag hat (gefunden, mit oder ohne Wert).
+
+**Erfolgskriterium** _(vorab festgelegt am 2026-11-05)_
+
+| | Kriterium | Schwelle | Annahme |
+|---|---|---|---|
+| W1 | Vorsprung der Liste: Treffer Liste − Treffer Vergabeweiser auf den gemeinsamen Losen, Ende der Grundlaufzeit | ≥ 5 Lose: Vorteil; 1 bis 4: kein gesicherter Vorteil; ≤ 0: kein Vorteil. Nur beurteilbar bei ≥ 40 gemeinsamen Losen | A2, A15 |
+| W2 | Abdeckung: Anteil der 70 Z-Lose, für die Vergabeweiser einen Eintrag hat; zusätzlich W1 auf allen 70 („nicht gefunden“ als Fehltreffer) | beschreibend | A3 |
+| W3 | Unter den Fehltreffern von Vergabeweiser: Anteil aus Bekanntmachungen, deren Lose in der eigenen Liste (`data/processed/vertragsliste_909.csv`) unterschiedliche Enden der Grundlaufzeit haben (Ende je Verfahren statt je Los) | beschreibend | – |
+| W4 | Gegenrichtung (Abdeckung unterhalb der EU-Schwelle): Anteil der Einträge mit `eu = false` unter den auslaufenden Gebäudereinigungs-Verträgen bei Vergabeweiser (`/expiring`, `monate = 36`, je eine Abfrage für Bayern und für Deutschland; die API liefert höchstens 50 Einträge, die frühesten zuerst, und nennt die Gesamtzahl `total`) | beschreibend | A3 |
+| W5 | Gespräche: zwei bis drei Telefonate des Nutzers mit Reinigungsbetrieben oder einer Vergabestelle, Leitfaden vorab in `docs/business.md` | beschreibend | A1, A15 |
+| W6 | Verfahren: Kriterien und Skript vor dem Abruf der Stichprobe committet, Rohdaten unverändert, Abweichungen offen | Ja/Nein | – |
+
+**Was folgt aus welchem Ergebnis**
+- W1 ≥ 5 (beurteilbar): Ein Qualitätsvorteil auf Losebene ist auf dieser Stichprobe belegt. Positionierung im Lab-Log: Qualitäts-Zulieferer oder Nischenanbieter; Nachfrage bleibt offen (W5).
+- W1 zwischen 1 und 4 oder nicht beurteilbar: Kein gesicherter Vorteil. Kernbotschaft: Die Liste ist als eigenes Produkt nicht tragfähig; ein möglicher Vorteil wird nur als Hinweis genannt.
+- W1 ≤ 0: Kein Vorteil. Kernbotschaft: nicht tragfähig, der kostenlose Wettbewerber ist mindestens gleich gut.
+- In allen Fällen: Projektabschluss ohne weitere Iteration; Lab-Log und Folien bekommen einen vierten Zyklus (Business Understanding). W6 nicht erfüllt → Abruf wiederholen.
+
+**Zeitrahmen:** 2026-11-05 bis etwa 2026-11-08. Abruf etwa 75 Minuten (gedrosselt auf eine Vergabeweiser-Abfrage pro Minute), Gespräche nach Verfügbarkeit des Nutzers.
+
+**Plan**
+1. Phase 5: Skript `src/prepare/vergleich_iteration10.py` (Zuordnung, Abruf, Auswertung W1 bis W4); vor dem Abruf der Stichprobe committen.
+2. Phase 5: Abruf im Hintergrund, Rohdaten unverändert; Auswertung `reports/vergleich_iteration10.md`.
+3. Phase 1: Leitfaden für W5 in `docs/business.md`; Gespräche durch den Nutzer, Notizen ohne Namen von Personen.
+4. Prüfung durch den Evaluator; Ergebnis, Entscheidung, Lab-Log und Folien.
+5. `/iteration-ende`.
+
+**Geprüfte Annahmen:** A2 (Wettbewerb, schon widerlegt: hier Qualität statt Existenz), A3 (Abdeckung durch TED), A15 und A1 nur beschreibend über W5.
+**Grenzen (vorab benannt):** Der Vergleichswert nimmt wie die Liste standardmäßig das Feld „Enddatum“ (teilweise zirkulär, Iteration 9); die Lese-Regeln der Liste wurden an TED-Texten entwickelt, die Leser lasen TED-XML. Beides kann die eigene Liste begünstigen. Die Stichprobe enthält nur TED-Lose (oberhalb der EU-Schwelle); über die Qualität von Vergabeweiser unterhalb der Schwelle sagt sie nichts.
+**Entwicklungstest (zählt mit, offen ausgewiesen):** Beim Test der Zuordnung wurde der Vergabeweiser-Eintrag zu 105754-2026 abgerufen; diese Bekanntmachung enthält das Z-Los N81 (`ends_on` 2027-12-31). Claude kennt die Listenwerte und den Vergleichswert der Stichprobe; der Vergleich läuft deshalb nur per Skript, ohne Handentscheid.
