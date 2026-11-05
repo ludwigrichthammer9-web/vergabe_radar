@@ -318,9 +318,8 @@ _Fakten sind die Aussagen der Gesprächspartner, Zitate wörtlich nach den Notiz
 | Vergabestelle: Verlängern | – | – | „Fast immer, wenn eine Verlängerungsoption im Vertrag steht“; meist 2 Jahre fest plus 1 Jahr Option; „Neu ausschreiben ist ein enormer Aufwand“ |
 | Vergabestelle: Schwelle | – | – | „Sehr oft“ national vergeben („alles unter 221.000 Euro“), vor allem Außenstellen, Jugendzentren, kleinere Schulen als Einzellose, um den regionalen Mittelstand zu fördern |
 
-Anrufe: 9, erreicht 4, Absagen 2, Gespräche 3 (laut Notizen); Zeitaufwand 105 Minuten (Vorbereitung, Anrufe, Abtippen).
-_Nachfrage an den Nutzer offen:_ 4 erreicht bei 3 Gesprächen und 2 Absagen; die vierte erreichte Person ist nicht beschrieben.
-_Hinweis zur Schwelle:_ Der Gesprächspartner nennt 221.000 €. Der Schwellenwert für Dienstleistungen von Kommunen und Ländern beträgt seit 01.01.2026 216.000 € (Vergabeblog, §8.1); 221.000 € galt nach unserem Kenntnisstand für 2024/2025 (nicht nachgeprüft). Das ändert die Aussage nicht.
+Anrufe: 9, erreicht 3 (Gespräche 3), Absagen 2; Zeitaufwand 105 Minuten (Vorbereitung, Anrufe, Abtippen). _Berichtigung des Nutzers 2026-11-05:_ „4 erreicht“ in den Notizen war ein Tippfehler.
+_Hinweis zur Schwelle:_ In den Notizen steht als Aussage der Vergabestelle „alles unter 221.000 Euro“. Der Nutzer hält das für einen Versprecher; der Schwellenwert für Dienstleistungen von Kommunen und Ländern beträgt seit 01.01.2026 216.000 € (Vergabeblog, §8.1). Die Aussage („sehr oft“ unterschwellig) bleibt davon unberührt; der Betrag wird nicht verwendet.
 
 **Interpretation (Claude; n = 3, Hinweise, keine Belege)**
 
