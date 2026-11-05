@@ -24,7 +24,7 @@ def main() -> None:
     commits = [(datetime.fromisoformat(d), s) for d, s in
                (line.split("|", 1) for line in git("log", "--reverse", "--format=%ad|%s", "--date=iso-strict").splitlines())]
     ends = [(datetime.fromisoformat(git("log", "-1", "--format=%ad", "--date=iso-strict", f"iteration-{i}")), i)
-            for i in range(1, 10) if git("tag", "-l", f"iteration-{i}")]
+            for i in range(1, 12) if git("tag", "-l", f"iteration-{i}")]
 
     def iteration(d: datetime) -> int:
         return next((i for end, i in ends if d <= end), len(ends) + 1)
@@ -63,7 +63,9 @@ def main() -> None:
         out.append("")
     out += ["## Ergänzungen von Hand (nicht im Git)", "",
             "| Datum | Person | Tätigkeit | Std. |", "|---|---|---|---|",
-            "| | | (z. B. Zweitprüfung P1–P13, Lesen der Urteilsregeln, Prüfung P14–P71 durch den Kommilitonen) | |", ""]
+            "| 2026-11-05 | Nutzer | Gespräche Iteration 10 (W5): Vorbereitung, 9 Anrufe, Abtippen (business.md §8.9) | 1.75 |",
+            "| 2026-11-05 | Kommilitone | Lesen von 15 Losen im TED-Original (Iteration 9, V6) | offen |",
+            "| | | weitere Handarbeit (Zweitprüfungen, Handprüfungen der Iterationen 5 bis 7) | offen |", ""]
     OUT.write_text("\n".join(out), encoding="utf-8")
     print(f"{len(sessions)} Sitzungen, {sum(total.values()):.1f} h; {OUT}")
 

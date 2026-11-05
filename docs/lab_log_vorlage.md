@@ -1,29 +1,61 @@
 # Lab-Log: Vergabe-Radar
 
-_Big Data Analytics, Leistungsnachweis B (Zweierteam). Chronologisch nach CRISP-DM-Zyklen. Zahlen und Quellen stehen in `docs/iterationen.md`, `docs/phasen/` und `reports/`; hier steht die Erzählung mit den Entscheidungen. Fakten und Deutung sind getrennt gekennzeichnet._
+_Big Data Analytics, Leistungsnachweis B (Zweierteam). Chronologisch nach CRISP-DM-Zyklen. Zahlen und Quellen stehen in `docs/iterationen.md`, `docs/business.md`, `docs/phasen/` und `reports/`; hier steht die Erzählung mit den Entscheidungen. Fakten und Deutung sind getrennt gekennzeichnet._
 
 _Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitprotokoll.md` und `docs/ki_irrwege.md`._
 
 ## 0. Überblick
 
-**Frage.** Mittelständler (Beispiel Gebäudereinigung) wollen sich früh auf Neuausschreibungen öffentlicher Aufträge vorbereiten. Lässt sich aus den Zuschlagsbekanntmachungen auf TED (Tenders Electronic Daily) vorhersagen, wann ein Vertrag neu ausgeschrieben wird?
+**Frage.** Mittelständler (Beispiel Gebäudereinigung) wollen sich früh auf Neuausschreibungen öffentlicher Aufträge vorbereiten. Lässt sich aus den Zuschlagsbekanntmachungen auf TED (Tenders Electronic Daily) vorhersagen, wann ein Vertrag neu ausgeschrieben wird, und wäre eine Liste auslaufender Verträge ein Produkt, das sich vom Markt abhebt?
 
 **Antwort in drei Sätzen.**
 1. Der Termin der Neuausschreibung lässt sich mit den TED-Daten nicht brauchbar vorhersagen: Die beste einfache Regel trifft das Fenster ±3 Monate in 28,8 % der 52 geprüften Fälle (Schwelle 60 %, naive Referenz 17,3 %).
-2. Brauchbar ist eine Liste der Verträge mit dem Ende ihrer Laufzeit („laut Bekanntmachung“). Sie deckt 79,4 % der Lose ab (Fassung der Iteration 9, 9.325 Lose).
-3. Wie genau diese Liste ist, haben wir viermal gemessen (zwei Handprüfungen, zwei KI-Zweitlesungen, die letzte mit Kontrolle durch einen Kommilitonen an 15 Losen). Zuletzt stimmt das Ende der Grundlaufzeit zu 94,3 % mit dem Vergleichswert zweier KI-Leser überein (Mensch 14/15). Jede Messung hat Schwächen; „die Liste ist korrekt“ ist damit nicht belegt.
+2. Brauchbar ist eine Liste der Verträge mit dem Ende ihrer Laufzeit („laut Bekanntmachung“; 79,4 % der Lose abgedeckt, 94,3 % Übereinstimmung mit dem Vergleichswert zweier KI-Leser, Mensch 14/15; „die Liste ist korrekt“ ist nicht belegt), aber diese Art Liste gibt es schon kostenlos (Vergabeweiser) und günstig (AusschreibungsRadar).
+3. Belegt ist nur ein Merkmalsunterschied (Ende je Los, Ende der Grundlaufzeit statt Höchstende; auf zwei Stichproben in rund 10 % der Lose), kein Qualitätsvorteil beim Lesen; Zahlungsbereitschaft zeigte sich in drei Gesprächen nur für Wettbewerbsdaten, die TED nur teilweise liefert, und Nachfrage bleibt ungeprüft.
 
-**Verlauf.** Neun Iterationen in drei Zyklen. Die Entscheidung am Ende jeder Iteration (weiter, zurück zu Phase X, Idee anpassen) war vorab an Schwellen gebunden, die vor dem Ergebnis committet wurden.
+**Verlauf.** Zehn Iterationen in vier Zyklen. Die Entscheidung am Ende jeder Iteration (weiter, zurück zu Phase X, Idee anpassen) war vorab an Schwellen gebunden, die vor dem Ergebnis committet wurden. Zyklus 4 entstand, weil der Dozent mehr Gewicht auf Business Understanding verlangte (Wie gehen Unternehmen vor? Wer ist Konkurrenz? Was ist der Mehrwert, was hebt uns ab?).
 
 | Zyklus | Iterationen | Leitfrage | Ergebnis |
 |---|---|---|---|
 | 1 | 1 bis 4 | Lässt sich ein neuer Auftrag seinem Vorgänger zuordnen? | Nein, jede Variante verfehlte die Schwelle; Idee angepasst |
 | 2 | 5 | Trägt eine einfache Terminprognose? | Nein (28,8 % statt 60 %); Idee angepasst auf eine Vertragsliste |
 | 3 | 6 bis 9 | Wie genau ist die Vertragsliste? | Brauchbar, zuletzt 94,3 % Übereinstimmung mit zwei KI-Lesern; nicht als korrekt belegt |
+| 4 | 10 und 10b (mit Paketen A, C, F, drei Gesprächen, Nebentest) | Was bietet der Markt schon, und hebt sich die Liste ab? | Kernprodukt gibt es kostenlos; belegt ist nur ein Merkmalsunterschied; Nachfrage offen |
 
-**Grenzen vorweg.** Kein Kundenkontakt (Entscheidung des Nutzers, 2026-10-29): Ob jemand für die Liste zahlt (A1, A15), ist ungeprüft. Alle Aussagen gelten für eForms-Bekanntmachungen (ab Herbst 2023), Haupt-CPV 909, Deutschland.
+**Grenzen vorweg.** Vor Iteration 10 gab es keinen Kundenkontakt (Entscheidung des Nutzers, 2026-10-29); in Iteration 10 folgten drei kurze Telefonate (Hinweise, keine Stichprobe). Ob jemand für eine solche Liste zahlt (A1, A15), ist weiter ungeprüft. Alle Messungen gelten für eForms-Bekanntmachungen (ab Herbst 2023) oberhalb der EU-Schwelle, Haupt-CPV 909, Deutschland.
 
-## 1. Zyklus 1: Zuordnung zum Vorgänger (Iteration 1 bis 4)
+## 1. Business Understanding im Überblick
+
+_Kurzfassung für den Dozenten. Quellen und Einzelheiten: `docs/business.md` §6 bis §8, `reports/wettbewerbsbild_oberpfalz.md`. Angaben aus Web-Recherche eines KI-Agenten und eines KI-Gutachtens sind nur dort „geprüft“, wo `docs/business.md` es vermerkt._
+
+**Wie gehen Betriebe heute vor (Fakten).**
+- Zugang zu Ausschreibungen: kostenlos über den Bekanntmachungsservice oeffentlichevergabe.de, Suchprofile auf TED und IHK-Dienste; kostenpflichtig über Dienste wie subreport (84 bis 198 € pro Monat), DTAD (Angebot über den Vertrieb) oder evergabe.de (83 € pro Monat) (`docs/business.md` §8.1).
+- Gespräche (n = 3, Hinweise): Ein Betrieb mit etwa 120 Beschäftigten zahlt knapp 1.500 € pro Jahr für DTAD; ein Betrieb mit 15 Beschäftigten zahlt für kein Portal und liest Webseiten und Lokalzeitung. Ob mitgeboten wird, entscheiden Entfernung, Personal und Kapazität; Vertragsenden bei anderen kennt keiner („Blackbox“, „Flurfunk“). Beide Betriebe kennen Vergabeweiser und AusschreibungsRadar nicht oder nur vom Hörensagen (`docs/business.md` §8.9).
+- Die Vergabestelle (ein Landratsamt) verlängert „fast immer“, wenn eine Option im Vertrag steht, plant etwa 9 Monate vor Vertragsende und veröffentlicht meist 3 bis 4 Monate vor Start; sie vergibt Reinigung „sehr oft“ unterhalb der EU-Schwelle in Einzellosen (n = 1).
+- Vergabe überwiegend nach Preis: 63 % aller Vergaben 2024 wurden nur nach Preis entschieden (Zusammenfassung des Vergabestatistik-Berichts, `docs/business.md` §8.1).
+
+**Konkurrenz mit der Funktion „auslaufende Verträge“ (Fakten, Stand 2026-11-05).**
+
+| Anbieter | Was er zeigt | Preis | Stand der Prüfung |
+|---|---|---|---|
+| Vergabeweiser | Verträge, die in 12 Monaten enden (1.005 in Gebäudereinigung), mit Zuschlagsempfänger, Angebotszahl, Optionen; ober- und unterschwellig; kostenlose API und Marktzahlen | kostenlos | Seite und API von uns geprüft und genutzt |
+| AusschreibungsRadar | rund 26.000 Aufträge mit Ende in 1 bis 18 Monaten, „verlängerbar“ markiert, geschätzter Ausschreibungsmonat; Wettbewerber-Tracking in der Business-Stufe | 0 bis 149 € pro Monat | Seiten von uns geprüft; Nebentest mit 2 sicher zugeordneten Losen |
+| aufträge.io | 43.373 Verträge mit Ende in 12 Monaten, Analyse bisheriger Gewinner | auf Anfrage | nur Recherche, nicht von uns geprüft |
+| subreport | Ausschreibungsdienst (laufende Ausschreibungen); eine Funktion für auslaufende Verträge ist in unseren Quellen nicht belegt | 84 bis 198 € pro Monat | Preis laut Produktübersicht des Anbieters und Wettbewerbervergleich |
+| DTAD | Ausschreibungsdienst; im Gespräch 1 kannte der Nutzer dort keine Liste auslaufender Verträge | Angebot über den Vertrieb (ein Betrieb: knapp 1.500 € pro Jahr) | nur Gespräch und Wettbewerberseiten |
+
+Beide geprüften deutschen Anbieter schreiben selbst, dass der Auftraggeber entscheidet, ob und wann neu ausgeschrieben wird. Im Ausland gibt es ähnliche Dienste (Stotles, Tussell, GovSpend; `docs/business.md` §8.2).
+
+**Mehrwert für Betriebe (Deutung, n = 3).** Der größere Betrieb sähe Nutzen in einem frühen Hinweis (Personal in der Zielregion früher suchen), würde aber eher für Wettbewerbsdaten zahlen (aktueller Auftragnehmer, alte Preise) als für Enddaten. Der kleine Betrieb hätte von 6 bis 12 Monaten Vorlauf nichts und will für Informationen nichts zahlen; sein Engpass ist die Bürokratie der Angebote. Die Zielgruppe „Mittelstand“ ist damit enger als gedacht: größere Betriebe, die für Kommunen und Behörden bieten.
+
+**Positionierung (Deutung).** Die Liste der Vertragsenden als eigenes Produkt trägt nicht, weil sie kostenlos vorhanden ist. Wettbewerbsdaten (Gewinner, Wert, Bieterzahl) zeigt Vergabeweiser kostenlos; aus TED allein sind sie nur teilweise zu bekommen (Oberpfalz, 130 Lose: Auftragnehmer 99,2 %, Zuschlagswert über 1 € 47,7 %, Gesamtzahl der Angebote 60,8 %, alle drei zusammen 24,6 %). Nicht ausgeschlossen sind Nischenrollen: Datenqualität als Zulieferung, Beratung über einen Verband, Benchmark für Vergabestellen (die Vergabestelle nannte sinkende Bieterzahlen, n = 1). Keine dieser Rollen ist geprüft.
+
+**Competitive Edge, ehrlich.**
+- *Was bleibt (belegt, mit Einschränkung):* ein Merkmalsunterschied. Die Liste führt das Ende je Los und das Ende der Grundlaufzeit statt des Höchstendes. Auf zwei Stichproben (n = 70 und n = 160) weicht Vergabeweisers Datum in rund 10 % der Lose vom Ende der Grundlaufzeit nach neutraler Definition ab, wo die Liste richtig liegt; in 10b waren 11 von 15 dieser Fälle Höchstende oder Losebene. Dazu kommen ein offen dokumentiertes Prüfverfahren mit benannten Fehlerarten und der Backtest, dass ein fester Abstand den Termin nicht vorhersagt.
+- *Was nicht bleibt:* Preis (Konkurrenz kostenlos), Daten (offen: TED, Bekanntmachungsservice CC0), Wettbewerbsbild (bei Vergabeweiser vorhanden), Abdeckung (die Liste enthält nur TED-Lose oberhalb der Schwelle, Vergabeweiser auch darunter), Terminprognose (Iteration 5).
+- *Was wir ausdrücklich nicht behaupten:* dass die Liste genauer ist als Vergabeweiser oder dass Vergabeweiser falsch liest; dass es einen belegten Vorsprung oder Marktvorteil gibt; dass Betriebe die Liste nachfragen oder bezahlen. Ob das Ende der Grundlaufzeit für Betriebe nützlicher ist als das Höchstende, ist offen; die Vergabestelle sagt, es werde fast immer verlängert.
+
+## 2. Zyklus 1: Zuordnung zum Vorgänger (Iteration 1 bis 4)
 
 ### Iteration 1 (2026-10-22): Machbarkeit der Daten
 - **Business Understanding.** Kandidaten für eine Nische: Gebäudereinigung, IT-Wartung, Winterdienst, Sicherheit, Kantine. Kriterium: genug Zuschläge mit Laufzeit.
@@ -46,7 +78,7 @@ _Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitpr
 - **Fakten.** Bei den vorgeschlagenen Paaren stimmt die Regel oft (W2 17/19 = 89,5 %), sie schlägt aber nur bei 19 Fällen etwas vor (Mindestzahl 25 verfehlt). Trefferquote W3 56,7 % (Schwelle 60 %), Zweitprüfung durch den Nutzer nur 65 % (Schwelle 85 %).
 - **Entscheidung (Idee anpassen).** Keine weitere Zuordnungsregel. Stattdessen eine Vertragsliste aus den Zuschlägen selbst.
 
-## 2. Zyklus 2: Terminprognose (Iteration 5)
+## 3. Zyklus 2: Terminprognose (Iteration 5)
 
 ### Iteration 5 (2026-10-30 bis 11-04): Vertragsliste und Backtest
 - **Business Understanding (geschärft).** Prognoseziel: Veröffentlichungstermin der Neuausschreibung. Regel R1 = Höchstende − 6 Monate; Baseline R0 = Ende der Grundlaufzeit − 6 Monate. Treffer = Fenster ±3 Monate. Schwelle 60 %, festgelegt vor jeder Berechnung (`docs/business.md` §7.1).
@@ -56,7 +88,7 @@ _Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitpr
 - **Deutung.** Der Termin ist zweigipflig verteilt; ein fester Abstand trägt nicht.
 - **Entscheidung (Idee anpassen).** Keine Terminprognose. Produktkern ist die Vertragsliste mit Enddaten.
 
-## 3. Zyklus 3: Qualität der Vertragsliste (Iteration 6 bis 9)
+## 4. Zyklus 3: Qualität der Vertragsliste (Iteration 6 bis 9)
 
 ### Iteration 6 (2026-11-04): Prototyp und erste Handprüfung
 - **Gemacht.** Prototyp der Liste für die Oberpfalz (146 Lose, Stufen A–F je Eintrag). Handprüfung von 60 Zufallslosen durch den Nutzer.
@@ -84,31 +116,103 @@ _Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitpr
 - **Fakten.** V1 66/70 = 94,3 % (Wilson 86,2–97,8; Schwelle 90 %). V2 28/30 = 93,3 %. V3 neue gegen alte Fassung 66 gegen 65 von 70. V5 Leser untereinander 110/110. V6 Kommilitone 14/15. **Verfehlt:** V4 Höchstende (87,1 % bei Schwelle 90 %; 85,2 % bei 85 %), V7 ein Los mit „kein Zuschlag“ (N51); V8 Verfahren nur teilweise.
 - **Deutung.** Die Fassung der Iteration 9 ist auf dieser Stichprobe zu 94,3 % mit dem Vergleichswert identisch (alte Fassung 92,9 %, bloßes Feld 90,0 %). Der Nutzen der Regeländerung ist nicht gesichert: Die Stichprobe trennt die Fassungen kaum, der Vergleichswert ist teilweise zirkulär, V5 zeigt vor allem gleiche Anweisung und gleiche Rohtexte. N51 trägt `unpublished` (Ergebnis aus geschäftlichen Interessen nicht veröffentlicht), nicht „kein Zuschlag“; die Ursache liegt in der Anweisung an die Leser.
 - **Grenzen.** Gleiche Modellfamilie (Regel, Leser, Evaluator); Läufe teils per Skript statt im Fenster (Abweichung vom Plan, Skript erst mit den Antworten committet); `~/.claude` nicht geprüft; Gruppe R nur 2 Lose; V6 mit 15 Losen dünn.
-- **Entscheidung.** Weiter, Projektabschluss, eingeschränkt formuliert. Die Fassung der Iteration 9 wird der Prototyp, das Höchstende bleibt Hinweis. V4, V7 und V8 werden offen als verfehlt bzw. teilweise berichtet; nicht zulässig ist „V1 bis V8 erfüllt“. Keine weitere Iteration.
+- **Entscheidung.** Weiter, Projektabschluss, eingeschränkt formuliert. Die Fassung der Iteration 9 wird der Prototyp, das Höchstende bleibt Hinweis. V4, V7 und V8 werden offen als verfehlt bzw. teilweise berichtet; nicht zulässig ist „V1 bis V8 erfüllt“. Keine weitere Iteration (später durch Zyklus 4 aufgehoben, siehe unten).
 
-## 4. Was wir empfehlen und was nicht
+## 5. Zyklus 4: Business Understanding und Wettbewerb (Iteration 10 und 10b)
 
-- **Empfehlung.** Die Vertragsliste „Ende der Laufzeit laut Bekanntmachung“ ist als Ausgangspunkt nutzbar. Vor einer Entscheidung die verlinkte Bekanntmachung lesen.
-- **Zulässige Aussage.** „Zu 94,3 % identisch mit dem Vergleichswert zweier KI-Leser; an 15 Losen bestätigt ein Mensch (14/15); Höchstende nur Hinweis.“
-- **Nicht belegt.** Eine Terminprognose; „die Liste ist korrekt“; „Fehlerarten behoben und bestätigt“; „V1 bis V8 erfüllt“; Nachfrage und Zahlungsbereitschaft (A1, A15).
-- **Offene Grenzen.** Das Höchstende der Liste ist oft zu hoch (laut Evaluator in 7 von 11 Z-Fällen Überschätzung); Ergebnisse, die „nicht veröffentlicht“ sind (`unpublished`), werden nicht erkannt; Schuljahres-Verträge nicht tagesgenau; mehr menschliche Kontrolle und eine zweite Modellfamilie fehlen. Die in Iteration 8 gefundenen Fehlerarten (Lose ohne Zuschlag, Übertragung von Einzelwerten, Monatsnamen, „um N Jahre“, „N Jahre mit Option“) sind in der Fassung 9 behoben, aber nicht bestätigt.
+_Anlass (2026-11-05, nach Iteration 9): Der Dozent verlangt mehr Gewicht auf Business Understanding. Die Recherche dazu zeigte, dass die Sichtung der Wettbewerber, im Projektplan früh vorgesehen (G1.1), nie erfolgt war: Eine Suche vom 2026-10-24 hatte keinen deutschen Dienst für auslaufende Verträge gefunden (Fehler, siehe KI-Irrwege). Abweichend von „keine weitere Iteration“ (Iteration 8 und 9) hat der Nutzer deshalb am 2026-11-05 einen Rücksprung zu Phase 1 beschlossen. Iteration 9 blieb unverändert; ihre Stichprobe und ihr Vergleichswert dienten als fester Maßstab. Details: `docs/iterationen.md` (Iteration 10, 10b, Pakete A, C, F)._
 
-## 5. KI-Irrwege und ihre Prüfung
+### Iteration 10 (2026-11-05): Wettbewerber gegen eigene Liste
+**Business Understanding.**
+- **Fakten.** Recherche (KI-Agent plus KI-Gutachten aus BWL-Sicht, einzelne Seiten von Claude nachgelesen): Vergabeweiser bietet eine kostenlose Liste auslaufender Verträge samt API, AusschreibungsRadar eine günstige (Tabelle in Abschnitt 1). **A2 („es gibt keinen deutschen Dienst für auslaufende Verträge“) ist widerlegt.** Das Gutachten hielt das Kernprodukt „Liste“ für nicht tragfähig und empfahl ein Wettbewerbsbild als stärkste Richtung (`docs/business.md` §8.4, §8.5).
+- **Gespräche (W5).** Leitfaden vorab festgelegt (`docs/business.md` §8.8). Der Nutzer rief neunmal an und erreichte drei Stellen: zwei Reinigungsbetriebe und eine Vergabestelle. Notizen ohne Namen von Personen (`docs/business.md` §8.9). Zahlungsbereitschaft zeigte sich nur für Wettbewerbsdaten; die Vergabestelle bestätigt, dass das Vertragsende kein Neuausschreibungstermin ist (Verlängerung ist der Normalfall). n = 3, Hinweise, keine Belege.
 
-Die KI (Claude Code) hat Hypothesen, Regeln, Stichproben und Auswertungen mitgebaut. Die Fehler wurden vom Nutzer, vom Evaluator (eigener Subagent, nur Lesezugriff) oder von Claude selbst gefunden.
+**Data Understanding.**
+- Die API von Vergabeweiser (OpenAPI-Beschreibung und Antworten unverändert in `data/raw/vergabeweiser_20261105/`, ohne Schlüssel 60 Abfragen pro Stunde) liefert das Vertragsende je Verfahren (`ends_on`, „laut Bekanntmachung, ohne Verlängerungen“), nicht je Los.
+- Zuordnung eines Loses zu einem Vergabeweiser-Eintrag per Skript ohne Handentscheid: Verweis der Zuschlagsbekanntmachung auf die Auftragsbekanntmachung, dann Verfahrenskennung, dann die eigene Kennung (erste 8 Zeichen der `notice-id`).
+- Wettbewerbsbild aus TED (Paket A, 130 Oberpfalz-Lose) und Ursachen der 33 Lose ohne Ende (Paket C, siehe unten).
+
+**Hypothese** _(vorab festgelegt 2026-11-05, vor dem Abruf)_. „Beim Ende der Grundlaufzeit stimmt Vergabeweiser auf den 70 Zufallslosen der Iteration 9 seltener mit dem Vergleichswert der Iteration 9 überein als die Liste (66/70).“
+
+**Kriterien vorab (Auszug).** W1: Vorsprung der Liste (Treffer Liste − Treffer Vergabeweiser auf den gemeinsamen Losen) ≥ 5 Lose = Vorteil, 1 bis 4 = kein gesicherter Vorteil, ≤ 0 = kein Vorteil; beurteilbar nur bei ≥ 40 gemeinsamen Losen. W2 bis W5 und W7 beschreibend (Abdeckung, Ursachen der Fehltreffer, Abdeckung unterhalb der EU-Schwelle, Gespräche, Nebentest AusschreibungsRadar). W6: Verfahren (Kriterien und Skript vor dem Abruf committet, Abweichungen offen).
+
+**Fakten (Evaluation).** Quellen: `reports/vergleich_iteration10.md`, `reports/evaluation_iteration10.md`, `reports/nebentest_ausschreibungsradar.md`.
+- **W1:** Liste 66/70, Vergabeweiser 58/70, Vorsprung +8 (Schwelle ≥ 5), exakter Test p = 0,0078; formal erfüllt. Ursachen der 8 Fälle (Evaluator): Losebene 4, Höchstende statt Grundlaufzeit 2, fehlender Wert 1, 2 Tage Abweichung 1. Die Basisregel „Feld EndDate“ erreicht 63/70; Vergabeweiser verhält sich laut Evaluator wie diese Regel plus Verfahrensebene. Zählt Vergabeweisers Verfahrensdatum als richtig, wenn es dem Ende irgendeines Loses entspricht, sinkt der Vorsprung auf +4 (kein gesicherter Vorteil).
+- **W2:** Vergabeweiser hat zu 70 von 70 Losen einen Eintrag (zirkulär: beide Quellen stammen aus demselben Bekanntmachungsservice). **W4** (Abdeckung unterhalb der EU-Schwelle) ist nicht aussagekräftig, weil die API nur die 50 frühesten Verträge liefert.
+- **W7 (Nebentest AusschreibungsRadar,** Seed 20261111, 15 Lose, ohne API, 52 Seitenabrufe): nur 2 von 15 Losen sicher zugeordnet, beide gleich dem Vergleichswert und der Liste. Für eine Aussage zur Genauigkeit reicht das nicht.
+
+**Deutung (Evaluator und Projekt).** 6 von 8 Fällen sind Granularitäts- oder Begriffsunterschiede (Los gegen Verfahren, Höchstende gegen Grundlaufzeit), reine Lesefehler von Vergabeweiser höchstens 1 bis 2. Maßstab und Befund fallen teilweise zusammen: Der Vergleichswert ist je Los definiert, die API liefert je Verfahren.
+
+**Abweichungen von der Vorab-Planung (offen).** Zuordnungsweg 2 wurde nach dem Trockenlauf ergänzt (vor jedem Abruf der Stichprobe); das Abruf-Skript wurde nach einem DNS-Fehler im ersten Lauf angepasst (Zuordnung und Auswertung unverändert); der Nebentest W7 wurde nach Beginn des Abrufs aufgenommen (ohne Schwelle, Ziehung vor dem Nachsehen). Entwicklungstest: Beim Test der Zuordnung wurde ein Eintrag abgerufen, der ein Z-Los enthält; deshalb läuft der Vergleich nur per Skript.
+
+### Iteration 10b (2026-11-05): größere Stichprobe
+**Anlass und Entscheidung.** Der Evaluator nannte den Vorsprung +8 auf 70 Losen überwiegend Verfahrens- gegen Losebene und forderte eine zweite, größere Stichprobe (mindestens 150 Lose). Der Nutzer beschloss sie am selben Tag; die Entscheidung zu Iteration 10 blieb bis zur Auswertung offen.
+
+**Hypothese** _(vorab)_. „Auf einer neuen Stichprobe von mindestens 150 Losen trifft die Liste das Ende der Grundlaufzeit häufiger als Vergabeweiser, und der Unterschied reicht über die Granularität (Verfahren statt Los) hinaus.“
+
+**Vorgehen und Kriterien vorab.** 160 Lose (Seed 20261112; Lose mit Zuschlag und Listenende, höchstens 2 je Bekanntmachung; alle Bekanntmachungen früherer Stichproben ausgeschlossen). Nur die Lose, in denen Liste und Vergabeweiser mehr als einen Tag auseinanderliegen oder eine Seite kein Datum hat („diskordant“), lasen zwei KI-Leser (Opus, Sonnet) ohne Angabe der Quelle nach der neutralen Definition aus Iteration 9. W8a: Vorsprung ≥ 10 % der Stichprobe (≥ 16 Lose) und McNemar p < 0,05. W8b: wie W8a, aber Vergabeweiser gilt als richtig, wenn sein Datum dem Ende irgendeines Loses desselben Verfahrens entspricht (≥ 8 Lose, p < 0,05). W9: Ursachenklassen (beschreibend).
+
+**Fakten (Evaluation).** Quellen: `reports/vergleich_iteration10b.md`, `reports/evaluation_iteration10b.md`.
+- Vergabeweiser hat zu allen 160 Losen einen Eintrag; 145 Lose sind gleich, **15 diskordant**. Die beiden Leser stimmen bei 15/15 überein; nach ihrem Vergleichswert liegt die Liste bei 15/15 richtig, Vergabeweiser bei 0/15.
+- **W8a** (≥ 16 Lose): +15, p = 0,0001. **Formal verfehlt und rechnerisch unerreichbar**, weil nur 15 Lose diskordant waren (Fehler der Vorab-Schwelle, die aus der Diskordanzrate der Iteration 10 übernommen wurde; siehe KI-Irrwege). **W8b** (≥ 8 Lose): +10, p = 0,0020, erfüllt.
+- **Einordnung der 15 durch den Evaluator** (je Los am Rohtext): Höchstende statt Grundlaufzeit 7 (eine einzige Textvorlage), Losebene 4, Zuordnungsfehler der Pipeline 1 (M54, gehört nicht zu „Vergabeweiser liest falsch“), Abweichung mit offener Ursache 2 (M3, M22), mehrdeutig 1 (M49). Zählt das Höchstende für Vergabeweiser als richtig, bleiben 3 : 0, p = 0,25.
+- **Beide Stichproben zusammen:** nur die Liste richtig bei 23 von 230 Losen = 10,0 % (Wilson etwa 6,8–14,6 %).
+- **Übereinstimmende Lose:** Zehn systematisch gewählte (nicht zufällig gezogen) wurden geprüft; bei einem (M59, Textmuster „läuft vom … bis … und verlängert sich um 12 weitere Monate“) liegen Liste und Vergabeweiser beide falsch. Ein Los in zehn ist ein Hinweis, keine Rate.
+
+**Deutung.** Der Vorsprung der Liste ist ein **Merkmalsunterschied** (Ende je Los, Ende der Grundlaufzeit statt Höchstende), kein belegter Qualitätsvorteil beim Lesen: Liste und Vergabeweiser nutzen dasselbe TED-Feld, gemeinsame Fehler bleiben unsichtbar, und die Leser stammen aus derselben Modellfamilie wie die Regeln. 15 von 15 Übereinstimmungen der Leser sind kein Zeichen von Unabhängigkeit.
+
+### Pakete A, C und F (Nachträge zu Iteration 10, Entscheidung des Nutzers 2026-11-05)
+Ziel: Business Understanding vertiefen, ohne die Iterationen 1 bis 10 zu ändern; jedes Paket schreibt neue Dateien.
+- **A, Wettbewerbsbild aus TED** (`reports/wettbewerbsbild_oberpfalz.md`): Für die 130 Oberpfalz-Lose liefert das TED-XML den Auftragnehmer bei 99,2 % der Lose, einen Zuschlagswert über 1 € bei 47,7 % (36,2 % Platzhalter), die Gesamtzahl der Angebote bei 60,8 % und alle drei Felder zusammen bei 24,6 %. Handabgleich von 5 Losen (Seed 20261113) gegen die Bekanntmachung: 5 von 5. **Deutung:** Ein Wettbewerbsbild aus TED allein ist nur zu etwa einem Viertel der Lose vollständig; Vergabeweiser zeigt Gewinner, Angebotszahl und Zuschlagssummen kostenlos.
+- **C, Ursachen der Lücken und Fehlertyp** (`reports/stufe_f_ursachen.md`): Die 33 Lose ohne Ende (25,4 % der Oberpfalz-Lose) haben alle keine Laufzeitfelder im XML; 18 ohne Laufzeit im Text, 14 mit Dauer oder Datum nur im Freitext (höchstens 10 mit einer Zusatzregel lesbar), 1 keine Gebäudereinigung. Außerdem fand die Suche den Fehlertyp „Dauerfeld enthält die Option schon“ (z. B. Interimsvergabe „4 Monate + 6 Monate Option = 10 Monate“): **12 Lose in 5 Bekanntmachungen, 0,13 % der 9.325 Lose**, alle bei der Herkunft `beginn_plus_dauer`. Zwei Fälle bestätigte Claude am Rohtext, die übrigen sind eine einzelne KI-Lesung. Ein erster Nachtrag hatte „nur dieser Fall“ geschrieben; das war falsch (KI-Irrwege).
+- **F, Optionsanalyse** (`reports/optionsanalyse.md`): An den 52 Backtest-Paaren lag die Neuausschreibung bei belegter Option (n = 24) in 70,8 % zwischen dem Ende der Grundlaufzeit und dem Höchstende (Wilson 50,8–85,1). **Hinweis, kein Beleg:** Die Aussage der Vergabestelle („fast immer verlängert“) ist damit nicht prüfbar.
+- Ein Paket B (Schnittstelle von oeffentlichevergabe.de) wurde nicht umgesetzt, weil die Dokumentation nur im Browser lesbar war.
+
+### Entscheidung (2026-11-05, Nutzer): Weiter, Projektabschluss, eingeschränkt formuliert
+- **Begründung.** W1 ist formal erfüllt, aber überwiegend Los- und Definitionsunterschied; W8a ist formal verfehlt wegen eines Fehlers der Vorab-Schwelle (+15 von höchstens 15), W8b ist erfüllt. Nach der Vorab-Regel gilt „kein belegter Vorteil im definierten Maß“. Befund: Merkmalsunterschied, kein belegter Qualitätsvorteil, Nachfrage offen.
+- **Abweichung von der Vorab-Folge (offen begründet).** Die Folge „W8a verfehlt → die Aussage ‚kein Vorteil gegenüber Vergabeweiser‘ gilt weiter“ wird nicht übernommen, weil sie der gemessenen Richtung widerspricht und die Schwelle unerreichbar war; für „W8a verfehlt und W8b erfüllt“ gab es keine Regel. Die Aussage „kein Vorteil“ wird nicht als Gleichheit gelesen, und „die Liste ist genauer“ wird ebenso wenig behauptet.
+- **Geschäftlich.** „Liste als eigenes Produkt nicht tragfähig“ (`docs/business.md` §8.4) bleibt bestehen; A2 bleibt widerlegt, A1, A3 und A15 bleiben ungeprüft.
+- **Grenzen des Zyklus.** Leser und Regeln aus derselben Modellfamilie, keine Menschenprüfung der 15 diskordanten Lose; Auswahl nur aus Losen mit Listenende (5.754 von 9.325); Gespräche n = 3; nur Lose oberhalb der EU-Schwelle; das Protokoll der Leserläufe 10b liegt außerhalb des Repos.
+
+## 6. Was wir empfehlen und was nicht
+
+- **Empfehlung.** Die Vertragsliste „Ende der Laufzeit laut Bekanntmachung“ ist als Ausgangspunkt nutzbar; vor jeder Entscheidung die verlinkte Bekanntmachung lesen. Als eigenes Produkt empfehlen wir sie **nicht**, weil es das Kernprodukt kostenlos (Vergabeweiser) und günstig (AusschreibungsRadar) gibt. Weiterverfolgen ließe sich nur eine Nische (z. B. Wettbewerbsdaten, Datenqualität als Zulieferung, Vergabestellen), nach Gesprächen mit mehr Beteiligten.
+- **Zulässige Aussagen.** „Zu 94,3 % identisch mit dem Vergleichswert zweier KI-Leser; an 15 Losen bestätigt ein Mensch (14/15); Höchstende nur Hinweis.“ Und: „Auf zwei Stichproben (n = 70 und n = 160) weicht Vergabeweisers Datum in rund 10 % der Lose vom Ende der Grundlaufzeit nach neutraler Definition ab, wo die Liste richtig liegt; in 10b waren 11 von 15 dieser Fälle Höchstende oder Losebene.“
+- **Nicht belegt.** Eine Terminprognose; „die Liste ist korrekt“; „Fehlerarten behoben und bestätigt“; „V1 bis V8 erfüllt“; ein Qualitätsvorteil gegenüber Vergabeweiser (und ebenso Gleichheit); Nachfrage, Zahlungsbereitschaft und Marktvorteil (A1, A15); Abdeckung unterhalb der EU-Schwelle (A3).
+- **Offene Grenzen der Liste.**
+  - Das Höchstende ist oft zu hoch (laut Evaluator 7 von 11 Z-Fällen Überschätzung) und nur ein Hinweis; Schuljahres-Verträge sind nicht tagesgenau; Ergebnisse „nicht veröffentlicht“ (`unpublished`) werden nicht erkannt.
+  - **Fehlertyp „Dauerfeld enthält die Option“:** 12 Lose in 5 Bekanntmachungen (0,13 %); Ursache nur durch Lesen des Codes vermutet (Regel 1b greift in `laufzeit()` nur bei der Herkunft `enddatum`), nicht getestet. 6 weitere Lose in 4 Bekanntmachungen sind unklar.
+  - **Textmuster:** „läuft vom … bis … und verlängert sich um …“ (M59) und „gilt bis … ohne ‚zunächst‘“ (12853-2024, Los 3) werden nicht gefangen; Häufigkeit unbekannt.
+  - **Zuordnungsfehler** der Pipeline beim Vergleich (M54: Eintrag einer anderen Ausschreibung zugeordnet); die Zuordnung wurde nicht für alle 160 Lose von Hand geprüft.
+  - **Auswahl:** Die Stichprobe 10b enthält nur Lose mit Listenende; Lose ohne Listenende (etwa ein Fünftel) gehen nicht ein.
+  - **Keine Menschenprüfung der 15 diskordanten Lose;** die übrigen Fehlerarten aus Iteration 8 (Lose ohne Zuschlag, Übertragung von Einzelwerten, Monatsnamen, „um N Jahre“, „N Jahre mit Option“) sind in der Fassung 9 behoben, aber nicht bestätigt; eine zweite Modellfamilie fehlt.
+  - **Stand bei Vergabeweiser:** Ob es den Stand der Ausschreibung oder des Zuschlags zeigt, ist ungeklärt (M3, M22, M49).
+
+## 7. KI-Irrwege und ihre Prüfung
+
+Die KI (Claude Code) hat Hypothesen, Regeln, Stichproben und Auswertungen mitgebaut. Die Fehler wurden vom Nutzer, vom Evaluator (eigener Subagent, nur Lesezugriff) oder von Claude selbst gefunden. Für Zyklus 4 sind die wichtigsten: die unterlassene Sichtung der Wettbewerber (Zeile vom 2026-11-05 zu Business Understanding), der Fehlertyp „Dauerfeld enthält die Option“ mit der falschen Aussage „nur dieser Fall“, die unerreichbare Schwelle W8a und der Zuordnungsfehler bei M54.
 
 {{KI_IRRWEGE}}
 
-## 6. Zeitaufwand
+## 8. Zeitaufwand
 
-Untergrenze aus der Git-Historie (Sitzung = Commits mit höchstens 90 Minuten Abstand, plus 30 Minuten Vorlauf). Nicht enthalten: Lesen, Prüfen von Hand (Nutzer), Recherche, Vorbereitung des Vortrags. Handeinträge des Nutzers und des Kommilitonen fehlen noch.
+Untergrenze aus der Git-Historie (Sitzung = Commits mit höchstens 90 Minuten Abstand, plus 30 Minuten Vorlauf; Iteration 10 enthält 10b und die Pakete A, C, F, weil der Tag `iteration-10` am Ende liegt). Nicht enthalten: Lesen, Prüfen von Hand, Recherche, Vorbereitung des Vortrags.
 
 {{ZEIT}}
 
-## 7. Reproduzierbarkeit und Quellen
+**Zyklus 4 im Einzelnen.**
+- Git-Untergrenze: 3 Sitzungen am 2026-11-05 mit 4,4 Stunden (15:55 bis 18:00 Anlegen, Abruf, Nebentest, Auswertung W1 bis W4, Evaluator, Pakete F und A, Übergabe; 20:22 Paket C; 22:01 bis 22:48 Ende des Abrufs 10b, Leser, Auswertung, Evaluator, Abschluss).
+- Wartezeit des gedrosselten Abrufs (Rechnung, nicht gemessen): Iteration 10 etwa 75 Minuten laut Plan; 10b 160 Abfragen im Abstand von 61 Sekunden, rund 2,7 Stunden. In dieser Zeit lief die Arbeit an den Paketen weiter.
+- **Handeinträge.** Nutzer: Gespräche der Iteration 10 (Vorbereitung, neun Anrufe, Abtippen) 105 Minuten (1,75 Stunden, Angabe des Nutzers). Kommilitone: Lesen von 15 Losen in Iteration 9, Stunden **offen**. Weitere Handarbeit des Nutzers (Zweitprüfungen und Handprüfungen der Iterationen 5 bis 7, Lesen der Berichte, Vortrag) ist nicht erfasst; die Summe oben bleibt eine Untergrenze.
+
+## 9. Reproduzierbarkeit und Quellen
 
 - **Code.** Alle Schritte als Skripte in `src/`, Abhängigkeiten in `requirements.txt`. Aufrufe in `docs/reproduzierbarkeit.md`.
-- **Seeds und Hashes.** Iteration 6: `src/prepare/stichprobe_iteration6.py`; Iteration 7: Seed 20261106, SHA-256 des Schlüssels `eade66c0…`; Iteration 8: Seed 20261108 für die Kontrolle, SHA-256 der Vorlage `5be683ad…`; Iteration 9: Seed 20261109, SHA-256 des Schlüssels `9dbf5c1a…`, der neuen Liste `5ec73364…`. Reihenfolge der Commits belegt, dass Regeln und Kriterien vor dem Ziehen feststanden.
+- **Seeds und Hashes.** Iteration 6: `src/prepare/stichprobe_iteration6.py`; Iteration 7: Seed 20261106, SHA-256 des Schlüssels `eade66c0…`; Iteration 8: Seed 20261108 für die Kontrolle, SHA-256 der Vorlage `5be683ad…`; Iteration 9: Seed 20261109, SHA-256 des Schlüssels `9dbf5c1a…`, der neuen Liste `5ec73364…`.
+  - **Iteration 10:** kein eigener Seed; die 70 Z-Lose der Iteration 9 (Schlüssel `9dbf5c1a…`), Skript `src/prepare/vergleich_iteration10.py`, Kriterien und Skript vor dem Abruf committet (`81a3b90`). Nebentest: Seed 20261111, Ziehung vor dem Nachsehen (`2002ac8`), Auswertung `0eeab99`.
+  - **Iteration 10b:** Seed 20261112, SHA-256 des Schlüssels `2cd00206…`, `src/prepare/stichprobe_iteration10b.py`; Hypothese, Kriterien und Seed vor dem Ziehen (`4f50436`), Ziehung (`9d63c59`), Abrufskript vor dem Abruf (`49bb198`), Abruf (`64a23e3`), Paket für die Leser vor den Antworten (`6b7e8d8`), Antworten unverändert (`69917ff`), Auswertung und Evaluator (`f6583cc`), Abschluss (`0419609`).
+  - **Pakete:** Paket A Seeds 20261113 (Handabgleich von 5 Losen) und 20261114 (3 Beispiel-Lose), beide im Skript `src/prepare/wettbewerbsbild_oberpfalz.py` vorab festgelegt (`ea5ebfb`); Paket F `d6e2335`; Paket C `79fd0df`.
+  - Die Reihenfolge der Commits belegt, dass Regeln und Kriterien vor dem Ziehen feststanden; Ausnahmen stehen in Abschnitt 5.
 - **Daten.** Rohdaten unverändert in `data/raw` (nicht im Git, Abruf per Skript `src/ted_download.py`); Datenlink für die Abgabe: _offen_.
-- **Quellen.** TED Search API v3, eForms SDK, CRISP-DM; vollständig in `docs/quellen.md`. Lizenz der TED-Daten: _vor Abgabe zu prüfen_.
+- **Quellen.** Vollständig in `docs/quellen.md`. TED Search API v3 (Quellenangabe; **Lizenz der TED-Daten: offen, vor Abgabe zu prüfen**), eForms SDK, CRISP-DM. Neu in Zyklus 4: **Vergabeweiser** (API und Seiten, CC BY 4.0, Nennung „Vergabeweiser“); **AusschreibungsRadar** (einzelne Seiten, `robots.txt` beachtet, keine Massenabrufe); **Bekanntmachungsservice oeffentlichevergabe.de** der BeschA (Rohdaten CC0); Web-Quellen zu Preisen und Branche mit URL in `docs/business.md` §8.
 - **Annahmen.** Status und Nachweis aller Annahmen in `docs/annahmen.md` (A1 bis A20).

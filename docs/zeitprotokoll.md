@@ -13,7 +13,8 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchste
 | 7 | 3 | 12 | 4.4 |
 | 8 | 2 | 5 | 1.3 |
 | 9 | 2 | 10 | 1.9 |
-| **Summe** | 26 | 97 | **31.8** |
+| 10 | 3 | 21 | 4.4 |
+| **Summe** | 29 | 118 | **36.2** |
 
 ## Iteration 1
 
@@ -86,8 +87,18 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchste
 | 2026-11-05 | 09:02–09:33 | 6 | 1.0 | Lab-Log und Foliengerüst für den Vortrag / Iteration 9: Nachtrag zum Pfad des Schlüssels |
 | 2026-11-05 | 14:08–14:31 | 4 | 0.9 | Iteration 9, Schritt 4: Antworten der Leser und des Kommilitonen (unve / Iteration 9 abgeschlossen: weiter, Projektabschluss |
 
+## Iteration 10
+
+| Tag | Zeit | Commits | Std. | Erster / letzter Commit |
+|---|---|---|---|---|
+| 2026-11-05 | 15:55–18:00 | 15 | 2.6 | Lab-Log und Folien auf Iteration 9, Lab-Log als PDF, Prototyp-Webseite / Paket A: Wettbewerbsbild der 130 Oberpfalz-Lose aus TED (Auftragnehmer |
+| 2026-11-05 | 20:22–20:22 | 1 | 0.5 | Paket C: Ursachen der 33 Lose ohne Ende, Fehlertyp Dauerfeld = Gesamtd |
+| 2026-11-05 | 22:01–22:48 | 5 | 1.3 | Iteration 10b: Abruf abgeschlossen (160 Lose, Vergabeweiser hat 160, d / Iteration 10 und 10b abgeschlossen: weiter, Projektabschluss, eingesch |
+
 ## Ergänzungen von Hand (nicht im Git)
 
 | Datum | Person | Tätigkeit | Std. |
 |---|---|---|---|
-| | | (z. B. Zweitprüfung P1–P13, Lesen der Urteilsregeln, Prüfung P14–P71 durch den Kommilitonen) | |
+| 2026-11-05 | Nutzer | Gespräche Iteration 10 (W5): Vorbereitung, 9 Anrufe, Abtippen (business.md §8.9) | 1.75 |
+| 2026-11-05 | Kommilitone | Lesen von 15 Losen im TED-Original (Iteration 9, V6) | offen |
+| | | weitere Handarbeit (Zweitprüfungen, Handprüfungen der Iterationen 5 bis 7) | offen |
