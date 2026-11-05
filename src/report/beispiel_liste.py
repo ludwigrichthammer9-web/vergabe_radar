@@ -41,7 +41,7 @@ sys.path.insert(0, str(ROOT / "src" / "prepare"))
 
 from auswertung_iteration6 import wilson  # noqa: E402
 from auswertung_iteration7 import MAX_Y, bewertung  # noqa: E402
-from vertragsliste import je_los  # noqa: E402
+from vertragsliste import _liste, je_los  # noqa: E402
 
 LISTE = ROOT / "data" / "processed" / "vertragsliste_909.csv"
 REGION_RAW = ROOT / "data" / "raw" / "ted_search" / "zielgruppe_oberpfalz_20261023" / "page_0001.json"
@@ -107,8 +107,10 @@ def _kind(el: ET.Element, name: str) -> ET.Element | None:
     return next((c for c in el if _local(c.tag) == name), None)
 
 
-def xml_nuts(notice: dict, rows: list[dict]) -> list[list[str]] | None:
-    """NUTS-Codes je Los aus dem eForms-XML, in der Reihenfolge von `rows`; None, wenn die Zuordnung nicht gelingt."""
+def xml_nuts(notice: dict, rows: list[dict], n_total: int | None) -> list[list[str]] | None:
+    """NUTS-Codes aus dem eForms-XML für alle `n_total` Lose der Bekanntmachung (Index = Losnummer − 1); None, wenn die Zuordnung nicht gelingt.
+    Iteration 9: `rows` enthält nur Lose mit Zuschlag; die Zahl der Lose im XML wird deshalb mit der Zahl aller Lose verglichen (`n_total`);
+    fehlt diese in der Abfrage (kein Feld title-lot), gilt die Zahl der Lose im XML, sofern die höchste Losnummer der Liste hineinpasst."""
     pub = notice["publication-number"]
     path = XML_DIR / f"{pub}.xml"
     if not path.exists():
@@ -130,13 +132,20 @@ def xml_nuts(notice: dict, rows: list[dict]) -> list[list[str]] | None:
         name = " ".join("".join(_kind(pp, "Name").itertext()).split()) if _kind(pp, "Name") is not None else ""
         codes = [" ".join(e.itertext()).strip() for e in pp.iter() if _local(e.tag) == "CountrySubentityCode"]
         lose.append((name, codes))
-    if len(lose) != len(rows):
+    if n_total is None:
+        if not rows or max(int(r["los"]) for r in rows) > len(lose):
+            return None
+        n_total = len(lose)
+    if len(lose) != n_total:
         return None
-    titel = [" ".join(r["los_titel"].split()) for r in rows]
+    ergebnis = [c for _, c in lose]
     nach_titel = {n[:120]: c for n, c in lose}
-    if len(nach_titel) == len(lose) and all(t in nach_titel for t in titel):
-        return [nach_titel[t] for t in titel]
-    return [c for _, c in lose]
+    if len(nach_titel) == len(lose):  # eindeutige Titel: Zuordnung über den Titel statt über die Reihenfolge
+        for r in rows:
+            t = " ".join(r["los_titel"].split())
+            if t in nach_titel and 0 < int(r["los"]) <= n_total:
+                ergebnis[int(r["los"]) - 1] = nach_titel[t]
+    return ergebnis
 
 
 def region_lose(liste: list[dict]) -> tuple[list[dict], dict]:
@@ -151,12 +160,14 @@ def region_lose(liste: list[dict]) -> tuple[list[dict], dict]:
         if not rows:
             info["nicht_in_liste"].append(x["publication-number"])
             continue
-        codes, eindeutig = je_los(x, "place-of-performance-subdiv-lot", len(rows))
-        codes = [[c] if c else [] for c in codes]
+        n_total = len(_liste(x.get("title-lot"))) or None  # Iteration 9: Lose ohne Zuschlag fehlen in `rows`, die Felder der API führen sie weiter
+        codes_alle, eindeutig = je_los(x, "place-of-performance-subdiv-lot", n_total or len(rows))
+        codes_alle = [[c] if c else [] for c in codes_alle]
         quelle = "api"
-        if not eindeutig and (aus_xml := xml_nuts(x, rows)) is not None:
-            codes, eindeutig, quelle = aus_xml, True, "xml"
+        if not eindeutig and (aus_xml := xml_nuts(x, rows, n_total)) is not None:
+            codes_alle, eindeutig, quelle = aus_xml, True, "xml"
             info["aus_xml"] += 1
+        codes = [codes_alle[int(r["los"]) - 1] if 0 < int(r["los"]) <= len(codes_alle) else [] for r in rows]
         for r, cs in zip(rows, codes):
             drin = [c for c in cs if c.startswith(REGION)]
             if eindeutig and not drin:
@@ -259,15 +270,16 @@ def main() -> None:
     md = [
         f"# Vertragsliste Gebäudereinigung {REGION_NAME} (Prototyp, Stand {STICHTAG.strftime('%d.%m.%Y')})",
         "",
-        "_Erzeugt mit `src/report/beispiel_liste.py` (Iteration 7, Schritt 5; Lese-Regeln mit Regel 1b). Tabelle zum Weiterverarbeiten: "
+        "_Erzeugt mit `src/report/beispiel_liste.py` (Iteration 9: Fassung der Lese-Regeln 1 bis 10, Lose ohne Zuschlag entfernt). Tabelle zum Weiterverarbeiten: "
         f"[{OUT_CSV.name}]({OUT_CSV.name})._",
         "",
         "Die Liste zeigt öffentliche Aufträge der Gebäudereinigung mit Leistungsort in der Oberpfalz, wann ihre feste Laufzeit endet "
         "und wie lange sie höchstens verlängert werden können. **Sie sagt nicht voraus, wann neu ausgeschrieben wird**; eine solche "
         "Prognose hat sich in Iteration 5 als nicht tragfähig erwiesen.",
         "",
-        "**So ist die Liste zu lesen (Abschluss Iteration 7):** Das Ende der Grundlaufzeit steht so da, wie es die Bekanntmachung angibt (bzw. wie die Lese-Regeln es daraus ablesen); "
-        "eine belastbare Fehlerquote gibt es nicht (siehe Genauigkeit unten). Das Höchstende ist nur ein Hinweis. Vor einer Entscheidung immer die verlinkte Bekanntmachung lesen.",
+        "**So ist die Liste zu lesen (Stand Iteration 9):** Das Ende der Grundlaufzeit steht so da, wie es die Bekanntmachung angibt (bzw. wie die Lese-Regeln es daraus ablesen). "
+        "Auf einer neuen Stichprobe aus ganz Deutschland stimmt es zu 94,3 % mit dem Vergleichswert zweier KI-Leser überein; ein Mensch hat 15 Lose gegengelesen (14/15). "
+        "Das Höchstende ist nur ein Hinweis (87,1 % der Zufallslose stimmen, Schwelle 90 % verfehlt). Vor einer Entscheidung immer die verlinkte Bekanntmachung lesen.",
         "",
         "## Fakten",
         "",
@@ -282,7 +294,11 @@ def main() -> None:
         f"- Status zum {STICHTAG.strftime('%d.%m.%Y')}: " + ", ".join(
             f"{s} {sum(1 for r in lose if r['status'] == s)}" for s in
             ("Grundlaufzeit läuft", "Grundlaufzeit läuft (geschätzt)", "Verlängerungszeit möglich", "Verlängerung offen", "abgelaufen", "kein Ende bekannt")) + ".",
-        f"- Genauigkeit insgesamt (Prüfung einer Zufallsstichprobe von {alle_stich} Losen aus ganz Deutschland, Iteration 7, "
+        "- **Genauigkeit (Iteration 9, neue Stichprobe, Fassung der Regeln 1 bis 10)** ([zweitlesung_iteration9_auswertung.md](zweitlesung_iteration9_auswertung.md), "
+        "[evaluation_iteration9.md](evaluation_iteration9.md)): Ende der Grundlaufzeit der Liste = Vergleichswert zweier KI-Leser bei 66/70 Zufallslosen (94,3 %, Wilson 86,2–97,8) und 28/30 "
+        "geschichteten Losen; Kommilitone 14/15; Höchstende 61/70 = 87,1 % (Schwelle 90 % verfehlt). **Vorbehalte:** Leser und Regeln stammen aus derselben Modellfamilie, der Vergleichswert ist teilweise "
+        "zirkulär (Feld als Standard), die alte Fassung kam auf 65/70, das bloße Feld auf 63/70; der Nutzen der neuen Regeln ist durch die Stichprobe nicht gesichert.",
+        f"- Frühere Messung (Iteration 7, **alte Fassung der Regeln**; Prüfung einer Zufallsstichprobe von {alle_stich} Losen aus ganz Deutschland, "
         f"[liste_auswertung_iteration7.md](liste_auswertung_iteration7.md)): Ende der Grundlaufzeit {k_gl}/{alle_stich} = "
         f"{quote_gl} % übereinstimmend mit dem Prüfer (Wilson 62,8–86,4 %); bei Losen, deren Laufzeit im Text der Bekanntmachung "
         "steht, 12/12. **Vorbehalte:** Die Prüfung wurde gekürzt (L1 bis L50 statt 80 Lose), 4 Nachprüfungen blieben leer, und bei 5 von 38 Losen "

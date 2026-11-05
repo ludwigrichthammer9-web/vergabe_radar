@@ -22,7 +22,7 @@ Regeln:
 | 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
 | 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen | 3 → 5 → 6 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-09) | abgeschlossen | **Abschluss mit diesem Stand, kein dritter Regelversuch:** Y1 36/47 = 76,6 % (Kürzung auf L1–L50), Y1r 8/15, Y2 und Y2b verfehlt, Y3 nicht sauber erfüllt, Y4 teilweise; Y1 ist ein Mischmaß aus Listen- und Prüfungsfehlern, Regel 1b weder belegt noch widerlegt; Ende der Grundlaufzeit „laut Bekanntmachung“, Höchstende nur Hinweis |
 | 8 | KI-Zweitlesung der Stichprobe von Iteration 7 (zwei KI-Leser, Liste eingefroren, reine Messung) | 5 | 2026-11-04 bis 2026-11-05 | abgeschlossen | **Weiter (Projektabschluss), eingeschränkt formuliert:** Z0 94/95, Z1 77/80, Z3 75/80 und 67/72, Z4 10/10 erfüllt; Z2 14/15, bei einheitlichem Maßstab 11/15 (verfehlt); Leser nicht unabhängig, nicht von Menschen bestätigt |
-| 9 | Verbesserte Liste, neue Stichprobe, KI-Lesung ohne die Grenzen der Iteration 8 (Rohtext, Fakten statt Anleitung, eigene Sitzung, menschliche Kontrolle an 15 Losen) | 3 → 5 → 6 | 2026-11-05 bis etwa 2026-11-12 (geplant) | läuft | offen |
+| 9 | Verbesserte Liste, neue Stichprobe, KI-Lesung ohne die Grenzen der Iteration 8 (Rohtext, Fakten statt Anleitung, eigene Sitzung, menschliche Kontrolle an 15 Losen) | 3 → 5 → 6 | 2026-11-05 | abgeschlossen | **Weiter (Projektabschluss), eingeschränkt formuliert:** V1 66/70, V2 28/30, V3 erfüllt (66 gegen 65), V5 110/110, V6 14/15; V4 und V7 verfehlt, V8 teilweise; Prototyp = Fassung der Iteration 9, Höchstende nur Hinweis |
 | 10+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | außerhalb des Projekts | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
@@ -1199,7 +1199,7 @@ Z2 wird mit beiden Zahlen berichtet (14/15 und 11/15). Die neuen Fehlerarten (L5
 
 ## Iteration 9: Verbesserte Liste, neue Stichprobe, KI-Lesung ohne die Grenzen der Iteration 8
 
-**Status:** läuft (angelegt am 2026-11-05)
+**Status:** abgeschlossen (angelegt und abgeschlossen am 2026-11-05)
 
 **Fokus und Phasen:** 3 → 5 → 6. Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) („7+ Ausbau“): Die in Iteration 8 gefundenen Fehlerarten sind bekannt und günstig zu beheben, der Nutzer hat noch etwa eine Woche.
 Die Messung läuft diesmal mit einem Aufbau, der die Grenzen der Iteration 8 behebt, soweit das ohne zweiten unabhängigen Menschen möglich ist. LN B, Zweierteam. Iteration 8 und ihr Ergebnis bleiben unverändert stehen.
@@ -1290,3 +1290,42 @@ Claude kennt die Listenwerte der Stichprobe; die Leser bekommen sie nicht. Der N
 - **N57:** Der Entscheid „unbestimmbar“ folgt der vorab festgelegten Definition; Leser B und die Liste nennen 31.12.2031 (aus zwei Optionszeiträumen im Text). Bei anderer Wertung wäre V4 62/70 = 88,6 % und 53/61 = 86,9 %, die erste Schwelle bliebe verfehlt.
 - **Basisregel „Ende = Feld EndDate“ (nachträglich berechnet, nicht vorab festgelegt):** Z-Lose 63/70 = 90,0 %, neue Fassung 66/70 = 94,3 %, alte Fassung 65/70 = 92,9 %; R- und M-Lose 25/30, neue Fassung 28/30, alte 26/30. Nur die neue Fassung trifft bei N9, N11 und N23, die Basisregel trifft nirgends allein. Die Textregeln bringen also gegenüber dem bloßen Feld etwa 3 bis 4 Lose von 70; der Vorsprung der neuen vor der alten Fassung beträgt 1 Los (V3) und ist durch die Stichprobe nicht gesichert. Die Basisregel ist dem Vergleichswert nahe, weil dieser bei Verlängerung ohne Textdatum ebenfalls das Feld nimmt.
 - **Weitere Grenzen aus der Gesamtprüfung:** Der Vergleichswert ist teilweise zirkulär (Definition und Liste nehmen standardmäßig das Feld als Ende der Grundlaufzeit; der Fehlertyp „Feld ist schon das Höchstende“ ist in Z kaum prüfbar, z. B. N97). V5 mit 110/110 zeigt vor allem gleiche Anweisung, gleiche Rohtexte und gleiche Modellfamilie, nicht unabhängige Bestätigung. V6 hat 15 Lose, die eine Abweichung (N48) liegt beim Kommilitonen (er trug das späteste Ende ein). Die Gruppe R hat nur 2 statt 10 Lose.
+
+**Ergebnis (Iteration 9, 2026-11-05)** _(Quellen: [zweitlesung_iteration9_auswertung.md](../reports/zweitlesung_iteration9_auswertung.md), [evaluation_iteration9.md](../reports/evaluation_iteration9.md), [vertragsliste_iteration9.md](../reports/vertragsliste_iteration9.md))_
+
+_Fakten_
+
+| | Kriterium | Schwelle | Ergebnis | Stand |
+|---|---|---|---|---|
+| V1 | Ende Grundlaufzeit, 70 Zufallslose | ≥ 63/70 | 66/70 = 94,3 % (Wilson 86,2–97,8) | erfüllt |
+| V2 | 30 geschichtete Lose | ≥ 24/30 | 28/30 = 93,3 % (R nur 2 Lose) | erfüllt |
+| V3 | neue nicht schlechter als alte Fassung | Ja/Nein | 66 gegen 65 von 70 | erfüllt (kaum aussagekräftig) |
+| V4 | Höchstende | ≥ 90 % und ≥ 85 % | 87,1 % und 85,2 % | **verfehlt** |
+| V5 | Leser A = B | ≥ 90 % | 110/110 | erfüllt (Gleichförmigkeit) |
+| V6 | Kommilitone = Vergleichswert | ≥ 13/15 | 14/15 | erfüllt (dünn) |
+| V7 | Lose ohne Zuschlag in den 100 Losen | 0 | 1 (N51) | **verfehlt** |
+| V8 | Verfahren | Ja/Nein | im Kern ja, mit dokumentierten Lücken | **teilweise** |
+
+- Liste der Fassung 9: 9.325 statt 9.915 Lose, 590 ohne Zuschlag entfernt; Abdeckung 79,4 %. Fehlerarten L5, L81, L72, L82 behoben. Nachtrag Basisregel „Feld EndDate“: Z 63/70.
+- V7: N51 (`TenderResultCode: unpublished`) heißt laut XML „Ergebnis aus geschäftlichen Interessen nicht veröffentlicht“, nicht „kein Zuschlag“; die Anweisung deckte das nicht ab. Nach dem vorab festgelegten Kriterium zählt es als 1.
+- V4 hat zwei Schwellen ohne Folge in „Was folgt“; gewertet wird nachträglich „beide müssen gelten“. N57 mit anderer Wertung: 62/70 und 53/61 (erste Schwelle bleibt verfehlt).
+
+_Gesamtbild aller Messungen (nicht direkt vergleichbar: andere Stichproben, Definitionen und Fassungen)_
+
+| Iteration | Prüfung | Prüfer | Ergebnis |
+|---|---|---|---|
+| 3 und 4 | Handsuche der Vorgänger (Sichtbarkeit) | Mensch und Agent nach Protokoll | Grundlage der Nische |
+| 5 | 52 handgeprüfte Paare | Mensch | Prognose ±3 Monate 28,8 % (Schwelle 60 %), Idee angepasst |
+| 6 | 60 Zufallslose | Mensch | Ende der Grundlaufzeit 53/60 = 88,3 % |
+| 7 | 47 Lose, Prüfung der Liste | Mensch und Nachprüfung | 36/47 = 76,6 % (Mischmaß) |
+| 8 | 95 Lose | zwei KI-Leser | 94/95 (Z0), nicht von Menschen bestätigt |
+| 9 | 110 Lose | zwei KI-Leser, 15 Lose zusätzlich vom Kommilitonen | 94,3 % (Z), Mensch 14/15 |
+
+_Interpretation_
+- Die Fassung der Iteration 9 stimmt auf einer neuen Stichprobe zu 94,3 % mit dem Vergleichswert überein (alte Fassung 92,9 %, bloßes Feld 90,0 %). Der Nutzen der Regeländerung ist durch die Stichprobe nicht gesichert; die Fehlerarten gelten als behoben, nicht als bestätigt.
+- Der Vergleichswert ist teilweise zirkulär, V5 zeigt vor allem gleiche Anweisung und Rohtexte, V6 hat 15 Lose. Das Höchstende der Liste ist oft zu hoch und bleibt Hinweis.
+- Zulässige Aussage: „Zu 94,3 % identisch mit dem Vergleichswert zweier KI-Leser; an 15 Losen bestätigt ein Mensch (14/15); Höchstende nur Hinweis.“ Nicht zulässig: „V1 bis V8 erfüllt“, „Fehlerarten behoben und bestätigt“.
+- Grenzen: gleiche Modellfamilie (Regel, Leser, Evaluator), Läufe teils per Skript (Abweichung vom Plan), Skript erst mit den Antworten committet, `~/.claude` nicht geprüft, Gruppe R nur 2 Lose.
+
+**Entscheidung (2026-11-05, Nutzer): Weiter, Projektabschluss, eingeschränkt formuliert.** Die Fassung der Iteration 9 (Regeln 1 bis 10) wird der Prototyp. Das Höchstende bleibt Hinweis. V4, V7 und V8 werden offen als verfehlt bzw. teilweise berichtet. Keine weitere Iteration.
+Abweichung von den vorab festgelegten Folgen, offen begründet: V7 verlangte „Filter nachbessern“, die Ursache lag aber in der Anweisung an die Leser, nicht im Filter; V8 „teilweise“ wird nicht wiederholt, sondern mit den Nachträgen ausgewiesen; für V4 gab es keine Folge.

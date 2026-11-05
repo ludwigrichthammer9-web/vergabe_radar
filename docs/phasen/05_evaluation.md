@@ -11,17 +11,22 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 8 (Abschluss), 2026-11-05. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 9 (Abschluss), 2026-11-05. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Vier Messungen liegen vor:** Backtest (Iteration 5, verworfen), Handprüfungen in Iteration 6 und 7 und die KI-Zweitlesung in Iteration 8. Die Iteration 8 erfüllt formal Z0, Z1, Z3 und Z4; Z2 nur nach Regel (14/15), mit einheitlichem Maßstab 11/15. Keine Messung ist von Menschen unabhängig bestätigt.
+**Fünf Messungen liegen vor:** Backtest (Iteration 5, verworfen), Handprüfungen in Iteration 6 und 7, die KI-Zweitlesung in Iteration 8 und die KI-Lesung auf neuer Stichprobe mit menschlicher Kontrolle in Iteration 9. Iteration 9 erfüllt V1, V2, V3, V5 und V6; V4 und V7 sind verfehlt, V8 nur teilweise erfüllt. Die menschliche Kontrolle umfasst nur 15 Lose (Kommilitone, 14/15).
 
 Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 Iteration 6: **[LA6]** [liste_auswertung_iteration6.md](../../reports/liste_auswertung_iteration6.md) · **[E6]** [evaluation_iteration6.md](../../reports/evaluation_iteration6.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md) · **[XP6]** [explorativ_iteration6.md](../../reports/explorativ_iteration6.md).
 Iteration 7: **[LA7]** [liste_auswertung_iteration7.md](../../reports/liste_auswertung_iteration7.md) · **[E7]** [evaluation_iteration7.md](../../reports/evaluation_iteration7.md) · **[AC7]** [abschreibecheck_iteration7.md](../../reports/abschreibecheck_iteration7.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md).
 Iteration 8: **[ZA8]** [zweitlesung_iteration8_auswertung.md](../../reports/zweitlesung_iteration8_auswertung.md) · **[E8]** [evaluation_iteration8.md](../../reports/evaluation_iteration8.md).
+Iteration 9: **[ZA9]** [zweitlesung_iteration9_auswertung.md](../../reports/zweitlesung_iteration9_auswertung.md) · **[E9]** [evaluation_iteration9.md](../../reports/evaluation_iteration9.md) · **[VL9]** [vertragsliste_iteration9.md](../../reports/vertragsliste_iteration9.md).
 
 ### Fakten (aus den Daten)
 
+- **Iteration 9:** V1 66/70 = 94,3 % (Wilson 86,2–97,8), V2 28/30 = 93,3 %, V3 neu 66/70 gegen alt 65/70, V4 61/70 = 87,1 % und 52/61 = 85,2 %, V5 110/110, V6 14/15 (Abweichung N48 beim Kommilitonen), V7 1 von 100 (N51: `unpublished` = Ergebnis nicht veröffentlicht, Anweisung deckte den Fall nicht ab) [ZA9], [E9].
+- Kontrolle des Evaluators am Rohtext (blind, 10 Lose): 10/10 gleich dem Vergleichswert; Basisregel „Feld EndDate“: Z 63/70 (nachträglich) [ZA9].
+- Verfahren: Läufe teils im Fenster, teils per Skript (Abweichung vom Plan), Skript erst mit den Antworten committet, 230 gelesene Dateien byte-gleich mit den committeten Paketen (docs/iterationen.md, Nachtrag).
+- _Frühere Iterationen (weiter gültig):_
 - Frühere Messungen: R1 28,8 % (Iteration 5), Y1 88,3 % mit Listenwert in der Vorlage (Iteration 6), Y1 76,6 % als Mischmaß (Iteration 7) [BT5], [LA6], [LA7].
 - **Iteration 8:** Z0 94/95, Z1 77/80 = 96,2 %, Z2 14/15 (11/15 bei einheitlichem Maßstab), Z3 75/80 und 67/72, Z4 10/10 [ZA8], [E8].
 - Dreiervergleich L1–L50: Liste = Vergleichswert 45/47, Prüfer der Iteration 7 = Vergleichswert 34/47 [E8].
@@ -29,6 +34,9 @@ Iteration 8: **[ZA8]** [zweitlesung_iteration8_auswertung.md](../../reports/zwei
 
 ### Interpretation
 
+- Gedeckt ist: „Die neue Fassung stimmt auf dieser Stichprobe zu 94,3 % mit dem Vergleichswert überein, die alte zu 92,9 %.“ Nicht gedeckt: „Fehlerarten behoben, Stichprobe bestätigt“, „V1 bis V8 erfüllt“ [E9].
+- V5 (110/110) zeigt vor allem gleiche Anweisung und gleiche Rohtexte (94 von 100 Listenwerten sind das Feld EndDate); der Vergleichswert ist teilweise zirkulär; V6 hat nur 15 Lose.
+- Die händischen Prüfungen aus Iteration 5 bis 7 (52 Paare, 60 und 47 Zufallslose) und der Kommilitone bilden den menschlichen Gegenanker; die Zahlen sind wegen anderer Stichproben und Definitionen nicht direkt vergleichbar.
 - Die Abweichungen aus Iteration 7 sind überwiegend mit Prüferfehlern vereinbar; Iteration 7 wird nicht ersetzt.
 - Z0 und Z4 messen vor allem die Einheitlichkeit des Verfahrens (gleiche Modellfamilie, gleiches Hilfsmodell). Zulässig: „durch zwei KI-Lesungen gestützt, nicht von Menschen bestätigt“. Nicht zulässig: „korrekt“, „Regel 1b belegt“, „unabhängig geprüft“.
 
@@ -61,6 +69,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-11-04 | 6 | Y1 gilt nach der Korrektur um L60 als verfehlt (53/60 = 88,3 %); Y2 formal erfüllt; Y3 knapp verfehlt; die Prüfung wird mit Vorlage ohne Listenwerte wiederholt | Evaluator (reports/evaluation_iteration6.md); Entscheidung des Nutzers „zurück zu Phase 3“ |
 | 2026-11-04 | 7 | Abschluss mit diesem Stand (kein dritter Regelversuch); Y1 wird als Mischmaß aus Listen- und Prüfungsfehlern berichtet; Prüfer-Einträge werden nicht nachträglich korrigiert; eine getrennte Messung (KI-Zweitlesung) ersetzt das Ergebnis nicht | Vorab festgelegte Folge „Y1 zwischen 70 % und 90 %“; Bestätigungsgefahr bei Korrektur nach Kenntnis des Ergebnisses (reports/evaluation_iteration7.md). Entscheidung des Nutzers. |
 | 2026-11-05 | 8 | Weiter (Projektabschluss), eingeschränkt formuliert; Z2 mit beiden Zahlen (14/15 und 11/15) berichtet; keine weitere Iteration | Vorab festgelegte Folge (Z0–Z4 erfüllt) und Empfehlung des Evaluators (reports/evaluation_iteration8.md). Entscheidung des Nutzers. |
+| 2026-11-05 | 9 | Weiter (Projektabschluss), eingeschränkt formuliert: Die Fassung der Iteration 9 (Regeln 1 bis 10) wird der Prototyp; das Höchstende bleibt Hinweis; V4, V7 und V8 werden offen als verfehlt bzw. teilweise berichtet; keine weitere Iteration | V1 66/70, V2 28/30, V3 66 gegen 65 (erfüllt), V5 110/110, V6 14/15; V4 verfehlt, V7 verfehlt (Ursache in der Anweisung, nicht im Filter), V8 teilweise ([ZA9], [E9]). Entscheidung des Nutzers nach dem Vorschlag und der Gesamtprüfung des Evaluators. |
 
 ## Iterationslog
 
@@ -109,3 +118,10 @@ _Noch keine Einträge._
 - **Erkenntnisse – Fakten:** Z0 94/95, Z1 77/80, Z2 14/15 bzw. 11/15, Z3 75/80 und 67/72, Z4 10/10.
 - **Erkenntnisse – Interpretation:** Die Liste ist durch KI-Lesung gestützt, nicht von Menschen bestätigt; die Leser sind nicht unabhängig.
 - **Übergabe an die nächste Phase:** Projektabschluss (Lab-Log, Vortrag); Phase 6 kennzeichnet die Genauigkeit entsprechend.
+
+### Iteration 9 – 2026-11-05
+
+- **Was gemacht:** KI-Lesung (Opus, Sonnet) auf 110 neuen Losen in Sitzungen ohne Projektkontext, menschliche Kontrolle an 15 Losen, blinde Kontrolle und Entscheide des Evaluators, Auswertung V1 bis V8, Gesamtprüfung.
+- **Erkenntnisse – Fakten:** V1 66/70, V2 28/30, V3 66 gegen 65, V4 verfehlt (87,1 %), V5 110/110, V6 14/15, V7 1 von 100, V8 teilweise (reports/zweitlesung_iteration9_auswertung.md, reports/evaluation_iteration9.md).
+- **Erkenntnisse – Interpretation:** Das Ende der Grundlaufzeit trägt als „laut Bekanntmachung, KI-gelesen, an 15 Losen von einem Menschen bestätigt“; der Nutzen der neuen Regeln ist nicht gesichert.
+- **Übergabe an die nächste Phase:** Projektabschluss; Phase 6 zeigt die Fassung der Iteration 9 mit offen ausgewiesenen Grenzen.
