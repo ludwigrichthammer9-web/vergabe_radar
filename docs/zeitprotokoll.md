@@ -1,6 +1,6 @@
 # Zeitprotokoll (aus der Git-Historie)
 
-_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
+_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-06. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
 
 | Iteration | Sitzungen | Commits | Stunden (Untergrenze) |
 |---|---|---|---|
@@ -14,7 +14,8 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchste
 | 8 | 2 | 5 | 1.3 |
 | 9 | 2 | 10 | 1.9 |
 | 10 | 3 | 21 | 4.4 |
-| **Summe** | 29 | 118 | **36.2** |
+| 11 | 1 | 10 | 1.5 |
+| **Summe** | 30 | 128 | **37.7** |
 
 ## Iteration 1
 
@@ -94,6 +95,12 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchste
 | 2026-11-05 | 15:55–18:00 | 15 | 2.6 | Lab-Log und Folien auf Iteration 9, Lab-Log als PDF, Prototyp-Webseite / Paket A: Wettbewerbsbild der 130 Oberpfalz-Lose aus TED (Auftragnehmer |
 | 2026-11-05 | 20:22–20:22 | 1 | 0.5 | Paket C: Ursachen der 33 Lose ohne Ende, Fehlertyp Dauerfeld = Gesamtd |
 | 2026-11-05 | 22:01–22:48 | 5 | 1.3 | Iteration 10b: Abruf abgeschlossen (160 Lose, Vergabeweiser hat 160, d / Iteration 10 und 10b abgeschlossen: weiter, Projektabschluss, eingesch |
+
+## Iteration 11
+
+| Tag | Zeit | Commits | Std. | Erster / letzter Commit |
+|---|---|---|---|---|
+| 2026-11-05 | 22:58–00:01 | 10 | 1.5 | Lab-Log auf Iteration 10 und 10b: Zyklus 4 (Business Understanding und / Wizard-of-Oz-Blatt: fünf echte laufende Oberpfälzer Lose zur Bewertung |
 
 ## Ergänzungen von Hand (nicht im Git)
 
