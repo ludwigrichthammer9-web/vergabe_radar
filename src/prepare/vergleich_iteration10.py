@@ -44,6 +44,17 @@ PAUSE_VW = 61
 _letzte_vw = [0.0]
 
 
+def hole(url: str, **kw) -> requests.Response:
+    """GET mit Wiederholung bei Verbindungsfehlern (z. B. kurzer DNS-Ausfall); ändert nichts an Zuordnung oder Auswertung."""
+    for versuch in range(6):
+        try:
+            return requests.get(url, timeout=60, **kw)
+        except requests.exceptions.ConnectionError as e:
+            print(f"  Verbindungsfehler ({versuch + 1}/6), neuer Versuch in 120 s: {url}")
+            time.sleep(120)
+    return requests.get(url, timeout=60, **kw)
+
+
 def _local(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
@@ -82,7 +93,7 @@ def notice_id(pub: str, abruf: bool) -> str | None:
     if not p.exists():
         if not abruf:
             return None
-        r = requests.get(f"https://ted.europa.eu/en/notice/{pub}/xml", timeout=60)
+        r = hole(f"https://ted.europa.eu/en/notice/{pub}/xml")
         if r.status_code != 200:
             print(f"  TED {pub}: HTTP {r.status_code}")
             return None
@@ -105,7 +116,7 @@ def vw_tender(vid: str, abruf: bool) -> dict | None:
     if warte > 0:
         time.sleep(warte)
     for _ in range(3):
-        r = requests.get(f"{API}/tenders/{vid}", headers=HEADERS, timeout=60)
+        r = hole(f"{API}/tenders/{vid}", headers=HEADERS)
         _letzte_vw[0] = time.time()
         if r.status_code == 429:
             time.sleep(int(r.headers.get("Retry-After", "300")) + 5)
@@ -177,7 +188,7 @@ def main() -> None:
             p = VW / f"expiring_gebaeudereinigung_{name}_36.json"
             if not p.exists():
                 time.sleep(max(0, PAUSE_VW - (time.time() - _letzte_vw[0])))
-                r = requests.get(f"{API}/expiring?{q}", headers=HEADERS, timeout=60)
+                r = hole(f"{API}/expiring?{q}", headers=HEADERS)
                 _letzte_vw[0] = time.time()
                 if r.status_code == 200:
                     p.write_bytes(r.content)
