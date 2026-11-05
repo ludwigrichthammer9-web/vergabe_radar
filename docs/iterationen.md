@@ -21,8 +21,8 @@ Regeln:
 | 6 | Prototyp der Vertragsliste und Qualität der Enddaten (Iteration 6 und 7 zusammengelegt) | 3 → 6 → 5 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-15) | abgeschlossen | **Zurück zu Phase 3:** Y1 88,3 % nach Korrektur (L60), 90,0 % laut Auswertung, Verankerung und Unabhängigkeit offen; Y2 91,7 %, Y3 79,7 % (knapp verfehlt), Y4 Prototyp erfüllt mit bekannten Fehlern; Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe |
 | 7 | Prototyp der Vertragsliste (statt Kundentest): in Iteration 6 aufgegangen | – | – | entfällt | – |
 | 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugen | 3 → 5 → 6 | 2026-11-04 (geplant 2026-11-05 bis 2026-11-09) | abgeschlossen | **Abschluss mit diesem Stand, kein dritter Regelversuch:** Y1 36/47 = 76,6 % (Kürzung auf L1–L50), Y1r 8/15, Y2 und Y2b verfehlt, Y3 nicht sauber erfüllt, Y4 teilweise; Y1 ist ein Mischmaß aus Listen- und Prüfungsfehlern, Regel 1b weder belegt noch widerlegt; Ende der Grundlaufzeit „laut Bekanntmachung“, Höchstende nur Hinweis |
-| 8 | KI-Zweitlesung der Stichprobe von Iteration 7 (zwei KI-Leser, Liste eingefroren, reine Messung) | 5 | 2026-11-04 bis 2026-11-05 (geplant) | läuft | offen |
-| 8+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | geplant | – |
+| 8 | KI-Zweitlesung der Stichprobe von Iteration 7 (zwei KI-Leser, Liste eingefroren, reine Messung) | 5 | 2026-11-04 bis 2026-11-05 | abgeschlossen | **Weiter (Projektabschluss), eingeschränkt formuliert:** Z0 94/95, Z1 77/80, Z3 75/80 und 67/72, Z4 10/10 erfüllt; Z2 14/15, bei einheitlichem Maßstab 11/15 (verfehlt); Leser nicht unabhängig, nicht von Menschen bestätigt |
+| 9+ | Ausbau oder Neuausrichtung | je nach Ergebnis | – | außerhalb des Projekts | – |
 
 Die geplanten Iterationen stammen aus dem Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan). Nach der Entscheidung zu Iteration 1
 sind sie um eine Stelle verschoben. Konkretisiert werden sie mit `/iteration-start`.
@@ -42,6 +42,8 @@ _Nachtrag 2026-11-04 (Abschluss Iteration 5):_ Nach der Entscheidung „Idee anp
 _Nachtrag 2026-11-04 (Abschluss Iteration 6):_ Nach der Entscheidung „zurück zu Phase 3“ folgt eine weitere Iteration (Lese-Regel nachbessern, neue Stichprobe, Prototyp neu erzeugen); Nummer und Zuschnitt legt `/iteration-start` fest. Die Zeile 7 oben (Prototyp, „entfällt“) bleibt als historischer Stand stehen.
 
 _Nachtrag 2026-11-04 (Abschluss Iteration 7):_ Nach der Entscheidung „Abschluss mit diesem Stand“ wird die Lese-Regel nicht weiter verändert. Als letzte Iteration ist eine reine Messung geplant (KI-Zweitlesung der Stichprobe von Iteration 7 mit eingefrorener Liste); sie ersetzt das Ergebnis von Iteration 7 nicht und wird mit `/iteration-start` angelegt.
+
+_Nachtrag 2026-11-05 (Abschluss Iteration 8):_ Nach der Entscheidung „weiter (Projektabschluss)“ folgt keine weitere Iteration; offene Grenzen kommen ins Lab-Log. Die Zeile „8+“ ist damit gegenstandslos („9+“, außerhalb des Projekts).
 
 ---
 
@@ -1101,7 +1103,7 @@ Als letzte Iteration folgt eine reine Messung (KI-Zweitlesung mit eingefrorener 
 
 ## Iteration 8: KI-Zweitlesung der Stichprobe von Iteration 7
 
-**Status:** läuft (angelegt am 2026-11-04)
+**Status:** abgeschlossen am 2026-11-05 (angelegt am 2026-11-04)
 
 **Fokus und Phasen:** nur Phase 5 (Messung). Liste und Lese-Regeln bleiben im Stand von Commit a93785e eingefroren (Entscheidung zu Iteration 7: kein dritter Regelversuch).
 Abweichung vom Iterationsplan in [CRISP-DM.md](CRISP-DM.md#iterationsplan) („7+ Ausbau“): Der Evaluator nennt eine unabhängige Lesung der Originale als das, was für ein belastbares Urteil fehlt [E7]; ohne zweiten menschlichen Prüfer ist ein KI-Leser die einfachste Lösung.
@@ -1161,3 +1163,33 @@ Den Zugriff auf Projektdateien kann Claude den Lesern nicht technisch sperren, n
 > Durchführung (festgelegt vor dem Lauf): Die TED-Detailseite lädt ihren Inhalt per JavaScript und ist für WebFetch leer (Test an 143100-2026); die Vorlage verlinkt deshalb die HTML-Fassung `ted.europa.eu/de/notice/<Nr>/html`.
 > Jeder Leser läuft in **4 Teilläufen** (L1–L25, L26–L50, L51–L75, L76–L95 + K1–K3), jeweils neuer Subagent desselben Modells; die Teilläufe von A und B wissen nichts voneinander.
 > **Zusätzliche Grenze:** WebFetch gibt die Seite über ein kleines Hilfsmodell weiter; die Leser sollen deshalb wörtliche Zitate verlangen und lange Seiten mit `offset` weiterlesen. Fehler dieses Hilfsmodells treffen beide Leser gleich und sind nur über Z4 (Evaluator am Original) teilweise erkennbar.
+
+> **Fortschritt 2026-11-04/05 (Schritte 2 bis 4; Kriterien unverändert):** Auswertungsskript `src/prepare/auswertung_iteration8.py` vor den Antworten committet (9645fa8). Leser A (Opus) und B (Sonnet), je 4 Teilläufe, Rohantworten unverändert in `reports/zweitlesung_iteration8_roh/` (Commit 74f95d0); die CSV je Leser sind nur im Format angepasst (Semikolons im Zitat von Leser B → Kommas).
+> Protokollprüfung: nur WebFetch auf ted.europa.eu, keine Projektdateien geöffnet [`reports/zweitlesung_iteration8_hinweise.md`]. **Nachträglich festgestellt:** Die Leser hatten `CLAUDE.md` automatisch im Kontext und damit den Satz „Das Enddatum der Bekanntmachung ist manchmal schon das Höchstende“ (in den Protokollen beider Leser gefunden); die Listenwerte kannten sie nicht. Der Auftragstext an die Leser ist im Repo nur über die Vorlage nachvollziehbar, die Protokolle liegen nicht im Repo.
+> Der Evaluator entschied die Uneinigkeiten L7 (Ende der Grundlaufzeit: unklar) und L33 (Höchstende: unklar) und bestätigte 10/10 Übereinstimmungen am Original (Seed 20261108); er nutzte dasselbe WebFetch-Hilfsmodell und kannte die Werte der Leser (Commit 3e9178b).
+
+**Ergebnis** _(2026-11-05)_
+
+_Fakten_ (Quellen: [zweitlesung_iteration8_auswertung.md](../reports/zweitlesung_iteration8_auswertung.md), **[E8]** [evaluation_iteration8.md](../reports/evaluation_iteration8.md), [zweitlesung_iteration8_hinweise.md](../reports/zweitlesung_iteration8_hinweise.md))
+
+| | Kriterium | Ergebnis | erfüllt? |
+|---|---|---|---|
+| Z0 | Leser A = B beim Ende der Grundlaufzeit (95 Lose) ≥ 90 % | 94/95 = 98,9 % (nur L7 uneinig); Höchstende 94/95 (nur L33) | ja |
+| Z1 | Liste = Vergleichswert (80 Zufallslose) ≥ 72/80 | **77/80 = 96,2 %** (Wilson 89,5–98,7); Abweichungen L5, L33, L81 | ja |
+| Z2 | Regelwirkungs-Lose ≥ 12/15 | 14/15 nach Regel; bei einheitlichem Maßstab für „zum Schuljahresende“ 11/15 [E8] | formal ja, mit einheitlichem Maßstab nein |
+| Z3 | Höchstende korrekt oder „unbestimmbar“ ≥ 90 % / nur behauptetes Höchstende ≥ 85 % | 75/80 und 67/72 = 93,1 %; ohne „unbestimmbar = korrekt“ 69/80 = 86,3 % [E8] | ja |
+| Z4 | Evaluator bestätigt 10 zufällige Übereinstimmungen ≥ 9/10 | 10/10 (Wilson-Untergrenze etwa 72 %); 9 von 10 einfache Fälle | formal ja, schwach belegt |
+
+- Dreiervergleich L1–L50 (Typ Y): Liste = Vergleichswert bei 45/47, Prüfer der Iteration 7 = Vergleichswert bei 34/47. In allen 11 Abweichungen der Iteration 7 steht die KI-Lesung auf der Seite der Liste; bei L5 und L33 folgten Prüfer und Liste dem Feld, die KI dem Text [E8].
+- Echte Listenfehler am Original bestätigt (Evaluator): L5 (Enddatum ist schon Höchstende, Regel 1b erkennt „3 Jahre mit Option“ nicht), L81 (Wert von Los 1 auf Los 2 übertragen, Regel 6), L72 (Höchstende 2037 statt 2031, „um 3 Jahre“ als Länge je Verlängerung gelesen), L82 (Datum „31. Oktober 2030“ nicht erkannt). L33: Quelle widerspricht sich, nicht belegbar. L69 und L72: Lose ohne Zuschlag stehen in der Liste (am Original bestätigt, nicht gezählt) [E8].
+- Schuljahres-Lose (acht Lose des Landkreises Börde): Das Ende des ersten Jahres ist „zum Schuljahresende“, ein tagesgenaues Datum steht nirgends; Liste und Leser rechnen Beginn + 1 Jahr − 1 Tag (die Vorlage gab diese Rechnung vor) [E8].
+- Kontroll-Lose 143100-2026 Lose 8, 9, 14: Liste und beide Leser 31.03.2030 / 31.03.2031.
+
+_Interpretation_
+- Nach den vorab festgelegten Regeln folgt „weiter“. Z1 ist tragfähig: Das Ende der Grundlaufzeit der Liste stimmt bei 77/80 Zufallslosen mit zwei getrennten KI-Lesungen überein, nicht von Menschen bestätigt (Intervall ohne Berücksichtigung der Klumpung).
+- Die meisten der 11 Abweichungen aus Iteration 7 sind mit Prüferfehlern vereinbar; Iteration 7 wird dadurch nicht ersetzt, beide Messungen stehen nebeneinander.
+- „Regel 1b gestützt“ gilt nur für Fälle mit ausdrücklich genannter Grunddauer (L3, L73, L77 am Original). Für den Typ „zum Schuljahresende“ und den Typ „text_festlaufzeit“ (nur die Kontroll-Lose) ist die Regel nicht belegt; die Vorlage gab den Lesern die Logik von Regel 1b vor (Zirkelschluss-Risiko).
+- Die Leser sind getrennt, aber nicht unabhängig: gleiche Modellfamilie wie Regel und Evaluator, gleiches Hilfsmodell, `CLAUDE.md` im Kontext. Z0 und Z4 messen deshalb vor allem die Einheitlichkeit des Verfahrens. Aussagen wie „Liste korrekt“, „Regel 1b belegt“, „unabhängig geprüft“ sind nicht zulässig.
+
+**Entscheidung** _(Nutzer, 2026-11-05):_ **Weiter, Projektabschluss, eingeschränkt formuliert.** Die Liste gilt beim Ende der Grundlaufzeit als „durch zwei KI-Lesungen gestützt (77/80), nicht von Menschen bestätigt, Leser nicht unabhängig“.
+Z2 wird mit beiden Zahlen berichtet (14/15 und 11/15). Die neuen Fehlerarten (L5, L81 Regel 6, L69/L72 Lose ohne Zuschlag, L72/L82 Höchstende) bleiben als offene Grenzen für das Lab-Log; die Regel wird nicht mehr geändert. Keine weitere Iteration.

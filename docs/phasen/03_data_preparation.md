@@ -14,30 +14,30 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 7 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 8 (Abschluss), 2026-11-05. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-Die Zuschlagstabelle je Los ist gebaut; Regel 1b (Enddatum = Höchstende bei kürzerer fester Laufzeit im Text) ist eingebaut. **Die Lese-Regel wird nicht weiter verändert** (Abschluss Iteration 7, kein dritter Regelversuch). Das Ende der Grundlaufzeit gilt als „laut Bekanntmachung“, das Höchstende nur als Hinweis.
+Die Vertragsliste ist eingefroren (Stand Commit a93785e, Regel 1b); es folgt keine Regeländerung mehr. Zwei KI-Lesungen stützen das Ende der Grundlaufzeit (77/80), nicht von Menschen bestätigt. Neue Fehlerarten sind bekannt und bleiben offene Grenzen.
 
 Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 Iteration 6: **[LA6]** [liste_auswertung_iteration6.md](../../reports/liste_auswertung_iteration6.md) · **[E6]** [evaluation_iteration6.md](../../reports/evaluation_iteration6.md).
 Iteration 7: **[LA7]** [liste_auswertung_iteration7.md](../../reports/liste_auswertung_iteration7.md) · **[E7]** [evaluation_iteration7.md](../../reports/evaluation_iteration7.md) · **[AC7]** [abschreibecheck_iteration7.md](../../reports/abschreibecheck_iteration7.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md).
+Iteration 8: **[ZA8]** [zweitlesung_iteration8_auswertung.md](../../reports/zweitlesung_iteration8_auswertung.md) · **[E8]** [evaluation_iteration8.md](../../reports/evaluation_iteration8.md).
 
 ### Fakten (aus den Daten)
 
-- `src/prepare/vertragsliste.py`: 9.915 Lose aus 4.209 eForms-Zuschlägen; je Los Ende der Grundlaufzeit, Höchstende, Herkunft [VL]. Abdeckung 2.924/3.668 = 79,7 % (Q4 2025–Q3 2026) [VL].
-- **Iteration 7, Regel 1b** (`kurze_festlaufzeit`, Commit 7d42a55, vor dem Ziehen): ändert 165 von 9.915 Losen (43 „text_laufzeit_option“, 122 „text_festlaufzeit“, davon 107 in 143100-2026); im Fenster 128 von 2.924 Losen. Entwicklungstest an den 60 Losen der Iteration 6: L1, L42, L43, L60 richtig, übrige unverändert.
-- Prüfung (Nutzer, ohne KI-Hilfe laut Selbstangabe): Ende der Grundlaufzeit 36/47 = 76,6 % (Wilson 62,8–86,4) der Zufallslose L1–L50; Regelwirkungs-Lose 8/15; Lose mit Quelle „Text“ 12/12 [LA7], [E7].
-- Bei 45 der 47 Zufallslose stammt das Ende der Liste aus dem Enddatum-Feld; die Nachprüfung schrieb dasselbe Feld ab. Bei keiner der 11 Abweichungen ist ein Listenfehler belegt (L26 an TED: Liste richtig) [E7], [AC7].
-- Höchstende-Fehler mit Datum: 557125-2026 (L72) und 707425-2025 (L82), nicht unabhängig geprüft [LA7], [E7].
+- Ende der Grundlaufzeit der Liste = Vergleichswert zweier KI-Leser bei 77/80 Zufallslosen (Wilson 89,5–98,7); Abweichungen L5, L33, L81 [ZA8].
+- Am Original bestätigte Listenfehler [E8]: L5 („3 Jahre mit Option“ von Regel 1b nicht erkannt), L81 (Regel 6 überträgt den Einzelwert von Los 1 auf Los 2), L72 („um 3 Jahre“ als Länge je Verlängerung gelesen, Höchstende 2037 statt 2031), L82 (Datum „31. Oktober 2030“ nicht erkannt).
+- Lose ohne Zuschlag (L69, L72) stehen in der Liste; die Liste filtert nicht nach dem Ergebnis je Los. Der Anteil ist nicht gezählt [E8].
+- Regel 1b liest Fälle mit ausdrücklich genannter Grunddauer richtig (L3, L73, L77); der Typ „zum Schuljahresende“ (acht Lose des Landkreises Börde) ist nicht tagesgenau belegbar [E8].
 
 ### Interpretation
 
-- Die Tabelle ist reproduzierbar und deckt etwa vier Fünftel der Lose ab. Ihre Genauigkeit beim Ende der Grundlaufzeit ist nicht belastbar gemessen: 76,6 % ist ein Mischmaß aus möglichen Listenfehlern und Prüfungsfehlern.
-- Regel 1b ist weder belegt noch widerlegt; der Typ „text_festlaufzeit“ ist ungetestet. Die Lese-Regeln sind weiterhin nur an eForms-Losen geprüft (A11).
-- Das Höchstende aus „Anzahl × Länge“ ist praktisch ungeprüft.
+- Die Tabelle ist brauchbar, aber nicht als korrekt belegt: Die Leser gehören zur selben Modellfamilie wie die Regel und lasen über dasselbe Hilfsmodell.
+- Regel 6 (Einzelwert gilt für alle Lose) ist systematisch fehleranfällig; die Abdeckung 79,7 % kann leicht zu hoch sein, das Ausmaß ist unbekannt.
 
 ## Offene Fragen
 
+- [ ] _(neu, Iteration 8, bleibt offen)_ Wie viele Lose der Liste haben keinen Zuschlag, und wie viele sind von Regel 6 (Übertragung eines Einzelwerts auf andere Lose) betroffen?
 - [ ] _(neu, Iteration 7)_ Stimmt Regel 1b, wenn ein zweiter, unabhängiger Leser die Originale liest (auch Typ „text_festlaufzeit“)? Nennt der Text bei Losen mit Feldübernahme eine kürzere feste Laufzeit?
 - [x] _(neu, Iteration 6)_ Welche Formulierungen und Feldkombinationen zeigen, dass BT-537 schon das Höchstende ist (Regel 1a erweitern, z. B. BT-54 „zwei Jahre … (2+1+1)“, „Festlaufzeit von … bis …“, Beginn + Dauer im Text kürzer als Beginn–Ende)? Test nur an neuen Losen.
   _Antwort Iteration 7:_ Regel 1b (`kurze_festlaufzeit`): feste Laufzeit mit Datum oder Dauer im Text, nur bei Option/Verlängerung; Wirkung nicht belegt (8/15, Prüfdesign verzerrt) [E7].
@@ -76,6 +76,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-11-04 | 5 | Die Vertragsliste je Los (Grundlaufzeit, Höchstende, Herkunft) ist der Datenstand für Iteration 6/7; die Backtest-Paare werden nur für die Bewertung genutzt | Entscheidung „Idee anpassen“ nach Iteration 5 (reports/evaluation_iteration5.md). Entscheidung des Nutzers. |
 | 2026-11-04 | 6 | Zurück zu Phase 3: Regel für „Enddatum = Höchstende“ erweitern und vor dem Ziehen einer neuen Stichprobe committen; neue Stichprobe (ohne geprüfte Lose) mit Vorlage ohne Listenwerte | Y1 88,3 % nach Korrektur (L60), Verankerung, offene Unabhängigkeit (reports/evaluation_iteration6.md). Entscheidung des Nutzers. |
 | 2026-11-04 | 7 | Kein dritter Regelversuch: Regel 1b bleibt im Stand von Commit a93785e eingefroren; Ende der Grundlaufzeit gilt als „laut Bekanntmachung“, Höchstende nur als Hinweis | Y1 76,6 % (zwischen 70 und 90 %, vorab festgelegte Folge), Y1r 8/15, Y2/Y2b verfehlt (reports/evaluation_iteration7.md). Entscheidung des Nutzers. |
+| 2026-11-05 | 8 | Keine weitere Regeländerung; Fehlerarten L5, L81 (Regel 6), L69/L72 (kein Zuschlag), L72/L82 (Höchstende) bleiben offene Grenzen | Z1 77/80, aber Leser nicht unabhängig (reports/evaluation_iteration8.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -147,3 +148,10 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 - **Erkenntnisse – Fakten:** Regel 1b ändert 165 Lose; Y1 36/47 = 76,6 %, Y1r 8/15, Quelle „Text“ 12/12; 45 der 47 Zufallslose mit Ende aus dem Feld (reports/liste_auswertung_iteration7.md, reports/evaluation_iteration7.md).
 - **Erkenntnisse – Interpretation:** Die Prüfung konnte die Regel nicht von Lesefehlern trennen; die Regel ist weder belegt noch widerlegt. Weitere Regelarbeit lohnt ohne unabhängigen Leser nicht.
 - **Übergabe an die nächste Phase:** Liste eingefroren (a93785e) an Phase 5 (KI-Zweitlesung als reine Messung) und Phase 6 (Kennzeichnung „laut Bekanntmachung“, Höchstende als Hinweis).
+
+### Iteration 8 – 2026-11-05
+
+- **Was gemacht:** Keine Änderung an Daten oder Regeln; die Liste (Stand a93785e) wurde von zwei KI-Lesern gegengelesen.
+- **Erkenntnisse – Fakten:** Z1 77/80; neue Fehlerarten L5, L81, L69/L72, L72/L82 (reports/zweitlesung_iteration8_auswertung.md, reports/evaluation_iteration8.md).
+- **Erkenntnisse – Interpretation:** Die Liste trägt als „laut Bekanntmachung, durch KI-Lesung gestützt“; ihre Fehlerquote bleibt ohne menschliche Prüfung offen.
+- **Übergabe an die nächste Phase:** Keine weitere Iteration; offene Grenzen ins Lab-Log.

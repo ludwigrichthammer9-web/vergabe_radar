@@ -12,25 +12,23 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 7 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 8 (Abschluss), 2026-11-05. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Prototyp der Vertragsliste neu erzeugt** (Region Oberpfalz, Stichtag 04.11.2026, Lese-Regeln mit Regel 1b), ohne Kunden und ohne Terminprognose. Das Ende der Grundlaufzeit steht als „laut Bekanntmachung“, das Höchstende nur als Hinweis.
+**Prototyp der Vertragsliste (Oberpfalz) bleibt im Stand von Iteration 7.** Sein Genauigkeitshinweis nennt jetzt auch die KI-Zweitlesung (77/80) und ihre Grenzen. Keine Kunden, keine Terminprognose.
 
 Quellen: **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md) · **[E6]** [evaluation_iteration6.md](../../reports/evaluation_iteration6.md) · **[LA6]** [liste_auswertung_iteration6.md](../../reports/liste_auswertung_iteration6.md).
 Iteration 7: **[LA7]** [liste_auswertung_iteration7.md](../../reports/liste_auswertung_iteration7.md) · **[E7]** [evaluation_iteration7.md](../../reports/evaluation_iteration7.md) · **[AC7]** [abschreibecheck_iteration7.md](../../reports/abschreibecheck_iteration7.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md).
+Iteration 8: **[ZA8]** [zweitlesung_iteration8_auswertung.md](../../reports/zweitlesung_iteration8_auswertung.md) · **[E8]** [evaluation_iteration8.md](../../reports/evaluation_iteration8.md).
 
 ### Fakten (aus den Daten)
 
-- `src/report/beispiel_liste.py` erzeugt 146 Lose (97 laufend); Stufen A 64, B 2, C 33, D 9, E 5, F 33; Stufen vor dem Ziehen der Stichprobe festgelegt [BL].
-- 143100-2026 Lose 8, 9, 14: Ende der Grundlaufzeit 31.03.2030, Höchstende 31.03.2031 (Herkunft „text_festlaufzeit“, Stufe A); Los 8 an TED bestätigt, Lose 9 und 14 nicht [E7].
-- Quoten je Stufe aus der bundesweiten Stichprobe (L1–L50): A 11/12, B 12/18 (Höchstende 2/5), C 8/12, D 5/5; Regel-1b-Lose (Stufe A per Definition) 8/15 [BL], [E7].
-- Für einen Kunden wären Auftraggeber und CPV immer vorhanden; ein plausibler Auftragswert fehlt bei rund 41 % der Notices. [Report §2]
+- 146 Lose, Stufen A 64, B 2, C 33, D 9, E 5, F 33 (unverändert) [BL].
+- Kontroll-Lose 143100-2026 Lose 8, 9, 14: Ende der Grundlaufzeit 31.03.2030, Höchstende 31.03.2031; beide KI-Leser lasen dasselbe [ZA8].
+- Bekannte Fehlerarten der Liste: Lose ohne Zuschlag, Regel 6 (Einzelwert auf andere Lose), „3 Jahre mit Option“, „um 3 Jahre“, Datumsformat mit Monatsnamen [E8].
 
 ### Interpretation
 
-- Die Stufen sagen, woher ein Eintrag stammt, nicht, wie verlässlich er ist; die frühere Aussage „Stufe A ist die sicherste“ war nicht gedeckt und ist umformuliert [E7].
-- Der Prototyp zeigt die Form eines möglichen Produkts; seine Genauigkeit ist nicht belastbar gemessen, und für die Oberpfalz selbst gibt es kaum geprüfte Einträge.
-- Ob eine Liste ohne Terminprognose für Mittelständler nützlich ist, ist nicht geprüft (A1, A15 außerhalb des Projektumfangs).
+- Der Prototyp zeigt die Form eines möglichen Produkts; seine Genauigkeit ist nur durch KI-Lesung gestützt. Ob eine Liste ohne Terminprognose für Mittelständler nützlich ist, ist nicht geprüft (A1, A15 außerhalb des Projektumfangs).
 
 ## Offene Fragen
 
@@ -47,6 +45,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | – | – | Noch keine Entscheidungen | – |
 | 2026-11-04 | 6 | Prototyp der Vertragsliste als Markdown und CSV je Region, mit Stufe A–F je Eintrag und ohne Terminprognose; Neuerzeugung nach Phase 3 | Entscheidung „Idee anpassen“ nach Iteration 5; Abschluss Iteration 6 (reports/evaluation_iteration6.md) |
 | 2026-11-04 | 7 | Prototyp mit Regel 1b neu erzeugt; Spalten „Ende Grundlaufzeit (laut Bekanntmachung)“ und „Höchstende (nur Hinweis)“; Aussage „Stufe A ist die sicherste“ zurückgenommen | Abschluss Iteration 7, Evaluator (reports/evaluation_iteration7.md). Entscheidung des Nutzers. |
+| 2026-11-05 | 8 | Prototyp bleibt unverändert; im Bericht stehen die KI-Zweitlesung und ihre Grenzen | Abschluss Iteration 8 (reports/evaluation_iteration8.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -67,3 +66,10 @@ _Noch keine Einträge._
 - **Erkenntnisse – Fakten:** 146 Lose, Fehler 143100-2026 (Lose 8, 9, 14) behoben, Los 8 an TED bestätigt (reports/beispiel_liste.md, reports/evaluation_iteration7.md).
 - **Erkenntnisse – Interpretation:** Y4 teilweise erfüllt; die Genauigkeitsangaben je Stufe beruhen auf kleinen Zahlen und belegen Stufe A nicht.
 - **Übergabe an die nächste Phase:** Liste bleibt eingefroren; eine KI-Zweitlesung (Iteration 8) kann die Genauigkeitsangabe ergänzen, ändert den Prototyp aber nicht.
+
+### Iteration 8 – 2026-11-05
+
+- **Was gemacht:** Nur der Genauigkeitshinweis im Prototyp ergänzt; Liste und Regeln unverändert.
+- **Erkenntnisse – Fakten:** Kontroll-Lose 8, 9, 14 von beiden Lesern wie in der Liste gelesen; neue Fehlerarten bekannt (reports/evaluation_iteration8.md).
+- **Erkenntnisse – Interpretation:** Y4 bleibt teilweise; Aussagen zur Genauigkeit nur mit Vorbehalt.
+- **Übergabe an die nächste Phase:** Projektabschluss.

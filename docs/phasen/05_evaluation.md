@@ -11,30 +11,30 @@
 
 ## Aktueller Stand
 
-_Stand: Iteration 7 (Abschluss), 2026-11-04. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
+_Stand: Iteration 8 (Abschluss), 2026-11-05. Dieser Abschnitt wird in jeder Iteration neu geschrieben._
 
-**Drei Messungen liegen vor:** der Backtest der Terminprognose (Iteration 5, verworfen) und zwei Handprüfungen der Vertragsliste (Iteration 6 mit Verankerung, Iteration 7 ohne Listenwerte, aber mit Feldübernahme). Keine liefert eine belastbare Fehlerquote für das Ende der Grundlaufzeit. Iteration 7 ist nach der vorab festgelegten Folge „Y1 zwischen 70 % und 90 %“ abgeschlossen.
+**Vier Messungen liegen vor:** Backtest (Iteration 5, verworfen), Handprüfungen in Iteration 6 und 7 und die KI-Zweitlesung in Iteration 8. Die Iteration 8 erfüllt formal Z0, Z1, Z3 und Z4; Z2 nur nach Regel (14/15), mit einheitlichem Maßstab 11/15. Keine Messung ist von Menschen unabhängig bestätigt.
 
 Quellen: **[BT5]** [backtest_iteration5.md](../../reports/backtest_iteration5.md) · **[E5]** [evaluation_iteration5.md](../../reports/evaluation_iteration5.md) · **[ZP]** [gt_pruefung_iteration5_auswertung.md](../../reports/gt_pruefung_iteration5_auswertung.md) · **[AN]** [backtest_analysen_iteration5.md](../../reports/backtest_analysen_iteration5.md) · **[VL]** [vertragsliste_iteration5.md](../../reports/vertragsliste_iteration5.md) · **[VP]** [verlaengerung_praxis_iteration5.md](../../reports/verlaengerung_praxis_iteration5.md) · **[HP]** [hoechstende_pruefung_iteration5_test.md](../../reports/hoechstende_pruefung_iteration5_test.md).
 Iteration 6: **[LA6]** [liste_auswertung_iteration6.md](../../reports/liste_auswertung_iteration6.md) · **[E6]** [evaluation_iteration6.md](../../reports/evaluation_iteration6.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md) · **[XP6]** [explorativ_iteration6.md](../../reports/explorativ_iteration6.md).
 Iteration 7: **[LA7]** [liste_auswertung_iteration7.md](../../reports/liste_auswertung_iteration7.md) · **[E7]** [evaluation_iteration7.md](../../reports/evaluation_iteration7.md) · **[AC7]** [abschreibecheck_iteration7.md](../../reports/abschreibecheck_iteration7.md) · **[BL]** [beispiel_liste.md](../../reports/beispiel_liste.md).
+Iteration 8: **[ZA8]** [zweitlesung_iteration8_auswertung.md](../../reports/zweitlesung_iteration8_auswertung.md) · **[E8]** [evaluation_iteration8.md](../../reports/evaluation_iteration8.md).
 
 ### Fakten (aus den Daten)
 
-- Backtest (Iteration 5): R1 28,8 %, R0 17,3 % auf 52 Paaren; robust gegen Ausreißer, Vorlauf und Gewichtung [BT5], [E5], [AN].
-- Iteration 6 (60 Zufallslose, Vorlage mit Listenwert): Y1 53/60 = 88,3 % nach L60, Y2 55/60 = 91,7 % [LA6], [E6].
-- **Iteration 7** (Vorlage ohne Listenwerte, Nachprüfung im TED-Original, gekürzt auf L1–L50): Y1 36/47 = 76,6 % (Wilson 62,8–86,4), Y1r 8/15, Y2 29/47, Y2b 24/42 (ohne 15 veraltete Einträge 29/32 bzw. 24/27, selektiv); gewichtet 80,2 % [LA7].
-- Alle 7 Y1r-Abweichungen in nachgeprüften Losen mit Feldübernahme, alle 8 Treffer ohne Nachprüfung; gleiche Sachlage, gegensätzliches Urteil (L74/L84 gegen L65/L88) [E7].
-- Verfahren: Regel, Seed und Vorlage vor dem Ziehen committet; Hilfsmittel der Nachprüfung leer (Selbstangabe „keine“ im Gespräch), Quelle der Nachprüfung von Claude abgeleitet, keine Sitzungstabellen; Median 1 Minute je Los [E7].
+- Frühere Messungen: R1 28,8 % (Iteration 5), Y1 88,3 % mit Listenwert in der Vorlage (Iteration 6), Y1 76,6 % als Mischmaß (Iteration 7) [BT5], [LA6], [LA7].
+- **Iteration 8:** Z0 94/95, Z1 77/80 = 96,2 %, Z2 14/15 (11/15 bei einheitlichem Maßstab), Z3 75/80 und 67/72, Z4 10/10 [ZA8], [E8].
+- Dreiervergleich L1–L50: Liste = Vergleichswert 45/47, Prüfer der Iteration 7 = Vergleichswert 34/47 [E8].
+- Nachträglich: Die Leser hatten `CLAUDE.md` im Kontext (Fehlertyp-Satz); die Vorlage gab Regel 1b als Leseanweisung vor [E8].
 
 ### Interpretation
 
-- Iteration 7 zeigt vor allem eine Grenze des Prüfdesigns: Ohne Felder in der Vorlage kam „unbekannt“, mit Nachprüfung im Original kam Feldübernahme. Y1 misst bei etwa 35 von 47 Losen nur das Abschreiben des Feldes [E7].
-- Die Hypothese ist nicht nachweisbar, aber nicht widerlegt; Y1 liegt je nach Auflösung der Prüferfehler zwischen 36/47 und 47/47.
-- Eine belastbare Aussage bräuchte einen zweiten, unabhängigen Leser. Ein KI-Leser wäre eine Ersatzlösung mit eigenem Risiko (gleiche Modellfamilie wie die Regel).
+- Die Abweichungen aus Iteration 7 sind überwiegend mit Prüferfehlern vereinbar; Iteration 7 wird nicht ersetzt.
+- Z0 und Z4 messen vor allem die Einheitlichkeit des Verfahrens (gleiche Modellfamilie, gleiches Hilfsmodell). Zulässig: „durch zwei KI-Lesungen gestützt, nicht von Menschen bestätigt“. Nicht zulässig: „korrekt“, „Regel 1b belegt“, „unabhängig geprüft“.
 
 ## Offene Fragen
 
+- [ ] _(neu, Iteration 8, bleibt offen)_ Eine menschliche Lesung der Problemgruppen (Börde-Lose mit Ferienkalender, L33, Zufallsauswahl von Übereinstimmungen) steht aus; außerhalb des Projektumfangs.
 - [ ] _(neu, Iteration 7)_ Taugt eine KI-Zweitlesung (zwei Leser, Kontrolle durch den Evaluator am Original) als Ersatz für einen zweiten menschlichen Prüfer?
 - [ ] _(neu, Iteration 6; Stand Iteration 7: Vorlage ohne Listenwerte vermeidet die Verankerung, führt aber zu „unbekannt“ bzw. Feldübernahme)_ Wie wird die Genauigkeit der Liste ohne Verankerung gemessen (Vorlage ohne Listenwerte), mit Vor-eForms-Losen und mit nach Losen gewichteten großen Bekanntmachungen?
 - [ ] _(neu, Iteration 6)_ Wie wird A18 wirklich unabhängig geprüft (Paare, die der Prüfer noch nicht kennt)?
@@ -60,6 +60,7 @@ _Nur ergänzen. Überholte Entscheidungen bleiben stehen und werden durch eine n
 | 2026-11-04 | 5 | Trefferdefinition ±3 Monate um R0/R1; Backtest nur auf von zwei Prüfern bestätigten Paaren; Köder zur Kontrolle der Prüfung; Median nicht als Stützung werten | Vorab festgelegt (docs/business.md §7.1); Evaluator (reports/evaluation_iteration5.md) |
 | 2026-11-04 | 6 | Y1 gilt nach der Korrektur um L60 als verfehlt (53/60 = 88,3 %); Y2 formal erfüllt; Y3 knapp verfehlt; die Prüfung wird mit Vorlage ohne Listenwerte wiederholt | Evaluator (reports/evaluation_iteration6.md); Entscheidung des Nutzers „zurück zu Phase 3“ |
 | 2026-11-04 | 7 | Abschluss mit diesem Stand (kein dritter Regelversuch); Y1 wird als Mischmaß aus Listen- und Prüfungsfehlern berichtet; Prüfer-Einträge werden nicht nachträglich korrigiert; eine getrennte Messung (KI-Zweitlesung) ersetzt das Ergebnis nicht | Vorab festgelegte Folge „Y1 zwischen 70 % und 90 %“; Bestätigungsgefahr bei Korrektur nach Kenntnis des Ergebnisses (reports/evaluation_iteration7.md). Entscheidung des Nutzers. |
+| 2026-11-05 | 8 | Weiter (Projektabschluss), eingeschränkt formuliert; Z2 mit beiden Zahlen (14/15 und 11/15) berichtet; keine weitere Iteration | Vorab festgelegte Folge (Z0–Z4 erfüllt) und Empfehlung des Evaluators (reports/evaluation_iteration8.md). Entscheidung des Nutzers. |
 
 ## Iterationslog
 
@@ -101,3 +102,10 @@ _Noch keine Einträge._
 - **Erkenntnisse – Fakten:** Y1 36/47 = 76,6 %, Y1r 8/15, Y2 29/47, Y2b 24/42; Y3 nicht sauber erfüllt, Y4 teilweise (reports/liste_auswertung_iteration7.md, reports/evaluation_iteration7.md).
 - **Erkenntnisse – Interpretation:** Das Prüfdesign (Felder versteckt, „Nachprüfung ersetzt erste Abgabe“, Rat zur Feldübernahme) bestimmt das Ergebnis stärker als die Regel; die Fehlerquote der Liste bleibt offen.
 - **Übergabe an die nächste Phase:** An Phase 6: Kennzeichnung „laut Bekanntmachung“, Höchstende als Hinweis, Fehlerquote offen. Für Iteration 8: KI-Zweitlesung derselben Stichprobe als getrennte Messung mit vorab festgelegten Kriterien.
+
+### Iteration 8 – 2026-11-05
+
+- **Was gemacht:** KI-Zweitlesung der 95 Lose aus Iteration 7 durch zwei Leser (Opus, Sonnet), Entscheide und Z4-Kontrolle durch den Evaluator, Gesamtprüfung.
+- **Erkenntnisse – Fakten:** Z0 94/95, Z1 77/80, Z2 14/15 bzw. 11/15, Z3 75/80 und 67/72, Z4 10/10.
+- **Erkenntnisse – Interpretation:** Die Liste ist durch KI-Lesung gestützt, nicht von Menschen bestätigt; die Leser sind nicht unabhängig.
+- **Übergabe an die nächste Phase:** Projektabschluss (Lab-Log, Vortrag); Phase 6 kennzeichnet die Genauigkeit entsprechend.

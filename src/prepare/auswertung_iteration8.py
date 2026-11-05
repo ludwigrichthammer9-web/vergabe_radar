@@ -99,7 +99,7 @@ def main() -> None:
     z4_offen = [n for n in z4_lose if n not in z4]
 
     out = ["# Auswertung der KI-Zweitlesung (Iteration 8, Z0 bis Z4)", "",
-           f"_Erzeugt mit `src/prepare/auswertung_iteration8.py`. Schlüssel-Hash geprüft (`{sha[:8]}…`). Leser A = Opus, Leser B = Sonnet, je 4 Teilläufe; Antworten unverändert in "
+           f"_Erzeugt mit `src/prepare/auswertung_iteration8.py`. Schlüssel-Hash geprüft (`{sha[:8]}…`). Leser A = Opus, Leser B = Sonnet, je 4 Teilläufe; Antworten (nur Semikolons im Zitat von Leser B zu Kommas) in "
            "`reports/zweitlesung_iteration8_leser_a.csv` und `…_leser_b.csv`. Liste eingefroren (Commit a93785e)._", "",
            "## Fakten", "",
            f"- **Z0 (Leser A = Leser B beim Ende der Grundlaufzeit, 95 Lose): {pct(len(einig), len(alle))}** (Schwelle ≥ 90 %). "
@@ -131,7 +131,7 @@ def main() -> None:
         "### Beschreibend (ohne Schwelle)", "",
         f"- Z1 nach Losen gewichtet: {f'{100 * wz1:.1f}'.replace('.', ',')} %.",
         f"- Von mindestens einem Leser als „keine Gebäudereinigung“ eingestuft: {', '.join(n for n in alle if v[n]['rein'] == 'nein') or '–'}.", "",
-        "### Abweichungen der Liste vom Vergleichswert", "",
+        "### Abweichungen der Liste vom Vergleichswert (Abweichung von einer KI-Lesung; ob ein Listenfehler vorliegt, steht in `evaluation_iteration8.md`)", "",
         "| Nr | Typ | Herkunft (Liste) | Liste GL | Vergleichswert GL | Leser A | Leser B | Liste Höchstende | Vergleichswert Höchstende |",
         "|---|---|---|---|---|---|---|---|---|"]
     for n in alle:

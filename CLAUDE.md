@@ -7,7 +7,7 @@ ausgeschrieben werden, basierend auf Zuschlagsbekanntmachungen aus TED
 Neuausschreibungen vorbereiten wollen (z. B. Gebäudereinigung, IT-Wartung,
 Winterdienst).
 
-## Aktuelle Phase: nach Iteration 7 (Abschluss mit diesem Stand), vor Iteration 8 (KI-Zweitlesung, Phase 5)
+## Aktuelle Phase: nach Iteration 8, Projektabschluss (Lab-Log, Vortrag)
 Iteration 5 ist abgeschlossen (Entscheidung: Idee anpassen). Die Punktprognose „Höchstende − 6 Monate“ trägt nicht: Trefferquote ±3 Monate
 28,8 % (Schwelle 60 %, naive Referenz 17,3 %) auf 52 handgeprüften Paaren; Abdeckung der Vertragsliste 79,7 % der Lose.
 Produktkern: Vertragsliste mit Enddaten (Grundlaufzeit, Höchstende, Herkunft) ohne Terminprognose.
@@ -17,11 +17,12 @@ Iteration 6 ist abgeschlossen (Entscheidung: zurück zu Phase 3). Prüfung an 60
 Fehlertyp: Das Enddatum der Bekanntmachung ist manchmal schon das Höchstende.
 Iteration 7 ist abgeschlossen (Entscheidung: Abschluss mit diesem Stand, kein dritter Regelversuch). Regel 1b eingebaut; Ende der Grundlaufzeit 36/47 = 76,6 %
 (Mischmaß aus Listen- und Prüfungsfehlern), Regelwirkungs-Lose 8/15, Höchstende verfehlt; Regel 1b weder belegt noch widerlegt. Liste eingefroren (a93785e):
-Ende „laut Bekanntmachung“, Höchstende nur Hinweis. Iteration 8 (mit /iteration-start): zwei KI-Leser auf allen 95 Losen als getrennte Messung, Kriterien vorab.
+Ende „laut Bekanntmachung“, Höchstende nur Hinweis.
+Iteration 8 ist abgeschlossen (Entscheidung: weiter, Projektabschluss, eingeschränkt formuliert): zwei KI-Leser (Opus, Sonnet) auf allen 95 Losen; Z0 94/95, Z1 77/80, Z3 75/80 und 67/72, Z4 10/10, Z2 14/15 (bei einheitlichem Maßstab 11/15). Leser nicht unabhängig, nicht von Menschen bestätigt; neue Fehlerarten (Lose ohne Zuschlag, Regel 6, „3 Jahre mit Option“) bleiben offene Grenzen. Keine weitere Iteration.
 Kein Kundenkontakt (A1/A15 bleiben ungeprüft).
 Bewertung als Leistungsnachweis: docs/bewertung_LN.md; Quellen: docs/quellen.md; Reproduzierbarkeit: docs/reproduzierbarkeit.md.
 Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE.
-Details: docs/iterationen.md, reports/evaluation_iteration5.md, reports/evaluation_iteration6.md, reports/evaluation_iteration7.md
+Details: docs/iterationen.md, reports/evaluation_iteration5.md, reports/evaluation_iteration6.md, reports/evaluation_iteration7.md, reports/evaluation_iteration8.md
 
 ## Später geplant
 - Nische wählen, Backtest (erwartetes Auslaufdatum vs. tatsächliche

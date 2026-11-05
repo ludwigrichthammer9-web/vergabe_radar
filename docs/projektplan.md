@@ -5,7 +5,7 @@ Die Detailplanung je Iteration (Hypothese, Erfolgskriterium mit Schwelle, Zeitra
 `/iteration-start` und steht in `docs/iterationen.md`. Dieser Plan gibt nur die Richtung und die Abhängigkeiten vor.
 
 **Stand:** 2026-11-04. Iteration 7 abgeschlossen (Regel 1b, neue Stichprobe ohne Listenwerte, Prototyp neu erzeugt; Entscheidung: **Abschluss mit diesem Stand, kein dritter Regelversuch**,
-Y1 76,6 % als Mischmaß aus Listen- und Prüfungsfehlern). Nächster Schritt: Iteration 8 mit `/iteration-start` (KI-Zweitlesung als reine Messung, Liste eingefroren), danach Lab-Log und Vortrag.
+Y1 76,6 % als Mischmaß aus Listen- und Prüfungsfehlern). Iteration 8 (KI-Zweitlesung) abgeschlossen 2026-11-05: weiter, Projektabschluss, eingeschränkt formuliert (Z1 77/80, Leser nicht unabhängig). Nächster Schritt: Lab-Log und Vortrag.
 _Vorheriger Stand 2026-11-04: Iteration 6 abgeschlossen (Entscheidung: zurück zu Phase 3, Y1 88,3 % nach Korrektur, Prototyp mit bekannten Fehlern)._
 _Vorheriger Stand 2026-11-04 (früher am Tag): Iteration 5 abgeschlossen (Entscheidung: Idee anpassen; Vertragsliste mit Enddaten ohne Terminprognose), Iteration 6 läuft._
 _Vorheriger Stand 2026-10-30: Iteration 4 abgeschlossen (Entscheidung: Idee anpassen; Iteration 5 baut eine Vertragsliste aus Zuschlägen)._
@@ -33,7 +33,7 @@ Das Projekt hat drei parallele Stränge:
 | 6 | Prototyp der Vertragsliste und Qualität der Enddaten (mit 7 zusammengelegt) | 3 → 6 → 5 | 1 bis 2 Wochen | abgeschlossen 2026-11-04 (zurück zu Phase 3) |
 | 7 | Prototyp der Vertragsliste (statt Kundentest) | – | – | entfällt (in Iteration 6) |
 | 7 (neu) | Lese-Regel „Enddatum = Höchstende“ nachbessern, neue Stichprobe, Prototyp neu | 3 → 5 → 6 | 1 Tag | abgeschlossen 2026-11-04 (Abschluss mit diesem Stand) |
-| 8 | KI-Zweitlesung der Stichprobe (reine Messung, Liste eingefroren) | 5 | 1 Tag | geplant |
+| 8 | KI-Zweitlesung der Stichprobe (reine Messung, Liste eingefroren) | 5 | 1 Tag | abgeschlossen 2026-11-05 (weiter, Projektabschluss) |
 | 9+ | Ausbau oder Neuausrichtung | je nach Ergebnis | offen | außerhalb des Projekts |
 
 _Geändert am 2026-10-23 nach Iteration 2: Iteration 3 (Phase 2) eingeschoben; die Abschnitte T3–T6 unten gelten jetzt für die
