@@ -1,6 +1,6 @@
 # Zeitprotokoll (aus der Git-Historie)
 
-_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-04. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
+_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-05. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
 
 | Iteration | Sitzungen | Commits | Stunden (Untergrenze) |
 |---|---|---|---|
@@ -9,8 +9,10 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-04. Methode: Commits mit höchste
 | 3 | 4 | 22 | 6.3 |
 | 4 | 7 | 19 | 7.8 |
 | 5 | 3 | 18 | 3.5 |
-| 6 | 1 | 1 | 0.5 |
-| **Summe** | 19 | 67 | **21.1** |
+| 6 | 1 | 4 | 3.6 |
+| 7 | 3 | 12 | 4.4 |
+| 8 | 2 | 5 | 1.3 |
+| **Summe** | 24 | 87 | **29.9** |
 
 ## Iteration 1
 
@@ -59,7 +61,22 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-04. Methode: Commits mit höchste
 
 | Tag | Zeit | Commits | Std. | Erster / letzter Commit |
 |---|---|---|---|---|
-| 2026-11-04 | 13:07–13:07 | 1 | 0.5 | Iteration 6, Schritt 2: Stichprobe gezogen, Prüfvorlage, Schlüssel-Has |
+| 2026-11-04 | 13:07–16:16 | 4 | 3.6 | Iteration 6, Schritt 2: Stichprobe gezogen, Prüfvorlage, Schlüssel-Has / Iteration 6 abgeschlossen: zurück zu Phase 3 |
+
+## Iteration 7
+
+| Tag | Zeit | Commits | Std. | Erster / letzter Commit |
+|---|---|---|---|---|
+| 2026-11-04 | 16:40–18:09 | 4 | 2.0 | Iteration 7 angelegt, Hypothese und Kriterien festgelegt (vor Regeländ / Iteration 7, Schritt 2: Stichprobe gezogen, Vorlage ohne Listenwerte,  |
+| 2026-11-04 | 20:06–21:31 | 7 | 1.9 | Iteration 7, Schritt 4: Prüfung ausgewertet, Rohwerte Y1 25 %, Gültigk / ki_irrwege: Einträge zu Iteration 6 und 7 |
+| 2026-11-04 | 23:36–23:36 | 1 | 0.5 | Iteration 7 abgeschlossen: Abschluss mit diesem Stand |
+
+## Iteration 8
+
+| Tag | Zeit | Commits | Std. | Erster / letzter Commit |
+|---|---|---|---|---|
+| 2026-11-04 | 23:39–23:54 | 4 | 0.8 | Iteration 8 angelegt: KI-Zweitlesung, Kriterien und Vorlage (vor dem L / Iteration 8: Evaluator-Entscheide, Z4 und Auswertung |
+| 2026-11-05 | 09:02–09:02 | 1 | 0.5 | Iteration 8 abgeschlossen: weiter, Projektabschluss |
 
 ## Ergänzungen von Hand (nicht im Git)
 
