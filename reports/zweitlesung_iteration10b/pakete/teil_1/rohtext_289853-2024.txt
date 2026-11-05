@@ -1,0 +1,26 @@
+Bekanntmachung 289853-2024 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudeunterhaltsreinigung im FLI in Greifswald-Insel Riems, Jena und Celle
+Beschreibung (Description): Gebäudeunterhaltsreinigung im FLI in Greifswald-Insel Riems, Jena und Celle
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Los 1
+Beschreibung (Description): Durchführung der Gebäudeunterhaltsreinigung in den Räumen der Liegenschaft des Friedrich-Loeffler-Instituts (FLI), Bundesforschungsinstitut für Tiergesundheit, Südufer 10 in 17493 Greifswald-Insel Riems für die Dauer von vier Jahren.
+Beginn (StartDate): 2024-07-01
+Enddatum (EndDate): 2028-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Los 2
+Beschreibung (Description): Durchführung der Gebäudeunterhaltsreinigung in den Räumen der Liegenschaft des Friedrich-Loeffler-Instituts (FLI), Bundesforschungsinstitut für Tiergesundheit, Naumburger Straße 96 a in 07743 Jena für die Dauer von vier Jahren.
+Beginn (StartDate): 2024-09-01
+Enddatum (EndDate): 2028-08-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 
+
+## Los 3 im Verfahren: LOT-0003
+Titel (Name): Los 3
+Beschreibung (Description): Durchführung der Gebäudeunterhaltsreinigung in den Räumen der Liegenschaft des Friedrich-Loeffler-Instituts (FLI), Bundesforschungsinstitut für Tiergesundheit, Dörnbergstr. 25/27 in 29223 Celle für die Dauer von vier Jahren.
+Beginn (StartDate): 2024-06-01
+Enddatum (EndDate): 2028-05-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , , , 

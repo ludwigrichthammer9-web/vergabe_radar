@@ -1,0 +1,32 @@
+Bekanntmachung 729475-2024 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Glas- und Rahmenreinigung in verschiedenen Objekten der Stadt Peine (3 Lose)
+Beschreibung (Description): Glas- und Rahmenreinigung in verschiedenen Liegenschaften der Stadtverwaltung Peine. Die Reinigungsobjekte sind in 3 Lose aufgeteilt. Los 1: 01.01.2025 - 31.03.2028 (Verlängerungsoption 1 Jahr) Los 2: 01.01.2025 - 31.05.2028 (Verlängerungsoption 1 Jahr) Los 3: 01.01.2025 - 31.07.2028 (Verlängerungsoption 1 Jahr)
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Glas- und Rahmenreinigung - Los 1
+Beschreibung (Description): diverse Objekte: u.a. Rathaus, Feuerwehr, Schulen, Kindertagesstätten, Sporthallen, Jugenstreffs, Bahnhof, Verwaltungsgebäude, Unternehmenspark, Städtische Betriebe, Stadtgärtnerei, Archiv, Stadtbücherei. Eine detaillierte Übersicht - Objektverzeichnis Los 1 - ist in den Vergabeunterlagen enthalten. Laufzeit des Vertrages: 01.01.2025 bis 31.03.2028 (Verlängerungsoption 1 Jahr - 31.03.2029)
+Hinweis (Note): #Besonders geeignet für:startup#
+Beginn (StartDate): 2025-01-01
+Enddatum (EndDate): 2028-03-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich automatisch um ein weiteres Jahr bis zum 31.03.2029, wenn nicht einer der Vertragsparteien sechs Monate vor Ablauf des Vertrages schriftlich kündigt.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung - Los 2
+Beschreibung (Description): diverse Objekte: u.a. Sprechstellen, Feuerwehren, Schulen, Kindertagesstätten, Sporthallen, Jugenstreffs. Eine detaillierte Übersicht - Objektverzeichnis Los 2 - ist in den Vergabeunterlagen enthalten. Laufzeit des Vertrages: 01.01.2025 bis 31.05.2028 (Verlängerungsoption 1 Jahr - 31.05.2029)
+Hinweis (Note): #Besonders geeignet für:startup#
+Beginn (StartDate): 2025-01-01
+Enddatum (EndDate): 2028-05-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich automatisch um ein weiteres Jahr bis zum 31.05.2029, wenn nicht einer der Vertragsparteien sechs Monate vor Ablauf des Vertrages schriftlich kündigt.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 im Verfahren: LOT-0003
+Titel (Name): Glas- und Rahmenreinigung - Los 3
+Beschreibung (Description): diverse Objekte: u.a. Feuerwehren, Schulen, Kindertagesstätten, Sporthallen, Verwaltungsgebäude, Jugendfreizeiteinrichtung, Friedhöfe, Buswartehallen, Aushang-/Schaukästen. Eine detaillierte Übersicht - Objektverzeichnis Los 3 - ist in den Vergabeunterlagen enthalten. Laufzeit des Vertrages: 01.01.2025 bis 31.07.2028 (Verlängerungsoption 1 Jahr - 31.07.2029)
+Hinweis (Note): #Besonders geeignet für:startup#
+Beginn (StartDate): 2025-01-01
+Enddatum (EndDate): 2028-07-31
+Beschreibung der Optionen (OptionsDescription): Der Vertrag verlängert sich automatisch um ein weiteres Jahr bis zum 31.07.2029, wenn nicht einer der Vertragsparteien sechs Monate vor Ablauf des Vertrages schriftlich kündigt.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

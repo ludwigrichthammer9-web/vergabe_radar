@@ -1,0 +1,54 @@
+Bekanntmachung 200565-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): RV-Gebäudereinigung Überbrückung
+Beschreibung (Description): RV Gebäudereinigung Überbrückung
+Hinweis (Note): Die Zuschlagserteilung erfolgt in der Reihenfolge der Losnummern. Bei Zuschlagerteilung für ein vorangegangenes Los ist der Bieter für die nachfolgenden Lose ausgeschlossen.
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Stadtbezirke 1, 14, 15, 17
+Beschreibung (Description): Unterhaltsreinigung, incl. chemischer Nassgrundreinigung Bauschlussreinigung
+Hinweis (Note): Geschätzte Abrufmenge: 128.348 Stunden Höchstabrufmenge: 192.522 Stunden Die Höchstabrufmenge dient nicht als verbindliche Kalkulationsgrundlage, sondern setzt die Rechtsprechung des EuGH (Urt. v. 17.06.2021, C 23/20) um.
+Beginn (StartDate): 2025-06-01
+Enddatum (EndDate): 2026-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Stadtbezirke 4, 10, 18, 22, 24
+Beschreibung (Description): Unterhaltsreinigung, incl. chemischer Nassgrundreinigung Bauschlussreinigung
+Hinweis (Note): Geschätzte Abrufmenge: 124743 Stunden Höchstabrufmenge: 187.114,5 Stunden Die Höchstabrufmenge dient nicht als verbindliche Kalkulationsgrundlage, sondern setzt die Rechtsprechung des EuGH (Urt. v. 17.06.2021, C 23/20) um.
+Beginn (StartDate): 2025-06-01
+Enddatum (EndDate): 2026-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 3 im Verfahren: LOT-0003
+Titel (Name): Stadtbezirke 3, 8, 11, 12
+Beschreibung (Description): Unterhaltsreinigung, incl. chemischer Nassgrundreinigung Bauschlussreinigung
+Hinweis (Note): Geschätzte Abrufmenge: 121.243 Stunden Höchstabrufmenge: 181.864,5 Stunden Die Höchstabrufmenge dient nicht als verbindliche Kalkulationsgrundlage, sondern setzt die Rechtsprechung des EuGH (Urt. v. 17.06.2021, C 23/20) um.
+Beginn (StartDate): 2025-06-01
+Enddatum (EndDate): 2026-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 4 im Verfahren: LOT-0004
+Titel (Name): Stadtbezirke 6, 13, 19, 23
+Beschreibung (Description): Unterhaltsreinigung, incl. chemischer Nassgrundreinigung Bauschlussreinigung
+Hinweis (Note): Geschätzte Abrufmenge: 118.638 Stunden Höchstabrufmenge: 177.957 Stunden Die Höchstabrufmenge dient nicht als verbindliche Kalkulationsgrundlage, sondern setzt die Rechtsprechung des EuGH (Urt. v. 17.06.2021, C 23/20) um.
+Beginn (StartDate): 2025-06-01
+Enddatum (EndDate): 2026-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 5 im Verfahren: LOT-0005
+Titel (Name): Stadtbezirke 2, 5, 9, 25
+Beschreibung (Description): Unterhaltsreinigung, incl. chemischer Nassgrundreinigung Bauschlussreinigung
+Hinweis (Note): Geschätzte Abrufmenge: 116.683 Stunden Höchstabrufmenge: 175.024,5 Stunden Die Höchstabrufmenge dient nicht als verbindliche Kalkulationsgrundlage, sondern setzt die Rechtsprechung des EuGH (Urt. v. 17.06.2021, C 23/20) um.
+Beginn (StartDate): 2025-06-01
+Enddatum (EndDate): 2026-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 
+
+## Los 6 im Verfahren: LOT-0006
+Titel (Name): Stadtbezirke 7, 16, 20, 21
+Beschreibung (Description): Unterhaltsreinigung, incl. chemischer Nassgrundreinigung Bauschlussreinigung
+Hinweis (Note): Geschätzte Abrufmenge: 108.273 Stunden Höchstabrufmenge: 162.409,5 Stunden Die Höchstabrufmenge dient nicht als verbindliche Kalkulationsgrundlage, sondern setzt die Rechtsprechung des EuGH (Urt. v. 17.06.2021, C 23/20) um.
+Beginn (StartDate): 2025-06-01
+Enddatum (EndDate): 2026-06-30
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): , , 

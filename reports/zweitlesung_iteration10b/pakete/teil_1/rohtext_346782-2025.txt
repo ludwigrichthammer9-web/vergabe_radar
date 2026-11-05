@@ -1,0 +1,35 @@
+Bekanntmachung 346782-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Lengerich Gebäudereinigung
+Beschreibung (Description): Unterhalts-, Grund- und Glasreinigung in verschiedenen Objekten mit ca. 27.800 m² Reinigungsfläche und ca. 10.600 m² Glasfläche.
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Los 1 Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung in diversen Objekten mit ca. 15.500 m² Reinigungsfläche
+Hinweis (Note): — Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG und beachtung des MiLoG - Nutzung des digitalen Qualitätsmesssystems Ko- CLEAN digital der Kommunal Agentur NRW, vor Zuschlagserteilung ist der Nutzungsvertrag unterzeichnet über die Vergabeplattform einzureichen. - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2025-07-14
+Enddatum (EndDate): 2028-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Los 2 Unterhalts- und Grundreinigung
+Beschreibung (Description): Unterhalts- und Grundreinigung in diversen Objekten mit ca. 12.300 m² Reinigungsfläche
+Hinweis (Note): — Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG und MiLoG- Nutzung des digitalen Qualitätsmesssystems Ko- CLEAN digital der Kommunal Agentur NRW, vor Zuschlagserteilung ist der Nutzungsvertrag unterzeichnet über die Vergabeplattform einzureichen. - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2025-07-14
+Enddatum (EndDate): 2028-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 im Verfahren: LOT-0003
+Titel (Name): Los A: Glas- und Rahmenreinigung in verschiedenen Objekten
+Beschreibung (Description): Glas- und Rahmenreinigung in verschiedenen Objekten mit ca. 10.600 m² Glasfläche
+Hinweis (Note): — Einhaltung des vergabespezifischen Mindestlohns nach § 2 TVgG - Bei der Auftragsausführung sind die besonderen Ausführungsbedingungen des MiLoG zu berücksichtigen und einzuhalten. Hinsichtlich ihrer konkreten Ausgestaltung wird auf die Vergabeunterlagen verwiesen Näheres siehe Vergabeunterlagen
+Beginn (StartDate): 2025-07-14
+Enddatum (EndDate): 2028-06-30
+Höchstzahl der Verlängerungen (MaximumNumberNumeric): 2
+Beschreibung der Optionen (OptionsDescription): Verlängerung zweimalig um jeweils 12 Monate
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

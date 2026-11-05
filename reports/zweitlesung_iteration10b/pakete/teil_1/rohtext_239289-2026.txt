@@ -1,0 +1,24 @@
+Bekanntmachung 239289-2026 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- sowie Glas- und Rahmenreinigung für das Landesamt für Finanzen Landshut
+Beschreibung (Description): Unterhalts- sowie Glas- und Rahmenreinigung für das Landesamt für Finanzen -Dienststelle Landshut
+Hinweis (Note): Die Ausschreibung ist auf dem bayerischen Vergabeportal https://www.auftraege.bayern.de/ veröffentlicht. Das Vergabeverfahren wird ausschließlich elektronisch abgewickelt. ----- Die Teilnahme an einer Besichtigung der örtlichen Gegebenheiten ist für die Erstellung des Angebots notwendig und daher zwingende Voraussetzung der Angebotsabgabe. Innerhalb der Angebotsfrist wird für jeden Bewerber eine Objektbesichtigung stattfinden. Angebote von Bietern, die an keiner Objektbesichtigung teilgenommen haben, werden ausgeschlossen.
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Unterhaltsreinigung für das LfF Landshut
+Beschreibung (Description): Unterhaltsreinigung für das Landesamt für Finanzen - Dienststelle Landshut
+Hinweis (Note): Grundfläche: ca. 12.200,82 qm, Jahresreinigungsfläche ca.1.130.532,56 qm---- Der Angebots- bzw. Auftragswert wird zur Wahrung von berechtigten Geschäftsinteressen und des Wettbewerbs nicht angezeigt (Hinweis dazu auch auf § 39 Abs. 6 VgV).
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2032-06-30
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt am 01.07.2026 in Kraft und gilt zunächst bis zum 30.06.2029. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 30.06.2032 .
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung für das LfF Landshut
+Beschreibung (Description): Glas - und Rahmenreinigung für das Landesamt für Finanzen- Dienststelle Landshut
+Hinweis (Note): Fläche: ca. 6.993,65 qm--- Der Angebots- bzw. Auftragswert wird zur Wahrung von berechtigten Geschäftsinteressen und des Wettbewerbs nicht angezeigt (Hinweis dazu auch auf § 39 Abs. 6 VgV).
+Beginn (StartDate): 2026-07-01
+Enddatum (EndDate): 2032-06-30
+Beschreibung der Optionen (OptionsDescription): Der Vertrag tritt am 01.07.2026 in Kraft und gilt zunächst bis zum 30.06.2029. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 30.06.2032 .
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

@@ -1,0 +1,24 @@
+Bekanntmachung 257331-2024 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Unterhalts- sowie Glas- und Rahmenreinigung LfF Regensburg
+Beschreibung (Description): Unterhalts- sowie Glas- und Rahmenreinigung für das Landesamt für Finanzen, Dienststelle Regensburg
+Hinweis (Note): Die Ausschreibung ist auf dem bayerischen Vergabeportal https://www.auftraege.bayern.de/ veröffentlicht. Das Vergabeverfahren wird ausschließlich elektronisch abgewickelt. ----- Die Teilnahme an einer Besichtigung der örtlichen Gegebenheiten ist für die Erstellung des Angebots notwendig und daher zwingende Voraussetzung der Angebotsabgabe. Innerhalb der Angebotsfrist wird für jeden Bewerber eine Objektbesichtigung stattfinden. Angebote von Bietern, die an keiner Objektbesichtigung teilgenommen haben, werden ausgeschlossen.
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Unterhaltsreinigung LfF Regensburg
+Beschreibung (Description): Unterhaltsreinigung LfF Regensburg
+Hinweis (Note): Grundfläche: ca. 9.942,98 qm, Jahresreinigungsfläche ca. 1.157.476,58 qm
+Beginn (StartDate): 2024-07-01
+Enddatum (EndDate): 2030-06-30
+Beschreibung der Verlängerung (Renewal): Der Vertrag tritt am 01.07.2024 in Kraft und gilt zunächst bis zum 30.06.2027. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 30.06.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung LfF Regensburg
+Beschreibung (Description): Glas- und Rahmenreinigung LfF Regensburg
+Hinweis (Note): Fläche: ca. 1.657,17 qm
+Beginn (StartDate): 2024-07-01
+Enddatum (EndDate): 2030-06-30
+Beschreibung der Verlängerung (Renewal): Der Vertrag tritt am 01.07.2024 in Kraft und gilt zunächst bis zum 30.06.2027. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 30.06.2030.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

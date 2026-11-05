@@ -1,0 +1,13 @@
+Bekanntmachung 318097-2025 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung im Objekt Jung-Stilling-Schule mit Turnhalle ab 01.05.2025
+Beschreibung (Description): Vertragslaufzeit: 5 Jahre Gesamtreinigungsfläche: 4.007,62 m² tägliche Reinigungsfläche: 2391,42 m²
+
+## Los 1 im Verfahren: LOT-0000
+Titel (Name): Gebäudereinigung im Objekt Jung-Stilling-Schule mit Turnhalle ab 01.05.2025
+Beschreibung (Description): Vertragslaufzeit: 5 Jahre Gesamtreinigungsfläche: 4.007,62 m² tägliche Reinigungsfläche: 2391,42 m²
+Hinweis (Note): #Besonders auch geeignet für:selbst#
+Beginn (StartDate): 2025-06-01
+Enddatum (EndDate): 2030-05-31
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

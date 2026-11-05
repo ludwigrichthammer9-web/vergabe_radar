@@ -1,0 +1,31 @@
+Bekanntmachung 12853-2024 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Facility Management, Unterhalts- sowie Glas-und Rahmenreinigung Finanzamt Nürnberg-Süd
+Beschreibung (Description): Facility Management, Unterhalts- sowie Glas-und Rahmenreinigung für das Finanzamt Nürnberg-Süd
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Facility Management FA Nürnberg-Süd
+Beschreibung (Description): Facility Management FA Nürnberg-Süd
+Beginn (StartDate): 2024-02-01
+Enddatum (EndDate): 2029-01-31
+Beschreibung der Verlängerung (Renewal): Der Vertrag tritt am 01.02.2024 in Kraft und gilt zunächst bis zum 31.01.2027. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.01.2029.
+Ergebnis des Loses (TenderResultCode): clos-nw; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Unterhaltsreinigung FA Nürnberg-Süd
+Beschreibung (Description): Unterhaltsreinigung FA Nürnberg-Süd
+Hinweis (Note): Grundfläche: ca. 15.087,89 qm, Jahresreinigungsfläche ca. 2.041.919,96 qm
+Beginn (StartDate): 2024-02-01
+Enddatum (EndDate): 2029-01-31
+Beschreibung der Verlängerung (Renewal): Der Vertrag tritt am 01.02.2024 in Kraft und gilt zunächst bis zum 31.01.2027. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.01.2029.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 3 im Verfahren: LOT-0003
+Titel (Name): Glas- und Rahmenreinigung FA Nürnberg-Süd
+Beschreibung (Description): Glas- und Rahmenreinigung FA Nürnberg-Süd
+Hinweis (Note): Fläche: ca. 3.352,51 qm
+Beginn (StartDate): 2024-02-01
+Enddatum (EndDate): 2029-01-31
+Beschreibung der Verlängerung (Renewal): Der Vertrag tritt am 01.02.2024 in Kraft und gilt bis zum 31.01.2027. Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.01.2029.
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 

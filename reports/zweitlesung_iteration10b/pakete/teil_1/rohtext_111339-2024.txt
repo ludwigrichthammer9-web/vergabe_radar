@@ -1,0 +1,21 @@
+Bekanntmachung 111339-2024 (Auszug aus der TED-XML-Datei, Texte und Felder unverändert)
+
+## Verfahren (gilt für alle Lose)
+Titel (Name): Gebäudereinigung Abfallwirtschafts- und Stadtreinigungsbetrieb
+Beschreibung (Description): Gebäudereinigung in allen aws-Gebäuden, Depots und Deponie - Unterhaltsreinigung und Sonderreinigung
+
+## Los 1 im Verfahren: LOT-0001
+Titel (Name): Unterhaltsreinigung und Spüldienst
+Beschreibung (Description): Gebäudereinigung in allen aws-Gebäuden, Depots und Deponie - Unterhaltsreinigung und Sonderreinigung
+Beginn (StartDate): 2024-04-01
+Enddatum (EndDate): 2028-03-31
+Dauer (DurationMeasure): 48 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
+
+## Los 2 im Verfahren: LOT-0002
+Titel (Name): Glas- und Rahmenreinigung
+Beschreibung (Description): Gebäudereinigung in allen aws-Gebäuden, Depots und Deponie - Unterhaltsreinigung und Sonderreinigung
+Beginn (StartDate): 2024-04-01
+Enddatum (EndDate): 2028-03-31
+Dauer (DurationMeasure): 48 MONTH
+Ergebnis des Loses (TenderResultCode): selec-w; Angebote (ReceivedSubmissionsStatistics): 
