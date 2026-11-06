@@ -341,3 +341,121 @@ _Hinweis zur Schwelle:_ In den Notizen steht als Aussage der Vergabestelle „al
 5. **Aus Sicht der Auftraggeber gibt es einen Bedarf:** Bieterzahl sinkt (zwei statt fünf bis sechs). Das stützt einen zweiten Markt (Vergabestellen oder Bietermarketing), auf den die Recherche schon hinwies (§8.5, Benchmark für Vergabestellen). Die Aussage stammt von einer einzigen Stelle.
 6. **A3:** Die Vergabestelle vergibt Reinigung „sehr oft“ unterhalb der EU-Schwelle (Einzellose), also nicht auf TED. Das stützt die Lücke unserer Datenbasis (Kleinaufträge fehlen); Vergabeweiser führt nach eigener Angabe auch unterschwellige Bekanntmachungen (von uns nicht gemessen).
 7. **Folgerung für die Positionierung (Entwurf, abhängig von W1):** Eine reine Liste der Vertragsenden trägt nicht. Der Nutzen liegt eher bei größeren Betrieben (Personal- und Kalkulationsplanung) und bei Vergabestellen; Zahlungsbereitschaft zeigt sich nur für Wettbewerbsdaten, die es bereits gibt.
+
+## 9. Perspektive des Betriebs: Aufträge selbst filtern (Make or Buy) (Nachtrag, 2026-11-06)
+
+_Anlass: Idee des Nutzers, den Business Case aus Sicht eines Reinigungsbetriebs zu denken, der seine Aufträge **selbst filtert**, zunächst mit kostenlosen TED-Daten und ohne Abo, mit **direkter Übergabe der Daten in das Verwaltungssystem** (ERP, CRM, Excel); die Webseite dient nur der Darstellung. Ein BWL-Gutachten (liegt nicht im Repo) kam zu „teilweise sinnvoll“: brauchbar als Make-or-Buy-Frage, nicht tragfähig als Wettbewerbsvorteil „keine Abo-Kosten“, weil kostenlose Wege existieren. Belegbar sind ein Modell mit Break-even und ein Referenz-Export; Nachfrage ist nicht belegt (n = 3). Dieser Abschnitt ändert §1 bis §8 nicht. Gespräche ohne Namen und ohne identifizierende Angaben._
+
+### 9.1 Die Idee und was sie ändert
+
+**Idee (Setzung des Nutzers).** Der Betrieb ist nicht nur Leser einer fertigen Liste, sondern **Nutzer und Systembetreiber**: Er holt kostenlose TED-Daten, filtert sie nach seinen Kriterien (Region, Objektart, Größe) und übergibt die Treffer maschinenlesbar in sein eigenes Verwaltungssystem. Das Projekt liefert dafür keine Plattform, sondern Daten mit festem Schema und eine offene Referenzimplementierung. Die Webseite zeigt nur an.
+
+**Was sich dadurch ändert (Interpretation).**
+- Die Frage ist nicht mehr „Wer zahlt für eine Liste?“, sondern „Baut der Betrieb den Filter selbst oder kauft er ihn ein?“ (Make or Buy). Sie lässt sich mit Kosten beantworten, ohne dass Nachfrage belegt sein muss.
+- Der Nutzen liegt nicht im Finden (das tun kostenlose Dienste), sondern darin, dass ein Treffer **ohne Abtippen** im System des Betriebs landet. Ob das für Betriebe ein Problem ist, ist nicht geprüft (siehe 9.8, Hypothesen H1 und H2 in `docs/iterationen.md`, Paket D).
+
+### 9.2 Kundenreise: von der Meldung bis zum Angebot
+
+_Grundlage: Gespräch 1 (Betrieb mittlerer Größe, rund 120 Beschäftigte) und Gespräch 2 (Kleinbetrieb, rund 15 Beschäftigte), §8.9. Die Schritte sind aus den Antworten abgeleitet; die Spalte „Daten ins System?“ ist **Hypothese**, nicht Befund._
+
+| Schritt | Fakt aus dem Gespräch | Daten ins System? (Hypothese) |
+|---|---|---|
+| 1. Meldung | Betrieb mittlerer Größe: Suchprofile im kostenpflichtigen Dienst DTAD (knapp 1.500 € im Jahr), gelegentlich das Bayerische Vergabeportal; Meldung bei der letzten Ausschreibung 28 Tage vor Abgabe. Kleinbetrieb: Webseiten von Kommunen alle paar Wochen, Lokalteil der Zeitung, „zahlen für keine Portale“ | Treffer (Auftraggeber, Objekt, Frist, Link) könnten als Eintrag in CRM oder Excel angelegt werden |
+| 2. Vorprüfung | „Hauptsächlich Entfernung und Personal“ (über 40 km nicht; Kräfte für Früh- und Abendzeiten nötig). Kleinbetrieb: Kapazität des Teams, direkter Umkreis | Ort und Leistungsumfang als Felder für eine Filterung nach Entfernung |
+| 3. Objektbegehung | Ein Termin; bei der letzten Ausschreibung wurde es eng (bester Vorarbeiter krank) | Termin und Frist im Kalender oder Fristen-Dashboard |
+| 4. Kalkulation | Nachts unter Zeitdruck. Preisinformation gewünscht: „wenn der aktuelle Dienstleister bei 18 Euro pro Stunde lag, brauche ich gar nicht erst mitbieten“ | Wert und Auftragnehmer der Vorgänger-Vergabe als Felder (aus TED nur zur Hälfte vollständig) |
+| 5. Eigenerklärungen, Formblätter | Kleinbetrieb: „tausend Eigenerklärungen“, ein Wochenende; Hilfe dort gewünscht, nicht beim Finden | keine Daten aus TED; Bürokratie liegt außerhalb dessen, was das Projekt liefern kann |
+| 6. Angebot, Entscheidung, Nachverfolgung | nicht erfragt | Status und Ergebnis (gewonnen oder verloren) wären Eingaben des Betriebs; Wiederkehr der Ausschreibung erst im Rückblick |
+
+_Grenze:_ n = 2 Betriebe. Der Kleinbetrieb hat kein Verwaltungssystem genannt und würde für nichts in dem Bereich zahlen; für ihn trägt die Datenübergabe voraussichtlich nicht.
+
+### 9.3 Kostenlose Wege (Fakten)
+
+_Quellen: eigene Prüfung am 2026-11-05 (AusschreibungsRadar, Vergabeweiser, §8.2), docs.ted.europa.eu (TED Search API v3), BeschA (Bekanntmachungsservice). Preise, Limits und Lizenzen können sich ändern; Stand der Angaben 2026-11-05/06, nicht erneut geprüft. Alle Aussagen zur Funktion folgen den Anbieter- oder Dokumentationsseiten, nicht eigenen Tests der Dienste._
+
+| Weg | Funktion | Export | Grenze |
+|---|---|---|---|
+| **TED Search API v3** | Abfrage der Bekanntmachungen (Suche nach Feldern, CPV, Land); laut docs.ted.europa.eu ohne Authentifizierung nutzbar | JSON mit eForms-Feldern | Nur Bekanntmachungen oberhalb der EU-Schwelle; Lesen der Felder (Lose, Laufzeit, Option) muss der Nutzer selbst leisten; Pflege der Abfrage liegt beim Nutzer |
+| **TED-Suchprofil mit E-Mail-Alarm** | gespeicherte Suche mit Benachrichtigung | E-Mail | nur TED; kein Schema für Übernahme in ein System |
+| **Bekanntmachungsservice** (oeffentlichevergabe.de, BeschA) | ober- und unterschwellige Bekanntmachungen; Suchvorlagen (laut §8.1 mit ELSTER-Konto); Open Data (eForms-DE, OCDS, CSV; OCDS-Jahresdateien unter CC0) | Open-Data-Dateien | nicht jedes unterschwellige Verfahren ist enthalten (keine einheitliche Pflicht); Datenaufbereitung beim Nutzer |
+| **Vergabeweiser** (API und MCP-Server) | auslaufende Verträge, Zuschlagsempfänger, Zahl der Angebote, Marktzahlen (§8.2, §8.7) | JSON per API | 60 Abfragen pro Stunde ohne Schlüssel, 1.000 pro Tag mit kostenlosem Schlüssel; Lizenz CC BY 4.0; Nutzungsregel § 7 UWG zu beachten (Rechtsprüfung nicht durchgeführt); Genauigkeit der Vertragsenden nicht angegeben |
+| **AusschreibungsRadar** Free / Starter (29 €/Monat) / Professional (149 €/Monat) | Free: Suche, KI-Kurzanalyse, wöchentlicher Alert; Starter: 3 Suchprofile mit täglichen Alerts, KI-Eignungsanalyse, Fristen-Dashboard; Professional zusätzlich Preis-Kalkulator, Angebots-Fahrplan | **CSV-Export nur in Professional** (laut Preisseite, §8.2) | Free und Starter ohne Export; Professional kostenpflichtig |
+
+**Fakt zur Abdeckung:** 26,7 % der Oberpfälzer Reinigungsverfahren (Haupt-CPV 909, n = 120) im Bekanntmachungsservice standen nicht auf TED (Wilson 19,6–35,2 %; `docs/iterationen.md`, Paket B). Daraus folgt, dass eine Auswahl allein aus TED einen Teil der Verfahren nicht sieht. Es folgt **nicht**, dass einer der anderen Dienste vollständiger ist; das wurde nicht gemessen.
+
+### 9.4 Ergebnis der Make-or-Buy-Rechnung
+
+Bericht mit Rechenwegen: [reports/make_or_buy.md](../reports/make_or_buy.md); Skript `src/report/make_or_buy.py`; Zahlen `reports/make_or_buy.csv`. **Alle Aufwandswerte, die Marge von 5 % und der Stundensatz von 100 €/h sind Annahmen**, nicht gemessen.
+
+| Szenario (Annahme) | einmalig | laufend je Jahr | 3 Jahre | Break-even gegen DTAD (1.500 €/Jahr) | gegen Vergabeweiser, AusschreibungsRadar Starter | zusätzliche Aufträge in 3 Jahren nötig (Marge 5 %) |
+|---|---|---|---|---|---|---|
+| Niedrig (20 h / 5 h je Jahr) | 2.000 € | 500 € | 3.500 € | 2,0 Jahre | nie | 0,14 |
+| Mittel (60 h / 20 h) | 6.000 € | 2.000 € | 12.000 € | nie | nie | 0,48 |
+| Hoch (120 h / 50 h) | 12.000 € | 5.000 € | 27.000 € | nie | nie | 1,08 |
+
+_Interpretation:_ Gegen kostenlose Dienste ist Eigenbau nie günstiger; gegen ein Abo wie DTAD nur im Niedrig-Szenario und erst nach rund zwei Jahren. Die „zusätzlichen Aufträge“ sind eine Größenordnung (Deckungsbeitrag je Auftrag = 167.404 € × 5 % × 3 Jahre ≈ 25.110 €), kein Nutzenbeleg; ob ein früher Hinweis auch nur einen Auftrag zusätzlich bringt, ist nicht belegt. Ein Mehrwert muss aus Funktion kommen, nicht aus dem Preis.
+
+### 9.5 Competitive Edge in dieser Perspektive, ehrlich
+
+**Was nicht trägt.**
+- „**Keine Abo-Kosten**“ trägt nicht: Kostenlose Wege existieren (9.3), und der Eigenbau hat Einrichtungs-, Betriebs- und Pflegekosten (9.4). Ohne diese Kosten zu nennen, darf „keine Kosten“ nicht gesagt werden.
+- „TED-Daten reichen für die Auftragssuche“ trägt nicht (9.3, Abdeckung).
+- Aussagen wie „besser als Vergabeweiser“ oder „bessere Abdeckung“ sind nicht belegt (siehe §8.5, Iteration 10b).
+
+**Was teilweise bleibt (Hypothesen, nicht geprüft).**
+1. **Daten ins eigene System mit dokumentiertem Schema.** Ein CSV/JSON-Export mit festen Spalten und Datentypen (Referenz: `docs/export_schema.md`, `docs/prototyp/export/`) erspart dem Betrieb das Abtippen und das eigene Lesen der TED-Felder. Ob er das braucht, ist offen (H1, H2).
+2. **Anreicherung (nur TED-Lose):** Ende je Los, Ende der Grundlaufzeit gegen Höchstende getrennt, Herkunft je Feld. Das ist ein Merkmalsunterschied (§8.5), kein belegter Qualitätsvorteil.
+3. **Wettbewerbsfelder** (Auftragnehmer, Wert, Zahl der Angebote): in den TED-Rohdaten vorhanden, aber nur zur Hälfte vollständig (Zuschlagswert 50,4 % je Los bei EU-Verfahren, Paket B; plausible Werte 45 % der Zuschläge, §6). Vergabeweiser zeigt diese Felder schon kostenlos (§8.7).
+4. **Anpassbarkeit und offene Referenzimplementierung:** Wer will, kann Filter und Schema ändern. Das ist nur für Betriebe mit IT-Kompetenz oder einen Integrator ein Vorteil.
+
+**Was nicht belegt ist.** Nachfrage (n = 3, gespalten, §8.9), Zahlungsbereitschaft für Datenübergabe, Importschnittstellen von Branchensoftware (9.6), Qualität der Liste gegenüber den Wettbewerbern, Recht (9.7).
+
+**Mögliche Zahler (Hypothese, kein Gespräch dazu geführt).**
+- **Betrieb, einmalig:** einmalige Einrichtung (Anbindung der Daten an das eigene System) statt Abo. Die Rechnung 9.4 zeigt, dass der Betrieb dafür selbst nur im Niedrig-Szenario günstiger käme; der Preis einer Dienstleistung müsste darunter liegen.
+- **Branchen-ERP-Hersteller und Integratoren:** Sie könnten das Schema als Importformat übernehmen. Ob sie Bedarf haben, ist offen.
+- **Innung oder Kammer als Kanal:** Verteilung an Mitglieder statt Einzelvertrieb; Zahlungsbereitschaft offen (vgl. §8.5).
+
+**Lean Canvas (Entwurf, Hypothesen)**
+
+| Feld | Inhalt |
+|---|---|
+| Problem | Treffer aus Ausschreibungen landen per Mail oder Webseite beim Betrieb und werden von Hand ins eigene System übertragen (H1; nicht geprüft) |
+| Kundensegment | größere Gebäudedienstleister mit Branchensoftware, die für Kommunen und Behörden bieten; Kleinbetriebe nach Gespräch 2 eher nicht |
+| Alleinstellung | Daten mit dokumentiertem Schema und Herkunft je Feld; offene Referenzimplementierung (nicht: „keine Kosten“) |
+| Lösung | CSV/JSON-Export aus TED-Daten mit festem Schema; Webseite nur zur Ansicht |
+| Kanäle | Innung/Kammer, ERP-Hersteller, Integratoren (alle ungeprüft) |
+| Einnahmen | einmalige Einrichtung, ggf. Pflegevertrag (Preise ungeprüft, keine Umsatzprojektion) |
+| Kosten | Einrichtung, Pflege der Abfrage und Lesefehler, Rechtsprüfung |
+| Kennzahlen | Ergebnis des Kurztests (9.8); Anteil der Betriebe, die den Export in ihr System laden können |
+| Unfairer Vorteil | keiner belegt |
+
+### 9.6 Zielgruppe: Branchensoftware
+
+- Laut einem Branchenartikel (hagel-it.de, zitiert den BIV-Branchenreport; **sekundär, Original nicht geprüft**) arbeitet nur rund ein Drittel der Gebäudedienstleister durchgängig mit Branchensoftware.
+- Branchen-ERP existiert, zum Beispiel BSS.SERVICES (auf Microsoft Dynamics 365 Business Central) und GDL-4 von Diehl IT. **Ob sie Importschnittstellen für Ausschreibungsdaten haben, ist nicht geprüft.**
+- _Interpretation:_ Die Zielgruppe der Datenübergabe ist damit höchstens der Teil der Betriebe, der ein System hat und es füttern will. Ein Betrieb ohne System (wie der Kleinbetrieb in Gespräch 2) hat keinen Zielort für den Export. Der Anteil der Betriebe, die öffentlich bieten, ist nicht belegt (§8.1).
+
+### 9.7 Risiken
+
+| Risiko | Einordnung |
+|---|---|
+| Zielgruppe ohne IT | Kleinbetriebe und Betriebe ohne Branchensoftware können einen Export nicht nutzen; ohne Integrator keine Wirkung |
+| Pflege | Eigenbau verlangt laufenden Aufwand (5 bis 50 h je Jahr, Annahme); Schema, TED-Felder und Dienste ändern sich |
+| Abdeckung | nur TED oberhalb der EU-Schwelle; rund ein Viertel der Oberpfälzer Verfahren im Bekanntmachungsservice stand nicht auf TED (Paket B) |
+| Fehler der Liste | Stichprobe 94,3 % Übereinstimmung mit KI-Lesern, nicht als „korrekt“ belegt; Fehler landen bei direkter Übergabe ungeprüft im System des Betriebs |
+| Recht | Nutzungsbedingungen und Lizenzen (Vergabeweiser CC BY 4.0, § 7 UWG), Datenschutz bei Namen im Zuschlag, TED-Lizenz; nicht rechtlich geprüft |
+| Nachfrage | drei Gespräche, gespalten (n = 3); die Datenübergabe wurde nicht erfragt |
+
+### 9.8 Fragen für einen kurzen Test (vorbereitet, **nicht durchgeführt**)
+
+_Gedacht für 1 bis 3 Betriebe, je etwa 10 Minuten, Notizen ohne Namen (wie §8.8). Vorab festgelegt 2026-11-06; Kriterien in `docs/iterationen.md`, Paket D. Stand: Test vorbereitet, nicht durchgeführt._
+
+1. Wer filtert bei Ihnen heute die Ausschreibungen, und wie lange dauert das je Woche?
+2. In welchem System landet das Ergebnis (Mail, Excel, ERP/CRM, Kalkulationssoftware)?
+3. Wer pflegt das, und was passiert, wenn diese Person ausfällt?
+4. Wie kommt ein Treffer in dieses System: Abtippen, Kopieren, Import?
+5. Könnten Sie eine CSV mit festem Schema in Ihr System laden? Wer müsste das einrichten?
+6. Was fehlt Ihnen an den kostenlosen Wegen (TED-Suchprofil, Bekanntmachungsservice, Vergabeweiser)?
+7. Würden Sie das selbst betreiben oder einkaufen, und was dürfte es kosten?
+
+_Auswertung:_ nur zählen, wie viele Betriebe die Fragen 2, 4 und 5 so beantworten, dass H1 beziehungsweise H2 bestätigt sind; keine Zahlungsbereitschaft aus den Antworten ableiten.

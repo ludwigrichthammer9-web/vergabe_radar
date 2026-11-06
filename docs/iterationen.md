@@ -1484,3 +1484,39 @@ _Interpretation_
 - Zulässig: „Im Bekanntmachungsservice stehen in der Oberpfalz auch Reinigungsverfahren, die nicht auf TED stehen (rund ein Viertel, Intervall 20–35 %).“ Nicht zulässig: „0 %“, „genau 27 %“, „unterhalb der EU-Schwelle“ (Wert nicht geprüft), „die Oberpfalz hat keine unterschwelligen Vergaben“, jede Aussage über Verfahren außerhalb des Bekanntmachungsservice. Die Aussage der Vergabestelle („sehr oft national“, n = 1) wird weder bestätigt noch widerlegt. A3 bleibt ungeprüft, mit einem Hinweis auf eine Lücke der TED-Basis von rund einem Viertel.
 - Lernpunkt: Eine Null ist ein Verdachtsmoment, kein Ergebnis; erst die Robustheitsprüfung (Feldabdeckung nationaler gegen EU-Verfahren) hat sie als Filterartefakt erklärt.
 **Grenzen:** Orts- und Postleitzahlregeln nicht von Hand geprüft (mindestens zwei Autobahn-Treffer sind vermutlich keine Oberpfalz-Treffer); B2 und B4 für die 32 nationalen Verfahren und die Wertprüfung gegen die Schwelle stehen aus.
+
+
+## Paket D: Make-or-Buy und Datenübergabe (Nachtrag zu Iteration 10; Kriterien vorab festgelegt 2026-11-06)
+
+**Stand: Test vorbereitet, nicht durchgeführt.** Alles in diesem Abschnitt bis zu den Ergebnissen ist „vorab“.
+
+**Anlass:** Neue Idee des Nutzers: Der Business Case wird aus Sicht eines Reinigungsbetriebs gedacht, der seine Aufträge selbst filtert, zunächst mit kostenlosen TED-Daten (ohne Abo) und mit direkter Übergabe der Daten in das Verwaltungssystem (ERP, CRM, Excel); die Webseite dient nur der Darstellung. Ein BWL-Gutachten (liegt nicht im Repo) kam zu „teilweise sinnvoll“: brauchbar als Make-or-Buy-Frage; als Competitive Edge trägt „keine Abo-Kosten“ nicht, weil kostenlose Wege existieren (Vergabeweiser API/MCP, AusschreibungsRadar Free, TED-Suchprofile mit E-Mail-Alarm, Suchvorlagen des Bekanntmachungsservice). Belegbar sind ein Modell mit Break-even und ein Referenz-Export; Nachfrage ist nicht belegt (n = 3). Siehe `docs/business.md` §9.
+
+**Hypothesen** _(vorab; Setzungen, nicht belegt)_
+- **H1:** Mindestens ein befragter Betrieb mit Branchensoftware kann Treffer aus Ausschreibungen heute nicht ohne Abtippen in sein System übernehmen.
+- **H2:** Mindestens ein befragter Betrieb könnte eine CSV mit festem Schema in sein System laden.
+
+| | Kriterium (vorab) | Stand |
+|---|---|---|
+| D1 | Make-or-Buy-Modell mit Annahmen und Break-even erstellt (Ja/Nein) | Ja, `src/report/make_or_buy.py`, `reports/make_or_buy.md`, `reports/make_or_buy.csv`; Kontrollwerte aus dem Auftrag stimmen. Annahmen (Stundensatz, Aufwand, Marge) sind nicht gemessen |
+| D2 | Referenz-Export mit dokumentiertem Schema (`docs/export_schema.md`, `docs/prototyp/export/`) erstellt und gegen das Schema geprüft (Ja/Nein) | wird getrennt bearbeitet; hier nicht bewertet |
+| D3 | Test mit 1 bis 3 Betrieben **durchgeführt** (Ja/Nein) | Nein; bis zur Abgabe voraussichtlich nein. Fragen vorbereitet (`docs/business.md` §9.8) |
+| D4 | Die Aussage „Datenübergabe ist für Betriebe relevant“ ist **zulässig nur, wenn H1 und H2 bei mindestens 2 von 3 Betrieben bestätigt sind**; sonst nur als Hinweis | offen (ohne D3 nicht entscheidbar) |
+
+**Was folgt** _(vorab)_
+- D3 nein: Es gibt keine Aussage zur Relevanz der Datenübergabe, auch nicht als Hinweis über die Gespräche aus §8.9 hinaus (dort wurde sie nicht erfragt). Das Modell und der Export bleiben ein Angebot an Leser und Dozent, kein Nachfragebeleg.
+- D3 ja, H1 und H2 bei höchstens 1 Betrieb: Hinweis, keine Aussage; Datenübergabe als Funktion nicht weiterverfolgen oder erneut prüfen.
+- D3 ja, H1 und H2 bei mindestens 2 von 3 Betrieben bestätigt: Aussage „Datenübergabe ist für Betriebe relevant“ zulässig, mit n und Betriebsbeschreibung; Zahlungsbereitschaft bleibt ungeprüft.
+- In allen Fällen keine Änderung der Liste, der Messungen der Iterationen 1 bis 10 und von Paket B; keine Aussage „besser als Vergabeweiser“, „bessere Abdeckung“, „Betriebe wollen/brauchen das“.
+
+**Ergebnis von D1 (2026-11-06)** _(Quelle: [make_or_buy.md](../reports/make_or_buy.md))_
+
+_Fakten (Rechnung unter Annahmen)_
+- Eigenkosten bei 100 €/h: Niedrig 2.000 € einmalig und 500 € je Jahr (3.500 € in 3 Jahren); Mittel 6.000 € / 2.000 € / 12.000 €; Hoch 12.000 € / 5.000 € / 27.000 €.
+- Break-even: gegen Vergabeweiser und AusschreibungsRadar Starter in allen Szenarien nie; gegen DTAD (rund 1.500 € im Jahr, Gespräch) nur im Niedrig-Szenario, nach 2,0 Jahren; Mittel und Hoch nie.
+- Zusätzliche Aufträge, damit sich die Kosten der ersten drei Jahre lohnen (Deckungsbeitrag je Auftrag 25.110 €, Marge 5 %, Median-Jahresumsatz 167.404 €, Laufzeit 3 Jahre): 0,14 / 0,48 / 1,08; bei 3 % Marge 0,23 / 0,80 / 1,79.
+
+_Interpretation_
+- Gegen kostenlose Dienste ist Eigenbau nie günstiger; „keine Abo-Kosten“ ist kein Vorteil. Ein Mehrwert muss aus Funktion kommen (Schema, Anreicherung, Herkunft je Feld). Die „zusätzlichen Aufträge“ sind eine Größenordnung, kein Nutzenbeleg.
+
+**Grenzen:** Aufwandswerte, Marge und Stundensatz (Quelle sekundär, Freiberufler-Durchschnitt, nicht im Original geprüft) sind Annahmen; der Median-Umsatz gilt für TED-Aufträge mit plausiblem Wert (45 %); die Aufwände stammen nicht aus einer Umsetzung; kein Betrieb wurde befragt, ob er Datenübergabe braucht; Branchensoftware-Schnittstellen sind nicht geprüft; die Zahl „rund ein Drittel arbeitet durchgängig mit Branchensoftware“ ist sekundär (hagel-it.de, zitiert den BIV-Branchenreport, Original nicht geprüft).
