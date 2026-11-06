@@ -1,7 +1,7 @@
 """Test K-A, Schritt 1 (Vorprüfung des Nenners): Für wie viele der 52 Backtest-Paare (data/processed/x1_paare_iteration5.txt, Paare aus backtest_paare_iteration5.csv) liegt lokal ein Zuschlag des Nachfolgers (Testfall = Auftragsbekanntmachung 2026) vor?
 
 Regel (vorab, docs/business_case_auswahl.md): Abbruch, wenn weniger als 30 Paare verwertbar sind. Verknüpfung über die Verfahrenskennung (procedure-identifier) der lokal gespeicherten TED-Abfragen (data/raw/ted_search/*competition* und *result*).
-Aufruf:  .venv\Scripts\python -I src/report/ka_vorpruefung.py
+Aufruf:  python -I src/report/ka_vorpruefung.py
 """
 
 import csv,glob,json,sys
