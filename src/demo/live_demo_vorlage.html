@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><script>try{var t=localStorage.getItem("vr-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<title>Live-Demo: Profil-Match und Push-Nachricht (Vergabe-Radar)</title>
+<style>
+:root{color-scheme:light dark;--bg:#F2F2F7;--card:#fff;--ink:#1C1C1E;--grey:#6C6C70;--blue:#007AFF;--green:#34C759;--orange:#FF9500;--red:#FF3B30;--onblue:#fff;--sep:rgba(60,60,67,.16);--glass:rgba(242,242,247,.78);--fill:rgba(120,120,128,.12);--field:#fff;--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);--note:rgba(255,149,0,.12);--notebar:#C93400;--link:#0066CC;--rbg:rgba(255,59,48,.14);--gbg:rgba(52,199,89,.16);--obg:rgba(255,149,0,.16);--bbg:rgba(0,122,255,.12);--rt:#C0261C;--gt:#1E7B3A;--ot:#A15C00;--bt:#0055B8;--inner:#F2F2F7;--paper:#fff;--paperink:#1C1C1E;--teamsbar:#E9E9F2;--teamsac:#5B5FC7;--ease:cubic-bezier(.2,.8,.2,1)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark;--bg:#000;--card:#1C1C1E;--ink:#F2F2F7;--grey:#AEAEB2;--blue:#0A84FF;--green:#30D158;--orange:#FF9F0A;--red:#FF453A;--onblue:#fff;--sep:rgba(235,235,245,.16);--glass:rgba(28,28,30,.72);--fill:rgba(120,120,128,.24);--field:#2C2C2E;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.5);--note:rgba(255,159,10,.16);--notebar:#FF9F0A;--link:#64A8FF;--rbg:rgba(255,69,58,.2);--gbg:rgba(48,209,88,.2);--obg:rgba(255,159,10,.2);--bbg:rgba(10,132,255,.22);--rt:#FF6961;--gt:#4CD964;--ot:#FFB340;--bt:#64A8FF;--inner:#2C2C2E;--paper:#2C2C2E;--paperink:#F2F2F7;--teamsbar:#262628;--teamsac:#8B8CC7}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#000;--card:#1C1C1E;--ink:#F2F2F7;--grey:#AEAEB2;--blue:#0A84FF;--green:#30D158;--orange:#FF9F0A;--red:#FF453A;--onblue:#fff;--sep:rgba(235,235,245,.16);--glass:rgba(28,28,30,.72);--fill:rgba(120,120,128,.24);--field:#2C2C2E;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.5);--note:rgba(255,159,10,.16);--notebar:#FF9F0A;--link:#64A8FF;--rbg:rgba(255,69,58,.2);--gbg:rgba(48,209,88,.2);--obg:rgba(255,159,10,.2);--bbg:rgba(10,132,255,.22);--rt:#FF6961;--gt:#4CD964;--ot:#FFB340;--bt:#64A8FF;--inner:#2C2C2E;--paper:#2C2C2E;--paperink:#F2F2F7;--teamsbar:#262628;--teamsac:#8B8CC7}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font:18px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink);margin:0;background:var(--bg)}
+a{color:var(--link)}
+header{position:sticky;top:0;z-index:20;background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--sep);padding:8px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.brand{font-weight:700;font-size:20px;letter-spacing:-.01em}.brand small{font-weight:500;color:var(--grey);font-size:15px;margin-left:8px}
+.theme{display:inline-flex;gap:2px;padding:2px;background:var(--fill);border:1px solid var(--sep);border-radius:12px}
+.theme button,.seg button{min-height:44px;padding:0 16px;border:0;border-radius:10px;background:transparent;color:var(--ink);font:inherit;font-weight:500;font-size:16px;cursor:pointer;transition:background-color .2s var(--ease),transform .15s var(--ease)}
+.theme button:hover,.seg button:hover{background:var(--sep)}
+.theme button[aria-checked=true],.seg button[aria-checked=true]{background:var(--ink);color:var(--bg);font-weight:600;box-shadow:var(--shadow)}
+.seg{display:inline-flex;gap:2px;padding:2px;background:var(--fill);border:1px solid var(--sep);border-radius:12px}
+main{max-width:1240px;margin:0 auto;padding:24px}
+h1{margin:16px 0 8px;font:700 44px/1.1 -apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,"Segoe UI",sans-serif;letter-spacing:-.02em}
+h2{margin:0 0 4px;font-size:30px;font-weight:700;letter-spacing:-.01em;line-height:1.15}
+h3{margin:0 0 8px;font-size:20px;letter-spacing:-.005em}
+.lead{font-size:21px;color:var(--grey);margin:0 0 16px;max-width:60em}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.steps a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:4px 16px 4px 6px;border-radius:999px;background:var(--card);box-shadow:var(--shadow);color:var(--ink);text-decoration:none;font-weight:600;font-size:17px;transition:transform .15s var(--ease),background-color .2s var(--ease)}
+.steps a:hover{background:var(--fill)}.steps a:active{transform:scale(.97)}
+.steps b{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--blue);color:var(--onblue);font-size:17px}
+.hinweis{background:var(--card);border-radius:18px;box-shadow:var(--shadow);border-left:6px solid var(--orange);padding:16px 24px;margin:0 0 32px;font-size:17px}
+.hinweis p{margin:0 0 8px}.hinweis p:last-child{margin:0}
+section.schritt{margin:0 0 40px;scroll-margin-top:80px}
+.schritthead{margin:0 0 16px}.schritthead p{margin:0;color:var(--grey);font-size:19px}
+.kicker{display:inline-block;font-size:15px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.panel{background:var(--card);border-radius:22px;box-shadow:var(--shadow);padding:24px}
+.presets{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
+.presets span{color:var(--grey);font-size:16px;margin-right:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{font-weight:700;font-size:18px;padding:0;margin:0 0 8px}
+label{display:flex;flex-direction:column;font-size:16px;font-weight:500;color:var(--grey);gap:4px;margin:0 0 12px}
+label.cb{flex-direction:row;align-items:center;gap:12px;min-height:44px;font-size:18px;color:var(--ink);font-weight:400;margin:0}
+label.cb input{width:24px;height:24px;min-height:0;padding:0;accent-color:var(--blue);flex:none}
+label small{font-weight:400;font-size:14px;color:var(--grey)}
+input,select,button{font:inherit;min-height:44px;padding:8px 12px;border:1px solid transparent;border-radius:12px;background:var(--fill);color:var(--ink);transition:background-color .2s var(--ease),box-shadow .2s var(--ease),transform .15s var(--ease)}
+input[type=text],input[type=number],input[type=date],select{width:100%;background:var(--fill)}
+input:hover,select:hover{background:var(--sep)}
+input:focus,select:focus{background:var(--field);border-color:var(--blue)}
+input[type=range]{padding:0;background:transparent;accent-color:var(--blue);width:100%}
+.rng{display:flex;align-items:center;gap:12px}.rng output{min-width:6.5em;text-align:right;font-weight:700;color:var(--ink);font-size:19px}
+button.knopf{cursor:pointer;background:var(--blue);color:var(--onblue);font-weight:600;padding:8px 20px;font-size:17px}
+button.knopf:hover{filter:brightness(1.08)}button.knopf:active{transform:scale(.97)}
+button.knopf.sek{background:var(--fill);color:var(--blue)}button.knopf.sek:hover{background:var(--sep);filter:none}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:8px}
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bem{font-size:15px;color:var(--grey);margin:8px 0 0}
+.erg{margin:0 0 16px;font-size:24px;font-weight:600;letter-spacing:-.01em}.erg b{color:var(--blue)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:start}
+@media(max-width:980px){.cols{grid-template-columns:1fr}h1{font-size:34px}h2{font-size:26px}}
+.stufe{display:grid;grid-template-columns:78px 1fr;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--sep)}
+.stufe:last-child{border-bottom:0}
+.stufe .n{font-size:30px;font-weight:700;letter-spacing:-.02em;text-align:right;font-variant-numeric:tabular-nums}
+.stufe .t{font-weight:600;font-size:18px;line-height:1.3}.stufe .t small{display:block;font-weight:400;font-size:15px;color:var(--grey)}
+.stufe .bar{grid-column:2;height:10px;border-radius:999px;background:var(--blue);min-width:3px;transition:width .35s var(--ease)}
+.stufe .no{grid-column:2;font-size:14px;color:var(--grey)}
+.stufe.null .n{color:var(--grey)}.stufe.null .bar{background:var(--sep)}
+.stufe.ende .n{color:var(--red)}
+.stufe.info .bar{background:var(--grey)}
+.stufe.ki .bar{background:var(--green)}
+.treffer{display:grid;gap:12px}
+button.tcard{display:block;width:100%;text-align:left;background:var(--card);color:var(--ink);border:2px solid transparent;border-radius:18px;box-shadow:var(--shadow);padding:16px;cursor:pointer;min-height:44px;font-weight:400}
+button.tcard:hover{background:var(--card);border-color:var(--sep)}
+button.tcard[aria-pressed=true]{border-color:var(--blue)}
+button.tcard:active{transform:scale(.99)}
+.tcard .tt{font-weight:700;font-size:19px;line-height:1.3;margin:0 0 4px}
+.tcard .ta{color:var(--grey);font-size:16px;margin:0 0 8px}
+.tcard .tf{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:16px}
+.tcard .go{display:block;margin-top:8px;font-size:15px;color:var(--blue);font-weight:600}
+.tag{display:inline-block;padding:2px 12px;border-radius:999px;font-size:15px;font-weight:600;background:var(--fill)}
+.tag.passt{background:var(--gbg);color:var(--gt)}.tag.unklar{background:var(--obg);color:var(--ot)}.tag.pn{background:var(--rbg);color:var(--rt)}
+.leer{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:24px;font-size:19px}
+.leer b{display:block;margin-bottom:4px;font-size:21px}
+mark.unb{background:var(--obg);color:var(--ot);border-radius:6px;padding:0 6px;font-weight:600}
+mark.txt{background:var(--bbg);color:var(--bt);border-radius:6px;padding:0 6px;font-weight:600}
+span.df{font-weight:600;color:var(--bt)}
+.kanalzeile{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0 0 16px}
+.kanalzeile span{color:var(--grey);font-size:17px}
+.vorsch{display:grid;gap:16px}
+.teams{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:var(--card);border:1px solid var(--sep)}
+.tbar{background:var(--teamsbar);padding:12px 16px;font-weight:700;font-size:17px;border-bottom:1px solid var(--sep)}.tbar small{font-weight:400;color:var(--grey);margin-left:8px}
+.tmsg{display:flex;gap:12px;padding:16px;align-items:flex-start}
+.tava{flex:none;width:44px;height:44px;border-radius:50%;background:var(--teamsac);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.tbody{min-width:0;flex:1}.tname{font-weight:700;font-size:16px}.tname small{font-weight:400;color:var(--grey);margin-left:8px;font-size:14px}
+.ac{margin-top:8px;border:1px solid var(--sep);border-left:4px solid var(--teamsac);border-radius:12px;padding:16px;background:var(--inner);font-size:16px}
+.ac .tb{margin:0;word-wrap:break-word;overflow-wrap:anywhere}.ac .tb.sp{margin-top:12px}.ac .tb.sp0{margin-top:2px}
+.ac .b{font-weight:700}.ac .md{font-size:19px}.ac .sm{font-size:14px}.ac .sub{color:var(--grey)}
+.ac .c-Good{color:var(--gt)}.ac .c-Warning{color:var(--ot)}.ac .c-Attention{color:var(--rt)}
+.ac table{border-collapse:collapse;margin:8px 0 0;width:100%}.ac td{padding:4px 12px 4px 0;vertical-align:top;border-bottom:1px solid var(--sep)}.ac td:first-child{font-weight:700;white-space:nowrap}.ac tr:last-child td{border-bottom:0}
+.ac a.act{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;padding:8px 20px;border-radius:12px;background:var(--fill);color:var(--link);font-weight:600;text-decoration:none;transition:background-color .2s var(--ease),transform .15s var(--ease)}
+.ac a.act:hover{background:var(--sep)}.ac a.act:active{transform:scale(.97)}
+.mailfenster{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:var(--card);border:1px solid var(--sep)}
+.mkopf{padding:16px 24px;border-bottom:1px solid var(--sep);font-size:16px}.mkopf div{margin:2px 0}.mkopf span{color:var(--grey);display:inline-block;min-width:5.5em}
+.mkopf .bet{font-weight:700;font-size:20px;margin-bottom:8px}
+.papier{background:var(--paper);color:var(--paperink);padding:24px;font-size:16px}
+.papier h4{margin:0 0 4px;font-size:21px}.papier .sub{color:var(--grey)}.papier table{border-collapse:collapse;margin:8px 0}.papier td{padding:3px 16px 3px 0;vertical-align:top}.papier td:first-child{color:var(--grey);white-space:nowrap}
+.papier p{margin:12px 0}.papier .klein{font-size:14px;color:var(--grey)}.papier a{color:var(--link)}
+details{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:0 24px 8px;margin-top:12px}
+summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;font-size:17px}
+pre{font:13px/1.45 ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--fill);border-radius:12px;padding:12px 16px;overflow:auto;max-height:340px;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
+.zusatz{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:16px 24px;margin-top:16px;border-left:6px solid var(--blue)}
+.zusatz h3{font-size:19px}.zusatz table{border-collapse:collapse;width:100%;font-size:16px}.zusatz td,.zusatz th{padding:6px 10px 6px 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--sep)}.zusatz th{color:var(--grey);font-weight:600;font-size:14px}
+.zusatz tr:last-child td{border-bottom:0}
+.kihinweis{background:var(--note);border-left:6px solid var(--notebar);border-radius:12px;padding:12px 16px;margin-top:16px;font-size:16px}
+footer{color:var(--grey);font-size:15px;margin:40px 0 24px}footer p{margin:8px 0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:700px){main{padding:16px}header{padding:8px 16px}h1{font-size:30px}.zwei{grid-template-columns:1fr}.stufe{grid-template-columns:62px 1fr}.stufe .n{font-size:24px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header><div class="brand">Vergabe-Radar<small>Live-Demo</small></div>
+<div class="theme" role="radiogroup" aria-label="Darstellung"><button type="button" role="radio" aria-checked="true" data-t="auto">Automatisch</button><button type="button" role="radio" aria-checked="false" data-t="light">Hell</button><button type="button" role="radio" aria-checked="false" data-t="dark">Dunkel</button></div></header>
+<main>
+<h1>Welche Ausschreibungen passen zu einer Firma?</h1>
+<p class="lead">Sie stellen eine ausgedachte Firma ein. Die Demo zeigt sofort, welche echten Bekanntmachungen (Gebäudereinigung, Oberpfalz) passen, und wie die Nachricht darüber aussähe.</p>
+<ol class="steps"><li><a href="#schritt1"><b>1</b>Firma einstellen</a></li><li><a href="#schritt2"><b>2</b>Treffer ansehen</a></li><li><a href="#schritt3"><b>3</b>Nachricht ansehen</a></li></ol>
+<div class="hinweis" role="note"><p><b>Wichtig: Das ist eine Demo zur Veranschaulichung der Datenübergabe.</b></p>
+<p>Die Firma ist <b>fiktiv</b>. Es ist <b>kein Business Case</b>: Die Demo belegt keine Nachfrage und keinen Vorteil gegenüber anderen Diensten. <b>Nichts wird gesendet</b> (keine E-Mail, keine Teams-Nachricht), und es gibt <b>keine KI-Aufrufe</b> in dieser Seite. Treffer für eine beliebige Firma sind <b>kein Befund</b> über den Markt.</p>
+<p id="datenhinweis"></p></div>
+
+<section class="schritt" id="schritt1" aria-labelledby="h1s">
+<div class="schritthead"><span class="kicker">Schritt 1</span><h2 id="h1s">Firma einstellen</h2><p>Ändern Sie etwas, die Treffer unten rechnen sich sofort neu.</p></div>
+<div class="panel">
+<div class="presets"><span>Beispiele laden:</span><button type="button" class="knopf" id="p1">Firma P1: Schwandorf, 60 km</button><button type="button" class="knopf" id="p2">Firma P2: Amberg, 25 km</button></div>
+<form id="form" onsubmit="return false" autocomplete="off"><div class="grid">
+<fieldset><legend>Die Firma</legend>
+<label>Firmenname (frei erfunden)<input type="text" id="name" maxlength="80"></label>
+<label>Sitz der Firma<select id="sitz"></select></label>
+<label>Wie weit darf der Auftrag entfernt sein?<span class="rng"><input type="range" id="radius" min="5" max="150" step="5"><output id="radiusO" for="radius"></output></span><small>Luftlinie bis zum Bezugspunkt der Region (Kreisstadt), nicht bis zum Objekt.</small></label>
+<label>Mindestlaufzeit des Vertrags<span class="rng"><input type="range" id="laufzeit" min="0" max="60" step="1"><output id="laufzeitO" for="laufzeit"></output></span><small>Fehlt die Laufzeit in den Daten, bleibt die Bekanntmachung drin und wird als „nicht angegeben“ markiert.</small></label>
+<div class="zwei"><label>Auftragswert ab (EUR)<input type="number" id="wmin" min="0" step="1000" placeholder="egal"></label><label>Auftragswert bis (EUR)<input type="number" id="wmax" min="0" step="1000" placeholder="egal"></label></div>
+<p class="bem" style="margin:-4px 0 0">Der Wert ist selten angegeben; er wird nur in der Stichwortregel verwendet, nicht im Trichter.</p>
+</fieldset>
+<fieldset><legend>Was die Firma anbietet</legend>
+<div id="leistungen"></div>
+<legend style="margin-top:16px">Welche Gebäude</legend>
+<div id="objekte"></div>
+<legend style="margin-top:16px">Branche (CPV-Code der Bekanntmachung)</legend>
+<div id="cpvs"></div>
+<p class="bem">CPV ist die EU-Einordnung der Leistung. Gezeigt werden nur Codes, die im Auszug vorkommen; Bezeichnungen sinngemäß.</p>
+</fieldset>
+<fieldset><legend>Eignung der Firma (Angaben der Firma, optional)</legend>
+<div class="zwei"><label>Jahresumsatz (Mio. EUR)<input type="number" id="umsatz" min="0" step="0.1" placeholder="nicht angegeben"></label><label>Beschäftigte<input type="number" id="besch" min="0" step="1" placeholder="nicht angegeben"></label></div>
+<label>Vergleichbare Referenzen (Anzahl)<input type="number" id="refs" min="0" step="1" placeholder="nicht angegeben"></label>
+<div id="zerts"></div>
+<p class="bem">Diese Angaben werden nur mit dem Text der Bekanntmachung abgeglichen, soweit er etwas dazu sagt (einfache Textsuche). Sie filtern nicht.</p>
+</fieldset>
+<fieldset><legend>Wann ist „heute“?</legend>
+<label>Stichtag<input type="date" id="stichtag" min="2026-09-01" max="2026-11-06"></label>
+<p class="bem">Standard 16.10.2026: Gezeigt werden Bekanntmachungen der 14 Tage davor, deren Abgabefrist noch nicht vorbei ist. Andere Stichtage sind möglich, aber der Auszug ist dann unvollständig.</p>
+</fieldset>
+</div></form></div></section>
+
+<section class="schritt" id="schritt2" aria-labelledby="h2s">
+<div class="schritthead"><span class="kicker">Schritt 2</span><h2 id="h2s">Treffer ansehen</h2><p>Links der Trichter: Wie viele Bekanntmachungen bleiben nach jedem Filter übrig? Rechts die Treffer.</p></div>
+<p class="erg" id="ergebnis" aria-live="polite"></p>
+<div class="cols"><div class="panel" id="trichter"></div><div><div class="treffer" id="treffer"></div></div></div>
+</section>
+
+<section class="schritt" id="schritt3" aria-labelledby="h3s">
+<div class="schritthead"><span class="kicker">Schritt 3</span><h2 id="h3s">Nachricht ansehen</h2><p>So käme der gewählte Treffer bei der Firma an. Wählen Sie oben rechts einen Treffer.</p></div>
+<div class="kanalzeile"><span>Kanal:</span><div class="seg" role="radiogroup" aria-label="Kanal"><button type="button" role="radio" aria-checked="true" data-k="teams">Teams</button><button type="button" role="radio" aria-checked="false" data-k="mail">E-Mail</button></div><span>(Vorschau, nichts wird gesendet)</span></div>
+<div id="vorschau" aria-live="polite"></div>
+</section>
+
+<footer>
+<p id="quelle"></p>
+<p>Lizenz: TED-Daten sind laut Rechtshinweis der TED-Seite mit Quellenangabe wiederverwendbar (Wortlaut selbst prüfen, siehe docs/quellen.md). Erzeugt von <code>src/demo/live_demo.py</code>; Beschreibung, Grenzen und Ungeprüftes: docs/demo_push.md, Abschnitt „Live-Demo“.</p>
+</footer>
+</main>
+<script>
+"use strict";
+var DATA = /*__DATEN__*/null;
+(function(){
+var ERRORS=[];window.addEventListener("error",function(e){ERRORS.push(String(e.message)+" @"+e.lineno)});
+/* ---------- Hilfen ---------- */
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
+function pd(s){var p=s.split("-");return Date.UTC(+p[0],+p[1]-1,+p[2])}
+function de(iso){var p=iso.split("-");return p[2]+"."+p[1]+"."+p[0]}
+function isoAdd(iso,days){var d=new Date(pd(iso)+days*864e5);return d.getUTCFullYear()+"-"+String(d.getUTCMonth()+1).padStart(2,"0")+"-"+String(d.getUTCDate()).padStart(2,"0")}
+function max(a){return Math.max.apply(null,a)}
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1).toLowerCase()}
+function fmtInt(x){return String(Math.round(x)).replace(/\B(?=(\d{3})+(?!\d))/g,".")}
+function fmtG(x){return String(Math.round(x*1e6)/1e6)}
+function haversine(la1,lo1,la2,lo2){var r=Math.PI/180,p1=la1*r,p2=la2*r;var a=Math.pow(Math.sin((p2-p1)/2),2)+Math.cos(p1)*Math.cos(p2)*Math.pow(Math.sin((lo2-lo1)*r/2),2);return 2*6371.0*Math.asin(Math.sqrt(a))}
+var T=DATA.texte,NUTS=DATA.nuts3,URTEILE=["passt","unklar","passt nicht"];
+/* ---------- Auswahllisten (Bezeichnungen der Oberfläche) ---------- */
+var LEISTUNG={
+ unterhalt:{label:"Unterhaltsreinigung",sw:["unterhaltsreinigung","unterhalts"],sig:true},
+ glas:{label:"Glasreinigung (Fenster, Rahmen)",sw:["glasreinigung","glas- und","fensterreinigung","rahmenreinigung","gebäude- und glasreinigung"],sig:true},
+ gebaeude:{label:"Gebäudereinigung allgemein",sw:["gebäudereinigung"],sig:false}};
+var OBJEKT={
+ schule:{label:"Schulen",sw:["schule","gymnasium"],sig:true},
+ kita:{label:"Kindergärten, Kitas",sw:["kindergarten","kita"],sig:false},
+ verwaltung:{label:"Büro- und Verwaltungsgebäude",sw:["verwaltung","rathaus","landratsamt","finanzamt","amt ","büro","dienstgebäude"],sig:true},
+ klinik:{label:"Kliniken",sw:["klinik","krankenhaus","medizin"],sig:true}};
+var CPVS=[["90910","90910 Reinigungsdienste"],["90911","90911 Reinigung von Wohnungen, Gebäuden, Fenstern"],["90919","90919 Reinigung von Büros und Schulen"],["90900","90900 Reinigungs- und Hygienedienste"]];
+var ZERTS=["ISO 9001","ISO 14001","ISO 45001","RAL-GZ 902"];
+var ZERT_RE={"ISO 9001":/ISO\s*9001/i,"ISO 14001":/ISO\s*14001/i,"ISO 45001":/ISO\s*45001/i,"RAL-GZ 902":/RAL[-\s]?GZ\s*902/i};
+/* Preset-Zuordnung der Oberfläche (die Stichwortlisten selbst kommen aus profil_beispiel.json) */
+var PRESETFORM={P1:{leist:["unterhalt","glas","gebaeude"],obj:["schule","verwaltung","klinik"]},P2:{leist:["unterhalt"],obj:["schule","kita","verwaltung"]}};
+/* ---------- Logik (Port von stufen.py / nachrichten.py) ---------- */
+function bezugspunkt(profil,b){var w=[];b.nuts.forEach(function(n){if(NUTS[n])w.push([haversine(profil.sitz.lat,profil.sitz.lon,NUTS[n][1],NUTS[n][2]),n])});if(!w.length)return null;w.sort(function(a,c){return a[0]-c[0]||(a[1]<c[1]?-1:a[1]>c[1]?1:0)});return {code:w[0][1],km:w[0][0]}}
+function entfernung(profil,b){var r=bezugspunkt(profil,b);return r?Math.round(r.km*10)/10:null}
+function dedupe(list){var m={};list.slice().sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:a.nr<b.nr?-1:a.nr>b.nr?1:0}).forEach(function(b){m[b.ag.trim().toLowerCase()+"\u0000"+b.t.trim().toLowerCase()]=b});
+ return Object.keys(m).map(function(k){return m[k]}).sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:a.nr<b.nr?-1:a.nr>b.nr?1:0})}
+function regelUrteil(profil,b){var t=b.text.toLowerCase(),entf=entfernung(profil,b);
+ if(entf!==null&&entf>profil.radius_km)return ["passt nicht","Entfernung ca. "+Math.round(entf)+" km größer als Radius "+profil.radius_km+" km"];
+ var tl=profil.leistung_stichworte.filter(function(s){return t.indexOf(s)>=0}),to=profil.objekt_stichworte.filter(function(s){return t.indexOf(s)>=0}).map(function(s){return s.trim()});
+ var w=b.wert;if(w&&w.length&&(max(w)>profil.wert_max_eur||max(w)<profil.wert_min_eur))return ["passt nicht","Wert "+fmtInt(max(w))+" EUR außerhalb "+fmtInt(profil.wert_min_eur)+"-"+fmtInt(profil.wert_max_eur)+" EUR"];
+ if(!tl.length)return ["passt nicht","kein Stichwort der Profil-Leistungen im Text"];
+ if(!to.length)return ["unklar","Leistungsstichwort ("+tl[0]+"), aber keine Profil-Objektart im Text"];
+ return ["passt","Leistungsstichwort ("+tl[0]+") und Objektart ("+to[0]+") im Text"]}
+function platzhalter(profil,b){var q=b.text+"\n\n"+b.zeilen,r=regelUrteil(profil,b),krit=[],kr=["Leistung","Objektart","Ort/Entfernung","Laufzeit","Wert","Frist","Losgröße","Zertifikate","Kapazität","Personal","Tarifbindung"];
+ for(var i=0;i<profil.leistung_stichworte.length;i++){var s=profil.leistung_stichworte[i],m=new RegExp(".{0,60}"+s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+".{0,60}","is").exec(q);
+  if(m){krit.push({kriterium:"Leistung",status:"passt",zitat:m[0].replace(/\n/g," "),kommentar:"Stichwort"});break}}
+ kr.forEach(function(k){if(!krit.some(function(x){return x.kriterium===k}))krit.push({kriterium:k,status:"nicht ablesbar",zitat:null,kommentar:"Platzhalter-Modus: nicht bewertet"})});
+ return {urteil:r[0],begruendung:"[Platzhalter, keine KI] "+r[1],kriterien:krit,pruefhinweise:[],quelle:"Platzhalter (keine KI)"}}
+function trichter(profil,dedup,stichtag){var stufen=[],menge=dedup;
+ function stufe(name,neu,notiz){stufen.push({name:name,anzahl:neu.length,notiz:notiz||""});return neu}
+ var pf=profil.cpv_praefixe;
+ menge=stufe("Gebäudereinigungs-CPV (Profil)",menge.filter(function(b){return b.cpv.some(function(c){return pf.some(function(p){return c.indexOf(p)===0})})}));
+ var plz=menge.filter(function(b){return b.op==="plz"}).length;
+ menge=stufe("Oberpfalz (NUTS DE231-DE23A)",menge.filter(function(b){return b.op}),"davon nur über PLZ 92/93 erkannt: "+plz);
+ var ent={};menge.forEach(function(b){ent[b.nr]=entfernung(profil,b)});
+ var imr=menge.filter(function(b){return ent[b.nr]===null||ent[b.nr]<=profil.radius_km});
+ menge=stufe("Radius "+profil.radius_km+" km um "+profil.sitz.ort,imr,"davon Entfernung nicht berechenbar (nur NUTS-2/PLZ): "+imr.filter(function(b){return ent[b.nr]===null}).length);
+ var offen=menge.filter(function(b){return !b.fristen.length||max(b.fristen.map(pd))>=pd(stichtag)});
+ menge=stufe("Abgabefrist noch offen",offen,"davon Frist nicht angegeben: "+offen.filter(function(b){return !b.fristen.length}).length);
+ var lang=menge.filter(function(b){return !b.lm.length||max(b.lm)>=profil.laufzeit_min_monate});
+ menge=stufe("Laufzeit mindestens "+profil.laufzeit_min_monate+" Monate",lang,"davon Laufzeit im Datenfeld nicht angegeben: "+lang.filter(function(b){return !b.lm.length}).length);
+ var nw=menge.filter(function(b){return b.wert&&b.wert.length}).length;
+ stufen.push({name:"Info: Wert angegeben (kein Filter)",anzahl:nw,notiz:"bei "+(menge.length-nw)+" von "+menge.length+" Treffern ist kein Wert angegeben"});
+ return {stufen:stufen,menge:menge}}
+function zitatKurz(z,n){n=n||220;z=z.split(/\s+/).filter(Boolean).join(" ");return z.length<=n?z:z.slice(0,n).replace(/\s+$/,"")+" …"}
+var DF_ZEILE=/^[^:]{0,60}\(Datenfeld[^)]*\):/;
+function zitatZeilen(c){return c.zitate.map(function(p){var art=DF_ZEILE.test(p[1])?"Datenfeld-Zeile (von uns eingefügt, kein Bekanntmachungstext)":"Zitat aus dem Text (wörtlich geprüft)";return art+" zu „"+p[0]+"“: „"+zitatKurz(p[1])+"“"})}
+function inhalt(profil,b,u,regel,vorg,stichtag){
+ var nuts=b.nuts.map(function(n){return NUTS[n]?n+" "+NUTS[n][0]:n}).join(", ");var to=b.text_orte;
+ var ort;if(b.orte.length&&to.length)ort=b.orte.join(", ")+" (Datenfeld); zusätzlich im Text, nicht im Datenfeld: "+to.join(", ");
+ else if(b.orte.length)ort=b.orte.join(", ")+" (Datenfeld)";else if(to.length)ort="Ort im Text, nicht im Datenfeld: "+to.join(", ");
+ else ort="Ort weder im Datenfeld noch im Text gefunden (einfache Ortssuche)";
+ ort+="; Region laut Datenfeld: "+(nuts||"NUTS nicht angegeben");
+ if(to.length)ort+="; die Orte im Text weichen vom Datenfeld ab, einzelne Objekte können weit außerhalb der Region liegen";
+ var bz=bezugspunkt(profil,b),ent;
+ if(bz){var g=Math.round(bz.km/5)*5,zahl=g?"ca. "+g+" km":"unter 5 km";ent="Näherung: "+zahl+" Luftlinie von "+profil.sitz.ort+" zum Bezugspunkt "+bz.code+" ("+NUTS[bz.code][0]+"), nicht zum Objekt"}else ent="nicht berechenbar";
+ var frist;if(b.fristen.length){var fr=b.fristen.slice().sort().pop();frist=de(fr)+" (noch "+Math.round((pd(fr)-pd(stichtag))/864e5)+" Tage ab "+de(stichtag)+")"}else frist="nicht angegeben";
+ var lz="Datenfeld Dauer: "+(b.lm.length?fmtG(max(b.lm))+" Monate":"nicht angegeben");
+ if(b.lb.length||b.le.length)lz+="; Datenfeld Datum: "+[b.lb.length?"Beginn "+de(b.lb[0]):"",b.le.length?"Ende "+de(b.le[b.le.length-1]):""].filter(Boolean).join(", ");
+ if(b.lz_text.length){var marke=!b.lm.length?"im Text, nicht im Datenfeld":"Verlängerung/Option im Text";lz+="; "+marke+": "+b.lz_text.map(function(s){return "„"+s+"“"}).join(" ")}
+ else lz+="; im Text keine Laufzeitangabe gefunden (einfache Textsuche)";
+ var w=b.wert,ws=(w&&w.length)?fmtInt(max(w))+" EUR (geschätzt, laut Bekanntmachung)":"nicht angegeben";
+ var zitate=u.kriterien.filter(function(k){return k.zitat}).slice(0,2);
+ var istKi=String(u.quelle||"").indexOf("KI")===0;
+ var deutung=istKi?"KI-Deutung ("+u.quelle.slice(4,-1)+"; vom Sprachmodell erzeugt, nicht Fakt, Begründung nicht geprüft)":"Platzhalter-Deutung (Stichwortregel, keine KI, nicht Fakt)";
+ return {nr:b.nr,titel:b.t,auftraggeber:b.ag,ort:ort,entfernung:ent,deutung:deutung,frist:frist,laufzeit:lz,wert:ws,lose:b.n_lose+" Los(e)",link:b.link,veroeffentlicht:de(b.d),
+  urteil:u.urteil,begruendung:u.begruendung,quelle_urteil:u.quelle||"",regel:regel,zitate:zitate.map(function(k){return [k.kriterium,k.zitat]}),
+  nicht_ablesbar:u.kriterien.filter(function(k){return k.status==="nicht ablesbar"}).map(function(k){return k.kriterium}),
+  eignung:b.arten.length?b.arten.join("; "):"keine Eignungskriterien als Code angegeben",eignung_hinweis:b.eignung_hinweis,vorgaenger:vorg,profil_name:profil.name,profil_id:profil.id}}
+function mdSicher(s){return typeof s==="string"?s.split("](").join("] ("):s}
+function adaptiveCard(c){var farbe={"passt":"Good","unklar":"Warning","passt nicht":"Attention"}[c.urteil];
+ var fakten=[["Auftraggeber",c.auftraggeber],["Ort",c.ort],["Entfernung",c.entfernung],["Abgabefrist",c.frist],["Laufzeit",c.laufzeit],["Wert",c.wert],["Umfang",c.lose],["Veröffentlicht",c.veroeffentlicht]];
+ var body=[{type:"TextBlock",text:"Neue Ausschreibung: "+c.titel,weight:"Bolder",size:"Medium",wrap:true},
+  {type:"TextBlock",text:"Profil: "+c.profil_name,isSubtle:true,spacing:"None",wrap:true},
+  {type:"TextBlock",text:"Fakten aus der Bekanntmachung",weight:"Bolder",spacing:"Medium"},
+  {type:"FactSet",facts:fakten.map(function(f){return {title:f[0],value:f[1]}})},
+  {type:"TextBlock",text:"Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)",weight:"Bolder",spacing:"Medium"},
+  {type:"TextBlock",text:c.eignung+". "+c.eignung_hinweis,wrap:true},
+  {type:"TextBlock",text:c.deutung+": "+c.urteil,weight:"Bolder",color:farbe,spacing:"Medium",wrap:true},
+  {type:"TextBlock",text:c.begruendung,wrap:true}];
+ zitatZeilen(c).forEach(function(z){body.push({type:"TextBlock",text:z,wrap:true,isSubtle:true})});
+ body.push({type:"TextBlock",text:"Nicht ablesbar: "+c.nicht_ablesbar.join(", "),wrap:true});
+ body.push({type:"TextBlock",text:T.KI_HINWEIS,wrap:true,size:"Small",isSubtle:true});
+ if(c.vorgaenger){var v=c.vorgaenger;body.push({type:"TextBlock",wrap:true,text:"Vorgänger laut Vertragsliste (Prototyp, eindeutiger Titeltreffer): "+v.los_titel+", Ende der Grundlaufzeit "+v.ende_grundlaufzeit+" (Herkunft: "+v.ende_herkunft+")."})}
+ body.push({type:"TextBlock",text:T.HINWEIS+" "+T.QUELLE,wrap:true,size:"Small",isSubtle:true,spacing:"Medium"});
+ var karte={"$schema":"http://adaptivecards.io/schemas/adaptive-card.json",type:"AdaptiveCard",version:"1.2",body:body,actions:[{type:"Action.OpenUrl",title:"Bekanntmachung auf TED",url:c.link}]};
+ karte.body.forEach(function(blk){if("text" in blk)blk.text=mdSicher(blk.text);(blk.facts||[]).forEach(function(f){f.value=mdSicher(f.value)})});
+ return {type:"message",attachments:[{contentType:"application/vnd.microsoft.card.adaptive",contentUrl:null,content:karte}]}}
+function mailBetreff(c){return "[Demo] "+cap(c.urteil)+": "+c.titel.slice(0,90)+" (Frist "+c.frist.split(" (")[0]+")"}
+function mailText(c){var z=["Neue Ausschreibung: "+c.titel,"Profil: "+c.profil_name,"","FAKTEN AUS DER BEKANNTMACHUNG","Auftraggeber: "+c.auftraggeber,"Ort: "+c.ort,"Entfernung: "+c.entfernung,"Abgabefrist: "+c.frist,"Laufzeit: "+c.laufzeit,"Wert: "+c.wert,"Umfang: "+c.lose,"Veröffentlicht: "+c.veroeffentlicht,"Bekanntmachung: "+c.link,"","VERLANGT LAUT BEKANNTMACHUNG (EIGNUNG, ART DER NACHWEISE)",c.eignung+". "+c.eignung_hinweis,"",c.deutung.toUpperCase()+": "+c.urteil,c.begruendung];
+ z=z.concat(zitatZeilen(c));z.push("Nicht ablesbar: "+c.nicht_ablesbar.join(", "));z.push(T.KI_HINWEIS);
+ if(c.vorgaenger)z.push("Vorgänger laut Vertragsliste (Prototyp): "+c.vorgaenger.los_titel+", Ende der Grundlaufzeit "+c.vorgaenger.ende_grundlaufzeit+".");
+ z=z.concat(["","---",T.HINWEIS,T.QUELLE]);return z.join("\n")}
+/* ---------- Eignungsabgleich (Zusatz der Live-Demo, nicht Teil der Nachricht) ---------- */
+var ZAHLW={"zwei":2,"drei":3,"vier":4,"fünf":5,"sechs":6};
+function deZahl(s){return parseFloat(s.replace(/\./g,"").replace(",","."))}
+function eignungsabgleich(profil,b){var t=b.text,rows=[];
+ var mu=/(Mindestumsatz|Umsatz[^.]{0,80}?mindestens|mindestens[^.]{0,40}?Umsatz)[^.]{0,60}?(\d[\d.]*(?:,\d+)?)\s*(Mio\.?|Millionen)?\s*(?:EUR|Euro|€)/i.exec(t);
+ if(!mu)rows.push(["Jahresumsatz","kein Mindestbetrag im Text lesbar",profil.umsatz_mio==null?"Firma: nichts angegeben":"Firma: "+String(profil.umsatz_mio).replace(".",",")+" Mio. EUR","nicht ablesbar"]);
+ else{var req=deZahl(mu[2])*(mu[3]?1e6:1);var ok=profil.umsatz_mio==null?null:profil.umsatz_mio*1e6>=req;
+  rows.push(["Jahresumsatz","Text: mindestens "+fmtInt(req)+" EUR (Fundstelle: „"+zitatKurz(mu[0],120)+"“)",profil.umsatz_mio==null?"Firma: nichts angegeben":"Firma: "+String(profil.umsatz_mio).replace(".",",")+" Mio. EUR",ok===null?"nicht prüfbar":ok?"erfüllt":"nicht erfüllt"])}
+ var mb=/mindestens\s+(\d[\d.]*)\s+(?:Beschäftigte|Mitarbeiter|Arbeitnehmer|Personen|Fachkräfte)/i.exec(t);
+ if(!mb)rows.push(["Beschäftigte","keine Mindestzahl im Text lesbar",profil.besch==null?"Firma: nichts angegeben":"Firma: "+profil.besch,"nicht ablesbar"]);
+ else{var rb=deZahl(mb[1]);rows.push(["Beschäftigte","Text: mindestens "+rb,profil.besch==null?"Firma: nichts angegeben":"Firma: "+profil.besch,profil.besch==null?"nicht prüfbar":profil.besch>=rb?"erfüllt":"nicht erfüllt"])}
+ var mr=/(zwei|drei|vier|fünf|sechs|\d+)\s*(?:\(\d+\)\s*)?(?:vergleichbare[n]?\s+|geeignete[n]?\s+)?Referenzen/i.exec(t);
+ if(!mr)rows.push(["Referenzen","keine Anzahl im Text lesbar",profil.refs==null?"Firma: nichts angegeben":"Firma: "+profil.refs,"nicht ablesbar"]);
+ else{var rr=ZAHLW[mr[1].toLowerCase()]||parseInt(mr[1],10);rows.push(["Referenzen","Text: "+rr+" Referenzen (Fundstelle: „"+zitatKurz(mr[0],80)+"“)",profil.refs==null?"Firma: nichts angegeben":"Firma: "+profil.refs,profil.refs==null?"nicht prüfbar":profil.refs>=rr?"Anzahl erreicht (Inhalt nicht prüfbar)":"nicht erreicht"])}
+ var genannt=ZERTS.filter(function(z){return ZERT_RE[z].test(t)});
+ genannt.forEach(function(z){var hat=profil.zertifikate.indexOf(z)>=0;rows.push(["Zertifikat "+z,"im Text genannt (ob Pflicht oder gleichwertig ersetzbar, ist nicht geprüft)",hat?"Firma: hat "+z:"Firma: nicht angegeben",hat?"Firma hat es":"Firma hat es nicht angegeben"])});
+ var offen=profil.zertifikate.filter(function(z){return genannt.indexOf(z)<0});
+ if(offen.length)rows.push(["Weitere Zertifikate der Firma ("+offen.join(", ")+")","im Text nicht genannt","Firma: "+offen.join(", "),"nicht ablesbar"]);
+ if(!genannt.length&&!offen.length)rows.push(["Zertifikate","im Text keine der bekannten Normen genannt (ISO 9001, 14001, 45001, RAL-GZ 902)","Firma: keine angegeben","nicht ablesbar"]);
+ return rows}
+/* ---------- Gesamtberechnung ---------- */
+var PRESET_SIG={};
+function sigOf(p){return JSON.stringify([p.sitz.ort,p.radius_km,p.cpv_praefixe.slice().sort(),p.sigL.slice().sort(),p.sigO.slice().sort(),p.laufzeit_min_monate,p.wert_min_eur,p.wert_max_eur,p.zertifikate.slice().sort()])}
+function presetProfile(p){var f=PRESETFORM[p.id];var q=JSON.parse(JSON.stringify(p));
+ q.sigL=f.leist.filter(function(k){return LEISTUNG[k].sig});q.sigO=f.obj.filter(function(k){return OBJEKT[k].sig});return q}
+DATA.profile.forEach(function(p){PRESET_SIG[sigOf(presetProfile(p))]=p.id});
+function berechne(profil,stichtag,opts){opts=opts||{};
+ var von=isoAdd(stichtag,-14),meta=DATA.meta;
+ var fenster=DATA.notices.filter(function(b){return von<=b.d&&b.d<=stichtag});
+ var dedup=dedupe(fenster);
+ var fp=(meta.fenster||"").split(" bis ");var unv=!!fp[0]&&(von<fp[0]||stichtag>fp[1]);
+ var gem=[{name:"Alle Bekanntmachungen Deutschland, CPV 909* (im Schnappschuss)",anzahl:meta.anzahl_gesamt,notiz:meta.schnappschuss},
+  {name:"veröffentlicht "+de(von).slice(0,6)+" bis "+de(stichtag),anzahl:fenster.length,notiz:""},
+  {name:"ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel)",anzahl:dedup.length,notiz:""}];
+ var tr=trichter(profil,dedup,stichtag),treffer=tr.menge;
+ var kiPid=opts.keinKI?null:(PRESET_SIG[sigOf(profil)]||null);
+ var items=treffer.map(function(b){var u=null,quelleKI=false;
+  if(kiPid&&DATA.ki[b.nr]&&DATA.ki[b.nr][kiPid]){u=DATA.ki[b.nr][kiPid];quelleKI=true}else u=platzhalter(profil,b);
+  return {b:b,u:u,regel:regelUrteil(profil,b),ki:quelleKI}});
+ var nKi=items.filter(function(x){return x.ki}).length,nFallback=items.length-nKi;
+ var counts=URTEILE.map(function(k){return items.filter(function(x){return x.u.urteil===k}).length});
+ var stufen=tr.stufen.slice();
+ var kiname=kiPid?"KI-Urteil: passt / unklar / passt nicht":"Stichwortregel (keine KI): passt / unklar / passt nicht";
+ stufen.push({name:kiname,anzahl:items.length,notiz:counts.join(" / ")+((kiPid&&nFallback)?" ("+nFallback+" ohne gespeichertes KI-Urteil: Stichwortregel)":"")});
+ var karten=[],nv=0;
+ items.forEach(function(x){if(x.u.urteil==="passt nicht")return;var vg=x.b.vorg||null;if(vg)nv++;
+  var c=inhalt(profil,x.b,x.u,x.regel[0]+": "+x.regel[1],vg,stichtag);karten.push({c:c,card:adaptiveCard(c),b:x.b,u:x.u,regel:x.regel,ki:x.ki})});
+ stufen.push({name:"Nachrichten erzeugt (passt + unklar)",anzahl:karten.length,notiz:""});
+ stufen.push({name:"davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig)",anzahl:nv,notiz:"bei "+(karten.length-nv)+" von "+karten.length+" Nachrichten kein eindeutiger Treffer"});
+ return {gemeinsam:gem,stufen:stufen,items:items,karten:karten,kiPid:kiPid,unvollstaendig:unv,von:von}}
+window.__demo={berechne:berechne,presetProfile:presetProfile,adaptiveCard:adaptiveCard,errors:ERRORS,data:DATA,eignungsabgleich:eignungsabgleich};
+/* ---------- Oberfläche ---------- */
+var S={sw:null,sel:null,kanal:"teams",jsonOpen:false};
+function buildForm(){
+ $("sitz").innerHTML=Object.keys(DATA.sitze).map(function(c){return '<option value="'+c+'">'+esc(DATA.sitze[c].name)+"</option>"}).join("");
+ $("leistungen").innerHTML=Object.keys(LEISTUNG).map(function(k){return '<label class="cb"><input type="checkbox" data-g="leist" value="'+k+'">'+esc(LEISTUNG[k].label)+"</label>"}).join("");
+ $("objekte").innerHTML=Object.keys(OBJEKT).map(function(k){return '<label class="cb"><input type="checkbox" data-g="obj" value="'+k+'">'+esc(OBJEKT[k].label)+"</label>"}).join("");
+ $("cpvs").innerHTML=CPVS.map(function(c){return '<label class="cb"><input type="checkbox" data-g="cpv" value="'+c[0]+'">'+esc(c[1])+"</label>"}).join("");
+ $("zerts").innerHTML='<fieldset><legend style="font-size:16px;font-weight:500;color:var(--grey)">Zertifikate der Firma</legend>'+ZERTS.map(function(z){return '<label class="cb"><input type="checkbox" data-g="zert" value="'+esc(z)+'">'+esc(z)+"</label>"}).join("")+"</fieldset>"}
+function checked(g){return Array.prototype.map.call(document.querySelectorAll('input[data-g="'+g+'"]:checked'),function(i){return i.value})}
+function setChecked(g,vals){Array.prototype.forEach.call(document.querySelectorAll('input[data-g="'+g+'"]'),function(i){i.checked=vals.indexOf(i.value)>=0})}
+function numOrNull(id){var v=$(id).value.trim().replace(",",".");if(v==="")return null;var n=parseFloat(v);return isNaN(n)?null:n}
+function readProfile(){
+ var sc=$("sitz").value,sitz=DATA.sitze[sc],L=checked("leist"),O=checked("obj");
+ var swL=S.sw?S.sw.L:[].concat.apply([],L.map(function(k){return LEISTUNG[k].sw}));
+ var swO=S.sw?S.sw.O:[].concat.apply([],O.map(function(k){return OBJEKT[k].sw}));
+ var wmin=numOrNull("wmin"),wmax=numOrNull("wmax"),um=numOrNull("umsatz");
+ var name=$("name").value.trim()||"Beispiel GmbH (erfunden)";
+ return {id:"LIVE",name:name,sitz:{ort:sitz.name,lat:sitz.lat,lon:sitz.lon},radius_km:+$("radius").value,cpv_praefixe:checked("cpv"),
+  leistungen:L.map(function(k){return LEISTUNG[k].label}),leistung_stichworte:swL,objektarten:O.map(function(k){return OBJEKT[k].label}),objekt_stichworte:swO,
+  wert_min_eur:wmin==null?0:wmin,wert_max_eur:wmax==null?1e15:wmax,laufzeit_min_monate:+$("laufzeit").value,zertifikate:checked("zert"),
+  umsatz_mio:um,besch:numOrNull("besch"),refs:numOrNull("refs"),
+  sigL:L.filter(function(k){return LEISTUNG[k].sig}),sigO:O.filter(function(k){return OBJEKT[k].sig})}}
+function setSigFromPreset(p){}
+function laden(pid){var p=DATA.profile.filter(function(x){return x.id===pid})[0],f=PRESETFORM[pid];
+ $("name").value=p.name;
+ var code=Object.keys(DATA.sitze).filter(function(c){return DATA.sitze[c].name===p.sitz.ort})[0];$("sitz").value=code;
+ $("radius").value=p.radius_km;$("laufzeit").value=p.laufzeit_min_monate;
+ $("wmin").value=p.wert_min_eur;$("wmax").value=p.wert_max_eur;
+ $("umsatz").value="";$("besch").value="";$("refs").value="";
+ setChecked("leist",f.leist);setChecked("obj",f.obj);setChecked("cpv",p.cpv_praefixe);setChecked("zert",p.zertifikate);
+ S.sw={L:p.leistung_stichworte.slice(),O:p.objekt_stichworte.slice()};
+ $("stichtag").value="2026-10-16";S.sel=null;rechne()}
+function tag(u){return '<span class="tag '+(u==="passt nicht"?"pn":u)+'">'+esc(u)+"</span>"}
+function unb(html){return html.replace(/(im Text, nicht im Datenfeld|Datenfeld|nicht angegeben|nicht berechenbar|nicht genannt|nicht ablesbar|weder im Datenfeld noch im Text gefunden|im Text keine Laufzeitangabe gefunden|NUTS nicht angegeben)/g,function(m){
+  if(m==="im Text, nicht im Datenfeld")return '<mark class="txt">'+m+"</mark>";if(m==="Datenfeld")return '<span class="df">'+m+"</span>";return '<mark class="unb">'+m+"</mark>"})}
+var HILFE={"Gebäudereinigungs-CPV":"Passt die Art der Leistung (Reinigung)?","Oberpfalz":"Liegt der Ort in der Oberpfalz?","Radius":"Ist der Ort nah genug am Firmensitz?","Abgabefrist":"Kann man noch ein Angebot abgeben?","Laufzeit mindestens":"Läuft der Vertrag lang genug?","Info: Wert":"Nur zur Information, kein Filter.","KI-Urteil":"Gespeichertes KI-Urteil, kein Fakt.","Stichwortregel":"Einfache Stichwortsuche im Text, keine KI.","Nachrichten erzeugt":"Für „passt“ und „unklar“ entsteht eine Nachricht.","davon mit Vorgänger":"Vertragsliste des Prototyps; bisher nie ausgelöst.","Alle Bekanntmachungen":"Alle deutschen Bekanntmachungen mit Reinigungs-CPV seit 01.09.2026.","veröffentlicht":"Nur die letzten 14 Tage vor dem Stichtag.","ohne Mehrfach":"Doppelte Veröffentlichungen zählen einmal."};
+function hilfe(n){for(var k in HILFE){if(n.indexOf(k)===0)return HILFE[k]}return ""}
+function renderTrichter(r,profil){
+ var rows=r.gemeinsam.concat(r.stufen),mx=rows[0].anzahl||1,nullSeen=false,h='<h3>Der Trichter</h3><p class="bem" style="margin:0 0 8px">Balkenlänge gestaucht (Wurzelskala), damit kleine Zahlen sichtbar bleiben.</p>';
+ rows.forEach(function(s,i){var cls="stufe",info=s.name.indexOf("Info:")===0,ki=s.name.indexOf("KI-Urteil")===0||s.name.indexOf("Stichwortregel")===0;
+  if(info)cls+=" info";if(ki)cls+=" ki";
+  var ende=false;if(!nullSeen&&s.anzahl===0&&!info&&s.name.indexOf("davon mit")!==0&&s.name.indexOf("Nachrichten erzeugt")!==0&&!ki){ende=true;nullSeen=true}if(nullSeen&&!ende)cls+=" null";if(ende)cls+=" ende";
+  var w=Math.max(1,Math.round(100*Math.sqrt(s.anzahl/mx)));
+  h+='<div class="'+cls+'"><div class="n">'+s.anzahl+'</div><div class="t">'+esc(s.name)+(hilfe(s.name)?"<small>"+esc(hilfe(s.name))+"</small>":"")+'</div><div class="bar" style="width:'+w+'%"></div>'+(s.notiz?'<div class="no">'+esc(s.notiz)+(ende?" · hier ist Schluss":"")+"</div>":(ende?'<div class="no">hier ist Schluss</div>':""))+"</div>"});
+ if(r.unvollstaendig)h+='<p class="bem"><mark class="unb">Auszug unvollständig</mark> Für diesen Stichtag fehlen im Auszug die Bekanntmachungen außerhalb der Oberpfalz; die Zahlen vor der Oberpfalz-Stufe sind zu klein. Ab der Oberpfalz-Stufe ist der Auszug vollständig.</p>';
+ $("trichter").innerHTML=h}
+function renderTreffer(r,profil){
+ var k=r.karten,el=$("treffer");
+ var n=k.length,erg=$("ergebnis");
+ if(!profil.cpv_praefixe.length){erg.innerHTML="Bitte mindestens eine Branche (CPV) auswählen.";el.innerHTML="";return}
+ erg.innerHTML=n?'Für <b>'+esc(profil.name)+'</b> bleiben <b>'+n+'</b> passende Bekanntmachung'+(n===1?"":"en")+" übrig.":'Für <b>'+esc(profil.name)+'</b> bleibt <b>keine</b> Bekanntmachung übrig.';
+ if(!n){var stop=null,all=r.stufen;for(var i=0;i<all.length;i++){if(all[i].anzahl===0&&all[i].name.indexOf("Info:")!==0){stop=all[i];break}}
+  el.innerHTML='<div class="leer"><b>Kein Treffer. Das ist ein normales Ergebnis.</b>Im Auszug gibt es nur wenige Bekanntmachungen in der Oberpfalz.'+(stop?" Ab hier blieb nichts übrig: <i>"+esc(stop.name)+"</i>.":"")+" Probieren Sie einen größeren Radius, eine kürzere Mindestlaufzeit oder ein Beispiel (P1, P2).</div>";return}
+ if(!k.some(function(x){return x.b.nr===S.sel}))S.sel=k[0].b.nr;
+ el.innerHTML=k.map(function(x){var c=x.c;var sel=x.b.nr===S.sel;
+  return '<button type="button" class="tcard" aria-pressed="'+sel+'" data-nr="'+esc(x.b.nr)+'"><p class="tt">'+esc(c.titel)+'</p><p class="ta">'+esc(c.auftraggeber)+'</p><div class="tf">'+tag(c.urteil)+'<span>'+(x.ki?"gespeichertes KI-Urteil":"Stichwortregel, keine KI")+'</span><span>Frist: '+unb(esc(c.frist.split(" (")[0]))+'</span><span>'+esc(c.entfernung.replace("Näherung: ","").split(" Luftlinie")[0]||"")+'</span></div><span class="go">'+(sel?"Nachricht unten ansehen":"Nachricht ansehen")+" ›</span></button>"}).join("")}
+function renderCardHtml(card){var h='<div class="ac">';
+ card.body.forEach(function(blk){if(blk.type==="TextBlock"){var cls="tb";if(blk.weight==="Bolder")cls+=" b";if(blk.size==="Medium")cls+=" md";if(blk.size==="Small")cls+=" sm";if(blk.isSubtle)cls+=" sub";if(blk.color)cls+=" c-"+blk.color;if(blk.spacing==="Medium")cls+=" sp";else if(blk.spacing==="None")cls+=" sp0";else cls+=" sp";
+   h+='<p class="'+cls+'">'+unb(esc(blk.text))+"</p>"}
+  else if(blk.type==="FactSet"){h+="<table>"+blk.facts.map(function(f){return "<tr><td>"+esc(f.title)+"</td><td>"+unb(esc(f.value))+"</td></tr>"}).join("")+"</table>"}});
+ (card.actions||[]).forEach(function(a){h+='<a class="act" href="'+esc(a.url)+'" target="_blank" rel="noopener">'+esc(a.title)+"</a>"});return h+"</div>"}
+function renderMailHtml(c){var f=[["Auftraggeber",c.auftraggeber],["Ort",c.ort],["Entfernung",c.entfernung],["Abgabefrist",c.frist],["Laufzeit",c.laufzeit],["Wert",c.wert],["Umfang",c.lose],["Veröffentlicht",c.veroeffentlicht]];
+ var h='<h4>Neue Ausschreibung: '+esc(c.titel)+'</h4><div class="sub">Profil: '+esc(c.profil_name)+"</div><p><b>Fakten aus der Bekanntmachung</b></p><table>"+f.map(function(x){return "<tr><td>"+esc(x[0])+"</td><td>"+unb(esc(x[1]))+"</td></tr>"}).join("")+"</table>";
+ h+='<p><a href="'+esc(c.link)+'" target="_blank" rel="noopener">Bekanntmachung auf TED</a></p>';
+ h+="<p><b>Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)</b><br>"+esc(c.eignung)+". "+esc(c.eignung_hinweis)+"</p>";
+ h+="<p><b>"+esc(c.deutung)+": "+esc(c.urteil)+"</b><br>"+esc(c.begruendung);
+ zitatZeilen(c).forEach(function(z){h+='<br><span class="sub">'+esc(z)+"</span>"});
+ h+="<br>"+unb("Nicht ablesbar: "+esc(c.nicht_ablesbar.join(", ")))+'<br><small class="klein">'+esc(T.KI_HINWEIS)+"</small></p>";
+ if(c.vorgaenger)h+="<p>Vorgänger laut Vertragsliste (Prototyp): "+esc(c.vorgaenger.los_titel)+", Ende der Grundlaufzeit "+esc(c.vorgaenger.ende_grundlaufzeit)+".</p>";
+ return h+'<p class="klein">'+esc(T.HINWEIS)+"<br>"+esc(T.QUELLE)+"</p>"}
+function renderVorschau(r,profil,stichtag){var el=$("vorschau");
+ var x=r.karten.filter(function(k){return k.b.nr===S.sel})[0];
+ if(!x){el.innerHTML='<div class="leer"><b>Noch keine Nachricht.</b>Sobald es einen Treffer gibt, sehen Sie hier die Nachricht.</div>';return}
+ var c=x.c,h='<div class="vorsch">';
+ if(S.kanal==="teams"){
+  h+='<div class="teams"><div class="tbar"># Ausschreibungen<small>Kanal der Firma (Demo-Nachbildung)</small></div><div class="tmsg"><div class="tava" aria-hidden="true">VR</div><div class="tbody"><div class="tname">Vergabe-Radar (Demo-Workflow)<small>'+esc(de(stichtag))+', 08:00</small></div>'+renderCardHtml(x.card.attachments[0].content)+"</div></div></div>"}
+ else{var p=stichtag.split("-"),sommer=(+p[1]>=4&&+p[1]<=10);
+  h+='<div class="mailfenster"><div class="mkopf"><div class="bet">'+esc(mailBetreff(c))+"</div><div><span>Von</span>Vergabe-Radar Demo &lt;demo-radar@example.invalid&gt;</div><div><span>An</span>Beispielbetrieb &lt;betrieb@example.invalid&gt;</div><div><span>Datum</span>"+esc(de(stichtag))+", 08:00 ("+(sommer?"MESZ":"MEZ")+')</div></div><div class="papier">'+renderMailHtml(c)+"</div></div>"}
+ h+='<details id="jsonbox"'+(S.jsonOpen?" open":"")+'><summary>Technische Ansicht: '+(S.kanal==="teams"?"Teams-Karte als JSON (so wird sie gesendet)":"E-Mail als Text (Klartext-Teil)")+"</summary><pre>"+esc(S.kanal==="teams"?JSON.stringify(x.card,null,2):mailText(c))+"</pre></details>";
+ if(x.ki){h+='<div class="kihinweis"><b>Gespeichertes KI-Urteil, nicht Fakt.</b> Dieses Urteil wurde früher einmal von einem Sprachmodell (<code>'+esc(T.KI_MODELL)+'</code>) für genau dieses Beispielprofil erzeugt und liegt in der Datei. Es wird hier nur abgespielt. Die Begründung wurde nicht geprüft, geprüft wurde nur, dass Zitate wörtlich im Text stehen.</div>'}
+ else{h+='<div class="kihinweis"><b>KI-Urteil nur für gespeicherte Beispiele (P1, P2).</b> Für diese frei eingestellte Firma gibt es kein KI-Urteil. Gezeigt wird die einfache Stichwortregel (Stichworte der Leistungen und Gebäudearten im Text). Sie ist grob und kann irren. Neue KI-Aufrufe gibt es in dieser Seite nicht.</div>'}
+ var ez=eignungsabgleich(profil,x.b);
+ h+='<div class="zusatz"><h3>Zusatz der Live-Demo: Passen die Angaben der Firma zu den Eignungsangaben im Text?</h3><p class="bem" style="margin:0 0 8px">Nicht Teil der Nachricht. Einfache Textsuche, keine KI; was der Text nicht sagt, bleibt „nicht ablesbar“. Schwellen stehen meist in den Vergabeunterlagen, nicht in der Bekanntmachung.</p><table><tr><th>Kriterium</th><th>Was der Text sagt</th><th>Firma</th><th>Ergebnis</th></tr>'+ez.map(function(r){return "<tr><td>"+esc(r[0])+"</td><td>"+esc(r[1])+"</td><td>"+esc(r[2])+"</td><td>"+unb(esc(r[3]))+"</td></tr>"}).join("")+"</table></div>";
+ el.innerHTML=h+"</div>";
+ var jb=$("jsonbox");if(jb)jb.addEventListener("toggle",function(){S.jsonOpen=jb.open})}
+function rechne(){
+ $("radiusO").textContent=$("radius").value+" km";var lz=+$("laufzeit").value;$("laufzeitO").textContent=lz?lz+" Monate":"egal";
+ var st=$("stichtag").value||"2026-10-16";
+ var profil=readProfile(),r=berechne(profil,st);
+ renderTrichter(r,profil);renderTreffer(r,profil);renderVorschau(r,profil,st);S.last={r:r,profil:profil,st:st}}
+function init(){
+ var m=DATA.meta;
+ $("datenhinweis").innerHTML="<b>Daten:</b> echte Bekanntmachungen aus TED (EU-Amtsblatt-Datenbank), Auszug von "+m.anzahl_in_kopie+" der "+m.anzahl_gesamt+" Bekanntmachungen (Abruf "+esc(de((m.downloaded_at||"2026-11-06").slice(0,10)))+"), „heute“ ist der Stichtag (Standard 16.10.2026). Was nicht im Auszug steht, wird nur gezählt.";
+ $("quelle").textContent=T.QUELLE;
+ buildForm();
+ $("form").addEventListener("input",function(e){var t=e.target;if(t&&t.getAttribute&&(t.getAttribute("data-g")==="leist"||t.getAttribute("data-g")==="obj"))S.sw=null;rechne()});
+ $("form").addEventListener("change",function(){rechne()});
+ $("p1").addEventListener("click",function(){laden("P1")});$("p2").addEventListener("click",function(){laden("P2")});
+ $("treffer").addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("button.tcard");if(!b)return;S.sel=b.getAttribute("data-nr");rechne();var nb=document.querySelector('button.tcard[aria-pressed="true"]');if(nb&&nb.focus)nb.focus({preventScroll:true});var v=$("schritt3");if(v&&v.scrollIntoView)v.scrollIntoView({behavior:"smooth",block:"start"})});
+ Array.prototype.forEach.call(document.querySelectorAll(".seg button"),function(b){b.addEventListener("click",function(){S.kanal=b.getAttribute("data-k");Array.prototype.forEach.call(document.querySelectorAll(".seg button"),function(x){x.setAttribute("aria-checked",x===b?"true":"false")});rechne()})});
+ laden("P1")}
+/* Darstellung (Hell/Dunkel/Automatisch) */
+(function(){var r=document.documentElement,bs=document.querySelectorAll(".theme button");function m(){var t=r.getAttribute("data-theme")||"auto";bs.forEach(function(b){b.setAttribute("aria-checked",b.dataset.t===t?"true":"false")})}
+ bs.forEach(function(b){b.addEventListener("click",function(){var t=b.dataset.t;if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);try{if(t==="auto")localStorage.removeItem("vr-theme");else localStorage.setItem("vr-theme",t)}catch(e){}m()})});m()})();
+init();
+window.__demo.ui={laden:laden,rechne:rechne,state:S,readProfile:readProfile,setForm:function(o){if(o.sitz)$("sitz").value=o.sitz;if(o.radius!=null)$("radius").value=o.radius;if(o.laufzeit!=null)$("laufzeit").value=o.laufzeit;S.sw=null;rechne()}};
+/* Selbsttest: Aufruf mit #selftest, Ergebnis als JSON im Element #selftest */
+if(location.hash==="#selftest"){
+ var out={};
+ try{
+  ["P1","P2"].forEach(function(pid){var p=presetProfile(DATA.profile.filter(function(x){return x.id===pid})[0]);var r=berechne(p,"2026-10-16");var r0=berechne(p,"2026-10-16",{keinKI:true});
+   out[pid]={gemeinsam:r.gemeinsam,stufen:r.stufen,kiPid:r.kiPid,karten:r.karten.map(function(k){return {nr:k.b.nr,card:k.card,urteil:k.u.urteil,regel:k.regel[0],ki:k.ki}}),
+    ohneKI:{stufen:r0.stufen,karten:r0.karten.map(function(k){return {nr:k.b.nr,card:k.card,urteil:k.u.urteil}})}}});
+  function frei(sitzCode,radius,lz,extra){var p=presetProfile(DATA.profile[0]);p.id="LIVE";p.sitz={ort:DATA.sitze[sitzCode].name,lat:DATA.sitze[sitzCode].lat,lon:DATA.sitze[sitzCode].lon};p.radius_km=radius;p.laufzeit_min_monate=lz;p.name="Testfirma";p.umsatz_mio=2.5;p.besch=40;p.refs=3;p.zertifikate=["ISO 9001"];return p}
+  var cases={};
+  [["DE232",30,24],["DE232",40,24],["DE232",60,0],["DE236",30,24]].forEach(function(a){var p=frei(a[0],a[1],a[2]);var r=berechne(p,"2026-10-16");
+   cases[a.join("_")]={stufen:r.stufen.map(function(s){return s.name+": "+s.anzahl}),karten:r.karten.map(function(k){return {nr:k.b.nr,urteil:k.u.urteil,ki:k.ki,ent:k.c.entfernung,ez:eignungsabgleich(p,k.b)}})}});
+  out.cases=cases;
+  var p3=frei("DE239",60,12);out.stichtag_alt=berechne(p3,"2026-10-30").stufen.map(function(s){return s.name+": "+s.anzahl});
+  out.stichtag_fruehe=berechne(p3,"2026-09-20").stufen.map(function(s){return s.name+": "+s.anzahl});
+ }catch(e){out.fehler=String(e)+" "+(e.stack||"")}
+ out.errors=ERRORS;
+ var pre=document.createElement("pre");pre.id="selftest";pre.textContent=JSON.stringify(out);document.body.appendChild(pre);
+}
+})();
+</script></body></html>

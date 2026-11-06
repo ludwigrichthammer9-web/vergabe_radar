@@ -1,18 +1,26 @@
-"""Demo Profil-Match: eigenständige Vorschauseite (HTML, ohne Skripte, ohne externe Ressourcen)."""
+"""Demo Profil-Match: eigenständige Vorschauseite (HTML, nur ein kleines Skript für den Hell/Dunkel-Umschalter, ohne externe Ressourcen)."""
 
 from html import escape
 
 from nachrichten import HINWEIS, KI_HINWEIS, QUELLE, mail_html_fragment, zitat_zeilen
 
+HEADJS = '<meta name="color-scheme" content="light dark"><script>try{var t=localStorage.getItem("vr-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>'
+CTRL = '<div class="theme" role="radiogroup" aria-label="Darstellung"><button type="button" role="radio" aria-checked="true" data-t="auto">Automatisch</button><button type="button" role="radio" aria-checked="false" data-t="light">Hell</button><button type="button" role="radio" aria-checked="false" data-t="dark">Dunkel</button></div>'
+BODYJS = '<script>(function(){var r=document.documentElement,bs=document.querySelectorAll(".theme button");function m(){var t=r.getAttribute("data-theme")||"auto";bs.forEach(function(b){b.setAttribute("aria-checked",b.dataset.t===t?"true":"false")})}bs.forEach(function(b){b.addEventListener("click",function(){var t=b.dataset.t;if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);try{if(t==="auto")localStorage.removeItem("vr-theme");else localStorage.setItem("vr-theme",t)}catch(e){}m()})});m()})()</script>'
+
 CSS = """
-:root{color-scheme:light dark;--bg:#F2F2F7;--card:#fff;--ink:#1C1C1E;--grey:#6C6C70;--blue:#007AFF;--green:#34C759;--orange:#FF9500;--red:#FF3B30;--sep:rgba(60,60,67,.16);
---fill:rgba(120,120,128,.12);--inner:#F2F2F7;--glass:rgba(242,242,247,.78);--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);--ease:cubic-bezier(.2,.8,.2,1);--accent:#5856D6;--tagg:#1E7B3A;--tago:#A15C00;--tagr:#C0261C}
-@media (prefers-color-scheme:dark){:root{--bg:#000;--card:#1C1C1E;--ink:#F2F2F7;--grey:#AEAEB2;--blue:#0A84FF;--sep:rgba(235,235,245,.16);--fill:rgba(120,120,128,.24);--inner:#2C2C2E;
---glass:rgba(28,28,30,.72);--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.5);--accent:#7D7AFF;--tagg:#30D158;--tago:#FFB340;--tagr:#FF6961}}
+:root{color-scheme:light dark;--bg:#F2F2F7;--card:#fff;--ink:#1C1C1E;--grey:#6C6C70;--blue:#007AFF;--green:#34C759;--orange:#FF9500;--red:#FF3B30;--sep:rgba(60,60,67,.16);--fill:rgba(120,120,128,.12);--inner:#F2F2F7;--glass:rgba(242,242,247,.78);--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);--ease:cubic-bezier(.2,.8,.2,1);--accent:#5856D6;--tagg:#1E7B3A;--tago:#A15C00;--tagr:#C0261C;--gbg:rgba(52,199,89,.16);--obg:rgba(255,149,0,.16);--rbg:rgba(255,59,48,.14);--paper:#fff;--paperink:#1C1C1E;--paperlink:#0066CC}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark;--bg:#000;--card:#1C1C1E;--ink:#F2F2F7;--grey:#AEAEB2;--blue:#0A84FF;--green:#30D158;--orange:#FF9F0A;--red:#FF453A;--sep:rgba(235,235,245,.16);--fill:rgba(120,120,128,.24);--inner:#2C2C2E;--glass:rgba(28,28,30,.72);--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.5);--accent:#7D7AFF;--tagg:#30D158;--tago:#FFB340;--tagr:#FF6961;--gbg:rgba(48,209,88,.2);--obg:rgba(255,159,10,.2);--rbg:rgba(255,69,58,.2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#000;--card:#1C1C1E;--ink:#F2F2F7;--grey:#AEAEB2;--blue:#0A84FF;--green:#30D158;--orange:#FF9F0A;--red:#FF453A;--sep:rgba(235,235,245,.16);--fill:rgba(120,120,128,.24);--inner:#2C2C2E;--glass:rgba(28,28,30,.72);--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.5);--accent:#7D7AFF;--tagg:#30D158;--tago:#FFB340;--tagr:#FF6961;--gbg:rgba(48,209,88,.2);--obg:rgba(255,159,10,.2);--rbg:rgba(255,69,58,.2)}}
 *{box-sizing:border-box}
 body{font:15px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;margin:0;background:var(--bg);color:var(--ink)}
 a{color:var(--blue)}
-.banner{position:sticky;top:0;z-index:20;background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--sep);color:var(--red);padding:12px 24px;font-weight:600;font-size:14px}
+.banner{position:sticky;top:0;z-index:20;background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--sep);color:var(--red);padding:12px 24px;font-weight:600;font-size:14px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.theme{display:inline-flex;gap:2px;padding:2px;background:var(--fill);border:1px solid var(--sep);border-radius:12px;font-weight:500}
+.theme button{min-height:44px;padding:0 14px;border:0;border-radius:10px;background:transparent;color:var(--ink);font:inherit;font-weight:500;font-size:14px;cursor:pointer;filter:none;transform:none}
+.theme button:hover{background:var(--sep);filter:none}
+.theme button[aria-checked=true]{background:var(--ink);color:var(--bg);font-weight:600;box-shadow:var(--shadow)}
 h1{font:700 34px/1.12 -apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,"Segoe UI",sans-serif;letter-spacing:-.02em;margin:32px 24px 8px}
 h2{font-size:22px;font-weight:700;letter-spacing:-.01em;margin:0 0 16px} h3{letter-spacing:-.005em}
 .sub{margin:0 24px 16px;color:var(--grey);font-size:13px}
@@ -34,13 +42,13 @@ dl{margin:0} dt{font-weight:600;margin-top:8px} dd{margin:0}
 :focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:8px}
 details{background:var(--card);border-radius:14px;box-shadow:var(--shadow);margin:8px 0;padding:0 16px 8px}
 summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center;transition:color .2s var(--ease)} summary:hover{color:var(--blue)}
-.mail{background:#fff;color:#1C1C1E;border-radius:12px;padding:16px;margin-top:4px} .mail a{color:#0066CC}
+.mail{color-scheme:light;background:var(--paper);color:var(--paperink);border-radius:12px;padding:16px;margin-top:4px} .mail a{color:var(--paperlink)}
 table.v{border-collapse:separate;border-spacing:0;font-size:12px;width:100%} table.v td,table.v th{border-bottom:1px solid var(--sep);padding:8px 12px;text-align:left;vertical-align:top}
 table.v th{color:var(--grey);font-weight:600}
 table.v tbody tr:hover,table.v tr:hover td{background:var(--fill)}
 footer{margin:24px;font-size:12px;color:var(--grey)}
 .tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:11px;font-weight:600}
-.tag.passt{background:rgba(52,199,89,.16);color:var(--tagg)}.tag.unklar{background:rgba(255,149,0,.16);color:var(--tago)}.tag.pn{background:rgba(255,59,48,.14);color:var(--tagr)}
+.tag.passt{background:var(--gbg);color:var(--tagg)}.tag.unklar{background:var(--obg);color:var(--tago)}.tag.pn{background:var(--rbg);color:var(--tagr)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 """
 
@@ -93,8 +101,8 @@ def _trichter_html(gemeinsam, stufen):
 
 def baue(daten):
     """daten: dict mit stichtag, fenster, quelle, gemeinsam, profile=[{profil, stufen, karten(list c), mails(list (betreff, c))}], vergleich."""
-    teile = [f"<!DOCTYPE html><html lang='de'><head><meta charset='utf-8'><title>Demo Profil-Match mit KI-Stufe</title><style>{CSS}</style></head><body>",
-             "<div class='banner'>Demo zur Veranschaulichung der Datenübergabe; kein Produkt, keine Nachfrage belegt.</div>",
+    teile = [f"<!DOCTYPE html><html lang='de'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>{HEADJS}<title>Demo Profil-Match mit KI-Stufe</title><style>{CSS}</style></head><body>",
+             "<div class='banner'><span>Demo zur Veranschaulichung der Datenübergabe; kein Produkt, keine Nachfrage belegt.</span>" + CTRL + "</div>",
              "<h1>Profil-Match mit KI-Stufe: Treffer landen im Arbeitswerkzeug (Demo)</h1>",
              f"<p class='sub'>Wiedergabe aus lokalen TED-Daten (Schnappschuss {escape(daten['quelle'])}), festes „heute“: {escape(daten['stichtag'])}, "
              f"Veröffentlichungen der letzten {daten['fenster']} Tage. Nichts wurde gesendet. Erfundene Profile, öffentliche Auftraggeber.</p>"]
@@ -117,5 +125,5 @@ def baue(daten):
                  "Keine Referenz durch einen Menschen; beide Urteile können falsch sein.</p>"
                  "<table class='v'><tr><th>Profil</th><th>Bekanntmachung</th><th>Titel</th><th>KI</th><th>Regel</th><th>gleich</th></tr>" + zeilen + "</table></section>")
     teile.append(f"<footer>{escape(QUELLE)}. Lizenz: TED-Daten sind laut Rechtshinweis der TED-Seite frei wiederverwendbar mit Quellenangabe "
-                 "(Wortlaut selbst prüfen). Hinweis: " + escape(HINWEIS) + "</footer></body></html>")
+                 "(Wortlaut selbst prüfen). Hinweis: " + escape(HINWEIS) + "</footer>" + BODYJS + "</body></html>")
     return "\n".join(teile)
