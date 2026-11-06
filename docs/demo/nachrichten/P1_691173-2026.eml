@@ -8,9 +8,9 @@ Message-ID: <demo-P1-691173-2026@example.invalid>
 X-Demo: Veranschaulichung, nicht gesendet
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============3778615721701085381=="
+ boundary="===============1927937841874527104=="
 
---===============3778615721701085381==
+--===============1927937841874527104==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -21,31 +21,49 @@ Profil: Beispiel Geb=C3=A4udeservice Oberpfalz GmbH (erfunden)
 FAKTEN AUS DER BEKANNTMACHUNG
 Auftraggeber: Freistaat Bayern vertreten durch das Bayerische Landesamt f=C3=
 =BCr Steuern - Zentrale Vergabestelle -
-Ort: Schwandorf (DE239 Schwandorf); Luftlinie ca. 0 km von Schwandorf (N=C3=
-=A4herung)
+Ort: Schwandorf (Datenfeld); zus=C3=A4tzlich im Text, nicht im Datenfeld: Neu=
+nburg vorm Wald; Region laut Datenfeld: DE239 Schwandorf; die Orte im Text we=
+ichen vom Datenfeld ab, einzelne Objekte k=C3=B6nnen weit au=C3=9Ferhalb der =
+Region liegen
+Entfernung: N=C3=A4herung: unter 5 km Luftlinie von Schwandorf zum Bezugspunk=
+t DE239 (Schwandorf), nicht zum Objekt
 Abgabefrist: 11.11.2026 (noch 26 Tage ab 16.10.2026)
-Laufzeit: im Datenfeld nicht angegeben (ggf. im Text)
+Laufzeit: Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.04.202=
+7, Ende 31.03.2033; im Text, nicht im Datenfeld: =E2=80=9EDer jeweilige Vertr=
+ag tritt am 01.04.2027 in Kraft und gilt zun=C3=A4chst bis zum 31.03.2030.=E2=
+=80=9C =E2=80=9EDer Vertrag verl=C3=A4ngert sich je um ein weiteres Jahr, wen=
+n er nicht mit einer Frist von sechs Monaten vor Vertragsende gek=C3=BCndigt =
+wird und endet sp=C3=A4testens mit Ablauf des 31.03.2033.=E2=80=9C
 Wert: nicht angegeben
 Umfang: 2 Los(e)
 Ver=C3=B6ffentlicht: 07.10.2026
 Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/691173-2026
 
 VERLANGT LAUT BEKANNTMACHUNG (EIGNUNG, ART DER NACHWEISE)
-Durchschnittsumsatz; Besch=C3=A4ftigtenzahl; Referenzen (Dienstleistungen); s=
-lc-abil-mgmt-supply; slc-suit-auth-mbrshp. Schwellen und Zertifikate: nur sow=
-eit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunte=
-rlagen).
+durchschnittlicher Jahresumsatz; durchschnittliche j=C3=A4hrliche Besch=C3=A4=
+ftigtenzahl; Referenzen zu bestimmten Dienstleistungen; Lieferkettenmanagemen=
+t; Befugnis oder Mitgliedschaft in einer Organisation (Dienstleistungsauftr=
+=C3=A4ge). Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachu=
+ng genannt, sonst nicht ablesbar (Vergabeunterlagen). Bezeichnungen: eigene =
+=C3=9Cbersetzung der eForms-Codeliste selection-criterion (Version 1.0).
 
-EINORDNUNG (DEUTUNG, NICHT FAKT): passt
+KI-DEUTUNG (CLAUDE-SONNET-5-5; VOM SPRACHMODELL ERZEUGT, NICHT FAKT, BEGR=C3=
+=9CNDUNG NICHT GEPR=C3=9CFT): passt
 Unterhalts- und Glasreinigung f=C3=BCr das Finanzamt Schwandorf und die Au=C3=
 =9Fenstelle Neunburg vorm Wald decken sich mit dem Leistungsangebot, und der =
 Leistungsort liegt am Firmensitz bzw. im Radius. Die Vertragslaufzeit von run=
-d drei Jahren erf=C3=BCllt die Mindestlaufzeit. (KI (claude-sonnet-5-5))
-Zitat zu Leistung: "Unterhalts- sowie Glas- und Rahmenreinigung f=C3=BCr das =
-Finanzamt Schwandorf mit Au=C3=9Fenstelle Neunburg vorm Wald."
-Zitat zu Objektart: "Unterhaltsreinigung f=C3=BCr das Finanzamt Schwandorf un=
-d f=C3=BCr die Au=C3=9Fenstelle Neunburg vorm Wald"
+d drei Jahren erf=C3=BCllt die Mindestlaufzeit.
+Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft) zu =E2=80=9ELeistung=E2=80=9C=
+: =E2=80=9EUnterhalts- sowie Glas- und Rahmenreinigung f=C3=BCr das Finanzamt=
+ Schwandorf mit Au=C3=9Fenstelle Neunburg vorm Wald.=E2=80=9C
+Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft) zu =E2=80=9EObjektart=E2=80=
+=9C: =E2=80=9EUnterhaltsreinigung f=C3=BCr das Finanzamt Schwandorf und f=C3=
+=BCr die Au=C3=9Fenstelle Neunburg vorm Wald=E2=80=9C
 Nicht ablesbar: Wert, Zertifikate, Kapazit=C3=A4t, Personal, Tarifbindung
+Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder =
+vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Gepr=C3=BCft wir=
+d nur, dass Zitate w=C3=B6rtlich im Text stehen; die Begr=C3=BCndung selbst w=
+ird nicht gepr=C3=BCft.
 
 ---
 Demo zur Veranschaulichung der Daten=C3=BCbergabe. Kein Rechtsrat, keine Auss=
@@ -53,7 +71,7 @@ age zu Gewinnchancen. Bitte die Bekanntmachung selbst lesen.
 Quelle: TED (Tenders Electronic Daily), Auftragsbekanntmachung; Quellenangabe=
 : =C2=A9 Europ=C3=A4ische Union, https://ted.europa.eu
 
---===============3778615721701085381==
+--===============1927937841874527104==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
@@ -68,12 +86,23 @@ ice Oberpfalz GmbH (erfunden)</div>
 ggeber</td><td>Freistaat Bayern vertreten durch das Bayerische Landesamt f=C3=
 =BCr Steuern - Zentrale Vergabestelle -</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Ort</t=
-d><td>Schwandorf (DE239 Schwandorf); Luftlinie ca. 0 km von Schwandorf (N=C3=
-=A4herung)</td></tr>
+d><td>Schwandorf (Datenfeld); zus=C3=A4tzlich im Text, nicht im Datenfeld: Ne=
+unburg vorm Wald; Region laut Datenfeld: DE239 Schwandorf; die Orte im Text w=
+eichen vom Datenfeld ab, einzelne Objekte k=C3=B6nnen weit au=C3=9Ferhalb der=
+ Region liegen</td></tr>
+<tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Entfer=
+nung</td><td>N=C3=A4herung: unter 5 km Luftlinie von Schwandorf zum Bezugspun=
+kt DE239 (Schwandorf), nicht zum Objekt</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Abgabe=
 frist</td><td>11.11.2026 (noch 26 Tage ab 16.10.2026)</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Laufze=
-it</td><td>im Datenfeld nicht angegeben (ggf. im Text)</td></tr>
+it</td><td>Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.04.20=
+27, Ende 31.03.2033; im Text, nicht im Datenfeld: =E2=80=9EDer jeweilige Vert=
+rag tritt am 01.04.2027 in Kraft und gilt zun=C3=A4chst bis zum 31.03.2030.=
+=E2=80=9C =E2=80=9EDer Vertrag verl=C3=A4ngert sich je um ein weiteres Jahr, =
+wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gek=C3=BCndi=
+gt wird und endet sp=C3=A4testens mit Ablauf des 31.03.2033.=E2=80=9C</td></t=
+r>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Wert</=
 td><td>nicht angegeben</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Umfang=
@@ -83,28 +112,36 @@ td><td>nicht angegeben</td></tr>
 </table>
 <p><a href=3D'https://ted.europa.eu/de/notice/-/detail/691173-2026'>Bekanntma=
 chung auf TED</a></p>
-<p><b>Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)</b><br>Durchs=
-chnittsumsatz; Besch=C3=A4ftigtenzahl; Referenzen (Dienstleistungen); slc-abi=
-l-mgmt-supply; slc-suit-auth-mbrshp. Schwellen und Zertifikate: nur soweit im=
- Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen=
-).</p>
-<p><b>Einordnung (Deutung, nicht Fakt): passt</b><br>Unterhalts- und Glasrein=
-igung f=C3=BCr das Finanzamt Schwandorf und die Au=C3=9Fenstelle Neunburg vor=
-m Wald decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Fi=
-rmensitz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erf=C3=BCl=
-lt die Mindestlaufzeit. <i>(KI (claude-sonnet-5-5))</i>
-<br><span style=3D'color:#555'>Zitat zu Leistung: =E2=80=9EUnterhalts- sowie =
-Glas- und Rahmenreinigung f=C3=BCr das Finanzamt Schwandorf mit Au=C3=9Fenste=
-lle Neunburg vorm Wald.=E2=80=9C</span>
-<br><span style=3D'color:#555'>Zitat zu Objektart: =E2=80=9EUnterhaltsreinigu=
-ng f=C3=BCr das Finanzamt Schwandorf und f=C3=BCr die Au=C3=9Fenstelle Neunbu=
-rg vorm Wald=E2=80=9C</span>
+<p><b>Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)</b><br>durchs=
+chnittlicher Jahresumsatz; durchschnittliche j=C3=A4hrliche Besch=C3=A4ftigte=
+nzahl; Referenzen zu bestimmten Dienstleistungen; Lieferkettenmanagement; Bef=
+ugnis oder Mitgliedschaft in einer Organisation (Dienstleistungsauftr=C3=A4ge=
+). Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genan=
+nt, sonst nicht ablesbar (Vergabeunterlagen). Bezeichnungen: eigene =C3=9Cber=
+setzung der eForms-Codeliste selection-criterion (Version 1.0).</p>
+<p><b>KI-Deutung (claude-sonnet-5-5; vom Sprachmodell erzeugt, nicht Fakt, Be=
+gr=C3=BCndung nicht gepr=C3=BCft): passt</b><br>Unterhalts- und Glasreinigung=
+ f=C3=BCr das Finanzamt Schwandorf und die Au=C3=9Fenstelle Neunburg vorm Wal=
+d decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Firmens=
+itz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erf=C3=BCllt di=
+e Mindestlaufzeit.
+<br><span style=3D'color:#555'>Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft=
+) zu =E2=80=9ELeistung=E2=80=9C: =E2=80=9EUnterhalts- sowie Glas- und Rahmenr=
+einigung f=C3=BCr das Finanzamt Schwandorf mit Au=C3=9Fenstelle Neunburg vorm=
+ Wald.=E2=80=9C</span>
+<br><span style=3D'color:#555'>Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft=
+) zu =E2=80=9EObjektart=E2=80=9C: =E2=80=9EUnterhaltsreinigung f=C3=BCr das F=
+inanzamt Schwandorf und f=C3=BCr die Au=C3=9Fenstelle Neunburg vorm Wald=E2=
+=80=9C</span>
 <br>Nicht ablesbar: Wert, Zertifikate, Kapazit=C3=A4t, Personal, Tarifbindung=
-</p>
+<br><small>Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige D=
+atenfelder vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Gepr=
+=C3=BCft wird nur, dass Zitate w=C3=B6rtlich im Text stehen; die Begr=C3=BCnd=
+ung selbst wird nicht gepr=C3=BCft.</small></p>
 <p style=3D'font-size:12px;color:#666'>Demo zur Veranschaulichung der Daten=
 =C3=BCbergabe. Kein Rechtsrat, keine Aussage zu Gewinnchancen. Bitte die Beka=
 nntmachung selbst lesen.<br>Quelle: TED (Tenders Electronic Daily), Auftragsb=
 ekanntmachung; Quellenangabe: =C2=A9 Europ=C3=A4ische Union, https://ted.euro=
 pa.eu</p></body></html>
 
---===============3778615721701085381==--
+--===============1927937841874527104==--

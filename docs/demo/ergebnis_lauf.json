@@ -352,6 +352,8 @@
   "aufrufe": 0,
   "aus_cache": 7,
   "platzhalter": 0,
-  "fehler": []
+  "fehler": [],
+  "hinweis_anweisung": "Die gespeicherten KI-Urteile (Cache) entstanden mit der früheren Anweisung (ohne den Satz zu Anweisungen im Bekanntmachungstext und ohne die Prüfung zu nicht ablesbaren Zertifikaten). Die Anweisung wurde danach geändert; die KI wurde nicht erneut aufgerufen.",
+  "hinweis_erstlauf": "Der Erstlauf (Aufrufe, Fehler) ist nicht mehr protokolliert; belegt sind nur die gespeicherten Urteile im Cache."
  }
 }

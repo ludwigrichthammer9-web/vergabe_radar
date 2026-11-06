@@ -463,3 +463,7 @@ _Gedacht für 1 bis 3 Betriebe, je etwa 10 Minuten, Notizen ohne Namen (wie §8.
 7. Würden Sie das selbst betreiben oder einkaufen, und was dürfte es kosten?
 
 _Auswertung:_ nur zählen, wie viele Betriebe die Fragen 2, 4 und 5 so beantworten, dass H1 beziehungsweise H2 bestätigt sind; keine Zahlungsbereitschaft aus den Antworten ableiten.
+
+### 9.9 Demo: Profil-Match mit Push (Veranschaulichung der Datenübergabe)
+
+_Fakten (Details und Grenzen: `docs/demo_push.md`)._ Die Demo zeigt an 621 TED-Bekanntmachungen (Gebäudereinigung, ab 01.09.2026) einen Trichter vom Profil zur Teams-Karte und E-Mail: 145 im Fenster, 4 beziehungsweise 2 Treffer für zwei erfundene Profile. Eignungscodes stehen bei 535 von 621 Bekanntmachungen, teils mit Schwellen im Freitext; ein Wert ist bei etwa 12 % angegeben, die Laufzeit im Datenfeld bei 14 %, sodass Laufzeit und Option oft nur im Text stehen. Einen Eignungsabgleich mit dem Firmenprofil gibt es laut Anbieterseiten bei Wettbewerbern (AusschreibungsRadar ab 79 €), die Demo beansprucht keinen Unterschied. _Einordnung:_ Die Demo wurde nach der Auswahl-Bewertung (`docs/business_case_auswahl.md`, K-I mit K7 = 0 nur Ausblick) auf Wunsch gebaut; sie ist späte Zusatzarbeit und liefert keine Evidenz für Nachfrage, Genauigkeit oder einen Business Case, nur die Machbarkeit der Datenübergabe. Profile und Stichtag sind erfunden und datengetrieben gewählt, die Zahlen 4 und 2 sind kein Befund.

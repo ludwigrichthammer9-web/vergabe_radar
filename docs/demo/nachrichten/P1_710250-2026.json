@@ -38,7 +38,11 @@
               },
               {
                 "title": "Ort",
-                "value": "Ort nicht genannt (DE236 Neumarkt i. d. OPf.); Luftlinie ca. 47 km von Schwandorf (Näherung)"
+                "value": "Ort im Text, nicht im Datenfeld: Augsburg, Hof, Neumarkt, Nürnberg; Region laut Datenfeld: DE236 Neumarkt i. d. OPf.; die Orte im Text weichen vom Datenfeld ab, einzelne Objekte können weit außerhalb der Region liegen"
+              },
+              {
+                "title": "Entfernung",
+                "value": "Näherung: ca. 45 km Luftlinie von Schwandorf zum Bezugspunkt DE236 (Neumarkt i. d. OPf.), nicht zum Objekt"
               },
               {
                 "title": "Abgabefrist",
@@ -46,7 +50,7 @@
               },
               {
                 "title": "Laufzeit",
-                "value": "im Datenfeld nicht angegeben (ggf. im Text)"
+                "value": "Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.02.2027, Ende 31.01.2028; im Text, nicht im Datenfeld: „Der Vertrag beginnt mit Zuschlagserteilung und endet am 31.01.2028.“ „Anschließend verlängert sich der Vertrag um ein weiteres Jahr, längstens jedoch bis zum 31.01.2031, sollte die Auftraggeberin nicht bis 6 Monate vor Ablauf der jeweiligen Vertragslaufzeit durch schriftliche Erklärung dem Auftragne …“"
               },
               {
                 "title": "Wert",
@@ -70,30 +74,31 @@
           },
           {
             "type": "TextBlock",
-            "text": "Qualifikation des Personals; sonstige wirtschaftliche Anforderungen; Referenzen (Dienstleistungen); Gesamtumsatz; Umweltmanagement. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "text": "einschlägige Ausbildungs- und Berufsqualifikationen; sonstige wirtschaftliche oder finanzielle Anforderungen; Referenzen zu bestimmten Dienstleistungen; allgemeiner Jahresumsatz; Maßnahmen des Umweltmanagements. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen). Bezeichnungen: eigene Übersetzung der eForms-Codeliste selection-criterion (Version 1.0).",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Einordnung (Deutung, nicht Fakt): unklar",
+            "text": "KI-Deutung (claude-sonnet-5-5; vom Sprachmodell erzeugt, nicht Fakt, Begründung nicht geprüft): unklar",
             "weight": "Bolder",
             "color": "Warning",
-            "spacing": "Medium"
-          },
-          {
-            "type": "TextBlock",
-            "text": "Unterhaltsreinigung und Glasreinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etwa 47 km im Radius von 60 km (Augsburg, Hof und Nürnberg liegen voraussichtlich außerhalb). Die geforderte Eigenerklärung zu ISO 14001 oder einem gleichwertigen Umweltmanagementsystem lässt sich aus dem Profil nicht bestätigen. (KI (claude-sonnet-5-5))",
+            "spacing": "Medium",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Leistung“: „Reinigungsarbeiten (Unterhaltsreinigung und Glas- und Rahmenreinigung)“",
+            "text": "Unterhaltsreinigung und Glasreinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etwa 47 km im Radius von 60 km (Augsburg, Hof und Nürnberg liegen voraussichtlich außerhalb). Die geforderte Eigenerklärung zu ISO 14001 oder einem gleichwertigen Umweltmanagementsystem lässt sich aus dem Profil nicht bestätigen.",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Leistung“: „Reinigungsarbeiten (Unterhaltsreinigung und Glas- und Rahmenreinigung)“",
             "wrap": true,
             "isSubtle": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Ort/Entfernung“: „Unterhaltsreinigung am Standort St.-Florian-Straße 1, 92318 Neumarkt der Auftraggeberin“",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Ort/Entfernung“: „Unterhaltsreinigung am Standort St.-Florian-Straße 1, 92318 Neumarkt der Auftraggeberin“",
             "wrap": true,
             "isSubtle": true
           },
@@ -101,6 +106,13 @@
             "type": "TextBlock",
             "text": "Nicht ablesbar: Objektart, Wert, Kapazität, Personal, Tarifbindung",
             "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Geprüft wird nur, dass Zitate wörtlich im Text stehen; die Begründung selbst wird nicht geprüft.",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true
           },
           {
             "type": "TextBlock",

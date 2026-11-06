@@ -38,7 +38,11 @@
               },
               {
                 "title": "Ort",
-                "value": "Schwandorf (DE239 Schwandorf); Luftlinie ca. 0 km von Schwandorf (Näherung)"
+                "value": "Schwandorf (Datenfeld); zusätzlich im Text, nicht im Datenfeld: Neunburg vorm Wald; Region laut Datenfeld: DE239 Schwandorf; die Orte im Text weichen vom Datenfeld ab, einzelne Objekte können weit außerhalb der Region liegen"
+              },
+              {
+                "title": "Entfernung",
+                "value": "Näherung: unter 5 km Luftlinie von Schwandorf zum Bezugspunkt DE239 (Schwandorf), nicht zum Objekt"
               },
               {
                 "title": "Abgabefrist",
@@ -46,7 +50,7 @@
               },
               {
                 "title": "Laufzeit",
-                "value": "im Datenfeld nicht angegeben (ggf. im Text)"
+                "value": "Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.04.2027, Ende 31.03.2033; im Text, nicht im Datenfeld: „Der jeweilige Vertrag tritt am 01.04.2027 in Kraft und gilt zunächst bis zum 31.03.2030.“ „Der Vertrag verlängert sich je um ein weiteres Jahr, wenn er nicht mit einer Frist von sechs Monaten vor Vertragsende gekündigt wird und endet spätestens mit Ablauf des 31.03.2033.“"
               },
               {
                 "title": "Wert",
@@ -70,30 +74,31 @@
           },
           {
             "type": "TextBlock",
-            "text": "Durchschnittsumsatz; Beschäftigtenzahl; Referenzen (Dienstleistungen); slc-abil-mgmt-supply; slc-suit-auth-mbrshp. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "text": "durchschnittlicher Jahresumsatz; durchschnittliche jährliche Beschäftigtenzahl; Referenzen zu bestimmten Dienstleistungen; Lieferkettenmanagement; Befugnis oder Mitgliedschaft in einer Organisation (Dienstleistungsaufträge). Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen). Bezeichnungen: eigene Übersetzung der eForms-Codeliste selection-criterion (Version 1.0).",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Einordnung (Deutung, nicht Fakt): passt",
+            "text": "KI-Deutung (claude-sonnet-5-5; vom Sprachmodell erzeugt, nicht Fakt, Begründung nicht geprüft): passt",
             "weight": "Bolder",
             "color": "Good",
-            "spacing": "Medium"
-          },
-          {
-            "type": "TextBlock",
-            "text": "Unterhalts- und Glasreinigung für das Finanzamt Schwandorf und die Außenstelle Neunburg vorm Wald decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Firmensitz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erfüllt die Mindestlaufzeit. (KI (claude-sonnet-5-5))",
+            "spacing": "Medium",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Leistung“: „Unterhalts- sowie Glas- und Rahmenreinigung für das Finanzamt Schwandorf mit Außenstelle Neunburg vorm Wald.“",
+            "text": "Unterhalts- und Glasreinigung für das Finanzamt Schwandorf und die Außenstelle Neunburg vorm Wald decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Firmensitz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erfüllt die Mindestlaufzeit.",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Leistung“: „Unterhalts- sowie Glas- und Rahmenreinigung für das Finanzamt Schwandorf mit Außenstelle Neunburg vorm Wald.“",
             "wrap": true,
             "isSubtle": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Objektart“: „Unterhaltsreinigung für das Finanzamt Schwandorf und für die Außenstelle Neunburg vorm Wald“",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Objektart“: „Unterhaltsreinigung für das Finanzamt Schwandorf und für die Außenstelle Neunburg vorm Wald“",
             "wrap": true,
             "isSubtle": true
           },
@@ -101,6 +106,13 @@
             "type": "TextBlock",
             "text": "Nicht ablesbar: Wert, Zertifikate, Kapazität, Personal, Tarifbindung",
             "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Geprüft wird nur, dass Zitate wörtlich im Text stehen; die Begründung selbst wird nicht geprüft.",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true
           },
           {
             "type": "TextBlock",

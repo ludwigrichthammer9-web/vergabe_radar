@@ -38,7 +38,11 @@
               },
               {
                 "title": "Ort",
-                "value": "Amberg (DE231 Amberg (Stadt)); Luftlinie ca. 22 km von Schwandorf (Näherung)"
+                "value": "Amberg (Datenfeld); Region laut Datenfeld: DE231 Amberg (Stadt)"
+              },
+              {
+                "title": "Entfernung",
+                "value": "Näherung: ca. 20 km Luftlinie von Schwandorf zum Bezugspunkt DE231 (Amberg (Stadt)), nicht zum Objekt"
               },
               {
                 "title": "Abgabefrist",
@@ -46,7 +50,7 @@
               },
               {
                 "title": "Laufzeit",
-                "value": "im Datenfeld nicht angegeben (ggf. im Text)"
+                "value": "Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.01.2027, Ende 31.12.2028; im Text keine Laufzeitangabe gefunden (einfache Textsuche)"
               },
               {
                 "title": "Wert",
@@ -70,30 +74,31 @@
           },
           {
             "type": "TextBlock",
-            "text": "Berufsregister; Gesamtumsatz; Referenzen (Dienstleistungen); sonstige wirtschaftliche Anforderungen; Beschäftigtenzahl. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "text": "Eintragung in ein Berufsregister; allgemeiner Jahresumsatz; Referenzen zu bestimmten Dienstleistungen; sonstige wirtschaftliche oder finanzielle Anforderungen; durchschnittliche jährliche Beschäftigtenzahl. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen). Bezeichnungen: eigene Übersetzung der eForms-Codeliste selection-criterion (Version 1.0).",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Einordnung (Deutung, nicht Fakt): passt",
+            "text": "KI-Deutung (claude-sonnet-5-5; vom Sprachmodell erzeugt, nicht Fakt, Begründung nicht geprüft): passt",
             "weight": "Bolder",
             "color": "Good",
-            "spacing": "Medium"
-          },
-          {
-            "type": "TextBlock",
-            "text": "Die Bekanntmachung umfasst Unterhalts- und Glasreinigung an Schulen und einem Verwaltungsgebäude in Amberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufzeit je Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu übernehmenden Objekte hängt von der Losauswahl ab. (KI (claude-sonnet-5-5))",
+            "spacing": "Medium",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Leistung“: „Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte“",
+            "text": "Die Bekanntmachung umfasst Unterhalts- und Glasreinigung an Schulen und einem Verwaltungsgebäude in Amberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufzeit je Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu übernehmenden Objekte hängt von der Losauswahl ab.",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Leistung“: „Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte“",
             "wrap": true,
             "isSubtle": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Objektart“: „Unterhalts-, Grund- und Zusatzreinigung Verwaltungsgebäude“",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Objektart“: „Unterhalts-, Grund- und Zusatzreinigung Verwaltungsgebäude“",
             "wrap": true,
             "isSubtle": true
           },
@@ -101,6 +106,13 @@
             "type": "TextBlock",
             "text": "Nicht ablesbar: Wert, Zertifikate, Kapazität, Tarifbindung",
             "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Geprüft wird nur, dass Zitate wörtlich im Text stehen; die Begründung selbst wird nicht geprüft.",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true
           },
           {
             "type": "TextBlock",

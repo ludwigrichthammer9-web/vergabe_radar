@@ -7,9 +7,9 @@ Message-ID: <demo-P1-716819-2026@example.invalid>
 X-Demo: Veranschaulichung, nicht gesendet
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============1246592388372412317=="
+ boundary="===============0504056570277028171=="
 
---===============1246592388372412317==
+--===============0504056570277028171==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -19,32 +19,43 @@ Profil: Beispiel Geb=C3=A4udeservice Oberpfalz GmbH (erfunden)
 
 FAKTEN AUS DER BEKANNTMACHUNG
 Auftraggeber: Stadt Amberg
-Ort: Amberg (DE231 Amberg (Stadt)); Luftlinie ca. 22 km von Schwandorf (N=C3=
-=A4herung)
+Ort: Amberg (Datenfeld); Region laut Datenfeld: DE231 Amberg (Stadt)
+Entfernung: N=C3=A4herung: ca. 20 km Luftlinie von Schwandorf zum Bezugspunkt=
+ DE231 (Amberg (Stadt)), nicht zum Objekt
 Abgabefrist: 26.10.2026 (noch 10 Tage ab 16.10.2026)
-Laufzeit: im Datenfeld nicht angegeben (ggf. im Text)
+Laufzeit: Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.01.202=
+7, Ende 31.12.2028; im Text keine Laufzeitangabe gefunden (einfache Textsuche)
 Wert: nicht angegeben
 Umfang: 6 Los(e)
 Ver=C3=B6ffentlicht: 16.10.2026
 Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/716819-2026
 
 VERLANGT LAUT BEKANNTMACHUNG (EIGNUNG, ART DER NACHWEISE)
-Berufsregister; Gesamtumsatz; Referenzen (Dienstleistungen); sonstige wirtsch=
-aftliche Anforderungen; Besch=C3=A4ftigtenzahl. Schwellen und Zertifikate: nu=
-r soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergab=
-eunterlagen).
+Eintragung in ein Berufsregister; allgemeiner Jahresumsatz; Referenzen zu bes=
+timmten Dienstleistungen; sonstige wirtschaftliche oder finanzielle Anforderu=
+ngen; durchschnittliche j=C3=A4hrliche Besch=C3=A4ftigtenzahl. Schwellen und =
+Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht a=
+blesbar (Vergabeunterlagen). Bezeichnungen: eigene =C3=9Cbersetzung der eForm=
+s-Codeliste selection-criterion (Version 1.0).
 
-EINORDNUNG (DEUTUNG, NICHT FAKT): passt
+KI-DEUTUNG (CLAUDE-SONNET-5-5; VOM SPRACHMODELL ERZEUGT, NICHT FAKT, BEGR=C3=
+=9CNDUNG NICHT GEPR=C3=9CFT): passt
 Die Bekanntmachung umfasst Unterhalts- und Glasreinigung an Schulen und einem=
  Verwaltungsgeb=C3=A4ude in Amberg, rund 22 km vom Sitz entfernt und damit im=
  Radius von 60 km. Laufzeit je Los und Wert sind nicht angegeben; die Zahl de=
 r gleichzeitig neu zu =C3=BCbernehmenden Objekte h=C3=A4ngt von der Losauswah=
-l ab. (KI (claude-sonnet-5-5))
-Zitat zu Leistung: "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2=
-028 - 10 Objekte"
-Zitat zu Objektart: "Unterhalts-, Grund- und Zusatzreinigung Verwaltungsgeb=
-=C3=A4ude"
+l ab.
+Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft) zu =E2=80=9ELeistung=E2=80=9C=
+: =E2=80=9EUnterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 =
+Objekte=E2=80=9C
+Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft) zu =E2=80=9EObjektart=E2=80=
+=9C: =E2=80=9EUnterhalts-, Grund- und Zusatzreinigung Verwaltungsgeb=C3=A4ude=
+=E2=80=9C
 Nicht ablesbar: Wert, Zertifikate, Kapazit=C3=A4t, Tarifbindung
+Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder =
+vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Gepr=C3=BCft wir=
+d nur, dass Zitate w=C3=B6rtlich im Text stehen; die Begr=C3=BCndung selbst w=
+ird nicht gepr=C3=BCft.
 
 ---
 Demo zur Veranschaulichung der Daten=C3=BCbergabe. Kein Rechtsrat, keine Auss=
@@ -52,7 +63,7 @@ age zu Gewinnchancen. Bitte die Bekanntmachung selbst lesen.
 Quelle: TED (Tenders Electronic Daily), Auftragsbekanntmachung; Quellenangabe=
 : =C2=A9 Europ=C3=A4ische Union, https://ted.europa.eu
 
---===============1246592388372412317==
+--===============0504056570277028171==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
@@ -66,12 +77,17 @@ ice Oberpfalz GmbH (erfunden)</div>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Auftra=
 ggeber</td><td>Stadt Amberg</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Ort</t=
-d><td>Amberg (DE231 Amberg (Stadt)); Luftlinie ca. 22 km von Schwandorf (N=C3=
-=A4herung)</td></tr>
+d><td>Amberg (Datenfeld); Region laut Datenfeld: DE231 Amberg (Stadt)</td></t=
+r>
+<tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Entfer=
+nung</td><td>N=C3=A4herung: ca. 20 km Luftlinie von Schwandorf zum Bezugspunk=
+t DE231 (Amberg (Stadt)), nicht zum Objekt</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Abgabe=
 frist</td><td>26.10.2026 (noch 10 Tage ab 16.10.2026)</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Laufze=
-it</td><td>im Datenfeld nicht angegeben (ggf. im Text)</td></tr>
+it</td><td>Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.01.20=
+27, Ende 31.12.2028; im Text keine Laufzeitangabe gefunden (einfache Textsuch=
+e)</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Wert</=
 td><td>nicht angegeben</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Umfang=
@@ -81,26 +97,34 @@ td><td>nicht angegeben</td></tr>
 </table>
 <p><a href=3D'https://ted.europa.eu/de/notice/-/detail/716819-2026'>Bekanntma=
 chung auf TED</a></p>
-<p><b>Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)</b><br>Berufs=
-register; Gesamtumsatz; Referenzen (Dienstleistungen); sonstige wirtschaftlic=
-he Anforderungen; Besch=C3=A4ftigtenzahl. Schwellen und Zertifikate: nur sowe=
-it im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunter=
-lagen).</p>
-<p><b>Einordnung (Deutung, nicht Fakt): passt</b><br>Die Bekanntmachung umfas=
-st Unterhalts- und Glasreinigung an Schulen und einem Verwaltungsgeb=C3=A4ude=
- in Amberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufz=
-eit je Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu =
-=C3=BCbernehmenden Objekte h=C3=A4ngt von der Losauswahl ab. <i>(KI (claude-s=
-onnet-5-5))</i>
-<br><span style=3D'color:#555'>Zitat zu Leistung: =E2=80=9EUnterhalts-, Grund=
--, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte=E2=80=9C</span>
-<br><span style=3D'color:#555'>Zitat zu Objektart: =E2=80=9EUnterhalts-, Grun=
-d- und Zusatzreinigung Verwaltungsgeb=C3=A4ude=E2=80=9C</span>
-<br>Nicht ablesbar: Wert, Zertifikate, Kapazit=C3=A4t, Tarifbindung</p>
+<p><b>Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)</b><br>Eintra=
+gung in ein Berufsregister; allgemeiner Jahresumsatz; Referenzen zu bestimmte=
+n Dienstleistungen; sonstige wirtschaftliche oder finanzielle Anforderungen; =
+durchschnittliche j=C3=A4hrliche Besch=C3=A4ftigtenzahl. Schwellen und Zertif=
+ikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesba=
+r (Vergabeunterlagen). Bezeichnungen: eigene =C3=9Cbersetzung der eForms-Code=
+liste selection-criterion (Version 1.0).</p>
+<p><b>KI-Deutung (claude-sonnet-5-5; vom Sprachmodell erzeugt, nicht Fakt, Be=
+gr=C3=BCndung nicht gepr=C3=BCft): passt</b><br>Die Bekanntmachung umfasst Un=
+terhalts- und Glasreinigung an Schulen und einem Verwaltungsgeb=C3=A4ude in A=
+mberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufzeit j=
+e Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu =C3=BCb=
+ernehmenden Objekte h=C3=A4ngt von der Losauswahl ab.
+<br><span style=3D'color:#555'>Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft=
+) zu =E2=80=9ELeistung=E2=80=9C: =E2=80=9EUnterhalts-, Grund-, Zusatz- und Gl=
+asreinigung 2027 bis 2028 - 10 Objekte=E2=80=9C</span>
+<br><span style=3D'color:#555'>Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft=
+) zu =E2=80=9EObjektart=E2=80=9C: =E2=80=9EUnterhalts-, Grund- und Zusatzrein=
+igung Verwaltungsgeb=C3=A4ude=E2=80=9C</span>
+<br>Nicht ablesbar: Wert, Zertifikate, Kapazit=C3=A4t, Tarifbindung<br><small=
+>Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder=
+ vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Gepr=C3=BCft wi=
+rd nur, dass Zitate w=C3=B6rtlich im Text stehen; die Begr=C3=BCndung selbst =
+wird nicht gepr=C3=BCft.</small></p>
 <p style=3D'font-size:12px;color:#666'>Demo zur Veranschaulichung der Daten=
 =C3=BCbergabe. Kein Rechtsrat, keine Aussage zu Gewinnchancen. Bitte die Beka=
 nntmachung selbst lesen.<br>Quelle: TED (Tenders Electronic Daily), Auftragsb=
 ekanntmachung; Quellenangabe: =C2=A9 Europ=C3=A4ische Union, https://ted.euro=
 pa.eu</p></body></html>
 
---===============1246592388372412317==--
+--===============0504056570277028171==--

@@ -183,17 +183,46 @@ def normalisieren(n: dict) -> dict:
     }
 
 
-def lade_schnappschuss(ordner: Path):
-    """Liest alle Seiten; gibt (Meta, Liste normalisierter Bekanntmachungen ohne Duplikate) zurück."""
-    meta = json.loads((ordner / "request_meta.json").read_text(encoding="utf-8"))
+REPO_KOPIE = PROJECT_ROOT / "docs" / "demo" / "daten" / "schnappschuss_demo.json"
+
+
+def standard_quelle() -> Path:
+    """Offline-Quelle: zuerst die Kopie im Repo (docs/demo/daten), sonst der neueste Schnappschuss in data/raw."""
+    return REPO_KOPIE if REPO_KOPIE.exists() else neuester_schnappschuss()
+
+
+def lade_schnappschuss(quelle: Path):
+    """Liest die Repo-Kopie (JSON-Datei) oder einen Schnappschuss-Ordner (alle Seiten);
+    gibt (Meta, Liste normalisierter Bekanntmachungen ohne Duplikate) zurück. meta['anzahl_gesamt'] = Zahl im vollständigen Schnappschuss."""
     gesehen, out = set(), []
-    for f in sorted(ordner.glob("page_*.json")):
-        for n in json.loads(f.read_text(encoding="utf-8")).get("notices", []):
+    if quelle.is_file():
+        k = json.loads(quelle.read_text(encoding="utf-8"))
+        meta = {**k["meta"], "quelle_name": k["meta"]["schnappschuss_ordner"]}
+        seiten = [{"notices": k["notices"]}]
+    else:
+        meta = json.loads((quelle / "request_meta.json").read_text(encoding="utf-8"))
+        seiten = [json.loads(f.read_text(encoding="utf-8")) for f in sorted(quelle.glob("page_*.json"))]
+        meta["quelle_name"] = quelle.name
+    for seite in seiten:
+        for n in seite.get("notices", []):
             if n["publication-number"] in gesehen:
                 continue
             gesehen.add(n["publication-number"])
             out.append(normalisieren(n))
+    if "anzahl_gesamt" not in meta:
+        meta["anzahl_gesamt"] = len(out)
     return meta, out
+
+
+# Felder, die normalisieren() braucht (Repo-Kopie enthält nur diese)
+GEBRAUCHTE_FELDER = [
+    "publication-number", "publication-date", "procedure-type", "notice-version", "title-proc", "title-lot", "description-proc",
+    "description-lot", "buyer-name", "classification-cpv", "main-classification-proc", "main-classification-lot",
+    "deadline-receipt-tender-date-lot", "place-of-performance-subdiv-lot", "place-of-performance-city-lot",
+    "place-of-performance-post-code-lot", "contract-duration-period-lot", "contract-duration-start-date-lot",
+    "contract-duration-end-date-lot", "renewal-description-lot", "option-description-lot", "estimated-value-lot",
+    "estimated-value-proc", "total-value", "selection-criterion-lot", "selection-criterion-description-lot",
+]
 
 
 def volltext(b: dict) -> str:

@@ -7,9 +7,9 @@ Message-ID: <demo-P1-710250-2026@example.invalid>
 X-Demo: Veranschaulichung, nicht gesendet
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============4747306267189277103=="
+ boundary="===============5080994112212207801=="
 
---===============4747306267189277103==
+--===============5080994112212207801==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -18,32 +18,51 @@ Profil: Beispiel Geb=C3=A4udeservice Oberpfalz GmbH (erfunden)
 
 FAKTEN AUS DER BEKANNTMACHUNG
 Auftraggeber: IKK classic
-Ort: Ort nicht genannt (DE236 Neumarkt i. d. OPf.); Luftlinie ca. 47 km von S=
-chwandorf (N=C3=A4herung)
+Ort: Ort im Text, nicht im Datenfeld: Augsburg, Hof, Neumarkt, N=C3=BCrnberg;=
+ Region laut Datenfeld: DE236 Neumarkt i. d. OPf.; die Orte im Text weichen v=
+om Datenfeld ab, einzelne Objekte k=C3=B6nnen weit au=C3=9Ferhalb der Region =
+liegen
+Entfernung: N=C3=A4herung: ca. 45 km Luftlinie von Schwandorf zum Bezugspunkt=
+ DE236 (Neumarkt i. d. OPf.), nicht zum Objekt
 Abgabefrist: 12.11.2026 (noch 27 Tage ab 16.10.2026)
-Laufzeit: im Datenfeld nicht angegeben (ggf. im Text)
+Laufzeit: Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.02.202=
+7, Ende 31.01.2028; im Text, nicht im Datenfeld: =E2=80=9EDer Vertrag beginnt=
+ mit Zuschlagserteilung und endet am 31.01.2028.=E2=80=9C =E2=80=9EAnschlie=
+=C3=9Fend verl=C3=A4ngert sich der Vertrag um ein weiteres Jahr, l=C3=A4ngste=
+ns jedoch bis zum 31.01.2031, sollte die Auftraggeberin nicht bis 6 Monate vo=
+r Ablauf der jeweiligen Vertragslaufzeit durch schriftliche Erkl=C3=A4rung de=
+m Auftragne =E2=80=A6=E2=80=9C
 Wert: nicht angegeben
 Umfang: 8 Los(e)
 Ver=C3=B6ffentlicht: 14.10.2026
 Bekanntmachung: https://ted.europa.eu/de/notice/-/detail/710250-2026
 
 VERLANGT LAUT BEKANNTMACHUNG (EIGNUNG, ART DER NACHWEISE)
-Qualifikation des Personals; sonstige wirtschaftliche Anforderungen; Referenz=
-en (Dienstleistungen); Gesamtumsatz; Umweltmanagement. Schwellen und Zertifik=
-ate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar =
-(Vergabeunterlagen).
+einschl=C3=A4gige Ausbildungs- und Berufsqualifikationen; sonstige wirtschaft=
+liche oder finanzielle Anforderungen; Referenzen zu bestimmten Dienstleistung=
+en; allgemeiner Jahresumsatz; Ma=C3=9Fnahmen des Umweltmanagements. Schwellen=
+ und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst ni=
+cht ablesbar (Vergabeunterlagen). Bezeichnungen: eigene =C3=9Cbersetzung der =
+eForms-Codeliste selection-criterion (Version 1.0).
 
-EINORDNUNG (DEUTUNG, NICHT FAKT): unklar
+KI-DEUTUNG (CLAUDE-SONNET-5-5; VOM SPRACHMODELL ERZEUGT, NICHT FAKT, BEGR=C3=
+=9CNDUNG NICHT GEPR=C3=9CFT): unklar
 Unterhaltsreinigung und Glasreinigung werden ausgeschrieben, und der Standort=
  Neumarkt liegt mit etwa 47 km im Radius von 60 km (Augsburg, Hof und N=C3=BC=
 rnberg liegen voraussichtlich au=C3=9Ferhalb). Die geforderte Eigenerkl=C3=A4=
 rung zu ISO 14001 oder einem gleichwertigen Umweltmanagementsystem l=C3=A4sst=
- sich aus dem Profil nicht best=C3=A4tigen. (KI (claude-sonnet-5-5))
-Zitat zu Leistung: "Reinigungsarbeiten (Unterhaltsreinigung und Glas- und Rah=
-menreinigung)"
-Zitat zu Ort/Entfernung: "Unterhaltsreinigung am Standort St.-Florian-Stra=C3=
-=9Fe 1, 92318 Neumarkt der Auftraggeberin"
+ sich aus dem Profil nicht best=C3=A4tigen.
+Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft) zu =E2=80=9ELeistung=E2=80=9C=
+: =E2=80=9EReinigungsarbeiten (Unterhaltsreinigung und Glas- und Rahmenreinig=
+ung)=E2=80=9C
+Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft) zu =E2=80=9EOrt/Entfernung=E2=
+=80=9C: =E2=80=9EUnterhaltsreinigung am Standort St.-Florian-Stra=C3=9Fe 1, 9=
+2318 Neumarkt der Auftraggeberin=E2=80=9C
 Nicht ablesbar: Objektart, Wert, Kapazit=C3=A4t, Personal, Tarifbindung
+Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder =
+vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Gepr=C3=BCft wir=
+d nur, dass Zitate w=C3=B6rtlich im Text stehen; die Begr=C3=BCndung selbst w=
+ird nicht gepr=C3=BCft.
 
 ---
 Demo zur Veranschaulichung der Daten=C3=BCbergabe. Kein Rechtsrat, keine Auss=
@@ -51,7 +70,7 @@ age zu Gewinnchancen. Bitte die Bekanntmachung selbst lesen.
 Quelle: TED (Tenders Electronic Daily), Auftragsbekanntmachung; Quellenangabe=
 : =C2=A9 Europ=C3=A4ische Union, https://ted.europa.eu
 
---===============4747306267189277103==
+--===============5080994112212207801==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
@@ -65,12 +84,23 @@ ice Oberpfalz GmbH (erfunden)</div>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Auftra=
 ggeber</td><td>IKK classic</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Ort</t=
-d><td>Ort nicht genannt (DE236 Neumarkt i. d. OPf.); Luftlinie ca. 47 km von =
-Schwandorf (N=C3=A4herung)</td></tr>
+d><td>Ort im Text, nicht im Datenfeld: Augsburg, Hof, Neumarkt, N=C3=BCrnberg=
+; Region laut Datenfeld: DE236 Neumarkt i. d. OPf.; die Orte im Text weichen =
+vom Datenfeld ab, einzelne Objekte k=C3=B6nnen weit au=C3=9Ferhalb der Region=
+ liegen</td></tr>
+<tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Entfer=
+nung</td><td>N=C3=A4herung: ca. 45 km Luftlinie von Schwandorf zum Bezugspunk=
+t DE236 (Neumarkt i. d. OPf.), nicht zum Objekt</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Abgabe=
 frist</td><td>12.11.2026 (noch 27 Tage ab 16.10.2026)</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Laufze=
-it</td><td>im Datenfeld nicht angegeben (ggf. im Text)</td></tr>
+it</td><td>Datenfeld Dauer: nicht angegeben; Datenfeld Datum: Beginn 01.02.20=
+27, Ende 31.01.2028; im Text, nicht im Datenfeld: =E2=80=9EDer Vertrag beginn=
+t mit Zuschlagserteilung und endet am 31.01.2028.=E2=80=9C =E2=80=9EAnschlie=
+=C3=9Fend verl=C3=A4ngert sich der Vertrag um ein weiteres Jahr, l=C3=A4ngste=
+ns jedoch bis zum 31.01.2031, sollte die Auftraggeberin nicht bis 6 Monate vo=
+r Ablauf der jeweiligen Vertragslaufzeit durch schriftliche Erkl=C3=A4rung de=
+m Auftragne =E2=80=A6=E2=80=9C</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Wert</=
 td><td>nicht angegeben</td></tr>
 <tr><td style=3D'padding:2px 10px 2px 0;color:#555;vertical-align:top'>Umfang=
@@ -80,28 +110,36 @@ td><td>nicht angegeben</td></tr>
 </table>
 <p><a href=3D'https://ted.europa.eu/de/notice/-/detail/710250-2026'>Bekanntma=
 chung auf TED</a></p>
-<p><b>Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)</b><br>Qualif=
-ikation des Personals; sonstige wirtschaftliche Anforderungen; Referenzen (Di=
-enstleistungen); Gesamtumsatz; Umweltmanagement. Schwellen und Zertifikate: n=
-ur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Verga=
-beunterlagen).</p>
-<p><b>Einordnung (Deutung, nicht Fakt): unklar</b><br>Unterhaltsreinigung und=
- Glasreinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etw=
-a 47 km im Radius von 60 km (Augsburg, Hof und N=C3=BCrnberg liegen voraussic=
-htlich au=C3=9Ferhalb). Die geforderte Eigenerkl=C3=A4rung zu ISO 14001 oder =
-einem gleichwertigen Umweltmanagementsystem l=C3=A4sst sich aus dem Profil ni=
-cht best=C3=A4tigen. <i>(KI (claude-sonnet-5-5))</i>
-<br><span style=3D'color:#555'>Zitat zu Leistung: =E2=80=9EReinigungsarbeiten=
- (Unterhaltsreinigung und Glas- und Rahmenreinigung)=E2=80=9C</span>
-<br><span style=3D'color:#555'>Zitat zu Ort/Entfernung: =E2=80=9EUnterhaltsre=
-inigung am Standort St.-Florian-Stra=C3=9Fe 1, 92318 Neumarkt der Auftraggebe=
-rin=E2=80=9C</span>
-<br>Nicht ablesbar: Objektart, Wert, Kapazit=C3=A4t, Personal, Tarifbindung</=
-p>
+<p><b>Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)</b><br>einsch=
+l=C3=A4gige Ausbildungs- und Berufsqualifikationen; sonstige wirtschaftliche =
+oder finanzielle Anforderungen; Referenzen zu bestimmten Dienstleistungen; al=
+lgemeiner Jahresumsatz; Ma=C3=9Fnahmen des Umweltmanagements. Schwellen und Z=
+ertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ab=
+lesbar (Vergabeunterlagen). Bezeichnungen: eigene =C3=9Cbersetzung der eForms=
+-Codeliste selection-criterion (Version 1.0).</p>
+<p><b>KI-Deutung (claude-sonnet-5-5; vom Sprachmodell erzeugt, nicht Fakt, Be=
+gr=C3=BCndung nicht gepr=C3=BCft): unklar</b><br>Unterhaltsreinigung und Glas=
+reinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etwa 47 =
+km im Radius von 60 km (Augsburg, Hof und N=C3=BCrnberg liegen voraussichtlic=
+h au=C3=9Ferhalb). Die geforderte Eigenerkl=C3=A4rung zu ISO 14001 oder einem=
+ gleichwertigen Umweltmanagementsystem l=C3=A4sst sich aus dem Profil nicht b=
+est=C3=A4tigen.
+<br><span style=3D'color:#555'>Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft=
+) zu =E2=80=9ELeistung=E2=80=9C: =E2=80=9EReinigungsarbeiten (Unterhaltsreini=
+gung und Glas- und Rahmenreinigung)=E2=80=9C</span>
+<br><span style=3D'color:#555'>Zitat aus dem Text (w=C3=B6rtlich gepr=C3=BCft=
+) zu =E2=80=9EOrt/Entfernung=E2=80=9C: =E2=80=9EUnterhaltsreinigung am Stando=
+rt St.-Florian-Stra=C3=9Fe 1, 92318 Neumarkt der Auftraggeberin=E2=80=9C</spa=
+n>
+<br>Nicht ablesbar: Objektart, Wert, Kapazit=C3=A4t, Personal, Tarifbindung<b=
+r><small>Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Dat=
+enfelder vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Gepr=C3=
+=BCft wird nur, dass Zitate w=C3=B6rtlich im Text stehen; die Begr=C3=BCndung=
+ selbst wird nicht gepr=C3=BCft.</small></p>
 <p style=3D'font-size:12px;color:#666'>Demo zur Veranschaulichung der Daten=
 =C3=BCbergabe. Kein Rechtsrat, keine Aussage zu Gewinnchancen. Bitte die Beka=
 nntmachung selbst lesen.<br>Quelle: TED (Tenders Electronic Daily), Auftragsb=
 ekanntmachung; Quellenangabe: =C2=A9 Europ=C3=A4ische Union, https://ted.euro=
 pa.eu</p></body></html>
 
---===============4747306267189277103==--
+--===============5080994112212207801==--

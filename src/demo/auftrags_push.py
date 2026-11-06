@@ -9,7 +9,7 @@ Aufrufe (im Projektordner):
   .venv\\Scripts\\python.exe -I src\\demo\\auftrags_push.py --ki platzhalter      # ohne KI
   .venv\\Scripts\\python.exe -I src\\demo\\auftrags_push.py --modus live          # holt neue Bekanntmachungen von TED (heute, 14 Tage)
   Versand (vom Nutzer mit eigenem Webhook/Postfach auszuführen, in dieser Demo NICHT ausgeführt):
-  ... --senden-teams <Workflow-URL>     ... --senden-mail --smtp-host H --smtp-user U --mail-an A   (Passwort: Umgebungsvariable DEMO_SMTP_PASSWORD)
+  ... --senden-teams (URL aus Umgebungsvariable TEAMS_WEBHOOK_URL)     ... --senden-mail --smtp-host H --smtp-user U --mail-an A   (Passwort: Umgebungsvariable DEMO_SMTP_PASSWORD)
 """
 
 import argparse
@@ -37,15 +37,16 @@ def pipeline(args):
         print(f"Live-Abruf nach {ordner} (nur Veröffentlichungen ab {stichtag - timedelta(days=args.fenster_tage)}) ...")
         D.live_abruf(f"{stichtag - timedelta(days=args.fenster_tage):%Y%m%d}", ordner)
     else:
-        ordner = Path(args.daten) if args.daten else D.neuester_schnappschuss()
+        ordner = Path(args.daten) if args.daten else D.standard_quelle()  # zuerst docs/demo/daten, sonst data/raw
     meta, alle = D.lade_schnappschuss(ordner)
+    quelle_name = meta["quelle_name"]
     profile = json.loads((AUSGABE / "profil_beispiel.json").read_text(encoding="utf-8"))["profile"]
 
     von = stichtag - timedelta(days=args.fenster_tage)
     fenster = [b for b in alle if von <= b["veroeffentlicht"] <= stichtag]
     dedupliziert = S.dedupe(fenster)
     gemeinsam = [
-        {"name": "Alle Bekanntmachungen Deutschland, CPV 909* (im Schnappschuss)", "anzahl": len(alle), "notiz": ordner.name},
+        {"name": "Alle Bekanntmachungen Deutschland, CPV 909* (im Schnappschuss)", "anzahl": meta["anzahl_gesamt"], "notiz": quelle_name},
         {"name": f"veröffentlicht {von:%d.%m.} bis {stichtag:%d.%m.%Y}", "anzahl": len(fenster), "notiz": ""},
         {"name": "ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel)", "anzahl": len(dedupliziert), "notiz": ""},
     ]
@@ -113,40 +114,53 @@ def pipeline(args):
     vergleich = {"n": len(paare), "gleich": sum(p["gleich"] for p in paare), "paare": paare,
                  "modus": ("KI " + K.MODELL) if ki_protokoll["modus"] != "platzhalter" and all(p["ki_quelle"].startswith("KI") for p in paare)
                  else "enthält Platzhalter-Urteile statt KI"}
-    vorschau = {"stichtag": f"{stichtag:%d.%m.%Y}", "fenster": args.fenster_tage, "quelle": ordner.name, "gemeinsam": gemeinsam,
+    vorschau = {"stichtag": f"{stichtag:%d.%m.%Y}", "fenster": args.fenster_tage, "quelle": quelle_name, "gemeinsam": gemeinsam,
                 "profile": vorschau_profile, "vergleich": vergleich}
     (AUSGABE / "push_demo.html").write_text(V.baue(vorschau), encoding="utf-8")
     (AUSGABE / "ergebnis_lauf.json").write_text(json.dumps(
         {"stichtag": str(stichtag), "fenster_tage": args.fenster_tage, "vergleichsmenge": "ganzer Schnappschuss, CPV + Oberpfalz + Laufzeit, ohne Frist- und Radiusfilter (Radius steckt im Regelurteil)",
-         "schnappschuss": ordner.name, "gemeinsam": gemeinsam, "profile": ergebnis_profile, "vergleich": vergleich,
+         "schnappschuss": quelle_name, "gemeinsam": gemeinsam, "profile": ergebnis_profile, "vergleich": vergleich,
          "ki_protokoll": ki_protokoll}, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    print(f"Stichtag {stichtag}, Schnappschuss {ordner.name}")
+    print(f"Stichtag {stichtag}, Schnappschuss {quelle_name} (gelesen aus {ordner})")
     for g in gemeinsam:
         print(f"  {g['anzahl']:4d}  {g['name']}")
     for pp in vorschau_profile:
         print(f"Profil {pp['profil']['id']}:")
         for s in pp["stufen"]:
             print(f"  {s['anzahl']:4d}  {s['name']}  {s['notiz']}")
-    print(f"Vergleich KI/Regel: {vergleich['gleich']} von {vergleich['n']} gleich ({vergleich['modus']})")
+    print(f"Vergleich KI/Regel: {vergleich['gleich']} von {vergleich['n']} gleich ({vergleich['modus']}); "
+          "5 Fälle trivial (gleiche Entfernung), kein inhaltlicher Ablehnungsfall, keine Referenz durch einen Menschen")
     print("KI-Protokoll:", ki_protokoll)
     return alle_cards
 
 
 def senden(alle_cards, args):
     """NUR auf ausdrücklichen Wunsch des Nutzers, mit eigenem Webhook/Postfach. In dieser Demo nicht ausgeführt."""
+    import os
     if args.senden_teams:
         import requests
+        url = os.environ.get("TEAMS_WEBHOOK_URL")
+        if not url and args.senden_teams != "ENV":
+            url = args.senden_teams
+            print("WARNUNG: Webhook-URL über die Kommandozeile gegeben; sie landet in der Shell-History. Besser: Umgebungsvariable TEAMS_WEBHOOK_URL.")
+        if not url:
+            sys.exit("Fehler: Umgebungsvariable TEAMS_WEBHOOK_URL fehlt (oder URL hinter --senden-teams angeben).")
         for pid, nr, karte, _ in alle_cards:
-            r = requests.post(args.senden_teams, json=karte, timeout=30)
+            r = requests.post(url, json=karte, timeout=30)
             print(f"Teams {pid} {nr}: HTTP {r.status_code}")
     if args.senden_mail:
-        import os
         import smtplib
+        import ssl
         from email import message_from_bytes
         from email.policy import default
+        fehlt = [n for n, w in (("--smtp-host", args.smtp_host), ("--smtp-user", args.smtp_user), ("--mail-an", args.mail_an)) if not w]
+        if fehlt:
+            sys.exit(f"Fehler: für --senden-mail fehlt {', '.join(fehlt)} (Passwort: Umgebungsvariable DEMO_SMTP_PASSWORD).")
+        if "DEMO_SMTP_PASSWORD" not in os.environ:
+            sys.exit("Fehler: Umgebungsvariable DEMO_SMTP_PASSWORD fehlt.")
         with smtplib.SMTP(args.smtp_host, args.smtp_port) as s:
-            s.starttls()
+            s.starttls(context=ssl.create_default_context())
             s.login(args.smtp_user, os.environ["DEMO_SMTP_PASSWORD"])
             for pid, nr, _, eml in alle_cards:
                 m = message_from_bytes(eml, policy=default)
@@ -163,10 +177,11 @@ def main():
     ap.add_argument("--modus", choices=["offline", "live"], default="offline")
     ap.add_argument("--stichtag", default="2026-10-16", help="festes „heute“ im Offline-Modus (JJJJ-MM-TT)")
     ap.add_argument("--fenster-tage", type=int, default=14)
-    ap.add_argument("--daten", help="Ordner eines Schnappschusses (Standard: neuester data/raw/demo_push_*)")
+    ap.add_argument("--daten", help="Schnappschuss-Ordner oder JSON-Kopie (Standard: docs/demo/daten/schnappschuss_demo.json, sonst neuester data/raw/demo_push_*)")
     ap.add_argument("--ki", choices=["cache", "claude", "platzhalter"], default="cache")
     ap.add_argument("--max-aufrufe", type=int, default=20)
-    ap.add_argument("--senden-teams", metavar="URL")
+    ap.add_argument("--senden-teams", nargs="?", const="ENV", metavar="URL",
+                    help="Teams-Workflow-URL aus Umgebungsvariable TEAMS_WEBHOOK_URL (empfohlen); URL hier nur als Rückfall (Shell-History!)")
     ap.add_argument("--senden-mail", action="store_true")
     ap.add_argument("--smtp-host"); ap.add_argument("--smtp-port", type=int, default=587)
     ap.add_argument("--smtp-user"); ap.add_argument("--mail-an")

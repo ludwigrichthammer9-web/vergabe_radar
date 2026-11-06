@@ -10,7 +10,8 @@ from datetime import timedelta
 from daten import PROJECT_ROOT, volltext
 
 # NUTS-3 Oberpfalz (DE231-DE23A). Näherung: Koordinaten der jeweiligen Kreisstadt (Stadtkreise: Stadt), NICHT der
-# geometrische Mittelpunkt des Kreises. Entfernung = Luftlinie (Haversine). Fehler bei großen Landkreisen: bis ca. 20 km.
+# geometrische Mittelpunkt des Kreises. Entfernung = Luftlinie (Haversine) zu diesem Bezugspunkt, nicht zum Objekt.
+# Wie groß der Fehler bei großen Landkreisen ist, wurde nicht geprüft.
 NUTS3_PUNKTE = {
     "DE231": ("Amberg (Stadt)", 49.4430, 11.8620),
     "DE232": ("Regensburg (Stadt)", 49.0134, 12.1016),
@@ -24,19 +25,40 @@ NUTS3_PUNKTE = {
     "DE23A": ("Tirschenreuth", 49.8800, 12.3400),
 }
 
-EIGNUNG_LABEL = {  # Beschriftung von uns aus dem Code abgeleitet; Codeliste nicht Eintrag für Eintrag geprüft
-    "slc-abil-ref-services": "Referenzen (Dienstleistungen)",
-    "slc-stand-ins": "Versicherung",
-    "slc-suit-reg-prof": "Berufsregister",
-    "slc-suit-reg-trade": "Handelsregister",
-    "slc-abil-staff-yrly-avg-mp": "Beschäftigtenzahl",
-    "slc-stand-to-avg": "Durchschnittsumsatz",
-    "slc-stand-to-spec": "Umsatz im Tätigkeitsbereich",
-    "slc-stand-to-gen": "Gesamtumsatz",
-    "slc-abil-staff-qual": "Qualifikation des Personals",
-    "slc-abil-mgmt-qual": "Qualitätsmanagement",
-    "slc-abil-mgmt-env": "Umweltmanagement",
-    "slc-stand-other": "sonstige wirtschaftliche Anforderungen",
+# Beschriftung der Eignungscodes: eigene deutsche Übersetzung der englischen Namen der eForms-Codeliste "selection-criterion"
+# (Version 1.0; Quelle: https://github.com/OP-TED/eForms-SDK/blob/main/codelists/selection-criterion.gc, gelesen am 2026-11-06).
+# Die Übersetzung ist von uns; nur Codes dieser Liste sind eingetragen, alle anderen erscheinen als "(Code, nicht übersetzt)".
+EIGNUNG_LABEL = {
+    "slc-abil-facil-res": "Studien-, technische und Forschungseinrichtungen",
+    "slc-abil-facil-tools": "Werkzeuge, Anlagen oder technische Ausrüstung",
+    "slc-abil-mgmt-env": "Maßnahmen des Umweltmanagements",
+    "slc-abil-mgmt-qual": "Maßnahmen zur Qualitätssicherung",
+    "slc-abil-mgmt-supply": "Lieferkettenmanagement",
+    "slc-abil-qual-inst": "Bescheinigungen von Qualitätskontrollinstituten",
+    "slc-abil-ref-services": "Referenzen zu bestimmten Dienstleistungen",
+    "slc-abil-ref-supply": "Referenzen zu bestimmten Lieferungen",
+    "slc-abil-ref-work": "Referenzen zu bestimmten Bauleistungen",
+    "slc-abil-staff-qual": "einschlägige Ausbildungs- und Berufsqualifikationen",
+    "slc-abil-staff-tech-ctrl": "Techniker oder technische Stellen für die Qualitätskontrolle",
+    "slc-abil-staff-tech-work": "Techniker oder technische Stellen für die Ausführung",
+    "slc-abil-staff-yrly-avg-mp": "durchschnittliche jährliche Beschäftigtenzahl",
+    "slc-abil-staff-yrly-no-mgmt": "Zahl der Führungskräfte",
+    "slc-abil-subc": "Anteil der Unterauftragsvergabe",
+    "slc-sche-env-cert-indep": "Bescheinigungen unabhängiger Stellen zu Umweltmanagementsystemen oder -normen",
+    "slc-sche-qu-cert-indep": "Bescheinigungen unabhängiger Stellen zu Qualitätssicherungsnormen",
+    "slc-sec-inf": "Informationssicherheit",
+    "slc-sec-proc": "Sicherheit bei Verarbeitung, Speicherung und Übermittlung von Verschlusssachen",
+    "slc-sec-supply": "Versorgungssicherheit",
+    "slc-stand-ins": "Berufshaftpflichtversicherung",
+    "slc-stand-other": "sonstige wirtschaftliche oder finanzielle Anforderungen",
+    "slc-stand-ratio": "Finanzkennzahl",
+    "slc-stand-to-avg": "durchschnittlicher Jahresumsatz",
+    "slc-stand-to-gen": "allgemeiner Jahresumsatz",
+    "slc-stand-to-spec": "spezifischer Jahresumsatz",
+    "slc-stand-to-spec-avg": "spezifischer durchschnittlicher Jahresumsatz",
+    "slc-suit-auth-mbrshp": "Befugnis oder Mitgliedschaft in einer Organisation (Dienstleistungsaufträge)",
+    "slc-suit-reg-prof": "Eintragung in ein Berufsregister",
+    "slc-suit-reg-trade": "Eintragung in ein Handelsregister",
 }
 
 
@@ -63,11 +85,50 @@ def in_oberpfalz(b):
     return None
 
 
+def naechster_bezugspunkt(profil, b):
+    """(NUTS-Code, km) des nächsten NUTS-3-Bezugspunkts der Leistungsorte; None, wenn nicht berechenbar."""
+    werte = [(haversine_km(profil["sitz"]["lat"], profil["sitz"]["lon"], NUTS3_PUNKTE[n][1], NUTS3_PUNKTE[n][2]), n)
+             for n in b["nuts"] if n in NUTS3_PUNKTE]
+    if not werte:
+        return None
+    km, n = min(werte)
+    return n, km
+
+
 def entfernung_km(profil, b):
     """Kleinste Entfernung Sitz -> NUTS-3-Punkt der Leistungsorte; None, wenn nicht berechenbar."""
-    werte = [haversine_km(profil["sitz"]["lat"], profil["sitz"]["lon"], NUTS3_PUNKTE[n][1], NUTS3_PUNKTE[n][2])
-             for n in b["nuts"] if n in NUTS3_PUNKTE]
-    return round(min(werte), 1) if werte else None
+    r = naechster_bezugspunkt(profil, b)
+    return round(r[1], 1) if r else None
+
+
+# ---------------------------------------------------------------- einfache Ortssuche im Bekanntmachungstext
+_ORT = r"[A-ZÄÖÜ][\wäöüß.\-]+(?:\s+(?:vorm|am|an der|a\.\s?d\.|i\.\s?d\.)\s+[A-ZÄÖÜ][\wäöüß.]+)?"
+_PLZ_ORT = re.compile(r"\b\d{5}\s+(" + _ORT + ")")
+_LISTE = re.compile(r"(?:Standorte[n]?|Außenstelle[n]?)\s+(" + _ORT + r"(?:(?:,|\s+und)\s+" + _ORT + r")*)")
+_KEIN_ORT = {"gebäude", "objekt", "objekte", "los", "die", "der", "das", "alle", "diverse", "bayern", "deutschland", "reinigung"}
+
+
+def orte_im_text(b):
+    """Einfache Ortssuche (PLZ + Ort; 'Standort(e)/Außenstelle X, Y und Z') in Titel, Beschreibungen, Option und Verlängerung.
+    Heuristik: kann Orte übersehen oder falsche finden; nur zur Anzeige. Orte, die schon im Datenfeld stehen, werden weggelassen."""
+    texte = [b["titel"], *b["titel_lose"], b["beschreibung_verfahren"], *b["beschreibung_lose"], *b["option"], *b["verlaengerung"]]
+    funde = []
+
+    def neu(o):
+        o = o.strip(" .,-")
+        if not o or o.lower() in _KEIN_ORT or re.search(r"(straße|str\.|weg|platz|allee|gasse|ring|damm)$", o, re.I):
+            return
+        if o.lower() not in {f.lower() for f in funde}:
+            funde.append(o)
+
+    for t in dict.fromkeys(texte):
+        for m in _PLZ_ORT.finditer(t):
+            neu(m.group(1))
+        for m in _LISTE.finditer(t):
+            for o in re.split(r",|\s+und\s+", m.group(1)):
+                neu(o)
+    daten = {o.lower() for o in b["orte"]}
+    return [f for f in funde if f.lower() not in daten]
 
 
 def trichter(profil, bekanntmachungen_dedupliziert, stichtag, ohne_frist=False, ohne_radius=False):
@@ -120,12 +181,13 @@ def regel_urteil(profil, b):
 # ---------------------------------------------------------------- Eignungs-Block
 def eignung_block(b):
     """Fakten aus Bekanntmachung: welche Arten von Nachweisen verlangt werden."""
-    arten = [EIGNUNG_LABEL.get(c, c) for c in b["eignung_codes"]]
+    arten = [EIGNUNG_LABEL.get(c) or f"{c} (Code, nicht übersetzt)" for c in b["eignung_codes"]]
     return {
         "arten": arten,
         "codes": b["eignung_codes"],
         "hat_freitext": bool(b["eignung_text"]),
-        "hinweis": "Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+        "hinweis": "Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen). "
+                   "Bezeichnungen: eigene Übersetzung der eForms-Codeliste selection-criterion (Version 1.0).",
     }
 
 

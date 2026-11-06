@@ -38,7 +38,11 @@
               },
               {
                 "title": "Ort",
-                "value": "Ort nicht genannt (DE236 Neumarkt i. d. OPf.); Luftlinie ca. 47 km von Schwandorf (Näherung)"
+                "value": "Ort weder im Datenfeld noch im Text gefunden (einfache Ortssuche); Region laut Datenfeld: DE236 Neumarkt i. d. OPf."
+              },
+              {
+                "title": "Entfernung",
+                "value": "Näherung: ca. 45 km Luftlinie von Schwandorf zum Bezugspunkt DE236 (Neumarkt i. d. OPf.), nicht zum Objekt"
               },
               {
                 "title": "Abgabefrist",
@@ -46,7 +50,7 @@
               },
               {
                 "title": "Laufzeit",
-                "value": "24 Monate"
+                "value": "Datenfeld Dauer: 24 Monate; Verlängerung/Option im Text: „Der Auftrag kann dreimal um 12 Monate verlängert werden.“ „Der Auftrag kann 3 x um 12 Monate verlängert werden.“"
               },
               {
                 "title": "Wert",
@@ -70,30 +74,31 @@
           },
           {
             "type": "TextBlock",
-            "text": "Umweltmanagement; Qualitätsmanagement; Referenzen (Dienstleistungen); Versicherung; Handelsregister. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "text": "Maßnahmen des Umweltmanagements; Maßnahmen zur Qualitätssicherung; Referenzen zu bestimmten Dienstleistungen; Berufshaftpflichtversicherung; Eintragung in ein Handelsregister. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen). Bezeichnungen: eigene Übersetzung der eForms-Codeliste selection-criterion (Version 1.0).",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Einordnung (Deutung, nicht Fakt): passt",
+            "text": "KI-Deutung (claude-sonnet-5-5; vom Sprachmodell erzeugt, nicht Fakt, Begründung nicht geprüft): passt",
             "weight": "Bolder",
             "color": "Good",
-            "spacing": "Medium"
-          },
-          {
-            "type": "TextBlock",
-            "text": "Unterhalts- und Glasreinigung in Schulen im Landkreis Neumarkt i.d.OPf. liegen im Leistungsspektrum und im Radius von 60 km (ca. 46,9 km). Die Laufzeit von 24 Monaten erfüllt die Mindestlaufzeit; Wert und Frist widersprechen nichts Ablesbarem. (KI (claude-sonnet-5-5))",
+            "spacing": "Medium",
             "wrap": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Leistung“: „Los 4 Glasreinigung“",
+            "text": "Unterhalts- und Glasreinigung in Schulen im Landkreis Neumarkt i.d.OPf. liegen im Leistungsspektrum und im Radius von 60 km (ca. 46,9 km). Die Laufzeit von 24 Monaten erfüllt die Mindestlaufzeit; Wert und Frist widersprechen nichts Ablesbarem.",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Leistung“: „Los 4 Glasreinigung“",
             "wrap": true,
             "isSubtle": true
           },
           {
             "type": "TextBlock",
-            "text": "Zitat zu „Objektart“: „Objekte - Edith-Stein-Realschule Parsberg - Gymnasium Parsberg - Sonderpädagogisches Förderzentrum Parsberg“",
+            "text": "Zitat aus dem Text (wörtlich geprüft) zu „Objektart“: „Objekte - Edith-Stein-Realschule Parsberg - Gymnasium Parsberg - Sonderpädagogisches Förderzentrum Parsberg“",
             "wrap": true,
             "isSubtle": true
           },
@@ -101,6 +106,13 @@
             "type": "TextBlock",
             "text": "Nicht ablesbar: Wert, Zertifikate, Kapazität, Personal, Tarifbindung",
             "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Der KI lagen Titel, Beschreibungen, Eignungs-Freitext und einige Datenfelder vor (nicht Beginn-/Ende-Datum, nicht die Vergabeunterlagen). Geprüft wird nur, dass Zitate wörtlich im Text stehen; die Begründung selbst wird nicht geprüft.",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true
           },
           {
             "type": "TextBlock",

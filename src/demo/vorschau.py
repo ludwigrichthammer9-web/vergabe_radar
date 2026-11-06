@@ -2,7 +2,7 @@
 
 from html import escape
 
-from nachrichten import HINWEIS, QUELLE, mail_html_fragment
+from nachrichten import HINWEIS, KI_HINWEIS, QUELLE, mail_html_fragment, zitat_zeilen
 
 CSS = """
 body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#f3f2f1;color:#201f1e}
@@ -35,9 +35,9 @@ def _tag(u):
 
 
 def _card_html(c):
-    fakt = [("Auftraggeber", c["auftraggeber"]), ("Ort", c["ort"]), ("Abgabefrist", c["frist"]), ("Laufzeit", c["laufzeit"]),
-            ("Wert", c["wert"]), ("Umfang", c["lose"])]
-    z = "".join(f"<div class='klein'>Zitat zu {escape(k)}: „{escape(' '.join(q.split())[:220])}“</div>" for k, q in c["zitate"])
+    fakt = [("Auftraggeber", c["auftraggeber"]), ("Ort", c["ort"]), ("Entfernung", c["entfernung"]), ("Abgabefrist", c["frist"]),
+            ("Laufzeit", c["laufzeit"]), ("Wert", c["wert"]), ("Umfang", c["lose"])]
+    z = "".join(f"<div class='klein'>{escape(zeile)}</div>" for zeile in zitat_zeilen(c))
     vg = ""
     if c["vorgaenger"]:
         vg = (f"<div class='klein'>Vorgänger laut Vertragsliste (Prototyp): {escape(c['vorgaenger']['los_titel'])}, "
@@ -46,8 +46,9 @@ def _card_html(c):
             f"<div class='klein'>Profil: {escape(c['profil_name'])}</div>"
             f"<table>{''.join(f'<tr><td>{escape(k)}</td><td>{escape(v)}</td></tr>' for k, v in fakt)}</table>"
             f"<div><b>Verlangt (Eignung, Art):</b> {escape(c['eignung'])}. <span class='klein'>{escape(c['eignung_hinweis'])}</span></div>"
-            f"<div><b>Einordnung (Deutung):</b> {_tag(c['urteil'])} {escape(c['begruendung'])} <i>({escape(c['quelle_urteil'])})</i></div>{z}"
-            f"<div><b>Nicht ablesbar:</b> {escape(', '.join(c['nicht_ablesbar']))}</div>{vg}"
+            f"<div><b>{escape(c['deutung'])}:</b> {_tag(c['urteil'])} {escape(c['begruendung'])}</div>{z}"
+            f"<div><b>Nicht ablesbar:</b> {escape(', '.join(c['nicht_ablesbar']))}</div>"
+            f"<div class='klein'>{escape(KI_HINWEIS)}</div>{vg}"
             f"<a class='knopf' href='{escape(c['link'])}'>Bekanntmachung auf TED</a>"
             f"<div class='klein'>{escape(HINWEIS)}</div></div>")
 
@@ -94,9 +95,11 @@ def baue(daten):
     v = daten["vergleich"]
     zeilen = "".join(f"<tr><td>{escape(r['profil'])}</td><td>{escape(r['nr'])}</td><td>{escape(r['titel'][:70])}</td><td>{escape(r['ki'])}</td>"
                      f"<td>{escape(r['regel'])}</td><td>{'ja' if r['gleich'] else '<b>nein</b>'}</td></tr>" for r in v["paare"])
+    triv = sum(1 for r in v["paare"] if r["regel"] == "passt nicht" and r["gleich"] and r["regel_begruendung"].startswith("Entfernung"))
     teile.append("<section class='profil'><h2>KI-Urteil gegen regelbasiertes Urteil (Vergleich, keine Genauigkeitsaussage)</h2>"
-                 f"<p class='sub' style='margin:0 0 6px'>{v['gleich']} von {v['n']} Fällen gleich ({escape(v['modus'])}). Es gibt keine "
-                 "menschlich geprüfte Referenz; beide Urteile können falsch sein.</p>"
+                 f"<p class='sub' style='margin:0 0 6px'>{v['gleich']} von {v['n']} Fällen gleich ({escape(v['modus'])}); {triv} Fälle trivial "
+                 "(gleiche Entfernung), kein inhaltlicher Ablehnungsfall: Ob die KI fachlich ablehnen kann, ist ungetestet. "
+                 "Keine Referenz durch einen Menschen; beide Urteile können falsch sein.</p>"
                  "<table class='v'><tr><th>Profil</th><th>Bekanntmachung</th><th>Titel</th><th>KI</th><th>Regel</th><th>gleich</th></tr>" + zeilen + "</table></section>")
     teile.append(f"<footer>{escape(QUELLE)}. Lizenz: TED-Daten sind laut Rechtshinweis der TED-Seite frei wiederverwendbar mit Quellenangabe "
                  "(Wortlaut selbst prüfen). Hinweis: " + escape(HINWEIS) + "</footer></body></html>")
