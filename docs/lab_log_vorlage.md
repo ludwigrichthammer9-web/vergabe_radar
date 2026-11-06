@@ -222,7 +222,7 @@ Untergrenze aus der Git-Historie, insgesamt **37,7 Stunden** (Sitzung = Commits 
 
 ## 9. Reproduzierbarkeit und Quellen
 
-- **Code und Daten.** Alle Schritte laufen als Skripte in `src/` (Abhängigkeiten in `requirements.txt`; Aufrufe in `docs/reproduzierbarkeit.md`); Make-or-Buy und Export: `src/report/make_or_buy.py`, `export_vertragsliste.py`, `docs/export_schema.md`. Rohdaten unverändert in `data/raw` (nicht im Git, Abruf per `src/ted_download.py`); Datenlink für die Abgabe: _offen_.
+- **Code und Daten.** Alle Schritte laufen als Skripte in `src/` (Abhängigkeiten in `requirements.txt`; Aufrufe in `docs/reproduzierbarkeit.md`); Make-or-Buy und Export: `src/report/make_or_buy.py`, `export_vertragsliste.py`, `docs/export_schema.md`. Rohdaten unverändert in `data/raw` (nicht im Git, Abruf per `src/ted_download.py`); Datenzugang für die Abgabe: Quellcode und Abrufanleitung im Repository https://github.com/ludwigrichthammer9-web/vergabe_radar (Anleitung `docs/reproduzierbarkeit.md`); die Rohdaten werden mit `src/ted_download.py` neu abgerufen (öffentliche Quelle).
 - **Vorab festgelegt.** Seeds, Kriterien und Skripte wurden vor dem Ziehen oder Abruf committet; Hashes und Commits im Anhang A. Ausnahmen: Abschnitt 5.
 - **Quellen.** `docs/quellen.md` (TED Search API v3, Lizenz laut TED-Rechtsseite frei wiederverwendbar, vor Abgabe zu bestätigen; Vergabeweiser CC BY 4.0; AusschreibungsRadar, einzelne Seiten, `robots.txt` beachtet; Bekanntmachungsservice CC0; Preise in `docs/business.md` §8; Annahmen: `docs/annahmen.md`).
 

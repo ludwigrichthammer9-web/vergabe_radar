@@ -48,4 +48,4 @@ Projektablauf und Dokumentation. Welcher LN gilt, ist **offen** (vermutlich C, E
 - **Datensatzgröße (C):** 200–10.000 Zeilen, ≤ 15 Merkmale ist ein Richtwert; Auswahl der Merkmale und Teilmenge begründen.
 - **Vortrag:** Erzählbogen Frage → Irrwege (Auftraggeber-Zuordnung verworfen, Objekt-Zuordnung verworfen) → Erkenntnis
   (Vertragsliste, Höchstende aus Freitext) mit Empfehlung und Grenzen.
-- Offen: Anmeldung beim Dozenten, Abgabefrist (Moodle, nicht bekannt), Wahl LN B oder C.
+- LN B (Zweierteam) ist mit dem Dozenten besprochen (Angabe des Nutzers, 2026-11-06). Offen: Abgabefrist (Moodle, nicht bekannt).

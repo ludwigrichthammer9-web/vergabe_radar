@@ -54,5 +54,4 @@ festen Seed (in `docs/iterationen.md` genannt).
 - **Ausgabe der Subagenten** (`data/raw/rechercheur_*`, `blindpruefung_agent_*`): Arbeitsprotokolle, nicht reproduzierbar.
 
 ## Datenlink für die Abgabe
-Offen: Entweder diese Anleitung als Datenzugang abgeben (Quelle öffentlich) oder einen Ordner mit den verwendeten Läufen
-(`data/raw/ted_search/`, ca. 470 MB, ohne Rechercheur-Ordner) bereitstellen. Entscheidung des Nutzers.
+Gewählt (2026-11-06, Nutzer): Diese Anleitung samt Repository https://github.com/ludwigrichthammer9-web/vergabe_radar ist der Datenzugang (Quelle öffentlich, Abruf per `src/ted_download.py`). Voraussetzung: Das Repository ist gepusht und für den Dozenten lesbar (Stand 2026-11-06: nicht erreichbar, nicht gepusht). Ein Ordner mit den Läufen (`data/raw/ted_search/`, ca. 470 MB) wurde nicht bereitgestellt.

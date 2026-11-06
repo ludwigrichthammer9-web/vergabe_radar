@@ -131,10 +131,10 @@ s = new_slide("", "ZEIT 0:30. KERNAUSSAGE: Eine Reinigungsfirma will früh wisse
               "(eine Liste der Vertragsenden), was nicht (eine Terminprognose), und was an der Idee gegenüber der kostenlosen Konkurrenz übrig bleibt. "
               "Ablauf in einem Satz: Frage, zwei Irrwege, eine Liste samt Genauigkeit (kurz, vier Folien), dann der längere Teil: Wie arbeiten Betriebe, wer bietet es schon, was bleibt. "
               "Kernbotschaft schon jetzt nennen: Die Liste lässt sich aus TED lesen, ein eigenes Produkt ist sie nicht, und ein Qualitätsvorsprung ist nicht belegt. "
-              "TO-DO: Namen eintragen (Platzhalter „[Namen eintragen]“ auf der Folie). ZEIG-MIR-WO: docs/iterationen.md (Übersicht und Ergebnis Iteration 10 und 10b).", dark=True)
+              "ZEIG-MIR-WO: docs/iterationen.md (Übersicht und Ergebnis Iteration 10 und 10b).", dark=True)
 box(s, 0.6, 1.5, 6.2, 1.0, "Vergabe-Radar", size=48, bold=True, color=WHITE, font=HEAD, name="Titel")
 box(s, 0.6, 2.6, 6.0, 1.2, "Wann laufen öffentliche Aufträge aus, und wer weiß es schon? Was TED-Daten verraten, wer mitspielt und was bleibt", size=20, color=SOFT, name="Untertitel")
-box(s, 0.6, 4.7, 7.5, 0.4, "Big Data Analytics · Leistungsnachweis B · [Namen eintragen]", size=12, color=SOFT, name="Autoren")
+box(s, 0.6, 4.7, 7.5, 0.4, "Big Data Analytics · Leistungsnachweis B · Manuel Strobel, Ludwig Richthammer", size=12, color=SOFT, name="Autoren")
 rect(s, 7.2, 1.4, 2.2, 2.2, TEAL, MSO_SHAPE.OVAL, "Fragezeichen Kreis")
 box(s, 7.2, 1.4, 2.2, 2.2, "?", size=96, bold=True, color=WHITE, font=HEAD, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, name="Fragezeichen")
 
