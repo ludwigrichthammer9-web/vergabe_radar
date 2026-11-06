@@ -89,6 +89,21 @@ _Für ein kurzes Gespräch mit einem Reinigungsbetrieb (10 bis 15 Minuten). Kein
 | Würden Sie für eine solche Auswahl zahlen? Wenn ja, wofür und in welcher Größenordnung? (Aussage, keine Zusage) | |
 | Kennen Sie Vergabeweiser oder AusschreibungsRadar? Was fehlt dort? | |
 
+## Fragen zur Systemlandschaft (ein Betrieb, 5 Minuten)
+
+_Hintergrund: Die Idee ist, dass ein Betrieb seine Aufträge selbst filtert und das Ergebnis als Datei in sein Verwaltungssystem übernimmt; die Webseite stellt nur dar. Zeigen Sie `docs/prototyp/export/vertragsliste_v1_de.csv` in Excel (Schema: `docs/export_schema.md`). Antworten sind Aussagen, keine Zusagen._
+
+| Frage | Antwort (wörtlich) |
+|---|---|
+| Wer filtert heute bei Ihnen Ausschreibungen (Rolle, nicht Name)? | |
+| In welchem System landet das Ergebnis? (E-Mail, Excel, ERP/CRM, Kalkulationssoftware, nichts) | |
+| Wer pflegt das, und wie viel Zeit je Woche? | |
+| Könnten Sie eine CSV mit festem Schema in Ihr System laden? (Datei in Excel zeigen; Spalten, die Sie bräuchten oder nicht bräuchten) | |
+| Was fehlt Ihnen an kostenlosen Wegen? (TED-Suchprofil, Bekanntmachungsservice, Vergabeweiser) | |
+| Würden Sie so etwas selbst betreiben oder einkaufen, und wo liegt Ihre Schmerzgrenze beim Preis? (Aussage, keine Zusage) | |
+
+- Auswertung Systemlandschaft: H1/H2 (siehe docs/iterationen.md Paket D): bestätigt / nicht bestätigt, Begründung: ____
+
 ## Auswertung (nach dem Gespräch, 5 Minuten)
 
 - Für wie viele der fünf Aufträge konnte der Betrieb **allein mit den gezeigten Angaben** entscheiden? ____ von 5

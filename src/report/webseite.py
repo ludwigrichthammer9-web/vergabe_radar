@@ -15,9 +15,11 @@ die Codes DE231 bis DE23A sind seit NUTS 2016 unverändert (nicht selbst gegen E
 import csv
 import json
 import re
+import sys
 from datetime import date
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # für den Import von export_vertragsliste (Schema-Spalten der Auswahl-CSV)
 ROOT = Path(__file__).resolve().parent.parent.parent
 CSV = ROOT / "reports" / "beispiel_liste_oberpfalz.csv"
 CSV_W = ROOT / "reports" / "wettbewerbsbild_oberpfalz.csv"
@@ -31,7 +33,8 @@ STUFEN = {"A": "Höchstende steht ausdrücklich in Text oder Feld, oder das Ende
           "D": "Verlängerung erwähnt, Länge oder Anzahl fehlt; Höchstende unbestimmbar",
           "E": "Ende nur geschätzt (Veröffentlichung + Dauer, ungeprüft)", "F": "kein Ende bekannt"}
 # Sonderfall aus docs/iterationen.md (Nachtrag zu 527230-2026): Listenwert bleibt unverändert, nur Hinweis
-SONDER = {"527230-2026": "Interimsvergabe: Dauerfeld enthält die Option; Grundlaufzeit vermutlich bis 31.01.2027"}
+SONDER = {"527230-2026": "Interimsvergabe: Dauerfeld enthält die Option; Grundlaufzeit vermutlich bis 31.01.2027",
+          "533946-2026": "Dauerfeld enthält die Option: Text nennt 2 Jahre Festlaufzeit + 3x1 Jahr Option; Grundlaufzeit vermutlich bis 30.09.2028"}  # Paket C (Fehlertyp „Dauerfeld = Gesamtdauer“)
 
 
 def num(s: str):
@@ -67,6 +70,8 @@ def lade() -> list[dict]:
     with CSV.open(encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f, delimiter=";"))
     wb = lade_wettbewerb()
+    from export_vertragsliste import NAMEN, baue_zeilen  # erst hier, weil der Export seinerseits NUTS/SONDER aus dieser Datei lädt
+    ex = {(z["bekanntmachung"], z["los"]): [z[k] or "" for k in NAMEN] for z in baue_zeilen()}  # Zeilen im Spaltenschema des Exports (docs/export_schema.md)
     out = []
     for r in rows:
         codes = r["nuts"].split()
@@ -75,7 +80,8 @@ def lade() -> list[dict]:
                     "r": [NUTS.get(c, c) for c in codes], "b": r["beginn"], "e": r["gl_ende"] or r["gl_geschaetzt"], "g": r["gl_herkunft"], "h": r["hoechstende"],
                     "hh": r["hoechstende_herkunft"], "s": r["stufe"], "st": r["status"], "ge": not r["gl_ende"] and bool(r["gl_geschaetzt"]),
                     "x": r["auch_ausserhalb"] == "True", "w": w.get("w"), "wv": w.get("wv"), "wz": w.get("wz", False),
-                    "ang": w.get("ang"), "am": w.get("am", False), "wb": bool(w), "mg": w.get("mg", False), "so": SONDER.get(r["notice"], "")})
+                    "ang": w.get("ang"), "am": w.get("am", False), "wb": bool(w), "mg": w.get("mg", False), "so": SONDER.get(r["notice"], ""),
+                    "ex": ex[(r["notice"], str(int(r["los"])))]})
     return out
 
 
@@ -102,9 +108,9 @@ th{background:var(--pale);position:sticky;top:0;cursor:pointer;white-space:nowra
 .num{text-align:right;white-space:nowrap}details{margin-top:18px}footer{color:var(--grey);font-size:12.5px;margin:24px 0}footer p{margin:6px 0}
 @media (max-width:700px){main{padding:12px}header{padding:14px 12px}h1{font-size:20px}.filter label{flex:1 1 140px}}
 </style></head><body>
-<header><h1>Vertragsliste Gebäudereinigung · Oberpfalz</h1><p>Prototyp · Stand der Daten: __STAND__ · __N__ Lose aus __NN__ Bekanntmachungen · Seite erzeugt am __ERZ__</p></header>
+<header><h1>Vertragsliste Gebäudereinigung · Oberpfalz</h1><p>Prototyp, Darstellung (Demo) · Stand der Daten: __STAND__ · __N__ Lose aus __NN__ Bekanntmachungen · Seite erzeugt am __ERZ__</p></header>
 <main>
-<div class="hinweis" role="note"><p style="margin:0 0 8px"><b>Das Ende der Grundlaufzeit ist kein Termin der Neuausschreibung.</b></p><b>Was diese Liste ist und was nicht.</b> Sie zeigt je <b>Los</b>, wann die feste Laufzeit (Grundlaufzeit) laut Bekanntmachung endet, das <b>Höchstende</b> (mit Verlängerungen) getrennt davon, die Herkunft der Angabe (Stufe A bis F) und, soweit in TED veröffentlicht, Auftragnehmer, Zuschlagswert und Zahl der Angebote.
+<div class="hinweis" role="note"><p style="margin:0 0 8px"><b>Das Ende der Grundlaufzeit ist kein Termin der Neuausschreibung.</b></p><p style="margin:0 0 8px"><b>Diese Seite stellt die Daten dar (Demo).</b> Für die Übernahme in ein Verwaltungssystem gibt es einen Datei-Export mit festem Schema (Version 1.0): <a href="export/vertragsliste_v1.csv">CSV (Komma)</a>, <a href="export/vertragsliste_v1_de.csv">CSV (Semikolon, für deutsches Excel)</a>, <a href="export/vertragsliste_v1.json">JSON</a>; Beschreibung der Felder: <code>docs/export_schema.md</code>. Die Schaltfläche „Auswahl als CSV“ liefert die gefilterte Auswahl mit denselben Spalten (Semikolon).</p><b>Was diese Liste ist und was nicht.</b> Sie zeigt je <b>Los</b>, wann die feste Laufzeit (Grundlaufzeit) laut Bekanntmachung endet, das <b>Höchstende</b> (mit Verlängerungen) getrennt davon, die Herkunft der Angabe (Stufe A bis F) und, soweit in TED veröffentlicht, Auftragnehmer, Zuschlagswert und Zahl der Angebote.
 <ul>
 <li><b>Voreinstellung der Ansicht:</b> angezeigt werden laufende und noch verlängerbare Verträge (Status „Grundlaufzeit läuft“, „Verlängerungszeit möglich“, „Verlängerung offen“); abgelaufene Lose (auch das Höchstende ist vorbei) sind ausgeblendet, Lose ohne bekanntes Ende stehen am Schluss. Der Schalter „auch abgelaufene“ zeigt alle Lose. Lose, deren Grundlaufzeit vorbei ist, bleiben sichtbar, weil dort eine Verlängerung möglich ist; in der Optionsanalyse kam bei belegter Option die Neuausschreibung in 17 von 24 Fällen (70,8 %) zwischen Ende der Grundlaufzeit und Höchstende (kleine Stichprobe, nur Hinweis).</li>
 <li><b>Keine Terminprognose:</b> Wann neu ausgeschrieben wird, sagt die Liste nicht (Backtest: Treffer ±3 Monate nur 28,8 %).</li>
@@ -139,7 +145,7 @@ th{background:var(--pale);position:sticky;top:0;cursor:pointer;white-space:nowra
 </footer>
 </main>
 <script>
-const D=__DATA__, STUFEN=__STUFEN__;
+const D=__DATA__, STUFEN=__STUFEN__, SCHEMA=__SCHEMA__;
 const SPALTEN=[["e","Ende Grundlaufzeit<br><small>je Los</small>"],["h","Höchstende<br><small>nur Hinweis</small>"],["a","Auftraggeber"],["t","Los"],["rs","Region"],["w","Auftragnehmer"],["wv","Zuschlagswert"],["ang","Angebote"],["st","Status"],["s","Stufe"],["n","Bekanntmachung"]];
 D.forEach(d=>{d.rs=d.r.join(", ")+(d.x?" *":"")});
 const $=id=>document.getElementById(id);
@@ -166,8 +172,8 @@ function zeige(){const r=auswahl();$("anz").textContent=r.length+" von "+D.lengt
  $("tb").innerHTML=r.map(d=>{const c=d.st.startsWith("abgel")?"abgelaufen":d.st.includes("offen")||d.st.includes("möglich")?"offen":d.st.startsWith("Grundlaufzeit")?"laeuft":"";
  const so=d.so?`<span class="so">${esc(d.so)}</span>`:"";
  return `<tr><td>${d.e?fmt(d.e)+(d.ge?' <span class="grau">(geschätzt)</span>':""):'<span class="grau">in TED nicht angegeben</span>'}${so}</td><td class="grau">${d.h?fmt(d.h):"–"}</td><td>${esc(d.a)}</td><td>${esc(d.t)}</td><td>${esc(d.rs)}</td><td>${d.w?esc(d.w):'<span class="grau">'+(d.mg?"mehrere Auftragnehmer":"in TED nicht angegeben")+"</span>"}</td><td class="num">${wertTxt(d)}</td><td class="num">${angTxt(d)}</td><td><span class="st ${c}">${esc(d.st)}</span></td><td class="sf" title="${esc(STUFEN[d.s]||"")}">${d.s}</td><td><a href="${esc(d.u)}" target="_blank" rel="noopener">${esc(d.n)}</a></td></tr>`}).join("")}
-function csv(){const k=["n","u","a","t","rs","e","h","hh","g","s","st","w","wv","ang","am"],h=["Bekanntmachung","TED-Link","Auftraggeber","Los","Region","Ende Grundlaufzeit","Höchstende (Hinweis)","Herkunft Höchstende","Herkunft Ende","Stufe","Status","Auftragnehmer","Zuschlagswert EUR (nur > 1 EUR)","Angebote","Angebote nur Untergrenze (elektronisch)"];
- const q=v=>'"'+String(v??"").replace(/"/g,'""')+'"';const t=[h.map(q).join(";"),...auswahl().map(d=>k.map(x=>q(d[x])).join(";"))].join("\r\n");
+function csv(){// Spalten und Werte wie docs/export_schema.md (Version 1.0), Semikolon wie vertragsliste_v1_de.csv, mit BOM
+ const q=v=>{const s=String(v??"");return /[;"\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s};const t=[SCHEMA.map(q).join(";"),...auswahl().map(d=>d.ex.map(q).join(";"))].join("\r\n")+"\r\n";
  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["﻿"+t],{type:"text/csv;charset=utf-8"}));a.download="vertragsliste_auswahl.csv";a.click()}
 document.querySelectorAll(".filter input,.filter select").forEach(e=>e.addEventListener("input",zeige));
 $("reset").onclick=()=>{document.querySelectorAll(".filter input,.filter select").forEach(e=>e.type==="checkbox"?e.checked=false:e.value="");sort=["e",1];zeige()};
@@ -179,9 +185,10 @@ zeige();
 
 
 def main(test: str = "", out: Path = OUT) -> None:
+    from export_vertragsliste import NAMEN
     d = lade()
     stand = re.search(r"Stand (\d{2}\.\d{2}\.\d{4})", (ROOT / "reports" / "beispiel_liste.md").read_text(encoding="utf-8")).group(1)
-    html = (SEITE.replace("__DATA__", json.dumps(d, ensure_ascii=False)).replace("__STUFEN__", json.dumps(STUFEN, ensure_ascii=False))
+    html = (SEITE.replace("__DATA__", json.dumps(d, ensure_ascii=False)).replace("__STUFEN__", json.dumps(STUFEN, ensure_ascii=False)).replace("__SCHEMA__", json.dumps(NAMEN))
             .replace("__STAND__", stand).replace("__N__", str(len(d))).replace("__NN__", str(len({x["n"] for x in d})))
             .replace("__ERZ__", date.today().strftime("%d.%m.%Y")).replace("__TEST__", test))
     out.parent.mkdir(parents=True, exist_ok=True)
