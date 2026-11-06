@@ -1,0 +1,124 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "contentUrl": null,
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "Neue Ausschreibung: Unterhalts- sowie Glas- und Rahmenreinigung für das FA Schwandorf mit ASt Neunburg v.W.",
+            "weight": "Bolder",
+            "size": "Medium",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Profil: Beispiel Gebäudeservice Oberpfalz GmbH (erfunden)",
+            "isSubtle": true,
+            "spacing": "None",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Fakten aus der Bekanntmachung",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Auftraggeber",
+                "value": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -"
+              },
+              {
+                "title": "Ort",
+                "value": "Schwandorf (DE239 Schwandorf); Luftlinie ca. 0 km von Schwandorf (Näherung)"
+              },
+              {
+                "title": "Abgabefrist",
+                "value": "11.11.2026 (noch 26 Tage ab 16.10.2026)"
+              },
+              {
+                "title": "Laufzeit",
+                "value": "im Datenfeld nicht angegeben (ggf. im Text)"
+              },
+              {
+                "title": "Wert",
+                "value": "nicht angegeben"
+              },
+              {
+                "title": "Umfang",
+                "value": "2 Los(e)"
+              },
+              {
+                "title": "Veröffentlicht",
+                "value": "07.10.2026"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Durchschnittsumsatz; Beschäftigtenzahl; Referenzen (Dienstleistungen); slc-abil-mgmt-supply; slc-suit-auth-mbrshp. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Einordnung (Deutung, nicht Fakt): passt",
+            "weight": "Bolder",
+            "color": "Good",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Unterhalts- und Glasreinigung für das Finanzamt Schwandorf und die Außenstelle Neunburg vorm Wald decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Firmensitz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erfüllt die Mindestlaufzeit. (KI (claude-sonnet-5-5))",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Leistung“: „Unterhalts- sowie Glas- und Rahmenreinigung für das Finanzamt Schwandorf mit Außenstelle Neunburg vorm Wald.“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Objektart“: „Unterhaltsreinigung für das Finanzamt Schwandorf und für die Außenstelle Neunburg vorm Wald“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Nicht ablesbar: Wert, Zertifikate, Kapazität, Personal, Tarifbindung",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Demo zur Veranschaulichung der Datenübergabe. Kein Rechtsrat, keine Aussage zu Gewinnchancen. Bitte die Bekanntmachung selbst lesen. Quelle: TED (Tenders Electronic Daily), Auftragsbekanntmachung; Quellenangabe: © Europäische Union, https://ted.europa.eu",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true,
+            "spacing": "Medium"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "Bekanntmachung auf TED",
+            "url": "https://ted.europa.eu/de/notice/-/detail/691173-2026"
+          }
+        ]
+      }
+    }
+  ]
+}

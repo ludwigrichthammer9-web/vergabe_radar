@@ -1,0 +1,124 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "contentUrl": null,
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "Neue Ausschreibung: Reinigungsdienstleistungen Bayern (09/FI-AD/2026)",
+            "weight": "Bolder",
+            "size": "Medium",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Profil: Beispiel Gebäudeservice Oberpfalz GmbH (erfunden)",
+            "isSubtle": true,
+            "spacing": "None",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Fakten aus der Bekanntmachung",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Auftraggeber",
+                "value": "IKK classic"
+              },
+              {
+                "title": "Ort",
+                "value": "Ort nicht genannt (DE236 Neumarkt i. d. OPf.); Luftlinie ca. 47 km von Schwandorf (Näherung)"
+              },
+              {
+                "title": "Abgabefrist",
+                "value": "12.11.2026 (noch 27 Tage ab 16.10.2026)"
+              },
+              {
+                "title": "Laufzeit",
+                "value": "im Datenfeld nicht angegeben (ggf. im Text)"
+              },
+              {
+                "title": "Wert",
+                "value": "nicht angegeben"
+              },
+              {
+                "title": "Umfang",
+                "value": "8 Los(e)"
+              },
+              {
+                "title": "Veröffentlicht",
+                "value": "14.10.2026"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Qualifikation des Personals; sonstige wirtschaftliche Anforderungen; Referenzen (Dienstleistungen); Gesamtumsatz; Umweltmanagement. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Einordnung (Deutung, nicht Fakt): unklar",
+            "weight": "Bolder",
+            "color": "Warning",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Unterhaltsreinigung und Glasreinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etwa 47 km im Radius von 60 km (Augsburg, Hof und Nürnberg liegen voraussichtlich außerhalb). Die geforderte Eigenerklärung zu ISO 14001 oder einem gleichwertigen Umweltmanagementsystem lässt sich aus dem Profil nicht bestätigen. (KI (claude-sonnet-5-5))",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Leistung“: „Reinigungsarbeiten (Unterhaltsreinigung und Glas- und Rahmenreinigung)“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Ort/Entfernung“: „Unterhaltsreinigung am Standort St.-Florian-Straße 1, 92318 Neumarkt der Auftraggeberin“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Nicht ablesbar: Objektart, Wert, Kapazität, Personal, Tarifbindung",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Demo zur Veranschaulichung der Datenübergabe. Kein Rechtsrat, keine Aussage zu Gewinnchancen. Bitte die Bekanntmachung selbst lesen. Quelle: TED (Tenders Electronic Daily), Auftragsbekanntmachung; Quellenangabe: © Europäische Union, https://ted.europa.eu",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true,
+            "spacing": "Medium"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "Bekanntmachung auf TED",
+            "url": "https://ted.europa.eu/de/notice/-/detail/710250-2026"
+          }
+        ]
+      }
+    }
+  ]
+}

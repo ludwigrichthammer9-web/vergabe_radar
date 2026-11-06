@@ -1,0 +1,357 @@
+{
+ "stichtag": "2026-10-16",
+ "fenster_tage": 14,
+ "vergleichsmenge": "ganzer Schnappschuss, CPV + Oberpfalz + Laufzeit, ohne Frist- und Radiusfilter (Radius steckt im Regelurteil)",
+ "schnappschuss": "demo_push_20261106",
+ "gemeinsam": [
+  {
+   "name": "Alle Bekanntmachungen Deutschland, CPV 909* (im Schnappschuss)",
+   "anzahl": 621,
+   "notiz": "demo_push_20261106"
+  },
+  {
+   "name": "veröffentlicht 02.10. bis 16.10.2026",
+   "anzahl": 145,
+   "notiz": ""
+  },
+  {
+   "name": "ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel)",
+   "anzahl": 131,
+   "notiz": ""
+  }
+ ],
+ "profile": [
+  {
+   "profil_id": "P1",
+   "stufen": [
+    {
+     "name": "Gebäudereinigungs-CPV (Profil)",
+     "anzahl": 125,
+     "notiz": ""
+    },
+    {
+     "name": "Oberpfalz (NUTS DE231-DE23A)",
+     "anzahl": 4,
+     "notiz": "davon nur über PLZ 92/93 erkannt: 0"
+    },
+    {
+     "name": "Radius 60 km um Schwandorf",
+     "anzahl": 4,
+     "notiz": "davon Entfernung nicht berechenbar (nur NUTS-2/PLZ): 0"
+    },
+    {
+     "name": "Abgabefrist noch offen",
+     "anzahl": 4,
+     "notiz": "davon Frist nicht angegeben: 0"
+    },
+    {
+     "name": "Laufzeit mindestens 12 Monate",
+     "anzahl": 4,
+     "notiz": "davon Laufzeit im Datenfeld nicht angegeben: 3"
+    },
+    {
+     "name": "Info: Wert angegeben (kein Filter)",
+     "anzahl": 0,
+     "notiz": "bei 4 von 4 Treffern ist kein Wert angegeben"
+    },
+    {
+     "name": "KI-Urteil: passt / unklar / passt nicht",
+     "anzahl": 4,
+     "notiz": "3 / 1 / 0"
+    },
+    {
+     "name": "Nachrichten erzeugt (passt + unklar)",
+     "anzahl": 4,
+     "notiz": ""
+    },
+    {
+     "name": "davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig)",
+     "anzahl": 0,
+     "notiz": "bei 4 von 4 Nachrichten kein eindeutiger Treffer"
+    }
+   ],
+   "treffer": [
+    {
+     "nr": "691173-2026",
+     "titel": "Unterhalts- sowie Glas- und Rahmenreinigung für das FA Schwandorf mit ASt Neunburg v.W.",
+     "ki": "passt",
+     "ki_quelle": "KI (claude-sonnet-5-5)",
+     "regel": "passt",
+     "begruendung": "Unterhalts- und Glasreinigung für das Finanzamt Schwandorf und die Außenstelle Neunburg vorm Wald decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Firmensitz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erfüllt die Mindestlaufzeit.",
+     "nachricht": true,
+     "pruefhinweise": []
+    },
+    {
+     "nr": "710250-2026",
+     "titel": "Reinigungsdienstleistungen Bayern (09/FI-AD/2026)",
+     "ki": "unklar",
+     "ki_quelle": "KI (claude-sonnet-5-5)",
+     "regel": "unklar",
+     "begruendung": "Unterhaltsreinigung und Glasreinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etwa 47 km im Radius von 60 km (Augsburg, Hof und Nürnberg liegen voraussichtlich außerhalb). Die geforderte Eigenerklärung zu ISO 14001 oder einem gleichwertigen Umweltmanagementsystem lässt sich aus dem Profil nicht bestätigen.",
+     "nachricht": true,
+     "pruefhinweise": []
+    },
+    {
+     "nr": "711004-2026",
+     "titel": "Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf.",
+     "ki": "passt",
+     "ki_quelle": "KI (claude-sonnet-5-5)",
+     "regel": "passt",
+     "begruendung": "Unterhalts- und Glasreinigung in Schulen im Landkreis Neumarkt i.d.OPf. liegen im Leistungsspektrum und im Radius von 60 km (ca. 46,9 km). Die Laufzeit von 24 Monaten erfüllt die Mindestlaufzeit; Wert und Frist widersprechen nichts Ablesbarem.",
+     "nachricht": true,
+     "pruefhinweise": []
+    },
+    {
+     "nr": "716819-2026",
+     "titel": "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+     "ki": "passt",
+     "ki_quelle": "KI (claude-sonnet-5-5)",
+     "regel": "passt",
+     "begruendung": "Die Bekanntmachung umfasst Unterhalts- und Glasreinigung an Schulen und einem Verwaltungsgebäude in Amberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufzeit je Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu übernehmenden Objekte hängt von der Losauswahl ab.",
+     "nachricht": true,
+     "pruefhinweise": []
+    }
+   ]
+  },
+  {
+   "profil_id": "P2",
+   "stufen": [
+    {
+     "name": "Gebäudereinigungs-CPV (Profil)",
+     "anzahl": 125,
+     "notiz": ""
+    },
+    {
+     "name": "Oberpfalz (NUTS DE231-DE23A)",
+     "anzahl": 4,
+     "notiz": "davon nur über PLZ 92/93 erkannt: 0"
+    },
+    {
+     "name": "Radius 25 km um Amberg",
+     "anzahl": 2,
+     "notiz": "davon Entfernung nicht berechenbar (nur NUTS-2/PLZ): 0"
+    },
+    {
+     "name": "Abgabefrist noch offen",
+     "anzahl": 2,
+     "notiz": "davon Frist nicht angegeben: 0"
+    },
+    {
+     "name": "Laufzeit mindestens 12 Monate",
+     "anzahl": 2,
+     "notiz": "davon Laufzeit im Datenfeld nicht angegeben: 2"
+    },
+    {
+     "name": "Info: Wert angegeben (kein Filter)",
+     "anzahl": 0,
+     "notiz": "bei 2 von 2 Treffern ist kein Wert angegeben"
+    },
+    {
+     "name": "KI-Urteil: passt / unklar / passt nicht",
+     "anzahl": 2,
+     "notiz": "1 / 1 / 0"
+    },
+    {
+     "name": "Nachrichten erzeugt (passt + unklar)",
+     "anzahl": 2,
+     "notiz": ""
+    },
+    {
+     "name": "davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig)",
+     "anzahl": 0,
+     "notiz": "bei 2 von 2 Nachrichten kein eindeutiger Treffer"
+    }
+   ],
+   "treffer": [
+    {
+     "nr": "691173-2026",
+     "titel": "Unterhalts- sowie Glas- und Rahmenreinigung für das FA Schwandorf mit ASt Neunburg v.W.",
+     "ki": "unklar",
+     "ki_quelle": "KI (claude-sonnet-5-5)",
+     "regel": "passt",
+     "begruendung": "Die Unterhaltsreinigung passt zum Profil, die Glas- und Rahmenreinigung gehört jedoch nicht zum Leistungsangebot, und ob Teilangebote je Los möglich sind, ist im Text nicht ablesbar. Zudem liegt die Außenstelle Neunburg vorm Wald vermutlich weiter von Amberg entfernt als die angegebene Näherung von 21,9 km, sodass der 25-km-Radius unklar bleibt.",
+     "nachricht": true,
+     "pruefhinweise": []
+    },
+    {
+     "nr": "716819-2026",
+     "titel": "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+     "ki": "passt",
+     "ki_quelle": "KI (claude-sonnet-5-5)",
+     "regel": "passt",
+     "begruendung": "Unterhaltsreinigung an Schulen und einem Verwaltungsgebäude in Amberg entspricht Leistung, Objektarten und Sitz des Profils. Wert und Laufzeit je Los sind nicht angegeben; die Losauswahl bestimmt, ob das Limit von einem neuen Objekt gleichzeitig eingehalten wird.",
+     "nachricht": true,
+     "pruefhinweise": []
+    }
+   ]
+  }
+ ],
+ "vergleich": {
+  "n": 14,
+  "gleich": 13,
+  "paare": [
+   {
+    "profil": "P1",
+    "nr": "607727-2026",
+    "titel": "Unterhalts- und Glasreinigung WWA Regensburg",
+    "ki": "passt",
+    "regel": "passt",
+    "gleich": true,
+    "ki_begruendung": "Unterhalts- und Glasreinigung in Regensburg entsprechen dem Leistungsspektrum, und der Leistungsort liegt mit ca. 34,7 km innerhalb des Radius von 60 km. Der genannte Wert von 292.000 EUR je Angabe liegt im Wertrahmen des Profils.",
+    "regel_begruendung": "Leistungsstichwort (unterhaltsreinigung) und Objektart (amt) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P1",
+    "nr": "691173-2026",
+    "titel": "Unterhalts- sowie Glas- und Rahmenreinigung für das FA Schwandorf mit ASt Neunburg v.W.",
+    "ki": "passt",
+    "regel": "passt",
+    "gleich": true,
+    "ki_begruendung": "Unterhalts- und Glasreinigung für das Finanzamt Schwandorf und die Außenstelle Neunburg vorm Wald decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Firmensitz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erfüllt die Mindestlaufzeit.",
+    "regel_begruendung": "Leistungsstichwort (unterhaltsreinigung) und Objektart (schule) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P1",
+    "nr": "710250-2026",
+    "titel": "Reinigungsdienstleistungen Bayern (09/FI-AD/2026)",
+    "ki": "unklar",
+    "regel": "unklar",
+    "gleich": true,
+    "ki_begruendung": "Unterhaltsreinigung und Glasreinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etwa 47 km im Radius von 60 km (Augsburg, Hof und Nürnberg liegen voraussichtlich außerhalb). Die geforderte Eigenerklärung zu ISO 14001 oder einem gleichwertigen Umweltmanagementsystem lässt sich aus dem Profil nicht bestätigen.",
+    "regel_begruendung": "Leistungsstichwort (unterhaltsreinigung), aber keine Profil-Objektart im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P1",
+    "nr": "711004-2026",
+    "titel": "Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf.",
+    "ki": "passt",
+    "regel": "passt",
+    "gleich": true,
+    "ki_begruendung": "Unterhalts- und Glasreinigung in Schulen im Landkreis Neumarkt i.d.OPf. liegen im Leistungsspektrum und im Radius von 60 km (ca. 46,9 km). Die Laufzeit von 24 Monaten erfüllt die Mindestlaufzeit; Wert und Frist widersprechen nichts Ablesbarem.",
+    "regel_begruendung": "Leistungsstichwort (unterhalts) und Objektart (schule) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P1",
+    "nr": "716819-2026",
+    "titel": "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+    "ki": "passt",
+    "regel": "passt",
+    "gleich": true,
+    "ki_begruendung": "Die Bekanntmachung umfasst Unterhalts- und Glasreinigung an Schulen und einem Verwaltungsgebäude in Amberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufzeit je Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu übernehmenden Objekte hängt von der Losauswahl ab.",
+    "regel_begruendung": "Leistungsstichwort (unterhalts) und Objektart (schule) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P1",
+    "nr": "737904-2026",
+    "titel": "Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf. Realschulen",
+    "ki": "passt",
+    "regel": "passt",
+    "gleich": true,
+    "ki_begruendung": "Los 1 (Unterhaltsreinigung) und Los 2 (Glasreinigung) an Realschulen im Landkreis Neumarkt entsprechen den Leistungen und Objektarten des Profils; die Entfernung von ca. 47 km liegt im Radius von 60 km. Laufzeit und Wert sind im Text nicht angegeben.",
+    "regel_begruendung": "Leistungsstichwort (unterhalts) und Objektart (schule) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P1",
+    "nr": "775120-2026",
+    "titel": "62-2026-785-EA Reinigungsdienstleistungen von 11 Objekten im Stadtgebiet Regensburg",
+    "ki": "passt",
+    "regel": "passt",
+    "gleich": true,
+    "ki_begruendung": "Ausgeschrieben sind Unterhalts- und Grundreinigungen für Verwaltungsgebäude, Schulen und Kindereinrichtungen in Regensburg, rund 35 km vom Sitz entfernt und damit im Radius. Die Laufzeit von 12 Monaten entspricht dem Mindestwunsch; offen bleibt, wie die 11 Objekte auf die 2 Lose verteilt sind.",
+    "regel_begruendung": "Leistungsstichwort (unterhalts) und Objektart (schule) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P2",
+    "nr": "607727-2026",
+    "titel": "Unterhalts- und Glasreinigung WWA Regensburg",
+    "ki": "passt nicht",
+    "regel": "passt nicht",
+    "gleich": true,
+    "ki_begruendung": "Der Leistungsort Regensburg liegt mit ca. 50,8 km Luftlinie außerhalb des Radius von 25 km. Die Unterhaltsreinigung (Los 1) würde zum Leistungsspektrum passen.",
+    "regel_begruendung": "Entfernung ca. 51 km größer als Radius 25 km",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P2",
+    "nr": "691173-2026",
+    "titel": "Unterhalts- sowie Glas- und Rahmenreinigung für das FA Schwandorf mit ASt Neunburg v.W.",
+    "ki": "unklar",
+    "regel": "passt",
+    "gleich": false,
+    "ki_begruendung": "Die Unterhaltsreinigung passt zum Profil, die Glas- und Rahmenreinigung gehört jedoch nicht zum Leistungsangebot, und ob Teilangebote je Los möglich sind, ist im Text nicht ablesbar. Zudem liegt die Außenstelle Neunburg vorm Wald vermutlich weiter von Amberg entfernt als die angegebene Näherung von 21,9 km, sodass der 25-km-Radius unklar bleibt.",
+    "regel_begruendung": "Leistungsstichwort (unterhaltsreinigung) und Objektart (schule) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P2",
+    "nr": "710250-2026",
+    "titel": "Reinigungsdienstleistungen Bayern (09/FI-AD/2026)",
+    "ki": "passt nicht",
+    "regel": "passt nicht",
+    "gleich": true,
+    "ki_begruendung": "Die Leistungsorte Neumarkt (etwa 34 km), Nürnberg, Hof und Augsburg liegen alle außerhalb des Radius von 25 km. Die Unterhaltsreinigung passt zur Leistung, die Ortsbedingung ist aber nicht erfüllt.",
+    "regel_begruendung": "Entfernung ca. 34 km größer als Radius 25 km",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P2",
+    "nr": "711004-2026",
+    "titel": "Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf.",
+    "ki": "passt nicht",
+    "regel": "passt nicht",
+    "gleich": true,
+    "ki_begruendung": "Der Leistungsort im Landkreis Neumarkt i.d.OPf. liegt mit etwa 34,1 km außerhalb des Radius von 25 km. Unterhaltsreinigung in Schulen und die Laufzeit von 24 Monaten würden sonst zum Profil passen.",
+    "regel_begruendung": "Entfernung ca. 34 km größer als Radius 25 km",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P2",
+    "nr": "716819-2026",
+    "titel": "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+    "ki": "passt",
+    "regel": "passt",
+    "gleich": true,
+    "ki_begruendung": "Unterhaltsreinigung an Schulen und einem Verwaltungsgebäude in Amberg entspricht Leistung, Objektarten und Sitz des Profils. Wert und Laufzeit je Los sind nicht angegeben; die Losauswahl bestimmt, ob das Limit von einem neuen Objekt gleichzeitig eingehalten wird.",
+    "regel_begruendung": "Leistungsstichwort (unterhalts) und Objektart (schule) im Text",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P2",
+    "nr": "737904-2026",
+    "titel": "Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf. Realschulen",
+    "ki": "passt nicht",
+    "regel": "passt nicht",
+    "gleich": true,
+    "ki_begruendung": "Der Leistungsort im Landkreis Neumarkt liegt mit ca. 34 km Näherung außerhalb des Radius von 25 km. Die Unterhaltsreinigung in Los 1 an Realschulen entspräche sonst dem Profil.",
+    "regel_begruendung": "Entfernung ca. 34 km größer als Radius 25 km",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   },
+   {
+    "profil": "P2",
+    "nr": "775120-2026",
+    "titel": "62-2026-785-EA Reinigungsdienstleistungen von 11 Objekten im Stadtgebiet Regensburg",
+    "ki": "passt nicht",
+    "regel": "passt nicht",
+    "gleich": true,
+    "ki_begruendung": "Der Leistungsort Regensburg liegt mit ca. 50,8 km außerhalb des Radius von 25 km. Leistung und Laufzeit würden ansonsten passen.",
+    "regel_begruendung": "Entfernung ca. 51 km größer als Radius 25 km",
+    "ki_quelle": "KI (claude-sonnet-5-5)"
+   }
+  ],
+  "modus": "KI claude-sonnet-5-5"
+ },
+ "ki_protokoll": {
+  "modus": "cache",
+  "aufrufe": 0,
+  "aus_cache": 7,
+  "platzhalter": 0,
+  "fehler": []
+ }
+}

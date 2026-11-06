@@ -1,0 +1,41 @@
+{
+  "hinweis": "ERFUNDENE Beispielprofile für die Demo. Keine echten Firmen, keine echten Personen. Die Filter 'cpv_praefixe', 'sitz' + 'radius_km', 'laufzeit_min_monate' wirken hart; 'wert_*' wird nur angezeigt, nicht gefiltert. 'leistung_stichworte' und 'objekt_stichworte' dienen nur dem regelbasierten Vergleichsurteil; 'zertifikate', 'max_neue_objekte_gleichzeitig', 'tarifbindung' sind aus Bekanntmachungen nicht ablesbar.",
+  "profile": [
+    {
+      "id": "P1",
+      "name": "Beispiel Gebäudeservice Oberpfalz GmbH (erfunden)",
+      "groesse": "mittlerer Betrieb",
+      "sitz": {"ort": "Schwandorf", "lat": 49.3257, "lon": 12.1056},
+      "radius_km": 60,
+      "cpv_praefixe": ["90910", "90911", "90919"],
+      "leistungen": ["Unterhaltsreinigung", "Glasreinigung"],
+      "leistung_stichworte": ["unterhaltsreinigung", "unterhalts", "glasreinigung", "glas- und", "fensterreinigung", "rahmenreinigung", "gebäudereinigung", "gebäude- und glasreinigung"],
+      "objektarten": ["Schulen", "Verwaltungsgebäude", "Kliniken"],
+      "objekt_stichworte": ["schule", "gymnasium", "verwaltung", "rathaus", "landratsamt", "finanzamt", "amt ", "büro", "dienstgebäude", "klinik", "krankenhaus", "medizin"],
+      "wert_min_eur": 50000,
+      "wert_max_eur": 1500000,
+      "laufzeit_min_monate": 12,
+      "max_neue_objekte_gleichzeitig": 3,
+      "zertifikate": ["ISO 9001", "RAL-GZ 902"],
+      "tarifbindung": true
+    },
+    {
+      "id": "P2",
+      "name": "Beispiel Reinigung Amberg e. K. (erfunden)",
+      "groesse": "Kleinbetrieb",
+      "sitz": {"ort": "Amberg", "lat": 49.4430, "lon": 11.8620},
+      "radius_km": 25,
+      "cpv_praefixe": ["90910", "90911", "90919"],
+      "leistungen": ["Unterhaltsreinigung"],
+      "leistung_stichworte": ["unterhaltsreinigung", "unterhalts"],
+      "objektarten": ["Schulen", "Büro- und Verwaltungsgebäude"],
+      "objekt_stichworte": ["schule", "kindergarten", "kita", "verwaltung", "rathaus", "finanzamt", "büro", "dienstgebäude"],
+      "wert_min_eur": 10000,
+      "wert_max_eur": 300000,
+      "laufzeit_min_monate": 12,
+      "max_neue_objekte_gleichzeitig": 1,
+      "zertifikate": [],
+      "tarifbindung": true
+    }
+  ]
+}

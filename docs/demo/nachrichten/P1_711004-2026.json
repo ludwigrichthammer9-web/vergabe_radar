@@ -1,0 +1,124 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "contentUrl": null,
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "Neue Ausschreibung: Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf.",
+            "weight": "Bolder",
+            "size": "Medium",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Profil: Beispiel Gebäudeservice Oberpfalz GmbH (erfunden)",
+            "isSubtle": true,
+            "spacing": "None",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Fakten aus der Bekanntmachung",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Auftraggeber",
+                "value": "Landkreis Neumarkt i.d.OPf."
+              },
+              {
+                "title": "Ort",
+                "value": "Ort nicht genannt (DE236 Neumarkt i. d. OPf.); Luftlinie ca. 47 km von Schwandorf (Näherung)"
+              },
+              {
+                "title": "Abgabefrist",
+                "value": "02.11.2026 (noch 17 Tage ab 16.10.2026)"
+              },
+              {
+                "title": "Laufzeit",
+                "value": "24 Monate"
+              },
+              {
+                "title": "Wert",
+                "value": "nicht angegeben"
+              },
+              {
+                "title": "Umfang",
+                "value": "5 Los(e)"
+              },
+              {
+                "title": "Veröffentlicht",
+                "value": "14.10.2026"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Umweltmanagement; Qualitätsmanagement; Referenzen (Dienstleistungen); Versicherung; Handelsregister. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Einordnung (Deutung, nicht Fakt): passt",
+            "weight": "Bolder",
+            "color": "Good",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Unterhalts- und Glasreinigung in Schulen im Landkreis Neumarkt i.d.OPf. liegen im Leistungsspektrum und im Radius von 60 km (ca. 46,9 km). Die Laufzeit von 24 Monaten erfüllt die Mindestlaufzeit; Wert und Frist widersprechen nichts Ablesbarem. (KI (claude-sonnet-5-5))",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Leistung“: „Los 4 Glasreinigung“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Objektart“: „Objekte - Edith-Stein-Realschule Parsberg - Gymnasium Parsberg - Sonderpädagogisches Förderzentrum Parsberg“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Nicht ablesbar: Wert, Zertifikate, Kapazität, Personal, Tarifbindung",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Demo zur Veranschaulichung der Datenübergabe. Kein Rechtsrat, keine Aussage zu Gewinnchancen. Bitte die Bekanntmachung selbst lesen. Quelle: TED (Tenders Electronic Daily), Auftragsbekanntmachung; Quellenangabe: © Europäische Union, https://ted.europa.eu",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true,
+            "spacing": "Medium"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "Bekanntmachung auf TED",
+            "url": "https://ted.europa.eu/de/notice/-/detail/711004-2026"
+          }
+        ]
+      }
+    }
+  ]
+}

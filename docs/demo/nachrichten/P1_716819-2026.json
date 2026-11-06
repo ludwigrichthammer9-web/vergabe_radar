@@ -1,0 +1,124 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "contentUrl": null,
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "Neue Ausschreibung: Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+            "weight": "Bolder",
+            "size": "Medium",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Profil: Beispiel Gebäudeservice Oberpfalz GmbH (erfunden)",
+            "isSubtle": true,
+            "spacing": "None",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Fakten aus der Bekanntmachung",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Auftraggeber",
+                "value": "Stadt Amberg"
+              },
+              {
+                "title": "Ort",
+                "value": "Amberg (DE231 Amberg (Stadt)); Luftlinie ca. 22 km von Schwandorf (Näherung)"
+              },
+              {
+                "title": "Abgabefrist",
+                "value": "26.10.2026 (noch 10 Tage ab 16.10.2026)"
+              },
+              {
+                "title": "Laufzeit",
+                "value": "im Datenfeld nicht angegeben (ggf. im Text)"
+              },
+              {
+                "title": "Wert",
+                "value": "nicht angegeben"
+              },
+              {
+                "title": "Umfang",
+                "value": "6 Los(e)"
+              },
+              {
+                "title": "Veröffentlicht",
+                "value": "16.10.2026"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "Verlangt laut Bekanntmachung (Eignung, Art der Nachweise)",
+            "weight": "Bolder",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Berufsregister; Gesamtumsatz; Referenzen (Dienstleistungen); sonstige wirtschaftliche Anforderungen; Beschäftigtenzahl. Schwellen und Zertifikate: nur soweit im Freitext der Bekanntmachung genannt, sonst nicht ablesbar (Vergabeunterlagen).",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Einordnung (Deutung, nicht Fakt): passt",
+            "weight": "Bolder",
+            "color": "Good",
+            "spacing": "Medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Die Bekanntmachung umfasst Unterhalts- und Glasreinigung an Schulen und einem Verwaltungsgebäude in Amberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufzeit je Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu übernehmenden Objekte hängt von der Losauswahl ab. (KI (claude-sonnet-5-5))",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Leistung“: „Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Zitat zu „Objektart“: „Unterhalts-, Grund- und Zusatzreinigung Verwaltungsgebäude“",
+            "wrap": true,
+            "isSubtle": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Nicht ablesbar: Wert, Zertifikate, Kapazität, Tarifbindung",
+            "wrap": true
+          },
+          {
+            "type": "TextBlock",
+            "text": "Demo zur Veranschaulichung der Datenübergabe. Kein Rechtsrat, keine Aussage zu Gewinnchancen. Bitte die Bekanntmachung selbst lesen. Quelle: TED (Tenders Electronic Daily), Auftragsbekanntmachung; Quellenangabe: © Europäische Union, https://ted.europa.eu",
+            "wrap": true,
+            "size": "Small",
+            "isSubtle": true,
+            "spacing": "Medium"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "Bekanntmachung auf TED",
+            "url": "https://ted.europa.eu/de/notice/-/detail/716819-2026"
+          }
+        ]
+      }
+    }
+  ]
+}

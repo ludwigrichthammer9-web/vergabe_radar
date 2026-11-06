@@ -1,0 +1,1073 @@
+{
+ "691173-2026": {
+  "modell": "claude-sonnet-5-5",
+  "roh": {
+   "urteile": [
+    {
+     "profil_id": "P1",
+     "urteil": "passt",
+     "begruendung": "Unterhalts- und Glasreinigung für das Finanzamt Schwandorf und die Außenstelle Neunburg vorm Wald decken sich mit dem Leistungsangebot, und der Leistungsort liegt am Firmensitz bzw. im Radius. Die Vertragslaufzeit von rund drei Jahren erfüllt die Mindestlaufzeit.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Unterhalts- sowie Glas- und Rahmenreinigung für das Finanzamt Schwandorf mit Außenstelle Neunburg vorm Wald.",
+       "kommentar": "Unterhalts- und Glasreinigung sind im Profil enthalten."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Unterhaltsreinigung für das Finanzamt Schwandorf und für die Außenstelle Neunburg vorm Wald",
+       "kommentar": "Finanzamt entspricft einem Verwaltungsgebäude."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "NUTS DE239; Ort Schwandorf; PLZ 92421",
+       "kommentar": "Leistungsort ist der Firmensitz; Neunburg vorm Wald liegt im Radius von 60 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Der jeweilige Vertrag tritt am 01.04.2027 in Kraft und gilt zunächst bis zum 31.03.2030.",
+       "kommentar": "Etwa 36 Monate, über der Mindestlaufzeit von 12 Monaten."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Geschätzter Wert nicht angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-11",
+       "kommentar": "Frist wird nicht als Ausschlussgrund gewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "passt",
+       "zitat": "Anzahl Lose (Datenfeld): 2",
+       "kommentar": "Zwei Lose, höchstens zwei neue Objekte; Grenze von 3 wird nicht überschritten."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      }
+     ]
+    },
+    {
+     "profil_id": "P2",
+     "urteil": "unklar",
+     "begruendung": "Die Unterhaltsreinigung passt zum Profil, die Glas- und Rahmenreinigung gehört jedoch nicht zum Leistungsangebot, und ob Teilangebote je Los möglich sind, ist im Text nicht ablesbar. Zudem liegt die Außenstelle Neunburg vorm Wald vermutlich weiter von Amberg entfernt als die angegebene Näherung von 21,9 km, sodass der 25-km-Radius unklar bleibt.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "unklar",
+       "zitat": "Unterhalts- sowie Glas- und Rahmenreinigung für das Finanzamt Schwandorf mit Außenstelle Neunburg vorm Wald.",
+       "kommentar": "Unterhaltsreinigung passt, Glas- und Rahmenreinigung ist nicht im Profil."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Unterhaltsreinigung für das Finanzamt Schwandorf und für die Außenstelle Neunburg vorm Wald",
+       "kommentar": "Finanzamt entspricht einem Verwaltungsgebäude."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "unklar",
+       "zitat": "NUTS DE239; Ort Schwandorf; PLZ 92421",
+       "kommentar": "Schwandorf ca. 21,9 km (im Radius), Außenstelle Neunburg vorm Wald nach Textangabe zusätzlich und vermutlich weiter entfernt."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Der jeweilige Vertrag tritt am 01.04.2027 in Kraft und gilt zunächst bis zum 31.03.2030.",
+       "kommentar": "Etwa 36 Monate, über der Mindestlaufzeit von 12 Monaten."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Geschätzter Wert nicht angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-11",
+       "kommentar": "Frist wird nicht als Ausschlussgrund gewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Anzahl Lose (Datenfeld): 2",
+       "kommentar": "Zwei Lose mit zwei Standorten; Profil nennt höchstens 1 neues Objekt gleichzeitig."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "710250-2026": {
+  "modell": "claude-sonnet-5-5",
+  "roh": {
+   "urteile": [
+    {
+     "profil_id": "P1",
+     "urteil": "unklar",
+     "begruendung": "Unterhaltsreinigung und Glasreinigung werden ausgeschrieben, und der Standort Neumarkt liegt mit etwa 47 km im Radius von 60 km (Augsburg, Hof und Nürnberg liegen voraussichtlich außerhalb). Die geforderte Eigenerklärung zu ISO 14001 oder einem gleichwertigen Umweltmanagementsystem lässt sich aus dem Profil nicht bestätigen.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Reinigungsarbeiten (Unterhaltsreinigung und Glas- und Rahmenreinigung)",
+       "kommentar": "Beide Leistungen sind im Profil enthalten."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Der Text nennt keine Objektart."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "Unterhaltsreinigung am Standort St.-Florian-Straße 1, 92318 Neumarkt der Auftraggeberin",
+       "kommentar": "Neumarkt liegt etwa 47 km entfernt und damit im Radius. Die Standorte Nürnberg, Hof und Augsburg liegen voraussichtlich außerhalb, die Lose sind aber getrennt."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Der Vertrag beginnt mit Zuschlagserteilung und endet am 31.01.2028. Reinigungsdienstleistungen sind jedoch erst ab dem 01.02.2027 zu erbringen.",
+       "kommentar": "Leistungszeit von mindestens 12 Monaten, dazu Verlängerungsoption."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Kein geschätzter Wert angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-12",
+       "kommentar": "Frist genannt, ein Stichtag zur Bewertung liegt nicht vor. Nicht als Ausschlussgrund gewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "passt",
+       "zitat": "Anzahl Lose (Datenfeld): 8",
+       "kommentar": "Die Neumarkt-Lose betreffen ein Objekt, das innerhalb von max. 3 neuen Objekten liegt."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "unklar",
+       "zitat": "Eine Eigenerklärung zur Zertifizierung nach DIN EN ISO 14001 (oder Nachweis eines gleichwertigen Umweltmanagementsystems).",
+       "kommentar": "Im Profil sind ISO 9001 und RAL-GZ 902 genannt, ISO 14001 nicht. Gleichwertigkeit ist offen."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe zum Umfang im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      }
+     ]
+    },
+    {
+     "profil_id": "P2",
+     "urteil": "passt nicht",
+     "begruendung": "Die Leistungsorte Neumarkt (etwa 34 km), Nürnberg, Hof und Augsburg liegen alle außerhalb des Radius von 25 km. Die Unterhaltsreinigung passt zur Leistung, die Ortsbedingung ist aber nicht erfüllt.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Reinigungsarbeiten (Unterhaltsreinigung und Glas- und Rahmenreinigung)",
+       "kommentar": "Unterhaltsreinigung ist im Profil enthalten; Glas- und Rahmenreinigung gibt es als eigene Lose."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Der Text nennt keine Objektart."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt nicht",
+       "zitat": "Unterhaltsreinigung am Standort St.-Florian-Straße 1, 92318 Neumarkt der Auftraggeberin",
+       "kommentar": "Neumarkt liegt etwa 34 km entfernt, der Radius beträgt 25 km. Die übrigen Standorte sind weiter entfernt."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Der Vertrag beginnt mit Zuschlagserteilung und endet am 31.01.2028. Reinigungsdienstleistungen sind jedoch erst ab dem 01.02.2027 zu erbringen.",
+       "kommentar": "Leistungszeit von mindestens 12 Monaten."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Kein geschätzter Wert angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-12",
+       "kommentar": "Frist genannt, ein Stichtag zur Bewertung liegt nicht vor. Nicht als Ausschlussgrund gewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "passt",
+       "zitat": "Anzahl Lose (Datenfeld): 8",
+       "kommentar": "Ein Objekt (Neumarkt) wäre mit max. 1 neuen Objekt vereinbar."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "unklar",
+       "zitat": "Eine Eigenerklärung zur Zertifizierung nach DIN EN ISO 14001 (oder Nachweis eines gleichwertigen Umweltmanagementsystems).",
+       "kommentar": "Im Profil sind keine Zertifikate angegeben."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe zum Umfang im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angabe im Text."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "711004-2026": {
+  "modell": "claude-sonnet-5-5",
+  "roh": {
+   "urteile": [
+    {
+     "profil_id": "P1",
+     "urteil": "passt",
+     "begruendung": "Unterhalts- und Glasreinigung in Schulen im Landkreis Neumarkt i.d.OPf. liegen im Leistungsspektrum und im Radius von 60 km (ca. 46,9 km). Die Laufzeit von 24 Monaten erfüllt die Mindestlaufzeit; Wert und Frist widersprechen nichts Ablesbarem.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Los 4 Glasreinigung",
+       "kommentar": "Unterhalts-, Grund- und Glasreinigung werden ausgeschrieben, Profil bietet Unterhalts- und Glasreinigung."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Objekte - Edith-Stein-Realschule Parsberg - Gymnasium Parsberg - Sonderpädagogisches Förderzentrum Parsberg",
+       "kommentar": "Schulobjekte, passend zu Schulen."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "Auftraggeber (Datenfeld): Landkreis Neumarkt i.d.OPf.",
+       "kommentar": "Näherung 46,9 km, innerhalb von 60 km Radius."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Laufzeit (Datenfeld, Monate je Los): 24.0, 24.0, 24.0, 24.0, 24.0",
+       "kommentar": "24 Monate, mindestens 12 gefordert."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Kein Wert genannt."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-02",
+       "kommentar": "Frist genannt, kein Stichtag zur Bewertung; kein Ausschlussgrund."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Anzahl Lose (Datenfeld): 5",
+       "kommentar": "5 Lose; Zahl der Objekte je Los und Bewerbung nicht abschließend klar (max. 3 neue Objekte gleichzeitig)."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Zertifikatsforderung im Text."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Nicht ablesbar."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Nicht ablesbar."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Nicht ablesbar."
+      }
+     ]
+    },
+    {
+     "profil_id": "P2",
+     "urteil": "passt nicht",
+     "begruendung": "Der Leistungsort im Landkreis Neumarkt i.d.OPf. liegt mit etwa 34,1 km außerhalb des Radius von 25 km. Unterhaltsreinigung in Schulen und die Laufzeit von 24 Monaten würden sonst zum Profil passen.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Los 1 Unterhalts- und Grundreinigung",
+       "kommentar": "Unterhaltsreinigung wird ausgeschrieben (Glasreinigung nicht im Profil, Lose 1-3 passen)."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Objekte - Edith-Stein-Realschule Parsberg - Gymnasium Parsberg - Sonderpädagogisches Förderzentrum Parsberg",
+       "kommentar": "Schulobjekte."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt nicht",
+       "zitat": "Auftraggeber (Datenfeld): Landkreis Neumarkt i.d.OPf.",
+       "kommentar": "Näherung 34,1 km, Radius nur 25 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Laufzeit (Datenfeld, Monate je Los): 24.0, 24.0, 24.0, 24.0, 24.0",
+       "kommentar": "24 Monate, mindestens 12 gefordert."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Kein Wert genannt."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-02",
+       "kommentar": "Frist genannt, kein Stichtag zur Bewertung; kein Ausschlussgrund."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Los 3 Objekte - Realschule Berching",
+       "kommentar": "Los 3 hat ein Objekt, andere Lose mehrere; max. 1 neues Objekt gleichzeitig."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Nicht ablesbar."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Nicht ablesbar."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Nicht ablesbar."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Nicht ablesbar."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "716819-2026": {
+  "modell": "claude-sonnet-5-5",
+  "roh": {
+   "urteile": [
+    {
+     "profil_id": "P1",
+     "urteil": "passt",
+     "begruendung": "Die Bekanntmachung umfasst Unterhalts- und Glasreinigung an Schulen und einem Verwaltungsgebäude in Amberg, rund 22 km vom Sitz entfernt und damit im Radius von 60 km. Laufzeit je Los und Wert sind nicht angegeben; die Zahl der gleichzeitig neu zu übernehmenden Objekte hängt von der Losauswahl ab.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+       "kommentar": "Unterhalts- und Glasreinigung sind im Leistungsumfang des Profils."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Unterhalts-, Grund- und Zusatzreinigung Verwaltungsgebäude",
+       "kommentar": "Schulen und Verwaltungsgebäude passen; Feuerwehr/Stadtarchiv (Los 5) liegt außerhalb der Objektarten, ist aber separat vergeben."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "NUTS DE231; Ort Amberg; PLZ 92224",
+       "kommentar": "Ca. 21,9 km Luftlinie, Radius 60 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "unklar",
+       "zitat": "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+       "kommentar": "Laufzeit-Datenfeld ist 'nicht angegeben'; Titel deutet nur auf die Jahre 2027 bis 2028."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Geschätzter Wert nicht angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-10-26",
+       "kommentar": "Kein Stichtag genannt, daher nicht als Ausschlussgrund bewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Anzahl Lose (Datenfeld): 6",
+       "kommentar": "6 Lose für 10 Objekte; bei Bewerbung auf wenige Lose ist das Limit von 3 neuen Objekten einhaltbar."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Text nennt keine Zertifikate."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "unklar",
+       "zitat": "Wir erklären, dass wir in dem für die Durchführung des Auftrags zuständigen Betriebsteil mindestens • 1 Meister des Gebäudereinigerhandwerks, sowie mindestens • 3 Fachkräfte des Gebäudereinigerhandwerks",
+       "kommentar": "Gefordert sind 1 Meister und 3 Fachkräfte; Profil enthält dazu keine Angaben."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      }
+     ]
+    },
+    {
+     "profil_id": "P2",
+     "urteil": "passt",
+     "begruendung": "Unterhaltsreinigung an Schulen und einem Verwaltungsgebäude in Amberg entspricht Leistung, Objektarten und Sitz des Profils. Wert und Laufzeit je Los sind nicht angegeben; die Losauswahl bestimmt, ob das Limit von einem neuen Objekt gleichzeitig eingehalten wird.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Unterhalts-, Grund- und Zusatzreinigung Barbara- und Willmannschule",
+       "kommentar": "Unterhaltsreinigung ist enthalten (Lose 1–5); Glasreinigung (Los 6) gehört nicht zum Profil."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Unterhalts-, Grund- und Zusatzreinigung Verwaltungsgebäude",
+       "kommentar": "Schulen und Verwaltungsgebäude passen zum Profil."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "NUTS DE231; Ort Amberg; PLZ 92224",
+       "kommentar": "Leistungsort ist der Sitzort Amberg."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "unklar",
+       "zitat": "Unterhalts-, Grund-, Zusatz- und Glasreinigung 2027 bis 2028 - 10 Objekte",
+       "kommentar": "Laufzeit-Datenfeld ist 'nicht angegeben'; Titel deutet nur auf die Jahre 2027 bis 2028."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Geschätzter Wert nicht angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-10-26",
+       "kommentar": "Kein Stichtag genannt, daher nicht als Ausschlussgrund bewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Anzahl Lose (Datenfeld): 6",
+       "kommentar": "Profil kann maximal 1 neues Objekt gleichzeitig; nur bei Bewerbung auf ein einzelnes Los einhaltbar (Los 1 und 2 umfassen mehrere Gebäude)."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Text nennt keine Zertifikate."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "unklar",
+       "zitat": "Wir erklären, dass wir in dem für die Durchführung des Auftrags zuständigen Betriebsteil mindestens • 1 Meister des Gebäudereinigerhandwerks, sowie mindestens • 3 Fachkräfte des Gebäudereinigerhandwerks",
+       "kommentar": "Gefordert sind 1 Meister und 3 Fachkräfte; Profil enthält dazu keine Angaben."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "607727-2026": {
+  "modell": "claude-sonnet-5-5",
+  "roh": {
+   "urteile": [
+    {
+     "profil_id": "P1",
+     "urteil": "passt",
+     "begruendung": "Unterhalts- und Glasreinigung in Regensburg entsprechen dem Leistungsspektrum, und der Leistungsort liegt mit ca. 34,7 km innerhalb des Radius von 60 km. Der genannte Wert von 292.000 EUR je Angabe liegt im Wertrahmen des Profils.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Unterhaltsreinigung (Los 1) und Glasreinigung (Los 2)",
+       "kommentar": "Beide Leistungen sind im Profil enthalten."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "unklar",
+       "zitat": "für das Wasserwirtschaftsamt Regensburg für die Liegenschaften",
+       "kommentar": "Es handelt sich um Behördenliegenschaften; eine Objektart wird nicht ausdrücklich genannt."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "Leistungsort (Datenfeld): NUTS DE232; Ort Regensburg; PLZ 93053",
+       "kommentar": "Ca. 34,7 km Luftlinie, Radius 60 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Laufzeit ist nicht angegeben."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "passt",
+       "zitat": "Geschätzter Wert (Datenfeld, EUR): 292000, 292000",
+       "kommentar": "Auch bei Summe von 584.000 EUR im Rahmen von 50.000 bis 1.500.000 EUR."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-10-07",
+       "kommentar": "Kein Stichtag zum Abgleich genannt; nicht als Ausschlussgrund gewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "passt",
+       "zitat": "Anzahl Lose (Datenfeld): 2",
+       "kommentar": "Zwei Lose mit drei Liegenschaften; im Rahmen von höchstens 3 neuen Objekten."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine konkreten Angaben im Text."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      }
+     ]
+    },
+    {
+     "profil_id": "P2",
+     "urteil": "passt nicht",
+     "begruendung": "Der Leistungsort Regensburg liegt mit ca. 50,8 km Luftlinie außerhalb des Radius von 25 km. Die Unterhaltsreinigung (Los 1) würde zum Leistungsspektrum passen.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Unterhaltsreinigung (Los 1) und Glasreinigung (Los 2)",
+       "kommentar": "Unterhaltsreinigung in Los 1 passt; Glasreinigung gehört nicht zum Profil."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "unklar",
+       "zitat": "für das Wasserwirtschaftsamt Regensburg für die Liegenschaften",
+       "kommentar": "Behördenliegenschaften; eine Objektart wird nicht ausdrücklich genannt."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt nicht",
+       "zitat": "Leistungsort (Datenfeld): NUTS DE232; Ort Regensburg; PLZ 93053",
+       "kommentar": "Ca. 50,8 km Luftlinie, Radius nur 25 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Laufzeit ist nicht angegeben."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "unklar",
+       "zitat": "Geschätzter Wert (Datenfeld, EUR): 292000, 292000",
+       "kommentar": "Je Los 292.000 EUR liegt unter 300.000 EUR; bei Summe von 584.000 EUR darüber."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-10-07",
+       "kommentar": "Kein Stichtag zum Abgleich genannt; nicht als Ausschlussgrund gewertet."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Anzahl Lose (Datenfeld): 2",
+       "kommentar": "Los 1 umfasst drei Liegenschaften; Profil nennt höchstens 1 neues Objekt gleichzeitig."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine konkreten Angaben im Text."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Angaben im Text."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "737904-2026": {
+  "modell": "claude-sonnet-5-5",
+  "roh": {
+   "urteile": [
+    {
+     "profil_id": "P1",
+     "urteil": "passt",
+     "begruendung": "Los 1 (Unterhaltsreinigung) und Los 2 (Glasreinigung) an Realschulen im Landkreis Neumarkt entsprechen den Leistungen und Objektarten des Profils; die Entfernung von ca. 47 km liegt im Radius von 60 km. Laufzeit und Wert sind im Text nicht angegeben.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Los 1 Unterhalts- und Grundreinigung",
+       "kommentar": "Unterhaltsreinigung (Los 1) und Glasreinigung (Los 2) werden angeboten."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf. Realschulen",
+       "kommentar": "Realschulen entsprechen der Objektart Schulen."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "Leistungsort (Datenfeld): NUTS DE236; Ort -; PLZ -",
+       "kommentar": "Ort nicht genauer genannt; Näherung 46,9 km, Radius 60 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "unklar",
+       "zitat": "Der Auftrag kann viermal um 12 Monate verlängert werden.",
+       "kommentar": "Grundlaufzeit nicht angegeben, nur Verlängerungsoption."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Kein Auftragswert genannt."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "passt",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-23",
+       "kommentar": "Frist liegt noch in der Zukunft."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "passt",
+       "zitat": "Anzahl Lose (Datenfeld): 2",
+       "kommentar": "Je Los zwei Schulobjekte (mit Turnhallen); höchstens 3 neue Objekte gleichzeitig."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      }
+     ]
+    },
+    {
+     "profil_id": "P2",
+     "urteil": "passt nicht",
+     "begruendung": "Der Leistungsort im Landkreis Neumarkt liegt mit ca. 34 km Näherung außerhalb des Radius von 25 km. Die Unterhaltsreinigung in Los 1 an Realschulen entspräche sonst dem Profil.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Los 1 Unterhalts- und Grundreinigung",
+       "kommentar": "Unterhaltsreinigung in Los 1; Glasreinigung (Los 2) gehört nicht zum Profil."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Gebäude- und Glasreinigung für den Landkreis Neumarkt i.d.OPf. Realschulen",
+       "kommentar": "Realschulen entsprechen der Objektart Schulen."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt nicht",
+       "zitat": "Leistungsort (Datenfeld): NUTS DE236; Ort -; PLZ -",
+       "kommentar": "Ort nicht genauer genannt; Näherung 34,1 km übersteigt Radius von 25 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "unklar",
+       "zitat": "Der Auftrag kann viermal um 12 Monate verlängert werden.",
+       "kommentar": "Grundlaufzeit nicht angegeben, nur Verlängerungsoption."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Kein Auftragswert genannt."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "passt",
+       "zitat": "Abgabefrist (Datenfeld): 2026-11-23",
+       "kommentar": "Frist liegt noch in der Zukunft."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Los 1 Unterhalts- und Grundreinigung",
+       "kommentar": "Los 1 umfasst zwei Schulen mit Turnhallen; Profil max. 1 neues Objekt gleichzeitig."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      },
+      {
+       "kriterium": "Personal",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": ""
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "775120-2026": {
+  "modell": "claude-sonnet-5-5",
+  "roh": {
+   "urteile": [
+    {
+     "profil_id": "P1",
+     "urteil": "passt",
+     "begruendung": "Ausgeschrieben sind Unterhalts- und Grundreinigungen für Verwaltungsgebäude, Schulen und Kindereinrichtungen in Regensburg, rund 35 km vom Sitz entfernt und damit im Radius. Die Laufzeit von 12 Monaten entspricht dem Mindestwunsch; offen bleibt, wie die 11 Objekte auf die 2 Lose verteilt sind.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Die Stadt Regensburg beabsichtigt die Vergabe von Unterhalts- und Grundreinigungen in 11 Objekten in 2 Losen",
+       "kommentar": "Unterhaltsreinigung ist Teil des Profils."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Der Vertrag für die Verwaltungsgebäude Albertstraße, Grünthaler Straße und Hemauer- straße sowie für das Kinderhaus Steinweg",
+       "kommentar": "Verwaltungsgebäude und Schulen passen; Kinderhäuser/-horte stehen nicht im Profil."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt",
+       "zitat": "Leistungsort (Datenfeld): NUTS DE232; Ort Regensburg; PLZ 93047",
+       "kommentar": "Ca. 34,7 km, Radius 60 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Laufzeit (Datenfeld, Monate je Los): 12.0, 12.0",
+       "kommentar": "Mindestens 12 Monate, Verlängerung auf unbestimmte Zeit möglich."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Geschätzter Wert nicht angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-12-09",
+       "kommentar": "Kein Stichtag zum Abgleich genannt."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Die Stadt Regensburg beabsichtigt die Vergabe von Unterhalts- und Grundreinigungen in 11 Objekten in 2 Losen",
+       "kommentar": "Aufteilung der Objekte auf die Lose nicht ablesbar; max. 3 neue Objekte gleichzeitig im Profil."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "passt",
+       "zitat": "Nachweis über die Zertifizierung eines gültigen Qualitätsmanagementsystems nach DIN EN ISO 9001:2015 ff oder gleichwertige, zertifizierte Qualitätssysteme.",
+       "kommentar": "ISO 9001 vorhanden."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Aussage."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "unklar",
+       "zitat": "Schriftliche namentliche Benennung (Vor- und Zuname) der Objektleitung gemäß Ziffer 3.2 der Leistungsbeschreibung einschließlich deren Nachweis über eine nachprüfbare Ausbildung",
+       "kommentar": "Objektleitung mit Ausbildungsnachweis gefordert; Profil enthält dazu keine Angabe."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Aussage."
+      }
+     ]
+    },
+    {
+     "profil_id": "P2",
+     "urteil": "passt nicht",
+     "begruendung": "Der Leistungsort Regensburg liegt mit ca. 50,8 km außerhalb des Radius von 25 km. Leistung und Laufzeit würden ansonsten passen.",
+     "kriterien": [
+      {
+       "kriterium": "Leistung",
+       "status": "passt",
+       "zitat": "Die Stadt Regensburg beabsichtigt die Vergabe von Unterhalts- und Grundreinigungen in 11 Objekten in 2 Losen",
+       "kommentar": "Unterhaltsreinigung ist Teil des Profils."
+      },
+      {
+       "kriterium": "Objektart",
+       "status": "passt",
+       "zitat": "Der Vertrag für die Schule Prüfening und den Kinderhort Prüfening beginnt am 01.08.2027",
+       "kommentar": "Schulen und Verwaltungsgebäude passen; Kinderhäuser/-horte stehen nicht im Profil."
+      },
+      {
+       "kriterium": "Ort/Entfernung",
+       "status": "passt nicht",
+       "zitat": "Leistungsort (Datenfeld): NUTS DE232; Ort Regensburg; PLZ 93047",
+       "kommentar": "Ca. 50,8 km, Radius nur 25 km."
+      },
+      {
+       "kriterium": "Laufzeit",
+       "status": "passt",
+       "zitat": "Laufzeit (Datenfeld, Monate je Los): 12.0, 12.0",
+       "kommentar": "Mindestens 12 Monate."
+      },
+      {
+       "kriterium": "Wert",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Geschätzter Wert nicht angegeben."
+      },
+      {
+       "kriterium": "Frist",
+       "status": "unklar",
+       "zitat": "Abgabefrist (Datenfeld): 2026-12-09",
+       "kommentar": "Kein Stichtag zum Abgleich genannt."
+      },
+      {
+       "kriterium": "Losgröße",
+       "status": "unklar",
+       "zitat": "Die Stadt Regensburg beabsichtigt die Vergabe von Unterhalts- und Grundreinigungen in 11 Objekten in 2 Losen",
+       "kommentar": "Aufteilung der Objekte auf die Lose nicht ablesbar; max. 1 neues Objekt gleichzeitig im Profil."
+      },
+      {
+       "kriterium": "Zertifikate",
+       "status": "unklar",
+       "zitat": "Nachweis über die Zertifizierung eines gültigen Qualitätsmanagementsystems nach DIN EN ISO 9001:2015 ff oder gleichwertige, zertifizierte Qualitätssysteme.",
+       "kommentar": "Profil ohne Zertifikate; laut Text ist ersatzweise eine schriftliche Darstellung möglich."
+      },
+      {
+       "kriterium": "Kapazität",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Aussage."
+      },
+      {
+       "kriterium": "Personal",
+       "status": "unklar",
+       "zitat": "Schriftliche namentliche Benennung (Vor- und Zuname) der Objektleitung gemäß Ziffer 3.2 der Leistungsbeschreibung einschließlich deren Nachweis über eine nachprüfbare Ausbildung",
+       "kommentar": "Objektleitung mit Ausbildungsnachweis gefordert; Profil enthält dazu keine Angabe."
+      },
+      {
+       "kriterium": "Tarifbindung",
+       "status": "nicht ablesbar",
+       "zitat": null,
+       "kommentar": "Keine Aussage."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
