@@ -32,13 +32,16 @@ FIELDS = [
 PAGE_SIZE = 250  # API-Grenze: Felder * Seitengröße <= 10.000 (hier 31 * 250 = 7.750)
 
 
-def live_abruf(ab_datum: str, ziel_ordner: Path, pause: float = 1.5, max_versuche: int = 6) -> Path:
-    """Lädt deutsche Auftragsbekanntmachungen (form-type=competition) mit CPV 909* ab ab_datum (JJJJMMTT)."""
+def live_abruf(ab_datum: str, ziel_ordner: Path, pause: float = 1.5, max_versuche: int = 6, query: str | None = None) -> Path:
+    """Lädt deutsche Auftragsbekanntmachungen (form-type=competition) mit CPV 909* ab ab_datum (JJJJMMTT).
+    Mit `query` lässt sich eine andere Expertenabfrage übergeben (z. B. großer Datensatz der Live-Demo, live_daten.py);
+    Felder, Seitengröße, Wartezeiten und Ablage bleiben gleich."""
     import requests  # nur im Live-Modus nötig
 
     ziel_ordner.mkdir(parents=True, exist_ok=False)
-    query = (f"buyer-country=DEU AND form-type=competition AND classification-cpv=909* "
-             f"AND publication-date>={ab_datum}")
+    if query is None:
+        query = (f"buyer-country=DEU AND form-type=competition AND classification-cpv=909* "
+                 f"AND publication-date>={ab_datum}")
     seite, gesamt, geladen = 1, None, 0
     while True:
         body = {"query": query, "fields": FIELDS, "limit": PAGE_SIZE, "page": seite,

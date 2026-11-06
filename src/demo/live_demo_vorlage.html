@@ -113,22 +113,60 @@ pre{font:13px/1.45 ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:va
 footer{color:var(--grey);font-size:15px;margin:40px 0 24px}footer p{margin:8px 0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media (max-width:700px){main{padding:16px}header{padding:8px 16px}h1{font-size:30px}.zwei{grid-template-columns:1fr}.stufe{grid-template-columns:62px 1fr}.stufe .n{font-size:24px}}
+/* Datensatz-Auswahl und Filterlauf (Animation) */
+.dsatz{display:grid;gap:12px;margin:0 0 20px;padding:0 0 20px;border-bottom:1px solid var(--sep)}
+.dsatz .zeile{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.dsatz .zeile>span{font-weight:700;font-size:18px;min-width:8.5em}
+.seg.gross button{font-size:17px}
+.seg button:disabled{opacity:.4;cursor:default}
+.warn{background:var(--note);border-left:6px solid var(--notebar);border-radius:12px;padding:10px 16px;font-size:16px;margin:0}
+.lauf{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:0 0 16px}
+button.start{min-height:56px;padding:8px 28px;font-size:21px;border-radius:14px}
+#laufstatus{font-size:18px;color:var(--grey)}
+.zaehler{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;margin:0 0 12px}
+.zaehler .gz{font-size:64px;font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;color:var(--blue)}
+.zaehler .gl{font-size:19px;color:var(--grey)}
+.zaehler .erkl{flex-basis:100%;font-size:22px;font-weight:600;min-height:1.5em}
+.punkte{display:flex;flex-wrap:wrap;gap:3px;margin:0 0 4px}
+.punkte i{display:block;width:11px;height:11px;border-radius:50%;background:var(--blue);transition:opacity .45s var(--ease),transform .45s var(--ease),background-color .3s var(--ease)}
+.punkte i.weg{opacity:.12;transform:scale(.55);background:var(--grey)}
+.punkte i.rest{background:var(--green);transform:scale(1.35)}
+.stufe.wait{opacity:0;transform:translateY(8px)}
+.stufe{transition:opacity .3s var(--ease),transform .3s var(--ease),background-color .3s var(--ease);border-radius:12px}
+.stufe.aktiv{background:var(--bbg)}
+.raus{grid-column:2;font-size:15px;color:var(--grey);margin:2px 0 0;transition:opacity .3s var(--ease)}
+.raus.versteckt{opacity:0}
+.raus b{color:var(--rt);font-weight:700}
+.raus ul{margin:2px 0 0;padding:0 0 0 18px}.raus li{margin:0}
+.raus s{text-decoration-color:var(--rt)}
+.treffer.blende{animation:einblenden .5s var(--ease)}
+@keyframes einblenden{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tag.ab{background:var(--rbg);color:var(--rt)}
+@media (max-width:700px){.zaehler .gz{font-size:44px}.punkte i{width:8px;height:8px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style></head><body>
 <header><div class="brand">Vergabe-Radar<small>Live-Demo</small></div>
 <div class="theme" role="radiogroup" aria-label="Darstellung"><button type="button" role="radio" aria-checked="true" data-t="auto">Automatisch</button><button type="button" role="radio" aria-checked="false" data-t="light">Hell</button><button type="button" role="radio" aria-checked="false" data-t="dark">Dunkel</button></div></header>
 <main>
 <h1>Welche Ausschreibungen passen zu einer Firma?</h1>
-<p class="lead">Sie stellen eine ausgedachte Firma ein. Die Demo zeigt sofort, welche echten Bekanntmachungen (Gebäudereinigung, Oberpfalz) passen, und wie die Nachricht darüber aussähe.</p>
+<p class="lead">Sie stellen eine ausgedachte Firma ein. Die Demo zeigt nach dem Start, welche echten Bekanntmachungen (CPV 909*, Reinigung und Hygiene; Oberpfalz) die Filter durchlaufen, und wie die Nachricht darüber aussähe.</p>
 <ol class="steps"><li><a href="#schritt1"><b>1</b>Firma einstellen</a></li><li><a href="#schritt2"><b>2</b>Treffer ansehen</a></li><li><a href="#schritt3"><b>3</b>Nachricht ansehen</a></li></ol>
 <div class="hinweis" role="note"><p><b>Wichtig: Das ist eine Demo zur Veranschaulichung der Datenübergabe.</b></p>
 <p>Die Firma ist <b>fiktiv</b>. Es ist <b>kein Business Case</b>: Die Demo belegt keine Nachfrage und keinen Vorteil gegenüber anderen Diensten. <b>Nichts wird gesendet</b> (keine E-Mail, keine Teams-Nachricht), und es gibt <b>keine KI-Aufrufe</b> in dieser Seite. Treffer für eine beliebige Firma sind <b>kein Befund</b> über den Markt.</p>
 <p id="datenhinweis"></p></div>
 
 <section class="schritt" id="schritt1" aria-labelledby="h1s">
-<div class="schritthead"><span class="kicker">Schritt 1</span><h2 id="h1s">Firma einstellen</h2><p>Ändern Sie etwas, die Treffer unten rechnen sich sofort neu.</p></div>
+<div class="schritthead"><span class="kicker">Schritt 1</span><h2 id="h1s">Firma einstellen</h2><p>Stellen Sie Daten und Firma ein. Dann „Filterung starten“ drücken.</p></div>
 <div class="panel">
+<div class="dsatz">
+<div class="zeile"><span>Datensatz</span><div class="seg gross" role="radiogroup" aria-label="Datensatz" id="setwahl"><button type="button" role="radio" aria-checked="true" data-set="beispiel">Beispiel-Schnappschuss (14 Tage, P1/P2)</button><button type="button" role="radio" aria-checked="false" data-set="bayern">Großer Datensatz (Bayern, 12 Monate)</button></div></div>
+<div class="zeile" id="fensterzeile"><span>Zeitraum</span><div class="seg" role="radiogroup" aria-label="Zeitraum vor dem Stichtag" id="fensterwahl"><button type="button" role="radio" aria-checked="true" data-f="14t">14 Tage</button><button type="button" role="radio" aria-checked="false" data-f="3m">3 Monate</button><button type="button" role="radio" aria-checked="false" data-f="12m">12 Monate</button></div></div>
+<div class="zeile" id="fristzeile"><span>Abgabefrist</span><label class="cb"><input type="checkbox" id="nuroffen" checked>Nur Ausschreibungen, bei denen man sich noch bewerben kann</label></div>
+<p class="warn" id="fristwarn" hidden><b>Frist-Filter aus:</b> Es erscheinen auch Ausschreibungen, deren Abgabefrist schon vorbei ist. Auf sie kann man sich nicht mehr bewerben. Sie dienen hier <b>nur zur Veranschaulichung</b>.</p>
+<p class="bem" id="setinfo" style="margin:0"></p>
+</div>
 <div class="presets"><span>Beispiele laden:</span><button type="button" class="knopf" id="p1">Firma P1: Schwandorf, 60 km</button><button type="button" class="knopf" id="p2">Firma P2: Amberg, 25 km</button></div>
+<div class="presets"><span>Mit großem Datensatz:</span><button type="button" class="knopf sek" data-frei="DE232,30,24">Regensburg, 30 km, ab 24 Monate</button><button type="button" class="knopf sek" data-frei="DE233,40,12">Weiden, 40 km</button><button type="button" class="knopf sek" data-frei="DE235,50,12">Cham, 50 km</button></div>
 <form id="form" onsubmit="return false" autocomplete="off"><div class="grid">
 <fieldset><legend>Die Firma</legend>
 <label>Firmenname (frei erfunden)<input type="text" id="name" maxlength="80"></label>
@@ -154,12 +192,16 @@ footer{color:var(--grey);font-size:15px;margin:40px 0 24px}footer p{margin:8px 0
 </fieldset>
 <fieldset><legend>Wann ist „heute“?</legend>
 <label>Stichtag<input type="date" id="stichtag" min="2026-09-01" max="2026-11-06"></label>
-<p class="bem">Standard 16.10.2026: Gezeigt werden Bekanntmachungen der 14 Tage davor, deren Abgabefrist noch nicht vorbei ist. Andere Stichtage sind möglich, aber der Auszug ist dann unvollständig.</p>
+<p class="bem" id="stichtaginfo">Standard 16.10.2026: Gezeigt werden Bekanntmachungen der 14 Tage davor, deren Abgabefrist noch nicht vorbei ist. Andere Stichtage sind möglich, aber der Auszug ist dann unvollständig.</p>
 </fieldset>
-</div></form></div></section>
+</div></form>
+<div class="lauf" style="margin:20px 0 0"><button type="button" class="knopf start" id="start1">Filterung starten</button><span class="bem" style="margin:0">springt zu Schritt 2 und zeigt die Filter Stufe für Stufe</span></div>
+</div></section>
 
 <section class="schritt" id="schritt2" aria-labelledby="h2s">
-<div class="schritthead"><span class="kicker">Schritt 2</span><h2 id="h2s">Treffer ansehen</h2><p>Links der Trichter: Wie viele Bekanntmachungen bleiben nach jedem Filter übrig? Rechts die Treffer.</p></div>
+<div class="schritthead"><span class="kicker">Schritt 2</span><h2 id="h2s">Treffer ansehen</h2><p>Jeder Punkt ist eine Bekanntmachung. Filter für Filter fallen die heraus, die nicht passen. Links der Trichter mit Zahlen, rechts die Treffer.</p></div>
+<div class="lauf"><button type="button" class="knopf start" id="start">Filterung starten</button><button type="button" class="knopf sek" id="sofort">Sofort anzeigen</button><span id="laufstatus" aria-live="polite"></span></div>
+<div class="panel" style="margin:0 0 24px"><div class="zaehler"><span class="gz" id="gz">0</span><span class="gl" id="gl">Bekanntmachungen im Trichter</span><span class="erkl" id="erkl"></span></div><div class="punkte" id="punkte" aria-hidden="true"></div></div>
 <p class="erg" id="ergebnis" aria-live="polite"></p>
 <div class="cols"><div class="panel" id="trichter"></div><div><div class="treffer" id="treffer"></div></div></div>
 </section>
@@ -172,7 +214,7 @@ footer{color:var(--grey);font-size:15px;margin:40px 0 24px}footer p{margin:8px 0
 
 <footer>
 <p id="quelle"></p>
-<p>Lizenz: TED-Daten sind laut Rechtshinweis der TED-Seite mit Quellenangabe wiederverwendbar (Wortlaut selbst prüfen, siehe docs/quellen.md). Erzeugt von <code>src/demo/live_demo.py</code>; Beschreibung, Grenzen und Ungeprüftes: docs/demo_push.md, Abschnitt „Live-Demo“.</p>
+<p>Lizenz: Laut Rechtshinweis von TED (ted.europa.eu/en/legal-notice, am 06.11.2026 gelesen) können Bekanntmachungen „freely reused, for commercial or non-commercial purposes“ werden; Bedingung: Quellenangabe, Änderungen sind anzugeben (Details: docs/quellen.md). Auswahl, Kürzung, Entfernungen, Übersetzungen und Urteile in dieser Seite sind eigene Auswertung, nicht von TED. Erzeugt von <code>src/demo/live_demo.py</code>; Beschreibung, Grenzen und Ungeprüftes: docs/demo_push.md, Abschnitt „Live-Demo“.</p>
 </footer>
 </main>
 <script>
@@ -224,22 +266,31 @@ function platzhalter(profil,b){var q=b.text+"\n\n"+b.zeilen,r=regelUrteil(profil
   if(m){krit.push({kriterium:"Leistung",status:"passt",zitat:m[0].replace(/\n/g," "),kommentar:"Stichwort"});break}}
  kr.forEach(function(k){if(!krit.some(function(x){return x.kriterium===k}))krit.push({kriterium:k,status:"nicht ablesbar",zitat:null,kommentar:"Platzhalter-Modus: nicht bewertet"})});
  return {urteil:r[0],begruendung:"[Platzhalter, keine KI] "+r[1],kriterien:krit,pruefhinweise:[],quelle:"Platzhalter (keine KI)"}}
-function trichter(profil,dedup,stichtag){var stufen=[],menge=dedup;
- function stufe(name,neu,notiz){stufen.push({name:name,anzahl:neu.length,notiz:notiz||""});return neu}
+/* Ausgeschiedene Bekanntmachungen einer Stufe: Anzahl und bis zu 3 Beispiele (jüngste zuerst) mit Grund */
+function rausListe(weg,grund,n){var s=weg.slice().sort(function(a,b){return a.d>b.d?-1:a.d<b.d?1:a.nr<b.nr?-1:a.nr>b.nr?1:0});
+ return {n:n==null?weg.length:n,bsp:s.slice(0,3).map(function(b){return [b.t||"(ohne Titel)",grund(b)]})}}
+function ortGrund(b){if(!b.nuts.length)return "kein Leistungsort (NUTS) angegeben";var r=[];b.nuts.forEach(function(n){var k=n.slice(0,4),nm=DATA.nuts2[k]||(n.indexOf("DE")===0?"anderes Bundesland ("+k+")":n);if(r.indexOf(nm)<0)r.push(nm)});return "Ort: "+r.slice(0,3).join(", ")}
+function fristMax(b){return b.fristen&&b.fristen.length?b.fristen.slice().sort().pop():null}
+function trichter(profil,dedup,stichtag,opts){opts=opts||{};var stufen=[],raus=[],menge=dedup;
+ function stufe(name,neu,notiz,grund){var keep={};neu.forEach(function(b){keep[b.nr]=1});
+  raus.push(rausListe(menge.filter(function(b){return !keep[b.nr]}),grund||function(){return ""}));
+  stufen.push({name:name,anzahl:neu.length,notiz:notiz||""});return neu}
  var pf=profil.cpv_praefixe;
- menge=stufe("Gebäudereinigungs-CPV (Profil)",menge.filter(function(b){return b.cpv.some(function(c){return pf.some(function(p){return c.indexOf(p)===0})})}));
+ menge=stufe("Gebäudereinigungs-CPV (Profil)",menge.filter(function(b){return b.cpv.some(function(c){return pf.some(function(p){return c.indexOf(p)===0})})}),"",function(b){return "andere Leistung (CPV "+b.cpv.slice(0,2).join(", ")+")"});
  var plz=menge.filter(function(b){return b.op==="plz"}).length;
- menge=stufe("Oberpfalz (NUTS DE231-DE23A)",menge.filter(function(b){return b.op}),"davon nur über PLZ 92/93 erkannt: "+plz);
+ menge=stufe("Oberpfalz (NUTS DE231-DE23A)",menge.filter(function(b){return b.op}),"davon nur über PLZ 92/93 erkannt: "+plz,ortGrund);
  var ent={};menge.forEach(function(b){ent[b.nr]=entfernung(profil,b)});
  var imr=menge.filter(function(b){return ent[b.nr]===null||ent[b.nr]<=profil.radius_km});
- menge=stufe("Radius "+profil.radius_km+" km um "+profil.sitz.ort,imr,"davon Entfernung nicht berechenbar (nur NUTS-2/PLZ): "+imr.filter(function(b){return ent[b.nr]===null}).length);
- var offen=menge.filter(function(b){return !b.fristen.length||max(b.fristen.map(pd))>=pd(stichtag)});
- menge=stufe("Abgabefrist noch offen",offen,"davon Frist nicht angegeben: "+offen.filter(function(b){return !b.fristen.length}).length);
+ menge=stufe("Radius "+profil.radius_km+" km um "+profil.sitz.ort,imr,"davon Entfernung nicht berechenbar (nur NUTS-2/PLZ): "+imr.filter(function(b){return ent[b.nr]===null}).length,function(b){return "ca. "+Math.round(ent[b.nr])+" km entfernt (Bezugspunkt der Region)"});
+ if(opts.ohneFrist){var vorbei=menge.filter(function(b){return b.fristen.length&&max(b.fristen.map(pd))<pd(stichtag)}).length;
+  menge=stufe("Abgabefrist: Filter ausgeschaltet (nur zur Veranschaulichung)",menge,"davon Frist schon vorbei: "+vorbei+"; Frist nicht angegeben: "+menge.filter(function(b){return !b.fristen.length}).length)}
+ else{var offen=menge.filter(function(b){return !b.fristen.length||max(b.fristen.map(pd))>=pd(stichtag)});
+  menge=stufe("Abgabefrist noch offen",offen,"davon Frist nicht angegeben: "+offen.filter(function(b){return !b.fristen.length}).length,function(b){return "Frist "+de(fristMax(b))+" schon vorbei"})}
  var lang=menge.filter(function(b){return !b.lm.length||max(b.lm)>=profil.laufzeit_min_monate});
- menge=stufe("Laufzeit mindestens "+profil.laufzeit_min_monate+" Monate",lang,"davon Laufzeit im Datenfeld nicht angegeben: "+lang.filter(function(b){return !b.lm.length}).length);
+ menge=stufe("Laufzeit mindestens "+profil.laufzeit_min_monate+" Monate",lang,"davon Laufzeit im Datenfeld nicht angegeben: "+lang.filter(function(b){return !b.lm.length}).length,function(b){return "Laufzeit nur "+fmtG(max(b.lm))+" Monate"});
  var nw=menge.filter(function(b){return b.wert&&b.wert.length}).length;
- stufen.push({name:"Info: Wert angegeben (kein Filter)",anzahl:nw,notiz:"bei "+(menge.length-nw)+" von "+menge.length+" Treffern ist kein Wert angegeben"});
- return {stufen:stufen,menge:menge}}
+ stufen.push({name:"Info: Wert angegeben (kein Filter)",anzahl:nw,notiz:"bei "+(menge.length-nw)+" von "+menge.length+" Treffern ist kein Wert angegeben"});raus.push(null);
+ return {stufen:stufen,menge:menge,raus:raus}}
 function zitatKurz(z,n){n=n||220;z=z.split(/\s+/).filter(Boolean).join(" ");return z.length<=n?z:z.slice(0,n).replace(/\s+$/,"")+" …"}
 var DF_ZEILE=/^[^:]{0,60}\(Datenfeld[^)]*\):/;
 function zitatZeilen(c){return c.zitate.map(function(p){var art=DF_ZEILE.test(p[1])?"Datenfeld-Zeile (von uns eingefügt, kein Bekanntmachungstext)":"Zitat aus dem Text (wörtlich geprüft)";return art+" zu „"+p[0]+"“: „"+zitatKurz(p[1])+"“"})}
@@ -252,7 +303,7 @@ function inhalt(profil,b,u,regel,vorg,stichtag){
  if(to.length)ort+="; die Orte im Text weichen vom Datenfeld ab, einzelne Objekte können weit außerhalb der Region liegen";
  var bz=bezugspunkt(profil,b),ent;
  if(bz){var g=Math.round(bz.km/5)*5,zahl=g?"ca. "+g+" km":"unter 5 km";ent="Näherung: "+zahl+" Luftlinie von "+profil.sitz.ort+" zum Bezugspunkt "+bz.code+" ("+NUTS[bz.code][0]+"), nicht zum Objekt"}else ent="nicht berechenbar";
- var frist;if(b.fristen.length){var fr=b.fristen.slice().sort().pop();frist=de(fr)+" (noch "+Math.round((pd(fr)-pd(stichtag))/864e5)+" Tage ab "+de(stichtag)+")"}else frist="nicht angegeben";
+ var frist;if(b.fristen.length){var fr=b.fristen.slice().sort().pop(),tg=Math.round((pd(fr)-pd(stichtag))/864e5);frist=de(fr)+(tg>=0?" (noch "+tg+" Tage ab "+de(stichtag)+")":" (am "+de(stichtag)+" schon "+(-tg)+" Tage vorbei)")}else frist="nicht angegeben";
  var lz="Datenfeld Dauer: "+(b.lm.length?fmtG(max(b.lm))+" Monate":"nicht angegeben");
  if(b.lb.length||b.le.length)lz+="; Datenfeld Datum: "+[b.lb.length?"Beginn "+de(b.lb[0]):"",b.le.length?"Ende "+de(b.le[b.le.length-1]):""].filter(Boolean).join(", ");
  if(b.lz_text.length){var marke=!b.lm.length?"im Text, nicht im Datenfeld":"Verlängerung/Option im Text";lz+="; "+marke+": "+b.lz_text.map(function(s){return "„"+s+"“"}).join(" ")}
@@ -315,18 +366,29 @@ function sigOf(p){return JSON.stringify([p.sitz.ort,p.radius_km,p.cpv_praefixe.s
 function presetProfile(p){var f=PRESETFORM[p.id];var q=JSON.parse(JSON.stringify(p));
  q.sigL=f.leist.filter(function(k){return LEISTUNG[k].sig});q.sigO=f.obj.filter(function(k){return OBJEKT[k].sig});return q}
 DATA.profile.forEach(function(p){PRESET_SIG[sigOf(presetProfile(p))]=p.id});
+function isoMonate(iso,m){var p=iso.split("-"),y=+p[0],mo=+p[1]-1+m,d=+p[2];y+=Math.floor(mo/12);mo=((mo%12)+12)%12;
+ var last=new Date(Date.UTC(y,mo+1,0)).getUTCDate();return y+"-"+String(mo+1).padStart(2,"0")+"-"+String(Math.min(d,last)).padStart(2,"0")}
+var FENSTER={"14t":{label:"14 Tage",von:function(s){return isoAdd(s,-14)}},"3m":{label:"3 Monate",von:function(s){return isoMonate(s,-3)}},"12m":{label:"12 Monate",von:function(s){return isoMonate(s,-12)}}};
+var SETNAME={beispiel:"Alle Bekanntmachungen Deutschland, CPV 909* (im Schnappschuss)",bayern:"Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz)"};
+/* opts: set ("beispiel" Standard | "bayern"), fenster ("14t" Standard | "3m" | "12m"), ohneFrist (nur Veranschaulichung), keinKI */
 function berechne(profil,stichtag,opts){opts=opts||{};
- var von=isoAdd(stichtag,-14),meta=DATA.meta;
- var fenster=DATA.notices.filter(function(b){return von<=b.d&&b.d<=stichtag});
+ var setId=opts.set||"beispiel",SET=DATA.sets[setId],meta=SET.meta,fw=opts.fenster||"14t";
+ var von=FENSTER[fw].von(stichtag);
+ var fenster=SET.notices.filter(function(b){return von<=b.d&&b.d<=stichtag});
  var dedup=dedupe(fenster);
  var fp=(meta.fenster||"").split(" bis ");var unv=!!fp[0]&&(von<fp[0]||stichtag>fp[1]);
- var gem=[{name:"Alle Bekanntmachungen Deutschland, CPV 909* (im Schnappschuss)",anzahl:meta.anzahl_gesamt,notiz:meta.schnappschuss},
-  {name:"veröffentlicht "+de(von).slice(0,6)+" bis "+de(stichtag),anzahl:fenster.length,notiz:""},
+ var vonTxt=von.slice(0,4)===stichtag.slice(0,4)?de(von).slice(0,6):de(von);
+ var gem=[{name:SETNAME[setId],anzahl:meta.anzahl_gesamt,notiz:meta.schnappschuss},
+  {name:"veröffentlicht "+vonTxt+" bis "+de(stichtag),anzahl:fenster.length,notiz:""},
   {name:"ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel)",anzahl:dedup.length,notiz:""}];
- var tr=trichter(profil,dedup,stichtag),treffer=tr.menge;
+ var drin={};fenster.forEach(function(b){drin[b.nr]=1});
+ var dd={};dedup.forEach(function(b){dd[b.nr]=1});
+ var raus=[null,rausListe(SET.notices.filter(function(b){return !drin[b.nr]}),function(b){return "veröffentlicht am "+de(b.d)+(b.d>stichtag?" (nach dem Stichtag)":" (vor dem Zeitraum)")},meta.anzahl_gesamt-fenster.length),
+  rausListe(fenster.filter(function(b){return !dd[b.nr]}),function(){return "gleicher Auftraggeber und Titel wie eine spätere Bekanntmachung, als Mehrfachveröffentlichung gewertet (grobe Regel, nicht geprüft)"})];
+ var tr=trichter(profil,dedup,stichtag,opts),treffer=tr.menge;raus=raus.concat(tr.raus);
  var kiPid=opts.keinKI?null:(PRESET_SIG[sigOf(profil)]||null);
  var items=treffer.map(function(b){var u=null,quelleKI=false;
-  if(kiPid&&DATA.ki[b.nr]&&DATA.ki[b.nr][kiPid]){u=DATA.ki[b.nr][kiPid];quelleKI=true}else u=platzhalter(profil,b);
+  if(kiPid&&DATA.ki[b.nr]&&DATA.ki[b.nr][kiPid]&&(setId==="beispiel"||b.ki_gleich)){u=DATA.ki[b.nr][kiPid];quelleKI=true}else u=platzhalter(profil,b);
   return {b:b,u:u,regel:regelUrteil(profil,b),ki:quelleKI}});
  var nKi=items.filter(function(x){return x.ki}).length,nFallback=items.length-nKi;
  var counts=URTEILE.map(function(k){return items.filter(function(x){return x.u.urteil===k}).length});
@@ -338,10 +400,14 @@ function berechne(profil,stichtag,opts){opts=opts||{};
   var c=inhalt(profil,x.b,x.u,x.regel[0]+": "+x.regel[1],vg,stichtag);karten.push({c:c,card:adaptiveCard(c),b:x.b,u:x.u,regel:x.regel,ki:x.ki})});
  stufen.push({name:"Nachrichten erzeugt (passt + unklar)",anzahl:karten.length,notiz:""});
  stufen.push({name:"davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig)",anzahl:nv,notiz:"bei "+(karten.length-nv)+" von "+karten.length+" Nachrichten kein eindeutiger Treffer"});
- return {gemeinsam:gem,stufen:stufen,items:items,karten:karten,kiPid:kiPid,unvollstaendig:unv,von:von}}
+ var pn=items.filter(function(x){return x.u.urteil==="passt nicht"});
+ raus.push(null);raus.push(rausListe(pn.map(function(x){return x.b}),function(b){var x=pn.filter(function(y){return y.b===b})[0];return (x.ki?"KI-Urteil":"Stichwortregel")+" „passt nicht“: "+zitatKurz(x.u.begruendung.replace("[Platzhalter, keine KI] ",""),90)}));raus.push(null);
+ var abgelaufen=karten.filter(function(k){var f=fristMax(k.b);return f&&f<stichtag}).length;
+ return {gemeinsam:gem,stufen:stufen,items:items,karten:karten,kiPid:kiPid,unvollstaendig:unv,von:von,raus:raus,set:setId,fenster:fw,ohneFrist:!!opts.ohneFrist,abgelaufen:abgelaufen}}
 window.__demo={berechne:berechne,presetProfile:presetProfile,adaptiveCard:adaptiveCard,errors:ERRORS,data:DATA,eignungsabgleich:eignungsabgleich};
 /* ---------- Oberfläche ---------- */
-var S={sw:null,sel:null,kanal:"teams",jsonOpen:false};
+var S={sw:null,sel:null,kanal:"teams",jsonOpen:false,set:"beispiel",fenster:"14t",anim:null,stale:false,last:null};
+var REDUCED=!!(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches);
 function buildForm(){
  $("sitz").innerHTML=Object.keys(DATA.sitze).map(function(c){return '<option value="'+c+'">'+esc(DATA.sitze[c].name)+"</option>"}).join("");
  $("leistungen").innerHTML=Object.keys(LEISTUNG).map(function(k){return '<label class="cb"><input type="checkbox" data-g="leist" value="'+k+'">'+esc(LEISTUNG[k].label)+"</label>"}).join("");
@@ -362,8 +428,24 @@ function readProfile(){
   wert_min_eur:wmin==null?0:wmin,wert_max_eur:wmax==null?1e15:wmax,laufzeit_min_monate:+$("laufzeit").value,zertifikate:checked("zert"),
   umsatz_mio:um,besch:numOrNull("besch"),refs:numOrNull("refs"),
   sigL:L.filter(function(k){return LEISTUNG[k].sig}),sigO:O.filter(function(k){return OBJEKT[k].sig})}}
-function setSigFromPreset(p){}
-function laden(pid){var p=DATA.profile.filter(function(x){return x.id===pid})[0],f=PRESETFORM[pid];
+function readOpts(){var b=S.set==="bayern";return {set:S.set,fenster:b?S.fenster:"14t",ohneFrist:b&&!$("nuroffen").checked}}
+function setSeg(id,attr,val){Array.prototype.forEach.call(document.querySelectorAll("#"+id+" button"),function(x){x.setAttribute("aria-checked",x.getAttribute(attr)===val?"true":"false")})}
+/* Datensatz umschalten: Stichtag-Grenzen, Zeitraum und Frist-Schalter nur beim großen Datensatz */
+function setzeSet(id,stichtag){S.set=id;setSeg("setwahl","data-set",id);var b=id==="bayern",m=DATA.sets[id].meta,fp=m.fenster.split(" bis ");
+ Array.prototype.forEach.call(document.querySelectorAll("#fensterwahl button"),function(x){x.disabled=!b});
+ if(!b){S.fenster="14t"}setSeg("fensterwahl","data-f",S.fenster);
+ $("nuroffen").disabled=!b;if(!b)$("nuroffen").checked=true;
+ $("fensterzeile").style.opacity=b?"1":".55";$("fristzeile").style.opacity=b?"1":".55";
+ var st=$("stichtag");st.min=b?fp[0]:"2026-09-01";st.max=b?fp[1]:"2026-11-06";
+ if(stichtag)st.value=stichtag;else if(!st.value||st.value<st.min||st.value>st.max)st.value=b?fp[1]:"2026-10-16";
+ $("setinfo").innerHTML=b?"<b>Großer Datensatz:</b> "+m.anzahl_gesamt+" echte Ausschreibungen für Reinigung mit Leistungsort Bayern, veröffentlicht "+de(fp[0])+" bis "+de(fp[1])+" (Abruf bei TED am "+de(m.downloaded_at.slice(0,10))+"). Firmensitze und Entfernungen gibt es nur für die Oberpfalz; Ausschreibungen aus anderen Bezirken fallen deshalb an der Oberpfalz-Stufe heraus. Für frei eingestellte Firmen urteilt nur die Stichwortregel, keine KI."
+  :"<b>Beispiel-Schnappschuss:</b> die Daten der Beispiele P1 und P2 (Stichtag 16.10.2026, 14 Tage). Für andere Firmen gibt es hier nur wenige Treffer; dafür den großen Datensatz wählen.";
+ $("stichtaginfo").textContent=b?"Standard 06.11.2026 (Tag des Abrufs). Gezeigt werden Bekanntmachungen des gewählten Zeitraums vor dem Stichtag. Der Datensatz reicht vom "+de(fp[0])+" bis "+de(fp[1])+"."
+  :"Standard 16.10.2026: Gezeigt werden Bekanntmachungen der 14 Tage davor, deren Abgabefrist noch nicht vorbei ist. Andere Stichtage sind möglich, aber der Auszug ist dann unvollständig.";
+ fristWarn()}
+function fristWarn(){$("fristwarn").hidden=!(S.set==="bayern"&&!$("nuroffen").checked)}
+function laden(pid,sofort){var p=DATA.profile.filter(function(x){return x.id===pid})[0],f=PRESETFORM[pid];
+ setzeSet("beispiel","2026-10-16");
  $("name").value=p.name;
  var code=Object.keys(DATA.sitze).filter(function(c){return DATA.sitze[c].name===p.sitz.ort})[0];$("sitz").value=code;
  $("radius").value=p.radius_km;$("laufzeit").value=p.laufzeit_min_monate;
@@ -371,31 +453,72 @@ function laden(pid){var p=DATA.profile.filter(function(x){return x.id===pid})[0]
  $("umsatz").value="";$("besch").value="";$("refs").value="";
  setChecked("leist",f.leist);setChecked("obj",f.obj);setChecked("cpv",p.cpv_praefixe);setChecked("zert",p.zertifikate);
  S.sw={L:p.leistung_stichworte.slice(),O:p.objekt_stichworte.slice()};
- $("stichtag").value="2026-10-16";S.sel=null;rechne()}
+ $("stichtag").value="2026-10-16";S.sel=null;aktualisiere(!sofort)}
+/* Freie Beispielfirma für den großen Datensatz: Leistungen und Gebäude wie P1, Sitz/Radius/Laufzeit wählbar */
+function ladenFrei(sitz,radius,lz,o){o=o||{};setzeSet("bayern",o.stichtag||"2026-11-06");S.fenster=o.fenster||"12m";setSeg("fensterwahl","data-f",S.fenster);
+ $("nuroffen").checked=o.frist==null?true:!!o.frist;fristWarn();
+ $("name").value="Beispiel "+DATA.sitze[sitz].name.split(" ")[0]+" GmbH (erfunden)";$("sitz").value=sitz;$("radius").value=radius;$("laufzeit").value=lz;
+ $("wmin").value="";$("wmax").value="";$("umsatz").value="";$("besch").value="";$("refs").value="";
+ setChecked("leist",["unterhalt","glas","gebaeude"]);setChecked("obj",["schule","kita","verwaltung","klinik"]);setChecked("cpv",["90910","90911","90919"]);setChecked("zert",[]);
+ S.sw=null;S.sel=null;aktualisiere(true)}
 function tag(u){return '<span class="tag '+(u==="passt nicht"?"pn":u)+'">'+esc(u)+"</span>"}
 function unb(html){return html.replace(/(im Text, nicht im Datenfeld|Datenfeld|nicht angegeben|nicht berechenbar|nicht genannt|nicht ablesbar|weder im Datenfeld noch im Text gefunden|im Text keine Laufzeitangabe gefunden|NUTS nicht angegeben)/g,function(m){
   if(m==="im Text, nicht im Datenfeld")return '<mark class="txt">'+m+"</mark>";if(m==="Datenfeld")return '<span class="df">'+m+"</span>";return '<mark class="unb">'+m+"</mark>"})}
-var HILFE={"Gebäudereinigungs-CPV":"Passt die Art der Leistung (Reinigung)?","Oberpfalz":"Liegt der Ort in der Oberpfalz?","Radius":"Ist der Ort nah genug am Firmensitz?","Abgabefrist":"Kann man noch ein Angebot abgeben?","Laufzeit mindestens":"Läuft der Vertrag lang genug?","Info: Wert":"Nur zur Information, kein Filter.","KI-Urteil":"Gespeichertes KI-Urteil, kein Fakt.","Stichwortregel":"Einfache Stichwortsuche im Text, keine KI.","Nachrichten erzeugt":"Für „passt“ und „unklar“ entsteht eine Nachricht.","davon mit Vorgänger":"Vertragsliste des Prototyps; bisher nie ausgelöst.","Alle Bekanntmachungen":"Alle deutschen Bekanntmachungen mit Reinigungs-CPV seit 01.09.2026.","veröffentlicht":"Nur die letzten 14 Tage vor dem Stichtag.","ohne Mehrfach":"Doppelte Veröffentlichungen zählen einmal."};
-function hilfe(n){for(var k in HILFE){if(n.indexOf(k)===0)return HILFE[k]}return ""}
-function renderTrichter(r,profil){
+/* Erklärzeile je Stufe in einfachem Deutsch (Reihenfolge: speziellere Schlüssel zuerst) */
+var HILFE={"Gebäudereinigungs-CPV":"Passt die Art der Leistung (Reinigung)?","Oberpfalz":"Liegt der Ort in der Oberpfalz?","Radius":"Ist der Ort nah genug am Firmensitz?","Abgabefrist: Filter":"Ausgeschaltet: Auch abgelaufene Ausschreibungen bleiben drin, nur zum Zeigen.","Abgabefrist":"Kann man noch ein Angebot abgeben?","Laufzeit mindestens":"Läuft der Vertrag lang genug?","Info: Wert":"Nur zur Information, kein Filter.","KI-Urteil":"Gespeichertes KI-Urteil, kein Fakt.","Stichwortregel":"Einfache Stichwortsuche im Text, keine KI.","Nachrichten erzeugt":"Für „passt“ und „unklar“ entsteht eine Nachricht.","davon mit Vorgänger":"Vertragsliste des Prototyps; bei P1/P2 nie ausgelöst, im großen Datensatz bei allen Auslösungen falsch (dort abgeschaltet).","veröffentlicht":"Nur, was im Zeitraum vor dem Stichtag erschienen ist.","ohne Mehrfach":"Gleicher Auftraggeber und Titel zählt einmal (grobe Regel, nicht geprüft; kann verschiedene Verfahren verschmelzen)."};
+var HILFE_ALLE={beispiel:"Alle deutschen Ausschreibungen mit CPV 909* (Reinigung und Hygiene) seit 01.09.2026.",bayern:"Alle Ausschreibungen mit CPV 909* (Reinigung und Hygiene) und Ort in Bayern, 16.10.2025 bis 06.11.2026."};
+function hilfe(n,set){if(n.indexOf("Alle Bekanntmachungen")===0)return HILFE_ALLE[set||"beispiel"];
+ if(set==="bayern"&&n.indexOf("davon mit Vorgänger")===0)return "Im großen Datensatz abgeschaltet: Der Hinweis lag dort bei allen 3 Auslösungen falsch (52 Oberpfälzer Bekanntmachungen).";for(var k in HILFE){if(n.indexOf(k)===0)return HILFE[k]}return ""}
+/* ---------- Trichter mit Zeitachse (Animation als Funktion der Zeit t in ms, dadurch auch Standbild zum Testen) ---------- */
+function istInfo(n){return n.indexOf("Info:")===0||n.indexOf("davon mit")===0}
+function zeitplan(rows){var t=0,plan=[],prev=0;rows.forEach(function(s,i){var info=istInfo(s.name),von=info?s.anzahl:(i===0?0:prev),dur=i===0?600:info?350:(von!==s.anzahl?700:400);
+  plan.push({start:t,dur:dur,von:von,bis:s.anzahl,info:info});if(!info)prev=s.anzahl;t+=dur+100});return {plan:plan,ende:t}}
+function ease(p){return 1-Math.pow(1-p,3)}
+function breite(n,mx){return Math.max(1,Math.round(100*Math.sqrt(Math.max(0,n)/mx)))}
+function prng(seed){return function(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}}
+function renderTrichter(r){
  var rows=r.gemeinsam.concat(r.stufen),mx=rows[0].anzahl||1,nullSeen=false,h='<h3>Der Trichter</h3><p class="bem" style="margin:0 0 8px">Balkenlänge gestaucht (Wurzelskala), damit kleine Zahlen sichtbar bleiben.</p>';
  rows.forEach(function(s,i){var cls="stufe",info=s.name.indexOf("Info:")===0,ki=s.name.indexOf("KI-Urteil")===0||s.name.indexOf("Stichwortregel")===0;
   if(info)cls+=" info";if(ki)cls+=" ki";
   var ende=false;if(!nullSeen&&s.anzahl===0&&!info&&s.name.indexOf("davon mit")!==0&&s.name.indexOf("Nachrichten erzeugt")!==0&&!ki){ende=true;nullSeen=true}if(nullSeen&&!ende)cls+=" null";if(ende)cls+=" ende";
-  var w=Math.max(1,Math.round(100*Math.sqrt(s.anzahl/mx)));
-  h+='<div class="'+cls+'"><div class="n">'+s.anzahl+'</div><div class="t">'+esc(s.name)+(hilfe(s.name)?"<small>"+esc(hilfe(s.name))+"</small>":"")+'</div><div class="bar" style="width:'+w+'%"></div>'+(s.notiz?'<div class="no">'+esc(s.notiz)+(ende?" · hier ist Schluss":"")+"</div>":(ende?'<div class="no">hier ist Schluss</div>':""))+"</div>"});
- if(r.unvollstaendig)h+='<p class="bem"><mark class="unb">Auszug unvollständig</mark> Für diesen Stichtag fehlen im Auszug die Bekanntmachungen außerhalb der Oberpfalz; die Zahlen vor der Oberpfalz-Stufe sind zu klein. Ab der Oberpfalz-Stufe ist der Auszug vollständig.</p>';
- $("trichter").innerHTML=h}
+  var hl=hilfe(s.name,r.set),ra=r.raus[i],rh="";
+  if(ra&&ra.n>0){rh='<div class="raus" data-raus><b>−'+fmtInt(ra.n)+"</b> ausgeschieden"+(ra.bsp.length?", z. B.:<ul>"+ra.bsp.map(function(x){return "<li><s>"+esc(zitatKurz(x[0],70))+"</s> – "+esc(x[1])+"</li>"}).join("")+"</ul>":"")+"</div>"}
+  h+='<div class="'+cls+'" data-i="'+i+'"><div class="n">'+s.anzahl+'</div><div class="t">'+esc(s.name)+(hl?"<small>"+esc(hl)+"</small>":"")+'</div><div class="bar" style="width:'+breite(s.anzahl,mx)+'%"></div>'+(s.notiz?'<div class="no">'+esc(s.notiz)+(ende?" · hier ist Schluss":"")+"</div>":(ende?'<div class="no">hier ist Schluss</div>':""))+rh+"</div>"});
+ if(r.unvollstaendig)h+='<p class="bem"><mark class="unb">Auszug unvollständig</mark> '+(r.set==="bayern"?"Der Zeitraum reicht über den Datensatz hinaus (16.10.2025 bis 06.11.2026); davor oder danach fehlen Bekanntmachungen.":"Für diesen Stichtag fehlen im Auszug die Bekanntmachungen außerhalb der Oberpfalz; die Zahlen vor der Oberpfalz-Stufe sind zu klein. Ab der Oberpfalz-Stufe ist der Auszug vollständig.")+"</p>";
+ $("trichter").innerHTML=h;
+ /* Punktfeld: ein Punkt je Bekanntmachung, Reihenfolge gemischt (fester Startwert, damit Bilder reproduzierbar sind) */
+ var n0=rows[0].anzahl,ord=[],rnd=prng(20261106),i;for(i=0;i<n0;i++)ord.push(i);for(i=n0-1;i>0;i--){var j=Math.floor(rnd()*(i+1)),tmp=ord[i];ord[i]=ord[j];ord[j]=tmp}
+ var ph="";for(i=0;i<n0;i++)ph+='<i data-r="'+ord[i]+'"></i>';$("punkte").innerHTML=ph;
+ var zp=zeitplan(rows);
+ S.anim={rows:rows,mx:mx,plan:zp.plan,ende:zp.ende,els:Array.prototype.slice.call(document.querySelectorAll("#trichter .stufe")),dots:Array.prototype.slice.call(document.querySelectorAll("#punkte i")),shown:-1,r:r}}
+/* Zeichnet den Zustand zum Zeitpunkt t (ms); t >= ende = Endzustand */
+function frame(t){var A=S.anim;if(!A)return;var aktuell=A.rows[0].anzahl,erkl="",stufeNr=0,nFilter=0;
+ A.plan.forEach(function(p,i){var el=A.els[i],s=A.rows[i];if(!el)return;if(!p.info&&i>0)nFilter++;
+  if(t<p.start){el.classList.add("wait");el.classList.remove("aktiv");return}
+  el.classList.remove("wait");var q=Math.min(1,(t-p.start)/p.dur),e=ease(q),z=Math.round(p.von+(p.bis-p.von)*e);
+  el.querySelector(".n").textContent=fmtInt(p.info?p.bis:z);
+  el.querySelector(".bar").style.width=breite(p.info?p.bis:z,A.mx)+"%";
+  var ra=el.querySelector("[data-raus]");if(ra)ra.classList.toggle("versteckt",q<.35);
+  el.classList.toggle("aktiv",q<1&&t<A.ende);
+  if(!p.info){aktuell=z;stufeNr=nFilter;erkl=hilfe(s.name,A.r.set)}});
+ var fertig=t>=A.ende,nf=A.plan.filter(function(p,i){return !p.info&&i>0}).length;
+ var sonderFrist=fertig&&A.r.ohneFrist&&A.r.karten.length>0;
+ $("gz").textContent=fmtInt(sonderFrist?A.r.karten.length-A.r.abgelaufen:aktuell);
+ $("gl").textContent=sonderFrist?"mit offener Frist. Dazu "+A.r.abgelaufen+" mit abgelaufener Frist (nur zur Veranschaulichung, Frist-Filter aus); "+fmtInt(aktuell)+" bleiben nach den Filtern übrig (von "+fmtInt(A.rows[0].anzahl)+")":(fertig?"Bekanntmachungen bleiben übrig (von "+fmtInt(A.rows[0].anzahl)+")":"Bekanntmachungen im Trichter");
+ $("erkl").textContent=fertig?"Fertig. Die Treffer stehen unten.":(stufeNr?"Filter "+stufeNr+" von "+nf+": "+erkl:"");
+ if(A.shown!==aktuell||fertig!==A.fertig){A.dots.forEach(function(d){var r=+d.getAttribute("data-r");d.classList.toggle("weg",r>=aktuell);d.classList.toggle("rest",fertig&&r<aktuell)});A.shown=aktuell;A.fertig=fertig}}
+function laufStatus(txt){$("laufstatus").textContent=txt}
 function renderTreffer(r,profil){
  var k=r.karten,el=$("treffer");
  var n=k.length,erg=$("ergebnis");
  if(!profil.cpv_praefixe.length){erg.innerHTML="Bitte mindestens eine Branche (CPV) auswählen.";el.innerHTML="";return}
- erg.innerHTML=n?'Für <b>'+esc(profil.name)+'</b> bleiben <b>'+n+'</b> passende Bekanntmachung'+(n===1?"":"en")+" übrig.":'Für <b>'+esc(profil.name)+'</b> bleibt <b>keine</b> Bekanntmachung übrig.';
+ var offenN=r.karten.length-r.abgelaufen;var abg=r.ohneFrist?" <b>Davon mit offener Frist: "+offenN+"</b>; <b>"+r.abgelaufen+"</b> mit abgelaufener Frist (nur zur Veranschaulichung).":(r.abgelaufen?' Davon <b>'+r.abgelaufen+'</b> mit abgelaufener Frist (nur zur Veranschaulichung).':"");
+ erg.innerHTML=n?'Für <b>'+esc(profil.name)+'</b> bleiben <b>'+n+'</b> passende Bekanntmachung'+(n===1?"":"en")+" übrig."+abg:'Für <b>'+esc(profil.name)+'</b> bleibt <b>keine</b> Bekanntmachung übrig.';
  if(!n){var stop=null,all=r.stufen;for(var i=0;i<all.length;i++){if(all[i].anzahl===0&&all[i].name.indexOf("Info:")!==0){stop=all[i];break}}
-  el.innerHTML='<div class="leer"><b>Kein Treffer. Das ist ein normales Ergebnis.</b>Im Auszug gibt es nur wenige Bekanntmachungen in der Oberpfalz.'+(stop?" Ab hier blieb nichts übrig: <i>"+esc(stop.name)+"</i>.":"")+" Probieren Sie einen größeren Radius, eine kürzere Mindestlaufzeit oder ein Beispiel (P1, P2).</div>";return}
+  el.innerHTML='<div class="leer"><b>Kein Treffer. Das ist ein normales Ergebnis.</b>'+(r.set==="bayern"?"Im gewählten Zeitraum gibt es in der Oberpfalz nichts Passendes.":"Im Auszug gibt es nur wenige Bekanntmachungen in der Oberpfalz.")+(stop?" Ab hier blieb nichts übrig: <i>"+esc(stop.name)+"</i>.":"")+" Probieren Sie einen größeren Radius, eine kürzere Mindestlaufzeit"+(r.set==="bayern"?", einen längeren Zeitraum oder den Frist-Filter aus.":", den großen Datensatz oder ein Beispiel (P1, P2).")+"</div>";return}
  if(!k.some(function(x){return x.b.nr===S.sel}))S.sel=k[0].b.nr;
- el.innerHTML=k.map(function(x){var c=x.c;var sel=x.b.nr===S.sel;
-  return '<button type="button" class="tcard" aria-pressed="'+sel+'" data-nr="'+esc(x.b.nr)+'"><p class="tt">'+esc(c.titel)+'</p><p class="ta">'+esc(c.auftraggeber)+'</p><div class="tf">'+tag(c.urteil)+'<span>'+(x.ki?"gespeichertes KI-Urteil":"Stichwortregel, keine KI")+'</span><span>Frist: '+unb(esc(c.frist.split(" (")[0]))+'</span><span>'+esc(c.entfernung.replace("Näherung: ","").split(" Luftlinie")[0]||"")+'</span></div><span class="go">'+(sel?"Nachricht unten ansehen":"Nachricht ansehen")+" ›</span></button>"}).join("")}
+ el.innerHTML=k.map(function(x){var c=x.c;var sel=x.b.nr===S.sel,f=fristMax(x.b),ab=f&&f<S.last.st;
+  return '<button type="button" class="tcard" aria-pressed="'+sel+'" data-nr="'+esc(x.b.nr)+'"><p class="tt">'+esc(c.titel)+'</p><p class="ta">'+esc(c.auftraggeber)+'</p><div class="tf">'+tag(c.urteil)+(ab?'<span class="tag ab">Frist abgelaufen</span>':"")+'<span>'+(x.ki?"gespeichertes KI-Urteil":"Stichwortregel, keine KI")+'</span><span>Frist: '+unb(esc(c.frist.split(" (")[0]))+'</span><span>'+esc(c.entfernung.replace("Näherung: ","").split(" Luftlinie")[0]||"")+'</span></div><span class="go">'+(sel?"Nachricht unten ansehen":"Nachricht ansehen")+" ›</span></button>"}).join("")}
 function renderCardHtml(card){var h='<div class="ac">';
  card.body.forEach(function(blk){if(blk.type==="TextBlock"){var cls="tb";if(blk.weight==="Bolder")cls+=" b";if(blk.size==="Medium")cls+=" md";if(blk.size==="Small")cls+=" sm";if(blk.isSubtle)cls+=" sub";if(blk.color)cls+=" c-"+blk.color;if(blk.spacing==="Medium")cls+=" sp";else if(blk.spacing==="None")cls+=" sp0";else cls+=" sp";
    h+='<p class="'+cls+'">'+unb(esc(blk.text))+"</p>"}
@@ -413,46 +536,84 @@ function renderMailHtml(c){var f=[["Auftraggeber",c.auftraggeber],["Ort",c.ort],
 function renderVorschau(r,profil,stichtag){var el=$("vorschau");
  var x=r.karten.filter(function(k){return k.b.nr===S.sel})[0];
  if(!x){el.innerHTML='<div class="leer"><b>Noch keine Nachricht.</b>Sobald es einen Treffer gibt, sehen Sie hier die Nachricht.</div>';return}
- var c=x.c,h='<div class="vorsch">';
+ var c=x.c,h='<div class="vorsch">',f=fristMax(x.b);
+ if(f&&f<stichtag)h+='<p class="warn"><b>Frist abgelaufen:</b> Diese Nachricht wäre am '+esc(de(stichtag))+' nicht verschickt worden (Frist '+esc(de(f))+'). Sie steht hier nur zur Veranschaulichung.</p>';
  if(S.kanal==="teams"){
   h+='<div class="teams"><div class="tbar"># Ausschreibungen<small>Kanal der Firma (Demo-Nachbildung)</small></div><div class="tmsg"><div class="tava" aria-hidden="true">VR</div><div class="tbody"><div class="tname">Vergabe-Radar (Demo-Workflow)<small>'+esc(de(stichtag))+', 08:00</small></div>'+renderCardHtml(x.card.attachments[0].content)+"</div></div></div>"}
  else{var p=stichtag.split("-"),sommer=(+p[1]>=4&&+p[1]<=10);
   h+='<div class="mailfenster"><div class="mkopf"><div class="bet">'+esc(mailBetreff(c))+"</div><div><span>Von</span>Vergabe-Radar Demo &lt;demo-radar@example.invalid&gt;</div><div><span>An</span>Beispielbetrieb &lt;betrieb@example.invalid&gt;</div><div><span>Datum</span>"+esc(de(stichtag))+", 08:00 ("+(sommer?"MESZ":"MEZ")+')</div></div><div class="papier">'+renderMailHtml(c)+"</div></div>"}
  h+='<details id="jsonbox"'+(S.jsonOpen?" open":"")+'><summary>Technische Ansicht: '+(S.kanal==="teams"?"Teams-Karte als JSON (so wird sie gesendet)":"E-Mail als Text (Klartext-Teil)")+"</summary><pre>"+esc(S.kanal==="teams"?JSON.stringify(x.card,null,2):mailText(c))+"</pre></details>";
  if(x.ki){h+='<div class="kihinweis"><b>Gespeichertes KI-Urteil, nicht Fakt.</b> Dieses Urteil wurde früher einmal von einem Sprachmodell (<code>'+esc(T.KI_MODELL)+'</code>) für genau dieses Beispielprofil erzeugt und liegt in der Datei. Es wird hier nur abgespielt. Die Begründung wurde nicht geprüft, geprüft wurde nur, dass Zitate wörtlich im Text stehen.</div>'}
- else{h+='<div class="kihinweis"><b>KI-Urteil nur für gespeicherte Beispiele (P1, P2).</b> Für diese frei eingestellte Firma gibt es kein KI-Urteil. Gezeigt wird die einfache Stichwortregel (Stichworte der Leistungen und Gebäudearten im Text). Sie ist grob und kann irren. Neue KI-Aufrufe gibt es in dieser Seite nicht.</div>'}
+ else{h+='<div class="kihinweis"><b>KI-Urteil nur für gespeicherte Beispiele (P1, P2).</b> Für diese Firma gibt es kein KI-Urteil. Gezeigt wird die einfache Stichwortregel (Stichworte der Leistungen und Gebäudearten im Text). Sie ist grob und kann irren. Neue KI-Aufrufe gibt es in dieser Seite nicht.</div>'}
  var ez=eignungsabgleich(profil,x.b);
  h+='<div class="zusatz"><h3>Zusatz der Live-Demo: Passen die Angaben der Firma zu den Eignungsangaben im Text?</h3><p class="bem" style="margin:0 0 8px">Nicht Teil der Nachricht. Einfache Textsuche, keine KI; was der Text nicht sagt, bleibt „nicht ablesbar“. Schwellen stehen meist in den Vergabeunterlagen, nicht in der Bekanntmachung.</p><table><tr><th>Kriterium</th><th>Was der Text sagt</th><th>Firma</th><th>Ergebnis</th></tr>'+ez.map(function(r){return "<tr><td>"+esc(r[0])+"</td><td>"+esc(r[1])+"</td><td>"+esc(r[2])+"</td><td>"+unb(esc(r[3]))+"</td></tr>"}).join("")+"</table></div>";
  el.innerHTML=h+"</div>";
  var jb=$("jsonbox");if(jb)jb.addEventListener("toggle",function(){S.jsonOpen=jb.open})}
-function rechne(){
+/* ---------- Ablauf: Einstellungen lesen, rechnen, (animiert) zeigen ---------- */
+function rechneNur(){
  $("radiusO").textContent=$("radius").value+" km";var lz=+$("laufzeit").value;$("laufzeitO").textContent=lz?lz+" Monate":"egal";
- var st=$("stichtag").value||"2026-10-16";
- var profil=readProfile(),r=berechne(profil,st);
- renderTrichter(r,profil);renderTreffer(r,profil);renderVorschau(r,profil,st);S.last={r:r,profil:profil,st:st}}
+ var st=$("stichtag").value||(S.set==="bayern"?"2026-11-06":"2026-10-16");
+ var profil=readProfile(),r=berechne(profil,st,readOpts());S.last={r:r,profil:profil,st:st};return S.last}
+function zeigeErgebnis(){var L=S.last;renderTreffer(L.r,L.profil);renderVorschau(L.r,L.profil,L.st)}
+function stopAnim(){if(S.raf){cancelAnimationFrame(S.raf);S.raf=null}S.laeuft=false;$("sofort").disabled=true}
+/* Einstellung geändert: neu rechnen, aber erst nach "Filterung starten" zeigen (oder sofort, wenn stale=false) */
+function aktualisiere(stale){stopAnim();rechneNur();
+ if(!stale){renderTrichter(S.last.r);frame(Infinity);zeigeErgebnis();$("treffer").classList.remove("blende");S.stale=false;laufStatus("");return}
+ S.stale=true;S.anim=null;
+ $("trichter").innerHTML='<div class="leer"><b>Einstellungen geändert.</b>Drücken Sie „Filterung starten“. Die Demo zeigt dann Filter für Filter, was übrig bleibt.</div>';
+ $("treffer").innerHTML="";$("vorschau").innerHTML='<div class="leer"><b>Noch keine Nachricht.</b>Erst die Filterung starten.</div>';
+ $("ergebnis").textContent="";$("punkte").innerHTML="";$("gz").textContent=fmtInt(S.last.r.gemeinsam[0].anzahl);$("gl").textContent="Bekanntmachungen im Datensatz";$("erkl").textContent="Bereit. Drücken Sie „Filterung starten“.";
+ laufStatus("")}
+function starte(){stopAnim();rechneNur();renderTrichter(S.last.r);S.stale=false;
+ $("treffer").innerHTML="";$("vorschau").innerHTML="";$("ergebnis").textContent="Filterung läuft …";
+ if(REDUCED){fertig();return}
+ S.laeuft=true;$("sofort").disabled=false;laufStatus("läuft, ca. "+Math.round(S.anim.ende/1000)+" Sekunden");
+ var t0=null;function step(ts){if(t0===null)t0=ts;var t=ts-t0;frame(t);if(t>=S.anim.ende){fertig();return}S.raf=requestAnimationFrame(step)}
+ S.raf=requestAnimationFrame(step)}
+function fertig(){stopAnim();frame(Infinity);zeigeErgebnis();var tr=$("treffer");tr.classList.remove("blende");void tr.offsetWidth;tr.classList.add("blende");laufStatus("fertig")}
 function init(){
- var m=DATA.meta;
- $("datenhinweis").innerHTML="<b>Daten:</b> echte Bekanntmachungen aus TED (EU-Amtsblatt-Datenbank), Auszug von "+m.anzahl_in_kopie+" der "+m.anzahl_gesamt+" Bekanntmachungen (Abruf "+esc(de((m.downloaded_at||"2026-11-06").slice(0,10)))+"), „heute“ ist der Stichtag (Standard 16.10.2026). Was nicht im Auszug steht, wird nur gezählt.";
+ $("datenhinweis").innerHTML="<b>Daten:</b> echte Bekanntmachungen aus TED (EU-Amtsblatt-Datenbank). Zwei Datensätze: der <b>Beispiel-Schnappschuss</b> ("+DATA.sets.beispiel.meta.anzahl_in_kopie+" von "+DATA.sets.beispiel.meta.anzahl_gesamt+" Bekanntmachungen im Auszug, Stichtag 16.10.2026, gehört zu den Beispielen P1/P2) und der <b>große Datensatz</b> ("+(DATA.sets.bayern?DATA.sets.bayern.meta.anzahl_gesamt:0)+" Bekanntmachungen, Leistungsort Bayern, 16.10.2025 bis 06.11.2026). „Heute“ ist jeweils der Stichtag.";
  $("quelle").textContent=T.QUELLE;
  buildForm();
- $("form").addEventListener("input",function(e){var t=e.target;if(t&&t.getAttribute&&(t.getAttribute("data-g")==="leist"||t.getAttribute("data-g")==="obj"))S.sw=null;rechne()});
- $("form").addEventListener("change",function(){rechne()});
+ if(!DATA.sets.bayern){Array.prototype.forEach.call(document.querySelectorAll('#setwahl button[data-set="bayern"],[data-frei]'),function(b){b.disabled=true})}
+ $("form").addEventListener("input",function(e){var t=e.target;if(t&&t.getAttribute&&(t.getAttribute("data-g")==="leist"||t.getAttribute("data-g")==="obj"))S.sw=null;aktualisiere(true)});
+ $("form").addEventListener("change",function(){aktualisiere(true)});
+ $("nuroffen").addEventListener("change",function(){fristWarn();aktualisiere(true)});
+ Array.prototype.forEach.call(document.querySelectorAll("#setwahl button"),function(b){b.addEventListener("click",function(){if(b.disabled)return;setzeSet(b.getAttribute("data-set"));aktualisiere(true)})});
+ Array.prototype.forEach.call(document.querySelectorAll("#fensterwahl button"),function(b){b.addEventListener("click",function(){if(b.disabled)return;S.fenster=b.getAttribute("data-f");setSeg("fensterwahl","data-f",S.fenster);aktualisiere(true)})});
  $("p1").addEventListener("click",function(){laden("P1")});$("p2").addEventListener("click",function(){laden("P2")});
- $("treffer").addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("button.tcard");if(!b)return;S.sel=b.getAttribute("data-nr");rechne();var nb=document.querySelector('button.tcard[aria-pressed="true"]');if(nb&&nb.focus)nb.focus({preventScroll:true});var v=$("schritt3");if(v&&v.scrollIntoView)v.scrollIntoView({behavior:"smooth",block:"start"})});
- Array.prototype.forEach.call(document.querySelectorAll(".seg button"),function(b){b.addEventListener("click",function(){S.kanal=b.getAttribute("data-k");Array.prototype.forEach.call(document.querySelectorAll(".seg button"),function(x){x.setAttribute("aria-checked",x===b?"true":"false")});rechne()})});
- laden("P1")}
+ Array.prototype.forEach.call(document.querySelectorAll("[data-frei]"),function(b){b.addEventListener("click",function(){var a=b.getAttribute("data-frei").split(",");ladenFrei(a[0],+a[1],+a[2])})});
+ $("start").addEventListener("click",starte);$("sofort").addEventListener("click",function(){if(S.laeuft)fertig()});
+ $("start1").addEventListener("click",function(){var v=$("schritt2");if(v&&v.scrollIntoView)v.scrollIntoView({behavior:REDUCED?"auto":"smooth",block:"start"});starte()});
+ $("treffer").addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("button.tcard");if(!b)return;S.sel=b.getAttribute("data-nr");zeigeErgebnis();var nb=document.querySelector('button.tcard[aria-pressed="true"]');if(nb&&nb.focus)nb.focus({preventScroll:true});var v=$("schritt3");if(v&&v.scrollIntoView)v.scrollIntoView({behavior:REDUCED?"auto":"smooth",block:"start"})});
+ Array.prototype.forEach.call(document.querySelectorAll(".seg[aria-label=Kanal] button"),function(b){b.addEventListener("click",function(){S.kanal=b.getAttribute("data-k");Array.prototype.forEach.call(document.querySelectorAll(".seg[aria-label=Kanal] button"),function(x){x.setAttribute("aria-checked",x===b?"true":"false")});if(!S.stale&&!S.laeuft)zeigeErgebnis()})});
+ $("sofort").disabled=true;
+ laden("P1",true)}
 /* Darstellung (Hell/Dunkel/Automatisch) */
 (function(){var r=document.documentElement,bs=document.querySelectorAll(".theme button");function m(){var t=r.getAttribute("data-theme")||"auto";bs.forEach(function(b){b.setAttribute("aria-checked",b.dataset.t===t?"true":"false")})}
- bs.forEach(function(b){b.addEventListener("click",function(){var t=b.dataset.t;if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);try{if(t==="auto")localStorage.removeItem("vr-theme");else localStorage.setItem("vr-theme",t)}catch(e){}m()})});m()})();
+ bs.forEach(function(b){b.addEventListener("click",function(){var t=b.dataset.t;if(t==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",t);try{if(t==="auto")localStorage.removeItem("vr-theme");else localStorage.setItem("vr-theme",t)}catch(e){}m()})});
+ window.__setTheme=function(t){r.setAttribute("data-theme",t);m()};m()})();
 init();
-window.__demo.ui={laden:laden,rechne:rechne,state:S,readProfile:readProfile,setForm:function(o){if(o.sitz)$("sitz").value=o.sitz;if(o.radius!=null)$("radius").value=o.radius;if(o.laufzeit!=null)$("laufzeit").value=o.laufzeit;S.sw=null;rechne()}};
+window.__demo.ui={laden:laden,ladenFrei:ladenFrei,starte:starte,fertig:fertig,frame:frame,state:S,readProfile:readProfile,setForm:function(o){if(o.sitz)$("sitz").value=o.sitz;if(o.radius!=null)$("radius").value=o.radius;if(o.laufzeit!=null)$("laufzeit").value=o.laufzeit;S.sw=null;aktualisiere(true)}};
+/* Adress-Parameter (für Vortrag und Tests), z. B. #set=bayern&sitz=DE232&radius=30&lz=24&fenster=12m&frist=0&stichtag=2026-11-06&theme=dark&anim=3500
+   preset=P1|P2 lädt ein Beispiel; anim=<ms> zeigt ein Standbild der Animation zu diesem Zeitpunkt; run=1 startet die Animation. */
+var HP={};location.hash.replace(/^#/,"").split("&").forEach(function(kv){var p=kv.split("=");if(p[0])HP[decodeURIComponent(p[0])]=decodeURIComponent(p[1]||"")});
+if(HP.theme==="dark"||HP.theme==="light")window.__setTheme(HP.theme);
+if(HP.preset==="P1"||HP.preset==="P2")laden(HP.preset,true);
+else if(HP.set==="bayern"&&DATA.sets.bayern)ladenFrei(HP.sitz||"DE232",+(HP.radius||30),+(HP.lz||12),{fenster:HP.fenster||"12m",frist:HP.frist!=="0",stichtag:HP.stichtag});
+if(HP.anim!=null&&HP.anim!==""){rechneNur();renderTrichter(S.last.r);S.stale=false;$("treffer").innerHTML="";$("vorschau").innerHTML="";$("ergebnis").textContent="Filterung läuft …";frame(+HP.anim);laufStatus("Standbild bei "+HP.anim+" ms (Testmodus)");if(+HP.anim>=S.anim.ende)fertig()}
+else if(HP.run==="1")starte();
+else if(HP.set||HP.preset)aktualisiere(false);
 /* Selbsttest: Aufruf mit #selftest, Ergebnis als JSON im Element #selftest */
 if(location.hash==="#selftest"){
  var out={};
  try{
   ["P1","P2"].forEach(function(pid){var p=presetProfile(DATA.profile.filter(function(x){return x.id===pid})[0]);var r=berechne(p,"2026-10-16");var r0=berechne(p,"2026-10-16",{keinKI:true});
    out[pid]={gemeinsam:r.gemeinsam,stufen:r.stufen,kiPid:r.kiPid,karten:r.karten.map(function(k){return {nr:k.b.nr,card:k.card,urteil:k.u.urteil,regel:k.regel[0],ki:k.ki}}),
-    ohneKI:{stufen:r0.stufen,karten:r0.karten.map(function(k){return {nr:k.b.nr,card:k.card,urteil:k.u.urteil}})}}});
+    ohneKI:{stufen:r0.stufen,karten:r0.karten.map(function(k){return {nr:k.b.nr,card:k.card,urteil:k.u.urteil}})},
+    raus:r.raus.map(function(x){return x?x.n:null}),zeit_ms:zeitplan(r.gemeinsam.concat(r.stufen)).ende};
+   /* Gegenprobe mit dem großen Datensatz: gleiches Fenster (14 Tage bis 16.10.2026) */
+   if(DATA.sets.bayern){var rb=berechne(p,"2026-10-16",{set:"bayern"});out[pid].bayern_14t={stufen:rb.stufen,karten:rb.karten.map(function(k){return {nr:k.b.nr,urteil:k.u.urteil,ki:k.ki}})}}});
   function frei(sitzCode,radius,lz,extra){var p=presetProfile(DATA.profile[0]);p.id="LIVE";p.sitz={ort:DATA.sitze[sitzCode].name,lat:DATA.sitze[sitzCode].lat,lon:DATA.sitze[sitzCode].lon};p.radius_km=radius;p.laufzeit_min_monate=lz;p.name="Testfirma";p.umsatz_mio=2.5;p.besch=40;p.refs=3;p.zertifikate=["ISO 9001"];return p}
   var cases={};
   [["DE232",30,24],["DE232",40,24],["DE232",60,0],["DE236",30,24]].forEach(function(a){var p=frei(a[0],a[1],a[2]);var r=berechne(p,"2026-10-16");
@@ -460,6 +621,16 @@ if(location.hash==="#selftest"){
   out.cases=cases;
   var p3=frei("DE239",60,12);out.stichtag_alt=berechne(p3,"2026-10-30").stufen.map(function(s){return s.name+": "+s.anzahl});
   out.stichtag_fruehe=berechne(p3,"2026-09-20").stufen.map(function(s){return s.name+": "+s.anzahl});
+  /* Großer Datensatz: drei eigene Profile, je Zeitraum und Frist an/aus */
+  if(DATA.sets.bayern){var gb={};
+   [["DE232",30,24],["DE233",40,12],["DE235",50,12]].forEach(function(a){var p=frei(a[0],a[1],a[2]);
+    [["2026-11-06","12m",false],["2026-11-06","12m",true],["2026-11-06","3m",false],["2026-11-06","14t",false],["2026-10-16","12m",false]].forEach(function(o){
+     var r=berechne(p,o[0],{set:"bayern",fenster:o[1],ohneFrist:o[2]});
+     gb[a.join("_")+"|"+o.join("_")]={zeilen:r.gemeinsam.concat(r.stufen).map(function(s){return s.name+": "+s.anzahl}),raus:r.raus.map(function(x){return x?x.n:null}),zeit_ms:zeitplan(r.gemeinsam.concat(r.stufen)).ende,abgelaufen:r.abgelaufen,
+      karten:r.karten.map(function(k){return {nr:k.b.nr,urteil:k.u.urteil,ki:k.ki,frist:fristMax(k.b),nuts:k.b.nuts,cpv:k.b.cpv,orte:k.b.orte,ent:k.c.entfernung,titel:k.b.t}})}})});
+   out.bayern=gb}
+  /* Animation: Standbilder zu mehreren Zeitpunkten ohne Fehler zeichnen */
+  laden("P1",true);renderTrichter(S.last.r);[0,500,1500,3000,5000,1e9].forEach(function(t){frame(t)});out.anim_ok=true;
  }catch(e){out.fehler=String(e)+" "+(e.stack||"")}
  out.errors=ERRORS;
  var pre=document.createElement("pre");pre.id="selftest";pre.textContent=JSON.stringify(out);document.body.appendChild(pre);

@@ -1,0 +1,219 @@
+Ausgabe von src/demo/live_demo_pruefung.py (Edge headless), Lauf 2026-11-06
+JS-Fehler: [] | Ausnahme: keine
+(a) P1: gemeinsam gleich=True, Stufen gleich=True, Karten 4/4 identisch=True, Animation 7.3 s, ausgeschieden je Zeile=[None, 476, 14, 6, 121, 0, 0, 0, None, None, 0, None]
+    Gegenprobe großer Datensatz, 14 Tage bis 16.10.2026: Stufen ab Oberpfalz gleich=True, Treffer [('691173-2026', 'passt', True), ('710250-2026', 'unklar', True), ('711004-2026', 'passt', True), ('716819-2026', 'passt', True)]
+(a) P2: gemeinsam gleich=True, Stufen gleich=True, Karten 2/2 identisch=True, Animation 7.6 s, ausgeschieden je Zeile=[None, 476, 14, 6, 121, 2, 0, 0, None, None, 0, None]
+    Gegenprobe großer Datensatz, 14 Tage bis 16.10.2026: Stufen ab Oberpfalz gleich=True, Treffer [('691173-2026', 'unklar', True), ('716819-2026', 'passt', True)]
+(b) DE232_30_24|2026-11-06_12m_false: Animation 8.2 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.11.2025 bis 06.11.2026: 562
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 428
+       Gebäudereinigungs-CPV (Profil): 405
+       Oberpfalz (NUTS DE231-DE23A): 37
+       Radius 30 km um Regensburg: 13
+       Abgabefrist noch offen: 1
+       Laufzeit mindestens 24 Monate: 0
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 0
+       Nachrichten erzeugt (passt + unklar): 0
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 0 von 0
+(b) DE232_30_24|2026-11-06_12m_true: Animation 8.2 s, abgelaufen unter Treffern 9
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.11.2025 bis 06.11.2026: 562
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 428
+       Gebäudereinigungs-CPV (Profil): 405
+       Oberpfalz (NUTS DE231-DE23A): 37
+       Radius 30 km um Regensburg: 13
+       Abgabefrist: Filter ausgeschaltet (nur zur Veranschaulichung): 13
+       Laufzeit mindestens 24 Monate: 11
+       Info: Wert angegeben (kein Filter): 1
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 11
+       Nachrichten erzeugt (passt + unklar): 9
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 9 von 9
+(b) DE232_30_24|2026-11-06_3m_false: Animation 8.2 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.08. bis 06.11.2026: 126
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 95
+       Gebäudereinigungs-CPV (Profil): 90
+       Oberpfalz (NUTS DE231-DE23A): 9
+       Radius 30 km um Regensburg: 2
+       Abgabefrist noch offen: 1
+       Laufzeit mindestens 24 Monate: 0
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 0
+       Nachrichten erzeugt (passt + unklar): 0
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 0 von 0
+(b) DE232_30_24|2026-11-06_14t_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 23.10. bis 06.11.2026: 18
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 16
+       Gebäudereinigungs-CPV (Profil): 14
+       Oberpfalz (NUTS DE231-DE23A): 2
+       Radius 30 km um Regensburg: 1
+       Abgabefrist noch offen: 1
+       Laufzeit mindestens 24 Monate: 0
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 0
+       Nachrichten erzeugt (passt + unklar): 0
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 0 von 0
+(b) DE232_30_24|2026-10-16_12m_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 16.10.2025 bis 16.10.2026: 566
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 426
+       Gebäudereinigungs-CPV (Profil): 402
+       Oberpfalz (NUTS DE231-DE23A): 35
+       Radius 30 km um Regensburg: 12
+       Abgabefrist noch offen: 0
+       Laufzeit mindestens 24 Monate: 0
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 0
+       Nachrichten erzeugt (passt + unklar): 0
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 0 von 0
+(b) DE233_40_12|2026-11-06_12m_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.11.2025 bis 06.11.2026: 562
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 428
+       Gebäudereinigungs-CPV (Profil): 405
+       Oberpfalz (NUTS DE231-DE23A): 37
+       Radius 40 km um Weiden i. d. OPf.: 13
+       Abgabefrist noch offen: 1
+       Laufzeit mindestens 12 Monate: 1
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 1
+       Nachrichten erzeugt (passt + unklar): 1
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 1 von 1
+(b) DE233_40_12|2026-11-06_12m_true: Animation 7.9 s, abgelaufen unter Treffern 9
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.11.2025 bis 06.11.2026: 562
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 428
+       Gebäudereinigungs-CPV (Profil): 405
+       Oberpfalz (NUTS DE231-DE23A): 37
+       Radius 40 km um Weiden i. d. OPf.: 13
+       Abgabefrist: Filter ausgeschaltet (nur zur Veranschaulichung): 13
+       Laufzeit mindestens 12 Monate: 13
+       Info: Wert angegeben (kein Filter): 1
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 13
+       Nachrichten erzeugt (passt + unklar): 10
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 10 von 10
+(b) DE233_40_12|2026-11-06_3m_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.08. bis 06.11.2026: 126
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 95
+       Gebäudereinigungs-CPV (Profil): 90
+       Oberpfalz (NUTS DE231-DE23A): 9
+       Radius 40 km um Weiden i. d. OPf.: 3
+       Abgabefrist noch offen: 1
+       Laufzeit mindestens 12 Monate: 1
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 1
+       Nachrichten erzeugt (passt + unklar): 1
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 1 von 1
+(b) DE233_40_12|2026-11-06_14t_false: Animation 7.6 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 23.10. bis 06.11.2026: 18
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 16
+       Gebäudereinigungs-CPV (Profil): 14
+       Oberpfalz (NUTS DE231-DE23A): 2
+       Radius 40 km um Weiden i. d. OPf.: 0
+       Abgabefrist noch offen: 0
+       Laufzeit mindestens 12 Monate: 0
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 0
+       Nachrichten erzeugt (passt + unklar): 0
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 0 von 0
+(b) DE233_40_12|2026-10-16_12m_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 16.10.2025 bis 16.10.2026: 566
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 426
+       Gebäudereinigungs-CPV (Profil): 402
+       Oberpfalz (NUTS DE231-DE23A): 35
+       Radius 40 km um Weiden i. d. OPf.: 13
+       Abgabefrist noch offen: 2
+       Laufzeit mindestens 12 Monate: 2
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 2
+       Nachrichten erzeugt (passt + unklar): 2
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 2 von 2
+(b) DE235_50_12|2026-11-06_12m_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.11.2025 bis 06.11.2026: 562
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 428
+       Gebäudereinigungs-CPV (Profil): 405
+       Oberpfalz (NUTS DE231-DE23A): 37
+       Radius 50 km um Cham: 19
+       Abgabefrist noch offen: 2
+       Laufzeit mindestens 12 Monate: 2
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 2
+       Nachrichten erzeugt (passt + unklar): 2
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 2 von 2
+(b) DE235_50_12|2026-11-06_12m_true: Animation 7.9 s, abgelaufen unter Treffern 14
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.11.2025 bis 06.11.2026: 562
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 428
+       Gebäudereinigungs-CPV (Profil): 405
+       Oberpfalz (NUTS DE231-DE23A): 37
+       Radius 50 km um Cham: 19
+       Abgabefrist: Filter ausgeschaltet (nur zur Veranschaulichung): 19
+       Laufzeit mindestens 12 Monate: 19
+       Info: Wert angegeben (kein Filter): 1
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 19
+       Nachrichten erzeugt (passt + unklar): 16
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 16 von 16
+(b) DE235_50_12|2026-11-06_3m_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 06.08. bis 06.11.2026: 126
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 95
+       Gebäudereinigungs-CPV (Profil): 90
+       Oberpfalz (NUTS DE231-DE23A): 9
+       Radius 50 km um Cham: 3
+       Abgabefrist noch offen: 2
+       Laufzeit mindestens 12 Monate: 2
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 2
+       Nachrichten erzeugt (passt + unklar): 2
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 2 von 2
+(b) DE235_50_12|2026-11-06_14t_false: Animation 7.6 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 23.10. bis 06.11.2026: 18
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 16
+       Gebäudereinigungs-CPV (Profil): 14
+       Oberpfalz (NUTS DE231-DE23A): 2
+       Radius 50 km um Cham: 1
+       Abgabefrist noch offen: 1
+       Laufzeit mindestens 12 Monate: 1
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 1
+       Nachrichten erzeugt (passt + unklar): 1
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 1 von 1
+(b) DE235_50_12|2026-10-16_12m_false: Animation 7.9 s, abgelaufen unter Treffern 0
+       Alle Bekanntmachungen mit Leistungsort Bayern, CPV 909* (im Datensatz): 590
+       veröffentlicht 16.10.2025 bis 16.10.2026: 566
+       ohne Mehrfachveröffentlichung (gleicher Auftraggeber + Titel): 426
+       Gebäudereinigungs-CPV (Profil): 402
+       Oberpfalz (NUTS DE231-DE23A): 35
+       Radius 50 km um Cham: 18
+       Abgabefrist noch offen: 1
+       Laufzeit mindestens 12 Monate: 1
+       Info: Wert angegeben (kein Filter): 0
+       Stichwortregel (keine KI): passt / unklar / passt nicht: 1
+       Nachrichten erzeugt (passt + unklar): 1
+       davon mit Vorgänger-Hinweis (Vertragsliste, eindeutig): 0
+      Treffer gegen Rohdaten geprüft: 1 von 1
+anim_ok: True
+Rohdatenabgleich: 45 Trefferkarten gegen Rohdaten geprüft
+ERGEBNIS: (a) gleich, (b) gegen Rohdaten ok

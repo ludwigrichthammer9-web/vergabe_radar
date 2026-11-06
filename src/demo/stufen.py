@@ -205,9 +205,14 @@ def lade_liste():
 def vorgaenger_hinweis(b, liste):
     """Nur bei eindeutigem Treffer: gleicher Auftraggeber (normalisiert) und genau ein Los mit Titelähnlichkeit.
     Eindeutig = bester Titel-Score >= 0.6 und mindestens 0.15 vor dem zweitbesten Los desselben Auftraggebers;
-    gleiche Bekanntmachung mit mehreren Losen zählt als nicht eindeutig. Sonst None."""
+    gleiche Bekanntmachung mit mehreren Losen zählt als nicht eindeutig. Sonst None.
+    Korrektur 2026-11-06: Nur Listeneinträge, die VOR der neuen Bekanntmachung veröffentlicht wurden. Ohne diese Bedingung
+    fand der Hinweis im großen Datensatz der Live-Demo zweimal die spätere Zuschlagsbekanntmachung desselben Verfahrens
+    (118451-2026 -> 550443-2026, 427476-2026 -> 585202-2026), also keinen Vorgänger."""
     ag = " ".join(_norm(b["auftraggeber"]))
-    kandidaten = [z for z in liste if " ".join(_norm(z["auftraggeber"])) == ag and z["ende_grundlaufzeit"]]
+    neu_am = b["veroeffentlicht"].isoformat() if b.get("veroeffentlicht") else "9999-12-31"
+    kandidaten = [z for z in liste if " ".join(_norm(z["auftraggeber"])) == ag and z["ende_grundlaufzeit"]
+                  and (z.get("veroeffentlicht") or "") < neu_am]
     if not kandidaten:
         return None
     titel_neu = [b["titel"], *b["titel_lose"]]

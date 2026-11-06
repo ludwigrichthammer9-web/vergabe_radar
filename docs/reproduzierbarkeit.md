@@ -43,6 +43,16 @@ Die Skripte laden fehlende XML bei Bedarf selbst nach `data/raw/ted_xml/<Ordner>
 Frühere Iterationen: Skripte `src/*_iteration2…4.py`, jeweils mit Aufruf im Kopf der Datei. Alle Zufallsziehungen haben einen
 festen Seed (in `docs/iterationen.md` genannt).
 
+## 4. Demo (Profil-Match, Live-Demo für den Vortrag)
+Beschreibung, Abfragen und Grenzen: `docs/demo_push.md` (Abschnitte 3, 10, 11). Beide Datensätze der Live-Demo liegen als Auszug im Repo
+(`docs/demo/daten/schnappschuss_demo.json`, `docs/demo/daten/datensatz_bayern.json`); die Rohdaten (`data/raw/demo_push_20261106/`,
+`data/raw/demo_live_20261106/`) nur lokal. Ein neuer Abruf ergibt nicht dieselben Zahlen (TED-Bestand wächst, Änderungsbekanntmachungen).
+```
+.venv\Scripts\python.exe -I src\demo\live_daten.py          # Auszug Bayern aus data\raw\demo_live_20261106 (Abruf nur, wenn der Ordner fehlt)
+.venv\Scripts\python.exe -I src\demo\live_demo.py           # docs\demo\live_demo.html (offline, beide Datensätze eingebettet)
+.venv\Scripts\python.exe -I src\demo\live_demo_pruefung.py  # Selbsttest in Edge headless: P1/P2 = ergebnis_lauf.json, Treffer gegen Rohdaten
+```
+
 ## Was sich nicht neu erzeugen lässt
 - **Handsuche (Ground Truth):** Protokolle des Subagenten `rechercheur` liegen als Reports im Git
   (`reports/sichtbarkeit_iteration3_*`, `…iteration4_*`); eine erneute Suche würde wegen des Modells und der wachsenden API-Bestände
