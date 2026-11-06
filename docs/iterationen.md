@@ -1520,3 +1520,22 @@ _Interpretation_
 - Gegen kostenlose Dienste ist Eigenbau nie günstiger; „keine Abo-Kosten“ ist kein Vorteil. Ein Mehrwert muss aus Funktion kommen (Schema, Anreicherung, Herkunft je Feld). Die „zusätzlichen Aufträge“ sind eine Größenordnung, kein Nutzenbeleg.
 
 **Grenzen:** Aufwandswerte, Marge und Stundensatz (Quelle sekundär, Freiberufler-Durchschnitt, nicht im Original geprüft) sind Annahmen; der Median-Umsatz gilt für TED-Aufträge mit plausiblem Wert (45 %); die Aufwände stammen nicht aus einer Umsetzung; kein Betrieb wurde befragt, ob er Datenübergabe braucht; Branchensoftware-Schnittstellen sind nicht geprüft; die Zahl „rund ein Drittel arbeitet durchgängig mit Branchensoftware“ ist sekundär (hagel-it.de, zitiert den BIV-Branchenreport, Original nicht geprüft).
+
+
+
+### Nachtrag Paket D, Stand 2026-11-06 (abends)
+
+_Ergänzung nach der Prüfung durch den Evaluator; die Abschnitte oben bleiben unverändert._
+
+| | Kriterium | Stand (2026-11-06, abends) |
+|---|---|---|
+| D1 | Make-or-Buy-Modell mit Annahmen und Break-even erstellt | **Ja.** Kontrollwerte stimmen. Ergänzt um eine **symmetrische Variante** (auch bei Abo und kostenlosen Diensten fallen Nutzungsstunden an: 10 / 30 / 60 h je Jahr, Import eines kostenlosen Dienstes 20 h einmalig plus 10 h je Jahr; alles Annahmen). Das Basismodell ist unverändert. |
+| D2 | Referenz-Export mit dokumentiertem Schema erstellt und gegen das Schema geprüft | **Ja im formalen Sinn:** Export und Schema 1.1 (26 Felder; zusätzlich eine Variante ohne Auftragnehmer) erstellt, vom Skript gegen das Schema validiert; **selbstvalidierend** (das Skript prüft seine eigenen Dateien), in Excel nicht getestet, an keinem Verwaltungssystem erprobt. Die frühere Zeile „D2 wird getrennt bearbeitet; hier nicht bewertet“ ist damit **überholt**. |
+| D3 | Test mit 1 bis 3 Betrieben durchgeführt | **Nein** (Test nicht durchgeführt). |
+| D4 | „Datenübergabe ist relevant“ nur zulässig bei H1 und H2 in mindestens 2 von 3 Betrieben | **Offen** (ohne D3 nicht entscheidbar). |
+
+_Einordnung (Interpretation):_ D1 und D2 sind **Machbarkeitskriterien**: Sie prüfen, ob Modell und Export erstellt werden können, und können deshalb nicht scheitern. Erst H1 und H2 (und damit D3 und D4) prüfen Nachfrage; dazu liegt nichts vor. Die neuen Annahmen A21 und A22 in `docs/annahmen.md` halten das fest.
+
+_Zur Symmetrie (Fakt der Rechnung, Annahmen):_ „Gegen kostenlose Dienste ist Eigenbau nie günstiger“ gilt im **Basismodell** und folgt aus der Modellkonstruktion (Abo und kostenlose Dienste ohne Eigenaufwand, Eigenbau mit Stunden); es ist keine Messung. In der symmetrischen Variante liegt der Break-even gegen DTAD bei 1,0 / 2,4 / 4,8 Jahren (Niedrig / Mittel / Hoch) und gegen einen kostenlosen Dienst mit Übernahme von Hand bei 4,0 / 6,0 / 12,0 Jahren; das hängt an den angenommenen Stunden. Beide Varianten tragen nur die Aussage, dass der Preis kein Vorteil des Eigenbaus ist. Gemessen an einem Auftrag (Deckungsbeitrag 25.110 € in drei Jahren, ohne Angebotsaufwand und Zuschlagswahrscheinlichkeit) sind die Kosten klein; die offene Frage ist, ob ein früher Hinweis überhaupt einen Auftrag bringt (nicht belegt).
+
+_Datenschutz (Fakt, Vorprüfung):_ In den 129 Losen mit Namen stehen 47 verschiedene Auftragnehmernamen; 43 haben eine erkennbare Rechtsform (davon 1 e. K.), 4 nicht. Die Prüfung ist nicht abschließend; Weitergabe wahlweise ohne das Feld `auftragnehmer` (Dateien `vertragsliste_v1_ohne_auftragnehmer*`). Details: `docs/export_schema.md` Abschnitt 8.

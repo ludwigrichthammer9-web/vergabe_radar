@@ -1,20 +1,21 @@
 {
  "meta": {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "stand_daten": "2026-11-04",
   "erzeugt": "2026-11-06",
   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
-  "hinweis": "Keine Prognose: ende_grundlaufzeit ist das Ende der Grundlaufzeit laut Bekanntmachung, kein Termin der Neuausschreibung; hoechstende_hinweis ist nur ein Hinweis. Nur TED-Lose oberhalb der EU-Schwelle. Vor einer Entscheidung die Bekanntmachung (ted_link) lesen. TED als Quelle angeben; Lizenz vor Abgabe zu bestätigen.",
+  "hinweis": "Keine Prognose: ende_grundlaufzeit ist das Ende der Grundlaufzeit laut Bekanntmachung, kein Termin der Neuausschreibung; hoechstende_hinweis ist nur ein Hinweis (bei hoechstende_herkunft keine_angabe oder keine_verlaengerung steht dort ersatzweise das Ende der Grundlaufzeit). Nur TED-Lose oberhalb der EU-Schwelle. Vor einer Entscheidung die Bekanntmachung (ted_link) lesen. TED als Quelle angeben; Lizenz vor Abgabe zu bestätigen.",
   "schema": "docs/export_schema.md",
   "schluessel": [
    "bekanntmachung",
-   "los"
+   "los_kennung"
   ],
-  "zeilen": 130
+  "zeilen": 130,
+  "felder": 26
  },
  "eintraege": [
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "383677-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/383677-2024",
@@ -22,8 +23,12 @@
    "los": 1,
    "los_titel": "24 E 028 - Los 1 Gebäudereinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-07-01",
    "ende_grundlaufzeit": "2025-06-30",
@@ -38,10 +43,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 6,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "383677-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/383677-2024",
@@ -49,8 +55,12 @@
    "los": 2,
    "los_titel": "24 E 028 - Los 2 Glasreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-07-01",
    "ende_grundlaufzeit": "2025-06-30",
@@ -65,10 +75,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 2,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "603742-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/603742-2024",
@@ -76,8 +87,12 @@
    "los": 1,
    "los_titel": "24 E 067 - Los 1 Unterhaltsreinigung - Grundreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-10-01",
    "ende_grundlaufzeit": "2025-09-30",
@@ -92,10 +107,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 7,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "603742-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/603742-2024",
@@ -103,8 +119,12 @@
    "los": 2,
    "los_titel": "24 E 067 - Los 2 Glasreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-10-01",
    "ende_grundlaufzeit": "2025-09-30",
@@ -119,10 +139,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 4,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "72791-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/72791-2025",
@@ -130,8 +151,12 @@
    "los": 1,
    "los_titel": "24 E 102 - Los 1",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2025-12-31",
@@ -146,10 +171,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 8,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "72791-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/72791-2025",
@@ -157,8 +183,12 @@
    "los": 2,
    "los_titel": "24 E 102 - Los 2",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2025-12-31",
@@ -173,10 +203,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 8,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "72791-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/72791-2025",
@@ -184,8 +215,12 @@
    "los": 3,
    "los_titel": "24 E 102 - Los 3",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2025-12-31",
@@ -200,10 +235,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 6,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "72791-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/72791-2025",
@@ -211,8 +247,12 @@
    "los": 4,
    "los_titel": "24 E 102 - Los 4",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2025-12-31",
@@ -227,10 +267,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 6,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "757285-2023",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/757285-2023",
@@ -238,8 +279,12 @@
    "los": 1,
    "los_titel": "23 E 079 - Los 1: Gebäudereinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-01-01",
    "ende_grundlaufzeit": "2025-12-31",
@@ -254,10 +299,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 4,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "757285-2023",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/757285-2023",
@@ -265,8 +311,12 @@
    "los": 2,
    "los_titel": "23 E 079 - Los 2: Glasreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-01-01",
    "ende_grundlaufzeit": "2025-12-31",
@@ -281,10 +331,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 3,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "83171-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/83171-2024",
@@ -292,8 +343,12 @@
    "los": 1,
    "los_titel": "23 E 088 - Los 1: Unterhaltsreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-02-01",
    "ende_grundlaufzeit": "2026-01-31",
@@ -308,10 +363,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 2,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "83171-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/83171-2024",
@@ -319,8 +375,12 @@
    "los": 2,
    "los_titel": "23 E 088 - Los 2: Unterhaltsreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-02-01",
    "ende_grundlaufzeit": "2026-01-31",
@@ -335,10 +395,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 1,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "140354-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/140354-2024",
@@ -346,8 +407,12 @@
    "los": 1,
    "los_titel": "23 E 099 - Los 1: Gebäudereinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-03-01",
    "ende_grundlaufzeit": "2026-02-28",
@@ -362,10 +427,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 3,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "140354-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/140354-2024",
@@ -373,8 +439,12 @@
    "los": 2,
    "los_titel": "23 E 099 - Los 2: Glasreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-03-01",
    "ende_grundlaufzeit": "2026-02-28",
@@ -389,10 +459,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 1,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "207816-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/207816-2024",
@@ -400,8 +471,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung und Bettenaufbereitung in den klinischen Bereichen am Standort Regensburg",
    "auftraggeber": "medbo - KU",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-05-01",
    "ende_grundlaufzeit": "2026-04-30",
@@ -416,10 +491,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 7,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "207816-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/207816-2024",
@@ -427,8 +503,12 @@
    "los": 2,
    "los_titel": "Unterhaltsreinigung in den infrastrukturellen Bereichen am Standort Regensburg",
    "auftraggeber": "medbo - KU",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-05-01",
    "ende_grundlaufzeit": "2026-04-30",
@@ -443,10 +523,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 8,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "207816-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/207816-2024",
@@ -454,8 +535,14 @@
    "los": 3,
    "los_titel": "Glas- und Rahmenreinigung an den Standorten Regensburg und Parsberg",
    "auftraggeber": "medbo - KU",
-   "region_nuts3": "DE232|DE236",
-   "region_name": "Regensburg (Stadt)|Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE232",
+    "DE236"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)",
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-05-01",
    "ende_grundlaufzeit": "2026-04-30",
@@ -470,10 +557,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 4,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0005"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "207816-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/207816-2024",
@@ -481,8 +569,14 @@
    "los": 4,
    "los_titel": "Glas- und Rahmenreinigung an den Standorten Wöllershof und Weiden",
    "auftraggeber": "medbo - KU",
-   "region_nuts3": "DE237|DE233",
-   "region_name": "Neustadt a. d. Waldnaab|Weiden i. d. OPf. (Stadt)",
+   "region_nuts3": [
+    "DE237",
+    "DE233"
+   ],
+   "region_name": [
+    "Neustadt a. d. Waldnaab",
+    "Weiden i. d. OPf. (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-05-01",
    "ende_grundlaufzeit": "2026-04-30",
@@ -497,10 +591,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0006"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "514969-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/514969-2024",
@@ -508,8 +603,12 @@
    "los": 1,
    "los_titel": "Dienstgebäude Amberg - Unterhaltsreinigung",
    "auftraggeber": "Landesbaudirektion Bayern",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-10-01",
    "ende_grundlaufzeit": "2026-09-30",
@@ -524,10 +623,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 4,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0000"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "516378-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/516378-2024",
@@ -535,8 +635,12 @@
    "los": 2,
    "los_titel": "SM Amberg",
    "auftraggeber": "Landesbaudirektion Bayern",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2024-10-01",
    "ende_grundlaufzeit": "2026-09-30",
@@ -551,10 +655,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 1,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "62258-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/62258-2025",
@@ -562,8 +667,12 @@
    "los": 5,
    "los_titel": "Los 5: UR (Standorte: Weiden, Amberg, Regensburg)",
    "auftraggeber": "MD Medizinischer Dienst Bayern",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": "2027-01-28",
@@ -578,10 +687,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0005"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "183745-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/183745-2024",
@@ -589,8 +699,16 @@
    "los": 3,
    "los_titel": "Unterhaltsreinigung an den Standorten Regensburg, Weiden und Passau",
    "auftraggeber": "Deutsche Rentenversicherung Bayern Süd, Abteilung Verwaltung und IT",
-   "region_nuts3": "DE232|DE233|DE222",
-   "region_name": "Regensburg (Stadt)|Weiden i. d. OPf. (Stadt)|DE222",
+   "region_nuts3": [
+    "DE232",
+    "DE233",
+    "DE222"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)",
+    "Weiden i. d. OPf. (Stadt)",
+    "DE222"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": "2024-05-01",
    "ende_grundlaufzeit": "2027-04-30",
@@ -605,10 +723,11 @@
    "angebote_gesamt": 10,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "527230-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/527230-2026",
@@ -616,8 +735,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung Campus Süd",
    "auftraggeber": "Universität Regensburg als staatliche Einrichtung in Vertretung des Freistaates Bayern",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2027-07-31",
@@ -632,10 +755,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": "Interimsvergabe: Dauerfeld enthält die Option; Grundlaufzeit vermutlich bis 31.01.2027",
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "527230-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/527230-2026",
@@ -643,8 +767,12 @@
    "los": 2,
    "los_titel": "Unterhaltsreinigung Campus Nord",
    "auftraggeber": "Universität Regensburg als staatliche Einrichtung in Vertretung des Freistaates Bayern",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2027-07-31",
@@ -659,10 +787,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": "Interimsvergabe: Dauerfeld enthält die Option; Grundlaufzeit vermutlich bis 31.01.2027",
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "570596-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/570596-2025",
@@ -670,8 +799,12 @@
    "los": 1,
    "los_titel": "62-2025-023 - Los 1 Vertretungsreinigung Nord",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-09-15",
    "ende_grundlaufzeit": "2027-09-14",
@@ -686,10 +819,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 3,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "570596-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/570596-2025",
@@ -697,8 +831,12 @@
    "los": 2,
    "los_titel": "62-2025-023 - Los 2 Vertretungsreinigung Ost",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-09-15",
    "ende_grundlaufzeit": "2027-09-14",
@@ -713,10 +851,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 2,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "570596-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/570596-2025",
@@ -724,8 +863,12 @@
    "los": 3,
    "los_titel": "62-2025-023 - Los 3 Vertretungsreinigung Süd",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-09-15",
    "ende_grundlaufzeit": "2027-09-14",
@@ -740,10 +883,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 1,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "570596-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/570596-2025",
@@ -751,8 +895,12 @@
    "los": 4,
    "los_titel": "62-2025-023 - Los 4 Vertretungsreinigung West",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-09-15",
    "ende_grundlaufzeit": "2027-09-14",
@@ -767,10 +915,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 1,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "686226-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/686226-2024",
@@ -778,8 +927,22 @@
    "los": 7,
    "los_titel": "UR-Los 7-NL Südbayern",
    "auftraggeber": "Die Autobahn GmbH des Bundes",
-   "region_nuts3": "DE300|DE224|DE21C|DE212|DE232|DE273",
-   "region_name": "DE300|DE224|DE21C|DE212|Regensburg (Stadt)|DE273",
+   "region_nuts3": [
+    "DE300",
+    "DE224",
+    "DE21C",
+    "DE212",
+    "DE232",
+    "DE273"
+   ],
+   "region_name": [
+    "DE300",
+    "DE224",
+    "DE21C",
+    "DE212",
+    "Regensburg (Stadt)",
+    "DE273"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -794,10 +957,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0007"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "687086-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/687086-2025",
@@ -805,8 +969,12 @@
    "los": 1,
    "los_titel": "Los 1: UR, SB, IR, GR",
    "auftraggeber": "Landkreis Tirschenreuth",
-   "region_nuts3": "DE23A",
-   "region_name": "Tirschenreuth",
+   "region_nuts3": [
+    "DE23A"
+   ],
+   "region_name": [
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -821,10 +989,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "687086-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/687086-2025",
@@ -832,8 +1001,12 @@
    "los": 2,
    "los_titel": "Los 2: UR, SB, IR, GR",
    "auftraggeber": "Landkreis Tirschenreuth",
-   "region_nuts3": "DE23A",
-   "region_name": "Tirschenreuth",
+   "region_nuts3": [
+    "DE23A"
+   ],
+   "region_name": [
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -848,10 +1021,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "687086-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/687086-2025",
@@ -859,8 +1033,12 @@
    "los": 3,
    "los_titel": "Los 3: UR, GR",
    "auftraggeber": "Landkreis Tirschenreuth",
-   "region_nuts3": "DE23A",
-   "region_name": "Tirschenreuth",
+   "region_nuts3": [
+    "DE23A"
+   ],
+   "region_name": [
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -875,10 +1053,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "687086-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/687086-2025",
@@ -886,8 +1065,12 @@
    "los": 4,
    "los_titel": "Los 4: UR, SB, GR",
    "auftraggeber": "Landkreis Tirschenreuth",
-   "region_nuts3": "DE23A",
-   "region_name": "Tirschenreuth",
+   "region_nuts3": [
+    "DE23A"
+   ],
+   "region_name": [
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -902,10 +1085,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "687086-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/687086-2025",
@@ -913,8 +1097,12 @@
    "los": 5,
    "los_titel": "Los 5: GLR",
    "auftraggeber": "Landkreis Tirschenreuth",
-   "region_nuts3": "DE23A",
-   "region_name": "Tirschenreuth",
+   "region_nuts3": [
+    "DE23A"
+   ],
+   "region_name": [
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -929,10 +1117,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0005"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "743428-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/743428-2025",
@@ -940,8 +1129,12 @@
    "los": 1,
    "los_titel": "Unterhalts- und Grundreinigung Albert-Schweitzer-Schule",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -956,10 +1149,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 11,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "743428-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/743428-2025",
@@ -967,8 +1161,12 @@
    "los": 2,
    "los_titel": "Unterhalts- und Grundreinigung Erasmus-Gymnasium",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -983,10 +1181,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 11,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "743428-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/743428-2025",
@@ -994,8 +1193,12 @@
    "los": 3,
    "los_titel": "Unterhalts- und Grundreinigung Städtische Wirtschaftsschule",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -1010,10 +1213,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 11,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "743428-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/743428-2025",
@@ -1021,8 +1225,12 @@
    "los": 4,
    "los_titel": "Glasreinigung",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -1037,10 +1245,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 8,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "782908-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/782908-2024",
@@ -1048,8 +1257,12 @@
    "los": 1,
    "los_titel": "Objektreinigung 2025",
    "auftraggeber": "Blindeninstitutsstiftung",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2027-12-31",
@@ -1064,10 +1277,11 @@
    "angebote_gesamt": 2,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "154211-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/154211-2026",
@@ -1075,8 +1289,12 @@
    "los": 1,
    "los_titel": "Gebäudereinigung",
    "auftraggeber": "Freistaat Bayern - vertreten durch den Präsidenten des Landgerichts Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-05-01",
    "ende_grundlaufzeit": "2028-04-30",
@@ -1091,10 +1309,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "154211-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/154211-2026",
@@ -1102,8 +1321,12 @@
    "los": 2,
    "los_titel": "Gebäudereinigung",
    "auftraggeber": "Freistaat Bayern - vertreten durch den Präsidenten des Landgerichts Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-05-01",
    "ende_grundlaufzeit": "2028-04-30",
@@ -1118,10 +1341,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "154211-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/154211-2026",
@@ -1129,8 +1353,12 @@
    "los": 3,
    "los_titel": "Glas- und Fensterreinigung",
    "auftraggeber": "Freistaat Bayern - vertreten durch den Präsidenten des Landgerichts Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-05-01",
    "ende_grundlaufzeit": "2028-04-30",
@@ -1145,10 +1373,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "310648-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/310648-2026",
@@ -1156,8 +1385,12 @@
    "los": 1,
    "los_titel": "Los 1 Unterhaltsreinigung gem. Leistungsbeschreibung",
    "auftraggeber": "Fraunhofer-Gesellschaft - Einkauf B12",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-08-01",
    "ende_grundlaufzeit": "2028-07-31",
@@ -1172,10 +1405,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "310648-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/310648-2026",
@@ -1183,8 +1417,12 @@
    "los": 2,
    "los_titel": "Los 2 Fensterreinigung gem. Leistungsbeschreibung",
    "auftraggeber": "Fraunhofer-Gesellschaft - Einkauf B12",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-08-01",
    "ende_grundlaufzeit": "2028-07-31",
@@ -1199,10 +1437,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "622498-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/622498-2025",
@@ -1210,8 +1449,12 @@
    "los": 1,
    "los_titel": "Unterhalts-, Vertretungs-, Grund- und Glasreinigung für die Liegenschaften der REWAG",
    "auftraggeber": "REWAG Regensburger Energie- und Wasserversorgung AG & Co KG",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-09-01",
    "ende_grundlaufzeit": "2028-08-31",
@@ -1226,10 +1469,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "331001-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/331001-2024",
@@ -1237,8 +1481,12 @@
    "los": 5,
    "los_titel": "Offenes Verfahren (EU-weit) zur Vergabe von Gebäudereinigungsleistungen (Glasrei-nigung) für diverse Bundesliegenschafte",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1253,10 +1501,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 2,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0005"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "521598-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/521598-2024",
@@ -1264,8 +1513,12 @@
    "los": 1,
    "los_titel": "Gebäudereinigung Standort Weiden",
    "auftraggeber": "Bundeswehr-Dienstleistungszentrum Amberg",
-   "region_nuts3": "DE233",
-   "region_name": "Weiden i. d. OPf. (Stadt)",
+   "region_nuts3": [
+    "DE233"
+   ],
+   "region_name": [
+    "Weiden i. d. OPf. (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1280,10 +1533,11 @@
    "angebote_gesamt": 8,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0000"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "664142-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/664142-2025",
@@ -1291,8 +1545,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1307,10 +1565,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "664142-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/664142-2025",
@@ -1318,8 +1577,12 @@
    "los": 2,
    "los_titel": "Glas- und Rahmenreinigung",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1334,10 +1597,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "691398-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/691398-2024",
@@ -1345,8 +1609,12 @@
    "los": 1,
    "los_titel": "Unterhalts- und Grundreinigung Realschule und Raseliushaus",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1361,10 +1629,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 7,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "691398-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/691398-2024",
@@ -1372,8 +1641,12 @@
    "los": 2,
    "los_titel": "Unterhalts- und Grundreinigung Dreifaltigkeitsschule und Jugendzentrum",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1388,10 +1661,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 8,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "691398-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/691398-2024",
@@ -1399,8 +1673,12 @@
    "los": 3,
    "los_titel": "Unterhalts- und Grundreinigung Ausweichschulgebäude Baureferat und Luitpoldschule",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1415,10 +1693,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 7,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "691398-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/691398-2024",
@@ -1426,8 +1705,12 @@
    "los": 4,
    "los_titel": "Glas- und Fensterreinigung",
    "auftraggeber": "Stadt Amberg",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-01-01",
    "ende_grundlaufzeit": "2028-12-31",
@@ -1442,10 +1725,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 3,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "39875-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/39875-2025",
@@ -1453,8 +1737,12 @@
    "los": 1,
    "los_titel": "PWC Anlagen Reinigung AM Pollenried",
    "auftraggeber": "Die Autobahn GmbH des Bundes - NL Südbayern",
-   "region_nuts3": "DE238",
-   "region_name": "Regensburg (Landkreis)",
+   "region_nuts3": [
+    "DE238"
+   ],
+   "region_name": [
+    "Regensburg (Landkreis)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-02-01",
    "ende_grundlaufzeit": "2029-01-31",
@@ -1469,10 +1757,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0000"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "656919-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/656919-2024",
@@ -1480,8 +1769,12 @@
    "los": 1,
    "los_titel": "Offenes Verfahren (EU-weit) zur Vergabe Gebäudereinigungsleistungen (Unterhalts- und Glasreinigungsleistungen) für versc",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-04-01",
    "ende_grundlaufzeit": "2029-03-31",
@@ -1496,10 +1789,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 7,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "81244-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/81244-2025",
@@ -1507,8 +1801,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung Arnulfkaserne/StOSchAnl Roding",
    "auftraggeber": "Bundeswehr-Dienstleistungszentrum Bogen",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-04-01",
    "ende_grundlaufzeit": "2029-03-31",
@@ -1523,10 +1821,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "81244-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/81244-2025",
@@ -1534,8 +1833,12 @@
    "los": 2,
    "los_titel": "Glasflächenreinigung Arnulfkaserne/StOSchAnl Roding",
    "auftraggeber": "Bundeswehr-Dienstleistungszentrum Bogen",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2025-04-01",
    "ende_grundlaufzeit": "2029-03-31",
@@ -1550,10 +1853,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "244318-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/244318-2026",
@@ -1561,8 +1865,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung für das FA Cham",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-09-01",
    "ende_grundlaufzeit": "2029-08-31",
@@ -1577,10 +1885,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "244318-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/244318-2026",
@@ -1588,8 +1897,12 @@
    "los": 2,
    "los_titel": "Unterhaltsreinigung für die Außenstelle Bad Kötzting",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-09-01",
    "ende_grundlaufzeit": "2029-08-31",
@@ -1604,10 +1917,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "244318-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/244318-2026",
@@ -1615,8 +1929,12 @@
    "los": 3,
    "los_titel": "Glas- und Rahmenreinigung für das FA Cham mit ASt Bad Kötzting",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-09-01",
    "ende_grundlaufzeit": "2029-08-31",
@@ -1631,10 +1949,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "444675-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/444675-2026",
@@ -1642,8 +1961,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung für die BASt Waldmünchen",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-09-01",
    "ende_grundlaufzeit": "2029-08-31",
@@ -1658,10 +1981,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "444675-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/444675-2026",
@@ -1669,8 +1993,12 @@
    "los": 2,
    "los_titel": "Glas- und Rahmenreinigung für die BASt Waldmünchen",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-09-01",
    "ende_grundlaufzeit": "2029-08-31",
@@ -1685,10 +2013,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "585202-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/585202-2026",
@@ -1696,8 +2025,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung für die HföD Kastl",
    "auftraggeber": "Freistaat Bayern vertreten durch das Bayerische Landesamt für Steuern - Zentrale Vergabestelle -",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-11-01",
    "ende_grundlaufzeit": "2029-10-31",
@@ -1712,10 +2045,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -1723,8 +2057,12 @@
    "los": 10,
    "los_titel": "Los 10: Unterhalts- und Glasreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2029-12-31",
@@ -1739,10 +2077,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 3,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0010"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "720415-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/720415-2025",
@@ -1750,8 +2089,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung-202502",
    "auftraggeber": "Bezirk Oberpfalz",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2029-12-31",
@@ -1766,10 +2109,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 8,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "143100-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/143100-2026",
@@ -1777,8 +2121,12 @@
    "los": 8,
    "los_titel": "Nordbayern",
    "auftraggeber": "Die Autobahn GmbH des Bundes",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1793,10 +2141,11 @@
    "angebote_gesamt": 2,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0008"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "143100-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/143100-2026",
@@ -1804,8 +2153,12 @@
    "los": 9,
    "los_titel": "Nordbayern",
    "auftraggeber": "Die Autobahn GmbH des Bundes",
-   "region_nuts3": "DE239",
-   "region_name": "Schwandorf",
+   "region_nuts3": [
+    "DE239"
+   ],
+   "region_name": [
+    "Schwandorf"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1820,10 +2173,11 @@
    "angebote_gesamt": 1,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0009"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "143100-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/143100-2026",
@@ -1831,8 +2185,12 @@
    "los": 14,
    "los_titel": "Nordbayern",
    "auftraggeber": "Die Autobahn GmbH des Bundes",
-   "region_nuts3": "DE237",
-   "region_name": "Neustadt a. d. Waldnaab",
+   "region_nuts3": [
+    "DE237"
+   ],
+   "region_name": [
+    "Neustadt a. d. Waldnaab"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1847,10 +2205,11 @@
    "angebote_gesamt": 1,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0014"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "143100-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/143100-2026",
@@ -1858,8 +2217,16 @@
    "los": 56,
    "los_titel": "Südbayern",
    "auftraggeber": "Die Autobahn GmbH des Bundes",
-   "region_nuts3": "DE226|DE211|DE238",
-   "region_name": "DE226|DE211|Regensburg (Landkreis)",
+   "region_nuts3": [
+    "DE226",
+    "DE211",
+    "DE238"
+   ],
+   "region_name": [
+    "DE226",
+    "DE211",
+    "Regensburg (Landkreis)"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": "2026-01-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1874,10 +2241,11 @@
    "angebote_gesamt": 1,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0056"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -1885,8 +2253,12 @@
    "los": 1,
    "los_titel": "Los 1: Unterhaltsreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE239",
-   "region_name": "Schwandorf",
+   "region_nuts3": [
+    "DE239"
+   ],
+   "region_name": [
+    "Schwandorf"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1901,10 +2273,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 9,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -1912,8 +2285,12 @@
    "los": 2,
    "los_titel": "Los 2: Unterhaltsreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1928,10 +2305,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -1939,8 +2317,12 @@
    "los": 3,
    "los_titel": "Los 3: Unterhalts- und Innenglasreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE237",
-   "region_name": "Neustadt a. d. Waldnaab",
+   "region_nuts3": [
+    "DE237"
+   ],
+   "region_name": [
+    "Neustadt a. d. Waldnaab"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1955,10 +2337,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -1966,8 +2349,12 @@
    "los": 4,
    "los_titel": "Los 4: Unterhalts- und Innenglasreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE233",
-   "region_name": "Weiden i. d. OPf. (Stadt)",
+   "region_nuts3": [
+    "DE233"
+   ],
+   "region_name": [
+    "Weiden i. d. OPf. (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -1982,10 +2369,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 8,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -1993,8 +2381,12 @@
    "los": 5,
    "los_titel": "Los 5: Unterhaltsreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -2009,10 +2401,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0005"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -2020,8 +2413,12 @@
    "los": 6,
    "los_titel": "Los 6: Unterhalts- und Glasreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -2036,10 +2433,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0006"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -2047,8 +2445,12 @@
    "los": 7,
    "los_titel": "Los 7: Glasreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE233",
-   "region_name": "Weiden i. d. OPf. (Stadt)",
+   "region_nuts3": [
+    "DE233"
+   ],
+   "region_name": [
+    "Weiden i. d. OPf. (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -2063,10 +2465,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 6,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0007"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -2074,8 +2477,12 @@
    "los": 8,
    "los_titel": "Los 8: Glasreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE231",
-   "region_name": "Amberg (Stadt)",
+   "region_nuts3": [
+    "DE231"
+   ],
+   "region_name": [
+    "Amberg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -2090,10 +2497,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 6,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0008"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "689574-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/689574-2025",
@@ -2101,8 +2509,12 @@
    "los": 9,
    "los_titel": "Los 9: Glasreinigungsleistungen",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE235",
-   "region_name": "Cham",
+   "region_nuts3": [
+    "DE235"
+   ],
+   "region_name": [
+    "Cham"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-04-01",
    "ende_grundlaufzeit": "2030-03-31",
@@ -2117,10 +2529,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0009"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "276802-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/276802-2024",
@@ -2128,8 +2541,40 @@
    "los": 3,
    "los_titel": "Region Regensburg",
    "auftraggeber": "Bundesagentur für Arbeit (BA), vertreten durch den Vorstand, hier vertreten durch die Leitung des Geschäftsbereiches Einkauf im BA-Service-Haus",
-   "region_nuts3": "DE232|DE22B|DE224|DE229|DE22C|DE227|DE225|DE226|DE236|DE214|DE21G|DE215|DE21M|DE222|DE22A",
-   "region_name": "Regensburg (Stadt)|DE22B|DE224|DE229|DE22C|DE227|DE225|DE226|Neumarkt i. d. OPf.|DE214|DE21G|DE215|DE21M|DE222|DE22A",
+   "region_nuts3": [
+    "DE232",
+    "DE22B",
+    "DE224",
+    "DE229",
+    "DE22C",
+    "DE227",
+    "DE225",
+    "DE226",
+    "DE236",
+    "DE214",
+    "DE21G",
+    "DE215",
+    "DE21M",
+    "DE222",
+    "DE22A"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)",
+    "DE22B",
+    "DE224",
+    "DE229",
+    "DE22C",
+    "DE227",
+    "DE225",
+    "DE226",
+    "Neumarkt i. d. OPf.",
+    "DE214",
+    "DE21G",
+    "DE215",
+    "DE21M",
+    "DE222",
+    "DE22A"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": null,
    "ende_grundlaufzeit": "2030-05-09",
@@ -2144,10 +2589,11 @@
    "angebote_gesamt": 9,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "286868-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/286868-2024",
@@ -2155,8 +2601,44 @@
    "los": 1,
    "los_titel": "Region Nürnberg",
    "auftraggeber": "Bundesagentur für Arbeit (BA), vertreten durch den Vorstand, hier vertreten durch die Leitung des Geschäftsbereiches Einkauf im BA-Service-Haus",
-   "region_nuts3": "DE254|DE251|DE256|DE25B|DE25A|DE253|DE25C|DE252|DE259|DE255|DE231|DE235|DE239|DE234|DE237|DE233|DE23A",
-   "region_name": "DE254|DE251|DE256|DE25B|DE25A|DE253|DE25C|DE252|DE259|DE255|Amberg (Stadt)|Cham|Schwandorf|Amberg-Sulzbach|Neustadt a. d. Waldnaab|Weiden i. d. OPf. (Stadt)|Tirschenreuth",
+   "region_nuts3": [
+    "DE254",
+    "DE251",
+    "DE256",
+    "DE25B",
+    "DE25A",
+    "DE253",
+    "DE25C",
+    "DE252",
+    "DE259",
+    "DE255",
+    "DE231",
+    "DE235",
+    "DE239",
+    "DE234",
+    "DE237",
+    "DE233",
+    "DE23A"
+   ],
+   "region_name": [
+    "DE254",
+    "DE251",
+    "DE256",
+    "DE25B",
+    "DE25A",
+    "DE253",
+    "DE25C",
+    "DE252",
+    "DE259",
+    "DE255",
+    "Amberg (Stadt)",
+    "Cham",
+    "Schwandorf",
+    "Amberg-Sulzbach",
+    "Neustadt a. d. Waldnaab",
+    "Weiden i. d. OPf. (Stadt)",
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": null,
    "ende_grundlaufzeit": "2030-05-14",
@@ -2171,10 +2653,11 @@
    "angebote_gesamt": 9,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "152989-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/152989-2026",
@@ -2182,8 +2665,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung (UHR)",
    "auftraggeber": "Freistaat Bayern, vertreten durch das Amt für Ländliche Entwicklung Oberpfalz",
-   "region_nuts3": "DE23A",
-   "region_name": "Tirschenreuth",
+   "region_nuts3": [
+    "DE23A"
+   ],
+   "region_name": [
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-06-01",
    "ende_grundlaufzeit": "2030-05-31",
@@ -2198,10 +2685,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "152989-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/152989-2026",
@@ -2209,8 +2697,12 @@
    "los": 2,
    "los_titel": "Glas- und Rahmenreinigung (GRR)",
    "auftraggeber": "Freistaat Bayern, vertreten durch das Amt für Ländliche Entwicklung Oberpfalz",
-   "region_nuts3": "DE23A",
-   "region_name": "Tirschenreuth",
+   "region_nuts3": [
+    "DE23A"
+   ],
+   "region_name": [
+    "Tirschenreuth"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-06-01",
    "ende_grundlaufzeit": "2030-05-31",
@@ -2225,10 +2717,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "354636-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/354636-2026",
@@ -2236,8 +2729,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung Bajuwarenkaserne",
    "auftraggeber": "Bundeswehr-Dienstleistungszentrum Bogen",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-08-01",
    "ende_grundlaufzeit": "2030-07-31",
@@ -2252,10 +2749,11 @@
    "angebote_gesamt": 8,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "354636-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/354636-2026",
@@ -2263,8 +2761,12 @@
    "los": 2,
    "los_titel": "Glasreinigung Bajuwarenkaserne",
    "auftraggeber": "Bundeswehr-Dienstleistungszentrum Bogen",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-08-01",
    "ende_grundlaufzeit": "2030-07-31",
@@ -2279,10 +2781,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "482059-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/482059-2024",
@@ -2290,8 +2793,22 @@
    "los": 3,
    "los_titel": "Region Regensburg",
    "auftraggeber": "Bundesagentur für Arbeit (BA), vertreten durch den Vorstand, hier vertreten durch die Leitung des Geschäftsbereiches Einkauf im BA-Service-Haus",
-   "region_nuts3": "DE21H|DE224|DE227|DE21M|DE228|DE238",
-   "region_name": "DE21H|DE224|DE227|DE21M|DE228|Regensburg (Landkreis)",
+   "region_nuts3": [
+    "DE21H",
+    "DE224",
+    "DE227",
+    "DE21M",
+    "DE228",
+    "DE238"
+   ],
+   "region_name": [
+    "DE21H",
+    "DE224",
+    "DE227",
+    "DE21M",
+    "DE228",
+    "Regensburg (Landkreis)"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": null,
    "ende_grundlaufzeit": "2030-08-08",
@@ -2306,10 +2823,11 @@
    "angebote_gesamt": 8,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "557487-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/557487-2026",
@@ -2317,8 +2835,12 @@
    "los": 1,
    "los_titel": "UHR Amtsgebäude Regensburg",
    "auftraggeber": "Freistaat Bayern, vertreten durch das AELF Regensburg-Schwandorf",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2030-09-30",
@@ -2333,10 +2855,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "557487-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/557487-2026",
@@ -2344,8 +2867,12 @@
    "los": 2,
    "los_titel": "GRR Amtsgebäude Regensburg",
    "auftraggeber": "Freistaat Bayern, vertreten durch das AELF Regensburg-Schwandorf",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2030-09-30",
@@ -2360,10 +2887,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "557487-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/557487-2026",
@@ -2371,8 +2899,12 @@
    "los": 3,
    "los_titel": "UHR Amtsgebäude Nabburg",
    "auftraggeber": "Freistaat Bayern, vertreten durch das AELF Regensburg-Schwandorf",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2030-09-30",
@@ -2387,10 +2919,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "557487-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/557487-2026",
@@ -2398,8 +2931,12 @@
    "los": 4,
    "los_titel": "GRR Amtsgebäude Nabburg",
    "auftraggeber": "Freistaat Bayern, vertreten durch das AELF Regensburg-Schwandorf",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2030-09-30",
@@ -2414,10 +2951,11 @@
    "angebote_gesamt": 2,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "557487-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/557487-2026",
@@ -2425,8 +2963,12 @@
    "los": 5,
    "los_titel": "UHR Forstdienstanwesen Neunburg v. Wald",
    "auftraggeber": "Freistaat Bayern, vertreten durch das AELF Regensburg-Schwandorf",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2030-09-30",
@@ -2441,10 +2983,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0005"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "557487-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/557487-2026",
@@ -2452,8 +2995,12 @@
    "los": 6,
    "los_titel": "GRR Forstdienstanwesen Neunburg v. Wald",
    "auftraggeber": "Freistaat Bayern, vertreten durch das AELF Regensburg-Schwandorf",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2030-09-30",
@@ -2468,10 +3015,11 @@
    "angebote_gesamt": 2,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0006"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "550443-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/550443-2026",
@@ -2479,8 +3027,12 @@
    "los": 1,
    "los_titel": "Gebäudereinigung Pfreimd",
    "auftraggeber": "Bundeswehr-Dienstleistungszentrum Amberg",
-   "region_nuts3": "DE239",
-   "region_name": "Schwandorf",
+   "region_nuts3": [
+    "DE239"
+   ],
+   "region_name": [
+    "Schwandorf"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-11-01",
    "ende_grundlaufzeit": "2030-10-31",
@@ -2495,10 +3047,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0000"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "760791-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/760791-2024",
@@ -2506,8 +3059,20 @@
    "los": 1,
    "los_titel": "Region Nürnberg",
    "auftraggeber": "Bundesagentur für Arbeit (BA), vertreten durch den Vorstand, hier vertreten durch die Leitung des Geschäftsbereiches Einkauf im BA-Service-Haus",
-   "region_nuts3": "DE259|DE256|DE258|DE233|DE239",
-   "region_name": "DE259|DE256|DE258|Weiden i. d. OPf. (Stadt)|Schwandorf",
+   "region_nuts3": [
+    "DE259",
+    "DE256",
+    "DE258",
+    "DE233",
+    "DE239"
+   ],
+   "region_name": [
+    "DE259",
+    "DE256",
+    "DE258",
+    "Weiden i. d. OPf. (Stadt)",
+    "Schwandorf"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": null,
    "ende_grundlaufzeit": "2030-12-11",
@@ -2522,10 +3087,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "617709-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/617709-2026",
@@ -2533,8 +3099,12 @@
    "los": 1,
    "los_titel": "Los 1: Unterhalts- und Grundreinigung",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2027-01-01",
    "ende_grundlaufzeit": "2030-12-31",
@@ -2549,10 +3119,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "617709-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/617709-2026",
@@ -2560,8 +3131,12 @@
    "los": 2,
    "los_titel": "Los 2: Unterhalts- und Grundreinigung",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2027-01-01",
    "ende_grundlaufzeit": "2030-12-31",
@@ -2576,10 +3151,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 5,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "617709-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/617709-2026",
@@ -2587,8 +3163,12 @@
    "los": 3,
    "los_titel": "Los 3: Glas- und Rahmenreinigung",
    "auftraggeber": "Bundesanstalt für Immobilienaufgaben",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2027-01-01",
    "ende_grundlaufzeit": "2030-12-31",
@@ -2603,10 +3183,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 2,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "533946-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/533946-2026",
@@ -2614,8 +3195,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung Außenstellen",
    "auftraggeber": "Universität Regensburg als staatliche Einrichtung in Vertretung des Freistaates Bayern",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": "2026-10-01",
    "ende_grundlaufzeit": "2031-09-30",
@@ -2630,10 +3215,11 @@
    "angebote_gesamt": 11,
    "angebote_untergrenze": null,
    "hinweis": "Dauerfeld enthält die Option: Text nennt 2 Jahre Festlaufzeit + 3x1 Jahr Option; Grundlaufzeit vermutlich bis 30.09.2028",
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0000"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "215440-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/215440-2026",
@@ -2641,8 +3227,12 @@
    "los": 1,
    "los_titel": "Außenstelle der technischen Hochschule, Residenzplatz 5, Neumarkt i.d.OPf. - Reinigungsleistungen",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2657,10 +3247,11 @@
    "angebote_gesamt": 10,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "226358-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/226358-2025",
@@ -2668,8 +3259,12 @@
    "los": 1,
    "los_titel": "Hauptbereich",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2684,10 +3279,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "226358-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/226358-2025",
@@ -2695,8 +3291,12 @@
    "los": 2,
    "los_titel": "Losbeschreibung",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2711,10 +3311,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "226358-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/226358-2025",
@@ -2722,8 +3323,12 @@
    "los": 3,
    "los_titel": "Losbeschreibung",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2738,10 +3343,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "266771-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/266771-2024",
@@ -2749,8 +3355,12 @@
    "los": 1,
    "los_titel": "Unterhalts-, Grund- und Zwischenreinigung",
    "auftraggeber": "Landkreis Amberg-Sulzbach",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2765,10 +3375,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "266771-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/266771-2024",
@@ -2776,8 +3387,12 @@
    "los": 2,
    "los_titel": "Fenster- und Glasreinigung",
    "auftraggeber": "Landkreis Amberg-Sulzbach",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2792,10 +3407,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "267158-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/267158-2024",
@@ -2803,8 +3419,12 @@
    "los": 1,
    "los_titel": "Unterhalts-, Grund- und Zwischenreinigung",
    "auftraggeber": "Landkreis Amberg-Sulzbach",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2819,10 +3439,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "267158-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/267158-2024",
@@ -2830,8 +3451,12 @@
    "los": 2,
    "los_titel": "Fenster- und Glasreinigung",
    "auftraggeber": "Landkreis Amberg-Sulzbach",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2846,10 +3471,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "33610-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/33610-2024",
@@ -2857,8 +3483,12 @@
    "los": 1,
    "los_titel": "Unterhalts- und Sonderreinigung Müllkraftwerk Schwandorf",
    "auftraggeber": "Zweckverband Müllverwertung Schwandorf",
-   "region_nuts3": "DE239",
-   "region_name": "Schwandorf",
+   "region_nuts3": [
+    "DE239"
+   ],
+   "region_name": [
+    "Schwandorf"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2873,10 +3503,11 @@
    "angebote_gesamt": 4,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "420148-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/420148-2026",
@@ -2884,8 +3515,12 @@
    "los": 1,
    "los_titel": "Glasreinigung",
    "auftraggeber": "Stadt Regensburg",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2900,10 +3535,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 11,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0000"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "420740-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/420740-2026",
@@ -2911,8 +3547,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung in der VII. BPA",
    "auftraggeber": "Präsidium der Bayer. Bereitschaftspolizei",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2927,10 +3567,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "420740-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/420740-2026",
@@ -2938,8 +3579,12 @@
    "los": 2,
    "los_titel": "Unterhaltsreinigung bei der VII. BPA, ASt Nabburg",
    "auftraggeber": "Präsidium der Bayer. Bereitschaftspolizei",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2954,10 +3599,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "437343-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/437343-2024",
@@ -2965,8 +3611,12 @@
    "los": 5,
    "los_titel": "Los 5 Unterhaltsreinigung Regensburg",
    "auftraggeber": "Bayerisches Landessozialgericht",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -2981,10 +3631,11 @@
    "angebote_gesamt": 23,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0005"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "437343-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/437343-2024",
@@ -2992,8 +3643,12 @@
    "los": 10,
    "los_titel": "Los 10 Glasreinigung Regensburg",
    "auftraggeber": "Bayerisches Landessozialgericht",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3008,10 +3663,11 @@
    "angebote_gesamt": 23,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0010"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "446124-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/446124-2025",
@@ -3019,8 +3675,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung bei der VII. BPA",
    "auftraggeber": "Präsidium der Bayer. Bereitschaftspolizei",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3035,10 +3695,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "446124-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/446124-2025",
@@ -3046,8 +3707,12 @@
    "los": 2,
    "los_titel": "Unterhaltsreinigung in der VII. BPA, ASt Nabburg",
    "auftraggeber": "Präsidium der Bayer. Bereitschaftspolizei",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3062,10 +3727,11 @@
    "angebote_gesamt": 6,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "454420-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/454420-2026",
@@ -3073,8 +3739,12 @@
    "los": 1,
    "los_titel": "Verwaltungsgebäude III (Rathaus III), Untere Marktstraße 14, Neumarkt i.d.OPf. -Reinigungsleistungen",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3089,10 +3759,11 @@
    "angebote_gesamt": 11,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "480569-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/480569-2026",
@@ -3100,8 +3771,12 @@
    "los": 1,
    "los_titel": "Unterhalts-, Grund- und Zwischenreinigung",
    "auftraggeber": "Landkreis Amberg-Sulzbach",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3116,10 +3791,11 @@
    "angebote_gesamt": 10,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "480569-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/480569-2026",
@@ -3127,8 +3803,12 @@
    "los": 2,
    "los_titel": "Fenster- und Glasreinigung",
    "auftraggeber": "Landkreis Amberg-Sulzbach",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3143,10 +3823,11 @@
    "angebote_gesamt": 8,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "503542-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/503542-2025",
@@ -3154,8 +3835,12 @@
    "los": 1,
    "los_titel": "LOS 1 - Unterhaltsreinigung",
    "auftraggeber": "Polizeipräsidium Oberpfalz",
-   "region_nuts3": "DE233",
-   "region_name": "Weiden i. d. OPf. (Stadt)",
+   "region_nuts3": [
+    "DE233"
+   ],
+   "region_name": [
+    "Weiden i. d. OPf. (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3170,10 +3855,11 @@
    "angebote_gesamt": 5,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "503542-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/503542-2025",
@@ -3181,8 +3867,12 @@
    "los": 2,
    "los_titel": "LOS 2 - Glas- und Rahmenreinigung",
    "auftraggeber": "Polizeipräsidium Oberpfalz",
-   "region_nuts3": "DE233",
-   "region_name": "Weiden i. d. OPf. (Stadt)",
+   "region_nuts3": [
+    "DE233"
+   ],
+   "region_name": [
+    "Weiden i. d. OPf. (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3197,10 +3887,11 @@
    "angebote_gesamt": 2,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "555698-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/555698-2024",
@@ -3208,8 +3899,12 @@
    "los": 1,
    "los_titel": "Vergabe Unterhaltsreinigung",
    "auftraggeber": "Gemeinde Kümmersbruck",
-   "region_nuts3": "DE234",
-   "region_name": "Amberg-Sulzbach",
+   "region_nuts3": [
+    "DE234"
+   ],
+   "region_name": [
+    "Amberg-Sulzbach"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3224,10 +3919,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0000"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "556275-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/556275-2026",
@@ -3235,8 +3931,12 @@
    "los": 1,
    "los_titel": "Kesselreinigungsarbeiten an der Ofenlinie 1 und 4 inkl. Strahlentrostungsarbeiten",
    "auftraggeber": "Zweckverband Müllverwertung Schwandorf",
-   "region_nuts3": "DE239",
-   "region_name": "Schwandorf",
+   "region_nuts3": [
+    "DE239"
+   ],
+   "region_name": [
+    "Schwandorf"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3251,10 +3951,11 @@
    "angebote_gesamt": 1,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "579178-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/579178-2026",
@@ -3262,8 +3963,12 @@
    "los": 1,
    "los_titel": "Grundschule Pölling, Sonnenstraße 17, Neumarkt i.d.OPf. - Reinigungsleistungen",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3278,10 +3983,11 @@
    "angebote_gesamt": 9,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "580747-2026",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/580747-2026",
@@ -3289,8 +3995,12 @@
    "los": 1,
    "los_titel": "Rathaus IV mit Bürgerhaus, Fischergasse 1, 92318 Neumarkt i. d. OPf. - Reinigungsleistungen",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3305,10 +4015,11 @@
    "angebote_gesamt": 9,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "683177-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/683177-2024",
@@ -3316,8 +4027,14 @@
    "los": 3,
    "los_titel": "Los 3 Hilpoltstein",
    "auftraggeber": "Wasserstraßen- und Schifffahrtsamt Donau MDK Standort Nürnberg",
-   "region_nuts3": "DE25B|DE236",
-   "region_name": "DE25B|Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE25B",
+    "DE236"
+   ],
+   "region_name": [
+    "DE25B",
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3332,10 +4049,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 2,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "683177-2024",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/683177-2024",
@@ -3343,8 +4061,16 @@
    "los": 4,
    "los_titel": "Los 4 Riedenburg",
    "auftraggeber": "Wasserstraßen- und Schifffahrtsamt Donau MDK Standort Nürnberg",
-   "region_nuts3": "DE236|DE219|DE226",
-   "region_name": "Neumarkt i. d. OPf.|DE219|DE226",
+   "region_nuts3": [
+    "DE236",
+    "DE219",
+    "DE226"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf.",
+    "DE219",
+    "DE226"
+   ],
    "leistungsort_auch_ausserhalb": true,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3359,10 +4085,11 @@
    "angebote_gesamt": null,
    "angebote_untergrenze": 1,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0004"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "685373-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/685373-2025",
@@ -3370,8 +4097,12 @@
    "los": 1,
    "los_titel": "LOT-0001 - Los 1 Unterhaltsreinigung",
    "auftraggeber": "Haus der Bayerischen Geschichte",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3386,10 +4117,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "685373-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/685373-2025",
@@ -3397,8 +4129,12 @@
    "los": 2,
    "los_titel": "LOT-0002 - Los 2 Glasreinigung",
    "auftraggeber": "Haus der Bayerischen Geschichte",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3413,10 +4149,11 @@
    "angebote_gesamt": 3,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "722107-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/722107-2025",
@@ -3424,8 +4161,12 @@
    "los": 1,
    "los_titel": "Rathaus IV mit Bürgerhaus, Fischergasse 1, Neumarkt i.d.OPf. - Reinigungsleistungen",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3440,10 +4181,11 @@
    "angebote_gesamt": 8,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "722423-2025",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/722423-2025",
@@ -3451,8 +4193,12 @@
    "los": 1,
    "los_titel": "Grundschule Pölling, Sonnenstraße 17, Neumarkt i.d.OPf.",
    "auftraggeber": "Stadt Neumarkt i.d.OPf.",
-   "region_nuts3": "DE236",
-   "region_name": "Neumarkt i. d. OPf.",
+   "region_nuts3": [
+    "DE236"
+   ],
+   "region_name": [
+    "Neumarkt i. d. OPf."
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3467,10 +4213,11 @@
    "angebote_gesamt": 9,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0001"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "788951-2023",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/788951-2023",
@@ -3478,8 +4225,12 @@
    "los": 1,
    "los_titel": "Unterhaltsreinigung",
    "auftraggeber": "Deutsche Bundesbank, Zentralbereich Beschaffungen",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3494,10 +4245,11 @@
    "angebote_gesamt": 7,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0002"
   },
   {
-   "schema_version": "1.0",
+   "schema_version": "1.1",
    "stand_daten": "2026-11-04",
    "bekanntmachung": "788951-2023",
    "ted_link": "https://ted.europa.eu/de/notice/-/detail/788951-2023",
@@ -3505,8 +4257,12 @@
    "los": 2,
    "los_titel": "Glasreinigung",
    "auftraggeber": "Deutsche Bundesbank, Zentralbereich Beschaffungen",
-   "region_nuts3": "DE232",
-   "region_name": "Regensburg (Stadt)",
+   "region_nuts3": [
+    "DE232"
+   ],
+   "region_name": [
+    "Regensburg (Stadt)"
+   ],
    "leistungsort_auch_ausserhalb": false,
    "beginn": null,
    "ende_grundlaufzeit": null,
@@ -3521,7 +4277,8 @@
    "angebote_gesamt": 2,
    "angebote_untergrenze": null,
    "hinweis": null,
-   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
+   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
+   "los_kennung": "LOT-0003"
   }
  ]
 }

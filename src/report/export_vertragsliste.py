@@ -1,12 +1,14 @@
-"""Referenz-Export der Vertragsliste (Oberpfalz) nach festem Schema, Version 1.0 (Schema: docs/export_schema.md).
+"""Referenz-Export der Vertragsliste (Oberpfalz) nach festem Schema, Version 1.1 (Schema: docs/export_schema.md).
 
 Zweck: Datenübergabe in ein Verwaltungssystem (Excel, ERP, CRM, Kalkulationssoftware). Die Webseite stellt dieselben Daten nur dar.
 Eingaben: reports/beispiel_liste_oberpfalz.csv (Liste, Fassung der Iteration 9), reports/wettbewerbsbild_oberpfalz.csv (Paket A),
           reports/beispiel_liste.md (nur für den Stand der Daten), reports/wettbewerbsbild_oberpfalz.md (Kontrollzählungen).
 Ausgabe:  docs/prototyp/export/vertragsliste_v1.csv      (Komma, RFC 4180, UTF-8 ohne BOM, Zeilenende CRLF)
           docs/prototyp/export/vertragsliste_v1_de.csv   (Semikolon, UTF-8 mit BOM, für deutsches Excel)
-          docs/prototyp/export/vertragsliste_v1.json     (Objekt mit meta und eintraege)
-Aufruf:   .venv\\Scripts\\python.exe -I src/report/export_vertragsliste.py
+          docs/prototyp/export/vertragsliste_v1.json     (Objekt mit meta und eintraege; region_nuts3 und region_name als Arrays)
+Option:   --ohne-auftragnehmer erzeugt zusätzlich denselben Dateisatz ohne die Spalte auftragnehmer
+          (vertragsliste_v1_ohne_auftragnehmer.csv, ..._de.csv, ....json), ebenfalls validiert.
+Aufruf:   .venv\\Scripts\\python.exe -I src/report/export_vertragsliste.py [--ohne-auftragnehmer]
 Danach läuft eine Validierung gegen das Schema; bei Fehlern bricht das Skript mit Exit-Code 1 ab.
 Keine Terminprognose: ende_grundlaufzeit ist das Ende laut Bekanntmachung, kein Termin der Neuausschreibung.
 """
@@ -28,22 +30,27 @@ WETTB_MD = ROOT / "reports" / "wettbewerbsbild_oberpfalz.md"
 LISTE_MD = ROOT / "reports" / "beispiel_liste.md"
 OUT = ROOT / "docs" / "prototyp" / "export"
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "1.1"
 QUELLE = "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML"
 HINWEIS_META = ("Keine Prognose: ende_grundlaufzeit ist das Ende der Grundlaufzeit laut Bekanntmachung, kein Termin der Neuausschreibung; "
-                "hoechstende_hinweis ist nur ein Hinweis. Nur TED-Lose oberhalb der EU-Schwelle. Vor einer Entscheidung die Bekanntmachung (ted_link) lesen. "
+                "hoechstende_hinweis ist nur ein Hinweis (bei hoechstende_herkunft keine_angabe oder keine_verlaengerung steht dort ersatzweise das Ende der Grundlaufzeit). "
+                "Nur TED-Lose oberhalb der EU-Schwelle. Vor einer Entscheidung die Bekanntmachung (ted_link) lesen. "
                 "TED als Quelle angeben; Lizenz vor Abgabe zu bestätigen.")
 
 # Reihenfolge = Spaltenreihenfolge in CSV und JSON (Tabelle in docs/export_schema.md). Typ: s = Text, d = Datum, i = ganze Zahl, n = Dezimalzahl, b = true/false
+# los_kennung (seit 1.1) steht als neues optionales Feld am Ende (Änderungsregel für Nebenversionen: nur neue Felder am Ende).
 SPALTEN = [("schema_version", "s", True), ("stand_daten", "d", True), ("bekanntmachung", "s", True), ("ted_link", "s", True), ("veroeffentlicht", "d", True),
            ("los", "i", True), ("los_titel", "s", True), ("auftraggeber", "s", True), ("region_nuts3", "s", True), ("region_name", "s", True),
            ("leistungsort_auch_ausserhalb", "b", True), ("beginn", "d", False), ("ende_grundlaufzeit", "d", False), ("ende_herkunft", "s", True),
            ("hoechstende_hinweis", "d", False), ("hoechstende_herkunft", "s", True), ("stufe", "s", True), ("status_stand", "s", True),
            ("auftragnehmer", "s", False), ("wert_eur", "n", False), ("wert_status", "s", True), ("angebote_gesamt", "i", False),
-           ("angebote_untergrenze", "i", False), ("hinweis", "s", False), ("quelle", "s", True)]
+           ("angebote_untergrenze", "i", False), ("hinweis", "s", False), ("quelle", "s", True), ("los_kennung", "s", False)]
 NAMEN = [s[0] for s in SPALTEN]
+NAMEN_OHNE_AN = [k for k in NAMEN if k != "auftragnehmer"]
 TYP = {s[0]: s[1] for s in SPALTEN}
 PFLICHT = [s[0] for s in SPALTEN if s[2]]
+LISTENFELDER = ("region_nuts3", "region_name")  # im JSON Arrays, in der CSV mit | getrennter Text
+SCHLUESSEL = ["bekanntmachung", "los_kennung"]
 
 ENDE_HERKUNFT = {"enddatum", "text_zunaechst", "text_festlaufzeit", "beginn_plus_dauer", "geschaetzt", "unbekannt"}
 HOECHSTENDE_HERKUNFT = {"datum_text", "enddatum_ist_hoechstende", "anzahl_x_laenge", "hoechstlaufzeit_text", "keine_verlaengerung",
@@ -112,35 +119,43 @@ def baue_zeilen() -> list[dict]:
              "beginn": r["beginn"], "ende_grundlaufzeit": ende, "ende_herkunft": herk,
              "hoechstende_hinweis": r["hoechstende"], "hoechstende_herkunft": r["hoechstende_herkunft"], "stufe": r["stufe"], "status_stand": r["status"],
              "auftragnehmer": gewinner, "wert_eur": wert, "wert_status": ws, "angebote_gesamt": gesamt, "angebote_untergrenze": untergrenze,
-             "hinweis": HINWEISE.get(r["notice"], ""), "quelle": QUELLE}
+             "hinweis": HINWEISE.get(r["notice"], ""), "quelle": QUELLE, "los_kennung": w["los_zugeordnet"]}
         zeilen.append({k: (None if z[k] in ("", None) else z[k]) for k in NAMEN})
     return zeilen
 
 
-def csv_text(zeilen: list[dict], sep: str) -> str:
+def csv_text(zeilen: list[dict], sep: str, namen: list = None) -> str:
     """CSV nach RFC 4180: Felder mit Trennzeichen, Anführungszeichen oder Zeilenumbruch in Anführungszeichen, Zeilenende CRLF, leer = leeres Feld."""
+    namen = namen or NAMEN
+
     def q(v):
         s = "" if v is None else str(v)
         return '"' + s.replace('"', '""') + '"' if re.search(r'[%s"\r\n]' % re.escape(sep), s) else s
-    return "\r\n".join(sep.join(q(v) for v in row) for row in [NAMEN] + [[z[k] for k in NAMEN] for z in zeilen]) + "\r\n"
+    return "\r\n".join(sep.join(q(v) for v in row) for row in [namen] + [[z[k] for k in namen] for z in zeilen]) + "\r\n"
 
 
-def typisiert(z: dict) -> dict:
+def typisiert(z: dict, namen: list = None) -> dict:
     o = {}
-    for k in NAMEN:
+    for k in namen or NAMEN:
         v = z[k]
-        o[k] = None if v is None else int(v) if TYP[k] == "i" else float(v) if TYP[k] == "n" else (v == "true") if TYP[k] == "b" else v
+        if k in LISTENFELDER:
+            o[k] = None if v is None else v.split("|")
+        else:
+            o[k] = None if v is None else int(v) if TYP[k] == "i" else float(v) if TYP[k] == "n" else (v == "true") if TYP[k] == "b" else v
     return o
 
 
-def schreibe(zeilen: list[dict]) -> None:
+def schreibe(zeilen: list[dict], namen: list = None, suffix: str = "", variante: str = "") -> None:
+    namen = namen or NAMEN
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "vertragsliste_v1.csv").write_bytes(csv_text(zeilen, ",").encode("utf-8"))
-    (OUT / "vertragsliste_v1_de.csv").write_bytes(b"\xef\xbb\xbf" + csv_text(zeilen, ";").encode("utf-8"))
+    (OUT / f"vertragsliste_v1{suffix}.csv").write_bytes(csv_text(zeilen, ",", namen).encode("utf-8"))
+    (OUT / f"vertragsliste_v1{suffix}_de.csv").write_bytes(b"\xef\xbb\xbf" + csv_text(zeilen, ";", namen).encode("utf-8"))
     meta = {"schema_version": SCHEMA_VERSION, "stand_daten": zeilen[0]["stand_daten"], "erzeugt": date.today().isoformat(), "quelle": QUELLE,
-            "hinweis": HINWEIS_META, "schema": "docs/export_schema.md", "schluessel": ["bekanntmachung", "los"], "zeilen": len(zeilen)}
-    (OUT / "vertragsliste_v1.json").write_text(json.dumps({"meta": meta, "eintraege": [typisiert(z) for z in zeilen]}, ensure_ascii=False, indent=1) + "\n",
-                                               encoding="utf-8")
+            "hinweis": HINWEIS_META, "schema": "docs/export_schema.md", "schluessel": SCHLUESSEL, "zeilen": len(zeilen), "felder": len(namen)}
+    if variante:
+        meta["variante"] = variante
+    (OUT / f"vertragsliste_v1{suffix}.json").write_text(
+        json.dumps({"meta": meta, "eintraege": [typisiert(z, namen) for z in zeilen]}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
 def kontrollzahl(md: str, label: str) -> int:
@@ -152,11 +167,12 @@ def kontrollzahl(md: str, label: str) -> int:
 
 def validiere(zeilen: list[dict]) -> list[str]:
     fehler = []
+
     def f(msg):
         fehler.append(msg)
     iso = lambda s: bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", s)) and bool(datetime.strptime(s, "%Y-%m-%d"))
     for i, z in enumerate(zeilen, 1):
-        tag = f"Zeile {i} ({z['bekanntmachung']}/{z['los']})"
+        tag = f"Zeile {i} ({z['bekanntmachung']}/{z['los_kennung']})"
         for k in PFLICHT:
             if z[k] is None:
                 f(f"{tag}: Pflichtfeld {k} leer")
@@ -194,9 +210,17 @@ def validiere(zeilen: list[dict]) -> list[str]:
             f(f"{tag}: Stufe F, aber ende_grundlaufzeit gefüllt")
         if z["region_nuts3"] and len(z["region_nuts3"].split("|")) != len(z["region_name"].split("|")):
             f(f"{tag}: Zahl der Regionscodes und Regionsnamen verschieden")
-    schluessel = [(z["bekanntmachung"], z["los"]) for z in zeilen]
-    if len(set(schluessel)) != len(schluessel):
-        f("Schlüssel (bekanntmachung, los) nicht eindeutig")
+        if z["los_kennung"] is not None and not re.fullmatch(r"LOT-\d{4}", z["los_kennung"]):
+            f(f"{tag}: los_kennung {z['los_kennung']!r} nicht im Format LOT-0000")
+        if z["los_kennung"] is None:
+            f(f"{tag}: los_kennung leer (in den 130 Losen erwartet gefüllt)")
+        # Regel zu hoechstende_hinweis: bei keine_angabe/keine_verlaengerung ersatzweise das Ende der Grundlaufzeit
+        if z["hoechstende_herkunft"] in ("keine_angabe", "keine_verlaengerung") and z["hoechstende_hinweis"] != z["ende_grundlaufzeit"]:
+            f(f"{tag}: hoechstende_herkunft {z['hoechstende_herkunft']}, aber hoechstende_hinweis weicht vom Ende der Grundlaufzeit ab")
+    for name in (("bekanntmachung", "los"), ("bekanntmachung", "los_kennung")):
+        schluessel = [tuple(z[k] for k in name) for z in zeilen]
+        if len(set(schluessel)) != len(schluessel):
+            f(f"Schlüssel {name} nicht eindeutig")
     if len(zeilen) != 130:
         f(f"Zeilenzahl {len(zeilen)} statt 130")
     md = WETTB_MD.read_text(encoding="utf-8")
@@ -207,60 +231,90 @@ def validiere(zeilen: list[dict]) -> list[str]:
     for k in ist:
         if ist[k] != soll[k]:
             f(f"Zählung '{k}': Export {ist[k]}, {WETTB_MD.name} {soll[k]}")
-    print(f"Zeilen: {len(zeilen)} (Soll 130); eindeutige Schlüssel: {len(set(schluessel))}; Bekanntmachungen: {len({z['bekanntmachung'] for z in zeilen})}")
+    print(f"Zeilen: {len(zeilen)} (Soll 130); eindeutige Schlüssel (bekanntmachung, los_kennung): {len({(z['bekanntmachung'], z['los_kennung']) for z in zeilen})}; "
+          f"Bekanntmachungen: {len({z['bekanntmachung'] for z in zeilen})}")
     for k in ist:
         print(f"Zählung {k}: Export {ist[k]}, Bericht {soll[k]}")
     print("Zusatz: Endedatum gefüllt", sum(z["ende_grundlaufzeit"] is not None for z in zeilen),
           "| Hinweis gefüllt", sum(z["hinweis"] is not None for z in zeilen),
           "| Gesamtzahl Angebote", sum(z["angebote_gesamt"] is not None for z in zeilen),
-          "| nur Untergrenze", sum(z["angebote_untergrenze"] is not None for z in zeilen))
+          "| nur Untergrenze", sum(z["angebote_untergrenze"] is not None for z in zeilen),
+          "| los_kennung gefüllt", sum(z["los_kennung"] is not None for z in zeilen))
     return fehler
 
 
-def pruefe_dateien(zeilen: list[dict]) -> list[str]:
+def pruefe_dateien(zeilen: list[dict], namen: list = None, suffix: str = "") -> list[str]:
     """Lädt die erzeugten Dateien mit csv, pandas und json und vergleicht sie mit den Zeilen."""
     import pandas as pd
+    namen = namen or NAMEN
     fehler = []
-    soll = [[("" if z[k] is None else z[k]) for k in NAMEN] for z in zeilen]
-    roh = (OUT / "vertragsliste_v1.csv").read_bytes()
-    rohde = (OUT / "vertragsliste_v1_de.csv").read_bytes()
+    soll = [[("" if z[k] is None else z[k]) for k in namen] for z in zeilen]
+    roh = (OUT / f"vertragsliste_v1{suffix}.csv").read_bytes()
+    rohde = (OUT / f"vertragsliste_v1{suffix}_de.csv").read_bytes()
     if roh.startswith(b"\xef\xbb\xbf") or not rohde.startswith(b"\xef\xbb\xbf"):
         fehler.append("BOM falsch: Komma-Datei muss ohne, deutsche Datei mit BOM sein")
-    for name, enc, sep in (("vertragsliste_v1.csv", "utf-8", ","), ("vertragsliste_v1_de.csv", "utf-8-sig", ";")):
+    for name, enc, sep in ((f"vertragsliste_v1{suffix}.csv", "utf-8", ","), (f"vertragsliste_v1{suffix}_de.csv", "utf-8-sig", ";")):
         p = OUT / name
         with p.open(encoding=enc, newline="") as fh:
             rows = list(csv.reader(fh, delimiter=sep))
-        if rows[0] != NAMEN or rows[1:] != soll:
+        if rows[0] != namen or rows[1:] != soll:
             fehler.append(f"{name}: csv-Modul liest andere Werte als geschrieben")
         df = pd.read_csv(p, sep=sep, encoding=enc, dtype=str, keep_default_na=False)
-        if list(df.columns) != NAMEN or df.shape != (len(zeilen), len(NAMEN)) or df.values.tolist() != soll:
+        if list(df.columns) != namen or df.shape != (len(zeilen), len(namen)) or df.values.tolist() != soll:
             fehler.append(f"{name}: pandas liest andere Werte als geschrieben")
         dt = pd.read_csv(p, sep=sep, encoding=enc)
         if dt["los"].dtype.kind != "i" or dt["wert_eur"].dtype.kind != "f" or dt["wert_eur"].notna().sum() != sum(z["wert_eur"] is not None for z in zeilen):
             fehler.append(f"{name}: pandas-Typen (los ganzzahlig, wert_eur Dezimalzahl) stimmen nicht")
+        if "auftragnehmer" in namen and "auftragnehmer" not in df.columns or "auftragnehmer" not in namen and "auftragnehmer" in df.columns:
+            fehler.append(f"{name}: Spalte auftragnehmer passt nicht zur Variante")
         print(f"Laden {name}: csv-Modul {len(rows) - 1} Zeilen x {len(rows[0])} Spalten; pandas {df.shape}; wert_eur befüllt {int(dt['wert_eur'].notna().sum())}; "
               f"Umlaut-Probe: {'Universität' in ' '.join(df['auftraggeber'])}")
-    j = json.loads((OUT / "vertragsliste_v1.json").read_text(encoding="utf-8"))
-    if j["meta"]["zeilen"] != len(zeilen) or len(j["eintraege"]) != len(zeilen) or [list(e) for e in j["eintraege"]][0] != NAMEN:
+    j = json.loads((OUT / f"vertragsliste_v1{suffix}.json").read_text(encoding="utf-8"))
+    if j["meta"]["zeilen"] != len(zeilen) or len(j["eintraege"]) != len(zeilen) or [list(e) for e in j["eintraege"]][0] != namen:
         fehler.append("JSON: Zeilenzahl oder Feldnamen stimmen nicht")
-    if [typisiert(z) for z in zeilen] != j["eintraege"]:
+    if j["meta"]["schluessel"] != SCHLUESSEL or j["meta"]["felder"] != len(namen):
+        fehler.append("JSON: meta (Schlüssel, Zahl der Felder) stimmt nicht")
+    if [typisiert(z, namen) for z in zeilen] != j["eintraege"]:
         fehler.append("JSON: Einträge weichen von den Zeilen ab")
-    print(f"Laden vertragsliste_v1.json: meta + {len(j['eintraege'])} Einträge; Schlüssel meta: {', '.join(j['meta'])}")
+    if not all(isinstance(e["region_nuts3"], list) and isinstance(e["region_name"], list) and len(e["region_nuts3"]) == len(e["region_name"])
+               for e in j["eintraege"]):
+        fehler.append("JSON: region_nuts3/region_name keine Arrays gleicher Länge")
+    if "auftragnehmer" not in namen and any("auftragnehmer" in e for e in j["eintraege"]):
+        fehler.append("JSON (ohne Auftragnehmer): Feld auftragnehmer vorhanden")
+    print(f"Laden vertragsliste_v1{suffix}.json: meta + {len(j['eintraege'])} Einträge; Schlüssel meta: {', '.join(j['meta'])}; "
+          f"Arrays mit mehreren Regionen: {sum(len(e['region_nuts3']) > 1 for e in j['eintraege'])}")
     return fehler
+
+
+RECHTSFORM = re.compile(r"(\bGmbH\b|\bmbH\b|\bAG\b|\bKG\b|\bOHG\b|\bGbR\b|\bUG\b|\bSE\b|\be\.\s?V\.|\beG\b|&\s*Co\b|\bAnstalt\b|\bK.rperschaft\b|\bKGaA\b|\be\.\s?K\.)", re.I)
+
+
+def namenpruefung(zeilen: list[dict]) -> None:
+    """Datenschutz-Vorprüfung (docs/export_schema.md, Abschnitt 8): nur Zahlen, keine Namen. Textmuster für Rechtsformen, nicht abschließend."""
+    namen = [z["auftragnehmer"] for z in zeilen if z["auftragnehmer"]]
+    ohne = {n for n in set(namen) if not RECHTSFORM.search(n)}
+    ek = {n for n in set(namen) if re.search(r"\be\.\s?K\.", n, re.I)}
+    print(f"Namenprüfung: {len(namen)} Lose mit Namen, {len(set(namen))} verschiedene Namen, {len(set(namen)) - len(ohne)} mit erkennbarer Rechtsform "
+          f"(davon {len(ek)} e. K.), {len(ohne)} ohne (zusammen {sum(n in ohne for n in namen)} Lose); nicht abschließend, keine Namen ausgegeben")
 
 
 def main() -> None:
     zeilen = baue_zeilen()
+    namenpruefung(zeilen)
     fehler = validiere(zeilen)
     if fehler:
         print("VALIDIERUNG FEHLGESCHLAGEN:", *fehler[:30], sep="\n  ")
         sys.exit(1)
     schreibe(zeilen)
     fehler = pruefe_dateien(zeilen)
+    if "--ohne-auftragnehmer" in sys.argv[1:]:
+        schreibe(zeilen, NAMEN_OHNE_AN, "_ohne_auftragnehmer", "ohne_auftragnehmer")
+        fehler += pruefe_dateien(zeilen, NAMEN_OHNE_AN, "_ohne_auftragnehmer")
+        print(f"Variante ohne Auftragnehmer: {len(NAMEN_OHNE_AN)} Felder (Spalte auftragnehmer entfernt)")
     if fehler:
         print("DATEIPRÜFUNG FEHLGESCHLAGEN:", *fehler, sep="\n  ")
         sys.exit(1)
-    print("Validierung gegen Schema 1.0 bestanden;", OUT)
+    print(f"Validierung gegen Schema {SCHEMA_VERSION} bestanden;", OUT)
 
 
 if __name__ == "__main__":

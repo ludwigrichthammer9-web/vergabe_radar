@@ -393,7 +393,11 @@ Bericht mit Rechenwegen: [reports/make_or_buy.md](../reports/make_or_buy.md); Sk
 | Mittel (60 h / 20 h) | 6.000 € | 2.000 € | 12.000 € | nie | nie | 0,48 |
 | Hoch (120 h / 50 h) | 12.000 € | 5.000 € | 27.000 € | nie | nie | 1,08 |
 
-_Interpretation:_ Gegen kostenlose Dienste ist Eigenbau nie günstiger; gegen ein Abo wie DTAD nur im Niedrig-Szenario und erst nach rund zwei Jahren. Die „zusätzlichen Aufträge“ sind eine Größenordnung (Deckungsbeitrag je Auftrag = 167.404 € × 5 % × 3 Jahre ≈ 25.110 €), kein Nutzenbeleg; ob ein früher Hinweis auch nur einen Auftrag zusätzlich bringt, ist nicht belegt. Ein Mehrwert muss aus Funktion kommen, nicht aus dem Preis.
+_Interpretation:_ Im Modell (Annahmen) ist Eigenbau gegen kostenlose Dienste nie günstiger; das folgt aus der **Modellkonstruktion** (kostenlose Dienste und Abos ohne Eigenaufwand, Eigenbau mit Stunden), nicht aus einer Messung. Gegen ein Abo wie DTAD rechnet sich Eigenbau im Basismodell nur im Niedrig-Szenario und erst nach rund zwei Jahren. Die „zusätzlichen Aufträge“ sind eine Größenordnung (Deckungsbeitrag je Auftrag = 167.404 € × 5 % × 3 Jahre ≈ 25.110 €, ohne Angebotsaufwand und Zuschlagswahrscheinlichkeit), kein Nutzenbeleg; ob ein früher Hinweis auch nur einen Auftrag zusätzlich bringt, ist nicht belegt. Ein Mehrwert muss aus Funktion kommen, nicht aus dem Preis.
+
+**Symmetrische Variante (Annahmen, Bericht Abschnitt 3a).** Auch bei Abo und kostenlosen Diensten fallen Nutzungsstunden an (Alerts lesen, Treffer übertragen: 10 / 30 / 60 h je Jahr; kostenlosen Dienst nutzen und selbst importieren: 20 h einmalig plus 10 h je Jahr). Dann sinkt der Break-even gegen DTAD auf 1,0 / 2,4 / 4,8 Jahre (Niedrig / Mittel / Hoch); gegen einen kostenlosen Dienst mit Übernahme von Hand liegt er bei 4,0 / 6,0 / 12,0 Jahren; gegen einen kostenlosen Dienst mit eigenem Import ist der Eigenbau Niedrig von Beginn an nicht teurer, Mittel und Hoch nie. Das Ergebnis hängt an den angenommenen Stunden (Eigenbau 5 / 20 / 50 h gegen Nutzung 10 / 30 / 60 h je Jahr). Beide Varianten tragen nur eine Aussage: **Der Preis ist kein Vorteil des Eigenbaus**; es folgt nicht, dass der Eigenbau teuer wäre.
+
+**Nutzenseite.** Gemessen an einem Auftrag (Deckungsbeitrag 25.110 € in drei Jahren bei 5 % Marge) sind die Kosten klein (0,14 bis 1,08 zusätzliche Aufträge). Nicht die Kostenfrage entscheidet, sondern ob ein früher Hinweis überhaupt einen Auftrag bringt (nicht belegt). Der Median des Jahresumsatzes gilt nur für TED-Aufträge mit plausiblem Wert (47,7 % in der Oberpfalz-Liste).
 
 ### 9.5 Competitive Edge in dieser Perspektive, ehrlich
 
@@ -402,8 +406,8 @@ _Interpretation:_ Gegen kostenlose Dienste ist Eigenbau nie günstiger; gegen ei
 - „TED-Daten reichen für die Auftragssuche“ trägt nicht (9.3, Abdeckung).
 - Aussagen wie „besser als Vergabeweiser“ oder „bessere Abdeckung“ sind nicht belegt (siehe §8.5, Iteration 10b).
 
-**Was teilweise bleibt (Hypothesen, nicht geprüft).**
-1. **Daten ins eigene System mit dokumentiertem Schema.** Ein CSV/JSON-Export mit festen Spalten und Datentypen (Referenz: `docs/export_schema.md`, `docs/prototyp/export/`) erspart dem Betrieb das Abtippen und das eigene Lesen der TED-Felder. Ob er das braucht, ist offen (H1, H2).
+**Offene Hypothesen (nicht geprüft).**
+1. **Daten ins eigene System mit dokumentiertem Schema.** Ein CSV/JSON-Export mit festen Spalten und Datentypen (Referenz: `docs/export_schema.md`, Version 1.1, `docs/prototyp/export/`; eine Variante ohne Auftragnehmernamen liegt bei, siehe Schema §8) erspart dem Betrieb das Abtippen und das eigene Lesen der TED-Felder. Ob er das braucht, ist offen (H1, H2).
 2. **Anreicherung (nur TED-Lose):** Ende je Los, Ende der Grundlaufzeit gegen Höchstende getrennt, Herkunft je Feld. Das ist ein Merkmalsunterschied (§8.5), kein belegter Qualitätsvorteil.
 3. **Wettbewerbsfelder** (Auftragnehmer, Wert, Zahl der Angebote): in den TED-Rohdaten vorhanden, aber nur zur Hälfte vollständig (Zuschlagswert 50,4 % je Los bei EU-Verfahren, Paket B; plausible Werte 45 % der Zuschläge, §6). Vergabeweiser zeigt diese Felder schon kostenlos (§8.7).
 4. **Anpassbarkeit und offene Referenzimplementierung:** Wer will, kann Filter und Schema ändern. Das ist nur für Betriebe mit IT-Kompetenz oder einen Integrator ein Vorteil.
@@ -421,7 +425,7 @@ _Interpretation:_ Gegen kostenlose Dienste ist Eigenbau nie günstiger; gegen ei
 |---|---|
 | Problem | Treffer aus Ausschreibungen landen per Mail oder Webseite beim Betrieb und werden von Hand ins eigene System übertragen (H1; nicht geprüft) |
 | Kundensegment | größere Gebäudedienstleister mit Branchensoftware, die für Kommunen und Behörden bieten; Kleinbetriebe nach Gespräch 2 eher nicht |
-| Alleinstellung | Daten mit dokumentiertem Schema und Herkunft je Feld; offene Referenzimplementierung (nicht: „keine Kosten“) |
+| Mögliche Alleinstellung (ungeprüft; ob Vergabeweiser kein dokumentiertes Schema hat, ist nicht geprüft) | Daten mit dokumentiertem Schema und Herkunft je Feld; offene Referenzimplementierung (nicht: „keine Kosten“) |
 | Lösung | CSV/JSON-Export aus TED-Daten mit festem Schema; Webseite nur zur Ansicht |
 | Kanäle | Innung/Kammer, ERP-Hersteller, Integratoren (alle ungeprüft) |
 | Einnahmen | einmalige Einrichtung, ggf. Pflegevertrag (Preise ungeprüft, keine Umsatzprojektion) |
