@@ -89,24 +89,46 @@ SEITE = r"""<!DOCTYPE html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vertragsliste Gebäudereinigung Oberpfalz (Prototyp)</title>
 <style>
-:root{--dark:#0b3c49;--teal:#14607e;--pale:#eaf3f5;--ink:#1b2a33;--grey:#4f5d68;--amber:#f2a541}
-*{box-sizing:border-box}body{font:15px/1.45 Calibri,Segoe UI,Arial,sans-serif;color:var(--ink);margin:0;background:#fff}
-header{background:var(--dark);color:#fff;padding:18px 24px}h1{margin:0 0 4px;font:700 24px Cambria,Georgia,serif}header p{margin:0;color:#c5dde3}
-main{padding:16px 24px;max-width:1600px;margin:auto}
-.hinweis{background:#fff6e5;border-left:4px solid #b36b00;padding:10px 14px;margin:0 0 14px}.hinweis ul{margin:6px 0 4px;padding-left:20px}
-.filter{display:flex;flex-wrap:wrap;gap:10px;align-items:end;background:var(--pale);padding:12px;border-radius:6px}
-label{display:flex;flex-direction:column;font-size:13px;color:var(--grey);gap:2px}label.cb{flex-direction:row;align-items:center;gap:5px}
-input,select,button{font:inherit;padding:5px 7px;border:1px solid #7f93a0;border-radius:4px;background:#fff;color:var(--ink)}
-button{cursor:pointer;background:var(--teal);color:#fff;border-color:var(--teal)}button.sek{background:#fff;color:var(--teal)}
-:focus-visible{outline:3px solid #1a73e8;outline-offset:1px}
-.zeile{margin:10px 0;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-.tw{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:1100px}th,td{border-bottom:1px solid #dfe8ea;padding:6px 8px;text-align:left;vertical-align:top}
-th{background:var(--pale);position:sticky;top:0;cursor:pointer;white-space:nowrap}th:hover{background:#d9eaee}th small{font-weight:400;color:var(--grey)}
-.st{display:inline-block;padding:1px 7px;border-radius:10px;font-size:12px;background:#e3edf0}.st.abgelaufen{background:#f3d9d2}.st.laeuft{background:#dcefe3}.st.offen{background:#fbe9c6}
-.sf{font-weight:700;color:var(--teal)}.grau{color:var(--grey)}.so{display:block;margin-top:3px;font-size:12px;background:#fff6e5;border-left:3px solid #b36b00;padding:2px 6px}
-.num{text-align:right;white-space:nowrap}details{margin-top:18px}footer{color:var(--grey);font-size:12.5px;margin:24px 0}footer p{margin:6px 0}
-@media (max-width:700px){main{padding:12px}header{padding:14px 12px}h1{font-size:20px}.filter label{flex:1 1 140px}}
+:root{color-scheme:light dark;--bg:#F2F2F7;--card:#fff;--ink:#1C1C1E;--grey:#6C6C70;--blue:#007AFF;--green:#34C759;--orange:#FF9500;--red:#FF3B30;
+--sep:rgba(60,60,67,.16);--glass:rgba(242,242,247,.78);--fill:rgba(120,120,128,.12);--field:#fff;--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+--note:rgba(255,149,0,.12);--notebar:#C93400;--link:#0066CC;--ease:cubic-bezier(.2,.8,.2,1)}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--card:#1C1C1E;--ink:#F2F2F7;--grey:#AEAEB2;--blue:#0A84FF;--green:#30D158;--orange:#FF9F0A;--red:#FF453A;
+--sep:rgba(235,235,245,.16);--glass:rgba(28,28,30,.72);--fill:rgba(120,120,128,.24);--field:#2C2C2E;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.5);
+--note:rgba(255,159,10,.16);--notebar:#FF9F0A;--link:#64A8FF}}
+*{box-sizing:border-box}
+body{font:15px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink);margin:0;background:var(--bg)}
+a{color:var(--link)}
+header{position:sticky;top:0;z-index:20;background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--sep);padding:16px 24px}
+h1{margin:0 0 4px;font:700 34px/1.12 -apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,"Segoe UI",sans-serif;letter-spacing:-.02em}
+header p{margin:0;color:var(--grey);font-size:13px}
+main{padding:24px;max-width:1600px;margin:auto}
+.hinweis{background:var(--card);border-radius:18px;box-shadow:var(--shadow);border-left:6px solid var(--orange);padding:16px 24px;margin:0 0 24px}.hinweis ul{margin:8px 0 8px;padding-left:24px}.hinweis li{margin:4px 0}
+code{font:13px ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--fill);padding:1px 6px;border-radius:6px}
+.filter{display:flex;flex-wrap:wrap;gap:16px;align-items:end;background:var(--card);box-shadow:var(--shadow);padding:16px;border-radius:18px}
+label{display:flex;flex-direction:column;font-size:13px;font-weight:500;color:var(--grey);gap:4px}label.cb{flex-direction:row;align-items:center;gap:8px;min-height:44px;font-size:15px;color:var(--ink);font-weight:400}
+label.cb input{width:22px;height:22px;min-height:0;padding:0;accent-color:var(--blue)}
+input,select,button{font:inherit;min-height:44px;padding:8px 12px;border:1px solid transparent;border-radius:12px;background:var(--fill);color:var(--ink);transition:background-color .2s var(--ease),box-shadow .2s var(--ease),transform .15s var(--ease)}
+input:hover,select:hover{background:var(--sep)}
+input:focus,select:focus{background:var(--field);border-color:var(--blue)}
+button{cursor:pointer;background:var(--blue);color:#fff;font-weight:600;padding:8px 20px}
+button:hover{filter:brightness(1.08)}button:active{transform:scale(.97);filter:brightness(.92)}
+button.sek{background:var(--fill);color:var(--blue)}button.sek:hover{background:var(--sep);filter:none}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.zeile{margin:16px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}#anz{font-weight:600}
+.tw{overflow:auto;max-height:72vh;background:var(--card);border-radius:18px;box-shadow:var(--shadow)}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:13.5px;min-width:1100px}th,td{border-bottom:1px solid var(--sep);padding:12px 16px;text-align:left;vertical-align:top}
+tbody tr{transition:background-color .2s var(--ease)}tbody tr:hover{background:var(--fill)}tbody tr:last-child td{border-bottom:0}
+th{background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);position:sticky;top:0;z-index:2;cursor:pointer;white-space:nowrap;font-size:12px;font-weight:600;color:var(--grey);min-height:44px;transition:background-color .2s var(--ease),color .2s var(--ease)}
+th:hover{background:var(--fill);color:var(--ink)}th:active{background:var(--sep)}th small{font-weight:400;color:var(--grey)}
+.st{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600;background:var(--fill);color:var(--ink)}
+.st.abgelaufen{background:rgba(255,59,48,.14);color:#C0261C}.st.laeuft{background:rgba(52,199,89,.16);color:#1E7B3A}.st.offen{background:rgba(255,149,0,.16);color:#A15C00}
+@media (prefers-color-scheme:dark){.st.abgelaufen{color:#FF6961}.st.laeuft{color:#4CD964}.st.offen{color:#FFB340}}
+.sf{font-weight:700;color:var(--blue)}.grau{color:var(--grey)}.so{display:block;margin-top:4px;font-size:12px;background:var(--note);border-left:3px solid var(--notebar);border-radius:6px;padding:4px 8px}
+.num{text-align:right;white-space:nowrap}
+details{margin-top:24px;background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:0 24px 8px}summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+footer{color:var(--grey);font-size:12.5px;margin:32px 0}footer p{margin:8px 0}
+@media (max-width:700px){main{padding:16px}header{padding:12px 16px}h1{font-size:28px}.filter label{flex:1 1 140px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style></head><body>
 <header><h1>Vertragsliste Gebäudereinigung · Oberpfalz</h1><p>Prototyp, Darstellung (Demo) · Stand der Daten: __STAND__ · __N__ Lose aus __NN__ Bekanntmachungen · Seite erzeugt am __ERZ__</p></header>
 <main>
@@ -135,7 +157,7 @@ th{background:var(--pale);position:sticky;top:0;cursor:pointer;white-space:nowra
 <button class="sek" id="reset">Zurücksetzen</button>
 </div>
 <div class="zeile"><span id="anz" aria-live="polite"></span><span id="vor" class="grau"></span><button id="csv">Auswahl als CSV</button></div>
-<div class="tw"><table><caption class="grau" style="text-align:left;caption-side:bottom;padding-top:6px">Voreinstellung: laufende und noch verlängerbare Verträge, nach Ende der Grundlaufzeit aufsteigend. „auch abgelaufene“ zeigt alle Lose. Spaltenkopf anklicken (oder Eingabetaste) sortiert.</caption><thead><tr id="kopf"></tr></thead><tbody id="tb"></tbody></table></div>
+<div class="tw"><table><caption class="grau" style="text-align:left;caption-side:bottom;padding:8px 16px">Voreinstellung: laufende und noch verlängerbare Verträge, nach Ende der Grundlaufzeit aufsteigend. „auch abgelaufene“ zeigt alle Lose. Spaltenkopf anklicken (oder Eingabetaste) sortiert.</caption><thead><tr id="kopf"></tr></thead><tbody id="tb"></tbody></table></div>
 <details><summary>Stufen A bis F: woher stammt die Angabe?</summary><p class="grau">Die Stufe nennt die Herkunft der Angabe, nicht ihre Verlässlichkeit. Stufe A ist nicht „am sichersten“.</p><ul id="legende"></ul></details>
 <footer>
 <p><b>Quelle:</b> TED (Tenders Electronic Daily), Zuschlagsbekanntmachungen, Haupt-CPV 90910/90911/90919, Leistungsort Oberpfalz (NUTS DE23); Auftragnehmer, Zuschlagswert und Angebote aus dem eForms-XML derselben Bekanntmachungen (nur ab eForms, soweit der Auftraggeber sie veröffentlicht hat). Stand der Daten: __STAND__. Seite erzeugt am __ERZ__ mit src/report/webseite.py; Daten: reports/beispiel_liste_oberpfalz.csv, reports/wettbewerbsbild_oberpfalz.csv.</p>

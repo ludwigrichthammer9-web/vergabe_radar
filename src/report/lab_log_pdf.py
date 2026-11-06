@@ -18,13 +18,33 @@ BROWSER = [Path(p) for p in (r"C:\Program Files (x86)\Microsoft\Edge\Application
                              r"C:\Program Files\Google\Chrome\Application\chrome.exe")]
 PROFIL = Path(tempfile.gettempdir()) / "lab_log_pdf_profil"  # eigenes Profil, damit ein laufender Browser den Aufruf nicht schluckt
 CSS = """
-@page { size: A4; margin: 16mm 14mm; }
-body { font-family: Calibri, Arial, sans-serif; font-size: 10pt; line-height: 1.4; color: #1b2a33; }
-h1 { font-size: 20pt; color: #0b3c49; } h2 { font-size: 14pt; color: #0b3c49; border-bottom: 1px solid #8fb8c4; margin-top: 1.4em; }
-h3 { font-size: 11.5pt; color: #1c7293; margin-bottom: .3em; }
-table { border-collapse: collapse; width: 100%; margin: .6em 0; font-size: 8.5pt; }
-th, td { border: 1px solid #b8c7cc; padding: 3px 5px; vertical-align: top; } th { background: #eaf3f5; }
-tr { page-break-inside: avoid; } code { font-size: 8.5pt; background: #f2f5f6; }
+/* Gestaltung nach Apple Human Interface Guidelines (Klarheit, Zurückhaltung, Tiefe); nur Light-Mode, da Druck. 8-Punkt-Raster. */
+@page { size: A4; margin: 14mm 13mm; }
+:root { --text: #1C1C1E; --grau: #8E8E93; --flaeche: #F2F2F7; --linie: #E5E5EA; --blau: #007AFF; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif;
+       font-size: 9.2pt; line-height: 1.4; color: var(--text); }
+h1 { font-size: 24pt; line-height: 1.12; font-weight: 700; letter-spacing: -.02em; margin: 0 0 16px; }
+h2 { font-size: 15pt; line-height: 1.2; font-weight: 700; letter-spacing: -.01em; margin: 16px 0 8px; padding-bottom: 4px;
+     border-bottom: 1px solid var(--linie); break-after: avoid; }
+h3 { font-size: 11pt; font-weight: 600; color: var(--blau); margin: 12px 0 4px; break-after: avoid; }
+h4 { font-size: 9.5pt; font-weight: 600; margin: 12px 0 4px; break-after: avoid; }
+p, li { margin: 0 0 4px; } ul, ol { margin: 0 0 8px; padding-left: 20px; } li::marker { color: var(--grau); }
+a { color: var(--blau); text-decoration: none; }
+strong { font-weight: 600; }
+hr { border: 0; border-top: 1px solid var(--linie); margin: 16px 0; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; margin: 8px 0 12px; font-size: 8pt; line-height: 1.3;
+        border: 1px solid var(--linie); border-radius: 12px; overflow: hidden; }
+th, td { padding: 3px 8px; vertical-align: top; text-align: left; border: 0; border-bottom: 1px solid var(--linie); }
+th { background: var(--flaeche); color: #636366; font-weight: 600; font-size: 8pt; }
+tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) td { background: #FAFAFC; }
+tr { break-inside: avoid; }
+blockquote { margin: 8px 0 12px; padding: 8px 16px; background: var(--flaeche); border-radius: 12px; border-left: 3px solid var(--blau); color: #3A3A3C; }
+blockquote p:last-child { margin-bottom: 0; }
+code { font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 8.3pt; background: var(--flaeche); padding: 1px 4px; border-radius: 4px; }
+pre { background: var(--flaeche); border-radius: 12px; padding: 8px 16px; overflow: hidden; white-space: pre-wrap; break-inside: avoid; }
+pre code { background: none; padding: 0; }
 """
 
 

@@ -1,7 +1,7 @@
 """Foliengerüst für den Vortrag (LN B: 15 min, höchstens 12 Folien) mit Sprechernotizen.
 
 Stand nach Iteration 10 und 10b, überarbeitet nach Kritik des Evaluators: Methodik auf Folien 2 bis 4 verdichtet,
-Business Understanding auf Folien 5 bis 8 (6:30 von 15:00, davon Make or Buy auf Folie 8), Publikumsfrage mit Business-Bezug, Live-Nachweis auf Folie 10.
+Business Understanding auf Folien 5 bis 8 (6:30 von 15:00, davon Make or Buy auf Folie 8), Publikumsfrage mit Business-Bezug, Demo auf Folie 9, Live-Nachweis auf Folie 10 (zusammen mit den KI-Irrwegen).
 Zahlen aus docs/iterationen.md, docs/business.md §8, reports/evaluation_iteration5.md bis 10b, reports/wettbewerbsbild_oberpfalz.md.
 Jede Folie hat Notizen: ZEIT, KERNAUSSAGE, FRAGE – ANTWORT, ZEIG-MIR-WO (Summe der Zeiten 15:00).
 Aufruf:  .venv\\Scripts\\python.exe -I src/report/vortrag.py      Ausgabe: docs/vortrag/vortrag_vergabe_radar.pptx
@@ -20,9 +20,10 @@ from pptx.util import Emu, Inches, Pt
 ROOT = Path(__file__).resolve().parent.parent.parent
 OUT = ROOT / "docs" / "vortrag" / "vortrag_vergabe_radar.pptx"
 
+# Apple Human Interface Guidelines: Systemfarben (Light), ruhige Flächen, runde Karten, Systemschrift
 DARK, TEAL, AMBER, RED, GREEN, GREY, PALE, INK, WHITE, SOFT = (RGBColor.from_string(h) for h in
-    ("0B3C49", "1C7293", "F2A541", "C8553D", "4C956C", "6C7A89", "EAF3F5", "1B2A33", "FFFFFF", "8FB8C4"))
-HEAD, BODY = "Cambria", "Calibri"
+    ("1C1C1E", "007AFF", "FF9F0A", "FF3B30", "34C759", "6E6E73", "F2F2F7", "1C1C1E", "FFFFFF", "AEAEB2"))
+HEAD, BODY = "Segoe UI Semibold", "Segoe UI"   # Ersatz für San Francisco unter Windows
 
 prs = Presentation()
 prs.slide_width, prs.slide_height = Inches(10), Inches(5.625)
@@ -51,14 +52,22 @@ def box(s, x, y, w, h, paras, size=14, color=INK, bold=False, align=PP_ALIGN.LEF
             r = para.add_run()
             r.text = text
             r.font.name = o.get("font", font)
-            r.font.size = Pt(o.get("size", size))
+            r.font.size = Pt(round(o.get("size", size) * 0.9 * 2) / 2)  # Segoe UI ist breiter als Calibri
             r.font.bold = o.get("bold", bold)
             r.font.color.rgb = o.get("color", color)
     return tb
 
 
 def rect(s, x, y, w, h, fill, shape=MSO_SHAPE.RECTANGLE, name=None):
+    """Fläche. Rechtecke werden zu Karten mit weichen Ecken (HIG); dünne Streifen werden eingerückte Kapseln."""
+    if shape == MSO_SHAPE.RECTANGLE and h <= 0.1:
+        x, w = x + 0.2, w - 0.4
+        shape = MSO_SHAPE.ROUNDED_RECTANGLE
+    elif shape == MSO_SHAPE.RECTANGLE and min(w, h) >= 0.3:
+        shape = MSO_SHAPE.ROUNDED_RECTANGLE
     sh = s.shapes.add_shape(shape, Inches(x), Inches(y), Inches(w), Inches(h))
+    if shape == MSO_SHAPE.ROUNDED_RECTANGLE:
+        sh.adjustments[0] = 0.5 if h <= 0.1 else min(0.12 / min(w, h), 0.5)
     sh.fill.solid()
     sh.fill.fore_color.rgb = fill
     sh.line.fill.background()
@@ -84,7 +93,7 @@ def new_slide(titel, notes, dark=False):
         p.alignment = PP_ALIGN.LEFT
         r = p.add_run()
         r.text = titel
-        r.font.name, r.font.size, r.font.bold, r.font.color.rgb = HEAD, Pt(28), True, DARK
+        r.font.name, r.font.size, r.font.bold, r.font.color.rgb = HEAD, Pt(24), True, DARK
     box(s, 9.1, 5.2, 0.5, 0.3, str(_nr[0]), size=10, color=SOFT if dark else GREY, align=PP_ALIGN.RIGHT, name="Foliennummer")
     s.notes_slide.notes_text_frame.text = notes
     return s
@@ -291,7 +300,7 @@ s = new_slide("Competitive Edge und Make or Buy",
 rect(s, 0.5, 1.05, 9.0, 0.5, PALE, name="Gruende Streifen")
 box(s, 0.62, 1.05, 8.8, 0.5, [[("Als eigenes Produkt ergibt die Liste keinen Sinn: ", {"bold": True, "color": DARK}), ("1 Kernprodukt kostenlos · 2 Problem eine Setzung · 3 Nahe Zukunft fehlt · 4 Ende ist kein Termin · 5 Markt klein", {})]],
     size=11, anchor=MSO_ANCHOR.MIDDLE, name="Gruende Text")
-box(s, 0.5, 1.62, 5.7, 0.28, "Betrieb baut selbst: Kosten in 3 Jahren und Break-even (Basismodell, Annahmen)", size=12, bold=True, color=DARK, name="Make or Buy Titel")
+box(s, 0.5, 1.62, 5.7, 0.28, "Eigenbau: Kosten in 3 Jahren, Break-even (Annahmen)", size=12, bold=True, color=DARK, name="Make or Buy Titel")
 mob = [("Eigenbau", "Kosten 3 J.", "Break-even: DTAD", "AR Starter", "Vergabeweiser"),
        ("Niedrig", "3.500 €", "2,0 Jahre", "nie", "nie"),
        ("Mittel", "12.000 €", "nie", "nie", "nie"),
@@ -307,7 +316,7 @@ for r, zeile in enumerate(mob):
         cell = tbl.table.cell(r, c)
         cell.text = wert
         run = cell.text_frame.paragraphs[0].runs[0]
-        run.font.size, run.font.name = Pt(11), BODY
+        run.font.size, run.font.name = Pt(10), BODY
         run.font.bold = r == 0 or c == 0
         run.font.color.rgb = WHITE if r == 0 else INK
         cell.fill.solid()
@@ -326,46 +335,64 @@ rect(s, 5.05, 3.65, 4.45, 1.45, PALE, name="Nicht belegt Karte")
 rect(s, 5.05, 3.65, 4.45, 0.07, AMBER, name="Nicht belegt Streifen")
 box(s, 5.2, 3.75, 4.2, 1.35, [[("Nicht belegt", {"bold": True, "size": 13, "color": DARK})], "• Bessere Lesequalität; Nachfrage und Zahlungsbereitschaft (n = 3)", "• Relevanz der Datenübergabe für Betriebe (H1, H2 ungetestet)", "• Abdeckung: nur TED, 79,4 % im letzten Jahr, rund 73 % aller Lose"], size=10.5, space=2, name="Nicht belegt Text")
 
-# 9 KI-Irrwege und Prozessfehler -----------------------------------------------------------------------------
-s = new_slide("KI-Irrwege und ein Prozessfehler",
-              "ZEIT 1:15. KERNAUSSAGE: Claude Code hat Regeln, Stichproben und Auswertungen mitgebaut; jeder dieser Fehler wurde von einem getrennten Evaluator, im Test oder vom Nutzer gefunden, nicht von der Hand, die ihn gemacht hat. "
+# 9 Demo: Datenübergabe als Push-Nachricht ----------------------------------------------------------------------
+s = new_slide("Demo: von der Bekanntmachung zur Push-Nachricht",
+              "ZEIT 0:45. KERNAUSSAGE: Eine kleine Demo zeigt, wie die Datenübergabe aussehen könnte: Aus einem Schnappschuss öffentlicher TED-Bekanntmachungen (621 Stück, 02. bis 16.10.2026) filtert ein Profil für die Oberpfalz, eine KI-Stufe urteilt über die Eignung, und das Ergebnis wird als Teams-Karte und als E-Mail-Entwurf erzeugt. Nichts wurde gesendet, alles läuft offline reproduzierbar. ""EINORDNUNG (wichtig): Die Demo ist eine Veranschaulichung der Datenübergabe, kein Business Case und kein Beleg für Nachfrage; der Auswahlbogen (docs/business_case_auswahl.md) hat diese Idee (K-I) wegen K7 = 0 ausgeschlossen. Sie wurde danach auf Wunsch gebaut. Profil und Stichtag sind erfunden. ""ZAHLEN (Fakt aus dem Lauf, docs/demo/ergebnis_lauf.json): 621 Bekanntmachungen, 145 im Fenster, 131 ohne Doppelveröffentlichung, 125 mit Reinigungs-CPV, davon in der Oberpfalz 4. Profil P1 (Schwandorf, 60 km): 4 Nachrichten, KI passt/unklar/nicht 3/1/0; Profil P2 (Amberg, 25 km): 2 Treffer, 1/1/0. Die Trefferzahlen sind kein Befund. KI gegen Regel stimmt in 13 von 14 Fällen überein, davon 5 trivial, ohne Referenz durch einen Menschen. Der Vorvertrags-Hinweis ist gebaut, an echten Bekanntmachungen nie ausgelöst (0 von 6), also nicht belegt. Teams-Anzeige, Versand und Live-Modus wurden nie getestet. ""FRAGE – ANTWORT: „Warum eine Demo, wenn es keinen Business Case gibt?“ Sie zeigt nur die technische Machbarkeit der Datenübergabe (offene Daten, Schema, KI-Stufe); sie sagt nichts über Nachfrage. Das Alleinstellungsmerkmal beanspruchen wir nicht: AusschreibungsRadar bietet Eignungsabgleich laut Anbieterseite schon. ""ZEIG-MIR-WO: docs/demo_push.md, docs/demo/push_demo.html (im Browser öffnen), docs/demo/nachrichten/.")
+box(s, 0.5, 1.0, 9.0, 0.3, "Veranschaulichung der Datenübergabe für die Oberpfalz, offline aus einem TED-Schnappschuss, nichts gesendet; kein Business Case", size=12, color=GREY, name="Demo Einordnung")
+stufen = [("621", "Bekanntmachungen DE, CPV 909* (Schnappschuss)"), ("145", "veröffentlicht 02. bis 16.10.2026"),
+          ("125", "Gebäudereinigung, ohne Doppelungen"), ("4", "Oberpfalz (Profil P1: 4 Nachrichten, P2: 2)")]
+for i, (zahl, text) in enumerate(stufen):
+    y = 1.4 + i * 0.78
+    rect(s, 0.5, y, 4.3, 0.68, PALE, name=f"Trichter {i + 1} Karte")
+    box(s, 0.65, y, 1.0, 0.68, zahl, size=24, bold=True, color=TEAL, font=HEAD, anchor=MSO_ANCHOR.MIDDLE, name=f"Trichter {i + 1} Zahl")
+    box(s, 1.65, y, 3.05, 0.68, text, size=12, anchor=MSO_ANCHOR.MIDDLE, name=f"Trichter {i + 1} Text")
+box(s, 0.5, 4.55, 4.3, 0.5, "KI-Stufe (7 gespeicherte Urteile): P1 passt/unklar/nicht 3/1/0, P2 1/1/0. Trefferzahlen sind kein Befund.", size=10.5, color=GREY, name="Demo KI")
+# Mock einer Teams-Karte (Aufbau der echten Karte docs/demo/nachrichten/P1_691173-2026.json)
+rect(s, 5.1, 1.4, 4.4, 3.1, WHITE, name="Karte Rahmen").line.color.rgb = RGBColor.from_string("D1D1D6")
+rect(s, 5.1, 1.4, 0.09, 3.1, TEAL, MSO_SHAPE.RECTANGLE, name="Karte Akzent")
+box(s, 5.35, 1.5, 4.0, 0.7, [[("Neue Ausschreibung: Unterhalts- sowie Glas- und Rahmenreinigung, FA Schwandorf", {"bold": True, "size": 12.5})]], name="Karte Titel")
+box(s, 5.35, 2.25, 4.0, 1.5, [[("Auftraggeber  ", {"color": GREY}), ("Freistaat Bayern (Zentrale Vergabestelle)", {})],
+                              [("Ort  ", {"color": GREY}), ("Schwandorf; im Text auch Neunburg v. Wald", {})],
+                              [("Frist  ", {"color": GREY}), ("11.11.2026", {})],
+                              [("Laufzeit  ", {"color": GREY}), ("Datenfeld bis 31.03.2033; Text: zunächst bis 31.03.2030", {})]],
+    size=11, space=3, name="Karte Fakten")
+rect(s, 5.35, 3.85, 4.0, 0.55, PALE, name="Karte KI Block")
+box(s, 5.48, 3.85, 3.75, 0.55, "KI-Deutung, nicht Fakt: Begründung nicht geprüft", size=10.5, color=GREY, anchor=MSO_ANCHOR.MIDDLE, name="Karte KI Text")
+box(s, 5.1, 4.58, 4.4, 0.45, "Gekürzte Darstellung der Karte P1_691173-2026. Anzeige in Teams nie getestet.", size=10, color=GREY, name="Karte Hinweis")
+
+# 10 KI-Irrwege, Prozessfehler und Trennung von Entwicklung und Test (Live-Nachweis) ------------------------------
+s = new_slide("KI-Irrwege und Trennung von Entwicklung und Test",
+              (              "ZEIT 1:30 (Teil 1 Irrwege etwa 0:45, Teil 2 Trennung von Entwicklung und Test etwa 0:45). KERNAUSSAGE: Claude Code hat Regeln, Stichproben und Auswertungen mitgebaut; jeder dieser Fehler wurde von einem getrennten Evaluator, im Test oder vom Nutzer gefunden, nicht von der Hand, die ihn gemacht hat. "
               "Vier von 27 Einträgen in docs/ki_irrwege.md (der Paket-B-Fall steht im Lab-Log, Abschnitt 7): (1) Entwicklung 10–11 von 12 plausibel, im Test 11 von 24 richtig (Iteration 3): Regel verworfen. (2) „Blind“ war nicht blind: Leser der Iteration 8 hatten die Projektbeschreibung im Kontext (CLAUDE.md), gefunden vom Evaluator, offen genannt. "
               "(3) Konkurrenz übersehen: Die Suche vom 24.10. fand keinen deutschen Dienst, tatsächlich gibt es zwei; gefunden vom Recherche-Agenten nach dem Hinweis des Dozenten. (4) Schwelle unerreichbar: Claude übernahm die Diskordanzrate von 17 % aus Iteration 10 für 160 Lose, es waren 9,4 %; gefunden vor den Leserantworten, nicht nachträglich geändert. "
               "LERNPUNKT STATT SCHWÄCHE: „Konkurrenz erst in Iteration 10 gesehen“ ist ein Prozessfehler, kein Pech. Plan G1.1 (Wettbewerber sichten) blieb offen; die Entscheidung gegen Kundenkontakt fiel am 2026-10-29. Kosten: Iterationen 5 bis 9 arbeiteten an einer Liste, die es kostenlos gibt. Lehre: ein Marktgate in Phase 1, vor der Modellierung (Gibt es das schon? Wer zahlt dafür? Nach Gesprächen, nicht nach Annahmen). "
               "FRAGE – ANTWORT: „Warum erst jetzt die Konkurrenz?“ Weil die Sichtung (G1.1) offen blieb und die Suche am 24.10. die Dienste nicht fand; die Suche war zu eng. Das ist ein Prozessfehler im Business Understanding. Er hat Zeit gekostet (Iterationen 5 bis 9), aber das Ergebnis geändert: Wir sagen heute, dass die Liste kein eigenes Produkt ist. "
               "LERNPUNKT „Null = Verdachtsmoment“ (ein Satz, wenn Zeit): Paket B fand zunächst 0 von 84 Verfahren nicht auf TED; wir haben die Null nicht berichtet, sondern geprüft, und die Robustheitsprüfung zeigte ein Filterartefakt (nationale Verfahren tragen am Lieferort meist nur „DE2“). Danach 26,7 %. Eine Null ist ein Verdachtsmoment, kein Ergebnis. Die erste Auswertung („B1 deutlich verfehlt“) gilt nicht; B1 ist nicht entscheidbar. "
               "Weitere (nicht auf der Folie): Prüfer und Regel von derselben Hand (Iteration 2), versteckte Felder (65 von 95 „unbekannt“, Iteration 7), Dauerfeld enthält die Option schon (12 Lose, 0,13 % der Liste). Ein eigener Subagent (Evaluator) prüft jede Iteration kritisch. "
-              "ZEIG-MIR-WO: docs/ki_irrwege.md, docs/projektplan.md (G1.1), reports/evaluation_iteration10b.md.")
-items = [("Entwicklung gut, Test schlecht", "10–11 von 12 plausibel, im Test 11 von 24 richtig (It. 3). Folge: Regel verworfen."),
-         ("„Blind“ war nicht blind", "Leser hatten die Projektbeschreibung im Kontext (It. 8). Folge: offen berichtet."),
-         ("Konkurrenz übersehen", "Suche vom 24.10. fand keinen deutschen Dienst; es gibt zwei (It. 10). Folge: Business Understanding neu."),
-         ("Schwelle unerreichbar", "≥ 16 von höchstens 15 Losen (It. 10b). Folge: nicht geändert, offen berichtet.")]
-for i, (h, t) in enumerate(items):
-    x, y = 0.5 + (i % 2) * 4.6, 1.15 + (i // 2) * 1.3
-    rect(s, x, y, 4.4, 1.2, PALE, name=f"Irrweg {i + 1}")
-    box(s, x + 0.2, y + 0.08, 4.0, 0.35, h, size=15, bold=True, color=DARK)
-    box(s, x + 0.2, y + 0.48, 4.0, 0.7, t, size=12)
-rect(s, 0.5, 3.85, 9.0, 1.1, DARK, name="Lernpunkt Banner")
-box(s, 0.7, 3.9, 8.6, 1.0, [[("Lernpunkt, ein Prozessfehler: ", {"bold": True, "color": AMBER}), ("Plan G1.1 (Wettbewerber sichten) blieb offen, am 2026-10-29 fiel die Entscheidung gegen Kundenkontakt. Kosten: Iterationen 5 bis 9 arbeiteten an einer Liste, die es kostenlos gibt. Lehre: Marktgate in Phase 1, vor der Modellierung.", {"color": WHITE})]], size=13, anchor=MSO_ANCHOR.MIDDLE, name="Lernpunkt Text")
-
-# 10 Trennung Entwicklung/Test (Live-Nachweis) ---------------------------------------------------------------
-s = new_slide("Trennung von Entwicklung und Test",
-              "ZEIT 1:00. KERNAUSSAGE: Hypothese, Kriterien und Seed stehen im Git, bevor die Stichprobe gezogen und die Antworten gelesen werden; die Commit-Reihenfolge ist der Nachweis, dass Test und Entwicklung getrennt sind. Die Folie zeigt die Reihenfolge der Iteration 10b (Kurzfassung der Commit-Nachrichten, im Terminal von unten nach oben lesen). "
+              "ZEIG-MIR-WO: docs/ki_irrwege.md, docs/projektplan.md (G1.1), reports/evaluation_iteration10b.md. ") + (              "TEIL 2, TRENNUNG VON ENTWICKLUNG UND TEST. KERNAUSSAGE: Hypothese, Kriterien und Seed stehen im Git, bevor die Stichprobe gezogen und die Antworten gelesen werden; die Commit-Reihenfolge ist der Nachweis, dass Test und Entwicklung getrennt sind. Die Folie zeigt die Reihenfolge der Iteration 10b (Kurzfassung der Commit-Nachrichten, im Terminal von unten nach oben lesen). "
               "WAS IN DER FRAGERUNDE LIVE GEZEIGT WIRD: (1) Im Terminal `git log --oneline`: 4f50436 (Hypothese, Kriterien, Skript und Seed 20261112 vorab), 9d63c59 (Stichprobe gezogen, SHA-256 des Schlüssels 2cd00206…3e33; Schlüsseldatei lokal, nicht im Git: data/processed/stichprobe_iteration10b_schluessel.csv), 49bb198 (Skript für Abruf und Auswertung vor dem Abruf), 6b7e8d8 (Paket und Leseskript vor den Antworten), 69917ff (Antworten der Leser unverändert), f6583cc (Auswertung). "
               "(2) Eine Regel in src/prepare/vertragsliste.py öffnen und einen Parameter ändern (z. B. Seed in src/prepare/stichprobe_iteration10b.py): Erwartung: Zahlen ändern sich leicht, die Aussagen bleiben, da die Stichprobe nur 70 bzw. 160 Lose hat. (3) Fehlwerte zeigen: 33 der 130 Oberpfalz-Lose ohne Ende (Stufe F), keine Laufzeitfelder im XML (reports/beispiel_liste_oberpfalz.csv). "
               "Iteration 9 genauso: Regeln a03a4a8, Seed und Skript 4521952, Stichprobe und Auswertungsskript b3b1471, Antworten erst e1726e7. Entwicklungsfälle sind aus der Stichprobe ausgeschlossen (reports/entwicklung_iteration9_notices.txt). "
               "EHRLICHE LÜCKEN: das Lauf-Skript der Iteration-9-Leser wurde erst mit den Antworten committet; in Iteration 8 kannten die Leser den Fehlertyp; in 10b liegt das Protokoll der Leserläufe außerhalb des Repos. Der 10b-Fehler (Schwelle unerreichbar) wurde vor den Leserantworten bemerkt und offengelegt, aber nicht mehr geändert. "
-              "ZEIG-MIR-WO: git log, src/prepare/stichprobe_iteration10b.py, docs/reproduzierbarkeit.md.")
-rect(s, 0.5, 1.15, 5.9, 2.6, INK, name="Terminal")
-box(s, 0.7, 1.25, 5.6, 2.45, [[("$ git log --oneline", {"color": AMBER})],
-    "f6583cc Auswertung nach den Lesern", "69917ff Antworten der Leser, unverändert", "6b7e8d8 Paket und Leseskript vor den Antworten",
-    "49bb198 Skript für Abruf und Auswertung", "9d63c59 Stichprobe gezogen, Schlüssel-Hash", "4f50436 Hypothese, Kriterien, Seed vorab"],
-    size=12, color=WHITE, font="Consolas", space=5, name="Terminal Text")
-box(s, 0.5, 3.85, 5.9, 0.5, "Iteration 10b, Kurzfassung der Nachrichten; von unten nach oben lesen", size=12, color=GREY)
-rect(s, 6.6, 1.15, 2.9, 2.6, PALE, name="Reihenfolge Karte")
-box(s, 6.75, 1.25, 2.6, 2.45, [[("Was die Reihenfolge zeigt", {"bold": True, "color": DARK, "size": 14})], "• Kriterien und Seed vor der Stichprobe", "• Skript vor dem Abruf, Paket vor den Antworten", "• Antworten unverändert, Auswertung zuletzt"], size=12, space=5, name="Reihenfolge Text")
-rect(s, 0.5, 4.4, 9.0, 0.6, DARK, name="Live Banner")
-box(s, 0.65, 4.4, 8.7, 0.6, [[("In der Fragerunde live: ", {"bold": True, "color": AMBER}), ("git log, Regel in vertragsliste.py ändern, Fehlwerte (Stufe F) zeigen. Lücke: Leseprotokoll von 10b liegt außerhalb des Repos.", {"color": WHITE})]], size=13, anchor=MSO_ANCHOR.MIDDLE, name="Live Text")
+              "ZEIG-MIR-WO: git log, src/prepare/stichprobe_iteration10b.py, docs/reproduzierbarkeit.md."))
+items = [("Entwicklung gut, Test schlecht", "10–11 von 12 plausibel, im Test 11 von 24 richtig (It. 3). Regel verworfen."),
+         ("„Blind“ war nicht blind", "Leser hatten die Projektbeschreibung im Kontext (It. 8). Offen berichtet."),
+         ("Konkurrenz übersehen", "Suche vom 24.10. fand keinen deutschen Dienst; es gibt zwei (It. 10)."),
+         ("Schwelle unerreichbar", "≥ 16 von höchstens 15 Losen (It. 10b). Nicht geändert, offen berichtet.")]
+for i, (h, t) in enumerate(items):
+    y = 1.1 + i * 0.95
+    rect(s, 0.5, y, 4.5, 0.85, PALE, name=f"Irrweg {i + 1}")
+    box(s, 0.68, y + 0.07, 4.15, 0.28, h, size=12.5, bold=True, color=DARK)
+    box(s, 0.68, y + 0.38, 4.15, 0.45, t, size=10.5)
+rect(s, 5.2, 1.1, 4.3, 1.85, INK, name="Terminal")
+box(s, 5.35, 1.18, 4.0, 1.7, [[("$ git log --oneline", {"color": AMBER})],
+    "f6583cc Auswertung nach den Lesern", "69917ff Antworten, unverändert", "6b7e8d8 Paket und Leseskript vor Antworten",
+    "49bb198 Skript für Abruf, Auswertung", "9d63c59 Stichprobe gezogen, Schlüssel-Hash", "4f50436 Hypothese, Kriterien, Seed vorab"],
+    size=10.5, color=WHITE, font="Consolas", space=3, name="Terminal Text")
+box(s, 5.2, 3.0, 4.3, 0.4, "Iteration 10b, von unten nach oben lesen: Kriterien und Seed vor der Stichprobe, Antworten unverändert, Auswertung zuletzt.", size=10, color=GREY, name="Terminal Unterschrift")
+rect(s, 5.2, 3.55, 4.3, 1.4, DARK, name="Lernpunkt Banner")
+box(s, 5.38, 3.6, 3.95, 1.3, [[("Lernpunkt, ein Prozessfehler: ", {"bold": True, "color": AMBER}), ("Plan G1.1 (Wettbewerber sichten) blieb offen, am 2026-10-29 fiel die Entscheidung gegen Kundenkontakt. Iterationen 5 bis 9 arbeiteten an einer Liste, die es kostenlos gibt. Lehre: Marktgate in Phase 1, vor der Modellierung.", {"color": WHITE})]], size=11, anchor=MSO_ANCHOR.MIDDLE, name="Lernpunkt Text")
+box(s, 0.5, 4.95, 4.5, 0.3, "Live in der Fragerunde: git log, Regel in vertragsliste.py ändern, Fehlwerte (Stufe F). Lücke: Leseprotokoll 10b außerhalb des Repos.", size=9.5, color=GREY, name="Live Hinweis")
 
 # 11 Empfehlung und Grenzen ----------------------------------------------------------------------------------
 s = new_slide("Empfehlung und Grenzen",
@@ -387,10 +414,10 @@ for i, (h, f, pts) in enumerate(ampel):
 box(s, 0.5, 4.85, 8.5, 0.3, "Quellen: reports/evaluation_iteration9.md und 10b, docs/business.md §8", size=10, color=GREY)
 
 # 12 Fazit ------------------------------------------------------------------------------------------------
-s = new_slide("", "ZEIT 0:45. KERNAUSSAGE in einem Satz wiederholen, dann Brücke zur Fragenrunde. Gesamtzeit: 15:00 (Ziel ±30 Sekunden); Zeitbudget je Folie: 0:30 / 1:00 / 1:15 / 1:15 / 1:30 / 1:30 / 1:30 / 2:00 / 1:15 / 1:00 / 1:30 / 0:45 (Business Understanding Folien 5 bis 8: 6:30 = 43 %). "
+s = new_slide("", "ZEIT 0:45. KERNAUSSAGE in einem Satz wiederholen, dann Brücke zur Fragenrunde. Gesamtzeit: 15:00 (Ziel ±30 Sekunden); Zeitbudget je Folie: 0:30 / 1:00 / 1:15 / 1:15 / 1:30 / 1:30 / 1:30 / 2:00 / 0:45 / 1:30 / 1:30 / 0:45 (Business Understanding Folien 5 bis 8: 6:30 = 43 %). "
               "Satz zum Mitnehmen: Den Termin einer Neuausschreibung sagen TED-Daten nicht vorher; eine Liste der Vertragsenden lässt sich lesen, ist aber kein eigenes Produkt, solange Vergabeweiser sie kostenlos bietet. Lehre: Marktgate in Phase 1, vor der Modellierung. "
               "FRAGENRUNDE vorbereiten: (1) Methodenfrage: warum ±3 Monate, warum diese Baseline, warum KI-Leser als Maß, warum nur diskordante Lose (Folien 3, 4, 7). (2) Live-Nachweis: git log und die Reihenfolge der Commits zeigen, Seed und Schlüssel-Hash (Folie 10), Regel in src/prepare/vertragsliste.py öffnen, Fehlwerte (Stufe F) in reports/beispiel_liste_oberpfalz.csv zeigen. "
-              "(3) Transferfrage: „Warum nicht Vergabeweiser nutzen?“ (Folie 6), „Warum nicht gleich die Daten von bund.de einbauen?“ (Folie 8), „Was war mit der Null in Paket B?“ (Folie 9), „Warum erst jetzt die Konkurrenz?“ (Folie 9), „Wer zahlt?“ (Folie 5), „Warum ist W8a verfehlt?“ (Folie 7), „Warum selbst bauen statt Vergabeweiser nutzen?“, „Welches Verwaltungssystem haben Betriebe?“, „Wer pflegt das?“, „Warum ist die Webseite nur Demo?“ (alle Folie 8; Zeig-mir-wo: docs/prototyp/export/vertragsliste_v1_de.csv), anderer Standort, andere Nische, doppeltes Volumen (Folie 8 und 11). Nicht sagen: „genauer als Vergabeweiser“, „Vorsprung belegt“ ohne den Zusatz „auf Los- und Definitionsebene“, „kein Unterschied“.", dark=True)
+              "(3) Transferfrage: „Warum nicht Vergabeweiser nutzen?“ (Folie 6), „Warum nicht gleich die Daten von bund.de einbauen?“ (Folie 8), „Was war mit der Null in Paket B?“ (Folie 10), „Warum erst jetzt die Konkurrenz?“ (Folie 10), „Wer zahlt?“ (Folie 5), „Warum ist W8a verfehlt?“ (Folie 7), „Warum selbst bauen statt Vergabeweiser nutzen?“, „Welches Verwaltungssystem haben Betriebe?“, „Wer pflegt das?“, „Warum eine Demo ohne Business Case?“ (Folie 9), „Warum ist die Webseite nur Demo?“ (alle Folie 8; Zeig-mir-wo: docs/prototyp/export/vertragsliste_v1_de.csv), anderer Standort, andere Nische, doppeltes Volumen (Folie 8 und 11). Nicht sagen: „genauer als Vergabeweiser“, „Vorsprung belegt“ ohne den Zusatz „auf Los- und Definitionsebene“, „kein Unterschied“.", dark=True)
 box(s, 0.6, 0.5, 8.8, 0.8, "Fazit", size=36, bold=True, color=AMBER, font=HEAD, name="Fazit Titel")
 box(s, 0.6, 1.4, 8.8, 2.5, "TED-Daten sagen den Termin einer Neuausschreibung nicht vorher (28,8 % statt 60 %). Eine Liste der Vertragsenden lässt sich daraus lesen: 94,3 % Übereinstimmung mit zwei KI-Lesern (n = 70, Wilson 86–98 %; Vergleichswert teilweise zirkulär; Mensch 14/15). "
     "Ein eigenes Produkt ist sie nicht, denn Vergabeweiser bietet sie kostenlos. Ein Unterschied bleibt auf Los- und Definitionsebene (Grundlaufzeit statt Höchstende, rund 10 % der Lose); "
