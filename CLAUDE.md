@@ -7,7 +7,7 @@ ausgeschrieben werden, basierend auf Zuschlagsbekanntmachungen aus TED
 Neuausschreibungen vorbereiten wollen (z. B. Gebäudereinigung, IT-Wartung,
 Winterdienst).
 
-## Aktuelle Phase: nach Iteration 9, Projektabschluss (Lab-Log, Vortrag)
+## Aktuelle Phase: nach Iteration 10/10b und Business-Case-Prüfung, Projektabschluss (Lab-Log, Vortrag)
 Iteration 5 ist abgeschlossen (Entscheidung: Idee anpassen). Die Punktprognose „Höchstende − 6 Monate“ trägt nicht: Trefferquote ±3 Monate
 28,8 % (Schwelle 60 %, naive Referenz 17,3 %) auf 52 handgeprüften Paaren; Abdeckung der Vertragsliste 79,7 % der Lose.
 Produktkern: Vertragsliste mit Enddaten (Grundlaufzeit, Höchstende, Herkunft) ohne Terminprognose.
@@ -20,10 +20,13 @@ Iteration 7 ist abgeschlossen (Entscheidung: Abschluss mit diesem Stand, kein dr
 Ende „laut Bekanntmachung“, Höchstende nur Hinweis.
 Iteration 8 ist abgeschlossen (Entscheidung: weiter, Projektabschluss, eingeschränkt formuliert): zwei KI-Leser (Opus, Sonnet) auf allen 95 Losen; Z0 94/95, Z1 77/80, Z3 75/80 und 67/72, Z4 10/10, Z2 14/15 (bei einheitlichem Maßstab 11/15). Leser nicht unabhängig, nicht von Menschen bestätigt; neue Fehlerarten (Lose ohne Zuschlag, Regel 6, „3 Jahre mit Option“) bleiben offene Grenzen. Keine weitere Iteration.
 Iteration 9 ist abgeschlossen (Entscheidung: weiter, Projektabschluss, eingeschränkt formuliert): Regeln 6 bis 10, neue Stichprobe (Seed 20261109), KI-Leser ohne Projektkontext, Kommilitone an 15 Losen. V1 66/70 = 94,3 %, V2 28/30, V3 66 gegen 65 (alt), V5 110/110, V6 14/15; V4 und V7 verfehlt, V8 teilweise. Prototyp = Fassung der Iteration 9 (Liste 9.325 Lose), Höchstende nur Hinweis. Keine weitere Iteration.
-Kein Kundenkontakt (A1/A15 bleiben ungeprüft).
+Iteration 10/10b ist abgeschlossen (Entscheidung: weiter, Projektabschluss, eingeschränkt formuliert; Tag iteration-10): Der Dozent verlangt mehr Business Understanding und Competitive Edge. Konkurrenz Vergabeweiser (kostenlos, API) und AusschreibungsRadar (0 bis 149 €/Monat): Annahme A2 widerlegt, die Liste als eigenes Produkt trägt nicht. Der Vorsprung der Liste ist ein Merkmalsunterschied (Ende je Los, Grundlaufzeit statt Höchstende, ca. 10 % der Lose), kein belegter Qualitätsvorteil. Paket B: 26,7 % der Oberpfälzer Reinigungsverfahren stehen nicht auf TED.
+Business-Case-Auswahl (docs/business_case_auswahl.md): kein Kandidat erreicht 8 Punkte, Ergebnis „kein tragfähiger Business Case“; Test K-A nach Vorprüfung abgebrochen (23 von 52 Paaren, Schwelle 30). Sicht eines Betriebs (Make or Buy, Export-Schema 1.1): docs/business.md §9, reports/make_or_buy.md. Hypothesen H1/H2 (A21/A22) ungeprüft; Wizard-of-Oz-Blatt (docs/wizard_of_oz_blatt.md) vorbereitet, nicht durchgeführt.
+Demo (docs/demo_push.md, src/demo/): Profil-Match mit KI-Stufe und Push-Nachrichten für die Oberpfalz, offline reproduzierbar, nichts gesendet; nur Veranschaulichung der Datenübergabe, kein Business Case (K7=0).
+Kundenkontakt: drei Telefongespräche (n = 3, 2026-11-05, durch den Nutzer); keine Kaltakquise. Projekt ist LN B (Zweierteam Manuel Strobel, Ludwig Richthammer, mit dem Dozenten besprochen). Webseite-Prototyp: docs/prototyp/vertragsliste.html; Vortrag: docs/vortrag/; Lab-Log: docs/lab_log.md/.pdf (aus docs/lab_log_vorlage.md erzeugt). Übergabe an den Kommilitonen: docs/mitarbeit_uebergabe.md.
 Bewertung als Leistungsnachweis: docs/bewertung_LN.md; Quellen: docs/quellen.md; Reproduzierbarkeit: docs/reproduzierbarkeit.md.
 Daten: TED-API ab Okt. 2016; vor eForms Laufzeit über REF_NOTICE.
-Details: docs/iterationen.md, reports/evaluation_iteration5.md, reports/evaluation_iteration6.md, reports/evaluation_iteration7.md, reports/evaluation_iteration8.md, reports/evaluation_iteration9.md
+Details: docs/iterationen.md, reports/evaluation_iteration5.md, reports/evaluation_iteration6.md, reports/evaluation_iteration7.md, reports/evaluation_iteration8.md, reports/evaluation_iteration9.md, reports/evaluation_iteration10*.md
 
 ## Später geplant
 - Nische wählen, Backtest (erwartetes Auslaufdatum vs. tatsächliche
