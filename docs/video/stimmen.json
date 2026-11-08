@@ -1,0 +1,12 @@
+{
+ "_hinweis": "Nur fuer --stimme elevenlabs. voice_id je Sprecher selbst im eigenen ElevenLabs-Konto eintragen (Voice Library, deutsch/mehrsprachig geeignet). Platzhalter sind absichtlich keine echten IDs. Keinen API-Schluessel in diese Datei schreiben (Umgebungsvariable ELEVENLABS_API_KEY).",
+ "model_id": "eleven_multilingual_v2",
+ "output_format": "pcm_22050",
+ "sprecher": {
+  "E": {"name": "Erzaehler", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0},
+  "F": {"name": "Franz", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0},
+  "B": {"name": "Bit (KI)", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.05},
+  "P": {"name": "Pruefi (Kontrolle)", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0},
+  "Q": {"name": "Frage ans Publikum", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0}
+ }
+}

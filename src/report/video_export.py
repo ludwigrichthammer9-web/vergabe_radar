@@ -5,11 +5,11 @@ Voraussetzungen (eigene venv, nichts im Haupt-Projekt):
     .venv-video\Scripts\python.exe -m pip install -r requirements-video.txt
     (Browser: installiertes Microsoft Edge über channel="msedge", kein Download;
      ffmpeg-Binary kommt aus dem Paket imageio-ffmpeg.)
-Vorher die WAV-Dateien erzeugen: src/report/video_vertonung.py (Windows SAPI, synthetisch).
+Vorher die WAV-Dateien erzeugen: src/report/video_vertonung.py (Piper, ElevenLabs oder --stimme sapi; synthetisch).
 
 Aufruf:
     .venv-video\Scripts\python.exe src\report\video_export.py [--von 8] [--bis 186] [--fps 30]
-        [--out docs/video/franz_und_die_glaskugel_szenen_0-5.mp4] [--stills DIR]
+        [--out docs/video/franz_und_die_glaskugel_szenen_0-5_v2.mp4] [--audio DIR] [--stills DIR]
 
 Ablauf: Die Seite wird mit ?render geladen; window.render(t) zeichnet das Bild zur Zeit t.
 Jedes Bild wird als PNG aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien).
@@ -43,7 +43,8 @@ def main():
     ap.add_argument("--von", type=float, default=8)
     ap.add_argument("--bis", type=float, default=186)
     ap.add_argument("--fps", type=int, default=30)
-    ap.add_argument("--out", default=str(VIDEO / "franz_und_die_glaskugel_szenen_0-5.mp4"))
+    ap.add_argument("--out", default=str(VIDEO / "franz_und_die_glaskugel_szenen_0-5_v2.mp4"))
+    ap.add_argument("--audio", default=str(AUDIO), help="Ordner mit cap_NN.wav und manifest.json")
     ap.add_argument("--stills", default=None, help="Ordner: Standbilder bei ausgewählten Zeiten speichern")
     a = ap.parse_args()
     fps = a.fps
@@ -64,7 +65,8 @@ def main():
             return (QUIZ_T - a.von) + HOLD_S + HINT_S + (t - QUIZ_WEITER)
         return t - a.von
 
-    manifest = json.loads((AUDIO / "manifest.json").read_text(encoding="utf-8"))
+    audio = Path(a.audio)
+    manifest = json.loads((audio / "manifest.json").read_text(encoding="utf-8"))
     spuren = []
     for m in manifest:
         s, e = m["start"], m["ende"]
@@ -72,7 +74,7 @@ def main():
             continue
         if mit_quiz and QUIZ_T < s < QUIZ_WEITER:
             continue
-        spuren.append((AUDIO / m["datei"], out_offset(s)))
+        spuren.append((audio / m["datei"], out_offset(s)))
 
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     cmd = [ff, "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-c:v", "png", "-i", "-"]

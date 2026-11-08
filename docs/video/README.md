@@ -15,8 +15,8 @@ Nur Texte und Technik, **keine Zahlen**:
 4. Szene 5: Einschränkung „Die zwei KI-Leser sind nicht unabhängig, der Vergleichswert ist teils zirkulär; der Mensch prüfte 15 Fälle: 14 stimmen“ (Untertitel und Karte).
 5. Szene 4: Die Aussage der Vergabestelle ist als „sinngemäß, Hinweis aus einem Gespräch und einer Optionsanalyse (70,8 %, n = 24)“ gekennzeichnet (Untertitel und Karte, „kein Beleg“).
 6. Szene 2: Karte „Daten: TED, Gebäudereinigung, Deutschland, ab 2016“.
-7. Abspann: „Autoren: Manuel Strobel, Ludwig Richthammer. Stimme: synthetisch (Windows SAPI).“
-8. Technik: Abspielbereich per URL (`?von=8&bis=186`), Sprecherstimme (WAV je Untertitel), Stumm-Schalter, Startbildschirm. Caption-Fenster angepasst, wo die Texte länger wurden oder die Stimme Platz brauchte: Untertitel 4 und 5 (Szene 2, Grenze 51 s auf 50,8 s, „Hallo!“ gestrichen), Untertitel in Szene 6 (186,6 bis 193,2; 193,4 bis 204,6; 204,8 bis 215). Die Szenen-Zeitleiste `B` ist **nicht** geändert; kein Fenster überlappt (geprüft).
+7. Abspann: „Autoren: Manuel Strobel, Ludwig Richthammer. Stimme: synthetisch (Piper, Thorsten-Voice).“ (v1: Windows SAPI)
+8. Technik: Abspielbereich per URL (`?von=8&bis=186`), Sprecherstimme (WAV je Untertitel, jetzt Piper; Text aus `sprechertext.json`), Stumm-Schalter, Startbildschirm. Caption-Fenster angepasst, wo die Texte länger wurden oder die Stimme Platz brauchte: Untertitel 4 und 5 (Szene 2, Grenze 51 s auf 50,8 s, „Hallo!“ gestrichen), Untertitel in Szene 6 (186,6 bis 193,2; 193,4 bis 204,6; 204,8 bis 215). Die Szenen-Zeitleiste `B` ist **nicht** geändert; kein Fenster überlappt (geprüft).
 
 ## Quellen der Zahlen im Video
 | Zahl im Video | Quelle |
@@ -44,10 +44,27 @@ Abweichungen bei der Prüfung: keine falschen Zahlen gefunden. Zwei Vereinfachun
 - Schriftart Inter ist nicht überall installiert; dann greifen Helvetica Neue oder Arial (Zeilenumbrüche können minimal abweichen).
 
 ## Sprecherstimme
-`src/report/video_vertonung.py` liest die Untertitel (`CAPS`) aus der HTML und erzeugt je Untertitel `audio/cap_NN.wav` mit **Windows SAPI** (System.Speech, „Microsoft Hedda Desktop“), offline, ohne Cloud und ohne Kosten. Das Sprechtempo (Rate 0 bis 4) wird je Untertitel so gewählt, dass die Dauer in das Caption-Fenster passt (`audio/manifest.json`: Dauer, Rate, Fenster). Kleine Aussprachehilfen („CRISP-DM“, „KI“) stehen im Skript. Alle Sprecher (Erzähler, Franz, Bit, Prüfi) haben dieselbe Stimme. **Die Stimme ist synthetisch.**
-```
-.venv\Scripts\python.exe -I src\report\video_vertonung.py
-```
+`src/report/video_vertonung.py` erzeugt je Untertitel (Index in `CAPS`) eine Datei `audio/cap_NN.wav` im Caption-Fenster und `audio/manifest.json` (Dauer, Spitzenpegel, Stille am Anfang, Einstellung). Gesprochen wird der **Sprechertext** aus `docs/video/sprechertext.json` (Index -> Text), nicht der Untertitel: fürs Hören geschrieben (kurze Sätze, Zahlen und Kürzel ausgeschrieben, z. B. „achtundzwanzig Komma acht Prozent“, „K I“, „T E D“, „elf von vierundzwanzig“). Einschränkungen des Untertitels (nicht unabhängig, Hinweis, nachgestellt, synthetisch) bleiben im Sprechtext erhalten. Alle Stimmen sind **synthetisch**.
+
+Der Schalter `--stimme` wählt den Weg:
+| Weg | Aufruf | Eigenschaften |
+|---|---|---|
+| **piper** (Standard) | `.venv-video\Scripts\python.exe -I src\report\video_vertonung.py` | offline, kostenlos, Modell `de_DE-thorsten-high` |
+| elevenlabs | `... --stimme elevenlabs` (Plan ohne Netz: `--trocken`) | Cloud, braucht Konto und Schlüssel |
+| sapi | `... --stimme sapi` | frühere Fassung v1 (Windows Hedda), Ausgabe in `audio_sapi/` |
+
+### Piper (Standard)
+- Paket `piper-tts` (Version in `requirements-video.txt`), Modell `de_DE-thorsten-high` (Fallback `-medium`) von Hugging Face (`rhasspy/piper-voices`, Pfad `de/de_DE/thorsten/high/`). Ablage **außerhalb des Repos**: `%LOCALAPPDATA%\piper_models\de_DE-thorsten-high.onnx` und `.onnx.json`; anderer Ort per `--modell PFAD.onnx`.
+- Lizenz: Die Stimme „Thorsten“ (Thorsten-Voice, Thorsten Müller) steht laut Modellkarte unter CC0 (gemeinfrei). Piper selbst: MIT-Lizenz; Sprachausgabe nutzt eSpeak-NG-Daten im Paket (GPL-3-Lizenz der eSpeak-NG-Daten, bei Weitergabe des Pakets beachten; das Video enthält nur die erzeugte Audiodatei).
+- Das Modell hat **einen** Sprecher. Die Figuren werden über Tonhöhe und Tempo unterschieden (ffmpeg): Franz etwas höher und flotter, Bit (KI) deutlich höher mit leichtem Tremolo (robotisch), Prüfi tiefer, Erzähler unverändert. Das Tempo (`length_scale`) wird je Untertitel nur erhöht, wenn die Dauer sonst nicht ins Fenster passt (Dauer <= Fenster - 0,3 s). Aufnahmen werden vorne von Stille befreit und auf -3 dBFS Spitze normiert.
+- Ob „T E D“ oder „Ted“ besser klingt, wurde **nicht gehört**; im Sprechtext steht „T E D“ (Buchstabieren), änderbar in `sprechertext.json`.
+
+### ElevenLabs (optional, nicht getestet)
+- Voraussetzung: eigenes ElevenLabs-Konto, Umgebungsvariable `ELEVENLABS_API_KEY` (**nie in Dateien schreiben**), echte `voice_id` je Sprecher in `docs/video/stimmen.json` (dort stehen Platzhalter `HIER_VOICE_ID_EINTRAGEN`, keine erfundenen IDs). Modell `eleven_multilingual_v2`, Ausgabe `pcm_22050`.
+- **Datenabfluss:** Die Sprechtexte werden an ElevenLabs gesendet (Cloud). **Kosten** und Kontingent laufen über das Konto des Nutzers (hier rund 4.500 Zeichen je Durchlauf, Zahl steht im Trockenlauf).
+- Aufruf: `$env:ELEVENLABS_API_KEY="..."` setzen, dann `.venv-video\Scripts\python.exe -I src\report\video_vertonung.py --stimme elevenlabs`. Vorher mit `--trocken` prüfen (kein Netz, nichts gesendet).
+- Die API-Nutzung (`ElevenLabs(api_key=...)`, `client.text_to_speech.convert(voice_id=..., text=..., model_id=..., output_format=...)`, liefert Byte-Blöcke) folgt der aktuellen Python-SDK (Version 2.77.0, Doku github.com/elevenlabs/elevenlabs-python). **Der Zweig wurde nie gegen die API ausgeführt**, nur der Trockenlauf wurde geprüft. Der Stimmenwechsel macht die Namensangabe im Abspann (Zeile „Stimme: synthetisch (Piper, Thorsten-Voice)“ in der HTML) falsch; dann anpassen.
+- Ein einziger Gesamttext über das ganze Video wird bewusst nicht benutzt: Untertitel und Animation hängen an festen Sekunden, ein Gesamttext verliert den Gleichlauf.
 
 ## MP4-Export
 `src/report/video_export.py` (eigene venv `.venv-video`, in `.gitignore`; Versionen in `requirements-video.txt`: playwright, imageio-ffmpeg). Browser: installiertes Edge (`channel="msedge"`), kein Download; ffmpeg kommt aus `imageio-ffmpeg`.
@@ -57,11 +74,11 @@ python -m venv .venv-video
 .venv-video\Scripts\python.exe src\report\video_export.py            # Standard: 8 bis 186 s, 30 fps
 .venv-video\Scripts\python.exe src\report\video_export.py --von 0 --bis 186 --out mein.mp4
 ```
-Ergebnis: `docs/video/franz_und_die_glaskugel_szenen_0-5.mp4` (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
+Ergebnis: `docs/video/franz_und_die_glaskugel_szenen_0-5_v2.mp4` (Piper-Stimme; die erste Fassung mit SAPI-Stimme `franz_und_die_glaskugel_szenen_0-5.mp4` bleibt als v1 erhalten, ältere WAVs in `audio_sapi/`; Ordner mit anderen WAVs per `--audio DIR`) (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
 **Quizphase im Export:** Das Quizbild (Live-Zeit 105 s) steht 3 s still, in den letzten 0,5 s mit dem Hinweis „Auflösung folgt …“; die Zeit 105 bis 116 s der Live-Fassung entfällt, das Video läuft bei 116 s weiter. Die Quizfrage wird in diesen Sekunden gesprochen. Die Standbilder werden bei 30 fps per `window.render(t)` aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien); die Tonspur wird aus den WAVs mit `adelay` an den Untertitel-Anfängen gemischt.
 
 ## Grenzen
-- Stimme **synthetisch** (SAPI), eine Stimme für alle Figuren, Betonung maschinell.
+- Stimme **synthetisch** (Piper, Thorsten-Voice), ein Modell für alle Figuren (nur Tonhöhe und Tempo unterscheiden sie), Betonung maschinell. **Die Klangqualität wurde vom Bearbeiter (KI) nicht gehört**, nur Dauer, Pegel und Anfangsstille wurden gemessen; Hörprobe durch den Nutzer steht aus.
 - Alle **Figuren sind erfunden**; die Gespräche im Video sind **nachgestellt** und verändert, es gab nur **drei** echte Telefongespräche (n = 3, Hinweise, keine Statistik, `docs/business.md` §8.9).
 - Das Video ist eine Vereinfachung des Projektverlaufs (vier Runden statt zehn Iterationen); Belege und Grenzen stehen in `docs/iterationen.md`, `docs/lab_log.md` und den Evaluationsberichten.
 - Nicht belegt bleibt: Qualitätsvorsprung der Liste gegenüber kostenlosen Diensten, Nachfrage, Zahlungsbereitschaft. „Nie günstiger“ folgt aus der Modellkonstruktion mit Annahmen.

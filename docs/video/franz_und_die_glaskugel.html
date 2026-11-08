@@ -342,7 +342,7 @@ svg text{font-family:"Inter","Helvetica Neue",Arial,sans-serif;fill:var(--ink)}
     <text x="84" y="398" class="small2">Daten: TED, Amt für Veröffentlichungen der EU; eigene Auswertung.</text>
     <text x="84" y="432" class="small2">Gespräche: n = 3, nachgestellt und verändert. Alle Figuren sind erfunden.</text>
     <text x="84" y="466" class="small2">Projekt Vergabe-Radar, Modul Big Data Analytics, OTH Amberg-Weiden.</text>
-    <text x="84" y="500" class="small2">Autoren: Manuel Strobel, Ludwig Richthammer. Stimme: synthetisch (Windows SAPI).</text>
+    <text x="84" y="500" class="small2">Autoren: Manuel Strobel, Ludwig Richthammer. Stimme: synthetisch (Piper, Thorsten-Voice).</text>
   </g>
 </g>
 
@@ -456,7 +456,7 @@ svg text{font-family:"Inter","Helvetica Neue",Arial,sans-serif;fill:var(--ink)}
 <div id="cap"><span id="who">Erzähler</span><span id="txt"></span></div>
 <div id="hint">Pause. Leertaste: weiter, Pfeiltasten: springen, M: Ton aus/an</div>
 <div id="snd"></div>
-<div id="start"><b>Franz und die Glaskugel</b><span>Klick oder Leertaste: Start (mit Ton). Leertaste: Pause, Pfeiltasten: springen, M: stumm, R: Neustart.<br>Stimme: synthetisch (Windows SAPI). Figuren erfunden, Gespräche nachgestellt.</span></div>
+<div id="start"><b>Franz und die Glaskugel</b><span>Klick oder Leertaste: Start (mit Ton). Leertaste: Pause, Pfeiltasten: springen, M: stumm, R: Neustart.<br>Stimme: synthetisch (Piper, Thorsten-Voice). Figuren erfunden, Gespräche nachgestellt.</span></div>
 </div>
 
 <script>
@@ -821,7 +821,7 @@ if(!RENDER){
   addEventListener('resize',fit); fit();
   let cur=VON,last=null,paused=true,quizDone=VON>=105,started=false,muted=false;
   const hint=$('hint'), snd=$('snd'), startEl=$('start');
-  // Sprecherstimme: je Untertitel eine WAV-Datei (audio/cap_NN.wav, Windows SAPI, synthetisch)
+  // Sprecherstimme: je Untertitel eine WAV-Datei (audio/cap_NN.wav, synthetisch: Piper Thorsten bzw. ElevenLabs; v1 SAPI liegt in audio_sapi/)
   const AUD=CAPS.map((c,i)=>{const a=new Audio('audio/cap_'+String(i).padStart(2,'0')+'.wav');a.preload='auto';return a;});
   function syncAudio(){
     CAPS.forEach((c,i)=>{

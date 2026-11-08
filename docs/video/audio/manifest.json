@@ -5,10 +5,15 @@
   "ende": 15.0,
   "sprecher": "E",
   "datei": "cap_00.wav",
-  "dauer": 5.9,
-  "rate": 3,
+  "dauer": 5.91,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Das ist Franz. Er führt einen Reinigungsbetrieb in der Oberpfalz und putzt Schulen, Ämter und Rathäuser."
+  "text": "Das ist Franz. Er führt einen Reinigungsbetrieb in der Oberpfalz und putzt Schulen, Ämter und Rathäuser.",
+  "sprechtext": "Das ist Franz. Er führt einen Reinigungsbetrieb in der Oberpfalz. Er putzt Schulen, Ämter und Rathäuser."
  },
  {
   "index": 1,
@@ -16,10 +21,15 @@
   "ende": 24.0,
   "sprecher": "F",
   "datei": "cap_01.wav",
-  "dauer": 7.32,
-  "rate": 0,
+  "dauer": 5.19,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.03,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.06",
+  "stimme": "piper",
   "passt": true,
-  "text": "Schon wieder eine Ausschreibung! Vier Wochen für Besichtigung, Personal und Kalkulation."
+  "text": "Schon wieder eine Ausschreibung! Vier Wochen für Besichtigung, Personal und Kalkulation.",
+  "sprechtext": "Schon wieder eine Ausschreibung! Vier Wochen Zeit, für Besichtigung, Personal und Kalkulation."
  },
  {
   "index": 2,
@@ -27,10 +37,15 @@
   "ende": 35.5,
   "sprecher": "F",
   "datei": "cap_02.wav",
-  "dauer": 7.45,
-  "rate": 0,
+  "dauer": 4.78,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.03,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.06",
+  "stimme": "piper",
   "passt": true,
-  "text": "Und wann laufen die Verträge der Konkurrenz aus? Keine Ahnung. Das ist eine Blackbox."
+  "text": "Und wann laufen die Verträge der Konkurrenz aus? Keine Ahnung. Das ist eine Blackbox.",
+  "sprechtext": "Und wann laufen die Verträge der Konkurrenz aus? Keine Ahnung. Das ist eine Blackbox."
  },
  {
   "index": 3,
@@ -38,10 +53,15 @@
   "ende": 44.0,
   "sprecher": "F",
   "datei": "cap_03.wav",
-  "dauer": 6.83,
-  "rate": 1,
+  "dauer": 4.47,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.06",
+  "stimme": "piper",
   "passt": true,
-  "text": "Ich hab’s! Ich baue mir eine Glaskugel, die mir sagt, wann neu ausgeschrieben wird."
+  "text": "Ich hab’s! Ich baue mir eine Glaskugel, die mir sagt, wann neu ausgeschrieben wird.",
+  "sprechtext": "Ich hab's! Ich baue mir eine Glaskugel. Sie sagt mir, wann neu ausgeschrieben wird."
  },
  {
   "index": 4,
@@ -49,10 +69,15 @@
   "ende": 50.8,
   "sprecher": "E",
   "datei": "cap_04.wav",
-  "dauer": 6.06,
-  "rate": 1,
+  "dauer": 5.84,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Die Daten sind öffentlich: Größere Aufträge stehen mit ihrem Zuschlag im EU-Amtsblatt TED."
+  "text": "Die Daten sind öffentlich: Größere Aufträge stehen mit ihrem Zuschlag im EU-Amtsblatt TED.",
+  "sprechtext": "Die Daten sind öffentlich. Größere Aufträge stehen mit ihrem Zuschlag im E U Amtsblatt, T E D."
  },
  {
   "index": 5,
@@ -60,10 +85,15 @@
   "ende": 55.5,
   "sprecher": "B",
   "datei": "cap_05.wav",
-  "dauer": 4.38,
-  "rate": 4,
+  "dauer": 2.99,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.12",
+  "stimme": "piper",
   "passt": true,
-  "text": "Ich bin Bit, die KI. Ich bin mir hundert Prozent sicher, dass das klappt!"
+  "text": "Ich bin Bit, die KI. Ich bin mir hundert Prozent sicher, dass das klappt!",
+  "sprechtext": "Ich bin Bit, die K I. Hundert Prozent sicher: Das klappt!"
  },
  {
   "index": 6,
@@ -71,10 +101,15 @@
   "ende": 61.5,
   "sprecher": "E",
   "datei": "cap_06.wav",
-  "dauer": 5.53,
-  "rate": 3,
+  "dauer": 5.28,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Gearbeitet wird nach CRISP-DM: sechs Schritte im Kreis. Jede Runde endet mit einer Entscheidung."
+  "text": "Gearbeitet wird nach CRISP-DM: sechs Schritte im Kreis. Jede Runde endet mit einer Entscheidung.",
+  "sprechtext": "Wir arbeiten nach Krisp D M. Sechs Schritte im Kreis. Jede Runde endet mit einer Entscheidung."
  },
  {
   "index": 7,
@@ -82,10 +117,15 @@
   "ende": 71.0,
   "sprecher": "B",
   "datei": "cap_07.wav",
-  "dauer": 7.47,
-  "rate": 1,
+  "dauer": 5.54,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.12",
+  "stimme": "piper",
   "passt": true,
-  "text": "Runde 1: Ich finde zu jedem neuen Auftrag seinen Vorgänger. Meine Vorschläge sind fast alle plausibel!"
+  "text": "Runde 1: Ich finde zu jedem neuen Auftrag seinen Vorgänger. Meine Vorschläge sind fast alle plausibel!",
+  "sprechtext": "Runde eins. Ich finde zu jedem neuen Auftrag seinen Vorgänger. Meine Vorschläge sind fast alle plausibel!"
  },
  {
   "index": 8,
@@ -93,10 +133,15 @@
   "ende": 79.0,
   "sprecher": "E",
   "datei": "cap_08.wav",
-  "dauer": 6.95,
-  "rate": 1,
+  "dauer": 5.22,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Geprüft wird an neuen Testdaten. Ergebnis: Nur 11 von 24 Zuordnungen stimmen."
+  "text": "Geprüft wird an neuen Testdaten. Ergebnis: Nur 11 von 24 Zuordnungen stimmen.",
+  "sprechtext": "Geprüft wird an neuen Testdaten. Ergebnis: Nur elf von vierundzwanzig Zuordnungen stimmen."
  },
  {
   "index": 9,
@@ -104,10 +149,15 @@
   "ende": 87.5,
   "sprecher": "E",
   "datei": "cap_09.wav",
-  "dauer": 6.83,
-  "rate": 0,
+  "dauer": 4.14,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Runde gescheitert. Festhalten, was schiefging, und zurück an den Anfang."
+  "text": "Runde gescheitert. Festhalten, was schiefging, und zurück an den Anfang.",
+  "sprechtext": "Runde gescheitert. Wir halten fest, was schiefging. Und beginnen wieder von vorn."
  },
  {
   "index": 10,
@@ -115,10 +165,15 @@
   "ende": 97.0,
   "sprecher": "E",
   "datei": "cap_10.wav",
-  "dauer": 7.61,
-  "rate": 2,
+  "dauer": 6.45,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Runde 2: eine einfache Regel. Neuausschreibung gleich Vertragsende mit allen Verlängerungen, minus sechs Monate."
+  "text": "Runde 2: eine einfache Regel. Neuausschreibung gleich Vertragsende mit allen Verlängerungen, minus sechs Monate.",
+  "sprechtext": "Runde zwei: eine einfache Regel. Neuausschreibung gleich Vertragsende mit allen Verlängerungen, minus sechs Monate."
  },
  {
   "index": 11,
@@ -126,10 +181,15 @@
   "ende": 104.0,
   "sprecher": "E",
   "datei": "cap_11.wav",
-  "dauer": 6.24,
-  "rate": 2,
+  "dauer": 5.22,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Treffer heißt: auf drei Monate genau. Das Ziel steht vorher fest: 60 Prozent."
+  "text": "Treffer heißt: auf drei Monate genau. Das Ziel steht vorher fest: 60 Prozent.",
+  "sprechtext": "Ein Treffer heißt: auf drei Monate genau. Das Ziel steht vorher fest. Sechzig Prozent."
  },
  {
   "index": 12,
@@ -137,10 +197,15 @@
   "ende": 116.0,
   "sprecher": "Q",
   "datei": "cap_12.wav",
-  "dauer": 3.93,
-  "rate": 0,
+  "dauer": 2.68,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.04",
+  "stimme": "piper",
   "passt": true,
-  "text": "Was schätzt ihr: Wie oft lag die Regel richtig?"
+  "text": "Was schätzt ihr: Wie oft lag die Regel richtig?",
+  "sprechtext": "Was schätzt ihr? Wie oft lag die Regel richtig?"
  },
  {
   "index": 13,
@@ -148,10 +213,15 @@
   "ende": 127.0,
   "sprecher": "E",
   "datei": "cap_13.wav",
-  "dauer": 5.1,
-  "rate": 4,
+  "dauer": 5.12,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.03,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "28,8 Prozent bei 52 geprüften Fällen. Das Ziel ist klar verfehlt."
+  "text": "28,8 Prozent bei 52 geprüften Fällen. Das Ziel ist klar verfehlt.",
+  "sprechtext": "Achtundzwanzig Komma acht Prozent bei zweiundfünfzig geprüften Fällen. Ziel klar verfehlt."
  },
  {
   "index": 14,
@@ -159,10 +229,15 @@
   "ende": 137.5,
   "sprecher": "E",
   "datei": "cap_14.wav",
-  "dauer": 10.1,
-  "rate": 4,
+  "dauer": 10.04,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 0.90, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Sinngemäß hieß es im Gespräch: Bei einer Option wird meist verlängert. Hinweis der Optionsanalyse: 70,8 Prozent, n = 24. Ein fester Abstand trägt nicht."
+  "text": "Sinngemäß hieß es im Gespräch: Bei einer Option wird meist verlängert. Hinweis der Optionsanalyse: 70,8 Prozent, n = 24. Ein fester Abstand trägt nicht.",
+  "sprechtext": "Sinngemäß hieß es im Gespräch: Bei einer Option wird meist verlängert. Hinweis der Optionsanalyse: siebzig Komma acht Prozent, bei vierundzwanzig Fällen. Ein fester Abstand trägt nicht."
  },
  {
   "index": 15,
@@ -170,10 +245,15 @@
   "ende": 146.0,
   "sprecher": "F",
   "datei": "cap_15.wav",
-  "dauer": 6.32,
-  "rate": 0,
+  "dauer": 4.17,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.03,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.06",
+  "stimme": "piper",
   "passt": true,
-  "text": "Dann eben keine Glaskugel, sondern eine Liste: Welcher Vertrag endet wann?"
+  "text": "Dann eben keine Glaskugel, sondern eine Liste: Welcher Vertrag endet wann?",
+  "sprechtext": "Dann eben keine Glaskugel, sondern eine Liste. Welcher Vertrag endet wann?"
  },
  {
   "index": 16,
@@ -181,10 +261,15 @@
   "ende": 152.5,
   "sprecher": "B",
   "datei": "cap_16.wav",
-  "dauer": 6.09,
-  "rate": 2,
+  "dauer": 4.45,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.12",
+  "stimme": "piper",
   "passt": true,
-  "text": "Liste fertig! 9.325 Verträge. Alles korrekt!"
+  "text": "Liste fertig! 9.325 Verträge. Alles korrekt!",
+  "sprechtext": "Liste fertig! Neuntausenddreihundertfünfundzwanzig Verträge. Alles korrekt!"
  },
  {
   "index": 17,
@@ -192,10 +277,15 @@
   "ende": 161.0,
   "sprecher": "P",
   "datei": "cap_17.wav",
-  "dauer": 5.83,
-  "rate": 0,
+  "dauer": 3.79,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x0.93",
+  "stimme": "piper",
   "passt": true,
-  "text": "Moment mal. Hier ist das Ende schon das Datum mit allen Verlängerungen."
+  "text": "Moment mal. Hier ist das Ende schon das Datum mit allen Verlängerungen.",
+  "sprechtext": "Moment mal. Hier ist das Ende schon das Datum mit allen Verlängerungen."
  },
  {
   "index": 18,
@@ -203,10 +293,15 @@
   "ende": 173.0,
   "sprecher": "E",
   "datei": "cap_18.wav",
-  "dauer": 8.2,
-  "rate": 0,
+  "dauer": 5.75,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Also zurück: Regeln nachbessern, eine neue Zufallsstichprobe ziehen und die Lösung vorher versiegeln."
+  "text": "Also zurück: Regeln nachbessern, eine neue Zufallsstichprobe ziehen und die Lösung vorher versiegeln.",
+  "sprechtext": "Also zurück. Regeln nachbessern, eine neue Zufallsstichprobe ziehen, und die Lösung vorher versiegeln."
  },
  {
   "index": 19,
@@ -214,10 +309,15 @@
   "ende": 185.5,
   "sprecher": "E",
   "datei": "cap_19.wav",
-  "dauer": 11.57,
-  "rate": 3,
+  "dauer": 11.22,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Ergebnis: 66 von 70 gleich mit dem Vergleichswert zweier KI-Leser. Die sind nicht unabhängig, der Vergleichswert ist teils zirkulär. Der Mensch prüfte 15 Fälle: 14 stimmen."
+  "text": "Ergebnis: 66 von 70 gleich mit dem Vergleichswert zweier KI-Leser. Die sind nicht unabhängig, der Vergleichswert ist teils zirkulär. Der Mensch prüfte 15 Fälle: 14 stimmen.",
+  "sprechtext": "Ergebnis: sechsundsechzig von siebzig gleich mit dem Vergleichswert zweier K I Leser. Die sind nicht unabhängig, der Vergleichswert ist teils zirkulär. Der Mensch prüfte fünfzehn Fälle: vierzehn stimmen."
  },
  {
   "index": 20,
@@ -225,10 +325,15 @@
   "ende": 193.2,
   "sprecher": "F",
   "datei": "cap_20.wav",
-  "dauer": 5.44,
-  "rate": 0,
+  "dauer": 3.11,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.06",
+  "stimme": "piper",
   "passt": true,
-  "text": "Moment … so eine Liste gibt es ja schon. Kostenlos!"
+  "text": "Moment … so eine Liste gibt es ja schon. Kostenlos!",
+  "sprechtext": "Moment. So eine Liste gibt es ja schon. Kostenlos!"
  },
  {
   "index": 21,
@@ -236,10 +341,15 @@
   "ende": 204.6,
   "sprecher": "E",
   "datei": "cap_21.wav",
-  "dauer": 10.52,
-  "rate": 2,
+  "dauer": 10.28,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Der Unterschied liegt bei rund 10 Prozent der Verträge: meist anderes Datum für das Höchstende statt der Grundlaufzeit, teils Losebene. Ein Qualitätsvorsprung ist nicht belegt."
+  "text": "Der Unterschied liegt bei rund 10 Prozent der Verträge: meist anderes Datum für das Höchstende statt der Grundlaufzeit, teils Losebene. Ein Qualitätsvorsprung ist nicht belegt.",
+  "sprechtext": "Der Unterschied liegt bei rund zehn Prozent der Verträge. Meist ist es ein anderes Datum: das Höchstende statt der Grundlaufzeit. Teils auf Losebene. Ein Qualitätsvorsprung ist nicht belegt."
  },
  {
   "index": 22,
@@ -247,10 +357,15 @@
   "ende": 215.0,
   "sprecher": "E",
   "datei": "cap_22.wav",
-  "dauer": 7.59,
-  "rate": 0,
+  "dauer": 4.86,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.01,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Franz fragt bei Kollegen nach. Nachgestellt und verändert, denn es waren nur drei Gespräche."
+  "text": "Franz fragt bei Kollegen nach. Nachgestellt und verändert, denn es waren nur drei Gespräche.",
+  "sprechtext": "Franz fragt bei Kollegen nach. Nachgestellt und verändert, denn es waren nur drei Gespräche."
  },
  {
   "index": 23,
@@ -258,10 +373,15 @@
   "ende": 227.5,
   "sprecher": "F",
   "datei": "cap_23.wav",
-  "dauer": 8.54,
-  "rate": 0,
+  "dauer": 5.59,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.02,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.06",
+  "stimme": "piper",
   "passt": true,
-  "text": "Der eine will wissen, wer den Vertrag hat und zu welchem Preis. Der andere will gar nichts. Und jetzt?"
+  "text": "Der eine will wissen, wer den Vertrag hat und zu welchem Preis. Der andere will gar nichts. Und jetzt?",
+  "sprechtext": "Der eine will wissen, wer den Vertrag hat und zu welchem Preis. Der andere will gar nichts. Und jetzt?"
  },
  {
   "index": 24,
@@ -269,10 +389,15 @@
   "ende": 238.0,
   "sprecher": "E",
   "datei": "cap_24.wav",
-  "dauer": 8.44,
-  "rate": 0,
+  "dauer": 6.29,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Im Modell, mit unseren Annahmen und nicht als Messung: Selbstbauen ist gegen einen kostenlosen Dienst nie günstiger."
+  "text": "Im Modell, mit unseren Annahmen und nicht als Messung: Selbstbauen ist gegen einen kostenlosen Dienst nie günstiger.",
+  "sprechtext": "Im Modell, mit unseren Annahmen, nicht als Messung: Selbst bauen ist gegen einen kostenlosen Dienst nie günstiger."
  },
  {
   "index": 25,
@@ -280,10 +405,15 @@
   "ende": 250.0,
   "sprecher": "E",
   "datei": "cap_25.wav",
-  "dauer": 9.94,
-  "rate": 0,
+  "dauer": 7.16,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Und die Wettbewerbsdaten? Wer den Vertrag hat, steht fast immer drin. Einen Auftragswert gibt es nur bei knapp der Hälfte."
+  "text": "Und die Wettbewerbsdaten? Wer den Vertrag hat, steht fast immer drin. Einen Auftragswert gibt es nur bei knapp der Hälfte.",
+  "sprechtext": "Und die Wettbewerbsdaten? Wer den Vertrag hat, steht fast immer drin. Einen Auftragswert gibt es nur bei knapp der Hälfte."
  },
  {
   "index": 26,
@@ -291,10 +421,15 @@
   "ende": 261.5,
   "sprecher": "F",
   "datei": "cap_26.wav",
-  "dauer": 8.26,
-  "rate": 0,
+  "dauer": 5.28,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.04,
+  "klipps": 0,
+  "einstellung": "length_scale 0.95, Tonhoehe x1.06",
+  "stimme": "piper",
   "passt": true,
-  "text": "Ich baue keine eigene Plattform. Ich nutze, was es gibt, und schaue mir die Konkurrenz genauer an."
+  "text": "Ich baue keine eigene Plattform. Ich nutze, was es gibt, und schaue mir die Konkurrenz genauer an.",
+  "sprechtext": "Ich baue keine eigene Plattform. Ich nutze, was es gibt, und schaue mir die Konkurrenz genauer an."
  },
  {
   "index": 27,
@@ -302,9 +437,14 @@
   "ende": 275.0,
   "sprecher": "E",
   "datei": "cap_27.wav",
-  "dauer": 9.45,
-  "rate": 0,
+  "dauer": 7.52,
+  "spitze_dbfs": -3.0,
+  "stille_anfang": 0.05,
+  "klipps": 0,
+  "einstellung": "length_scale 1.00, Tonhoehe x1.0",
+  "stimme": "piper",
   "passt": true,
-  "text": "Unsere Antwort auf die Frage „Selbst bauen?“: Nein. Das zeigt unsere Rechnung mit Annahmen und der Blick auf kostenlose Dienste."
+  "text": "Unsere Antwort auf die Frage „Selbst bauen?“: Nein. Das zeigt unsere Rechnung mit Annahmen und der Blick auf kostenlose Dienste.",
+  "sprechtext": "Unsere Antwort auf die Frage: Selbst bauen? Nein. Das zeigt unsere Rechnung mit Annahmen und der Blick auf kostenlose Dienste."
  }
 ]
