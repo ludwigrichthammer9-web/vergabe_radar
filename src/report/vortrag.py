@@ -105,7 +105,7 @@ def new_slide(titel, notes, dark=False):
     s = prs.slides.add_slide(LAYOUT_BLANK if dark else LAYOUT_TITLE_ONLY)
     _nr[0] += 1
     s.background.fill.solid()
-    s.background.fill.fore_color.rgb = DARK if dark else PALE
+    s.background.fill.fore_color.rgb = PALE   # alle Folien hell (einheitlich); dark=True nur noch: Folie ohne Titelplatzhalter
     if not dark:
         t = s.shapes.title
         t.left, t.top, t.width, t.height = Inches(0.6), Inches(0.35), Inches(8.8), Inches(0.9)
@@ -118,7 +118,7 @@ def new_slide(titel, notes, dark=False):
         r = p.add_run()
         r.text = TITEL[_nr[0]]
         r.font.name, r.font.size, r.font.bold, r.font.color.rgb = HEAD, Pt(26), False, DARK
-    box(s, 9.0, 5.25, 0.5, 0.25, str(_nr[0]), size=11, color=SOFT if dark else GREY, align=PP_ALIGN.RIGHT, name="Foliennummer")
+    box(s, 9.0, 5.25, 0.5, 0.25, str(_nr[0]), size=11, color=GREY, align=PP_ALIGN.RIGHT, name="Foliennummer")
     s.notes_slide.notes_text_frame.text = notes
     return s
 
@@ -180,15 +180,15 @@ s = new_slide("", "ZEIT 0:30. KERNAUSSAGE: Eine Reinigungsfirma will früh wisse
               "ZEIG-MIR-WO: docs/iterationen.md (Übersicht und Ergebnis Iteration 10 und 10b).", dark=True)
 
 # Radar-Grafik: Kreise um einen Mittelpunkt
-rect(s, 6.1, 0.9, 3.4, 3.4, RGBColor.from_string("2C2C2E"), MSO_SHAPE.OVAL, "Radar außen")
-rect(s, 6.6, 1.4, 2.4, 2.4, RGBColor.from_string("3A3A3C"), MSO_SHAPE.OVAL, "Radar mitte")
+rect(s, 6.1, 0.9, 3.4, 3.4, RGBColor.from_string("DCEBFF"), MSO_SHAPE.OVAL, "Radar außen")
+rect(s, 6.6, 1.4, 2.4, 2.4, RGBColor.from_string("B3D4FF"), MSO_SHAPE.OVAL, "Radar mitte")
 rect(s, 7.1, 1.9, 1.4, 1.4, BLUE, MSO_SHAPE.OVAL, "Radar innen")
 rect(s, 8.15, 1.55, 0.3, 0.3, AMBER, MSO_SHAPE.OVAL, "Radar Punkt")
-box(s, 0.6, 1.35, 5.2, 1.0, "Vergabe-Radar", size=48, color=WHITE, font=HEAD, name="Titel")
-box(s, 0.6, 2.4, 5.1, 1.2, "Wann endet ein öffentlicher Auftrag, und wer weiß es schon?", size=24, color=SOFT, name="Untertitel")
+box(s, 0.6, 1.35, 5.2, 1.0, "Vergabe-Radar", size=48, color=INK, font=HEAD, name="Titel")
+box(s, 0.6, 2.4, 5.1, 1.2, "Wann endet ein öffentlicher Auftrag, und wer weiß es schon?", size=24, color=GREY, name="Untertitel")
 box(s, 0.6, 3.75, 5.1, 0.6, "Was die EU-Plattform TED verrät und was nicht", size=16, color=BLUE, name="Zusatz")
-box(s, 0.6, 4.65, 8.4, 0.3, "Manuel Strobel · Ludwig Richthammer", size=16, color=WHITE, font=HEAD, name="Namen")
-box(s, 0.6, 5.0, 8.0, 0.3, "Big Data Analytics · Leistungsnachweis B", size=14, color=SOFT, name="Autoren")
+box(s, 0.6, 4.65, 8.4, 0.3, "Manuel Strobel · Ludwig Richthammer", size=16, color=INK, font=HEAD, name="Namen")
+box(s, 0.6, 5.0, 8.0, 0.3, "Big Data Analytics · Leistungsnachweis B", size=14, color=GREY, name="Autoren")
 s.notes_slide.notes_text_frame.text += " FÜR LAIEN IN EINEM SATZ: Wir haben geprüft, ob man aus öffentlichen Daten vorhersagen kann, wann ein Reinigungsauftrag neu ausgeschrieben wird."
 
 # Folie 2: Video ---------------------------------------------------------
@@ -486,14 +486,14 @@ s = new_slide("", "ZEIT 0:45. KERNAUSSAGE in einem Satz wiederholen, dann Brück
               "FRAGENRUNDE vorbereiten: (1) Methodenfrage: warum ±3 Monate, warum diese Baseline, warum KI-Leser als Maß, warum nur diskordante Lose (Folie 5 und ausgeblendete Folien 11 bis 13; im Video Folie 2). Ausgeblendete Folien in der Fragerunde über die Foliensortierung öffnen oder die Ausblendung aufheben. (2) Live-Nachweis: git log und die Reihenfolge der Commits zeigen, Seed und Schlüssel-Hash (Folie 8), Regel in src/prepare/vertragsliste.py öffnen, Fehlwerte (Stufe F) in reports/beispiel_liste_oberpfalz.csv zeigen. "
               "(3) Transferfrage: „Warum nicht Vergabeweiser nutzen?“ (Folie 4), „Warum nicht gleich die Daten von bund.de einbauen?“ (Folie 6), „Was war mit der Null in Paket B?“ (Folie 8), „Warum erst jetzt die Konkurrenz?“ (Folie 8), „Wer zahlt?“ (Folie 3), „Warum ist W8a verfehlt?“ (Folie 5), „Warum selbst bauen statt Vergabeweiser nutzen?“, „Welches Verwaltungssystem haben Betriebe?“, „Wer pflegt das?“, „Warum eine Demo ohne Business Case?“ (Folie 7), „Warum ist die Webseite nur Demo?“ (alle Folie 6; Zeig-mir-wo: docs/prototyp/export/vertragsliste_v1_de.csv), anderer Standort, andere Nische, doppeltes Volumen (Folie 6 und 9), „Wie war das Kriterium, warum ±3 Monate?“ (Video, Anhang Folie 11). Nicht sagen: „genauer als Vergabeweiser“, „Vorsprung belegt“ ohne den Zusatz „auf Los- und Definitionsebene“, „kein Unterschied“.", dark=True)
 
-box(s, 0.6, 0.55, 8.8, 1.8, "Den Termin sagt TED nicht voraus. Das Vertragsende lässt sich lesen, ein eigenes Produkt ist das nicht.", size=30, color=WHITE, font=HEAD, name="Kernsatz")
+box(s, 0.6, 0.55, 8.8, 1.8, "Den Termin sagt TED nicht voraus. Das Vertragsende lässt sich lesen, ein eigenes Produkt ist das nicht.", size=30, color=INK, font=HEAD, name="Kernsatz")
 for i, (z, t, f) in enumerate((("28,8 %", "Terminprognose, gefordert waren 60 %", RED), ("66 von 70", "Vertragsenden stimmen", GREEN), ("0 €", "Vergabeweiser, kostenlos", AMBER))):
     x = 0.6 + i * 3.0
-    rect(s, x, 2.5, 2.8, 1.25, RGBColor.from_string("2C2C2E"), name=f"Kachel {i + 1}")
+    rect(s, x, 2.5, 2.8, 1.25, WHITE, name=f"Kachel {i + 1}")
     box(s, x + 0.2, 2.58, 2.4, 0.55, z, size=26, color=f, font=HEAD, anchor=MSO_ANCHOR.MIDDLE)
-    box(s, x + 0.2, 3.15, 2.45, 0.55, t, size=14, color=WHITE)
-box(s, 0.6, 4.0, 8.8, 0.35, [[("Lehre: ", {"bold": True, "color": AMBER}), ("vor dem Bauen fragen, ob es das schon gibt.", {"color": WHITE})]], size=16, name="Lehre")
-box(s, 0.6, 4.45, 8.8, 0.45, [[("Nächster Schritt: ", {"bold": True, "color": AMBER}), ("menschliche Gegenlesung und mehr Gespräche mit größeren Betrieben.", {"color": SOFT})]], size=14, name="Nächster Schritt")
+    box(s, x + 0.2, 3.15, 2.45, 0.55, t, size=14, color=INK)
+box(s, 0.6, 4.0, 8.8, 0.35, [[("Lehre: ", {"bold": True, "color": RGBColor.from_string("B25E00")}), ("vor dem Bauen fragen, ob es das schon gibt.", {"color": INK})]], size=16, name="Lehre")
+box(s, 0.6, 4.45, 8.8, 0.45, [[("Nächster Schritt: ", {"bold": True, "color": RGBColor.from_string("B25E00")}), ("menschliche Gegenlesung und mehr Gespräche mit größeren Betrieben.", {"color": GREY})]], size=14, name="Nächster Schritt")
 box(s, 0.6, 4.9, 6.0, 0.45, "Vielen Dank. Fragen?", size=22, color=BLUE, font=HEAD, name="Dank")
 s.notes_slide.notes_text_frame.text += " FÜR LAIEN IN EINEM SATZ: Ob ein Vertrag neu ausgeschrieben wird, sagt TED nicht; wann er endet, steht in der Bekanntmachung, und die kostenlose Liste dazu gibt es schon."
 
