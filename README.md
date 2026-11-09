@@ -56,11 +56,20 @@ Der dritte Befehl braucht keine Rohdaten. Er rechnet den Backtest der Terminprog
 
 ## Lizenzen und Quellen
 
+**Eigene Inhalte dieses Repos** (© 2026 Manuel Strobel, Ludwig Richthammer):
+
+| Teil | Lizenz |
+|---|---|
+| Code (`src/`, `.claude/`) | MIT, siehe [LICENSE](LICENSE) |
+| Texte, Lab-Log, Folien, Berichte (`docs/`, `reports/`, außer Video) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de): Weiterverwendung erlaubt, mit Nennung der Urheber und Hinweis auf Änderungen |
+| Video und Audio (`docs/video/`: MP4, WAV, Animation) | keine Freigabe, alle Rechte vorbehalten (synthetische Stimmen mit ungeklärter Lizenzlage; Fassung wird noch überarbeitet) |
+
+Die Lizenzen gelten nur für eigene Inhalte. Übernommene Daten und Texte Dritter behalten ihre eigenen Bedingungen:
+
 Vollständige Liste: [docs/quellen.md](docs/quellen.md).
 - **TED** (Amt für Veröffentlichungen der EU): Bekanntmachungen laut TED-Rechtsseite frei wiederverwendbar, auch kommerziell. Quellenangabe: „TED, Publications Office of the European Union“; alle Tabellen sind eigene Auswertungen.
 - **Vergabeweiser** (Vergleichsdaten über die API): CC BY 4.0.
 - **Bekanntmachungsservice** oeffentlichevergabe.de (OCDS-Jahresdateien): CC0.
-- Lizenz für den Code dieses Repos: noch offen.
 
 ## Datenschutz
 
