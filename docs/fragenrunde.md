@@ -2,7 +2,7 @@
 
 _Stand 2026-11-09. Laut Bewertungsbogen (`docs/bewertung_LN.md`, Zeile 29) gibt es drei Fragen: eine **Methodenfrage**, einen **Live-Nachweis im Werkzeug** und eine **Entscheidungs- oder Transferfrage**. Die Fragen gehen an das Teammitglied, das den Teil **nicht** präsentiert hat. Quellen der Fragen: Notizen „FRAGE – ANTWORT“ und „ZEIG-MIR-WO“ in `src/report/vortrag.py`, `docs/bewertung_LN.md`, Beispielfragen des Bewertungsbogens 5 („Beispielfragen für die Fragenrunde“, LN B und LN C), typische Prüferfragen._
 
-_Folien (Stand `src/report/vortrag.py`, 2026-11-09): 12 sichtbar. 1 Titel · 2 Video „Franz und die Glaskugel“ · 3 Vier Versuche, vier verfehlte Schwellen · 4 Betriebe heute und unsere Idee · 5 Konkurrenz: Vertragsenden kostenlos bei Vergabeweiser · 6 Vergleich mit Vergabeweiser · 7 Make or Buy aus Sicht des Betriebs · 8 Demo als Zielbild · 9 So funktioniert es technisch: Pipeline und Prognoseregel · 10 KI-Irrwege und Trennung von Entwicklung und Test · 11 Empfehlung und Grenzen · 12 Fazit. Folien 13 bis 17 sind ausgeblendeter Anhang (Frage/Kriterium/Daten, Trefferquote je Vorlauf, Liste und Genauigkeit, zwei Sicherungsfolien „Falls die Technik streikt“). Vor dem Vortrag in `docs/vortrag/` abgleichen._
+_Folien (Stand: Kopf von `src/report/vortrag.py`, 2026-11-09; dort wurde parallel noch gearbeitet): 11 sichtbar. 1 Titel · 2 Video „Franz und die Glaskugel“ (4:15 mit Einleitung, 3:32 Video, Quizfrage, Überleitung) · 3 Betriebe heute und unsere Idee · 4 Konkurrenz: Vertragsenden kostenlos bei Vergabeweiser · 5 Vergleich mit Vergabeweiser · 6 Make or Buy aus Sicht des Betriebs · 7 Demo als Zielbild · 8 So funktioniert es technisch: Pipeline und Prognoseregel · 9 KI-Irrwege und Trennung von Entwicklung und Test · 10 Empfehlung und Grenzen · 11 Fazit. Folien 12 bis 17 sind ausgeblendeter Anhang (Vier Versuche, vier verfehlte Schwellen; Frage/Kriterium/Daten; Trefferquote je Vorlauf; Liste und Genauigkeit; zwei Sicherungsfolien „Falls die Technik streikt“). Vor dem Vortrag in `docs/vortrag/` abgleichen._
 
 **Regel für jede Antwort:** erst die Zahl, dann die Grenze, dann die Datei. Fakten und Deutung trennen („Gemessen ist …; wir deuten das als …“). Auf den Folien heißt das Höchstende „spätestes Vertragsende“; in Code, Lab-Log und hier „Höchstende“.
 
@@ -220,15 +220,17 @@ Kurzantwort: KI-Fehler (Auswahl): Auf Entwicklungsdaten hielt Claude 10 bis 11 v
 Zeig mir wo: Lab-Log §8; `docs/ki_irrwege.md` (Spalte „Bemerkt durch“).
 
 **E9. Was war Manuels Beitrag?** (keine eigene Kategorie im Bogen; Bezug: Beiträge beider sichtbar)
-Kurzantwort, **am besten von Manuel selbst.** Laut `docs/beitraege.md` (Tabelle, Spalte Manuel Strobel):
-- Zweitprüfung Iteration 5: Paare P14–P71 (laut Nutzer, 2026-11-03).
+Kurzantwort, **am besten von Manuel selbst.** Laut `docs/beitraege.md` (Angabe beider, 2026-11-09, nicht aus Git belegbar): Rund 90 % der Zeit haben wir gemeinsam im Call gearbeitet; Claude Code lief über Ludwigs Rechner und Konto, darum steht im Git nur Ludwig. Einzeln belegt sind bei Manuel:
+- Zweitprüfung Iteration 5: Paare P14–P71 (Angabe, 2026-11-03).
 - Iteration 9: 15 Lose im TED-Original gelesen (V6: 14/15).
-- Video: Animation KI-gestützt erstellt; Überarbeitung abwechselnd gemeinsam mit Ludwig (laut Nutzer, 2026-11-09); er optimiert das Video weiter, Fassung nach v4 offen.
-- Folien und Vortrag: „Präsentation/Umsetzung (laut Nutzer, 2026-11-03; heutiger Stand: offen)“.
-- Alle übrigen Zeilen, auch die Gespräche: „offen“. Die Gespräche stehen in der Tabelle bei Ludwig (neun Anrufe). Unter der Tabelle steht: „Verteilung laut Nutzer (2026-11-09): ca. 50:50, gemeinsame Telefonate; Details Manuel offen“, dazu rund 30 Stunden je Person, von Manuel zu bestätigen.
+- Kritische Business-Case-Prüfung mit dem Subagenten `evaluator` (2026-11-07): Kandidaten bewertet, Kernbotschaft entschärft, keine Iteration 11, Liste „Das dürfen wir NICHT behaupten“.
+- Reproduzierbarkeitsprüfung auf macOS (2026-11-07): Repo frisch geklont, Berichts-Skripte neu erzeugt und verglichen, Befunde zu Windows-Pfaden und `zeitprotokoll.py`.
+- Video: Animation KI-gestützt erstellt, abwechselnd mit Ludwig überarbeitet; neue Fassung mit ElevenLabs-Stimmen (`franz_video_ton.mp4`, 2026-11-09).
+- Folien und Vortrag: Präsentation/Umsetzung (Angabe, 2026-11-03); Präsentation gemeinsam.
+- Gespräche: bei Manuel „offen“ (die neun Anrufe stehen bei Ludwig).
 
-Nicht mehr sagen, als dort steht. Was offen ist, trägt Manuel selbst nach.
-Zeig mir wo: `docs/beitraege.md`, Zeilen 14–25; Lab-Log §9 und §10.
+Verteilung ca. 50:50, von beiden bestätigt. Stunden (Selbstangabe beider, nicht gemessen): je rund 35 bis zur Abgabe am 10.11., dazu je 2–3 h am 11.11. geplant. Nicht mehr sagen, als dort steht.
+Zeig mir wo: `docs/beitraege.md` (Tabelle mit Spalte „Gemeinsam (im Call)“); Lab-Log §9 und §10.
 
 **E10. Würdet ihr das Produkt bauen? Warum nicht einfach Vergabeweiser nutzen?**
 Kurzantwort: Als Liste allein nein. Vergabeweiser zeigt 1.005 auslaufende Reinigungsverträge kostenlos, mit Auftragnehmer und Zahl der Angebote. Belegt ist bei uns nur ein Merkmalsunterschied (Ende je Los, Grundlaufzeit statt Höchstende) in rund 10 % der Lose, kein Qualitätsvorteil. Der Auswahlbogen ergab höchstens 7 von 14 Punkten (Schwelle 8): kein tragfähiger Business Case.
@@ -259,6 +261,10 @@ Zeig mir wo: Lab-Log §3 („Warum eine feste Regel …“) und §7 („Lohnt ei
 Kurzantwort: Das haben wir nicht gerechnet. Die 60 % waren eine Setzung ohne Kosten je Fehlalarm oder verpasster Ausschreibung (M1). Für eine Rechnung bräuchte man die Kosten eines zu frühen Vorbereitens und den Deckungsbeitrag eines gewonnenen Auftrags. Den Deckungsbeitrag haben wir nur als Modellgröße (25.110 € je Auftrag, Lab-Log §5, Annahmen), nicht gemessen. Ehrlich sagen: offen.
 Zeig mir wo: `docs/business.md` §7.1; Lab-Log §5 (Make or Buy, Deutung).
 
+
+**E15. Wer hat das Video gemacht, und warum ist es gekürzt?**
+Kurzantwort: Die Animation hat Manuel KI-gestützt erstellt; wir haben sie abwechselnd gemeinsam überarbeitet. Die aktuelle Fassung mit Ton ist von Manuel (4:28), die Stimmen sind KI-generiert (ElevenLabs, steht im Abspann). Für den Vortrag hat Claude Code Runde 4 herausgeschnitten (kostenlose Liste, Vergleich 230 Verträge, Waage Selbstbauen/kostenlos, Oberpfalz, Bauplan; ca. 3:18 bis 4:14), weil die Folien danach diese Inhalte zeigen (Konkurrenz, Vergleich mit Vergabeweiser, Make or Buy); so bleiben 3:32. Schnitt in Sprechpausen, Original unverändert. Grenze: Figuren erfunden, Gespräche nachgestellt (es gab drei echte); das Video ist Veranschaulichung, kein Beleg. Tarif und Bedingungen von ElevenLabs haben wir nicht geprüft, darum ist das Video ohne Freigabe.
+Zeig mir wo: `docs/video/README.md`, Abschnitt „Aktuelle Fassung (2026-11-09)“; `docs/beitraege.md`, Zeile Video; Lab-Log §6.
 ---
 
 ## Teil C: Wer antwortet worauf (VORSCHLAG)
@@ -268,7 +274,7 @@ Zeig mir wo: `docs/business.md` §7.1; Lab-Log §5 (Make or Buy, Deutung).
 | Teil im Vortrag | präsentiert (Vorschlag) | Fragen dazu beantwortet (Vorschlag) | Warum |
 |---|---|---|---|
 | Methode, Technik, Live-Nachweis, KI-Irrwege (M1–M11, L1–L5, E8, E12, E13) | Ludwig | Manuel | Manuel hat laut `docs/beitraege.md` die Zweitprüfung (P14–P71, laut Nutzer) und das Lesen der 15 Lose gemacht; Live-Nachweise vorher einmal selbst ausführen |
-| Video und Demo (E1) | Ludwig | Manuel | Manuel hat die Animation erstellt (laut Nutzer) |
+| Video und Demo (E1, E15) | Ludwig | Manuel | Manuel hat die Animation und die neue Fassung des Videos erstellt (`docs/beitraege.md`) |
 | Business Understanding: Betriebe, Konkurrenz, Make or Buy, Empfehlung (E2–E7, E10, E11, E14) | Manuel | Ludwig | Ludwig hat laut `docs/beitraege.md` die Anrufe geführt und die Entscheidungen dokumentiert |
 | Beitrag (E9) | – | jeder für sich | eigene Angaben, nichts annehmen |
 

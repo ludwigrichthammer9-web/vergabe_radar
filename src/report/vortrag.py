@@ -2,31 +2,31 @@
 
 Stand nach Iteration 10/10b, Business-Case-Prüfung und Nachtrag Sensitivität (2026-11-09). Gestaltung im Apple-/Keynote-Stil: Titel als Aussagesatz
 (höchstens 2 Zeilen), viel Weißraum, weiße Karten auf hellgrauem Grund (F2F2F7), Systemfarben mit fester Bedeutung (Grün = erfüllt/gut,
-Rot = verfehlt, Orange = Vorsicht, Blau = neutral/Hervorhebung; dunkle Karte nur für die Publikumsfrage auf Folie 4), Schrift Segoe UI.
+Rot = verfehlt, Orange = Vorsicht, Blau = neutral/Hervorhebung; dunkle Karte nur für die Publikumsfrage auf Folie 3), Schrift Segoe UI.
 Text mindestens 14 pt; Fußnoten und Abschnittszeile 11 pt, Fußnoten einzeilig, ohne Dateipfade (Pfade stehen in den Notizen).
 Oben auf jeder Inhaltsfolie eine graue Abschnittszeile (Idee · Betriebe · Markt · Produkt · Prüfung · Fazit), der aktuelle Abschnitt blau.
 Unten der Kasten „Kurz gesagt:“ mit der Folgerung für Laien. Notizen je Folie: ZEIT, KERNAUSSAGE, FRAGE – ANTWORT, ZEIG-MIR-WO, KURZ GESAGT.
 Summe der Zeiten der sichtbaren Folien: 15:00.
 
-Folien (12 sichtbar, 5 ausgeblendet):
+Folien (11 sichtbar, 6 ausgeblendet):
    1 Titel (0:30)
-   2 Video „Franz und die Glaskugel“ (3:30, Video ca. 3 Minuten mit Quizfrage)
-   3 Vier Versuche, vier verfehlte Schwellen (1:00, mit einfacher Faustregel 17,3 %)
-   4 Betriebe heute und unsere Idee (1:15, mit Publikumsfrage)
-   5 Konkurrenz: Vertragsenden kostenlos bei Vergabeweiser (1:15)
-   6 Vergleich mit Vergabeweiser, mit Zeitleiste Grundlaufzeit / spätestes Vertragsende (1:15)
-   7 Make or Buy aus Sicht des Betriebs (1:00)
-   8 Demo als Zielbild (1:00, Bildschirmaufnahme)
-   9 So funktioniert es technisch: Pipeline und Prognoseregel (1:00)
-  10 KI-Irrwege und Trennung von Entwicklung und Test (1:15)
-  11 Empfehlung und Grenzen (1:15)
-  12 Fazit (0:45)
-  13–17 ausgeblendeter Anhang für die Fragerunde (Frage/Kriterium/Daten, Trefferquote je Vorlauf, Liste und Genauigkeit,
-        zwei Sicherungsfolien „Falls die Technik streikt“ mit Terminal-Ausgaben vom 2026-11-09)
+   2 Video „Franz und die Glaskugel“ (4:15: Einleitung 0:15, Video 3:32, Quizfrage live ca. 0:20, Überleitung 0:10)
+   3 Betriebe heute und unsere Idee (1:30, mit Publikumsfrage)
+   4 Konkurrenz: Vertragsenden kostenlos bei Vergabeweiser (1:15)
+   5 Vergleich mit Vergabeweiser, mit Zeitleiste Grundlaufzeit / spätestes Vertragsende (1:15)
+   6 Make or Buy aus Sicht des Betriebs (1:00)
+   7 Demo als Zielbild (1:00, Bildschirmaufnahme)
+   8 So funktioniert es technisch: Pipeline und Prognoseregel (1:00)
+   9 KI-Irrwege und Trennung von Entwicklung und Test (1:15)
+  10 Empfehlung und Grenzen (1:15)
+  11 Fazit (0:45)
+  12–17 ausgeblendeter Anhang für die Fragerunde (Vier Versuche, vier verfehlte Schwellen; Frage/Kriterium/Daten; Trefferquote je Vorlauf;
+        Liste und Genauigkeit; zwei Sicherungsfolien „Falls die Technik streikt“ mit Terminal-Ausgaben vom 2026-11-09)
 Begriff auf den sichtbaren Folien: „spätestes Vertragsende (mit allen Verlängerungen)“ beim ersten Auftreten (Folie 2), danach „spätestes Vertragsende“
 (im Code und in den Notizen auch „Höchstende“).
-Option --ohne-anhang lässt den Anhang weg (ANHANG Folien). Das Video wird eingebettet, sobald docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4 existiert
-(Rückfall v3, v2, v1). Zahlen aus docs/iterationen.md, docs/business.md §7 bis §9, docs/business_case_auswahl.md, docs/demo_push.md,
+Option --ohne-anhang lässt den Anhang weg (ANHANG Folien). Video: bevorzugt docs/video/franz_video_ton_kurz.mp4 (Kürzung von Manuels Fassung durch Claude für den Vortrag, 3:32,
+Stimmen ElevenLabs), Rückfall auf franz_und_die_glaskugel_szenen_0-5_v4.mp4, dann v3, v2, v1. Das Posterbild wird aus dem Video geschnitten
+(ffmpeg aus .venv-video, Standbild Glaskugel bei 1:50), sonst gezeichnet. Zahlen aus docs/iterationen.md, docs/business.md §7 bis §9, docs/business_case_auswahl.md, docs/demo_push.md,
 reports/evaluation_iteration5.md bis 10b, reports/sensitivitaet_iteration5.md, docs/lab_log.md, docs/fragenrunde.md (Teil A, Sicherungsfolien),
 docs/lab_log_bilder/diagramm_vorlauf.png (Bild der Anhangsfolie 14).
 Aufruf:  .venv\\Scripts\\python.exe -I src/report/vortrag.py [--ohne-anhang] [Ausgabepfad]      Ausgabe: docs/vortrag/vortrag_vergabe_radar.pptx
@@ -59,7 +59,6 @@ ABSCHNITTE = ("Idee", "Betriebe", "Markt", "Produkt", "Prüfung", "Fazit")
 TITEL = [None,
     "",
     "Video: Was TED vorhersagt und was nicht",
-    "Vier Versuche, vier verfehlte Schwellen – und was jeder geändert hat",
     "Ein Betrieb hatte nur 28 Tage für sein Angebot; wir wollten Monate daraus machen",
     "Vertragsenden gibt es schon kostenlos bei Vergabeweiser",
     "Bei 27 von 230 Losen weichen wir von Vergabeweiser ab, meist wegen der Zählweise",
@@ -69,14 +68,15 @@ TITEL = [None,
     "Die KI machte Fehler; gefunden wurden sie durch getrennte Prüfung",
     "Nutzbar als Ausgangspunkt, aber nicht als eigenes Produkt",
     "",
-    # ausgeblendeter Anhang (Folien 13 bis 17)
+    # ausgeblendeter Anhang (Folien 12 bis 17)
+    "Vier Versuche, vier verfehlte Schwellen – und was jeder geändert hat",
     "Wer früh weiß, wann ein Auftrag endet, kann sich besser vorbereiten",
     "Auch im Nachhinein erreicht kein Vorlauf die Schwelle von 60 %",
     "Das Vertragsende lässt sich meist lesen: 66 von 70 wie zwei KI-Leser",
     "Falls die Technik streikt: Live-Nachweise als Bild (1/2)",
     "Falls die Technik streikt: Live-Nachweise als Bild (2/2)",
 ]
-ANHANG = 5   # Zahl der ausgeblendeten Folien am Ende
+ANHANG = 6   # Zahl der ausgeblendeten Folien am Ende
 
 prs = Presentation()
 prs.slide_width, prs.slide_height = Inches(10), Inches(5.625)
@@ -226,7 +226,7 @@ def balken(s, x, y, w, h, kategorien, werte, farben, name, maximum=118, fmt='0.0
 # Folie 1: Titel ------------------------------------------------------------
 s = new_slide("ZEIT 0:30. KERNAUSSAGE: Eine Reinigungsfirma will früh wissen, wann ein öffentlicher Vertrag endet und neu ausgeschrieben wird. Wir zeigen, was TED-Daten dazu hergeben "
               "(eine Liste der Vertragsenden), was nicht (eine Terminprognose), und was an der Idee gegenüber der kostenlosen Konkurrenz übrig bleibt. "
-              "Ablauf in einem Satz: ein Video von ca. 3 Minuten (Franz und die Glaskugel: Frage, zwei Irrwege, Liste samt Genauigkeit), dann in einer Minute unsere vier Versuche mit verfehlten Schwellen, dann der längere Teil aus Sicht eines Betriebs: "
+              "Ablauf in einem Satz: ein Video von ca. 3,5 Minuten (Franz und die Glaskugel: Frage, zwei Irrwege mit verfehlten Schwellen, Liste samt Genauigkeit, mit einer Quizfrage an euch), dann der längere Teil aus Sicht eines Betriebs: "
               "Wie arbeiten Betriebe, was war unsere Idee, wer bietet es schon, was hätte das Produkt sein sollen, wie funktioniert es technisch, was bleibt. "
               "Kernbotschaft schon jetzt nennen: Die Liste lässt sich aus TED lesen, ein eigenes Produkt ist sie nicht, und ein Qualitätsvorsprung ist nicht belegt. "
               "ZEIG-MIR-WO: docs/iterationen.md (Übersicht und Ergebnis Iteration 10 und 10b), docs/lab_log.md Abschnitt 0.", dark=True, teil="titel")
@@ -244,18 +244,50 @@ box(s, 0.6, 5.0, 8.0, 0.3, "Big Data Analytics · Leistungsnachweis B", size=14,
 s.notes_slide.notes_text_frame.text += " KURZ GESAGT (für Laien): Wir haben geprüft, ob man aus öffentlichen Daten vorhersagen kann, wann ein Reinigungsauftrag neu ausgeschrieben wird."
 
 # Folie 2: Video ---------------------------------------------------------
-VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5_v4.mp4"   # v4: Edge-Stimmen (Microsoft Neural), sonst wie v3
-if not VIDEO.exists():
-    VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5_v3.mp4"
-if not VIDEO.exists():  # Fallback auf v2 (Piper-Stimme), dann v1 (SAPI-Stimme)
-    VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5_v2.mp4"
-if not VIDEO.exists():
-    VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5.mp4"
+VIDEO_KANDIDATEN = ("franz_video_ton_kurz.mp4",                      # Kürzung von Manuels Fassung (Claude; 3:32, Stimmen ElevenLabs, ohne Runde 4)
+                    "franz_und_die_glaskugel_szenen_0-5_v4.mp4",     # v4: Edge-Stimmen (Microsoft Neural), sonst wie v3
+                    "franz_und_die_glaskugel_szenen_0-5_v3.mp4",
+                    "franz_und_die_glaskugel_szenen_0-5_v2.mp4",     # Piper-Stimme
+                    "franz_und_die_glaskugel_szenen_0-5.mp4")        # SAPI-Stimme
+VIDEO = next((ROOT / "docs" / "video" / n for n in VIDEO_KANDIDATEN if (ROOT / "docs" / "video" / n).exists()),
+             ROOT / "docs" / "video" / VIDEO_KANDIDATEN[0])
 POSTER = ROOT / "docs" / "vortrag" / "poster_franz_und_die_glaskugel.png"
+POSTER_SEKUNDE = 110   # Standbild im Kurzfilm: Franz mit der Glaskugel „Vertragsende − 6 Monate“ (vor der Quizfrage, keine Auflösung)
+
+
+def poster_aus_video(video, pfad, sekunde=POSTER_SEKUNDE):
+    """Standbild aus dem Video schneiden (ffmpeg aus .venv-video) und unten eine Leiste „Kurzfilm · ca. 3,5 Minuten · Abspielen“ darüberlegen.
+    Gibt True zurück, wenn es geklappt hat."""
+    import subprocess
+    import tempfile
+    from PIL import Image, ImageDraw, ImageFont
+    ffmpeg = sorted((ROOT / ".venv-video" / "Lib" / "site-packages" / "imageio_ffmpeg" / "binaries").glob("ffmpeg*.exe"))
+    if not ffmpeg:
+        return False
+    with tempfile.TemporaryDirectory() as tmp:
+        bild = Path(tmp) / "standbild.png"
+        r = subprocess.run([str(ffmpeg[-1]), "-v", "error", "-y", "-ss", str(sekunde), "-i", str(video), "-frames:v", "1", str(bild)], capture_output=True)
+        if r.returncode != 0 or not bild.exists():
+            return False
+        with Image.open(bild) as roh:
+            im = roh.convert("RGB").resize((1600, 900))
+    d = ImageDraw.Draw(im)
+    try:
+        f1 = ImageFont.truetype("C:/Windows/Fonts/seguisb.ttf", 46)
+        f2 = ImageFont.truetype("C:/Windows/Fonts/segoeui.ttf", 40)
+    except OSError:
+        f1 = f2 = ImageFont.load_default()
+    d.rectangle((0, 745, 1600, 900), fill=(28, 28, 30))               # verdeckt die Untertitelzeile des Standbilds
+    d.polygon([(70, 790), (70, 870), (140, 830)], fill=(0, 122, 255))
+    d.text((180, 798), "Franz und die Glaskugel", font=f1, fill=(255, 255, 255))
+    d.text((760, 804), "Kurzfilm · ca. 3,5 Minuten · Abspielen", font=f2, fill=(174, 174, 178))
+    pfad.parent.mkdir(parents=True, exist_ok=True)
+    im.save(pfad)
+    return True
 
 
 def poster_erzeugen(pfad):
-    """Posterbild 1600x900 aus der Foliengestaltung (dunkle Fläche, Glaskugel, Abspielzeichen)."""
+    """Rückfall ohne ffmpeg: Posterbild 1600x900 aus der Foliengestaltung (dunkle Fläche, Glaskugel, Abspielzeichen)."""
     from PIL import Image, ImageDraw, ImageFont
     w, h = 1600, 900
     im = Image.new("RGB", (w, h), (28, 28, 30))
@@ -271,36 +303,43 @@ def poster_erzeugen(pfad):
         f1 = f2 = ImageFont.load_default()
     d.text((100, 300), "Franz und", font=f1, fill=(255, 255, 255))
     d.text((100, 410), "die Glaskugel", font=f1, fill=(255, 255, 255))
-    d.text((100, 560), "Szenen 1 bis 5 · ca. 3 Minuten", font=f2, fill=(174, 174, 178))
+    d.text((100, 560), "Kurzfilm · ca. 3,5 Minuten", font=f2, fill=(174, 174, 178))
     d.polygon([(100, 700), (100, 790), (180, 745)], fill=(0, 122, 255))
     d.text((210, 715), "Abspielen", font=f2, fill=(0, 122, 255))
     pfad.parent.mkdir(parents=True, exist_ok=True)
     im.save(pfad)
 
 
-s = new_slide("ZEIT 3:30 (Video ca. 3 Minuten inklusive Pause für die Quizfrage; dazu Einleitung und Überleitung etwa 0:30; das Video wird noch optimiert, die Länge kann sich leicht ändern). "
-              "KERNAUSSAGE: Das Video „Franz und die Glaskugel“ erzählt die ersten Zyklen des Projekts in drei Runden: "
-              "Problem (Franz, Gebäudereiniger, erfährt zu spät, wann Verträge enden), Idee (TED-Daten), Runde 1: Vorgänger finden, 11 von 24 (Schwelle verfehlt), "
-              "Runde 2: die Glaskugel „spätestes Vertragsende minus 6 Monate“ (Regel R1: Höchstende, also Ende mit allen Verlängerungen, minus 6 Monate), 28,8 % statt der geforderten 60 %, "
-              "Runde 3: die Vertragsliste, 66 von 70 Stichproben mit gleichem Enddatum wie zwei KI-Leser. Es ersetzt die Folien Frage/Kriterium/Daten und Liste und Genauigkeit (ausgeblendet am Ende, Folien 13 und 15); alle vier Versuche zeigt danach Folie 3. BEGRIFF: Auf Karte 2 steht beim ersten Auftreten „spätestes Vertragsende (mit allen Verlängerungen)“, danach auf allen Folien nur „spätestes Vertragsende“ (in Dateien: Höchstende). "
-              "ABLAUF: (1) Einleitung 15 Sekunden: „Drei Minuten Video, in der Mitte eine Frage an euch.“ Daten und Kriterium in einem Satz sagen: TED, Gebäudereinigung, Deutschland, Daten ab Okt. 2016 (Liste: eForms ab Okt. 2023), "
-              "Treffer = Neuausschreibung im Fenster ±3 Monate, Schwelle 60 % vorab festgelegt; einfache Vergleichsregel R0 „Ende der Grundlaufzeit minus 6 Monate“ schafft 17,3 %. "
-              "(2) Video starten (Folie anklicken, Wiedergabe). (3) QUIZFRAGE LIVE in der Mitte, Video anhalten: „Wie oft lag die Regel ‚spätestes Vertragsende minus 6 Monate‘ richtig? Ziel waren 60 %.“ "
-              "Handzeichen oder Zuruf, 20 Sekunden; dann Video weiter: Auflösung 28,8 %. "
-              "(4) Überleitung nach dem Video, 15 Sekunden: „Franz hat also eine Liste statt einer Glaskugel. Hier noch einmal alle vier Versuche auf einen Blick.“ "
-              "SICHERUNG, falls das Video nicht läuft: die drei Karten rechts nennen die Kernzahlen (11 von 24 · 28,8 % statt 60 % · 66 von 70); die Geschichte in 60 Sekunden frei erzählen, Quizfrage trotzdem stellen. Details auf Folie 3 und in den ausgeblendeten Folien 13 bis 15. "
-              "HINWEISE: Die Animation hat Manuel Strobel KI-gestützt erstellt; Ludwig Richthammer und Manuel Strobel haben sie abwechselnd überarbeitet (Zahlen gegen Belege geprüft, zu starke Sätze eingeschränkt). Stimmen synthetisch, Figuren erfunden. Das im Vortrag offen sagen. "
+s = new_slide("ZEIT 4:15 = Einleitung 0:15 + Video 3:32 + Quizfrage live ca. 0:20 (Video kurz anhalten) + Überleitung 0:10. "
+              "KERNAUSSAGE: Der Kurzfilm „Franz und die Glaskugel“ erzählt die ersten Zyklen des Projekts: "
+              "Franz (Gebäudereiniger, erfährt alles zu spät), Rathaus und Ausschreibung, die Idee einer Glaskugel, TED als Datenquelle, CRISP-DM als Vorgehen; "
+              "Runde 1: Vorgänger zuordnen, 11 von 24 (Schwelle verfehlt); "
+              "Runde 2: die Glaskugel „spätestes Vertragsende minus 6 Monate“ (Regel R1: Höchstende, also Ende mit allen Verlängerungen, minus 6 Monate), 28,8 % gegen 17,3 % der einfachen Vergleichsregel, Ziel 60 %; dazu die Vergabestelle: „Option wird meist verlängert“; "
+              "Runde 3: die Vertragsliste, 66 von 70 Stichproben mit gleichem Enddatum wie zwei KI-Leser, ein Mensch prüft 15, 9.325 Lose. "
+              "Abspann: „Franz gibt es nicht. Die Daten schon.“ und der Satz „Vorhersagen? Mit unserer einfachen Regel nicht. Selbst bauen? Lohnt sich nach unserem Modell nicht. Wie sicher wir uns sind und wo nicht, zeigen wir euch jetzt.“ "
+              "Das Video ersetzt die Folien Vier Versuche, Frage/Kriterium/Daten und Liste und Genauigkeit (ausgeblendet im Anhang, Folien 12, 13 und 15). "
+              "RUNDE 4 BEWUSST NICHT IM VIDEO: Die Kurzfassung lässt Runde 4 (kostenlose Liste bei Vergabeweiser, Vergleich auf 230 Losen, Waage Make or Buy, Oberpfalz, Bauplan) weg, weil die Folien 4 bis 6 genau das danach live zeigen (dazu Folie 7 Demo, Folie 8 Technik). "
+              "BEGRIFF: Auf Karte 2 steht beim ersten Auftreten „spätestes Vertragsende (mit allen Verlängerungen)“, danach auf allen Folien nur „spätestes Vertragsende“ (in Dateien: Höchstende). "
+              "ABLAUF: (1) Einleitung 0:15: „Gut drei Minuten Video, in der Mitte eine Frage an euch.“ Daten und Kriterium in einem Satz sagen: TED, Gebäudereinigung, Deutschland, Daten ab Okt. 2016 (Liste: eForms ab Okt. 2023), "
+              "Treffer = Neuausschreibung im Fenster ±3 Monate, Schwelle 60 % vorab festgelegt. "
+              "(2) Video starten (Folie anklicken, Wiedergabe), Länge 3:32. (3) QUIZFRAGE LIVE bei ca. 2:00 im Video (Bild „Was schätzt ihr: Wie oft lag die Regel richtig? Ziel waren 60 Prozent.“, steht nur wenige Sekunden, etwa 2:02 bis 2:06): Video kurz anhalten, "
+              "Handzeichen oder Zuruf, ca. 0:20; dann Video weiter: Auflösung 28,8 % gegen 17,3 %. "
+              "(4) Überleitung nach dem Abspann, 0:10: „Wie sicher wir uns sind und wo nicht: zuerst, wie Betriebe heute an Aufträge kommen.“ "
+              "SICHERUNG, falls das Video nicht läuft: die drei Karten rechts nennen die Kernzahlen (11 von 24 · 28,8 % statt 60 % · 66 von 70); die Geschichte in 60 Sekunden frei erzählen, Quizfrage trotzdem stellen; "
+              "bei Bedarf die ausgeblendete Folie 12 (Vier Versuche) über die Foliensortierung zeigen. Details in den ausgeblendeten Folien 12 bis 15. "
+              "HINWEISE: Die Animation hat Manuel Strobel KI-gestützt erstellt; Ludwig Richthammer und Manuel Strobel haben sie gemeinsam überarbeitet (Zahlen gegen Belege geprüft, zu starke Sätze eingeschränkt). Stimmen KI-generiert (ElevenLabs, laut Abspann), Figuren erfunden. Das im Vortrag offen sagen. "
               "EHRLICHE EINSCHRÄNKUNGEN (bei Nachfrage oder in einem Satz am Ende): Die Figuren (Franz) sind erfunden, die Gespräche sind im Video nachgestellt (die drei echten Telefongespräche, n = 3, sind nur Hinweise, keine Belege). "
               "Die 66 von 70 heißen nur: gleiches Enddatum wie der Vergleichswert zweier KI-Leser; die Leser sind nicht unabhängig (gleiche Modellfamilie), und ihr Vergleichswert ist teils zirkulär (er nutzt wie die Liste das Feld als Ende der Grundlaufzeit); "
-              "dazu prüfte ein Kommilitone 15 Lose, 14 stimmen. Der Vergleichswert 17,3 % der Terminprognose ist dagegen die einfache Regel R0 auf denselben 52 Paaren; die Paare stammen aus einer Rückwärtssuche. "
-              "Ein Qualitätsvorsprung gegenüber der Konkurrenz ist nicht belegt (Folien 5 und 6). "
-              "FRAGE – ANTWORT: „Warum ±3 Monate, warum 60 %?“ Das Fenster und die Schwelle wurden vor der Rechnung gesetzt, ohne Kundenkontakt, begründete Setzung (Anhang Folie 13). "
-              "Nachträglich, kein neuer Test: Auch mit dem im Nachhinein besten Vorlauf bleibt R1 bei 28,8 % (Folie 9, Anhang Folie 14). "
-              "„Waren die 66 von 70 nicht vom Entwickler selbst bewertet?“ Nein, neue Stichprobe, Rohtext ohne Projektkontext, aber KI-Leser nicht unabhängig (Folie 10, Anhang Folie 15). "
-              "ZEIG-MIR-WO: docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4, docs/video/README.md (Korrekturen), docs/iterationen.md, reports/backtest_iteration5.md, reports/evaluation_iteration3.md bis 9, Folie 3, Anhang Folien 13 bis 15.",
+              "dazu prüfte ein Kommilitone 15 Lose, 14 stimmen. Der Vergleichswert 17,3 % der Terminprognose ist die einfache Regel R0 (Ende der Grundlaufzeit minus 6 Monate) auf denselben 52 Paaren; die Paare stammen aus einer Rückwärtssuche. "
+              "Ein Qualitätsvorsprung gegenüber der Konkurrenz ist nicht belegt (Folien 4 und 5). "
+              "FRAGE – ANTWORT: „Warum ±3 Monate, warum 60 %?“ Das Fenster und die Schwelle wurden vor der Rechnung gesetzt, ohne Kundenkontakt, begründete Setzung (Anhang Folien 12 und 13). "
+              "Nachträglich, kein neuer Test: Auch mit dem im Nachhinein besten Vorlauf bleibt R1 bei 28,8 % (Folie 8, Anhang Folie 14). "
+              "„Waren die 66 von 70 nicht vom Entwickler selbst bewertet?“ Nein, neue Stichprobe, Rohtext ohne Projektkontext, aber KI-Leser nicht unabhängig (Folie 9, Anhang Folie 15). "
+              "ZEIG-MIR-WO: docs/video/franz_video_ton_kurz.mp4 (Langfassung mit Runde 4: docs/video/franz_video_ton.mp4, 4:28), docs/video/README.md (Korrekturen), docs/iterationen.md, reports/backtest_iteration5.md, reports/evaluation_iteration3.md bis 9, Anhang Folien 12 bis 15.",
               teil="Idee")
 if VIDEO.exists():
-    poster_erzeugen(POSTER)
+    if not poster_aus_video(VIDEO, POSTER):
+        poster_erzeugen(POSTER)
     s.shapes.add_movie(str(VIDEO), Inches(0.6), Inches(1.4), Inches(4.97), Inches(2.8), poster_frame_image=str(POSTER), mime_type="video/mp4").name = "Video Franz und die Glaskugel"
     VIDEO_STATUS = "eingebettet"
 else:
@@ -317,40 +356,12 @@ for i, (zahl, text, f) in enumerate((("11 von 24", "Vorgänger gefunden: Runde 1
     box(s, 5.97, y + 0.02, 3.3, 0.36, zahl, size=22, color=f, font=HEAD, anchor=MSO_ANCHOR.MIDDLE, name=f"Kernzahl {i + 1} Zahl")
     box(s, 5.97, y + 0.37, 3.3, 0.48, text, size=14, name=f"Kernzahl {i + 1} Text")
 kurz(s, "Wann neu ausgeschrieben wird, sagt niemand voraus; wann ein Vertrag endet, lässt sich meist lesen.")
-fuss(s, "Animation: Manuel Strobel (KI-gestützt), gemeinsam überarbeitet; Stimmen synthetisch, Figuren erfunden.")
+fuss(s, "Animation: Manuel Strobel (KI-gestützt), gemeinsam überarbeitet; Stimmen KI-generiert (ElevenLabs), Figuren erfunden.")
 
 
-# Folie 3: Vier Versuche, vier verfehlte Schwellen (bisher Anhang) ------------------------------------------------------------
-s = new_slide("ZEIT 1:00. KERNAUSSAGE: Der Iterationsweg auf einen Blick: Vier Versuche, jeder an einer vorab festgelegten Schwelle gescheitert, und jeder hat den nächsten Schritt geändert. Das haben wir so berichtet. "
-              "ZEILE 1 (Iteration 2): Zuordnung neuer Auftrag → Vorgänger über Auftraggeber + CPV: K2 = 5 von 30 = 16,7 % (Wilson 7,3–33,6 %), Schwelle 80 %; große Auftraggeber vergeben viele Verträge parallel. Danach: Zuordnung über das Objekt (Adresse, Titel). "
-              "ZEILE 2 (Iteration 3): Objekt-Regel: V3 Trefferquote 11 von 38 = 28,9 %, Schwelle 60 % (dazu V1 63,3 % und V2 45,8 %, Schwelle je 80 %). Auf Entwicklungsdaten hielt Claude 10–11 von 12 Vorschlägen für plausibel, im Test waren 11 von 24 richtig. Danach: ein letzter Versuch auf neuen Testdaten. "
-              "ZEILE 3 (Iteration 4): erweiterte Regel auf neuen Testdaten (Q1 2026): W3 17 von 30 = 56,7 %, Schwelle 60 % (W4 Zweitprüfung des Nutzers 65 %, Schwelle 85 %). Danach: keine weitere Zuordnungsregel; das Vertragsende aus dem Zuschlag selbst lesen und daraus den Termin berechnen. "
-              "ZEILE 4 (Iteration 5, Backtest): R1 = spätestes Vertragsende (Höchstende, mit allen Verlängerungen) minus 6 Monate auf 52 von Hand bestätigten Paaren: 15 von 52 = 28,8 % (Wilson 18,3–42,3 %), Schwelle 60 %; "
-              "die einfache Faustregel R0 (Ende der Grundlaufzeit minus 6 Monate) schafft 9 von 52 = 17,3 %. 20 Neuausschreibungen kamen mehr als 3 Monate früher, 15 im Fenster, 17 später. Danach: keine Terminprognose, nur eine Liste der Vertragsenden. "
-              "Grenzen: Paare aus einer Rückwärtssuche (nur auffindbare Vorgänger), Zweitprüfung KI-unterstützt. "
-              "NACHTRAG SENSITIVITÄT (nachträglich, kein neuer Test; Diagramm Trefferquote je Vorlauf im Anhang Folie 14): bester Vorlauf im Nachhinein 6 Monate (28,8 %), ±12 Monate nur 50 %, McNemar R1 gegen R0 p ≈ 0,18 (Folie 9). "
-              "FRAGE – ANTWORT: „Warum ±3 Monate, warum diese Vergleichsregel?“ Das Fenster wurde vor der Rechnung gesetzt, weil ein Betrieb für Personal und Angebot grob ein Vierteljahr Spielraum braucht; die einfache Regel R0 zeigt, was Zufall und Streuung allein schaffen; die Schwelle 60 % war eine Setzung ohne Kundenkontakt. "
-              "ZEIG-MIR-WO: docs/iterationen.md (Übersichtstabelle, K2, V3, W3, X3), docs/lab_log.md Abschnitt 0, reports/zuordnung_iteration3.md, reports/evaluation_iteration4.md, reports/backtest_iteration5.md, reports/evaluation_iteration5.md, reports/sensitivitaet_iteration5.md.",
-              teil="Idee")
-
-versuche = (("Iteration 2 · Zuordnung", "Vorgänger über Auftraggeber finden", "16,7 %", "Ziel 80 %", "Danach: über das Objekt suchen (Adresse, Titel)"),
-            ("Iteration 3 · Zuordnung", "Vorgänger über das Objekt finden", "28,9 %", "Ziel 60 %", "Danach: letzter Versuch auf neuen Testdaten"),
-            ("Iteration 4 · Zuordnung", "Objekt-Regel auf neuen Testdaten", "56,7 %", "Ziel 60 %", "Danach: Termin aus dem Vertragsende berechnen"),
-            ("Iteration 5 · Terminprognose", "Spätestes Vertragsende − 6 Monate", "28,8 %", "Ziel 60 %", "Danach: keine Prognose, nur Liste der Vertragsenden"))
-for i, (it, was, quote, ziel, danach) in enumerate(versuche):
-    y = 1.38 + i * 0.71
-    rect(s, 0.6, y, 8.8, 0.64, WHITE, radius=0.12, name=f"Versuch {i + 1} Karte")
-    kreis(s, 0.75, y + 0.14, 0.36, RED, str(i + 1), size=13, name=f"Versuch {i + 1} Nummer")
-    box(s, 1.25, y + 0.04, 3.75, 0.56, [[(was, {"bold": True})], [(it, {"color": GREY})]], size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Text")
-    box(s, 5.05, y + 0.04, 1.2, 0.56, [[(quote, {"bold": True, "color": RED, "size": 18, "font": HEAD})], [(ziel, {"color": GREY})]], size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Quote")
-    pfeil(s, 6.25, y + 0.21, 0.18, 0.22, name=f"Versuch {i + 1} Pfeil")
-    box(s, 6.55, y + 0.04, 2.75, 0.56, danach, size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Danach")
-kurz(s, "Keiner der vier Versuche erreichte seine Schwelle; die Terminregel traf 28,8 % (einfache Faustregel: 17,3 %), also eine Liste statt einer Prognose.")
-fuss(s, "Schwellen vor jedem Ergebnis festgelegt. Zuordnung: neuer Auftrag → Vorgängervertrag; Termin: 52 geprüfte Paare.")
-
-# Folie 4: Betriebe heute und unsere Idee ----------------------------------------
-s = new_slide("ZEIT 1:15 (gekürzt: Prozesskarten nur zeigen, je einen Satz zu Meldung und Begehung; die Idee-Kette in einem Atemzug). "
-              "KERNAUSSAGE: Ab hier der Teil, den wir zu knapp behandelt hatten: das Business Understanding aus Sicht eines Gebäudereinigers (Folien 4 bis 8, zusammen 5:45 = 38 % der Zeit). "
+# Folie 3: Betriebe heute und unsere Idee ----------------------------------------
+s = new_slide("ZEIT 1:30 (Prozesskarten zeigen, je einen Satz zu Meldung und Begehung; die Idee-Kette in einem Atemzug; Publikumsfrage etwa 0:20). "
+              "KERNAUSSAGE: Ab hier der Teil, den wir zu knapp behandelt hatten und den das Video bewusst auslässt (Runde 4): das Business Understanding aus Sicht eines Gebäudereinigers (Folien 3 bis 7, zusammen 6:00 = 40 % der Zeit). "
               "Zuerst, wie Betriebe heute vorgehen und was unsere Idee für sie war, dann die Konkurrenz. "
               "OBERE REIHE, PROZESS (Fakten, drei Gespräche des Nutzers am 2026-11-05; 9 Anrufe, 3 erreicht, 105 Minuten; Notizen ohne Namen; n = 3, Hinweise, keine Belege): Betrieb mittlerer Größe (rund 120 Beschäftigte): "
               "Meldung der Ausschreibung 28 Tage vor Abgabe; eng bei der Objektbegehung (ein Termin, der beste Vorarbeiter krank); Kalkulation nachts; Entscheidung mitzubieten „hauptsächlich Entfernung und Personal“; "
@@ -361,11 +372,11 @@ s = new_slide("ZEIT 1:15 (gekürzt: Prozesskarten nur zeigen, je einen Satz zu M
               "(4) Nutzen laut fachlichem Kriterium (docs/business.md §7.1): „Der Betrieb kann Angebot, Referenzen und Personal gezielt vorbereiten, statt Bekanntmachungen dauernd zu beobachten.“ "
               "Also statt rund 28 Tagen ab Meldung Monate für Begehung, Kalkulation, Personal und Referenzen. Gespräch 1 bestätigt den Wunsch („Absolut“: Personal in der Zielregion früher suchen), der Kleinbetrieb nicht („Eigentlich nicht“). "
               "Ehrlich: A8 wurde in Iteration 5 widerlegt (28,8 %, Video); A1 und A15 (Betriebe wollen früh wissen und zahlen dafür) sind ungeprüft. "
-              "PUBLIKUMSFRAGE (dunkle Karte, am Ende der Folie; 20 Sekunden, Handzeichen): „Gibt es kostenlos eine Liste auslaufender öffentlicher Verträge?“ Ja / nein / weiß nicht. Auflösung auf Folie 5: Ja, Vergabeweiser. "
-              "Zwischenstand: 4:00 nach Folie 2, 5:00 nach Folie 3, 6:15 nach Folie 4; liegt ihr hinten, die Frage als Satz überspringen und direkt auf Folie 5 auflösen. "
+              "PUBLIKUMSFRAGE (dunkle Karte, am Ende der Folie; 20 Sekunden, Handzeichen): „Gibt es kostenlos eine Liste auslaufender öffentlicher Verträge?“ Ja / nein / weiß nicht. Auflösung auf Folie 4: Ja, Vergabeweiser. "
+              "Zwischenstand: 0:30 nach Folie 1, 4:45 nach Folie 2, 6:15 nach Folie 3, 7:30 nach Folie 4; liegt ihr nach Folie 2 hinten, die Frage als Satz überspringen und direkt auf Folie 4 auflösen. "
               "KOSTEN der Suche (nicht auf der Folie): Portal-Abo des mittleren Betriebs knapp 1.500 € im Jahr (DTAD, Suchprofile); Dienste wie subreport 84–198 € im Monat (Recherche, nicht einzeln nachgeprüft). Der Kleinbetrieb zahlt für nichts in dem Bereich. "
               "FRAGE – ANTWORT: „Wer zahlt?“ Gespräche n = 3: Der größere Betrieb würde für den aktuellen Auftragnehmer und alte Preise zahlen, die Enddaten nannte er „nett für die Planung“; der Kleinbetrieb für nichts. "
-              "Ein Betrag wurde nicht genannt. Preisanker der Konkurrenz: 0 bis 200 € im Monat. Ehrlich: Zahlungsbereitschaft ist nicht belegt (Folie 7). "
+              "Ein Betrag wurde nicht genannt. Preisanker der Konkurrenz: 0 bis 200 € im Monat. Ehrlich: Zahlungsbereitschaft ist nicht belegt (Folie 6). "
               "„Sind die Gespräche anonym?“ Ja. Keine Namen von Personen oder Firmen, die Betriebe sind nur beschrieben. "
               "ZEIG-MIR-WO: docs/business.md §7.1 (Nutzen und Schwelle), §8.1 (wie Betriebe an Aufträge kommen), §8.9 (Gespräche), docs/annahmen.md (A1, A4, A8, A15).",
               teil="Betriebe")
@@ -396,7 +407,7 @@ box(s, 0.85, 3.7, 8.4, 0.5, [[("Frage an euch: ", {"bold": True, "color": AMBER}
 kurz(s, "Mehr Vorlauf hieße Zeit für Begehung, Kalkulation und Personal (Annahme).")
 fuss(s, "Drei Telefongespräche (n = 3: mittlerer Betrieb, Kleinbetrieb, Vergabestelle): Hinweise, keine Belege.")
 
-# Folie 5: Konkurrenz ------------------------------------------------------------
+# Folie 4: Konkurrenz ------------------------------------------------------------
 s = new_slide("ZEIT 1:15. KERNAUSSAGE: Auflösung der Publikumsfrage: Ja, es gibt sie kostenlos. Vergabeweiser listet 1.005 Gebäudereinigungs-Verträge, die in 12 Monaten enden, mit Zuschlagsempfänger, Zahl der Angebote und Verlängerungsoptionen, "
               "nach eigener Angabe auch unterhalb der EU-Schwelle (von uns nicht gemessen). "
               "TABELLE (Prüfstand): Vergabeweiser und die Vertragsende-Seite von AusschreibungsRadar hat Claude am 2026-11-05 selbst nachgelesen; AusschreibungsRadar: 0 bis 149 € im Monat, KI-Eignungsanalyse ab 29 €, Bid/No-Bid-Check mit Match-Score ab 79 € (Preise aus der Recherche); "
@@ -405,7 +416,7 @@ s = new_slide("ZEIT 1:15. KERNAUSSAGE: Auflösung der Publikumsfrage: Ja, es gib
               "HINWEIS (Fakt, Paket A, 130 Oberpfalz-Lose): Auftragnehmer genannt bei 99,2 %, Zuschlagswert über 1 € nur bei 47,7 %, Zahl der Angebote bei 60,8 %. TED-Daten allein reichen für Preisbenchmarks also nur zur Hälfte. "
               "Beobachtung (Hypothese, n = 3): Zwei Betriebe nutzen keinen der Dienste, einer kannte sie vom Hörensagen, die andere gar nicht: eher ein Bekanntheits- als ein Angebotsproblem der Konkurrenz. "
               "FRAGE – ANTWORT: „Warum nicht einfach Vergabeweiser nutzen?“ Doch, für die Suche nach Vertragsenden spricht vieles dafür: kostenlos, nach eigener Angabe auch unterschwellige Verfahren, Zuschlagsempfänger und Bieterzahl. "
-              "Unsere Liste ist als eigenes Produkt nicht tragfähig; die Sicht des Betriebs (selbst bauen) steht auf Folie 7. "
+              "Unsere Liste ist als eigenes Produkt nicht tragfähig; die Sicht des Betriebs (selbst bauen) steht auf Folie 6. "
               "SPALTE „VERTRAGSENDEN?“ (docs/lab_log.md Abschnitt 1, Tabelle Konkurrenz; docs/business.md §8.2 und §8.9): ja = Funktion auf der Anbieterseite selbst nachgelesen (Vergabeweiser, AusschreibungsRadar, Stand 2026-11-05); "
               "aufträge.io „ja, ungeprüft“ = 43.373 Verträge mit Ende in 12 Monaten laut Recherche, nicht selbst nachgelesen, Preis auf Anfrage; subreport und DTAD „nicht belegt“ = eine Funktion für auslaufende Verträge steht in unseren Quellen nicht "
               "(DTAD: der Betrieb kennt dort keine Listen auslaufender Verträge). „Nicht belegt“ heißt nicht „gibt es nicht“. "
@@ -429,7 +440,7 @@ for i, (n, v, p, t) in enumerate(zeilen):
 kurz(s, "Wer nur Vertragsenden sucht, braucht kein Abo.")
 fuss(s, "nachgelesen = selbst gelesen · Recherche = nicht einzeln geprüft · nicht belegt = in unseren Quellen nicht genannt")
 
-# Folie 6: Vergleich mit Vergabeweiser ------------------------------------------------------------
+# Folie 5: Vergleich mit Vergabeweiser ------------------------------------------------------------
 s = new_slide("ZEIT 1:15. ZEITLEISTE OBEN zuerst erklären (10 Sekunden): Ein Vertrag hat eine feste Laufzeit (Grundlaufzeit); danach kann die Verwaltung Verlängerungen ziehen. "
               "Das späteste Vertragsende (in unseren Dateien „Höchstende“) ist das Ende mit allen Verlängerungen. Unsere Liste nennt das Ende der Grundlaufzeit; Vergabeweiser nennt in einem Teil der Fälle das späteste Ende (Balken „spätestes Ende gemeint“). "
               "KERNAUSSAGE: Wir haben vorab festgelegt und dann geprüft, ob unsere Liste das Ende der Grundlaufzeit häufiger trifft als Vergabeweiser. "
@@ -478,7 +489,7 @@ balken(s, 4.8, 2.6, 4.55, 1.6, ["spätestes Ende gemeint", "Teilauftrag (Los)", 
 kurz(s, "Beide Listen sind brauchbar; das Datum in der Bekanntmachung selbst nachlesen.")
 fuss(s, "¹ Darin 1 Zuordnungsfehler unserer Pipeline (ohne ihn 22). Vorab-Schwelle (≥ 16 Lose) war unerreichbar, offen berichtet.")
 
-# Folie 7: Make or Buy ------------------------------------------------------------
+# Folie 6: Make or Buy ------------------------------------------------------------
 s = new_slide("ZEIT 1:00 (gekürzt: Balken in einem Satz, dann die drei Karten; symmetrische Variante und Ausblick nur bei Nachfrage). KERNAUSSAGE: Aus Sicht eines Betriebs, der seine Aufträge selbst filtern könnte (Make or Buy): Im Modell rechnet sich Selbstbauen gegen kostenlose Dienste nicht; "
               "ob Betriebe die Daten in ihrem eigenen System brauchen, ist ungeprüft; ebenso Nachfrage und Zahlungsbereitschaft (Lab-Log §1 und §7). Als eigenes Produkt ergibt die Liste keinen Sinn. "
               "BALKEN LINKS (Paket D, Quelle reports/make_or_buy.md, docs/business.md §9.4; ALLE Kosten sind Annahmen): Rechnung bei 100 € pro Stunde: Niedrig (20 h einmalig, 5 h im Jahr) 3.500 € in drei Jahren, Mittel (60 h, 20 h) 12.000 €, Hoch (120 h, 50 h) 27.000 €. "
@@ -490,7 +501,7 @@ s = new_slide("ZEIT 1:00 (gekürzt: Balken in einem Satz, dann die drei Karten; 
               "KARTE 3 (docs/business.md §8.9, docs/business_case_auswahl.md; Aussage aus EINEM Gespräch, Zahlungsbereitschaft nicht geprüft): Gezahlt hätte im Gespräch nur der größere Betrieb, und zwar für alte Preise und den aktuellen Auftragnehmer („wenn der aktuelle Dienstleister bei 18 Euro pro Stunde lag, brauche ich gar nicht erst mitbieten“). "
               "Preise je Einheit, Mengen und Vertragsklauseln stehen nicht in öffentlichen Daten; den Zuschlagswert als Gesamtsumme nennt TED nur bei knapp der Hälfte der Lose (47,7 %). "
               "WICHTIG: Karte 3 heißt NICHT, dass ein Abo alte Stundenpreise liefert; ob ein Dienst das kann, haben wir nicht geprüft. Die Karte sagt nur, wofür im Gespräch gezahlt würde und dass es in offenen Daten fehlt. "
-              "KURZ GESAGT = unser Rat, gleicher Wortlaut wie auf Folie 11, im Lab-Log und in der Entscheidungsvorlage: kostenlosen Alarm nutzen; Abo nur, wenn eine Funktion fehlt, vorher testen; nicht selbst bauen, solange niemand Treffer von Hand ins eigene System überträgt. "
+              "KURZ GESAGT = unser Rat, gleicher Wortlaut wie auf Folie 10, im Lab-Log und in der Entscheidungsvorlage: kostenlosen Alarm nutzen; Abo nur, wenn eine Funktion fehlt, vorher testen; nicht selbst bauen, solange niemand Treffer von Hand ins eigene System überträgt. "
               "BUSINESS-CASE-PRÜFUNG (docs/business_case_auswahl.md): Acht Kandidaten nach sieben vorab festgelegten Kriterien, höchste Summe 7 unter der Schwelle 8: kein tragfähiger Business Case; Test K-A nach Vorprüfung abgebrochen (23 von 52 Paaren, Schwelle 30). "
               "OFFENE HYPOTHESEN (ungeprüft): Daten ins eigene System mit dokumentiertem Schema (Export Schema 1.1, 26 Felder), Anreicherung (Ende je Los, Herkunft je Feld). Zielgruppe nur Betriebe mit Branchensoftware: rund ein Drittel laut einem sekundär zitierten Branchenartikel (Original nicht geprüft). "
               "Die Perspektive des Betriebs wurde in den drei Gesprächen NICHT erfragt; der Kurztest ist vorbereitet (Wizard-of-Oz-Blatt), nicht durchgeführt. "
@@ -516,7 +527,7 @@ for i, k in enumerate(karten):
 kurz(s, "Kostenlosen Alarm nutzen · Abo nur, wenn eine Funktion fehlt – vorher testen · nicht selbst bauen, solange niemand Treffer von Hand ins eigene System überträgt.", y=4.25, h=0.66)
 fuss(s, "Annahmen: 100 € je Stunde; Niedrig 20 h einmalig + 5 h im Jahr, Mittel 60 + 20, Hoch 120 + 50; Marge 5 %.")
 
-# Folie 8: Demo als Zielbild ------------------------------------------------------------
+# Folie 7: Demo als Zielbild ------------------------------------------------------------
 DEMO_VIDEO = ROOT / "docs" / "video" / "live_demo_aufnahme.mp4"      # erzeugt von src/report/demo_aufnahme.py
 DEMO_POSTER = ROOT / "docs" / "vortrag" / "poster_live_demo.png"
 DEMO_NOTIZEN = (
@@ -530,7 +541,7 @@ DEMO_NOTIZEN = (
     "Ein KI-Urteil gibt es nur für zwei gespeicherte Beispielprofile, bei jeder anderen Firma gilt eine Stichwortregel. KI gegen Regel 13 von 14 gleich, davon 5 trivial, ohne Referenz durch einen Menschen. "
     "Der Vorgänger-Hinweis wurde im großen Datensatz 3-mal ausgelöst (alte Fassung 2, neue Fassung 1), alle 3 falsch; deshalb ist er dort abgeschaltet (docs/demo_push.md §11, Befund Vorgänger-Hinweis). Teams-Anzeige und Versand wurden nie getestet. "
     "FRAGE – ANTWORT (Prüferfrage): „Warum habt ihr nach dem Nein noch eine Demo gebaut?“ Sie entstand auf Wunsch nach dem Auswahlbogen, als Zielbild und als Veranschaulichung der Datenübergabe, nicht als Business Case. "
-    "Sie hat das Nein eher bestätigt: Sie zeigt, dass ohne Prognose kein Zeitvorsprung entsteht und ein kostenloser Alarm dasselbe leistet. Gemessen haben wir damit nichts über Nachfrage; der Test mit Betrieben ist vorbereitet, nicht durchgeführt (Folie 12). "
+    "Sie hat das Nein eher bestätigt: Sie zeigt, dass ohne Prognose kein Zeitvorsprung entsteht und ein kostenloser Alarm dasselbe leistet. Gemessen haben wir damit nichts über Nachfrage; der Test mit Betrieben ist vorbereitet, nicht durchgeführt (Folie 11). "
     "„Wo ist der Unterschied zu AusschreibungsRadar?“ Keiner belegt: Eignungsabgleich und Alerts gibt es dort laut Anbieterseite schon (Match-Score ab 79 €). "
     "LIVE-DEMO IN DER FRAGENRUNDE (Datei docs/demo/live_demo.html, Doppelklick, kein Netz): (1) gelben Hinweis vorlesen; (2) „Großer Datensatz (Bayern, 12 Monate)“; (3) Schnellknopf „Cham, 50 km“, Frist-Filter AN; "
     "(4) „Filterung starten“ (etwa 8 Sekunden); (5) 2 Treffer; (6) Treffer anklicken: Teams-Karte, Fakten getrennt von Deutung; (7) Kanal „E-Mail“; (8) Frist-Filter AUS: 16 statt 2, 14 davon mit abgelaufener Frist, nur zur Veranschaulichung. "
@@ -554,7 +565,7 @@ box(s, 6.6, 2.45, 2.65, 1.35, [[("Ohne Prognose: ", {"bold": True}), ("nur heuti
 kurz(s, "Dafür reicht ein kostenloser Alarm.", x=6.4, y=3.9, w=3.0, h=0.65)
 fuss(s, "Firma erfunden, nichts gesendet. Bildschirmaufnahme der Demo mit echten TED-Bekanntmachungen, ohne Ton.")
 
-# Folie 9: So funktioniert es technisch ------------------------------------------------------------
+# Folie 8: So funktioniert es technisch ------------------------------------------------------------
 s = new_slide("ZEIT 1:00. KERNAUSSAGE: Alles, was wir gezeigt haben, kommt aus einer einfachen, offenen Kette von Programmen; jede Zahl lässt sich nachrechnen. "
               "PIPELINE (oben, Schlangenlinie 1 → 6): (1) TED-API: Abfrage der Bekanntmachungen per Programm (src/ted_download.py; vorher die aktuelle API-Dokumentation geprüft). "
               "(2) Rohdaten unverändert in data/raw (nicht im Git, Abruf reproduzierbar, docs/reproduzierbarkeit.md). (3) Aufbereitung: Laufzeit und Optionen lesen, Leseregeln 1a/1b und 6 bis 10 (src/prepare/vertragsliste.py). "
@@ -603,9 +614,9 @@ box(s, 7.22, 3.04, 2.05, 1.82,[[("Kurz gesagt: ", {"bold": True, "color": DBLUE}
 s.notes_slide.notes_text_frame.text += " KURZ GESAGT (für Laien, steht auf der Folie): Die Regel ist einfach und offen nachprüfbar. Sie traf 15 von 52 Fällen = 28,8 %."
 fuss(s, "Nur öffentliche TED-Daten; Rohdaten bleiben unverändert, jede Auswertung ist ein eigenes Programm.")
 
-# Folie 10: KI-Irrwege ------------------------------------------------------------
+# Folie 9: KI-Irrwege ------------------------------------------------------------
 s = new_slide("ZEIT 1:15 (Teil 1 Irrwege etwa 0:40, Teil 2 Trennung von Entwicklung und Test etwa 0:35). KERNAUSSAGE: Claude Code hat Regeln, Stichproben und Auswertungen mitgebaut; jeder dieser Fehler wurde von einem getrennten Evaluator, im Test oder vom Nutzer gefunden, nicht von der Hand, die ihn gemacht hat. "
-              "Vier von 32 Einträgen in docs/ki_irrwege.md (drei auf der Folie, der vierte steht als Fußnote auf Folie 6; der Paket-B-Fall steht im Lab-Log, Abschnitt 8): (1) Entwicklung 10–11 von 12 plausibel, im Test 11 von 24 richtig (Iteration 3): Regel verworfen. "
+              "Vier von 32 Einträgen in docs/ki_irrwege.md (drei auf der Folie, der vierte steht als Fußnote auf Folie 5; der Paket-B-Fall steht im Lab-Log, Abschnitt 8): (1) Entwicklung 10–11 von 12 plausibel, im Test 11 von 24 richtig (Iteration 3): Regel verworfen. "
               "(2) „Blind“ war nicht blind: Die KI-Leser (eine zweite KI, die die Bekanntmachung unabhängig lesen sollte) hatten in Iteration 8 die Projektbeschreibung im Kontext (CLAUDE.md), gefunden vom Evaluator, offen genannt. "
               "(3) Konkurrenz übersehen: Die Suche vom 24.10. fand keinen deutschen Dienst, tatsächlich gibt es zwei; gefunden vom Recherche-Agenten nach dem Hinweis des Dozenten. Auf der Folie steht das als UNSER gemeinsamer Prozessfehler (wir und KI), nicht als reiner KI-Fehler: Die Sichtung G1.1 blieb bei uns offen (Lab-Log §1, Lernpunkt). "
               "(4) Schwelle unerreichbar: Claude übernahm die Abweichungsrate von 17 % aus Iteration 10 für 160 Lose, es waren 9,4 %; gefunden vor den Leserantworten, nicht nachträglich geändert. "
@@ -640,13 +651,13 @@ box(s, 5.45, 3.6, 3.8, 0.5, "Reihenfolge im Versionsverlauf belegt", size=14, co
 kurz(s, "KI-Ergebnisse erst glauben, wenn jemand sie getrennt geprüft hat.")
 fuss(s, "Drei Beispiele aus unserer Liste von 32 KI-Irrwegen; Lücke: ein Leseprotokoll liegt außerhalb des Projektordners.")
 
-# Folie 11: Empfehlung ------------------------------------------------------------
+# Folie 10: Empfehlung ------------------------------------------------------------
 s = new_slide("ZEIT 1:15. KERNAUSSAGE: Ampel statt Fazit-Text. GRÜN: Die Liste ist als Ausgangspunkt nutzbar, immer mit Blick in die verlinkte Bekanntmachung: 66 von 70 Zufallslosen der Iteration 9 (94,3 %) haben das gleiche Enddatum wie der Vergleichswert zweier KI-Leser "
               "(Leser nicht unabhängig, Vergleichswert teils zirkulär; Mensch 14 von 15). "
               "GELB: spätestes Vertragsende (Höchstende) nur Hinweis (87,1 %); nur TED-Daten: 79,4 % ist der Anteil der Lose mit Enddatum unter den Zuschlägen 10/2025 bis 9/2026 (2.783 von 3.503), rund 73 % aller Lose (6.803 von 9.325); das ist keine Marktabdeckung. "
-              "Dazu der Ausblick aus Paket B (rund ein Viertel der Oberpfälzer Reinigungsverfahren im Bekanntmachungsservice nicht auf TED). Gespräche n = 3; Nachfrage ungeprüft, ein Test mit Betrieben ist vorbereitet, nicht durchgeführt (Folie 12). "
+              "Dazu der Ausblick aus Paket B (rund ein Viertel der Oberpfälzer Reinigungsverfahren im Bekanntmachungsservice nicht auf TED). Gespräche n = 3; Nachfrage ungeprüft, ein Test mit Betrieben ist vorbereitet, nicht durchgeführt (Folie 11). "
               "ROT: Terminprognose (28,8 %); die Liste als eigenes Produkt; Qualitätsvorsprung nicht belegt. "
-              "ZEILE „UNSER RAT“ (gleicher Wortlaut wie im Lab-Log und in der Entscheidungsvorlage, Deutung unter Annahmen): „Kostenlosen Alarm nutzen · Abo nur, wenn eine Funktion fehlt – vorher testen · nicht selbst bauen, solange niemand Treffer von Hand ins eigene System überträgt.“ Erläuterung: kostenlos = TED-Suchprofile mit E-Mail-Alarm, Vergabeweiser-Alerts, diese Liste als CSV; Abo nur für eine Funktion, die fehlt (im Gespräch genannt: Wettbewerbsdaten; Zahlungsbereitschaft in einem von drei Gesprächen), vorher in der kostenlosen Stufe oder im Probezeitraum testen; selbst bauen lohnt im Basismodell gegen kostenlose Dienste nie (Modellkonstruktion) und wäre nur dann zu prüfen, wenn jemand heute Treffer von Hand ins eigene System überträgt (Test K-J, Folie 12). "
+              "ZEILE „UNSER RAT“ (gleicher Wortlaut wie im Lab-Log und in der Entscheidungsvorlage, Deutung unter Annahmen): „Kostenlosen Alarm nutzen · Abo nur, wenn eine Funktion fehlt – vorher testen · nicht selbst bauen, solange niemand Treffer von Hand ins eigene System überträgt.“ Erläuterung: kostenlos = TED-Suchprofile mit E-Mail-Alarm, Vergabeweiser-Alerts, diese Liste als CSV; Abo nur für eine Funktion, die fehlt (im Gespräch genannt: Wettbewerbsdaten; Zahlungsbereitschaft in einem von drei Gesprächen), vorher in der kostenlosen Stufe oder im Probezeitraum testen; selbst bauen lohnt im Basismodell gegen kostenlose Dienste nie (Modellkonstruktion) und wäre nur dann zu prüfen, wenn jemand heute Treffer von Hand ins eigene System überträgt (Test K-J, Folie 11). "
               "TRANSFERFRAGE „Würdet ihr das Produkt bauen?“: Nein, nicht als Liste allein. Wenn weiter, dann zuerst der vorbereitete Test mit Betrieben (Schwelle vorab), eine menschliche Gegenlesung und ein Maß, das Definition und Losebene trennt. "
               "FRAGE – ANTWORT: „Warum Gebäudereinigung?“ Nische aus Iteration 1 (Befüllungsquote 90 %, Laufzeitende bestimmbar); eine Geschäftsbegründung ist nicht belegt. "
               "ZEIG-MIR-WO: docs/lab_log.md Abschnitt 7, docs/annahmen.md, reports/evaluation_iteration9.md, reports/evaluation_iteration10b.md, docs/business.md §8.9, docs/business_case_auswahl.md.",
@@ -668,18 +679,19 @@ box(s, 0.8, 3.58, 8.45, 0.64, [[("Unser Rat: ", {"bold": True}),
 kurz(s, "Die Liste hilft beim Planen, ersetzt aber nicht den Blick in die Bekanntmachung.")
 fuss(s, "79,4 % = Anteil der Lose mit Enddatum unter den Zuschlägen 10/2025 bis 9/2026, nur TED-Daten.")
 
-# Folie 12: Fazit ------------------------------------------------------------
+# Folie 11: Fazit ------------------------------------------------------------
 s = new_slide("ZEIT 0:45. KERNAUSSAGE in einem Satz wiederholen, dann Brücke zur Fragenrunde. Gesamtzeit: 15:00 (Ziel ±30 Sekunden); Zeitbudget je Folie: "
-              "0:30 / 3:30 / 1:00 / 1:15 / 1:15 / 1:15 / 1:00 / 1:00 / 1:00 / 1:15 / 1:15 / 0:45 = 15:00 (12 sichtbare Folien; Iterationsweg Folie 3: 1:00; Business Understanding Folien 4 bis 8: 5:45 = 38 %; Video-Folie 2 inkl. Quiz und Überleitung 3:30, Video ca. 3 Minuten). "
-              "Folien 13 bis 17 sind ausgeblendet (Anhang, nicht in der Zeit). "
+              "0:30 / 4:15 / 1:30 / 1:15 / 1:15 / 1:00 / 1:00 / 1:00 / 1:15 / 1:15 / 0:45 = 15:00 (11 sichtbare Folien; Video-Folie 2: 4:15 = Einleitung 0:15 + Video 3:32 + Quizfrage live ca. 0:20 + Überleitung 0:10; "
+              "Business Understanding Folien 3 bis 7: 6:00 = 40 %; der Iterationsweg steckt im Video, die Folie Vier Versuche ist ausgeblendet, Folie 12). "
+              "Folien 12 bis 17 sind ausgeblendet (Anhang, nicht in der Zeit). "
               "Satz zum Mitnehmen: Den Termin einer Neuausschreibung sagen TED-Daten nicht vorher; eine Liste der Vertragsenden lässt sich lesen, ist aber kein eigenes Produkt, solange Vergabeweiser sie kostenlos bietet. Lehre: Marktgate in Phase 1, vor der Modellierung. "
               "NÄCHSTER SCHRITT (docs/business_case_auswahl.md, Nachtrag K-J, Schwelle vorab festgelegt am 2026-11-09, vor jedem Anruf): eine Stunde TED-Suchprofil mit E-Mail-Alarm anlegen und nach Teams weiterleiten, dann drei Anrufe bei Betrieben. "
               "Schwelle: „Mindestens 2 von 3 Betrieben nutzen Teams oder Planner aktiv, nennen mindestens 1 Stunde pro Woche für Sichten und Übertragen und übertragen heute von Hand; sonst wird K-J verworfen.“ Test nicht durchgeführt; die Schwelle ist eine Setzung. "
-              "FRAGENRUNDE vorbereiten: (1) Methodenfrage: warum ±3 Monate, warum diese Vergleichsregel, warum KI-Leser als Maß, warum nur abweichende Lose (Folie 3, Folie 6, Folie 9 Sensitivität, ausgeblendete Folien 13 bis 15). "
-              "Ausgeblendete Folien in der Fragerunde über die Foliensortierung öffnen. (2) Live-Nachweis: `python src/model/sensitivitaet_backtest.py --vorlauf 9 --fenster 2` (Folie 9); git log und Reihenfolge der Commits (Folie 10); Live-Demo im Browser (Folie 8). "
+              "FRAGENRUNDE vorbereiten: (1) Methodenfrage: warum ±3 Monate, warum diese Vergleichsregel, warum KI-Leser als Maß, warum nur abweichende Lose (Folie 5, Folie 8 Sensitivität, ausgeblendete Folien 12 bis 15). "
+              "Ausgeblendete Folien in der Fragerunde über die Foliensortierung öffnen. (2) Live-Nachweis: `python src/model/sensitivitaet_backtest.py --vorlauf 9 --fenster 2` (Folie 8); git log und Reihenfolge der Commits (Folie 9); Live-Demo im Browser (Folie 7). "
               "Streikt die Technik: ausgeblendete Folien 16 und 17 (Terminal-Ausgaben vom 2026-11-09 als Bild). "
-              "(3) Transferfragen: „Warum nicht Vergabeweiser nutzen?“ (Folie 5), „Wer zahlt?“ (Folien 4 und 7), „Warum ist W8a verfehlt?“ (Folie 6), „Warum selbst bauen?“, „Welches Verwaltungssystem?“, „Wer pflegt das?“, „Warum nicht bund.de?“ (alle Folie 7), "
-              "„Warum eine Demo nach dem Nein?“ (Folie 8), „Was war mit der Null in Paket B?“ und „Warum erst jetzt die Konkurrenz?“ (Folie 10), anderer Standort, andere Nische, doppeltes Volumen (Folien 7 und 11). "
+              "(3) Transferfragen: „Warum nicht Vergabeweiser nutzen?“ (Folie 4), „Wer zahlt?“ (Folien 3 und 6), „Warum ist W8a verfehlt?“ (Folie 5), „Warum selbst bauen?“, „Welches Verwaltungssystem?“, „Wer pflegt das?“, „Warum nicht bund.de?“ (alle Folie 6), "
+              "„Warum eine Demo nach dem Nein?“ (Folie 7), „Was war mit der Null in Paket B?“ und „Warum erst jetzt die Konkurrenz?“ (Folie 9), anderer Standort, andere Nische, doppeltes Volumen (Folien 6 und 10). "
               "Nicht sagen: „genauer als Vergabeweiser“, „Vorsprung belegt“, „kein Unterschied“, „die Liste stimmt zu 94 %“ (richtig: gleiches Enddatum wie zwei KI-Leser).", dark=True, teil="Fazit")
 
 box(s, 0.6, 0.5, 8.8, 1.3, "Den Termin sagt TED nicht voraus. Das Vertragsende lässt sich lesen, ist aber kein eigenes Produkt.", size=26, color=INK, font=HEAD, name="Kernsatz")
@@ -696,6 +708,34 @@ box(s, 0.6, 3.75, 8.8, 0.8, [[("Nächster Schritt: ", {"bold": True, "color": DB
 box(s, 0.6, 4.75, 6.0, 0.45, "Vielen Dank. Fragen?", size=22, color=BLUE, font=HEAD, name="Dank")
 s.notes_slide.notes_text_frame.text += " KURZ GESAGT (für Laien): Ob ein Vertrag neu ausgeschrieben wird, sagt TED nicht; wann er endet, steht in der Bekanntmachung, und die kostenlose Liste dazu gibt es schon."
 
+# Folie 12 (Anhang): Vier Versuche, vier verfehlte Schwellen (bis zum Kurzfilm sichtbare Folie 3) ------------------------------------------------------------
+s = new_slide("AUSGEBLENDET (Anhang für die Fragerunde; Zeit 0:00). Wieder ausgeblendet, weil das Video dieselben Zahlen zeigt (11 von 24, 28,8 % gegen 17,3 %, Ziel 60 %); die Folie bleibt für Fragen zum Iterationsweg "
+              "und als Sicherung, falls das Video nicht läuft (Folie 2). KERNAUSSAGE: Der Iterationsweg auf einen Blick: Vier Versuche, jeder an einer vorab festgelegten Schwelle gescheitert, und jeder hat den nächsten Schritt geändert. Das haben wir so berichtet. "
+              "ZEILE 1 (Iteration 2): Zuordnung neuer Auftrag → Vorgänger über Auftraggeber + CPV: K2 = 5 von 30 = 16,7 % (Wilson 7,3–33,6 %), Schwelle 80 %; große Auftraggeber vergeben viele Verträge parallel. Danach: Zuordnung über das Objekt (Adresse, Titel). "
+              "ZEILE 2 (Iteration 3): Objekt-Regel: V3 Trefferquote 11 von 38 = 28,9 %, Schwelle 60 % (dazu V1 63,3 % und V2 45,8 %, Schwelle je 80 %). Auf Entwicklungsdaten hielt Claude 10–11 von 12 Vorschlägen für plausibel, im Test waren 11 von 24 richtig. Danach: ein letzter Versuch auf neuen Testdaten. "
+              "ZEILE 3 (Iteration 4): erweiterte Regel auf neuen Testdaten (Q1 2026): W3 17 von 30 = 56,7 %, Schwelle 60 % (W4 Zweitprüfung des Nutzers 65 %, Schwelle 85 %). Danach: keine weitere Zuordnungsregel; das Vertragsende aus dem Zuschlag selbst lesen und daraus den Termin berechnen. "
+              "ZEILE 4 (Iteration 5, Backtest): R1 = spätestes Vertragsende (Höchstende, mit allen Verlängerungen) minus 6 Monate auf 52 von Hand bestätigten Paaren: 15 von 52 = 28,8 % (Wilson 18,3–42,3 %), Schwelle 60 %; "
+              "die einfache Faustregel R0 (Ende der Grundlaufzeit minus 6 Monate) schafft 9 von 52 = 17,3 %. 20 Neuausschreibungen kamen mehr als 3 Monate früher, 15 im Fenster, 17 später. Danach: keine Terminprognose, nur eine Liste der Vertragsenden. "
+              "Grenzen: Paare aus einer Rückwärtssuche (nur auffindbare Vorgänger), Zweitprüfung KI-unterstützt. "
+              "NACHTRAG SENSITIVITÄT (nachträglich, kein neuer Test; Diagramm Trefferquote je Vorlauf im Anhang Folie 14): bester Vorlauf im Nachhinein 6 Monate (28,8 %), ±12 Monate nur 50 %, McNemar R1 gegen R0 p ≈ 0,18 (Folie 8). "
+              "FRAGE – ANTWORT: „Warum ±3 Monate, warum diese Vergleichsregel?“ Das Fenster wurde vor der Rechnung gesetzt, weil ein Betrieb für Personal und Angebot grob ein Vierteljahr Spielraum braucht; die einfache Regel R0 zeigt, was Zufall und Streuung allein schaffen; die Schwelle 60 % war eine Setzung ohne Kundenkontakt. "
+              "ZEIG-MIR-WO: docs/iterationen.md (Übersichtstabelle, K2, V3, W3, X3), docs/lab_log.md Abschnitt 0, reports/zuordnung_iteration3.md, reports/evaluation_iteration4.md, reports/backtest_iteration5.md, reports/evaluation_iteration5.md, reports/sensitivitaet_iteration5.md.")
+
+versuche =(("Iteration 2 · Zuordnung", "Vorgänger über Auftraggeber finden", "16,7 %", "Ziel 80 %", "Danach: über das Objekt suchen (Adresse, Titel)"),
+            ("Iteration 3 · Zuordnung", "Vorgänger über das Objekt finden", "28,9 %", "Ziel 60 %", "Danach: letzter Versuch auf neuen Testdaten"),
+            ("Iteration 4 · Zuordnung", "Objekt-Regel auf neuen Testdaten", "56,7 %", "Ziel 60 %", "Danach: Termin aus dem Vertragsende berechnen"),
+            ("Iteration 5 · Terminprognose", "Spätestes Vertragsende − 6 Monate", "28,8 %", "Ziel 60 %", "Danach: keine Prognose, nur Liste der Vertragsenden"))
+for i, (it, was, quote, ziel, danach) in enumerate(versuche):
+    y = 1.38 + i * 0.71
+    rect(s, 0.6, y, 8.8, 0.64, WHITE, radius=0.12, name=f"Versuch {i + 1} Karte")
+    kreis(s, 0.75, y + 0.14, 0.36, RED, str(i + 1), size=13, name=f"Versuch {i + 1} Nummer")
+    box(s, 1.25, y + 0.04, 3.75, 0.56, [[(was, {"bold": True})], [(it, {"color": GREY})]], size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Text")
+    box(s, 5.05, y + 0.04, 1.2, 0.56, [[(quote, {"bold": True, "color": RED, "size": 18, "font": HEAD})], [(ziel, {"color": GREY})]], size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Quote")
+    pfeil(s, 6.25, y + 0.21, 0.18, 0.22, name=f"Versuch {i + 1} Pfeil")
+    box(s, 6.55, y + 0.04, 2.75, 0.56, danach, size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Danach")
+kurz(s, "Keiner der vier Versuche erreichte seine Schwelle; die Terminregel traf 28,8 % (einfache Faustregel: 17,3 %), also eine Liste statt einer Prognose.")
+fuss(s, "Schwellen vor jedem Ergebnis festgelegt. Zuordnung: neuer Auftrag → Vorgängervertrag; Termin: 52 geprüfte Paare.")
+
 # Folie 13 (Anhang): Frage, Kriterium, Daten ------------------------------------------------------------
 s = new_slide("AUSGEBLENDET (Anhang für die Fragerunde; im Vortrag ersetzt durch das Video auf Folie 2; Zeit 0:00). Zeigen bei Fragen zu Kriterium, Schwelle, Datenumfang. KERNAUSSAGE: Die Frage hatte eine Entscheidung (auf welche Ausschreibung bereite ich mich vor?) und eine vorab festgelegte Schwelle. "
               "Zielgruppe: Reinigungsfirmen im Mittelstand, Nische Gebäudereinigung (Haupt-CPV 90910/90911/90919). Annahme: Wer früh weiß, wann ein Vertrag endet, kann Personal und Angebot vorbereiten (A1, A15); diese Annahme war zu diesem Zeitpunkt ungeprüft, ein Kundengespräch gab es nicht. "
@@ -703,7 +743,7 @@ s = new_slide("AUSGEBLENDET (Anhang für die Fragerunde; im Vortrag ersetzt durc
               "Daten: TED Search API, eForms-Zuschläge ab Okt. 2023, Rohdaten unverändert in data/raw (nicht im Git, Abruf-Skript in docs/reproduzierbarkeit.md). 9.325 Lose aus 4.011 Zuschlägen. Herleitung (Nachrechnung 2026-11-09 mit src/population_iteration4.py und src/prepare/vertragsliste.py): 4.307 eForms-Zuschläge Haupt-CPV 90910/90911/90919, nur Originale, 25.10.2023 bis 30.09.2026 (reports/verlaengerung_praxis_iteration5.md); minus 98 nach den Ausschlussregeln der Population (Baureinigung, Endreinigung, Schimmel, Fahrzeug, Industriereinigung, Schädlinge; Bauprojekte ohne wiederkehrende Reinigung) = 4.209; minus 198 Zuschläge, deren Lose alle ohne Zuschlag sind (Regel 7) = 4.011 mit 9.325 Losen (vor Regel 7: 9.915 Lose). "
               "Die Angabe „Zuschläge 10/2025 bis 9/2026“ gehört nur zu den 79,4 % (Anteil der Lose mit Enddatum im letzten Jahr), nicht zu den 9.325 Losen. "
               "Laufzeitende bei 90,0 % der Zuschläge bestimmbar; Verlängerungsoptionen nur bei 18,9 % im Feld BT-58, der Rest im Freitext. "
-              "Vier Zyklen CRISP-DM, jeder endete mit einer Entscheidung gegen vorab festgelegte Schwellen. Zyklus 4 ist der Rücksprung in Phase 1; er bekommt in diesem Vortrag den größten Teil der Zeit (Folien 4 bis 8, 5:45 von 15:00; der Iterationsweg steht auf Folie 3). "
+              "Vier Zyklen CRISP-DM, jeder endete mit einer Entscheidung gegen vorab festgelegte Schwellen. Zyklus 4 ist der Rücksprung in Phase 1; er bekommt in diesem Vortrag den größten Teil der Zeit (Folien 3 bis 7, 6:00 von 15:00; der Iterationsweg steht im Video und auf der ausgeblendeten Folie 12). "
               "FRAGE – ANTWORT: „Warum Gebäudereinigung?“ Nische aus Iteration 1: Befüllungsquote etwa 90 %, Laufzeitende bestimmbar, Haupt-CPV klar abgrenzbar. Eine Geschäftsbegründung ist das nicht; sie wurde nicht belegt. "
               "ZEIG-MIR-WO: docs/business.md Abschnitt 7.1, reports/datenqualitaet_DEU_20260722_20261021.md, docs/quellen.md.")
 
@@ -773,7 +813,7 @@ fuss(s, "KI-Leser nicht unabhängig; ein Mensch prüfte 15 Lose, 14 stimmen. 79,
 
 
 def terminal(s, x, y, w, h, kopf, zeilen, name):
-    """Helle Karte mit Terminal-Text in Consolas 12 pt (wie der Code auf Folie 9); zeilen: (art, text), art = cmd / out / note."""
+    """Helle Karte mit Terminal-Text in Consolas 12 pt (wie der Code auf Folie 8); zeilen: (art, text), art = cmd / out / note."""
     rect(s, x, y, w, h, WHITE, name=name + " Karte")
     box(s, x + 0.2, y + 0.05, w - 0.4, 0.27, kopf, size=14, bold=True, color=GREY, name=name + " Kopf")
     tb = s.shapes.add_textbox(Inches(x + 0.2), Inches(y + 0.34), Inches(w - 0.4), Inches(h - 0.38))
@@ -852,7 +892,7 @@ args = [a for a in sys.argv[1:] if not a.startswith("--")]
 if args:   # optional: anderer Ausgabepfad (z. B. wenn die Datei in PowerPoint geöffnet ist)
     OUT = Path(args[0])
 
-# Folien 13 bis 17: ausgeblendeter Anhang für die Fragerunde (ob ausgeblendete Folien bei „höchstens 12“ zählen, mit dem Dozenten klären)
+# Folien 12 bis 17: ausgeblendeter Anhang für die Fragerunde (ob ausgeblendete Folien bei „höchstens 12“ zählen, mit dem Dozenten klären)
 if "--ohne-anhang" in sys.argv:
     ids = prs.slides._sldIdLst
     for sld in list(ids)[-ANHANG:]:

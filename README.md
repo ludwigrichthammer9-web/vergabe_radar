@@ -19,8 +19,8 @@ Quellen der Zahlen: [Lab-Log](docs/lab_log.md), Abschnitte 0, 3, 4 und 7.
 | Was | Datei | Hinweis |
 |---|---|---|
 | Lab-Log | [docs/lab_log.pdf](docs/lab_log.pdf), [docs/lab_log.md](docs/lab_log.md) | Hauptdokument: Verlauf, Entscheidungen, KI-Irrwege |
-| Folien | [docs/vortrag/vortrag_vergabe_radar.pdf](docs/vortrag/vortrag_vergabe_radar.pdf), [.pptx](docs/vortrag/vortrag_vergabe_radar.pptx) | 12 sichtbare Folien, Anhang für die Fragerunde ausgeblendet; Sprechernotizen in der PPTX |
-| Video „Franz und die Glaskugel“ | [docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4](docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4) | Download, rund 2:50 Minuten. Animation: Manuel Strobel, KI-gestützt; gemeinsam überarbeitet; Stimmen synthetisch; Fassung wird noch aktualisiert. Details: [docs/video/README.md](docs/video/README.md) |
+| Folien | [docs/vortrag/vortrag_vergabe_radar.pdf](docs/vortrag/vortrag_vergabe_radar.pdf), [.pptx](docs/vortrag/vortrag_vergabe_radar.pptx) | 11 sichtbare Folien, Anhang für die Fragerunde ausgeblendet; Sprechernotizen in der PPTX |
+| Video „Franz und die Glaskugel“ | [docs/video/franz_video_ton_kurz.mp4](docs/video/franz_video_ton_kurz.mp4) (Vortragsfassung, 3:32), [docs/video/franz_video_ton.mp4](docs/video/franz_video_ton.mp4) (vollständig, 4:28) | Download. Animation: Manuel Strobel, KI-gestützt; gemeinsam überarbeitet; Stimmen KI-generiert (ElevenLabs). Frühere Fassungen v1 bis v4 im selben Ordner. Details: [docs/video/README.md](docs/video/README.md) |
 | Webseiten-Prototyp | [docs/prototyp/vertragsliste.html](docs/prototyp/vertragsliste.html) | Vertragsliste Oberpfalz, 130 Lose, mit Filtern |
 | Live-Demo | [docs/demo/live_demo.html](docs/demo/live_demo.html) | erfundene Firma, nichts wird gesendet; kein Business Case |
 | Entscheidungsvorlage | [docs/entscheidungsvorlage_betrieb.md](docs/entscheidungsvorlage_betrieb.md) | eine Seite aus Sicht eines (fiktiven) Reinigungsbetriebs |
@@ -98,7 +98,7 @@ In Ausführungsreihenfolge. Zweck aus dem Kopf (Docstring) des Skripts. „Ohne 
 |---|---|
 | Code (`src/`, `.claude/`) | MIT, siehe [LICENSE](LICENSE) |
 | Texte, Lab-Log, Folien, Berichte (`docs/`, `reports/`, außer Video) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de): Weiterverwendung erlaubt, mit Nennung der Urheber und Hinweis auf Änderungen |
-| Video und Audio (`docs/video/`: MP4, WAV, Animation) | keine Freigabe, alle Rechte vorbehalten (synthetische Stimmen mit ungeklärter Lizenzlage; Fassung wird noch überarbeitet) |
+| Video und Audio (`docs/video/`: MP4, WAV, Animation) | keine Freigabe, alle Rechte vorbehalten (KI-Stimmen über ElevenLabs, es gelten deren Bedingungen; Tarif nicht geprüft; frühere Fassungen mit synthetischen Stimmen ungeklärter Lizenzlage) |
 
 Die Lizenzen gelten nur für eigene Inhalte. Übernommene Daten und Texte Dritter behalten ihre eigenen Bedingungen:
 

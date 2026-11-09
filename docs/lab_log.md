@@ -2,7 +2,7 @@
 
 **Manuel Strobel · Ludwig Richthammer** · OTH Amberg-Weiden, Big Data Analytics · Leistungsnachweis B (Zweierteam) · Abgabe 10.11.2026
 
-Repository: https://github.com/ludwigrichthammer9-web/vergabe_radar · Folien: `docs/vortrag/vortrag_vergabe_radar.pdf` · Video: `docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4` (im Repo; Fassung wird noch überarbeitet)
+Repository: https://github.com/ludwigrichthammer9-web/vergabe_radar · Folien: `docs/vortrag/vortrag_vergabe_radar.pdf` · Video: `docs/video/franz_video_ton_kurz.mp4` (Vortragsfassung, 3:32; vollständige Fassung 4:28: `docs/video/franz_video_ton.mp4`)
 
 _Chronologisch nach CRISP-DM-Zyklen. Zahlen und Quellen stehen in `docs/iterationen.md`, `docs/business.md`, `docs/phasen/` und `reports/`; hier steht die Erzählung mit den Entscheidungen. Fakten und Deutung sind getrennt gekennzeichnet. Hauptteil: Abschnitte 0 bis 11 (bis vor Anhang A); Details im Anhang A (Hashes und Commits) und B (alle KI-Irrwege). Stand: 2026-11-09._
 
@@ -268,7 +268,7 @@ _Für Laien: Wir haben geprüft, was es am Markt schon gibt und ob sich mit der 
 
   - _Deutung:_ „Nie günstiger“ ist eine Modellkonstruktion (Annahmen). „Keine Abo-Kosten“ trägt nicht; ein Mehrwert müsste aus Funktion kommen. Die „zusätzlichen Aufträge“ (Deckungsbeitrag 25.110 € je Auftrag, Median-Jahresumsatz 167.404 €) sind eine Größenordnung, kein Nutzenbeleg. _Grenzen:_ Aufwände, Marge und Stundensatz nicht gemessen; keine Aussage zur Relevanz der Datenübergabe (D3 nein).
 
-- **Nach Iteration 10b (2026-11-06 bis 11-09; Fakten, kein Erfolg behauptet).** (1) Business-Case-Auswahl mit vorab festgelegten Kriterien: kein tragfähiger Case (Abschnitt 1). (2) Demo Profil-Match mit Push-Vorschau, auf Wunsch des Nutzers nach dem Auswahlbogen gebaut (K7 = 0): Veranschaulichung der Datenübergabe, kein Business Case; Abnahmekriterien A1 bis A7 vorab, aber keine Hypothese zu Nachfrage oder Genauigkeit (`docs/demo_push.md`). (3) Live-Demo mit großem Datensatz und Filterlauf. (4) Video „Franz und die Glaskugel“, Fassungen v1 bis v4; aktuell v4 mit Edge-Stimmen; eine Fassung nach v4 ist in Arbeit (Manuel). (5) Umbau der Folien auf zwölf sichtbare Folien. (6) Prüfung von K-J (Abschnitt 1). Ergebnisse zum Anfassen: Abschnitt 6.
+- **Nach Iteration 10b (2026-11-06 bis 11-09; Fakten, kein Erfolg behauptet).** (1) Business-Case-Auswahl mit vorab festgelegten Kriterien: kein tragfähiger Case (Abschnitt 1). (2) Demo Profil-Match mit Push-Vorschau, auf Wunsch des Nutzers nach dem Auswahlbogen gebaut (K7 = 0): Veranschaulichung der Datenübergabe, kein Business Case; Abnahmekriterien A1 bis A7 vorab, aber keine Hypothese zu Nachfrage oder Genauigkeit (`docs/demo_push.md`). (3) Live-Demo mit großem Datensatz und Filterlauf. (4) Video „Franz und die Glaskugel“, Fassungen v1 bis v4; danach neue Fassung von Manuel mit ElevenLabs-Stimmen (4:28), für den Vortrag auf 3:32 gekürzt. (5) Umbau der Folien auf elf sichtbare Folien. (6) Prüfung von K-J (Abschnitt 1). Ergebnisse zum Anfassen: Abschnitt 6.
 
 **Abweichungen von der Vorab-Planung (offen).** Zuordnungsweg 2 nach dem Trockenlauf ergänzt; Abrufskript nach DNS-Fehler angepasst; Nebentest W7 nach Beginn des Abrufs.
 
@@ -298,15 +298,16 @@ _Alle Dateien liegen im Repository. Sie veranschaulichen die Datenübergabe, sin
 </div>
 
 <div class="video" markdown="1">
-<figure><img src="lab_log_bilder/video_standbild.png"><figcaption>Standbild, Szene „Ergebnis“ (Quellzeit 171 s)</figcaption></figure>
+<figure><img src="lab_log_bilder/video_standbild.png"><figcaption>Standbild der Vortragsfassung bei 135 s: Trefferquote 28,8 % gegen 17,3 % (Ziel 60 %, 52 Fälle)</figcaption></figure>
 <div markdown="1">
 
-**Video „Franz und die Glaskugel“** (`docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4`, Szenen 1 bis 5 (Datei „szenen_0-5“; das Titelbild 0 ist im Export nicht enthalten, `docs/video/README.md`), 170 s (2:50), mit Quizpause im Vortrag etwa 3 Minuten; Quelle der Animation `docs/video/franz_und_die_glaskugel.html`).
+**Video „Franz und die Glaskugel“** (Vortragsfassung `docs/video/franz_video_ton_kurz.mp4`, 3:32; vollständige Fassung `docs/video/franz_video_ton.mp4`, 4:28; je 1280 x 720, H.264/AAC; frühere Fassungen v1 bis v4 im selben Ordner; Details `docs/video/README.md`).
 
-- _Zweck:_ Zusammenfassung des Projekts für den Vortrag, mit erfundenen Figuren (Franz, Bit, Prüfi). Veranschaulichung, kein zusätzlicher Beleg.
-- _Herkunft:_ Die Animation hat Manuel Strobel KI-gestützt erstellt; Ludwig und Manuel haben sie abwechselnd gemeinsam überarbeitet (Angabe des Nutzers, 2026-11-09). Mit Claude: Zahlen gegen Belege geprüft (keine falschen Zahlen gefunden), zu starke Sätze eingeschränkt, Stimme und Export ergänzt; Liste der Korrekturen in `docs/video/README.md`.
-- _Grenzen:_ Stimmen synthetisch (Microsoft-Neuralstimmen über edge-tts, inoffizieller Zugang; Lizenzlage der erzeugten Audiodaten ungeklärt); Figuren erfunden, Gespräche nachgestellt (es gab drei echte); vereinfacht (vier „Runden“ statt zehn Iterationen).
-- _Offene Punkte:_ Eine Hörprobe der Fassung v4 ist nicht dokumentiert. Manuel optimiert das Video weiter; eine Fassung nach v4 folgt.
+- _Zweck:_ Zusammenfassung des Projekts für den Vortrag, mit erfundenen Figuren (Franz, Bit, Prüfi). Veranschaulichung, kein zusätzlicher Beleg. Im Vortrag rund 4:15 Minuten mit Einleitung, Quizfrage und Überleitung.
+- _Herkunft:_ Die Animation hat Manuel Strobel KI-gestützt erstellt; Ludwig und Manuel haben sie abwechselnd gemeinsam überarbeitet (Angabe beider, 2026-11-09). Die aktuelle Fassung mit Ton stammt von Manuel (2026-11-09). Mit Claude: Texte der früheren Fassungen gegen Belege geprüft (keine falschen Zahlen gefunden), zu starke Sätze eingeschränkt; Liste der Korrekturen in `docs/video/README.md`.
+- _Stimmen:_ KI-generiert über ElevenLabs (Nennung im Abspann); es gelten die Bedingungen von ElevenLabs, der Tarif ist nicht geprüft (offen). Das Video ist darum ohne Freigabe.
+- _Kürzung:_ Für den Vortrag ist Runde 4 herausgeschnitten (kostenlose Liste, Vergleich 230 Verträge, Waage Selbstbauen/kostenlos, Oberpfalz, Bauplan; Videozeit ca. 3:18 bis 4:14), weil die Folien diese Inhalte direkt danach zeigen. Schnitt in Sprechpausen mit kurzer Blende, Original unverändert.
+- _Grenzen:_ Figuren erfunden, Gespräche nachgestellt (es gab drei echte); vereinfacht (Runden statt zehn Iterationen). Die neue Fassung haben wir nicht erneut Satz für Satz gegen die Belege geprüft.
 
 </div>
 </div>
@@ -347,23 +348,29 @@ _Abgeleitet aus dokumentierten Entscheidungen des Teams, nicht nur aus Fehlern d
 
 ## 9. Beiträge beider Teammitglieder
 
-_Stand 2026-11-09, Quelle `docs/beitraege.md`. Im Git steht nur ein Autor (alle Commits laufen über das Konto von Ludwig Richthammer, die Arbeit mit Claude Code eingeschlossen). Die Zuordnung stammt deshalb aus den Dokumenten und aus Angaben des Nutzers, nicht aus dem Git. **Manuel Strobel** (Kommilitone, Zweierteam) hat seine Beiträge noch nicht selbst eingetragen; was nicht aus den Dokumenten bekannt ist, steht als **offen: von Manuel nachzutragen**._
+_Stand 2026-11-09, Quelle `docs/beitraege.md`. Im Git steht nur ein Autor (alle Commits laufen über das Konto von Ludwig Richthammer, die Arbeit mit Claude Code eingeschlossen). Die Zuordnung stammt deshalb aus den Dokumenten und aus Angaben beider, nicht aus dem Git. Wo bei Manuel Strobel „offen“ steht, ist kein Einzelbeitrag dokumentiert; es werden keine Beiträge angenommen._
 
-| Bereich | Ludwig Richthammer | Claude Code (KI-Assistenz) | Manuel Strobel |
-|---|---|---|---|
-| Fragestellung, Nische, Kriterien, Entscheidungen | Entscheidungen (Nische, „Idee anpassen“, Prognoseziel Höchstende, Rücksprung zum Business Understanding, Sicht des Betriebs, Wunsch nach Demo und Live-Demo); Freigaben | Vorschläge, Entwürfe der Kriterien (vor den Ergebnissen committet) | offen: von Manuel nachzutragen |
-| Daten, Aufbereitung, Auswertungen | Freigaben | Skripte (`src/`), Downloads, Tabellen | offen |
-| Urteilsregeln 1.1, Blindprüfungen | geschrieben und kalibriert (2026-10-24); Urteile in Iteration 3 und 4 (W4 13/20; V4 17/20) | Schlüssel, Auswertung; Handsuche durch den Subagenten `rechercheur` | – |
-| Zweitprüfung Iteration 5 | P1 bis P13 (P11, P12 nicht beurteilt) | Vorlage, Schlüssel, Auswertung | P14 bis P71 (laut Nutzer, 2026-11-03) |
-| Prüfung der Liste, KI-Leser | Prüfung der Stichprobe (Iteration 6) | Leser, Vergleichswert, Auswertung | 15 Lose im TED-Original gelesen (Iteration 9, V6: 14/15) |
-| Gespräche mit Betrieben und Vergabestelle | neun Anrufe, drei Stellen erreicht, Notizen ohne Namen (105 Minuten mit Vorbereitung) | – | offen |
-| Evaluation | Entscheidungen | Subagent `evaluator` (kritische Prüfung) | offen |
-| Business-Case-Auswahl, Demo, Live-Demo | Ideen und Wünsche (Make or Buy, Push-Matching, K-J, Live-Demo), Gegencheck der Angaben | Recherche-Agenten, Bewertung, Code der Demos | offen |
-| Video „Franz und die Glaskugel“ | Auftrag zur Prüfung der Texte; Überarbeitung abwechselnd gemeinsam mit Manuel | Prüfung gegen Belege, Korrekturen, Vertonung, Export | Animation KI-gestützt erstellt; Überarbeitung abwechselnd gemeinsam mit Ludwig (laut Nutzer, 2026-11-09); weitere Fassung nach v4 in Arbeit |
-| Folien und Vortrag | Durchsicht, Freigaben | Foliengerüst und Umbau (`src/report/vortrag.py`) | Präsentation/Umsetzung (laut Nutzer, 2026-11-03; heutiger Stand: **offen**) |
-| Dokumentation, Lab-Log | Durchsicht, Freigaben | Texte in `docs/`, `reports/` | offen |
+**Arbeitsweise (Angabe beider, 2026-11-09, nicht aus Git belegbar).** Rund 90 % der Arbeitszeit haben wir gemeinsam im Call gearbeitet (Sitzungen mit Bildschirmfreigabe). Claude Code lief dabei über Ludwigs Rechner und Konto; deshalb steht im Git nur Ludwig als Autor. Was in diesen Sitzungen entstand, steht in der Spalte „Gemeinsam“; einzeln belegte Beiträge stehen in den Personenspalten. Kurzfassung der Tabelle in `docs/beitraege.md`:
 
-**Verteilung laut Nutzer (2026-11-09):** ca. 50:50, gemeinsame Telefonate; Details Manuel offen. **Offen bis zur Abgabe:** Manuel trägt seine Beiträge und Stunden selbst ein (`docs/beitraege.md`, Handeinträge im Zeitprotokoll). Bis dahin gelten für ihn nur die oben genannten Angaben; weitere werden nicht angenommen.
+<div class="klein2" markdown="1">
+
+| Bereich | Gemeinsam (im Call) | Ludwig Richthammer | Manuel Strobel | Claude Code (KI-Assistenz) |
+|---|---|---|---|---|
+| Fragestellung, Nische, Kriterien, Entscheidungen | Entscheidungen (Nische, „Idee anpassen“, kein Kundenkontakt vor Iteration 10, Prognoseziel Höchstende, Rücksprung zum Business Understanding, Sicht des Betriebs, Demo und Live-Demo); Freigaben | – | – | Vorschläge, Entwürfe der Kriterien (vor den Ergebnissen committet) |
+| Daten, Aufbereitung, Auswertungen | Freigabe | – | – | Skripte (`src/`), Downloads, Tabellen, Auswertungen |
+| Urteilsregeln 1.1, Blindprüfungen | – | Regeln geschrieben und kalibriert (2026-10-24); Urteile Iteration 3 und 4 (W4 13/20; V4 17/20) | – | Schlüssel, Auswertung; Handsuche durch den Subagenten `rechercheur` |
+| Zweitprüfung Iteration 5 | – | P1 bis P13 (P11, P12 nicht beurteilt) | P14 bis P71 (Angabe, 2026-11-03) | Vorlage, Schlüssel, Auswertung |
+| Prüfung der Liste, KI-Leser | – | Prüfung der Stichprobe (Iteration 6) | 15 Lose im TED-Original gelesen (Iteration 9, V6: 14/15) | Leser, Vergleichswert, Auswertung |
+| Gespräche mit Betrieben und Vergabestelle | – | neun Anrufe, drei Stellen erreicht, Notizen ohne Namen (105 Minuten mit Vorbereitung) | offen | – |
+| Evaluation, Business-Case-Auswahl, Demos | Ideen und Wünsche (Make or Buy, Push-Matching, K-J, Live-Demo), Gegencheck der Angaben | Entscheidungen | Kritische Business-Case-Prüfung mit dem Subagenten `evaluator` (2026-11-07, mit Claude Code): Kandidaten nach LN-B-Kriterium 1 und 6 bewertet; Kernbotschaft entschärft; keine Iteration 11; Liste „Das dürfen wir NICHT behaupten“; Hinweise zu Datenschutz und Video | Subagent `evaluator`, Recherche-Agenten, Bewertung, Code der Demos |
+| Reproduzierbarkeit, zweites System | – | – | Repo frisch auf macOS geklont, Berichts-Skripte in einer Kopie neu erzeugt und mit dem Repo verglichen; Befunde u. a. Browserpfade nur unter Windows, `zeitprotokoll.py` ohne Git (2026-11-07, mit Claude Code) | – |
+| Video „Franz und die Glaskugel“ | – | Auftrag zur Prüfung der Texte; Überarbeitung abwechselnd mit Manuel | Animation KI-gestützt; Überarbeitung abwechselnd mit Ludwig; neue Fassung mit ElevenLabs-Stimmen (`franz_video_ton.mp4`, 2026-11-09) | Prüfung gegen Belege, Korrekturen, Vertonung v2 bis v4, Export; Kürzung für den Vortrag (`franz_video_ton_kurz.mp4`, Runde 4 entfernt) |
+| Folien und Vortrag | Durchsicht, Freigaben, Präsentation | – | Präsentation/Umsetzung (Angabe, 2026-11-03) | Foliengerüst und Umbau (`src/report/vortrag.py`) |
+| Dokumentation, Lab-Log | Durchsicht, Freigaben | – | – | Texte in `docs/`, `reports/` |
+
+</div>
+
+**Verteilung: ca. 50:50, rund 90 % gemeinsam im Call; von beiden bestätigt (2026-11-09).** Angabe beider, nicht gemessen. Stunden je Person (Selbstangabe beider): Abschnitt 10.
 
 ## 10. Zeitaufwand
 
@@ -418,12 +425,14 @@ Untergrenze aus der Git-Historie, insgesamt **43,5 Stunden** (Stand 2026-11-09, 
 | Gespräche W5 (Nutzer) | 1,75 | Angabe des Nutzers: 105 Min., nicht gestoppt |
 | Lesen der Berichte und Entscheidungen (beide) | 4 bis 8 | rund 10 Iterationen, 25 bis 50 Min. je Iteration angenommen |
 | Telefonate und Abstimmung außerhalb der Git-Sitzungen | 2 bis 5 | laut Nutzer „immer telefoniert“; ohne Doppelzählung angesetzt |
-| Video (Abstimmung, Überarbeitung; Animation durch Manuel nicht einzeln geschätzt), Vortrag und Folien (Durchsicht; Umsetzung Manuel laut Nutzer) | 3 bis 8 | Animation laut Nutzer in den rund 30 Stunden je Person enthalten; Probevortrag und Vortrag offen, nicht eingerechnet |
+| Video (Abstimmung, Überarbeitung; Animation durch Manuel nicht einzeln geschätzt), Vortrag und Folien (Durchsicht; Umsetzung Manuel laut Nutzer) | 3 bis 8 | Animation in den rund 35 Stunden je Person enthalten (Selbstangabe beider); Probevortrag und Vortrag nicht eingerechnet |
 | **Summe** | **rund 52 bis 88** | Summe der Spannen (51,75 bis 88,25) |
 
 </div>
 
-Gesamt rund **52 bis 88 Stunden**; bei ungefähr 50:50 (Nutzer: gemeinsame Telefonate, alles zusammen ausgearbeitet) **rund 26 bis 44 Stunden je Person**; Richtwert des Dozenten ca. 30 Stunden je Person. **Verteilung 50:50 und Gesamtstunden sind Angaben und Schätzungen von Nutzer und Claude, bitte von beiden bestätigen.** Manuels dokumentierte Einzelarbeiten ohne die Video-Animation (nicht geschätzt) ergeben etwa 7 bis 15 Stunden, der Rest läge in der Animation und in gemeinsamen Besprechungen. Nach Angabe von Ludwig (2026-11-09) haben beide jeweils rund 30 Stunden gearbeitet (zusammen rund 60 Stunden, innerhalb der Spanne); Bestätigung durch Manuel und Aufschlüsselung nach Arbeitsschritten offen.
+Gesamt rund **52 bis 88 Stunden**; bei ungefähr 50:50 (Nutzer: gemeinsame Telefonate, alles zusammen ausgearbeitet) **rund 26 bis 44 Stunden je Person**; Richtwert des Dozenten ca. 30 Stunden je Person. Die Spanne bleibt eine Schätzung von Nutzer und Claude. Manuels dokumentierte Einzelarbeiten ohne die Video-Animation (nicht geschätzt) ergeben etwa 7 bis 15 Stunden, der Rest liegt in der Animation und in der gemeinsamen Arbeit im Call.
+
+**Selbstangabe beider (2026-11-09; geschätzt, nicht gemessen; Quelle `docs/beitraege.md`).** Ludwig Richthammer rund 35 Stunden, Manuel Strobel rund 35 Stunden bis zur Abgabe des Lab-Logs am 10.11., davon rund 90 % gemeinsam im Call; dazu je voraussichtlich 2 bis 3 Stunden am 11.11. für die Vortragsvorbereitung (geplant, bei Abgabe noch nicht geleistet). Verteilung etwa 50:50, von beiden bestätigt. Die Selbstangabe (2 × 35 = 70 Stunden) liegt innerhalb der Schätzung (52 bis 88 Stunden, je Person 26 bis 44). Die Git-Untergrenze zählt die gemeinsame Zeit nur einmal, weil nur ein Konto committet. Eine Aufschlüsselung der Selbstangabe nach Arbeitsschritten gibt es nicht.
 
 
 ## 11. Reproduzierbarkeit und Quellen

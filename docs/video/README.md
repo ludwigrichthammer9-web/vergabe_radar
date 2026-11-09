@@ -1,12 +1,28 @@
 # Video „Franz und die Glaskugel“
 
 ## Zweck
-Zusammenfassung des Projekts Vergabe-Radar in rund 2:50 Minuten (exportierte MP4, 170,5 s, 1280 x 720; die HTML-Live-Fassung dauert 276 s, weil sie die Pause für die Quizfrage und das Titelbild enthält) für den Vortrag und das Lab-Log: von der Idee (Prognose von Vertragsenden) über die gescheiterte Punktprognose und die Vertragsliste bis zur Entscheidung „Selbst bauen? Nein.“ Erzählt wird mit erfundenen Figuren (Franz, Bit, Prüfi). Das Video ist eine Veranschaulichung, kein zusätzlicher Beleg.
+Zusammenfassung des Projekts Vergabe-Radar für den Vortrag und das Lab-Log: im Vortrag die gekürzte Fassung mit 3:32 Minuten (`franz_video_ton_kurz.mp4`, 211,85 s), vollständig 4:28 Minuten (`franz_video_ton.mp4`, 267,76 s); beide 1280 x 720. Inhalt: von der Idee (Prognose von Vertragsenden) über die gescheiterte Punktprognose und die Vertragsliste bis zur Entscheidung „Selbst bauen? Nein.“ Erzählt wird mit erfundenen Figuren (Franz, Bit, Prüfi). Das Video ist eine Veranschaulichung, kein zusätzlicher Beleg. (Frühere Fassungen v1 bis v4: 170,5 s; HTML-Live-Fassung 276 s, siehe unten.)
+
+## Aktuelle Fassung (2026-11-09): Manuels Fassung mit ElevenLabs-Stimmen
+_Fakten nach Angabe des Teams (2026-11-09) und eigener Messung mit ffmpeg aus `imageio-ffmpeg` (`.venv-video`)._
+- **Vollständige Fassung:** `franz_video_ton.mp4`, erstellt von Manuel Strobel (Angabe des Teams). Gemessen: 267,76 s (4:28), 1280 x 720, H.264 (High, 25 fps), AAC 48 kHz Stereo. Abspann (Standbild bei 266 s gesehen): „Stimmen KI-generiert (ElevenLabs)“, dazu „Gespräche: n = 3, nachgestellt und verändert. Alle Figuren sind erfunden.“
+- **Vortragsfassung:** `franz_video_ton_kurz.mp4`, gekürzt von Claude Code (2026-11-09). Gemessen: 211,85 s (3:32), 1280 x 720, H.264 (25 fps), AAC 48 kHz Stereo. Herausgeschnitten ist Runde 4 (kostenlose Liste, Vergleich 230 Verträge, Waage Selbstbauen/kostenlos, Oberpfalz, Bauplan; Videozeit ca. 3:18 bis 4:14), weil die Folien diese Inhalte direkt danach zeigen. Das Original `franz_video_ton.mp4` bleibt unverändert.
+- **Schnitt:** bei 198,4 s und 254,3 s der Datei `franz_video_ton.mp4` (geschnitten in Sprechpausen). Teil 1 = 0 bis 198,4 s, Teil 2 = 254,3 s bis Ende; an der Naht kurze Ab- und Aufblende (0,4 bis 0,5 s) in Bild und Ton, dann aneinandergehängt (concat); neu kodiert mit libx264, CRF 20, AAC 160 kbit/s. Probe: 198,4 + (267,76 − 254,3) = 211,86 s, gemessen 211,85 s; die Blenden überlappen also nicht. Der genaue Aufruf ist nicht im Repo gespeichert; sinngemäß (Schema, Blendlängen gerundet):
+```
+ffmpeg -i franz_video_ton.mp4 -filter_complex "[0:v]trim=0:198.4,setpts=PTS-STARTPTS,fade=t=out:st=198.0:d=0.4[v1];[0:a]atrim=0:198.4,asetpts=PTS-STARTPTS,afade=t=out:st=198.0:d=0.4[a1];[0:v]trim=start=254.3,setpts=PTS-STARTPTS,fade=t=in:st=0:d=0.5[v2];[0:a]atrim=start=254.3,asetpts=PTS-STARTPTS,afade=t=in:st=0:d=0.5[a2];[v1][a1][v2][a2]concat=n=2:v=1:a=1[v][a]" -map "[v]" -map "[a]" -c:v libx264 -crf 20 -c:a aac -b:a 160k franz_video_ton_kurz.mp4
+```
+- **Im Vortrag:** Videofolie rund 4:15 Minuten (Einleitung, 3:32 Video, Quizfrage, Überleitung; Angabe des Teams).
+- **Lizenz und Stimmen:** Die Stimmen sind über ElevenLabs erzeugt; es gelten die Bedingungen von ElevenLabs. Die Nennung im Abspann ist vorhanden. **Offen:** Tarif und Konto laufen über Manuel; ob der Tarif die Nutzung und Weitergabe abdeckt, konnten wir nicht prüfen. Darum bleibt das Video ohne Freigabe (README im Wurzelordner, „Lizenzen“). Der ElevenLabs-Zweig in `src/report/video_vertonung.py` (unten) ist im Repo nicht eingerichtet (`stimmen.json` enthält weiter nur Platzhalter statt Voice-IDs), wurde für diese Fassung also nach Stand des Repos nicht benutzt; wie Manuel Bild und Ton erzeugt hat, ist nicht im Repo dokumentiert (offen).
+- **Grenzen** wie bisher: Figuren erfunden, Gespräche nachgestellt (es gab drei echte, n = 3), vereinfacht (Runden statt zehn Iterationen). Die Zahlen der neuen Fassung haben wir nicht erneut Satz für Satz gegen die Belege geprüft; gesehen haben wir nur die Standbilder bei 120 bis 150 s (28,8 % gegen 17,3 %, Ziel 60 %, 52 geprüfte Fälle) und den Abspann.
+- Das Standbild im Lab-Log (`docs/lab_log_bilder/video_standbild.png`) stammt jetzt aus `franz_video_ton_kurz.mp4` bei 135 s (ffmpeg, ein Bild). Achtung: `src/report/lab_log_bilder.py` erzeugt das Standbild noch aus der HTML-Animation und würde es beim nächsten Lauf überschreiben.
+
+## Frühere Fassungen v1 bis v4 (HTML-Animation, Export 170,5 s)
+_Die folgenden Abschnitte beschreiben die früheren Fassungen; sie bleiben unverändert im Repo._
 
 ## Herkunft
 - Die HTML/SVG-Animation hat Manuel Strobel **KI-gestützt** erstellt (Original: `Franz_und_die_Glaskugel_live.html`, nicht im Repo, Original unverändert). Ludwig Richthammer und Manuel Strobel haben sie abwechselnd gemeinsam überarbeitet (Angabe des Nutzers, 2026-11-09).
 - Diese Fassung `franz_und_die_glaskugel.html` ist **korrigiert und erweitert** (siehe unten). Autorenzeile im Abspann.
-- **Aktueller Stand (2026-11-09):** Fassung v4 (`franz_und_die_glaskugel_szenen_0-5_v4.mp4`) mit Microsoft-Neuralstimmen über edge-tts (Commit b87088c). Manuel optimiert das Video weiter; eine Fassung nach v4 folgt (offen).
+- **Stand vor der Fassung von Manuel (2026-11-09, inzwischen überholt, siehe „Aktuelle Fassung“ oben):** Fassung v4 (`franz_und_die_glaskugel_szenen_0-5_v4.mp4`) mit Microsoft-Neuralstimmen über edge-tts (Commit b87088c). Manuel optimiert das Video weiter; eine Fassung nach v4 folgt (offen).
 
 ## Was gegenüber dem Original geändert wurde (Fakten)
 Nur Texte und Technik, **keine Zahlen**:
@@ -138,10 +154,11 @@ python -m venv .venv-video
 .venv-video\Scripts\python.exe src\report\video_export.py            # Standard: 8 bis 186 s, 30 fps
 .venv-video\Scripts\python.exe src\report\video_export.py --von 0 --bis 186 --out mein.mp4
 ```
-Ergebnis (Stand der Erzeugung von v3): `docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4` (**aktuelle Fassung ist inzwischen v4** mit Edge-Stimmen, gleiche Länge 170,5 s; v2 = Piper-Stimme ohne Einordnung und mit den alten Bildzeiten; die erste Fassung mit SAPI-Stimme `franz_und_die_glaskugel_szenen_0-5.mp4` bleibt als v1 erhalten, ältere WAVs in `audio_sapi/`; Ordner mit anderen WAVs per `--audio DIR`) (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
+Ergebnis (Stand der Erzeugung von v3): `docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4` (**danach v4** mit Edge-Stimmen; aktuell ist inzwischen `franz_video_ton.mp4`, siehe oben; gleiche Länge 170,5 s; v2 = Piper-Stimme ohne Einordnung und mit den alten Bildzeiten; die erste Fassung mit SAPI-Stimme `franz_und_die_glaskugel_szenen_0-5.mp4` bleibt als v1 erhalten, ältere WAVs in `audio_sapi/`; Ordner mit anderen WAVs per `--audio DIR`) (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
 **Quizphase im Export:** Das Quizbild (Live-Zeit 105 s) steht 3 s still (danach 0,5 s) mit dem Hinweis „Auflösung folgt …“; die Zeit 105 bis 116 s der Live-Fassung entfällt, das Video läuft bei 116 s weiter. Die Quizfrage wird in diesen Sekunden gesprochen. Die Standbilder werden bei 30 fps per `window.render(t)` aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien); die Tonspur wird aus den WAVs mit `adelay` an den Untertitel-Anfängen gemischt.
 
 ## Grenzen
+_Grenzen der früheren Fassungen v1 bis v4; für die aktuelle Fassung siehe oben._
 - Stimmen **synthetisch**: v4 nutzt Microsoft-Neuralstimmen über edge-tts, einen **inoffiziellen** Zugang ohne Vertrag; die Lizenzlage der erzeugten Audiodaten ist ungeklärt (v2 und v3: Piper, Thorsten-Voice, CC0). Betonung maschinell. **Die Klangqualität wurde vom Bearbeiter (KI) nicht gehört**, nur Dauer, Pegel und Anfangsstille wurden gemessen. Offener Punkt: Eine Hörprobe der Fassung v4 ist nicht dokumentiert.
 - Alle **Figuren sind erfunden**; die Gespräche im Video sind **nachgestellt** und verändert, es gab nur **drei** echte Telefongespräche (n = 3, Hinweise, keine Statistik, `docs/business.md` §8.9).
 - Das Video ist eine Vereinfachung des Projektverlaufs (vier Runden statt zehn Iterationen); Belege und Grenzen stehen in `docs/iterationen.md`, `docs/lab_log.md` und den Evaluationsberichten.
