@@ -1,7 +1,7 @@
 # Video „Franz und die Glaskugel“
 
 ## Zweck
-Zusammenfassung des Projekts Vergabe-Radar in rund 4,5 Minuten (276 s Live-Fassung, 1280 x 720) für den Vortrag und das Lab-Log: von der Idee (Prognose von Vertragsenden) über die gescheiterte Punktprognose und die Vertragsliste bis zur Entscheidung „Selbst bauen? Nein.“ Erzählt wird mit erfundenen Figuren (Franz, Bit, Prüfi). Das Video ist eine Veranschaulichung, kein zusätzlicher Beleg.
+Zusammenfassung des Projekts Vergabe-Radar in rund 2:50 Minuten (exportierte MP4, 170,5 s, 1280 x 720; die HTML-Live-Fassung dauert 276 s, weil sie die Pause für die Quizfrage und das Titelbild enthält) für den Vortrag und das Lab-Log: von der Idee (Prognose von Vertragsenden) über die gescheiterte Punktprognose und die Vertragsliste bis zur Entscheidung „Selbst bauen? Nein.“ Erzählt wird mit erfundenen Figuren (Franz, Bit, Prüfi). Das Video ist eine Veranschaulichung, kein zusätzlicher Beleg.
 
 ## Herkunft
 - Die HTML/SVG-Animation wurde von einem Kollegen **KI-gestützt** erstellt (Original: `Franz_und_die_Glaskugel_live.html`, nicht im Repo, Original unverändert).
@@ -137,7 +137,7 @@ python -m venv .venv-video
 .venv-video\Scripts\python.exe src\report\video_export.py            # Standard: 8 bis 186 s, 30 fps
 .venv-video\Scripts\python.exe src\report\video_export.py --von 0 --bis 186 --out mein.mp4
 ```
-Ergebnis: `docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4` (aktuelle Fassung; v2 = Piper-Stimme ohne Einordnung und mit den alten Bildzeiten; die erste Fassung mit SAPI-Stimme `franz_und_die_glaskugel_szenen_0-5.mp4` bleibt als v1 erhalten, ältere WAVs in `audio_sapi/`; Ordner mit anderen WAVs per `--audio DIR`) (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
+Ergebnis (Stand der Erzeugung von v3): `docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4` (**aktuelle Fassung ist inzwischen v4** mit Edge-Stimmen, gleiche Länge 170,5 s; v2 = Piper-Stimme ohne Einordnung und mit den alten Bildzeiten; die erste Fassung mit SAPI-Stimme `franz_und_die_glaskugel_szenen_0-5.mp4` bleibt als v1 erhalten, ältere WAVs in `audio_sapi/`; Ordner mit anderen WAVs per `--audio DIR`) (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
 **Quizphase im Export:** Das Quizbild (Live-Zeit 105 s) steht 3 s still (danach 0,5 s) mit dem Hinweis „Auflösung folgt …“; die Zeit 105 bis 116 s der Live-Fassung entfällt, das Video läuft bei 116 s weiter. Die Quizfrage wird in diesen Sekunden gesprochen. Die Standbilder werden bei 30 fps per `window.render(t)` aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien); die Tonspur wird aus den WAVs mit `adelay` an den Untertitel-Anfängen gemischt.
 
 ## Grenzen

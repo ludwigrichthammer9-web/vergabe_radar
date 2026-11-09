@@ -1,12 +1,12 @@
 # Bewertung des Projekts (Leistungsnachweis, Big Data Analytics, OTH Amberg-Weiden)
 
 _Kurzfassung der Bewertungsbögen LN A/B/C (Stand 2026-11-03, Quelle: PDFs des Nutzers, Originale nicht im Repo). Gilt als Maßstab für
-Projektablauf und Dokumentation. Welcher LN gilt, ist **offen** (vermutlich C, Einzelarbeit; mit dem Nutzer klären)._
+Projektablauf und Dokumentation. Es gilt **LN B** (Zweierteam, mit dem Dozenten besprochen; Stand 2026-11-09)._
 
 ## Welcher Bogen
 - **LN A** Lehrvortrag über einen Algorithmus: für dieses Projekt nicht relevant.
-- **LN B** Datenanalyseprojekt, Zweierteam: 15 min Vortrag (≤ 12 Folien) + 5 min Fragen.
-- **LN C** Datenanalyseprojekt, Einzelarbeit: **10 min Vortrag (≤ 8 Folien) + 5 min Fragen**, Datensatz Richtwert 200–10.000 Zeilen,
+- **LN B (gilt für dieses Projekt)** Datenanalyseprojekt, Zweierteam: 15 min Vortrag (≤ 12 Folien) + 5 min Fragen.
+- **LN C** (gilt nicht; nur zum Vergleich) Datenanalyseprojekt, Einzelarbeit: **10 min Vortrag (≤ 8 Folien) + 5 min Fragen**, Datensatz Richtwert 200–10.000 Zeilen,
   ≤ 15 Merkmale (unser Datensatz ist größer: begründen), Lab-Log 4–8 Seiten-Äquivalent **mit Zeitprotokoll je Arbeitsschritt**.
 
 ## Gemeinsam (B und C)

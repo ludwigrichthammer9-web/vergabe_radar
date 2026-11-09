@@ -203,7 +203,7 @@ _Für Laien: Wir haben geprüft, was es am Markt schon gibt und ob sich mit der 
 
   - _Deutung:_ „Nie günstiger“ ist eine Modellkonstruktion (Annahmen). „Keine Abo-Kosten“ trägt nicht; ein Mehrwert müsste aus Funktion kommen. Die „zusätzlichen Aufträge“ (Deckungsbeitrag 25.110 € je Auftrag, Median-Jahresumsatz 167.404 €) sind eine Größenordnung, kein Nutzenbeleg. _Grenzen:_ Aufwände, Marge und Stundensatz nicht gemessen; keine Aussage zur Relevanz der Datenübergabe (D3 nein).
 
-- **Nach Iteration 10b (2026-11-06 bis 11-09; Fakten, kein Erfolg behauptet).** (1) Business-Case-Auswahl mit vorab festgelegten Kriterien: kein tragfähiger Case (Abschnitt 1). (2) Demo Profil-Match mit Push-Vorschau, auf Wunsch des Nutzers nach dem Auswahlbogen gebaut (K7 = 0): Veranschaulichung der Datenübergabe, kein Business Case; Abnahmekriterien A1 bis A7 vorab, aber keine Hypothese zu Nachfrage oder Genauigkeit (`docs/demo_push.md`). (3) Live-Demo mit großem Datensatz und Filterlauf. (4) Video „Franz und die Glaskugel“, Fassungen v1 bis v3. (5) Umbau der Folien auf zehn sichtbare Folien. (6) Prüfung von K-J (Abschnitt 1). Ergebnisse zum Anfassen: Abschnitt 6.
+- **Nach Iteration 10b (2026-11-06 bis 11-09; Fakten, kein Erfolg behauptet).** (1) Business-Case-Auswahl mit vorab festgelegten Kriterien: kein tragfähiger Case (Abschnitt 1). (2) Demo Profil-Match mit Push-Vorschau, auf Wunsch des Nutzers nach dem Auswahlbogen gebaut (K7 = 0): Veranschaulichung der Datenübergabe, kein Business Case; Abnahmekriterien A1 bis A7 vorab, aber keine Hypothese zu Nachfrage oder Genauigkeit (`docs/demo_push.md`). (3) Live-Demo mit großem Datensatz und Filterlauf. (4) Video „Franz und die Glaskugel“, Fassungen v1 bis v4; aktuell v4 mit Edge-Stimmen. (5) Umbau der Folien auf zehn sichtbare Folien. (6) Prüfung von K-J (Abschnitt 1). Ergebnisse zum Anfassen: Abschnitt 6.
 
 **Abweichungen von der Vorab-Planung (offen).** Zuordnungsweg 2 nach dem Trockenlauf ergänzt; Abrufskript nach DNS-Fehler angepasst; Nebentest W7 nach Beginn des Abrufs.
 
@@ -236,11 +236,11 @@ _Alle Dateien liegen im Repository. Sie veranschaulichen die Datenübergabe, sin
 <figure><img src="lab_log_bilder/video_standbild.png"><figcaption>Standbild, Szene „Ergebnis“ (Quellzeit 171 s)</figcaption></figure>
 <div markdown="1">
 
-**Video „Franz und die Glaskugel“** (`docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4`, Szenen 1 bis 5, rund 170 s; Quelle der Animation `docs/video/franz_und_die_glaskugel.html`).
+**Video „Franz und die Glaskugel“** (`docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4`, Szenen 1 bis 5, 170 s (2:50), mit Quizpause im Vortrag etwa 3 Minuten; Quelle der Animation `docs/video/franz_und_die_glaskugel.html`).
 
 - _Zweck:_ Zusammenfassung des Projekts für den Vortrag, mit erfundenen Figuren (Franz, Bit, Prüfi). Veranschaulichung, kein zusätzlicher Beleg.
 - _Herkunft:_ Die Animation hat laut Nutzer ein Kollege KI-gestützt erstellt. Wir haben sie korrigiert: Zahlen gegen Belege geprüft (keine falschen Zahlen gefunden), zu starke Sätze eingeschränkt, Stimme und Export ergänzt; Liste der Korrekturen in `docs/video/README.md`.
-- _Grenzen:_ Stimme synthetisch (Piper, Thorsten-Voice); Figuren erfunden, Gespräche nachgestellt (es gab drei echte); vereinfacht (vier „Runden“ statt zehn Iterationen); Hörprobe durch den Nutzer **offen**.
+- _Grenzen:_ Stimmen synthetisch (Microsoft-Neuralstimmen über edge-tts, inoffizielle Schnittstelle); Figuren erfunden, Gespräche nachgestellt (es gab drei echte); vereinfacht (vier „Runden“ statt zehn Iterationen); Hörprobe durch den Nutzer **offen**.
 
 </div>
 </div>
