@@ -144,6 +144,22 @@ _Phasen:_ Business Understanding und Data Understanding (Iteration 1 und 2: Nisc
 
 _Für Laien: Wir wollten einen neuen Auftrag automatisch seinem Vorgänger zuordnen. Das gelang auch mit besserer Regel nicht zuverlässig genug, also haben wir diesen Weg aufgegeben._
 
+**Datenqualität auf einen Blick (Data Understanding).** „Alle DE“ = 15.706 deutsche Zuschläge, 22.07. bis 21.10.2026, je Bekanntmachung; „CPV 909“ = davon 440 Reinigungs-Bekanntmachungen; „Reinigung eForms“ = 4.307 Zuschläge Haupt-CPV 90910/90911/90919, Okt. 2023 bis Sept. 2026; „Liste“ = Vertragsliste Fassung 9, je Los.
+
+| Feld/Prüfung | Befund (Zahl, Bezugsmenge) | Behandlung | Quelle |
+|---|---|---|---|
+| Ebene | Alle DE: 15,3 % der Bekanntmachungen mit mehr als einem Los. Liste: 9.325 Lose aus 4.011 Zuschlägen; 101 Lose mit nicht eindeutiger Feldliste; 590 Lose ohne Zuschlag | Iteration 1 je Bekanntmachung („befüllt“ = mindestens ein Los); Liste je Los; Lose ohne Zuschlag entfernt (Regel 7) | `reports/datenqualitaet_DEU_20260722_20261021.md` §1, §6; `reports/vertragsliste_iteration9.md` |
+| Laufzeitende bestimmbar (Enddatum, oder Beginn + Dauer) | Alle DE 61,7 %; CPV 909 80,9 %; Reinigung eForms: keine verwertbare Laufzeit 22,4 %; Liste: 73 % aller Lose, 79,4 % im letzten Jahr | Kein geschätztes Ende als Enddatum; Lose ohne Ende bleiben ohne Ende | `reports/datenqualitaet_…md` §5; `reports/verlaengerung_praxis_iteration5.md`; `reports/vertragsliste_iteration9.md` |
+| Bedeutung des Enddatums (BT-537) | Reinigung eForms: in 274 von 289 Fällen (94,8 %) kürzer als die im Text genannte Höchstlaufzeit | Gilt als Ende der Grundlaufzeit; Höchstende aus dem Freitext | `reports/verlaengerung_praxis_iteration5.md` |
+| Verlängerungen (BT-58) | Alle DE: vorhanden 18,9 %, > 0 bei 14,7 %; CPV 909: > 0 bei 42,0 %; Reinigung eForms mit Ende: > 0 bei 1.048 von 3.279 (32,0 %). Die Länge steht nur im Freitext | A5 widerlegt; Länge und Höchstende aus BT-57/BT-54 mit Lese-Regeln | `reports/datenqualitaet_…md` §2, §4; `docs/annahmen.md` A5; `reports/verlaengerung_praxis_iteration5.md` |
+| Laufzeit (Monate) | Alle DE aus Beginn/Ende (n = 9.459): Median 16, Quartile 7 und 36; CPV 909 (n = 350): Median 36, Quartile 24 und 48. BT-36 nur bei 21,3 % befüllt | Laufzeit aus Beginn und Ende statt aus BT-36 | `reports/datenqualitaet_…md` §2, §5 |
+| Unplausible Laufzeiten (≤ 0 oder > 240 Monate) | Alle DE: 14 Datumspaare; Liste: 9 von 3.503 Losen (0,3 %, letztes Jahr) | Verworfen, Los zählt als ohne Ende | `reports/datenqualitaet_…md` §5; `reports/vertragsliste_iteration9.md`; `src/prepare/vertragsliste.py` |
+| Zuschlagswert | Alle DE: Wert > 1 € 58,8 %, `-1` in mindestens einem Wertfeld 25,6 %; CPV 909: Wert > 1 € 51,4 %; Oberpfalz (130 Lose): Wert je Los > 1 € 47,7 %, Platzhalter ≤ 1 € 36,2 % | `-1` = „nicht veröffentlicht“ (A7, 2 Fälle); 0 € und 0,01 € sind Platzhalter (A6) und zählen nicht als Wert | `reports/datenqualitaet_…md` §2, §6; `docs/annahmen.md` A6, A7; `reports/wettbewerbsbild_oberpfalz.md` |
+| Auftragnehmer | Oberpfalz (130 Lose): genannt bei 129 (99,2 %) | keine | `reports/wettbewerbsbild_oberpfalz.md` |
+| Daten vor eForms | Zuschläge vor eForms (CPV 909, 30 zufällige): 0 von 30 mit eigener Laufzeit; über `REF_NOTICE` bestimmbar bei 25 von 30 (83,3 %) | Laufzeit aus der verknüpften alten Ausschreibung (XML) | `reports/a11_stichprobe.md` |
+
+_Deutung:_ Ein Ende der Grundlaufzeit steht bei etwa drei von vier Reinigungslosen in den Feldern; weiter kann die Liste nicht reichen. Das Höchstende hängt am Freitext, und ob eine Option gezogen wird, steht in keinem Feld; das begrenzt jede Terminprognose (Abschnitt 3).
+
 ## 3. Zyklus 2: Terminprognose (Iteration 5)
 
 | Iteration (Datum) | Frage | Kriterium vorab | Ergebnis (Fakten) | Entscheidung |
@@ -160,6 +176,8 @@ _Data Preparation:_ Zuschlagstabelle je Los (`src/prepare/vertragsliste.py`) mit
 - Bester Vorlauf (0 bis 24 Monate, Fenster ±3) ist der vorab gesetzte: 6 Monate mit 15 von 52 = 28,8 %. Für 60 % wären 32 Treffer nötig.
 - Erst ein breites Fenster hebt die Quote: ±6 Monate 16/52 = 30,8 %, ±12 Monate 26/52 = 50,0 %. Ein Jahr Unsicherheit hilft bei der Planung kaum.
 - R1 gegen R0 auf denselben Paaren: nur R1 trifft bei 10 Paaren, nur R0 bei 4. Exakter McNemar-Test p ≈ 0,18. Der Vorsprung von R1 vor der naiven Referenz ist nicht gesichert.
+
+**Warum eine feste Regel und kein gelerntes Modell?** Unser Vorgehen sah „einfach vor komplex“ vor, ein statistisches oder ML-Modell „nur wenn die Regeln klar an Grenzen stoßen“ (`docs/CRISP-DM.md`, Phase 4; `docs/projektplan.md`, T4.4.1). Deshalb haben wir die vorab eingefrorene Regel R1 gegen die naive Referenz R0 getestet; „es werden keine Parameter aus den Paaren geschätzt“ (`src/model/baseline.py`). Es gab nur 52 geprüfte Paare, und ob eine Option gezogen wird, ist aus dem Zuschlag des Vorgängers nicht lesbar (`reports/evaluation_iteration5.md`); die Vergabestelle sagte später, verlängert werde „fast immer, wenn eine Verlängerungsoption im Vertrag steht“ (`docs/business.md` §8.9, n = 1). _Deutung:_ Für Training und getrennten Test eines gelernten Modells (z. B. Klassifikation oder Überlebenszeitmodell) reichen 52 Paare nicht, und es hätte dieselben Merkmale wie die Regel; weil selbst der nachträglich beste Vorlauf bei 28,8 % bleibt, sehen wir dafür wenig Spielraum. Eine feste Regel ist zudem für einen Betrieb nachvollziehbar. Ein Modell bräuchte deutlich mehr Paare und Merkmale zur Verlängerungsentscheidung des Auftraggebers (Abschnitt 7, Ausblick).
 
 **Grenzen des Backtests (offen benannt).**
 - _Leck zwischen Entwicklung und Test:_ Das Prognoseziel (Höchstende) wurde gewählt, nachdem die Vorlaufzeiten derselben Paare in Iteration 3 und 4 explorativ angesehen worden waren (`reports/backtest_iteration5.md`, Grenzen; `docs/business.md` §7.1: „Median etwa 6 Monate“ nach der Grundlaufzeit). Der Vorlauf von 6 Monaten wurde gesetzt, nicht aus den Paaren geschätzt (`docs/projektplan.md`, T3.2.1). Das Leck begünstigt R1. Die Sensitivität zeigt, dass es das Ergebnis nicht ändert.
