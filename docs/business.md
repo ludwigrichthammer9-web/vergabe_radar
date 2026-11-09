@@ -21,6 +21,11 @@ Prüft vor allem die Annahmen A1, A15 (Zahlungsbereitschaft) und A2 (Wettbewerb)
   (z. B. Nürnberg, München, Hessen).
 - Die Firmenliste liegt in `data/processed/zielgruppe_oberpfalz.csv` und ist **bewusst nicht in Git**, weil Firmennamen von
   Einzelunternehmen Personennamen enthalten können.
+  _Nachtrag 2026-11-09:_ Das betrifft nur diese Zielgruppen-Liste von 2026-10-23; sie bleibt außerhalb von Git. Andere Dateien im
+  öffentlichen Repository enthalten Auftragnehmernamen: Alle Angaben stammen aus öffentlichen TED-Bekanntmachungen; bei
+  Einzelunternehmern kann der Firmenname des Auftragnehmers einen Personennamen enthalten (Vertragsliste, Webseite, Wettbewerbsbild);
+  unverändert übernommene TED-Texte enthalten die dort veröffentlichten Kontaktdaten der Auftraggeber; eine Fassung ohne Auftragnehmer
+  liegt unter `docs/prototyp/export/vertragsliste_v1_ohne_auftragnehmer.csv`; Telefonnotizen ohne Namen (`docs/quellen.md`).
 
 ### Einschätzung
 
@@ -330,7 +335,7 @@ _Fakten sind die Aussagen der Gesprächspartner, Zitate wörtlich nach den Notiz
 | Vergabestelle: Schwelle | – | – | „Sehr oft“ national vergeben („alles unter 221.000 Euro“), vor allem Außenstellen, Jugendzentren, kleinere Schulen als Einzellose, um den regionalen Mittelstand zu fördern |
 
 Anrufe: 9, erreicht 3 (Gespräche 3), Absagen 2; Zeitaufwand 105 Minuten (Vorbereitung, Anrufe, Abtippen). _Berichtigung des Nutzers 2026-11-05:_ „4 erreicht“ in den Notizen war ein Tippfehler.
-_Hinweis zur Schwelle:_ In den Notizen steht als Aussage der Vergabestelle „alles unter 221.000 Euro“. Der Nutzer hält das für einen Versprecher; der Schwellenwert für Dienstleistungen von Kommunen und Ländern beträgt seit 01.01.2026 216.000 € (Vergabeblog, §8.1). Die Aussage („sehr oft“ unterschwellig) bleibt davon unberührt; der Betrag wird nicht verwendet.
+_Hinweis zur Schwelle:_ In den Notizen steht als Aussage der Vergabestelle „alles unter 221.000 Euro“. Die Zahl ist nicht bestätigt. Sie entspricht dem Wert, der bis 2025 galt (221.000 €, so in `reports/oeffentlichevergabe_test.md` verwendet); der Schwellenwert für Dienstleistungen von Kommunen und Ländern beträgt seit 01.01.2026 216.000 € (Vergabeblog, §8.1). Die Aussage („sehr oft“ unterschwellig) bleibt davon unberührt; der Betrag wird nicht verwendet.
 
 **Interpretation (Claude; n = 3, Hinweise, keine Belege)**
 

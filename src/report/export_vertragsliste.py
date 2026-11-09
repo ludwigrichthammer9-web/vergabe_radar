@@ -35,7 +35,7 @@ QUELLE = "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herk
 HINWEIS_META = ("Keine Prognose: ende_grundlaufzeit ist das Ende der Grundlaufzeit laut Bekanntmachung, kein Termin der Neuausschreibung; "
                 "hoechstende_hinweis ist nur ein Hinweis (bei hoechstende_herkunft keine_angabe oder keine_verlaengerung steht dort ersatzweise das Ende der Grundlaufzeit). "
                 "Nur TED-Lose oberhalb der EU-Schwelle. Vor einer Entscheidung die Bekanntmachung (ted_link) lesen. "
-                "TED als Quelle angeben; Lizenz vor Abgabe zu bestätigen.")
+                "TED als Quelle angeben; Lizenz laut TED-Rechtshinweis, Wortlaut am 06.11.2026 gelesen (docs/quellen.md).")
 
 # Reihenfolge = Spaltenreihenfolge in CSV und JSON (Tabelle in docs/export_schema.md). Typ: s = Text, d = Datum, i = ganze Zahl, n = Dezimalzahl, b = true/false
 # los_kennung (seit 1.1) steht als neues optionales Feld am Ende (Änderungsregel für Nebenversionen: nur neue Felder am Ende).

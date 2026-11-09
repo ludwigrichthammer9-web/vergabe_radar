@@ -137,7 +137,7 @@ KI-Urteile: **7 gespeicherte KI-Urteile (Cache); der Erstlauf ist nicht mehr pro
 - Die Demo verarbeitet nur öffentliche Bekanntmachungen und erfundene Profile; sie versendet nichts und speichert keine Daten Dritter.
 - Deutung (nicht geprüft, juristisch zu klären): Eine von einem Betrieb **bestellte** Benachrichtigung (Anmeldung mit Bestätigung, Abmeldung jederzeit) unterscheidet sich von unverlangter Werbung. Unaufgeforderte Werbe-E-Mails an Gewerbetreibende sind nach § 7 UWG regelmäßig unzulässig; Nachrichten an Betriebe, die sich nicht angemeldet haben, wären deshalb nicht Teil eines späteren Angebots. Bei einem echten Versand an Personen (Teams-Kanal, E-Mail-Adressen) kämen DSGVO-Pflichten hinzu (Rechtsgrundlage, Auftragsverarbeitung bei Cloud-Diensten, Löschfristen).
 - Live-Demo (Abschnitt 11): Der Auszug `docs/demo/daten/datensatz_bayern.json` (und der Beispiel-Auszug) enthält Freitexte von Bekanntmachungen, darin mögliche Ansprechpartner (Namen, Kontaktdaten). Mit dem Push ins öffentliche Repository werden sie öffentlich; vorher prüfen, ob das gewollt ist.
-- TED-Daten: Quellenangabe, Wiederverwendung laut TED-Rechtshinweis (siehe `docs/quellen.md`; Wortlaut vor Abgabe selbst bestätigen). Die Nachrichten und die Vorschauseite tragen die Quellenangabe.
+- TED-Daten: Quellenangabe, Wiederverwendung laut TED-Rechtshinweis (Wortlaut am 2026-11-06 gelesen, siehe `docs/quellen.md`). Die Nachrichten und die Vorschauseite tragen die Quellenangabe.
 
 ## 9. Grenzen und was die Demo nicht zeigt
 

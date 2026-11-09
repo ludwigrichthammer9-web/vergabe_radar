@@ -164,7 +164,7 @@ footer{color:var(--grey);font-size:12.5px;margin:32px 0}footer p{margin:8px 0}
 <footer>
 <p><b>Quelle:</b> TED (Tenders Electronic Daily), Zuschlagsbekanntmachungen, Haupt-CPV 90910/90911/90919, Leistungsort Oberpfalz (NUTS DE23); Auftragnehmer, Zuschlagswert und Angebote aus dem eForms-XML derselben Bekanntmachungen (nur ab eForms, soweit der Auftraggeber sie veröffentlicht hat). Stand der Daten: __STAND__. Seite erzeugt am __ERZ__ mit src/report/webseite.py; Daten: reports/beispiel_liste_oberpfalz.csv, reports/wettbewerbsbild_oberpfalz.csv.</p>
 <p>Hintergrund: Lab-Log (docs/lab_log.pdf).</p>
-<p><b>Lizenz:</b> TED-Daten sind öffentliche Bekanntmachungen der EU; bei Weitergabe ist TED als Quelle anzugeben. Laut TED-Rechtsseite frei wiederverwendbar, auch kommerziell (Beschluss 2011/833/EU; identifizierbare Privatpersonen ausgenommen); vor Abgabe zu bestätigen.</p>
+<p><b>Lizenz:</b> TED-Daten sind öffentliche Bekanntmachungen der EU; bei Weitergabe ist TED als Quelle anzugeben. Laut TED-Rechtsseite frei wiederverwendbar, auch kommerziell (Beschluss 2011/833/EU; identifizierbare Privatpersonen ausgenommen); Wortlaut am 06.11.2026 gelesen (docs/quellen.md).</p>
 <p><b>Lesehilfe:</b> „*“ = Leistungsort auch außerhalb der Oberpfalz; Lose mit mehreren Regionen erscheinen mit allen. „≥ n“ bei Angeboten = nur die elektronisch eingegangenen Angebote sind veröffentlicht, die Gesamtzahl ist mindestens n. „nicht veröffentlicht“ = Auftraggeber hat den Wert ausdrücklich nicht veröffentlicht; „in TED nicht angegeben“ = Angabe fehlt in der Bekanntmachung (nicht: Wert unbekannt oder null). Prototyp ohne Kundentest.</p>
 </footer>
 </main>

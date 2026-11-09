@@ -114,7 +114,7 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-09. Methode: Commits mit höchste
 | 2026-11-05 | Kommilitone (Manuel Strobel) | Lesen von 15 Losen im TED-Original (Iteration 9, V6) | offen |
 | 2026-11-03 | Kommilitone (Manuel Strobel) | Zweitprüfung P14–P71 (Iteration 5; Angabe des Nutzers) | offen |
 | | Kommilitone (Manuel Strobel) | Präsentation/Umsetzung der Folien (Angabe des Nutzers, 2026-11-03) | offen |
-| 2026-11-08 | Kollege (laut Nutzer, Name nicht dokumentiert) | Erstellung der Video-Animation „Franz und die Glaskugel“ (KI-gestützt) | offen |
+| 2026-11-08 | Kommilitone (Manuel Strobel) | Erstellung der Video-Animation „Franz und die Glaskugel“ (KI-gestützt), danach Überarbeitung abwechselnd mit dem Nutzer (Angabe des Nutzers, 2026-11-09) | offen (laut Nutzer in den rund 30 Stunden je Person enthalten) |
 | | | weitere Handarbeit (Zweitprüfungen, Handprüfungen der Iterationen 5 bis 7) | offen |
 
 ## Schätzung des Gesamtaufwands (2026-11-09; **SCHÄTZUNG, nicht gemessen**)
@@ -132,7 +132,7 @@ _Anlass: Frage des Nutzers, wie lange das Team gearbeitet hat. Es wurde nicht mi
 | Gespräche mit Betrieben und Vergabestelle (W5, Nutzer) | 1,75 | Angabe des Nutzers: 105 Minuten (Vorbereitung, neun Anrufe, Abtippen). Einzige Handzahl mit Angabe, aber ebenfalls nicht gestoppt. |
 | Lesen der Berichte und Entscheidungen (beide) | 4 bis 8 | Rund 10 Iterationsberichte, Evaluator-Prüfungen, Business-Case-Auswahl; angenommen 25 bis 50 Minuten je Iteration. |
 | Telefonate und Abstimmung außerhalb der Git-Sitzungen (beide) | 2 bis 5 | Laut Nutzer „immer telefoniert und alles zusammen ausgearbeitet“; nur der Teil ohne Commit-Zeitraum ist hier angesetzt, um Doppelzählung zu vermeiden. |
-| Video: Abstimmung, Hörprobe, Durchsicht (ohne Animation des Kollegen) | 1 bis 3 | Hörprobe ist noch offen; Animation durch einen Kollegen ist nicht eingerechnet. |
+| Video: Abstimmung, Überarbeitung, Durchsicht (Animation durch Manuel nicht einzeln geschätzt) | 1 bis 3 | Die Animation hat Manuel erstellt; ihre Stunden sind laut Nutzer in den rund 30 Stunden je Person enthalten, hier nicht gesondert eingerechnet. Eine Hörprobe ist nicht dokumentiert. |
 | Vortrag und Folien: Durchsicht, Umsetzung (Manuel laut Nutzer) | 2 bis 5 | Probevortrag und der Vortrag selbst sind noch offen und nicht eingerechnet. |
 | **Summe** | **51,75 bis 88,25** | Rundung: **rund 52 bis 88 Stunden** gemeinsam |
 

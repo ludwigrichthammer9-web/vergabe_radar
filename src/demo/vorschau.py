@@ -125,5 +125,5 @@ def baue(daten):
                  "Keine Referenz durch einen Menschen; beide Urteile können falsch sein.</p>"
                  "<table class='v'><tr><th>Profil</th><th>Bekanntmachung</th><th>Titel</th><th>KI</th><th>Regel</th><th>gleich</th></tr>" + zeilen + "</table></section>")
     teile.append(f"<footer>{escape(QUELLE)}. Lizenz: TED-Daten sind laut Rechtshinweis der TED-Seite frei wiederverwendbar mit Quellenangabe "
-                 "(Wortlaut selbst prüfen). Hinweis: " + escape(HINWEIS) + "</footer>" + BODYJS + "</body></html>")
+                 "(Wortlaut am 06.11.2026 gelesen, docs/quellen.md). Hinweis: " + escape(HINWEIS) + "</footer>" + BODYJS + "</body></html>")
     return "\n".join(teile)

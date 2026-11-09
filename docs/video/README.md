@@ -4,8 +4,9 @@
 Zusammenfassung des Projekts Vergabe-Radar in rund 2:50 Minuten (exportierte MP4, 170,5 s, 1280 x 720; die HTML-Live-Fassung dauert 276 s, weil sie die Pause für die Quizfrage und das Titelbild enthält) für den Vortrag und das Lab-Log: von der Idee (Prognose von Vertragsenden) über die gescheiterte Punktprognose und die Vertragsliste bis zur Entscheidung „Selbst bauen? Nein.“ Erzählt wird mit erfundenen Figuren (Franz, Bit, Prüfi). Das Video ist eine Veranschaulichung, kein zusätzlicher Beleg.
 
 ## Herkunft
-- Die HTML/SVG-Animation wurde von einem Kollegen **KI-gestützt** erstellt (Original: `Franz_und_die_Glaskugel_live.html`, nicht im Repo, Original unverändert).
-- Diese Fassung `franz_und_die_glaskugel.html` ist von uns (Manuel Strobel, Ludwig Richthammer) **korrigiert und erweitert** (siehe unten). Autorenzeile im Abspann.
+- Die HTML/SVG-Animation hat Manuel Strobel **KI-gestützt** erstellt (Original: `Franz_und_die_Glaskugel_live.html`, nicht im Repo, Original unverändert). Ludwig Richthammer und Manuel Strobel haben sie abwechselnd gemeinsam überarbeitet (Angabe des Nutzers, 2026-11-09).
+- Diese Fassung `franz_und_die_glaskugel.html` ist **korrigiert und erweitert** (siehe unten). Autorenzeile im Abspann.
+- **Aktueller Stand (2026-11-09):** Fassung v4 (`franz_und_die_glaskugel_szenen_0-5_v4.mp4`) mit Microsoft-Neuralstimmen über edge-tts (Commit b87088c). Manuel optimiert das Video weiter; eine Fassung nach v4 folgt (offen).
 
 ## Was gegenüber dem Original geändert wurde (Fakten)
 Nur Texte und Technik, **keine Zahlen**:
@@ -15,7 +16,7 @@ Nur Texte und Technik, **keine Zahlen**:
 4. Szene 5: Einschränkung „Die zwei KI-Leser sind nicht unabhängig, der Vergleichswert ist teils zirkulär; der Mensch prüfte 15 Fälle: 14 stimmen“ (Untertitel und Karte).
 5. Szene 4: Die Aussage der Vergabestelle ist als „sinngemäß, Hinweis aus einem Gespräch und einer Optionsanalyse (70,8 %, n = 24)“ gekennzeichnet (Untertitel und Karte, „kein Beleg“).
 6. Szene 2: Karte „Daten: TED, Gebäudereinigung, Deutschland, ab 2016“.
-7. Abspann: „Autoren: Manuel Strobel, Ludwig Richthammer. Stimme: synthetisch (Piper, Thorsten-Voice).“ (v1: Windows SAPI)
+7. Abspann: „Autoren: Manuel Strobel, Ludwig Richthammer. Stimme: synthetisch (Piper, Thorsten-Voice).“ (v1: Windows SAPI; seit v4: „Stimmen: synthetisch (Microsoft Neural-Stimmen ueber edge-tts)“)
 8. Technik: Abspielbereich per URL (`?von=8&bis=186`), Sprecherstimme (WAV je Untertitel, jetzt Piper; Text aus `sprechertext.json`), Stumm-Schalter, Startbildschirm. Caption-Fenster angepasst, wo die Texte länger wurden oder die Stimme Platz brauchte: Untertitel 4 und 5 (Szene 2, Grenze 51 s auf 50,8 s, „Hallo!“ gestrichen), Untertitel in Szene 6 (186,6 bis 193,2; 193,4 bis 204,6; 204,8 bis 215). Die Szenen-Zeitleiste `B` ist **nicht** geändert; kein Fenster überlappt (geprüft).
 
 ## Fassung v3 (Synchronität geprüft, Schluss-Einordnung)
@@ -93,8 +94,8 @@ Der Schalter `--stimme` wählt den Weg:
 - Das Modell hat **einen** Sprecher. Die Figuren werden über Tonhöhe und Tempo unterschieden (ffmpeg): Franz etwas höher und flotter, Bit (KI) deutlich höher mit leichtem Tremolo (robotisch), Prüfi tiefer, Erzähler unverändert. Das Tempo (`length_scale`) wird je Untertitel nur erhöht, wenn die Dauer sonst nicht ins Fenster passt (Dauer <= Fenster - 0,3 s). Aufnahmen werden vorne von Stille befreit und auf -3 dBFS Spitze normiert.
 - Ob „T E D“ oder „Ted“ besser klingt, wurde **nicht gehört**; im Sprechtext steht „T E D“ (Buchstabieren), änderbar in `sprechertext.json`.
 
-### Mehrstimmig: piper-mehrstimmig und edge (Wahl steht aus)
-Anlass: Der Nutzer wollte eine menschlichere Stimme und Stimmvorlagen. Beide Wege sind **vorbereitet, aber noch nicht als Standard erzeugt**; `docs/video/audio/` und die Videos v1 bis v3 sind unverändert. Die Zuordnung Figur -> Stimme steht in `docs/video/stimmen.json` (Abschnitte `piper_mehrstimmig` und `edge`, jeweils mit Feld `abspann`).
+### Mehrstimmig: piper-mehrstimmig und edge (gewählt: edge, Fassung v4)
+Anlass: Der Nutzer wollte eine menschlichere Stimme und Stimmvorlagen. _Nachtrag 2026-11-09:_ Gewählt wurde **edge**; die Fassung v4 ist damit erzeugt (Commit b87088c, Abspann „Microsoft Neural-Stimmen ueber edge-tts“). Der folgende Text beschreibt den Stand vor der Wahl; die Videos v1 bis v3 sind unverändert. Die Zuordnung Figur -> Stimme steht in `docs/video/stimmen.json` (Abschnitte `piper_mehrstimmig` und `edge`, jeweils mit Feld `abspann`).
 
 **Hörproben** (5 Sätze: Erzähler, Franz, Bit, Prüfi, Erzähler): `docs/video/stimmproben/probe_piper-mehrstimmig.wav` und `probe_edge.wav`. Neu erzeugen: `.venv-video\Scripts\python.exe -I src\report\video_vertonung.py --stimme piper-mehrstimmig --probe` (bzw. `--stimme edge --probe`). `--probe` schreibt nur dorthin, nicht nach `audio/`, und ändert die HTML nicht.
 
@@ -141,7 +142,7 @@ Ergebnis (Stand der Erzeugung von v3): `docs/video/franz_und_die_glaskugel_szene
 **Quizphase im Export:** Das Quizbild (Live-Zeit 105 s) steht 3 s still (danach 0,5 s) mit dem Hinweis „Auflösung folgt …“; die Zeit 105 bis 116 s der Live-Fassung entfällt, das Video läuft bei 116 s weiter. Die Quizfrage wird in diesen Sekunden gesprochen. Die Standbilder werden bei 30 fps per `window.render(t)` aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien); die Tonspur wird aus den WAVs mit `adelay` an den Untertitel-Anfängen gemischt.
 
 ## Grenzen
-- Stimme **synthetisch** (Piper, Thorsten-Voice), ein Modell für alle Figuren (nur Tonhöhe und Tempo unterscheiden sie), Betonung maschinell. **Die Klangqualität wurde vom Bearbeiter (KI) nicht gehört**, nur Dauer, Pegel und Anfangsstille wurden gemessen; Hörprobe durch den Nutzer steht aus.
+- Stimmen **synthetisch**: v4 nutzt Microsoft-Neuralstimmen über edge-tts, einen **inoffiziellen** Zugang ohne Vertrag; die Lizenzlage der erzeugten Audiodaten ist ungeklärt (v2 und v3: Piper, Thorsten-Voice, CC0). Betonung maschinell. **Die Klangqualität wurde vom Bearbeiter (KI) nicht gehört**, nur Dauer, Pegel und Anfangsstille wurden gemessen. Offener Punkt: Eine Hörprobe der Fassung v4 ist nicht dokumentiert.
 - Alle **Figuren sind erfunden**; die Gespräche im Video sind **nachgestellt** und verändert, es gab nur **drei** echte Telefongespräche (n = 3, Hinweise, keine Statistik, `docs/business.md` §8.9).
 - Das Video ist eine Vereinfachung des Projektverlaufs (vier Runden statt zehn Iterationen); Belege und Grenzen stehen in `docs/iterationen.md`, `docs/lab_log.md` und den Evaluationsberichten.
 - Nicht belegt bleibt: Qualitätsvorsprung der Liste gegenüber kostenlosen Diensten, Nachfrage, Zahlungsbereitschaft. „Nie günstiger“ folgt aus der Modellkonstruktion mit Annahmen.

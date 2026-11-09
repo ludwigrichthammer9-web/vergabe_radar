@@ -1539,3 +1539,22 @@ _Einordnung (Interpretation):_ D1 und D2 sind **Machbarkeitskriterien**: Sie pr�
 _Zur Symmetrie (Fakt der Rechnung, Annahmen):_ „Gegen kostenlose Dienste ist Eigenbau nie günstiger“ gilt im **Basismodell** und folgt aus der Modellkonstruktion (Abo und kostenlose Dienste ohne Eigenaufwand, Eigenbau mit Stunden); es ist keine Messung. In der symmetrischen Variante liegt der Break-even gegen DTAD bei 1,0 / 2,4 / 4,8 Jahren (Niedrig / Mittel / Hoch) und gegen einen kostenlosen Dienst mit Übernahme von Hand bei 4,0 / 6,0 / 12,0 Jahren; das hängt an den angenommenen Stunden. Beide Varianten tragen nur die Aussage, dass der Preis kein Vorteil des Eigenbaus ist. Gemessen an einem Auftrag (Deckungsbeitrag 25.110 € in drei Jahren, ohne Angebotsaufwand und Zuschlagswahrscheinlichkeit) sind die Kosten klein; die offene Frage ist, ob ein früher Hinweis überhaupt einen Auftrag bringt (nicht belegt).
 
 _Datenschutz (Fakt, Vorprüfung):_ In den 129 Losen mit Namen stehen 47 verschiedene Auftragnehmernamen; 43 haben eine erkennbare Rechtsform (davon 1 e. K.), 4 nicht. Die Prüfung ist nicht abschließend; Weitergabe wahlweise ohne das Feld `auftragnehmer` (Dateien `vertragsliste_v1_ohne_auftragnehmer*`). Details: `docs/export_schema.md` Abschnitt 8.
+
+---
+
+## Nachtrag zu Iteration 5: Sensitivität des Backtests (2026-11-09, nachträglich, kein neuer Test)
+
+_Ergänzung; die Abschnitte der Iteration 5 oben bleiben unverändert. Quelle: [sensitivitaet_iteration5.md](../reports/sensitivitaet_iteration5.md), erzeugt von `src/model/sensitivitaet_backtest.py` aus der Tabelle „Alle Paare“ in [backtest_iteration5.md](../reports/backtest_iteration5.md) (läuft ohne Rohdaten)._
+
+_Fakten_
+- Kontrolle: R0 9/52 = 17,3 %, R1 15/52 = 28,8 %, gleich wie im Backtest.
+- Vorlauf 0 bis 24 Monate (Fenster ±3): Bester Wert für R1 ist der vorab gesetzte Vorlauf von 6 Monaten mit 15/52 = 28,8 % (für 60 % wären 32 Treffer nötig).
+- Fenster bei 6 Monaten Vorlauf: ±6 Monate 16/52 = 30,8 %, ±9 Monate 19/52 = 36,5 %, ±12 Monate 26/52 = 50,0 %.
+- R1 gegen R0 auf denselben Paaren: nur R1 trifft 10, nur R0 trifft 4; exakter McNemar-Test zweiseitig p ≈ 0,18.
+
+_Interpretation_
+- Das Ergebnis „keine brauchbare Terminprognose aus TED“ hängt nicht an der Wahl von 6 Monaten. Die Werte sind eine optimistische Obergrenze, weil Vorlauf und Fenster im Nachhinein auf denselben Paaren variiert wurden.
+- Der Vorsprung von R1 vor der naiven Referenz R0 (+11,5 Prozentpunkte) ist statistisch nicht gesichert.
+- Grenzen, offen benannt: Das Prognoseziel (Höchstende) wurde nach explorativer Sicht auf dieselben Paare gewählt (Grenzen in `backtest_iteration5.md`); der Vorlauf war gesetzt, nicht geschätzt. Die Paare stammen aus einer Rückwärtssuche, verlängerte Verträge ohne Neuausschreibung fehlen. 41 der 52 Vorgänger stammen aus der Zeit vor eForms (55 von 68 bei den zusammengestellten Paaren vor der Zweitprüfung).
+- Rundung, zur Klarstellung: Z1 in Iteration 8 ist 77/80 = 96,25 % (oben als 96,2 % angegeben).
+- Folge: keine weitere Prognose-Iteration im Projekt. Was eine Prognose bräuchte (andere Daten über Verlängerungsentscheidungen, Haushaltspläne, Vorinformationen; deutlich mehr Paare), steht als Ausblick im Lab-Log, Abschnitt 7.

@@ -1,6 +1,6 @@
 # Reproduzierbarkeit
 
-_Stand 2026-11-03. `data/` liegt nicht im Git (CLAUDE.md-Regel; `data/raw` etwa 630 MB). Alles dort lässt sich aus der TED-Quelle neu laden.
+_Stand 2026-11-09 (zuerst 2026-11-03). `data/` liegt nicht im Git (CLAUDE.md-Regel; `data/raw` etwa 630 MB). Alles dort lässt sich aus der TED-Quelle neu laden.
 Quellen: `docs/quellen.md`._
 
 ## Einrichten
@@ -8,6 +8,12 @@ Quellen: `docs/quellen.md`._
 python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt
 ```
+Für Video, Demo-Aufnahme und die Bilder des Lab-Logs gibt es eine zweite Umgebung `.venv-video` mit `requirements-video.txt`
+(Playwright, imageio-ffmpeg, Piper, edge-tts; Einrichtung in `docs/video/README.md`, Abschnitt „MP4-Export“).
+
+**HTML-Seiten auf GitHub:** GitHub zeigt `.html`-Dateien (Webseite `docs/prototyp/vertragsliste.html`, Demos in `docs/demo/`, Video
+`docs/video/franz_und_die_glaskugel.html`) nur als Quelltext. Zum Ansehen die Datei herunterladen (beim Video mit dem Ordner `audio/`)
+und lokal im Browser öffnen.
 
 ## 1. Rohdaten laden (TED Search API, öffentlich, kein Schlüssel)
 Jeder Lauf speichert die Antworten unverändert in `data/raw/ted_search/<Lauf>/` und schreibt `request_meta.json` (Abfrage, Felder, Zeitpunkt).
@@ -43,6 +49,22 @@ Die Skripte laden fehlende XML bei Bedarf selbst nach `data/raw/ted_xml/<Ordner>
 Frühere Iterationen: Skripte `src/*_iteration2…4.py`, jeweils mit Aufruf im Kopf der Datei. Alle Zufallsziehungen haben einen
 festen Seed (in `docs/iterationen.md` genannt).
 
+**Spätere Schritte (Iteration 9 bis Abschluss).** Aufrufe wie im Kopf der jeweiligen Skripte; Stichproben- und Leser-Skripte der
+Iterationen 6 bis 10b (`src/prepare/*_iteration*.py`) ebenfalls mit Aufruf im Kopf.
+```
+.venv\Scripts\python src/prepare/vertragsliste.py [Berichtspfad]       # Fassung 9 der Liste (Regeln 1 bis 10): data/processed/vertragsliste_909.csv
+.venv\Scripts\python -I src/report/beispiel_liste.py                  # Oberpfalz-Auszug der Liste
+.venv\Scripts\python.exe -I src/prepare/wettbewerbsbild_oberpfalz.py  # Paket A (lädt fehlende XML nach; --offline lädt nichts)
+.venv\Scripts\python.exe -I src/report/export_vertragsliste.py [--ohne-auftragnehmer]   # docs/prototyp/export/ (Schema 1.1), mit Validierung
+.venv\Scripts\python -I src/report/webseite.py                        # docs/prototyp/vertragsliste.html
+.venv\Scripts\python.exe -I src\report\make_or_buy.py                 # reports/make_or_buy.md und .csv (nur Standardbibliothek)
+python src/model/sensitivitaet_backtest.py [--vorlauf 9 --fenster 2]  # reports/sensitivitaet_iteration5.md; läuft ohne Rohdaten
+.venv\Scripts\python.exe -I src/report/vortrag.py [--ohne-anhang]     # docs/vortrag/vortrag_vergabe_radar.pptx
+.venv\Scripts\python -I src/report/lab_log.py                         # docs/lab_log.md aus docs/lab_log_vorlage.md
+python -I src/report/lab_log_pdf.py                                   # docs/lab_log.pdf (Edge oder Chrome, headless)
+.venv-video\Scripts\python.exe -I src\report\lab_log_bilder.py        # Bilder des Lab-Logs (Playwright, Edge)
+```
+
 ## 4. Demo (Profil-Match, Live-Demo für den Vortrag)
 Beschreibung, Abfragen und Grenzen: `docs/demo_push.md` (Abschnitte 3, 10, 11). Beide Datensätze der Live-Demo liegen als Auszug im Repo
 (`docs/demo/daten/schnappschuss_demo.json`, `docs/demo/daten/datensatz_bayern.json`); die Rohdaten (`data/raw/demo_push_20261106/`,
@@ -59,9 +81,11 @@ Beschreibung, Abfragen und Grenzen: `docs/demo_push.md` (Abschnitte 3, 10, 11). 
   nicht identisch ausfallen. Maßgeblich sind die committeten Reports und die `*_gt.csv`.
 - **Urteile von Menschen** (Blindprüfungen) stehen als Dateien in `reports/` (Originale der Nutzerurteile, Iteration 5 siehe
   `reports/gt_pruefung_iteration5*.md`).
-- **Lösungsschlüssel** der Blindprüfungen liegen lokal in `data/processed/` und sind nur über ihren SHA-256 in `docs/iterationen.md`
-  belegt. Für die Abgabe kann der Schlüssel nach Abschluss der Prüfung als Datei in `reports/` abgelegt werden.
+- **Lösungsschlüssel** der Blindprüfungen und Stichproben (`data/processed/*schluessel*.csv`) liegen nur lokal und sind über ihren
+  SHA-256 in `docs/iterationen.md` und den Commits belegt (Stand 2026-11-09: keiner im Git). Alle Prüfungen sind abgeschlossen; ob die
+  Schlüssel zur Abgabe in `reports/` gelegt werden, hat das Team noch nicht entschieden (offen). Bis dahin lassen sich die Auswertungen
+  ohne die Schlüssel nicht neu rechnen.
 - **Ausgabe der Subagenten** (`data/raw/rechercheur_*`, `blindpruefung_agent_*`): Arbeitsprotokolle, nicht reproduzierbar.
 
 ## Datenlink für die Abgabe
-Gewählt (2026-11-06, Nutzer): Diese Anleitung samt Repository https://github.com/ludwigrichthammer9-web/vergabe_radar ist der Datenzugang (Quelle öffentlich, Abruf per `src/ted_download.py`). Voraussetzung: Das Repository ist gepusht und für den Dozenten lesbar (Stand 2026-11-06: nicht erreichbar, nicht gepusht). Ein Ordner mit den Läufen (`data/raw/ted_search/`, ca. 470 MB) wurde nicht bereitgestellt.
+Gewählt (2026-11-06, Nutzer): Diese Anleitung samt Repository https://github.com/ludwigrichthammer9-web/vergabe_radar ist der Datenzugang (Quelle öffentlich, Abruf per `src/ted_download.py`). Voraussetzung: Das Repository ist gepusht und für den Dozenten lesbar (Stand 2026-11-06: nicht erreichbar, nicht gepusht). _Nachtrag 2026-11-09:_ Das Repository ist öffentlich (Seite am 2026-11-09 abrufbar, HTTP 200); lokale Commits müssen vor der Abgabe noch gepusht werden. Ein Ordner mit den Läufen (`data/raw/ted_search/`, ca. 470 MB) wurde nicht bereitgestellt.

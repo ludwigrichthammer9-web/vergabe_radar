@@ -16,7 +16,7 @@ Kommilitone: **Manuel Strobel**. Seine Beiträge sind nicht vollständig bekannt
 | Gespräche mit Betrieben und Vergabestelle (W5, Iteration 10) | neun Anrufe, drei Stellen erreicht, Notizen ohne Namen (105 Minuten mit Vorbereitung) | – | offen |
 | Evaluation | Entscheidungen | Subagent `evaluator` (kritische Prüfung) | offen |
 | Business-Case-Auswahl, Demo, Live-Demo | Ideen und Wünsche (Make or Buy, Push-Matching, K-J, Live-Demo), Gegencheck der Angaben | Recherche-Agenten, Bewertung, Code der Demos | offen |
-| Video „Franz und die Glaskugel“ | Auftrag zur Prüfung der Texte | Prüfung gegen Belege, Korrekturen, Vertonung (Piper), Export | Animation von einem Kollegen KI-gestützt erstellt (laut Nutzer; ob von Manuel: offen); Autorenzeile im Abspann nennt Manuel und Ludwig, Manuels Anteil an der Korrektur: offen |
+| Video „Franz und die Glaskugel“ | Auftrag zur Prüfung der Texte; Überarbeitung abwechselnd gemeinsam mit Manuel | Prüfung gegen Belege, Korrekturen, Vertonung (v2/v3 Piper, v4 Microsoft-Neuralstimmen über edge-tts; inoffizieller Zugang, Lizenzlage der Audiodaten ungeklärt), Export | Animation KI-gestützt erstellt; Überarbeitung abwechselnd gemeinsam mit Ludwig (laut Nutzer, 2026-11-09); optimiert das Video weiter, Fassung nach v4 offen |
 | Folien und Vortrag | Durchsicht, Freigaben | Foliengerüst und Umbau (`src/report/vortrag.py`) | Präsentation/Umsetzung (laut Nutzer, 2026-11-03; heutiger Stand: offen) |
 | Dokumentation, Lab-Log | Durchsicht, Freigaben | Texte in `docs/`, `reports/` | offen |
 

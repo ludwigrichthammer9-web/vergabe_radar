@@ -4,7 +4,7 @@
   "stand_daten": "2026-11-04",
   "erzeugt": "2026-11-06",
   "quelle": "TED (Tenders Electronic Daily), Zuschlagsbekanntmachung; Ende und Herkunft aus der Vertragsliste, Auftragnehmer/Wert/Angebote aus dem eForms-XML",
-  "hinweis": "Keine Prognose: ende_grundlaufzeit ist das Ende der Grundlaufzeit laut Bekanntmachung, kein Termin der Neuausschreibung; hoechstende_hinweis ist nur ein Hinweis (bei hoechstende_herkunft keine_angabe oder keine_verlaengerung steht dort ersatzweise das Ende der Grundlaufzeit). Nur TED-Lose oberhalb der EU-Schwelle. Vor einer Entscheidung die Bekanntmachung (ted_link) lesen. TED als Quelle angeben; Lizenz vor Abgabe zu bestätigen.",
+  "hinweis": "Keine Prognose: ende_grundlaufzeit ist das Ende der Grundlaufzeit laut Bekanntmachung, kein Termin der Neuausschreibung; hoechstende_hinweis ist nur ein Hinweis (bei hoechstende_herkunft keine_angabe oder keine_verlaengerung steht dort ersatzweise das Ende der Grundlaufzeit). Nur TED-Lose oberhalb der EU-Schwelle. Vor einer Entscheidung die Bekanntmachung (ted_link) lesen. TED als Quelle angeben; Lizenz laut TED-Rechtshinweis, Wortlaut am 06.11.2026 gelesen (docs/quellen.md).",
   "schema": "docs/export_schema.md",
   "schluessel": [
    "bekanntmachung",
