@@ -813,7 +813,7 @@ kurz(s, "Wer früh Bescheid weiß, kann Personal und Angebot besser planen (Anna
 fuss(s, "Quelle: TED API v3. 4.011 von 4.307 eForms-Zuschlägen: ohne Baureinigung u. Ä. und ohne Lose ohne Zuschlag.")
 
 # Folie 14 (Anhang): Trefferquote je Vorlauf ------------------------------------------------------------
-VORLAUF_BILD = ROOT / "docs" / "lab_log_bilder" / "diagramm_vorlauf.png"   # erzeugt von src/report/lab_log_bilder.py
+VORLAUF_BILD = ROOT / "docs" / "lab_log_bilder" / "diagramm_vorlauf.png"   # erzeugt von src/report/diagramme.py
 s = new_slide("AUSGEBLENDET (Anhang für die Fragerunde; Zeit 0:00). Zeigen bei der Frage „Hättet ihr mit einem anderen Vorlauf 60 % geschafft?“. "
               "KERNAUSSAGE: Nein. Nachträglich (kein neuer Test) wurde der Vorlauf von 0 bis 24 Monaten auf denselben 52 Paaren variiert, Fenster ±3 Monate: Der beste Vorlauf ist genau der vorab gewählte (6 Monate, 15 von 52 = 28,8 %). "
               "Blaue Linie R1 = spätestes Vertragsende (Höchstende) minus Vorlauf; graue Linie R0 = Ende der Grundlaufzeit minus Vorlauf (einfache Faustregel, bei 6 Monaten 9 von 52 = 17,3 %); rote Linie = Schwelle 60 % (32 Treffer). "

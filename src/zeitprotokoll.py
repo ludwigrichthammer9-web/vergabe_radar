@@ -67,7 +67,7 @@ def main() -> None:
             "| 2026-11-05 | Kommilitone (Manuel Strobel) | Lesen von 15 Losen im TED-Original (Iteration 9, V6) | offen |",
             "| 2026-11-03 | Kommilitone (Manuel Strobel) | Zweitprüfung P14–P71 (Iteration 5; Angabe des Nutzers) | offen |",
             "| | Kommilitone (Manuel Strobel) | Präsentation/Umsetzung der Folien (Angabe des Nutzers, 2026-11-03) | offen |",
-            "| 2026-11-08 | Kommilitone (Manuel Strobel) | Erstellung der Video-Animation „Franz und die Glaskugel“ (KI-gestützt), danach Überarbeitung abwechselnd mit dem Nutzer (Angabe des Nutzers, 2026-11-09) | offen (laut Nutzer in den rund 30 Stunden je Person enthalten) |",
+            "| 2026-11-08 | Kommilitone (Manuel Strobel) | Erstellung der Video-Animation „Franz und die Glaskugel“ (KI-gestützt), danach Überarbeitung abwechselnd mit dem Nutzer (Angabe des Nutzers, 2026-11-09) | offen (in den rund 35 Stunden je Person enthalten, Selbstangabe beider, 2026-11-09) |",
             "| | | weitere Handarbeit (Zweitprüfungen, Handprüfungen der Iterationen 5 bis 7) | offen |", ""]
     OUT.write_text("\n".join(out), encoding="utf-8")
     print(f"{len(sessions)} Sitzungen, {sum(total.values()):.1f} h; {OUT}")

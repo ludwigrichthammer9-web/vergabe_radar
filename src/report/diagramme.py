@@ -26,7 +26,7 @@ from sensitivitaet_backtest import QUELLE, lade_paare, treffer  # noqa: E402
 
 AUS = ROOT / "docs" / "lab_log_bilder"
 BLAU, GRAU, ROT, GRUEN, TEXT, LINIE = "#007AFF", "#8E8E93", "#FF3B30", "#34C759", "#1C1C1E", "#D1D1D6"
-plt.rcParams.update({"font.family": ["Segoe UI", "DejaVu Sans"], "font.size": 12, "axes.edgecolor": LINIE,
+plt.rcParams.update({"font.family": ["Segoe UI", "DejaVu Sans"], "font.size": 10, "axes.edgecolor": LINIE,
                      "axes.labelcolor": TEXT, "xtick.color": TEXT, "ytick.color": TEXT, "axes.spines.top": False,
                      "axes.spines.right": False})
 
@@ -45,7 +45,7 @@ def diagramm_abweichung():
     w = abweichungen()
     assert len(w) == 52, len(w)
     im_fenster = sum(-3 <= x <= 3 for x in w)
-    fig, ax = plt.subplots(figsize=(9, 3.6), dpi=200)
+    fig, ax = plt.subplots(figsize=(6.2, 2.9), dpi=300)   # im Lab-Log 115 mm breit: Schrift ca. 7 bis 8 pt
     grenzen = list(range(-42, 97, 3))   # alle 52 Paare (Minimum −38,3, Maximum +95,0 Monate)
     ax.axvspan(-3, 3, color=GRUEN, alpha=0.15, lw=0)
     ax.hist([x for x in w if -3 <= x <= 3], bins=grenzen, color=GRUEN, edgecolor="white")
@@ -54,9 +54,9 @@ def diagramm_abweichung():
     ax.set_ylabel("Zahl der Paare")
     ax.set_xlim(-42, 96)
     ax.text(5, ax.get_ylim()[1] * 0.9, f"grün = Treffer (±3 Monate): {im_fenster} von {len(w)}", ha="left", color=TEXT,
-            fontsize=11, fontweight="bold")
+            fontsize=9.5, fontweight="bold")
     ax.set_title(f"Im Mittel fast richtig (Median {statistics.median(w):+.1f} Monate), im Einzelfall Jahre daneben".replace(".", ","),
-                 loc="left", fontsize=12, color=TEXT)
+                 loc="left", fontsize=10.5, color=TEXT)
     fig.tight_layout()
     fig.savefig(AUS / "diagramm_abweichung.png")
     plt.close(fig)
@@ -69,21 +69,21 @@ def diagramm_vorlauf():
     v = list(range(25))
     r1 = [100 * sum(treffer(paare, "R1", x, 3)) / n for x in v]
     r0 = [100 * sum(treffer(paare, "R0", x, 3)) / n for x in v]
-    fig, ax = plt.subplots(figsize=(8, 3.6), dpi=200)
+    fig, ax = plt.subplots(figsize=(6.2, 3.0), dpi=300)
     ax.axhline(60, color=ROT, lw=1.5, ls="--")
-    ax.text(24, 61.5, "Schwelle 60 % (vorab festgelegt)", ha="right", color=ROT, fontsize=11)
+    ax.text(24, 61.2, "Schwelle 60 % (vorab festgelegt)", ha="right", va="bottom", color=ROT, fontsize=9.5)
     ax.plot(v, r1, color=BLAU, lw=2.2, marker="o", ms=4, label="R1: spätestes Vertragsende − Vorlauf")
     ax.plot(v, r0, color=GRAU, lw=1.8, marker="o", ms=3, label="R0: Ende der Grundlaufzeit − Vorlauf")
     ax.scatter([6], [r1[6]], s=90, color=BLAU, zorder=5)
-    ax.annotate(f"6 Monate (vorab): {r1[6]:.1f} %".replace(".", ","), (6, r1[6]), xytext=(9, r1[6] + 9), color=TEXT, fontsize=11,
+    ax.annotate(f"6 Monate (vorab): {r1[6]:.1f} %".replace(".", ","), (6, r1[6]), xytext=(9, r1[6] + 9), color=TEXT, fontsize=9.5,
                 arrowprops={"arrowstyle": "-", "color": GRAU})
     ax.set_xlabel("Vorlauf in Monaten (Trefferfenster ±3 Monate)")
     ax.set_ylabel("Treffer in %")
     ax.set_ylim(0, 70)
     ax.set_xlim(-0.5, 24.5)
-    ax.legend(loc="upper right", bbox_to_anchor=(1, 0.88), frameon=False, fontsize=10)
+    ax.legend(loc="upper right", bbox_to_anchor=(1, 0.88), frameon=False, fontsize=9)
     ax.set_title("Kein Vorlauf erreicht die Schwelle (nachträglich auf denselben 52 Paaren)", loc="left",
-                 fontsize=12, color=TEXT)
+                 fontsize=10.5, color=TEXT)
     fig.tight_layout()
     fig.savefig(AUS / "diagramm_vorlauf.png")
     plt.close(fig)
