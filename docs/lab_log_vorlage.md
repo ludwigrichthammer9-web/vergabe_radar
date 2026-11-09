@@ -53,7 +53,7 @@ _Kurzfassung für den Dozenten. Quellen: `docs/business.md` §6 bis §8, `report
 **Ergebnis der Business-Case-Prüfung (Fakten, 2026-11-06 bis 11-09).**
 - _Auswahlbogen:_ Acht Kandidaten (K-A bis K-H) wurden nach sieben Kriterien mit je 0 bis 2 Punkten bewertet (höchstens 14; Schwelle 8, vorab). Die höchste Summe war 7 (K-A, Amtsinhaber-Quote), also unter 8: **kein tragfähiger Business Case.** Die Kriterien wurden festgelegt, nachdem die Recherchen vorlagen (Bestätigungsgefahr).
 - _Test K-A abgebrochen:_ Nach der vorab festgelegten Regel (Abbruch unter 30 verwertbaren Paaren) hatten nur 23 von 52 Paaren einen Zuschlag des Nachfolgers.
-- _Nachtrag K-J_ (Push in Teams, Outlook, Planner per Power Automate; Evaluation 2026-11-08/09; Quellen, gelesen 2026-11-06: learn.microsoft.com Power-Automate-Lizenzen, ted.europa.eu „About TED“ und „My dashboard“, vergabeweiser.de, ausschreibungsradar.com/preise; `docs/business_case_auswahl.md`): Den Ablauf gibt es schon kostenlos (TED-Suchprofile mit E-Mail-Alarm und RSS, Vergabeweiser-Alerts, Weiterleitung per Standard-Flow); die HTTP-Aktion in Power Automate ist Premium (13 € je Nutzer und Monat). Das Problem „Suchaufwand“ ist in den drei Gesprächen nicht belegt; im Datensatz ergeben sich etwa 13 bis 19 Treffer pro Jahr und Profil (Profile erfunden). Bewertung streng 5, wohlwollend 7 von 14, K7 = 0: **Ergebnis unverändert.**
+- _Nachtrag K-J_ (Push in Teams, Outlook, Planner per Power Automate; Evaluation 2026-11-08/09; Quellen, gelesen 2026-11-06, in Abschnitt 11 und `docs/quellen.md`; Details `docs/business_case_auswahl.md`): Den Ablauf gibt es schon kostenlos (TED-Suchprofile mit E-Mail-Alarm und RSS, Vergabeweiser-Alerts, Weiterleitung per Standard-Flow); die HTTP-Aktion in Power Automate ist Premium (13 € je Nutzer und Monat; laut Microsoft-Seite zu Flows mit Dienstprinzipal, indirekte Aussage). Das Problem „Suchaufwand“ ist in den drei Gesprächen nicht belegt; im Datensatz ergeben sich etwa 13 bis 19 Treffer pro Jahr und Profil (Profile erfunden). Punkte K1 bis K7 (Evaluator): 0 (wohlwollend 1), 0 (wohlwollend 1), 1, 1, 2 (Schätzung), 1, 0; Summe streng 5, wohlwollend 7 von 14, K7 = 0: **Ergebnis unverändert.** Billiger Test (nicht durchgeführt), Schwelle vorab am 2026-11-09: mindestens 2 von 3 Betrieben nutzen Teams oder Planner aktiv, nennen mindestens 1 Stunde pro Woche für Sichten und Übertragen und übertragen heute von Hand; sonst wird K-J verworfen.
 - _Offen:_ Der billige Test (eine Stunde Alarm-Weiterleitung bauen, drei Anrufe mit vorab festgelegter Schwelle) ist vorbereitet, **nicht durchgeführt**; Hypothesen H1/H2 (Annahmen A21, A22) ungeprüft; Wizard-of-Oz-Blatt (`docs/wizard_of_oz_blatt.md`) nicht durchgeführt.
 
 **Wie gehen Betriebe heute vor (Fakten).**
@@ -214,7 +214,7 @@ _Für Laien: Wir haben geprüft, was es am Markt schon gibt und ob sich mit der 
 
 ## 6. Ergebnisse zum Anfassen: Vertragsliste, Webseite, Demo und Video
 
-_Alle Dateien liegen im Repository. Sie veranschaulichen die Datenübergabe, sie sind **kein Business Case** (K7 = 0) und belegen keine Nachfrage, keine KI-Genauigkeit und keinen Vorteil gegenüber den bestehenden Diensten. Screenshots (Hell-Modus) mit Edge/Playwright aus den HTML-Dateien erzeugt (`src/report/lab_log_bilder.py`)._
+_Alle Dateien liegen im Repository. Sie veranschaulichen die Datenübergabe, sind **kein Business Case** (K7 = 0) und belegen weder Nachfrage noch KI-Genauigkeit noch einen Vorteil gegenüber den bestehenden Diensten. Screenshots: Abschnitt 11._
 
 | Ergebnis | Datei | Was es zeigt (Fakten) | Grenzen |
 |---|---|---|---|
@@ -285,15 +285,21 @@ _Stand 2026-11-09, Quelle `docs/beitraege.md`. Im Git steht nur ein Autor (alle 
 | Folien und Vortrag | Durchsicht, Freigaben | Foliengerüst und Umbau (`src/report/vortrag.py`) | Präsentation/Umsetzung (laut Nutzer, 2026-11-03; heutiger Stand: **offen**) |
 | Dokumentation, Lab-Log | Durchsicht, Freigaben | Texte in `docs/`, `reports/` | offen |
 
-**Offen bis zur Abgabe:** Manuel trägt seine Beiträge und Stunden selbst ein (`docs/beitraege.md`, Handeinträge im Zeitprotokoll). Bis dahin gelten für ihn nur die oben genannten Angaben; weitere werden nicht angenommen.
+**Verteilung laut Nutzer (2026-11-09):** ca. 50:50, gemeinsame Telefonate; Details Manuel offen. **Offen bis zur Abgabe:** Manuel trägt seine Beiträge und Stunden selbst ein (`docs/beitraege.md`, Handeinträge im Zeitprotokoll). Bis dahin gelten für ihn nur die oben genannten Angaben; weitere werden nicht angenommen.
 
 ## 10. Zeitaufwand
 
-Untergrenze aus der Git-Historie, insgesamt **43,5 Stunden** (Stand 2026-11-09, erzeugt mit `src/zeitprotokoll.py`; Sitzung = Commits mit höchstens 90 Minuten Abstand, plus 30 Minuten Vorlauf; Iteration 10 enthält 10b und die Pakete A, C, F; Iteration 11 sind die Nachträge nach dem Tag `iteration-10`: Paket D, Business-Case-Auswahl, Demo, Live-Demo, Video, Folienumbau, Lab-Log). Enthalten ist die Rechenzeit von Claude. Nicht enthalten: Lesen, Prüfen von Hand, Recherche (z. B. K-J am 2026-11-08/09, ohne eigenen Commit), Vortrag.
+Untergrenze aus der Git-Historie, insgesamt **43,5 Stunden** (Stand 2026-11-09, `src/zeitprotokoll.py`; Sitzung = Commits mit höchstens 90 Minuten Abstand, plus 30 Minuten Vorlauf; Iteration 11 = Nachträge nach dem Tag `iteration-10`: Paket D, Business-Case-Auswahl, Demo, Live-Demo, Video, Folienumbau, Lab-Log). Enthalten ist die Rechenzeit von Claude. Nicht enthalten: Lesen, Handprüfung, Recherche (z. B. K-J, ohne Commit), Vortrag.
+
+<div class="klein2" markdown="1">
 
 {{ZEIT}}
 
-**Arbeitsschritte mit Zeitaufwand.** Näherung: Sitzungen anhand der Commit-Nachrichten zugeordnet; „Handarbeit“ nach Angaben des Nutzers. Summe der Git-Spalte = rund 36 Stunden (Iteration 1 bis 10); mit 7,4 Stunden der Nachträge (Iteration 11) die 43,5 Stunden oben (rundungsbedingt).
+</div>
+
+**Arbeitsschritte mit Zeitaufwand.** Sitzungen anhand der Commit-Nachrichten zugeordnet (Näherung); „Handarbeit“ nach Angaben des Nutzers. Gespräche (105 Minuten) und Manuels Beiträge: siehe Schätzung unten. Git-Spalte rund 36 Stunden (Iteration 1 bis 10) plus 7,4 Stunden Nachträge = 43,5 Stunden (rundungsbedingt).
+
+<div class="klein2" markdown="1">
 
 | Arbeitsschritt | Zugeordnete Git-Sitzungen | Git (Std., ca.) | Handarbeit außerhalb Git |
 |---|---|---|---|
@@ -302,18 +308,52 @@ Untergrenze aus der Git-Historie, insgesamt **43,5 Stunden** (Stand 2026-11-09, 
 | Handprüfungen (Vorbereiten und Auswerten: Blindprüfungen, Handsuche, Zweitprüfung, Prüfung von 60 und 95 Losen) | Iteration 3 bis 7 (Anteile) | 13,7 | Ausfüllen der Prüfvorlagen durch den Nutzer: **offen** |
 | KI-Lesung (Leser, Vergleichswert, Auswertung) | Iteration 8, 9 (Anteil), 10b | 3,5 | Kommilitone: 15 Lose in Iteration 9, Stunden **offen** |
 | Business Understanding und Recherche (Wettbewerber, Wettbewerbsbild, Nebentest) | Iteration 4 (Anteil), 10 (Anteil) | 2,1 | – |
-| Gespräche mit Betrieben und Vergabestelle (W5) | – | – | **105 Minuten** (1,75 Stunden: Vorbereitung, neun Anrufe, Abtippen; Angabe des Nutzers) |
 | Lab-Log, Folien, Dokumentation | Iteration 4, 5, 10 (Anteile) | 2,8 | Lesen der Berichte, Vortrag: nicht erfasst |
 | Make or Buy, Business-Case-Auswahl, Demo, Live-Demo, Video, Folienumbau, Lab-Log-Nachträge | Iteration 11 (Nachträge nach `iteration-10`) | 7,4 | Wünsche, Gegencheck, Hörprobe des Videos: nicht erfasst |
-| Beiträge von Manuel Strobel (Zweitprüfung P14 bis P71, Folien, 15 Lose; Video-Animation durch einen Kollegen) | – | – | Stunden **offen: von Manuel nachzutragen** |
+
+</div>
+
+**Schätzung des Gesamtaufwands (SCHÄTZUNG, nicht gemessen; Herleitung `docs/zeitprotokoll.md`).** Nicht mitgestoppt; die Spannen sind Schätzungen von Claude mit angenommenen Minuten je Prüfeinheit, gemessen ist nur die Git-Zahl.
+
+<div class="klein2" markdown="1">
+
+| Block | Schätzspanne (Std.) | Grundlage |
+|---|---|---|
+| Git-Sitzungen (Untergrenze 43,5 h; enthält Rechenzeit von Claude) | 30 bis 43,5 | Annahme: 70 bis 100 % davon mit Mensch beteiligt |
+| Blindprüfungen Iteration 3 und 4 (40 Paare, Nutzer) | 3 bis 6 | 5 bis 9 Min. je Paar angenommen |
+| Zweitprüfung Iteration 5: P1 bis P13 (Nutzer), P14 bis P71 (Manuel, laut Nutzer) | 5 bis 10 | 71 Paare, 4 bis 8 Min. angenommen |
+| Prüfung der Stichproben Iteration 6 und 7 (Nutzer, rund 60 Lose) | 2 bis 4 | 2 bis 4 Min. je Los angenommen |
+| 15 Lose lesen (Manuel, Iteration 9) | 1 bis 2 | 4 bis 8 Min. je Los angenommen |
+| Gespräche W5 (Nutzer) | 1,75 | Angabe des Nutzers: 105 Min., nicht gestoppt |
+| Lesen der Berichte und Entscheidungen (beide) | 4 bis 8 | rund 10 Iterationen, 25 bis 50 Min. je Iteration angenommen |
+| Telefonate und Abstimmung außerhalb der Git-Sitzungen | 2 bis 5 | laut Nutzer „immer telefoniert“; ohne Doppelzählung angesetzt |
+| Video (Abstimmung, Hörprobe; ohne Animation des Kollegen), Vortrag und Folien (Durchsicht; Umsetzung Manuel laut Nutzer) | 3 bis 8 | Hörprobe, Probevortrag und Vortrag offen, nicht eingerechnet |
+| **Summe** | **rund 52 bis 88** | Summe der Spannen (51,75 bis 88,25) |
+
+</div>
+
+Gesamt rund **52 bis 88 Stunden**; bei ungefähr 50:50 (Nutzer: gemeinsame Telefonate, alles zusammen ausgearbeitet) **rund 26 bis 44 Stunden je Person**; Richtwert des Dozenten ca. 30 Stunden je Person. **Verteilung 50:50 und Gesamtstunden sind Angaben und Schätzungen von Nutzer und Claude, bitte von beiden bestätigen.** Manuels dokumentierte Einzelarbeiten ergeben nur etwa 7 bis 15 Stunden, der Rest läge in gemeinsamen Besprechungen; Manuels Angaben: offen.
 
 
 ## 11. Reproduzierbarkeit und Quellen
 
 - **Datensatzquelle.** TED (Tenders Electronic Daily, Amt für Veröffentlichungen der EU), Search API v3 (`https://api.ted.europa.eu/v3/notices/search`, anonym), eForms-Bekanntmachungen und ältere Formulare ab Oktober 2016, Deutschland, Haupt-CPV 909; Vergleichsdaten: Vergabeweiser-API (CC BY 4.0), Bekanntmachungsservice (CC0); Telefongespräche ohne Namen. Quellenliste und Lizenzen: `docs/quellen.md`.
-- **Code und Daten.** Alle Schritte laufen als Skripte in `src/` (Abhängigkeiten in `requirements.txt`; Aufrufe in `docs/reproduzierbarkeit.md`); Make-or-Buy und Export: `src/report/make_or_buy.py`, `export_vertragsliste.py`, `docs/export_schema.md`; Demo und Live-Demo: `src/demo/` (offline aus Auszügen im Repo, `docs/demo_push.md`); Video: `src/report/video_vertonung.py`, `video_export.py` (`.venv-video`, `requirements-video.txt`, `docs/video/README.md`); Bilder dieses Logs: `src/report/lab_log_bilder.py` (`.venv-video`). Rohdaten unverändert in `data/raw` (nicht im Git, Abruf per `src/ted_download.py`); Datenzugang für die Abgabe: Quellcode und Abrufanleitung im Repository https://github.com/ludwigrichthammer9-web/vergabe_radar (Anleitung `docs/reproduzierbarkeit.md`); die Rohdaten werden mit `src/ted_download.py` neu abgerufen (öffentliche Quelle).
+- **Code und Daten.** Alle Schritte laufen als Skripte in `src/` (Abhängigkeiten in `requirements.txt`; Aufrufe in `docs/reproduzierbarkeit.md`); Make-or-Buy und Export: `src/report/make_or_buy.py`, `export_vertragsliste.py`; Demos: `src/demo/` (offline aus Auszügen im Repo); Video: `src/report/video_vertonung.py`, `video_export.py` (`.venv-video`, `docs/video/README.md`); Bilder dieses Logs: `src/report/lab_log_bilder.py`. Rohdaten unverändert in `data/raw` (nicht im Git); Abruf per `src/ted_download.py` (öffentliche Quelle); Repository: https://github.com/ludwigrichthammer9-web/vergabe_radar.
 - **Vorab festgelegt.** Seeds, Kriterien und Skripte wurden vor dem Ziehen oder Abruf committet; Hashes und Commits im Anhang A. Ausnahmen: Abschnitt 5.
-- **Quellen.** `docs/quellen.md` (TED Search API v3, Lizenz laut TED-Rechtsseite frei wiederverwendbar, vor Abgabe zu bestätigen; Vergabeweiser CC BY 4.0; AusschreibungsRadar, einzelne Seiten, `robots.txt` beachtet; Bekanntmachungsservice CC0; Preise in `docs/business.md` §8; Annahmen: `docs/annahmen.md`).
+- **Quellen.** `docs/quellen.md` (TED Search API v3, Lizenz laut TED-Rechtsseite frei wiederverwendbar, vor Abgabe zu bestätigen; Vergabeweiser CC BY 4.0; AusschreibungsRadar `robots.txt` beachtet; Bekanntmachungsservice CC0; Preise `docs/business.md` §8; Annahmen `docs/annahmen.md`).
+- **Quellen K-J** (Lesedatum 2026-11-06; „laut Seite“ nach der Recherche, nicht erneut abgerufen; Anbieterangaben):
+<div class="quellen" markdown="1">
+
+  - Power-Automate-Lizenzen, Seite ms.date 2026-10-17: M365-Lizenzen erlauben Standard-Konnektoren, Premium nicht enthalten. https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/deep-dive-on-specific-license
+  - HTTP-Aktion Premium, ms.date 2026-08-14: eine M365-Lizenz („seeded license“) deckt Premium-Funktionen wie HTTP-Aktionen nicht ab (indirekte Aussage, Artikel über Flows mit Dienstprinzipal). https://learn.microsoft.com/en-us/power-automate/assign-user-license-service-principal-flow
+  - Besitzer geplanter Flows braucht Premium, Stand 2026-09-22: https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs . Preis Premium 13,00 € je Nutzer und Monat (jährlich, zzgl. MwSt.): https://www.microsoft.com/de-de/power-platform/products/power-automate/pricing
+  - Standard-Konnektoren: https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-standard-connectors, https://learn.microsoft.com/en-us/connectors/office365/, https://learn.microsoft.com/en-us/connectors/teams/, https://learn.microsoft.com/en-us/connectors/planner/, https://learn.microsoft.com/en-us/connectors/rss/; Planner: https://learn.microsoft.com/en-us/graph/api/planner-post-tasks?view=graph-rest-1.0, https://learn.microsoft.com/en-us/planner/planner-for-admins
+  - Teams-Webhooks über Workflows ohne Premium: https://support.microsoft.com/en-us/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498
+  - Abschaltung Office-365-Konnektoren in Teams (18. bis 22.05.2026), Stand 2026-04-14: https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/
+  - TED, gespeicherte Suchen und Alarme (bis 25, E-Mail, RSS): https://ted.europa.eu/en/about-ted, https://ted.europa.eu/en/help/my-dashboard, https://ted.europa.eu/en/help/ted-account
+  - service.bund.de, Suche mit RSS und Newsletter: https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html . Vergabeweiser, Alerts: https://vergabeweiser.de/ . AusschreibungsRadar, Preise (Watchlist 9 €, Starter 29 €, Business 79 €, Professional 149 €, netto): https://ausschreibungsradar.com/preise/ . subreport, Preise: https://subreport.de/ausschreibungen/produktuebersicht/
+
+</div>
 
 <div style="page-break-before: always"></div>
 

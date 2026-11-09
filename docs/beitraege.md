@@ -20,4 +20,6 @@ Kommilitone: **Manuel Strobel**. Seine Beiträge sind nicht vollständig bekannt
 | Folien und Vortrag | Durchsicht, Freigaben | Foliengerüst und Umbau (`src/report/vortrag.py`) | Präsentation/Umsetzung (laut Nutzer, 2026-11-03; heutiger Stand: offen) |
 | Dokumentation, Lab-Log | Durchsicht, Freigaben | Texte in `docs/`, `reports/` | offen |
 
-Zeitaufwand: `docs/zeitprotokoll.md` (Git-Sitzungen, Untergrenze) plus Handeinträge; Stunden von Manuel Strobel: offen.
+**Verteilung laut Nutzer (2026-11-09): ca. 50:50, gemeinsame Telefonate; Details Manuel offen.** Das ist eine Angabe des Nutzers, nicht gemessen; bitte von beiden bestätigen.
+
+Zeitaufwand: `docs/zeitprotokoll.md` (Git-Sitzungen, Untergrenze, plus Schätzung des Gesamtaufwands von rund 52 bis 88 Stunden, je Person rund 26 bis 44; **Schätzung, nicht gemessen**); Stunden von Manuel Strobel: offen.

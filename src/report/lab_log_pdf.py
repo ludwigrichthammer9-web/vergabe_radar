@@ -20,7 +20,7 @@ BROWSER = [Path(p) for p in (r"C:\Program Files (x86)\Microsoft\Edge\Application
 PROFIL = Path(tempfile.gettempdir()) / "lab_log_pdf_profil"  # eigenes Profil, damit ein laufender Browser den Aufruf nicht schluckt
 CSS = """
 /* Gestaltung nach Apple Human Interface Guidelines (Klarheit, Zurückhaltung, Tiefe); nur Light-Mode, da Druck. 8-Punkt-Raster. */
-@page { size: A4; margin: 12mm 13mm; }
+@page { size: A4; margin: 11mm 12mm; }
 :root { --text: #1C1C1E; --grau: #8E8E93; --flaeche: #F2F2F7; --linie: #E5E5EA; --blau: #007AFF; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif;
@@ -48,12 +48,15 @@ pre { background: var(--flaeche); border-radius: 12px; padding: 8px 16px; overfl
 pre code { background: none; padding: 0; }
 .bilder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 8px; margin: 8px 0 8px; break-inside: avoid; }
 .bilder figure, .video figure { margin: 0; }
-.bilder img { width: 100%; display: block; border: 1px solid var(--linie); border-radius: 6px; }
-figcaption { font-size: 7pt; line-height: 1.25; color: var(--grau); margin-top: 2px; }
-.video { display: grid; grid-template-columns: 52mm 1fr; gap: 10px; margin: 8px 0 12px; break-inside: avoid; align-items: start; }
+.bilder img { width: 78%; display: block; margin: 0 auto; border: 1px solid var(--linie); border-radius: 6px; }
+figcaption { text-align: center; font-size: 7pt; line-height: 1.2; color: var(--grau); margin-top: 2px; }
+.video { display: grid; grid-template-columns: 44mm 1fr; gap: 10px; margin: 8px 0 12px; break-inside: avoid; align-items: start; }
 .video img { width: 100%; display: block; border: 1px solid var(--linie); border-radius: 6px; }
 .video ul { margin-bottom: 0; }
 .video p { margin: 0 0 4px; }
+.quellen { font-size: 6.5pt; line-height: 1.2; overflow-wrap: anywhere; } .quellen li { margin: 0 0 2px; }
+h2 + p { break-after: avoid; }
+.klein2 table { font-size: 7pt; line-height: 1.2; margin: 4px 0 8px; } .klein2 th { font-size: 7pt; } .klein2 td, .klein2 th { padding: 0 6px; }
 .klein table { font-size: 7pt; line-height: 1.25; } .klein th { font-size: 7pt; } .klein td, .klein th { padding: 2px 6px; } .klein th:nth-child(1) { width: 9%; } .klein th:nth-child(2) { width: 52%; } .klein th:nth-child(3) { width: 17%; }
 """
 

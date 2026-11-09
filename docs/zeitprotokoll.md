@@ -116,3 +116,26 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-09. Methode: Commits mit höchste
 | | Kommilitone (Manuel Strobel) | Präsentation/Umsetzung der Folien (Angabe des Nutzers, 2026-11-03) | offen |
 | 2026-11-08 | Kollege (laut Nutzer, Name nicht dokumentiert) | Erstellung der Video-Animation „Franz und die Glaskugel“ (KI-gestützt) | offen |
 | | | weitere Handarbeit (Zweitprüfungen, Handprüfungen der Iterationen 5 bis 7) | offen |
+
+## Schätzung des Gesamtaufwands (2026-11-09; **SCHÄTZUNG, nicht gemessen**)
+
+_Anlass: Frage des Nutzers, wie lange das Team gearbeitet hat. Es wurde nicht mitgestoppt. Die Zahlen unten sind Schätzungen von Claude auf Grundlage der dokumentierten Handarbeiten, mit angenommenen Minuten je Prüfeinheit (Annahmen, keine Messung). Gemessen ist nur die Git-Untergrenze von 43,5 Stunden._
+
+| Block | Schätzspanne (Std.) | Grundlage |
+|---|---|---|
+| Git-Sitzungen (Untergrenze 43,5 h, enthält Rechenzeit von Claude) | 30 bis 43,5 | Annahme: 70 bis 100 % dieser Zeit war mindestens eine Person aktiv beteiligt (Telefonate, Durchsicht); der Rest ist Rechenzeit ohne Mensch. Gemessen ist nur die Git-Zahl. |
+| Blindprüfungen Iteration 3 und 4 (je 20 Paare, Urteile des Nutzers) | 3 bis 6 | 40 Paare, angenommen 5 bis 9 Minuten je Paar (zwei Bekanntmachungen lesen und beurteilen). |
+| Zweitprüfung Iteration 5, P1 bis P13 (Nutzer) | 1 bis 2 | 13 Paare (2 nicht beurteilt), angenommen 5 bis 9 Minuten je Paar. |
+| Zweitprüfung Iteration 5, P14 bis P71 (Manuel; laut Nutzer) | 4 bis 8 | 58 Paare, angenommen 4 bis 8 Minuten je Paar. Manuels eigene Angabe fehlt. |
+| Prüfung der Stichproben Iteration 6 und 7 (Nutzer, rund 60 Lose) | 2 bis 4 | Nur als „Prüfung der Stichprobe“ dokumentiert; Umfang und Zeit je Los nicht erfasst, angenommen 2 bis 4 Minuten je Los bei rund 60 Losen. |
+| 15 Lose im TED-Original lesen (Manuel, Iteration 9) | 1 bis 2 | 15 Lose, angenommen 4 bis 8 Minuten je Los. |
+| Gespräche mit Betrieben und Vergabestelle (W5, Nutzer) | 1,75 | Angabe des Nutzers: 105 Minuten (Vorbereitung, neun Anrufe, Abtippen). Einzige Handzahl mit Angabe, aber ebenfalls nicht gestoppt. |
+| Lesen der Berichte und Entscheidungen (beide) | 4 bis 8 | Rund 10 Iterationsberichte, Evaluator-Prüfungen, Business-Case-Auswahl; angenommen 25 bis 50 Minuten je Iteration. |
+| Telefonate und Abstimmung außerhalb der Git-Sitzungen (beide) | 2 bis 5 | Laut Nutzer „immer telefoniert und alles zusammen ausgearbeitet“; nur der Teil ohne Commit-Zeitraum ist hier angesetzt, um Doppelzählung zu vermeiden. |
+| Video: Abstimmung, Hörprobe, Durchsicht (ohne Animation des Kollegen) | 1 bis 3 | Hörprobe ist noch offen; Animation durch einen Kollegen ist nicht eingerechnet. |
+| Vortrag und Folien: Durchsicht, Umsetzung (Manuel laut Nutzer) | 2 bis 5 | Probevortrag und der Vortrag selbst sind noch offen und nicht eingerechnet. |
+| **Summe** | **51,75 bis 88,25** | Rundung: **rund 52 bis 88 Stunden** gemeinsam |
+
+**Gesamtspanne:** rund **52 bis 88 Stunden** für das Team (Schätzung). **Je Person** bei ungefähr 50:50 (Angabe des Nutzers: „wir haben knapp 50:50 gemacht, auch wenn ich viel in Claude gemacht habe, haben wir immer telefoniert und alles zusammen ausgearbeitet“): **rund 26 bis 44 Stunden je Person**. Richtwert des Dozenten: ca. 30 Stunden je Person, liegt in der Spanne.
+
+**Was diese Schätzung nicht ist.** Die Verteilung 50:50 und die Gesamtstunden sind Angaben und Schätzungen von Nutzer und Claude; **bitte von beiden (Ludwig und Manuel) bestätigen oder korrigieren.** Manuels dokumentierte Einzelarbeiten (Zweitprüfung P14 bis P71, 15 Lose, Folien) ergeben für sich nur etwa 7 bis 15 Stunden; der Rest seines Anteils läge in den gemeinsamen Telefonaten und Besprechungen, die nicht einzeln dokumentiert sind. Angaben von Manuel: offen. Nicht eingerechnet: Animation des Kollegen, Probevortrag, Vortrag. Die Spanne ist breit, weil die Annahmen (Minuten je Paar oder Los, Anteil der Git-Zeit mit Mensch) sich um den Faktor zwei ändern lassen.

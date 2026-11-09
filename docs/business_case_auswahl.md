@@ -53,16 +53,47 @@ _Die Kriterien wurden festgelegt, nachdem die fünf Recherche-Berichte vorlagen 
 
 ## Nachtrag 2026-11-09: Kandidat K-J (Push in Teams, Outlook, Planner per Power Automate)
 
-**Kandidat (Idee des Nutzers).** Treffer zu einem Betriebsprofil landen als Nachricht in Teams, Outlook oder Planner, ausgelöst über einen Power-Automate-Ablauf. Evaluation und Recherche vom 2026-11-08/09; die Quellen wurden am 2026-11-06 gelesen. Die einzelnen Punkte je Kriterium K1 bis K7 sind in dieser Quelle nicht festgehalten, nur die Summen.
+**Kandidat (Idee des Nutzers).** Treffer zu einem Betriebsprofil landen als Nachricht in Teams, Outlook oder Planner, ausgelöst über einen Power-Automate-Ablauf. Evaluation und Recherche vom 2026-11-08/09; die Quellen wurden am 2026-11-06 gelesen (Liste am Ende dieses Nachtrags). Die Punkte je Kriterium stehen unten in der Tabelle.
 
 **Fakten (Stand der Recherche, Eigenangaben der Anbieter, nicht von uns nachgeprüft):**
 - Den Ablauf „Alarm auf neue Ausschreibung, Weiterleitung in den Arbeitsplatz“ gibt es bereits kostenlos: TED-Suchprofile mit E-Mail-Alarm und RSS (ted.europa.eu, Seiten „About TED“ und „My dashboard“), gespeicherte Suchen mit E-Mail-Benachrichtigung bei Vergabeweiser (vergabeweiser.de), AusschreibungsRadar ab 29 € mit Suchprofilen und Alerts (ausschreibungsradar.com/preise). Die Weiterleitung einer E-Mail nach Teams oder Planner läuft mit einem Standard-Flow.
-- In Power Automate ist die HTTP-Aktion eine Premium-Funktion (13 € je Nutzer und Monat; learn.microsoft.com, Seite zu den Power-Automate-Lizenzen).
+- In Power Automate ist die HTTP-Aktion eine Premium-Funktion (13 € je Nutzer und Monat; Belege in der Quellenliste unten, Abschnitt „Microsoft“).
 - Das Problem „Suchaufwand“ wurde in den drei Gesprächen (n = 3) nicht belegt; der Kanal Teams wurde nie erfragt.
 - Im Datensatz der Live-Demo ergeben sich rund 13 bis 19 Treffer pro Jahr und erfundenem Profil (Stufe nach dem Radius, vor dem Fristfilter; `docs/demo_push.md` Abschnitt 11, drei Profile mit 13, 13 und 19). Die Profile sind erfunden, die Zahl ist keine Marktaussage.
 
-**Bewertung nach dem Auswahlbogen:** streng 5, wohlwollend 7 von 14 Punkten; K7 = 0. **Das Ergebnis ändert sich nicht:** K-J ist als Kern ausgeschlossen, als Ausblick zulässig; es bleibt bei „kein tragfähiger Business Case“.
+**Bewertung nach dem Auswahlbogen (Evaluator; Punkte laut Auftrag des Nutzers vom 2026-11-09 übernommen):** streng 5, wohlwollend 7 von 14 Punkten; K7 = 0. **Das Ergebnis ändert sich nicht:** K-J ist als Kern ausgeschlossen, als Ausblick zulässig; es bleibt bei „kein tragfähiger Business Case“.
 
-**Billiger Test (vorbereitet, nicht durchgeführt):** (1) eine Stunde: TED-Suchprofil mit E-Mail-Alarm anlegen und per Standard-Flow nach Teams weiterleiten; (2) drei Anrufe mit einer vorab festgelegten Schwelle, ob der Betrieb diesen Weg schon nutzt oder braucht. Der Wert der Schwelle steht in den vorliegenden Dateien nicht: **offen**.
+| Kriterium | Punkte (streng) | wohlwollend | Beleg in einem Satz (aus diesem Nachtrag und den vorhandenen Dokumenten; Formulierung von Claude, Punkte vom Evaluator) |
+|---|---|---|---|
+| K1 Problem belegt | 0 | 1 | Der „Suchaufwand“ ist in den drei Gesprächen (n = 3) nicht belegt und der Kanal Teams wurde nie erfragt, also nur Annahme; wohlwollend 1 (Deutung), wenn kostenlose Alarmfunktionen mehrerer Anbieter als Hinweis auf Bedarf zählen. |
+| K2 Unterschied zur Konkurrenz | 0 | 1 | Alarm plus Weiterleitung per Standard-Flow gibt es schon kostenlos (TED-Suchprofile, Vergabeweiser-Alerts); wohlwollend 1, weil eine direkte Teams-Anbindung bei den Anbietern nicht gefunden wurde (kein Beleg für Nichtexistenz). |
+| K3 Zahlungsspur | 1 | – | Preisanker aus Quellen (AusschreibungsRadar 9 bis 149 € netto je Monat, Power Automate Premium 13 € je Nutzer und Monat), aber keine Aussage aus einem Gespräch. |
+| K4 Daten tragen | 1 | – | Die Matching-Felder der Bekanntmachung tragen nur zum Teil (Zertifikate und Kapazität stehen in den Vergabeunterlagen; Begründung wie bei K-I). |
+| K5 Zeigbar in höchstens 3 Arbeitstagen | 2 (Schätzung) | – | Die Demo (`docs/demo_push.md`) liegt vor und die Weiterleitung eines Alarms ist als Test von etwa einer Stunde angesetzt; der Wert ist geschätzt, nicht gemessen. |
+| K6 Billiger Test mit Abbruchkriterium | 1 | – | Test beschrieben, aber zum Zeitpunkt der Bewertung ohne Schwelle (Schwelle erst am 2026-11-09 festgehalten, siehe unten; K6 wäre damit künftig 2, nicht in die Summe eingerechnet). |
+| K7 Passung zum Bogen | 0 | – | Zusätzlicher Produktbau am Projektende wiederholt „erst bauen, dann prüfen“ und der Kandidat kam nach der Bewertung hinzu (Begründung wie bei K-I). |
+| **Summe** | **5** | **7** | Rechnung: 0+0+1+1+2+1+0 = 5; mit K1 = 1 und K2 = 1: 7. |
 
-**Grenzen / offen:** Die genauen Unterseiten der Quellen (Microsoft, TED) sind von der Recherche nicht festgehalten und vor Abgabe nachzutragen; Preise und Lizenzbedingungen ändern sich; die Punktzahl ist eine Einschätzung, keine Messung.
+**Billiger Test (vorbereitet, nicht durchgeführt):** (1) eine Stunde: TED-Suchprofil mit E-Mail-Alarm anlegen und per Standard-Flow nach Teams weiterleiten; (2) drei Anrufe bei Betrieben. **Schwelle vorab festgelegt am 2026-11-09, vor jedem Anruf:** „Mindestens 2 von 3 Betrieben nutzen Teams oder Planner aktiv, nennen mindestens 1 Stunde pro Woche für Sichten und Übertragen und übertragen heute von Hand; sonst wird K-J verworfen.“ Der Test ist nicht durchgeführt; die Schwelle ist eine Setzung ohne Herleitung aus Daten.
+
+**Grenzen / offen:** Preise und Lizenzbedingungen ändern sich (Lesedatum 2026-11-06); die HTTP-Aussage beruht auf einer indirekten Textstelle; die Punktzahl ist eine Einschätzung, keine Messung; der Test ist nicht durchgeführt.
+
+**Quellen K-J** (laut Recherche am 2026-11-06 gelesen; die Aussagen stehen „laut Seite“ so in der Recherche, wir haben sie für diesen Nachtrag nicht erneut abgerufen; Eigenangaben der Anbieter):
+
+*Microsoft*
+- Lizenzen, „Deep dive licenses“: https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/deep-dive-on-specific-license (Seite ms.date 2026-10-17). Laut Seite erlauben Microsoft-365-Lizenzen Standard-Konnektoren, Premium ist nicht enthalten.
+- HTTP-Aktion: https://learn.microsoft.com/en-us/power-automate/assign-user-license-service-principal-flow (ms.date 2026-08-14). Laut Seite deckt eine Microsoft-365-Lizenz („seeded license“) Premium-Funktionen wie HTTP-Aktionen nicht ab; **indirekte Aussage** in einem Artikel über Flows mit Dienstprinzipal.
+- Besitzer geplanter Flows: https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs (Stand 2026-09-22). Laut Seite braucht der Besitzer bei geplanten Flows Premium.
+- Preis Power Automate Premium: https://www.microsoft.com/de-de/power-platform/products/power-automate/pricing. Laut Seite 13,00 € je Nutzer und Monat, jährliche Abrechnung, zuzüglich MwSt.
+- Standard-Konnektoren (Outlook, Teams, Planner, RSS): https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-standard-connectors, https://learn.microsoft.com/en-us/connectors/office365/, https://learn.microsoft.com/en-us/connectors/teams/, https://learn.microsoft.com/en-us/connectors/planner/, https://learn.microsoft.com/en-us/connectors/rss/
+- Teams-Webhooks über Workflows ohne Premium: https://support.microsoft.com/en-us/office/create-incoming-webhooks-with-workflows-for-microsoft-teams-8ae491c7-0394-4861-ba59-055e33f75498
+- Abschaltung der Office-365-Konnektoren in Teams (18. bis 22.05.2026): https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/ (Stand 2026-04-14)
+- Planner: https://learn.microsoft.com/en-us/graph/api/planner-post-tasks?view=graph-rest-1.0, https://learn.microsoft.com/en-us/planner/planner-for-admins
+
+*Vergabe- und Ausschreibungsdienste*
+- TED, gespeicherte Suchen und Alarme (bis 25, E-Mail, RSS): https://ted.europa.eu/en/about-ted, https://ted.europa.eu/en/help/my-dashboard, https://ted.europa.eu/en/help/ted-account
+- service.bund.de, Suche mit RSS und Newsletter: https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html
+- Vergabeweiser, Alerts: https://vergabeweiser.de/ (Startseite nennt gespeicherte Suchen und E-Mail-Benachrichtigungen)
+- AusschreibungsRadar, Preise: https://ausschreibungsradar.com/preise/ (Watchlist 9 €, Starter 29 €, Business 79 €, Professional 149 €, netto)
+- subreport, Preise: https://subreport.de/ausschreibungen/produktuebersicht/
+
