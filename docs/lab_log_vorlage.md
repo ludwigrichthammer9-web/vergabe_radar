@@ -332,7 +332,7 @@ Untergrenze aus der Git-Historie, insgesamt **43,5 Stunden** (Stand 2026-11-09, 
 
 </div>
 
-Gesamt rund **52 bis 88 Stunden**; bei ungefähr 50:50 (Nutzer: gemeinsame Telefonate, alles zusammen ausgearbeitet) **rund 26 bis 44 Stunden je Person**; Richtwert des Dozenten ca. 30 Stunden je Person. **Verteilung 50:50 und Gesamtstunden sind Angaben und Schätzungen von Nutzer und Claude, bitte von beiden bestätigen.** Manuels dokumentierte Einzelarbeiten ergeben nur etwa 7 bis 15 Stunden, der Rest läge in gemeinsamen Besprechungen; Manuels Angaben: offen.
+Gesamt rund **52 bis 88 Stunden**; bei ungefähr 50:50 (Nutzer: gemeinsame Telefonate, alles zusammen ausgearbeitet) **rund 26 bis 44 Stunden je Person**; Richtwert des Dozenten ca. 30 Stunden je Person. **Verteilung 50:50 und Gesamtstunden sind Angaben und Schätzungen von Nutzer und Claude, bitte von beiden bestätigen.** Manuels dokumentierte Einzelarbeiten ergeben nur etwa 7 bis 15 Stunden, der Rest läge in gemeinsamen Besprechungen; Nach Angabe von Ludwig (2026-11-09) haben beide jeweils rund 30 Stunden gearbeitet (zusammen rund 60 Stunden, innerhalb der Spanne); Bestätigung durch Manuel und Aufschlüsselung nach Arbeitsschritten offen.
 
 
 ## 11. Reproduzierbarkeit und Quellen

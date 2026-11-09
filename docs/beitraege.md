@@ -22,4 +22,4 @@ Kommilitone: **Manuel Strobel**. Seine Beiträge sind nicht vollständig bekannt
 
 **Verteilung laut Nutzer (2026-11-09): ca. 50:50, gemeinsame Telefonate; Details Manuel offen.** Das ist eine Angabe des Nutzers, nicht gemessen; bitte von beiden bestätigen.
 
-Zeitaufwand: `docs/zeitprotokoll.md` (Git-Sitzungen, Untergrenze, plus Schätzung des Gesamtaufwands von rund 52 bis 88 Stunden, je Person rund 26 bis 44; **Schätzung, nicht gemessen**); Stunden von Manuel Strobel: offen.
+Zeitaufwand: `docs/zeitprotokoll.md` (Git-Sitzungen, Untergrenze, plus Schätzung des Gesamtaufwands von rund 52 bis 88 Stunden, je Person rund 26 bis 44; **Schätzung, nicht gemessen**); Stunden: laut Nutzer (2026-11-09) rund 30 Stunden je Person (Ludwig und Manuel); von Manuel zu bestätigen, Aufschlüsselung offen.
