@@ -6,7 +6,7 @@ Fachbegriffe (Wilson, Seed, Hash, CPV, NUTS, Diskordanz) stehen nur in den Notiz
 ZEIG-MIR-WO und neu FÜR LAIEN IN EINEM SATZ (Summe der Zeiten der sichtbaren Folien 15:00).
 Folie 2 ist das Video „Franz und die Glaskugel“ (ersetzt Frage/Kriterium/Daten, Irrwege, Liste und Genauigkeit), Business Understanding auf Folien 3 bis 6, Demo auf Folie 7,
 KI-Irrwege und Live-Nachweis auf Folie 8, Empfehlung 9, Fazit 10; Folien 11 bis 13 sind ausgeblendeter Anhang (Fragerunde).
-Option --ohne-anhang lässt den Anhang weg. Das Video wird eingebettet, sobald docs/video/franz_und_die_glaskugel_szenen_0-5.mp4 existiert (Skript erneut ausführen).
+Option --ohne-anhang lässt den Anhang weg. Das Video wird eingebettet, sobald docs/video/franz_und_die_glaskugel_szenen_0-5_v4.mp4 existiert (Rückfall v3, v2, v1) (Skript erneut ausführen).
 Zahlen aus docs/iterationen.md, docs/business.md §8, reports/evaluation_iteration5.md bis 10b, reports/wettbewerbsbild_oberpfalz.md.
 Aufruf:  .venv\\Scripts\\python.exe -I src/report/vortrag.py [--ohne-anhang] [Ausgabepfad]      Ausgabe: docs/vortrag/vortrag_vergabe_radar.pptx
 """
@@ -34,7 +34,7 @@ HEAD, BODY = "Segoe UI Semibold", "Segoe UI"   # Ersatz für San Francisco unter
 TITEL = [None,
     "",
     "Video: Was TED vorhersagt und was nicht",
-    "In unseren Gesprächen blieben für ein Angebot rund 28 Tage",
+    "In einem Gespräch blieben für ein Angebot nur rund 28 Tage",
     "Eine solche Liste gibt es schon, kostenlos bei Vergabeweiser",
     "Unsere Liste weicht in rund 10 % der Lose von Vergabeweiser ab",
     "Selbst bauen lohnt sich nur, wenn man die Daten im eigenen System braucht",

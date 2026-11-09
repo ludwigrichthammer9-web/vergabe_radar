@@ -1,3 +1,5 @@
+# Analyse, Liste, Lab-Log und Folien (Pillow kommt mit python-pptx).
+# Video-Vertonung, Video-Export und Demo-Aufnahme: requirements-video.txt in eigener Umgebung .venv-video (siehe docs/video/README.md).
 requests==2.34.2
 pandas==3.1.0
 tabulate==0.10.0

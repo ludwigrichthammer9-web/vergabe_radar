@@ -26,7 +26,7 @@ Projektablauf und Dokumentation. Es gilt **LN B** (Zweierteam, mit dem Dozenten 
 | 5 | Lab-Log | 15 | chronologisch, alle Phasen je Zyklus, Entscheidungen begründet, reproduzierbar, **Zeitaufwand je Schritt (C)**, **KI-Irrwege und deren Prüfung** |
 | 6 | Aussagekraft | 12 | eine Kernbotschaft, Antwort auf die Geschäftsfrage, Empfehlung **mit Grenzen und Unsicherheit**, Zahlen richtig eingeordnet, Irrwege ehrlich |
 | 7 | Dramaturgie | 13 | Erzählbogen Frage → Irrwege → Erkenntnis, Visualisierung trägt, Publikum aktiviert, frei vortragen, Zeit ± 30 s |
-| 8–10 | Fragenrunde (3 Fragen, je ein anderer CRISP-DM-Abschnitt bei C) | 7/7/6 | Methodenfrage (warum Verfahren/Maß/Aufbereitung, Alternative); **Live-Nachweis im Werkzeug** (Trennung Training/Test, Fehlwerte zeigen, Parameter ändern, Wirkung erklären); Entscheidungs-/Transferfrage (Empfehlung, neuer Standort, doppeltes Volumen) |
+| 8–10 | Fragenrunde (3 Fragen: Methode, Live-Nachweis, Entscheidung/Transfer) | 7/7/6 | Methodenfrage (warum Verfahren/Maß/Aufbereitung, Alternative); **Live-Nachweis im Werkzeug** (Trennung Training/Test, Fehlwerte zeigen, Parameter ändern, Wirkung erklären); Entscheidungs-/Transferfrage (Empfehlung, neuer Standort, doppeltes Volumen) |
 
 ## K.-o. (Deckel 4,0)
 - CRISP-DM-Phasen nicht erkennbar oder nur ein Durchlauf.
