@@ -28,7 +28,9 @@ Aus dem Vertragsende in der Zuschlagsbekanntmachung (TED) den Termin der Neuauss
 Die Kosten von C sind **Annahmen**. „Gegen kostenlose Dienste nie günstiger“ folgt aus der Rechnung, nicht aus einer Messung.
 
 ## 5. Empfehlung (Deutung)
-**A sofort.** B nur, wenn eine konkrete Funktion fehlt; vorher kostenlos testen. **C nicht**, solange niemand Treffer von Hand ins eigene System überträgt.
+**Kostenlosen Alarm nutzen · Abo nur, wenn eine Funktion fehlt – vorher testen · nicht selbst bauen, solange niemand Treffer von Hand ins eigene System überträgt.**
+
+Also: A sofort, B nur nach Test, C nicht. Ein Abo liefert nach unseren Quellen keine Stundenpreise; Preise je Einheit stehen in keinen offenen Daten (`docs/business_case_auswahl.md`).
 
 ## 6. Was die Empfehlung ändern würde
 - Eine Prognose mit anderen Daten trifft den Termin verlässlich.

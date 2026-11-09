@@ -45,14 +45,14 @@ def diagramm_abweichung():
     w = abweichungen()
     assert len(w) == 52, len(w)
     im_fenster = sum(-3 <= x <= 3 for x in w)
-    fig, ax = plt.subplots(figsize=(8, 3.6), dpi=200)
-    grenzen = list(range(-42, 43, 3))
+    fig, ax = plt.subplots(figsize=(9, 3.6), dpi=200)
+    grenzen = list(range(-42, 97, 3))   # alle 52 Paare (Minimum −38,3, Maximum +95,0 Monate)
     ax.axvspan(-3, 3, color=GRUEN, alpha=0.15, lw=0)
     ax.hist([x for x in w if -3 <= x <= 3], bins=grenzen, color=GRUEN, edgecolor="white")
     ax.hist([x for x in w if not -3 <= x <= 3], bins=grenzen, color=GRAU, edgecolor="white")
     ax.set_xlabel("Abweichung der Prognose in Monaten (negativ = Ausschreibung kam früher)")
     ax.set_ylabel("Zahl der Paare")
-    ax.set_xlim(-42, 42)
+    ax.set_xlim(-42, 96)
     ax.text(5, ax.get_ylim()[1] * 0.9, f"grün = Treffer (±3 Monate): {im_fenster} von {len(w)}", ha="left", color=TEXT,
             fontsize=11, fontweight="bold")
     ax.set_title(f"Im Mittel fast richtig (Median {statistics.median(w):+.1f} Monate), im Einzelfall Jahre daneben".replace(".", ","),

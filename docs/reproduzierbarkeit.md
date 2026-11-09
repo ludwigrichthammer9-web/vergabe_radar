@@ -1,6 +1,7 @@
 # Reproduzierbarkeit
 
 _Stand 2026-11-09 (zuerst 2026-11-03). `data/` liegt nicht im Git (CLAUDE.md-Regel; `data/raw` etwa 630 MB). Alles dort lässt sich aus der TED-Quelle neu laden.
+Ausnahme seit 2026-11-09: Analysetabelle, Backtest-Paare und alle Lösungsschlüssel liegen als Kopie in `reports/daten/` (Abschnitt 5).
 Quellen: `docs/quellen.md`._
 
 ## Einrichten
@@ -63,6 +64,7 @@ python src/model/sensitivitaet_backtest.py [--vorlauf 9 --fenster 2]  # reports/
 .venv\Scripts\python -I src/report/lab_log.py                         # docs/lab_log.md aus docs/lab_log_vorlage.md
 python -I src/report/lab_log_pdf.py                                   # docs/lab_log.pdf (Edge oder Chrome, headless)
 .venv-video\Scripts\python.exe -I src\report\lab_log_bilder.py        # Bilder des Lab-Logs (Playwright, Edge)
+.venv\Scripts\python.exe -I src/report/diagramme.py                   # Diagramme Abbildung 1 und 2 des Lab-Logs (matplotlib, aus reports/backtest_iteration5.md)
 ```
 
 ## 4. Demo (Profil-Match, Live-Demo für den Vortrag)
@@ -75,16 +77,40 @@ Beschreibung, Abfragen und Grenzen: `docs/demo_push.md` (Abschnitte 3, 10, 11). 
 .venv\Scripts\python.exe -I src\demo\live_demo_pruefung.py  # Selbsttest in Edge headless: P1/P2 = ergebnis_lauf.json, Treffer gegen Rohdaten
 ```
 
+## 5. Nachrechnen ohne TED-Abruf (Dateien in `reports/daten/`)
+Seit 2026-11-09 liegen im Repo byte-gleiche Kopien von `vertragsliste_909.csv` (Analysetabelle, 9.325 Lose, ohne Auftragnehmer),
+`backtest_paare_iteration5.csv`, `x1_paare_iteration5.txt` und allen Lösungsschlüsseln der abgeschlossenen Blindprüfungen und Stichproben
+(Iteration 3, 4, 5, 6, 7, 9, 10b); zusammen rund 1,8 MB. Tabelle mit Inhalt, Zeilen, SHA-256 und Hash-Prüfung: `reports/daten/README.md`
+(alle 9 dokumentierten Hashes stimmen). Die Skripte lesen aus `data/processed/`; zum Nachrechnen die Dateien dorthin kopieren
+(Git Bash; vorhandene Dateien mit gleichem Namen werden überschrieben, `-n` verhindert das):
+```
+mkdir -p data/processed && cp -n reports/daten/*.csv reports/daten/*.txt data/processed/
+```
+Danach laufen ohne Rohdaten und ohne TED-Abruf (am 2026-11-09 in einer Kopie des Repos geprüft, Ergebnisse in `reports/daten/README.md`):
+```
+.venv\Scripts\python -I src/model/baseline.py                  # Backtest Iteration 5: reports/backtest_iteration5.md (byte-gleich)
+.venv\Scripts\python -I src/report/optionsanalyse.py           # Paket F: reports/optionsanalyse.md (byte-gleich)
+.venv\Scripts\python -I src/model/sensitivitaet_backtest.py    # reports/sensitivitaet_iteration5.md (byte-gleich)
+.venv\Scripts\python -I src/prepare/auswertung_iteration6.py   # Y1 54/60
+.venv\Scripts\python -I src/prepare/auswertung_iteration7.py   # Y1 36/47 (eine beschreibende, gewichtete Zeile weicht ab)
+.venv\Scripts\python -I src/prepare/auswertung_iteration8.py   # Z0 bis Z4 (eine beschreibende, gewichtete Zeile weicht ab)
+.venv\Scripts\python -I src/prepare/auswertung_iteration9.py   # V1 66/70, V2 28/30, V5 110/110
+.venv\Scripts\python -I src/prepare/stichprobe_iteration10b.py # Ziehung mit Seed 20261112, Schlüssel-Hash identisch
+```
+Die Auswertungsskripte prüfen den SHA-256 des Schlüssels vor dem Öffnen und lesen die Urteile aus `reports/`. Nicht ohne Weiteres:
+`src/prepare/stichprobe_iteration9.py` braucht zusätzlich die alte Fassung `vertragsliste_909_iteration8.csv` (nicht veröffentlicht);
+`vergleich_iteration10*.py` und `blindpruefung_iteration3.py` brauchen Rohdaten aus `data/raw`.
+
 ## Was sich nicht neu erzeugen lässt
 - **Handsuche (Ground Truth):** Protokolle des Subagenten `rechercheur` liegen als Reports im Git
   (`reports/sichtbarkeit_iteration3_*`, `…iteration4_*`); eine erneute Suche würde wegen des Modells und der wachsenden API-Bestände
   nicht identisch ausfallen. Maßgeblich sind die committeten Reports und die `*_gt.csv`.
 - **Urteile von Menschen** (Blindprüfungen) stehen als Dateien in `reports/` (Originale der Nutzerurteile, Iteration 5 siehe
   `reports/gt_pruefung_iteration5*.md`).
-- **Lösungsschlüssel** der Blindprüfungen und Stichproben (`data/processed/*schluessel*.csv`) liegen nur lokal und sind über ihren
-  SHA-256 in `docs/iterationen.md` und den Commits belegt (Stand 2026-11-09: keiner im Git). Alle Prüfungen sind abgeschlossen; ob die
-  Schlüssel zur Abgabe in `reports/` gelegt werden, hat das Team noch nicht entschieden (offen). Bis dahin lassen sich die Auswertungen
-  ohne die Schlüssel nicht neu rechnen.
+- **Lösungsschlüssel** der Blindprüfungen und Stichproben (`data/processed/*schluessel*.csv`) sind über ihren SHA-256 in
+  `docs/iterationen.md` und den Commits belegt. _Korrektur 2026-11-09:_ Sie liegen jetzt als byte-gleiche Kopie in `reports/daten/`
+  (alle Prüfungen abgeschlossen; Hashes geprüft, `reports/daten/README.md`); die Auswertungen lassen sich damit neu rechnen (Abschnitt 5).
+  Der frühere Satz „keiner im Git … ohne die Schlüssel nicht neu rechnen“ gilt nicht mehr.
 - **Ausgabe der Subagenten** (`data/raw/rechercheur_*`, `blindpruefung_agent_*`): Arbeitsprotokolle, nicht reproduzierbar.
 
 ## Datenlink für die Abgabe
