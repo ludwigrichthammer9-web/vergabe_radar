@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Daten und Loesungsschluessel byte-genau speichern (SHA-256 muss stimmen), keine Zeilenend-Umwandlung
+reports/daten/*.csv -text
+reports/daten/*.txt -text
