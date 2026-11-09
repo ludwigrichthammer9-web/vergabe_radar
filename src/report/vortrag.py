@@ -63,7 +63,7 @@ TITEL = [None,
     "Ein Betrieb hatte nur 28 Tage für sein Angebot; wir wollten Monate daraus machen",
     "Vertragsenden gibt es schon kostenlos bei Vergabeweiser",
     "Bei 27 von 230 Losen weichen wir von Vergabeweiser ab, meist wegen der Zählweise",
-    "Im Modell lohnt Selbstbauen nicht; offen ist nur, ob Betriebe die Daten im eigenen System brauchen",
+    "Im Modell lohnt Selbstbauen nicht; ob Betriebe die Daten im eigenen System brauchen, ist ungeprüft",
     "So hätte das Produkt aussehen sollen: passende Hinweise direkt an die Firma",
     "So funktioniert es technisch: von der TED-Abfrage zur geprüften Liste",
     "Die KI machte Fehler; gefunden wurden sie durch getrennte Prüfung",
@@ -271,7 +271,7 @@ def poster_erzeugen(pfad):
         f1 = f2 = ImageFont.load_default()
     d.text((100, 300), "Franz und", font=f1, fill=(255, 255, 255))
     d.text((100, 410), "die Glaskugel", font=f1, fill=(255, 255, 255))
-    d.text((100, 560), "Szenen 0 bis 5 · ca. 3 Minuten", font=f2, fill=(174, 174, 178))
+    d.text((100, 560), "Szenen 1 bis 5 · ca. 3 Minuten", font=f2, fill=(174, 174, 178))
     d.polygon([(100, 700), (100, 790), (180, 745)], fill=(0, 122, 255))
     d.text((210, 715), "Abspielen", font=f2, fill=(0, 122, 255))
     pfad.parent.mkdir(parents=True, exist_ok=True)
@@ -345,7 +345,7 @@ for i, (it, was, quote, ziel, danach) in enumerate(versuche):
     box(s, 5.05, y + 0.04, 1.2, 0.56, [[(quote, {"bold": True, "color": RED, "size": 18, "font": HEAD})], [(ziel, {"color": GREY})]], size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Quote")
     pfeil(s, 6.25, y + 0.21, 0.18, 0.22, name=f"Versuch {i + 1} Pfeil")
     box(s, 6.55, y + 0.04, 2.75, 0.56, danach, size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Versuch {i + 1} Danach")
-kurz(s, "Auch die beste Regel traf nur 28,8 % (einfache Faustregel: 17,3 %); also eine Liste statt einer Prognose.")
+kurz(s, "Keiner der vier Versuche erreichte seine Schwelle; die Terminregel traf 28,8 % (einfache Faustregel: 17,3 %), also eine Liste statt einer Prognose.")
 fuss(s, "Schwellen vor jedem Ergebnis festgelegt. Zuordnung: neuer Auftrag → Vorgängervertrag; Termin: 52 geprüfte Paare.")
 
 # Folie 4: Betriebe heute und unsere Idee ----------------------------------------
@@ -434,7 +434,7 @@ s = new_slide("ZEIT 1:15. ZEITLEISTE OBEN zuerst erklären (10 Sekunden): Ein Ve
               "Das späteste Vertragsende (in unseren Dateien „Höchstende“) ist das Ende mit allen Verlängerungen. Unsere Liste nennt das Ende der Grundlaufzeit; Vergabeweiser nennt in einem Teil der Fälle das späteste Ende (Balken „spätestes Ende gemeint“). "
               "KERNAUSSAGE: Wir haben vorab festgelegt und dann geprüft, ob unsere Liste das Ende der Grundlaufzeit häufiger trifft als Vergabeweiser. "
               "Die Abweichung 27 von 230 Losen (11,7 %) steht im Titel. "
-              "Ergebnis: Auf zwei Stichproben weichen beide bei 27 von 230 Losen voneinander ab (11,7 %); nur unsere Liste richtig ist bei 23 von 230 Losen (10,0 %, Wilson etwa 6,8–14,6 %). "
+              "Ergebnis: Auf zwei Stichproben weichen beide bei 27 von 230 Losen voneinander ab (11,7 %); nur unsere Liste richtig ist bei 23 von 230 Losen (10,0 %, Wilson etwa 6,8–14,6 %, roh gepoolt laut reports/evaluation_iteration10b.md). Darin steckt M54: Unsere Pipeline hatte Vergabeweiser einen fremden Eintrag zugeordnet (Vreden statt Lengerich), also unser Fehler, kein Lesefehler von Vergabeweiser; ohne M54 wären es 22 von 230 (eigene Rechnung, Fußnote ¹; Balken „Zuordnung falsch“). "
               "Meist zählen wir anders, nicht besser: Höchstende statt Grundlaufzeit und Ende je Los statt je Verfahren. Ein Qualitätsvorsprung ist nicht belegt. "
               "ITERATION 10 (70 Zufallslose der Iteration 9): Liste 66 von 70, Vergabeweiser 58 von 70 gleich mit dem Vergleichswert der KI-Leser; Differenz +8 (Schwelle ≥ 5), exakter Test p = 0,0078, formal erfüllt. "
               "Die Basisregel „Feld EndDate“ allein trifft 63 von 70. Abweichend waren 12 von 70; Ursachen der 8 Fälle „nur Liste richtig“: Losebene 4, Höchstende statt Grundlaufzeit 2, fehlender Wert 1, 2 Tage 1. "
@@ -469,25 +469,25 @@ box(s, 0.8, 2.64, 1.9, 0.42, "66 von 70", size=26, color=BLUE, font=HEAD, anchor
 box(s, 0.8, 3.06, 1.9, 0.28, "bei uns", size=14, name="Vergleich Liste Text")
 box(s, 2.6, 2.64, 1.9, 0.42, "58 von 70", size=26, color=GREY, font=HEAD, anchor=MSO_ANCHOR.MIDDLE, name="Vergleich VW Zahl")
 box(s, 2.6, 3.06, 1.9, 0.28, "bei Vergabeweiser", size=14, name="Vergleich VW Text")
-box(s, 0.8, 3.42, 3.65, 0.76, [[("Nur bei uns richtig: ", {"bold": True}), ("23 von 230 (10 %)", {})],
+box(s, 0.8, 3.42, 3.65, 0.76, [[("Nur bei uns richtig: ", {"bold": True}), ("23 von 230 (10 %)¹", {})],
                               [("Meist zählen wir anders, nicht besser.", {"bold": True, "color": BLUE})]], size=14, space=4, name="Vergleich Text")
 rect(s, 4.75, 2.3, 4.65, 1.92, WHITE, name="Ursachen Karte")
 box(s, 4.95, 2.36, 4.3, 0.28, "Warum 15 von 160 Losen abweichen", size=14, bold=True, color=GREY)
-balken(s, 4.8, 2.6, 4.55, 1.6, ["spätestes Ende gemeint", "Teilauftrag (Los)", "Ursache offen", "Fehler bei uns", "mehrdeutig"],
+balken(s, 4.8, 2.6, 4.55, 1.6, ["spätestes Ende gemeint", "Teilauftrag (Los)", "Ursache offen", "Zuordnung falsch¹", "mehrdeutig"],
        [7, 4, 2, 1, 1], [BLUE, BLUE, GREY, GREY, GREY], "Ursachen der 15 abweichenden Lose", maximum=9, fmt='0')
 kurz(s, "Beide Listen sind brauchbar; das Datum in der Bekanntmachung selbst nachlesen.")
-fuss(s, "Vorab-Schwelle (mindestens 16 Lose) war bei 15 abweichenden Losen unerreichbar: unser Fehler, offen berichtet.")
+fuss(s, "¹ Darin 1 Zuordnungsfehler unserer Pipeline (ohne ihn 22). Vorab-Schwelle (≥ 16 Lose) war unerreichbar, offen berichtet.")
 
 # Folie 7: Make or Buy ------------------------------------------------------------
 s = new_slide("ZEIT 1:00 (gekürzt: Balken in einem Satz, dann die drei Karten; symmetrische Variante und Ausblick nur bei Nachfrage). KERNAUSSAGE: Aus Sicht eines Betriebs, der seine Aufträge selbst filtern könnte (Make or Buy): Im Modell rechnet sich Selbstbauen gegen kostenlose Dienste nicht; "
-              "offen ist nur, ob Betriebe die Daten in ihrem eigenen System brauchen. Als eigenes Produkt ergibt die Liste keinen Sinn. "
+              "ob Betriebe die Daten in ihrem eigenen System brauchen, ist ungeprüft; ebenso Nachfrage und Zahlungsbereitschaft (Lab-Log §1 und §7). Als eigenes Produkt ergibt die Liste keinen Sinn. "
               "BALKEN LINKS (Paket D, Quelle reports/make_or_buy.md, docs/business.md §9.4; ALLE Kosten sind Annahmen): Rechnung bei 100 € pro Stunde: Niedrig (20 h einmalig, 5 h im Jahr) 3.500 € in drei Jahren, Mittel (60 h, 20 h) 12.000 €, Hoch (120 h, 50 h) 27.000 €. "
               "Break-even im Basismodell: gegen DTAD (knapp 1.500 € im Jahr, Gespräch) nur im Szenario Niedrig, nach 2,0 Jahren; gegen AusschreibungsRadar Starter und gegen Vergabeweiser nie. "
               "KARTE 1: Dieses „nie“ ist eine Folge der Modellkonstruktion (Abos und kostenlose Dienste ohne Eigenaufwand gerechnet, Eigenbau mit Stunden), keine Messung. "
               "SYMMETRISCHE VARIANTE (Annahmen): Rechnet man auch für Abo und kostenlose Dienste Nutzungsstunden (10 / 30 / 60 Stunden im Jahr), liegt der Break-even gegen DTAD bei 1,0 / 2,4 / 4,8 Jahren und gegen einen kostenlosen Dienst mit Übernahme von Hand bei 4,0 / 6,0 / 12,0 Jahren. "
               "KARTE 2 (docs/business.md §9.4): Die Kosten der ersten drei Jahre entsprechen 0,14 bis 1,08 zusätzlichen Aufträgen (Marge 5 %, Median-Jahresumsatz 167.404 €, Deckungsbeitrag 25.110 € je Auftrag ohne Angebotsaufwand und Zuschlagswahrscheinlichkeit); "
               "eine Rechengröße, kein Nutzenbeleg. Nicht die Kostenfrage entscheidet, sondern ob ein früher Hinweis überhaupt einen Auftrag bringt (nicht belegt). "
-              "KARTE 3 (docs/business.md §8.9, docs/business_case_auswahl.md): Gezahlt hätte im Gespräch nur der größere Betrieb, und zwar für alte Preise und den aktuellen Auftragnehmer („wenn der aktuelle Dienstleister bei 18 Euro pro Stunde lag, brauche ich gar nicht erst mitbieten“). "
+              "KARTE 3 (docs/business.md §8.9, docs/business_case_auswahl.md; Aussage aus EINEM Gespräch, Zahlungsbereitschaft nicht geprüft): Gezahlt hätte im Gespräch nur der größere Betrieb, und zwar für alte Preise und den aktuellen Auftragnehmer („wenn der aktuelle Dienstleister bei 18 Euro pro Stunde lag, brauche ich gar nicht erst mitbieten“). "
               "Preise je Einheit, Mengen und Vertragsklauseln stehen nicht in öffentlichen Daten; den Zuschlagswert als Gesamtsumme nennt TED nur bei knapp der Hälfte der Lose (47,7 %). "
               "WICHTIG: Karte 3 heißt NICHT, dass ein Abo alte Stundenpreise liefert; ob ein Dienst das kann, haben wir nicht geprüft. Die Karte sagt nur, wofür im Gespräch gezahlt würde und dass es in offenen Daten fehlt. "
               "KURZ GESAGT = unser Rat, gleicher Wortlaut wie auf Folie 11, im Lab-Log und in der Entscheidungsvorlage: kostenlosen Alarm nutzen; Abo nur, wenn eine Funktion fehlt, vorher testen; nicht selbst bauen, solange niemand Treffer von Hand ins eigene System überträgt. "
@@ -508,7 +508,7 @@ box(s, 0.8, 1.48, 4.0, 0.3, "Eigenbau: Kosten in 3 Jahren (Annahmen)", size=14, 
 balken(s, 0.7, 1.85, 4.2, 2.3, ["Niedrig", "Mittel", "Hoch"], [3500, 12000, 27000], [BLUE, BLUE, BLUE], "Eigenbau Kosten", maximum=36000, fmt='#,##0')
 karten = ([("„Nie günstiger“ ", {"bold": True}), ("als kostenlose Dienste folgt aus der Rechnung, nicht aus einer Messung.", {})],
           [("Die Kosten entsprechen ", {}), ("0,14 bis 1,08", {"bold": True, "color": BLUE}), (" zusätzlichen Aufträgen.", {})],
-          [("Gezahlt würde für alte Stundenpreise ", {"bold": True}), ("(ein Gespräch) – die stehen in keinen offenen Daten.", {})])
+          [("Ein Betrieb sagte: ", {"bold": True}), ("Zahlen würde er für alte Preise. Stundenpreise stehen in keinen offenen Daten.", {})])
 for i, k in enumerate(karten):
     y = 1.4 + i * 0.97
     rect(s, 5.2, y, 4.2, 0.86, WHITE, name=f"Make or Buy Karte {i + 1}")
@@ -605,9 +605,9 @@ fuss(s, "Nur öffentliche TED-Daten; Rohdaten bleiben unverändert, jede Auswert
 
 # Folie 10: KI-Irrwege ------------------------------------------------------------
 s = new_slide("ZEIT 1:15 (Teil 1 Irrwege etwa 0:40, Teil 2 Trennung von Entwicklung und Test etwa 0:35). KERNAUSSAGE: Claude Code hat Regeln, Stichproben und Auswertungen mitgebaut; jeder dieser Fehler wurde von einem getrennten Evaluator, im Test oder vom Nutzer gefunden, nicht von der Hand, die ihn gemacht hat. "
-              "Vier von 31 Einträgen in docs/ki_irrwege.md (drei auf der Folie, der vierte steht als Fußnote auf Folie 6; der Paket-B-Fall steht im Lab-Log, Abschnitt 8): (1) Entwicklung 10–11 von 12 plausibel, im Test 11 von 24 richtig (Iteration 3): Regel verworfen. "
+              "Vier von 32 Einträgen in docs/ki_irrwege.md (drei auf der Folie, der vierte steht als Fußnote auf Folie 6; der Paket-B-Fall steht im Lab-Log, Abschnitt 8): (1) Entwicklung 10–11 von 12 plausibel, im Test 11 von 24 richtig (Iteration 3): Regel verworfen. "
               "(2) „Blind“ war nicht blind: Die KI-Leser (eine zweite KI, die die Bekanntmachung unabhängig lesen sollte) hatten in Iteration 8 die Projektbeschreibung im Kontext (CLAUDE.md), gefunden vom Evaluator, offen genannt. "
-              "(3) Konkurrenz übersehen: Die Suche vom 24.10. fand keinen deutschen Dienst, tatsächlich gibt es zwei; gefunden vom Recherche-Agenten nach dem Hinweis des Dozenten. "
+              "(3) Konkurrenz übersehen: Die Suche vom 24.10. fand keinen deutschen Dienst, tatsächlich gibt es zwei; gefunden vom Recherche-Agenten nach dem Hinweis des Dozenten. Auf der Folie steht das als UNSER gemeinsamer Prozessfehler (wir und KI), nicht als reiner KI-Fehler: Die Sichtung G1.1 blieb bei uns offen (Lab-Log §1, Lernpunkt). "
               "(4) Schwelle unerreichbar: Claude übernahm die Abweichungsrate von 17 % aus Iteration 10 für 160 Lose, es waren 9,4 %; gefunden vor den Leserantworten, nicht nachträglich geändert. "
               "LERNPUNKT STATT SCHWÄCHE: „Konkurrenz erst in Iteration 10 gesehen“ ist ein Prozessfehler, kein Pech. Plan G1.1 (Wettbewerber sichten) blieb offen; die Entscheidung gegen Kundenkontakt fiel am 2026-10-29. "
               "Kosten: Iterationen 5 bis 9 arbeiteten an einer Liste, die es kostenlos gibt. Lehre: ein Marktgate in Phase 1, vor der Modellierung. "
@@ -618,12 +618,12 @@ s = new_slide("ZEIT 1:15 (Teil 1 Irrwege etwa 0:40, Teil 2 Trennung von Entwickl
               "LIVE IN DER FRAGENRUNDE (Sicherung als Bild: Anhang Folien 16 und 17): `git log --oneline` zeigen; eine Regel in src/prepare/vertragsliste.py öffnen; Fehlwerte (Stufe F) in reports/beispiel_liste_oberpfalz.csv. "
               "EHRLICHE LÜCKEN: das Lauf-Skript der Iteration-9-Leser wurde erst mit den Antworten committet; in Iteration 8 kannten die Leser den Fehlertyp; in 10b liegt das Protokoll der Leserläufe außerhalb des Repos. "
               "FRAGE – ANTWORT: „Warum erst jetzt die Konkurrenz?“ Weil die Sichtung (G1.1) offen blieb und die Suche am 24.10. zu eng war. Prozessfehler im Business Understanding; er hat Zeit gekostet, aber das Ergebnis geändert. "
-              "ZEIG-MIR-WO: docs/ki_irrwege.md (31 Einträge), docs/projektplan.md (G1.1), reports/evaluation_iteration10b.md, git log, src/prepare/stichprobe_iteration10b.py, docs/reproduzierbarkeit.md.",
+              "ZEIG-MIR-WO: docs/ki_irrwege.md (32 Einträge), docs/projektplan.md (G1.1), reports/evaluation_iteration10b.md, git log, src/prepare/stichprobe_iteration10b.py, docs/reproduzierbarkeit.md.",
               teil="Prüfung")
 
 items = (("Im Test viel schlechter", "Beim Entwickeln 10–11 von 12 richtig, im Test nur 11 von 24."),
          ("„Blind“ war nicht blind", "Die prüfende KI kannte unsere Projektbeschreibung."),
-         ("Konkurrenz zu spät gesehen", "Lehre: früh fragen, ob es das schon gibt."))
+         ("Konkurrenz zu spät gesehen", "Unser Prozessfehler, nicht nur der KI. Lehre: früh fragen, ob es das schon gibt."))
 for i, (h, t) in enumerate(items):
     y = 1.4 + i * 0.96
     rect(s, 0.6, y, 4.5, 0.88, WHITE, name=f"Irrweg {i + 1}")
@@ -638,7 +638,7 @@ for i, (x, t) in enumerate(zip(xs, ("Regeln festgelegt", "Stichprobe gezogen", "
     box(s, x - 0.65, 2.85, 1.3, 0.55, t, size=14, align=PP_ALIGN.CENTER, name=f"Zeitstrahl Text {i + 1}")
 box(s, 5.45, 3.6, 3.8, 0.5, "Reihenfolge im Versionsverlauf belegt", size=14, color=GREY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE, name="Zeitstrahl Unterschrift")
 kurz(s, "KI-Ergebnisse erst glauben, wenn jemand sie getrennt geprüft hat.")
-fuss(s, "Drei Beispiele aus unserer Liste von 31 KI-Irrwegen; Lücke: ein Leseprotokoll liegt außerhalb des Projektordners.")
+fuss(s, "Drei Beispiele aus unserer Liste von 32 KI-Irrwegen; Lücke: ein Leseprotokoll liegt außerhalb des Projektordners.")
 
 # Folie 11: Empfehlung ------------------------------------------------------------
 s = new_slide("ZEIT 1:15. KERNAUSSAGE: Ampel statt Fazit-Text. GRÜN: Die Liste ist als Ausgangspunkt nutzbar, immer mit Blick in die verlinkte Bekanntmachung: 66 von 70 Zufallslosen der Iteration 9 (94,3 %) haben das gleiche Enddatum wie der Vergleichswert zweier KI-Leser "
@@ -700,7 +700,7 @@ s.notes_slide.notes_text_frame.text += " KURZ GESAGT (für Laien): Ob ein Vertra
 s = new_slide("AUSGEBLENDET (Anhang für die Fragerunde; im Vortrag ersetzt durch das Video auf Folie 2; Zeit 0:00). Zeigen bei Fragen zu Kriterium, Schwelle, Datenumfang. KERNAUSSAGE: Die Frage hatte eine Entscheidung (auf welche Ausschreibung bereite ich mich vor?) und eine vorab festgelegte Schwelle. "
               "Zielgruppe: Reinigungsfirmen im Mittelstand, Nische Gebäudereinigung (Haupt-CPV 90910/90911/90919). Annahme: Wer früh weiß, wann ein Vertrag endet, kann Personal und Angebot vorbereiten (A1, A15); diese Annahme war zu diesem Zeitpunkt ungeprüft, ein Kundengespräch gab es nicht. "
               "Erfolgskriterium vor dem Backtest festgelegt (docs/business.md 7.1): Treffer = Neuausschreibung im Fenster ±3 Monate um die Prognose, Schwelle 60 %; Vergleichsregel R0 = Ende der Grundlaufzeit minus 6 Monate, 17,3 %. "
-              "Daten: TED Search API, eForms-Zuschläge ab Okt. 2023, Rohdaten unverändert in data/raw (nicht im Git, Abruf-Skript in docs/reproduzierbarkeit.md). 9.325 Lose aus 4.011 Zuschlägen (alle eForms-Zuschläge ab Okt. 2023). "
+              "Daten: TED Search API, eForms-Zuschläge ab Okt. 2023, Rohdaten unverändert in data/raw (nicht im Git, Abruf-Skript in docs/reproduzierbarkeit.md). 9.325 Lose aus 4.011 Zuschlägen. Herleitung (Nachrechnung 2026-11-09 mit src/population_iteration4.py und src/prepare/vertragsliste.py): 4.307 eForms-Zuschläge Haupt-CPV 90910/90911/90919, nur Originale, 25.10.2023 bis 30.09.2026 (reports/verlaengerung_praxis_iteration5.md); minus 98 nach den Ausschlussregeln der Population (Baureinigung, Endreinigung, Schimmel, Fahrzeug, Industriereinigung, Schädlinge; Bauprojekte ohne wiederkehrende Reinigung) = 4.209; minus 198 Zuschläge, deren Lose alle ohne Zuschlag sind (Regel 7) = 4.011 mit 9.325 Losen (vor Regel 7: 9.915 Lose). "
               "Die Angabe „Zuschläge 10/2025 bis 9/2026“ gehört nur zu den 79,4 % (Anteil der Lose mit Enddatum im letzten Jahr), nicht zu den 9.325 Losen. "
               "Laufzeitende bei 90,0 % der Zuschläge bestimmbar; Verlängerungsoptionen nur bei 18,9 % im Feld BT-58, der Rest im Freitext. "
               "Vier Zyklen CRISP-DM, jeder endete mit einer Entscheidung gegen vorab festgelegte Schwellen. Zyklus 4 ist der Rücksprung in Phase 1; er bekommt in diesem Vortrag den größten Teil der Zeit (Folien 4 bis 8, 5:45 von 15:00; der Iterationsweg steht auf Folie 3). "
@@ -712,7 +712,7 @@ tile(s, 0.6, 2.5, 2.8, 1.7, "60 %", "Mindest-Trefferquote, vorab festgelegt (Ter
 tile(s, 3.6, 2.5, 2.8, 1.7, "17,3 %", "so viel schafft eine einfache Faustregel zum Vergleich", GREY, "Faustregel")
 tile(s, 6.6, 2.5, 2.8, 1.7, "9.325", "Lose (Teilaufträge) aus 4.011 Zuschlägen seit Okt. 2023", BLUE, "Daten")
 kurz(s, "Wer früh Bescheid weiß, kann Personal und Angebot besser planen (Annahme, ungeprüft).")
-fuss(s, "Quelle: TED Search API v3. 9.325 Lose = alle eForms-Zuschläge der Gebäudereinigung ab Okt. 2023.")
+fuss(s, "Quelle: TED API v3. 4.011 von 4.307 eForms-Zuschlägen: ohne Baureinigung u. Ä. und ohne Lose ohne Zuschlag.")
 
 # Folie 14 (Anhang): Trefferquote je Vorlauf ------------------------------------------------------------
 VORLAUF_BILD = ROOT / "docs" / "lab_log_bilder" / "diagramm_vorlauf.png"   # erzeugt von src/report/lab_log_bilder.py

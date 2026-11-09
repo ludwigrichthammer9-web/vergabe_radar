@@ -166,7 +166,7 @@ Kurzantwort: Unser Vorgehen hieß „einfach vor komplex“; ein Modell nur, wen
 Zeig mir wo: Lab-Log §3, „Warum eine feste Regel und kein gelerntes Modell?“; `docs/CRISP-DM.md`, Phase 4.
 
 **M10. Habt ihr Ausreißer entfernt? Was ging dabei verloren?**
-Kurzantwort: Ja, eine Plausibilitätsregel seit Iteration 1. Laufzeiten ≤ 0 oder über 240 Monate gelten als unplausibel, das Ende bleibt leer. In der Liste betrifft das 19 von 9.325 Losen (`gl_herkunft = unplausibel`, am 2026-11-09 in `reports/daten/vertragsliste_909.csv` gezählt). Verloren gehen könnten echte lange Verträge oder Tippfehler, die man von Hand retten könnte; geprüft haben wir diese 19 nicht. Beim Höchstende zählen Kandidaten nur bis 10 Jahre nach der Grundlaufzeit.
+Kurzantwort: Ja, eine Plausibilitätsregel seit Iteration 1. Laufzeiten ≤ 0 oder über 240 Monate gelten als unplausibel, das Ende bleibt leer. In der Liste betrifft das 19 von 9.325 Losen (`gl_herkunft = unplausibel`, am 2026-11-09 in `reports/daten/vertragsliste_909.csv` gezählt), davon 9 von 3.503 bei den Zuschlägen 10/2025 bis 9/2026 (Tabelle X4 in `reports/vertragsliste_iteration9.md`; diese Zahl steht im Lab-Log neben der 19). Verloren gehen könnten echte lange Verträge oder Tippfehler, die man von Hand retten könnte; geprüft haben wir diese 19 nicht. Beim Höchstende zählen Kandidaten nur bis 10 Jahre nach der Grundlaufzeit.
 Zeig mir wo: `src/prepare/vertragsliste.py`, Zeilen 164–173 (`grundlaufzeit`), Zeile 78 (`MAX_MONATE = 240`).
 
 **M11. Im zweiten Zyklus habt ihr das Ziel gewechselt (Prognose → Liste). Was hat das ausgelöst?**
