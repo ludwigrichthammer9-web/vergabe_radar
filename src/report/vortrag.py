@@ -192,8 +192,10 @@ box(s, 0.6, 5.0, 8.0, 0.3, "Big Data Analytics · Leistungsnachweis B", size=14,
 s.notes_slide.notes_text_frame.text += " FÜR LAIEN IN EINEM SATZ: Wir haben geprüft, ob man aus öffentlichen Daten vorhersagen kann, wann ein Reinigungsauftrag neu ausgeschrieben wird."
 
 # Folie 2: Video ---------------------------------------------------------
-VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5_v2.mp4"
-if not VIDEO.exists():  # Fallback auf die erste Fassung (SAPI-Stimme)
+VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5_v3.mp4"   # v3: Synchronität geprüft, Schluss-Einordnung
+if not VIDEO.exists():  # Fallback auf v2 (Piper-Stimme), dann v1 (SAPI-Stimme)
+    VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5_v2.mp4"
+if not VIDEO.exists():
     VIDEO = ROOT / "docs" / "video" / "franz_und_die_glaskugel_szenen_0-5.mp4"
 POSTER = ROOT / "docs" / "vortrag" / "poster_franz_und_die_glaskugel.png"
 

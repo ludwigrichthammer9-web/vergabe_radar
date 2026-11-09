@@ -213,6 +213,13 @@ svg text{font-family:"Inter","Helvetica Neue",Arial,sans-serif;fill:var(--ink)}
     <text x="610" y="376" text-anchor="middle" class="note">Die zwei KI-Leser sind nicht unabhängig;</text>
     <text x="610" y="404" text-anchor="middle" class="note">der Vergleichswert ist teils zirkulär.</text>
   </g>
+  <g id="ord5" opacity="0">
+    <rect x="395" y="424" width="430" height="152" rx="14" fill="#fff" fill-opacity=".94" stroke="#1D2A3A" stroke-width="3"/>
+    <text x="418" y="458" class="lab">Einordnung</text>
+    <circle cx="428" cy="486" r="7" fill="#2A9D8F"/><text x="446" y="494" class="row">Vertragsende: lesbar</text>
+    <circle cx="428" cy="520" r="7" fill="#D9483B"/><text x="446" y="528" class="row">Termin: nicht vorhersagbar</text>
+    <circle cx="428" cy="554" r="7" fill="#E8833A"/><text x="446" y="562" class="row">Geschäft: offen</text>
+  </g>
 </g>
 
 <!-- Szene 6: kostenlos + Gespräche -->
@@ -487,8 +494,9 @@ const CAPS = [
   [138.6,146,'F','Dann eben keine Glaskugel, sondern eine Liste: Welcher Vertrag endet wann?'],
   [146,152.5,'B','Liste fertig! 9.325 Verträge. Alles korrekt!'],
   [152.5,161,'P','Moment mal. Hier ist das Ende schon das Datum mit allen Verlängerungen.'],
-  [161,173,'E','Also zurück: Regeln nachbessern, eine neue Zufallsstichprobe ziehen und die Lösung vorher versiegeln.'],
-  [173,185.5,'E','Ergebnis: 66 von 70 gleich mit dem Vergleichswert zweier KI-Leser. Die sind nicht unabhängig, der Vergleichswert ist teils zirkulär. Der Mensch prüfte 15 Fälle: 14 stimmen.'],
+  [161,167.7,'E','Also zurück: Regeln nachbessern, eine neue Zufallsstichprobe ziehen und die Lösung vorher versiegeln.'],
+  [167.9,179.1,'E','Ergebnis: 66 von 70 gleich mit dem Vergleichswert zweier KI-Leser. Die sind nicht unabhängig, der Vergleichswert ist teils zirkulär. Der Mensch prüfte 15 Fälle: 14 stimmen.'],
+  [179.2,185.35,'E','Einordnung: Das Vertragsende lässt sich meist lesen. Den Termin der Neuausschreibung sagt es nicht voraus. Ob daraus ein Geschäft wird, ist offen.'],
   [186.6,193.2,'F','Moment … so eine Liste gibt es ja schon. Kostenlos!'],
   [193.4,204.6,'E','Der Unterschied liegt bei rund 10 Prozent der Verträge: meist anderes Datum für das Höchstende statt der Grundlaufzeit, teils Losebene. Ein Qualitätsvorsprung ist nicht belegt.'],
   [204.8,215,'E','Franz fragt bei Kollegen nach. Nachgestellt und verändert, denn es waren nur drei Gespräche.'],
@@ -499,7 +507,7 @@ const CAPS = [
   [262.6,275,'E','Unsere Antwort auf die Frage „Selbst bauen?“: Nein. Das zeigt unsere Rechnung mit Annahmen und der Blick auf kostenlose Dienste.']
 ];
 // Rad: Zeitpunkt -> Phase (Index)
-const WKF = [[61,0],[64.5,1],[67.5,3],[72,4],[81,0],[90,3],[99,4],[131,0],[141,3],[149,4],[162,2],[173,4],[181,5],[188,0],[200,1],[206,0],[230,3],[240,4],[256,5]];
+const WKF = [[61,0],[64.5,1],[67.5,3],[72,4],[81,0],[90,3],[99,4],[131,0],[141,3],[149,4],[162,2],[168.0,4],[179.4,5],[188,0],[200,1],[206,0],[230,3],[240,4],[256,5]];
 
 const $ = id => document.getElementById(id);
 const NS = 'http://www.w3.org/2000/svg';
@@ -635,7 +643,7 @@ function drawWheel(t){
   if(vis<=0) return;
   const v=wheelIdx(t), v2=wheelIdx(t-0.08);
   tf('wheelRot',`rotate(${-v*60})`);
-  const r = t<84?1: t<138?2: t<186?3:4;
+  const r = t<88?1: t<138?2: t<186?3:4;
   $('wRound').textContent='Runde '+r;
   $('wPhase').textContent=PH[Math.round(clamp(v,0,5))];
   op('wBack', (v<v2-0.004)?1:0);
@@ -712,13 +720,13 @@ SC[3]=(t,F,Bt)=>{
   [0,1,2].forEach(i=>{const e=$('ln'+i),L=+e.dataset.len;
     const k=ease(p(t,64+i*1.8,65.6+i*1.8)); e.setAttribute('stroke-dashoffset',L*(1-k));
     e.setAttribute('stroke',t>80?'#D9483B':'#2A9D8F'); e.setAttribute('opacity',1-p(t,82,84));});
-  const sb=back(p(t,71.2,72.1));
-  op('stamp3',p(t,71.2,71.5)); tf('stamp3',`translate(640,300) rotate(-7) scale(${Math.max(.01,lerp(1.8,1,clamp(sb,0,1.2)))})`);
-  Object.assign(F,{x:150,y:540,s:.85,face:t<72?'smile':'frown',brows:t<72?0:'worry',armL:t<72?10:160+8*Math.sin(t*9),armR:-10,tilt:t<72?0:-6});
-  Object.assign(Bt,{vis:1,x:640,y:560,s:.9,face:t<72?'happy':'sad',rot:t<72?6*Math.sin(t*4):0});
+  const sb=back(p(t,73.6,74.5));
+  op('stamp3',p(t,73.6,73.9)); tf('stamp3',`translate(640,300) rotate(-7) scale(${Math.max(.01,lerp(1.8,1,clamp(sb,0,1.2)))})`);
+  Object.assign(F,{x:150,y:540,s:.85,face:t<73.7?'smile':'frown',brows:t<73.7?0:'worry',armL:t<73.7?10:160+8*Math.sin(t*9),armR:-10,tilt:t<73.7?0:-6});
+  Object.assign(Bt,{vis:1,x:640,y:560,s:.9,face:t<73.7?'happy':'sad',rot:t<73.7?6*Math.sin(t*4):0});
 };
 SC[4]=(t,F,Bt)=>{
-  op('goal4',fio(t,97.5,104,.4));
+  op('goal4',fio(t,99.2,104,.4));
   const mv=ease(p(t,116,117.4));
   tf('ball4',`translate(${lerp(640,320,mv)},${lerp(300,290,mv)}) scale(${lerp(1,.66,mv)})`);
   op('ball4',p(t,88.3,89.2));
@@ -726,32 +734,34 @@ SC[4]=(t,F,Bt)=>{
   op('cracks4',p(t,125.6,126.1)); op('dim4',.35*p(t,125.6,127));
   if(t>125.6&&t<126.4) tf('ball4',`translate(${320+4*Math.sin(t*80)},290) scale(.66)`);
   op('chart4',p(t,116.8,117.6));
-  const ga=ease(p(t,117.6,119)), gb=ease(p(t,119.2,122.5));
+  const ga=ease(p(t,117.6,119)), gb=ease(p(t,119.2,123.2));
   const hA=0.173*300*ga, hB=0.288*300*gb;
   $('barA').setAttribute('y',460-hA); $('barA').setAttribute('height',hA);
   $('barB').setAttribute('y',460-hB); $('barB').setAttribute('height',hB);
   op('barAT',p(t,118.6,119.2)); $('barAT').setAttribute('y',460-0.173*300-14);
   $('barBT').textContent=(28.8*gb).toFixed(1).replace('.',',')+' %'; $('barBT').setAttribute('y',460-hB-16);
   op('vst4',fio(t,127.3,137.6,.5));
-  const sad=t>122.5;
+  const sad=t>123.2;
   Object.assign(F,{x:lerp(190,140,mv),y:540,s:.92,face:sad?'frown':'smile',brows:sad?'worry':(t>97?'up':0),armL:10,armR:t<104?-40:-10,tilt:sad?-5:0});
   Object.assign(Bt,{vis:1,x:lerp(1010,1180,mv),y:530,s:.9,face:sad?'sad':'happy'});
 };
+const CHEER_T=177.7; // Franz jubelt zu "vierzehn stimmen" (Sprechzeit aus audio/manifest.json)
 SC[5]=(t,F,Bt,Pr)=>{
   op('clip5',p(t,138.3,139.2)*(1-p(t,161.5,162.3)));
   tf('clip5',`translate(330,${lerp(110,78,ease(p(t,138.3,139.4)))})`);
   for(let i=0;i<5;i++) $('rb'+i).setAttribute('fill', (i===2&&t>153.5&&t<162)?'#F8D3CE':'#EEF4F6');
   op('lens5',fio(t,153.2,161.5,.3)); tf('lens5',`translate(${lerp(980,800,ease(p(t,153.2,154.2)))},${78+162+2*50-12})`);
   op('anno5',fio(t,154.2,161.6,.3));
-  op('env5',fio(t,162.6,173,.4));
+  op('env5',fio(t,162.6,168.2,.4));
   for(let i=0;i<4;i++){op('en'+i,p(t,163+i*.5,163.4+i*.5)); const s=back(p(t,166.5+i*.4,167.2+i*.4)); tf('seal'+i,`translate(0,6) scale(${Math.max(.01,s)}) translate(0,-6)`);}
-  op('res5',p(t,173.4,174.2)); tf('res5',`translate(0,${lerp(20,0,ease(p(t,173.4,174.4)))})`);
-  const cheer=t>176;
-  Object.assign(F,{x:150,y:540,s:.88,face:(t>152&&t<173)?'frown':'smile',brows:(t>152&&t<173)?'worry':(cheer?'up':0),
+  op('res5',p(t,167.8,168.6)); tf('res5',`translate(0,${lerp(20,0,ease(p(t,167.8,168.8)))})`);
+  op('ord5',p(t,179.2,179.9)); tf('ord5',`translate(0,${lerp(14,0,ease(p(t,179.2,180)))})`);
+  const cheer=t>CHEER_T&&t<179.2;
+  Object.assign(F,{x:150,y:540,s:.88,face:(t>152&&t<167.8)?'frown':'smile',brows:(t>152&&t<167.8)?'worry':(cheer?'up':0),
     armL:cheer?150+10*Math.sin(t*8):10,armR:cheer?-150-10*Math.sin(t*8):-10});
   const pin=back(p(t,151.8,152.7));
   Object.assign(Pr,{vis:p(t,151.8,152)*(1-p(t,185.4,185.8)),x:1010,y:540,s:Math.max(.01,pin),flip:-1});
-  Object.assign(Bt,{vis:1,x:1170,y:530,s:.85,face:(t>152.5&&t<173)?'sad':'happy'});
+  Object.assign(Bt,{vis:1,x:1170,y:530,s:.85,face:(t>152.5&&t<167.8)?'sad':'happy'});
 };
 SC[6]=(t,F,Bt)=>{
   op('laptop6',p(t,186.3,187)*(1-p(t,193.6,194.2)));

@@ -18,6 +18,38 @@ Nur Texte und Technik, **keine Zahlen**:
 7. Abspann: „Autoren: Manuel Strobel, Ludwig Richthammer. Stimme: synthetisch (Piper, Thorsten-Voice).“ (v1: Windows SAPI)
 8. Technik: Abspielbereich per URL (`?von=8&bis=186`), Sprecherstimme (WAV je Untertitel, jetzt Piper; Text aus `sprechertext.json`), Stumm-Schalter, Startbildschirm. Caption-Fenster angepasst, wo die Texte länger wurden oder die Stimme Platz brauchte: Untertitel 4 und 5 (Szene 2, Grenze 51 s auf 50,8 s, „Hallo!“ gestrichen), Untertitel in Szene 6 (186,6 bis 193,2; 193,4 bis 204,6; 204,8 bis 215). Die Szenen-Zeitleiste `B` ist **nicht** geändert; kein Fenster überlappt (geprüft).
 
+## Fassung v3 (Synchronität geprüft, Schluss-Einordnung)
+Anlass: Der Nutzer bemerkte, dass Ton und Bild manchmal nicht ganz zusammenpassen und dass am Ende (Ende Szene 5) eine Einordnung fehlt. Fassung v3 = `franz_und_die_glaskugel_szenen_0-5_v3.mp4`; v1 und v2 bleiben unverändert.
+
+**Messmethode (Fakten).** Aus der MP4 wird die Tonspur per ffmpeg (imageio-ffmpeg) als Mono-WAV mit 44,1 kHz extrahiert; je Sprechstück wird der erste Abtastwert über -40 dBFS in einem Suchfenster (Soll - 0,5 s bis Soll + 1,5 s, nicht vor dem Ende des vorigen Stücks) als Einsatz gesucht und mit dem Soll verglichen. Soll = Untertitelbeginn im Videozeitmaß (+ gemessene Anfangsstille der WAV); Videozeit = Quellzeit - 8 s, nach der Quizpause (Quelle 116 s) Quellzeit - 8 s - 7,5 s (Quelle 105 bis 116 s entfällt, im Video 3,5 s Standbild). Ergebnis an v2: alle 20 Sprechstücke (Index 0 bis 19, auch die Quizfrage und alle nach der Quizpause) setzen auf +-0,005 s genau am Soll ein; die Enden liegen 0,03 bis 0,2 s vor dem Soll (Ausklang unter -40 dBFS): **kein Drift, kein Versatz** im Mux (`adelay` in ganzen Millisekunden, Tonspur mit `apad`, Dauer 170,5 s Bild und Ton gleich). Die Schwäche lag also nicht im Zusammenbau, sondern in der Lage einzelner Bildereignisse zum gesprochenen Wort (siehe unten). Die Wiedergabe im Browser (HTML) startet jedes Sprechstück am Untertitelbeginn und korrigiert bei mehr als 0,35 s Abweichung; das wurde nicht gemessen, nur im Code gelesen.
+
+**Abgleich Sprechbeginn mit Bildereignis.** Wortlagen im Sprechstück wurden aus den Sprechpausen der WAV-Dateien (Stille >= 120 ms) geschätzt, nicht per Spracherkennung; Genauigkeit etwa +-0,2 s.
+
+| Untertitel | Wort im Sprechtext (v2-Zeit) | Bildereignis (v2) | Abweichung v2 | v3 |
+|---|---|---|---|---|
+| 8 (71,0) | „Nur elf von vierundzwanzig“ ab 73,7 | Stempel „11 von 24 richtig“ 71,2 | Bild 2,5 s zu früh | Stempel 73,6 bis 73,9, Mimik von Franz/Bit ab 73,7 |
+| 10 (88,6) | „Runde zwei“ 88,7 | Radbeschriftung „Runde 2“ ab 84 | Rad 4,6 s zu früh | Umschaltung bei 88 (Szenengrenze) |
+| 11 (97,0) | „Das Ziel steht vorher fest“ 99,3; „Sechzig Prozent“ 101,1 | Karte „Ziel 60 %“ ab 97,5 | 1,8 bis 3,6 s zu früh | Karte ab 99,2 |
+| 13 (121,5) | „Achtundzwanzig Komma acht Prozent“ bis ca. 123,4 | Balken/Zähler fertig 122,5 | ca. 0,9 s zu früh | Balken fertig 123,2 |
+| 19 (alt 173,0) | „Ergebnis“ 173,0 | Tafel „66 von 70“ 173,4 | ok (0,4 s) | Tafel jetzt 167,8 bis 168,6 mit dem neuen Fenster (siehe unten) |
+| 2 (24,0) | „Wann laufen die Verträge der Konkurrenz aus?“ 24,0 bis 26,5 | Kiste mit der Frage 24,4 | ok (die Kiste zeigt die Frage); „Blackbox“ erst 27,6 | unverändert |
+| 17 (152,5) | „Moment mal“ 152,5 | Auftritt Prüfi 151,8 bis 152,7 | ok (0,2 s) | unverändert |
+| 14 (127,0) | „Sinngemäß hieß es im Gespräch“ 127,0 | Sprechblase 127,3 | ok | unverändert |
+| 18 (161,0) | „versiegeln“ ca. 166,2 | Siegel 166,5 | ok | unverändert |
+| 3, 4, 5, 6, 7, 9, 10 (Rad), 15 | Auftritt Glühbirne, Daten, Bit, Rad, Linien, Klemmbrett | Bildereignis innerhalb ca. 0,5 s vom Wort (Schätzung) | ok | unverändert |
+| 1 (15,0), 16 (146,0) | „Vier Wochen“ 16,6; „Liste fertig, 9.325 Verträge“ | Karte 16,4; kein eigenes Bildereignis für „Liste fertig“ | ok bzw. nicht prüfbar | unverändert |
+
+Kein Sprechstück reicht in einen Wischer (+-0,6 s um 8, 36, 62, 88, 138, 186 s); spätestes Ende vor einer Grenze: Untertitel 14 bei ca. 137,1 s (Wischer ab 137,4 s).
+
+**Schluss-Einordnung (neu).** Das letzte Fenster (173 bis 185,5 s, 11,2 s Sprechzeit) ließ keinen Platz. Darum liegen Ergebnistafel und Untertitel 19 jetzt früher (167,9 bis 179,1 s; Untertitel 18 endet 167,7 s, Sprechende bei ca. 166,8 s; Briefumschläge blenden um 167,8 bis 168,2 aus) und ein neuer Untertitel 20 (179,2 bis 185,35 s) enthält die Einordnung. Die Tempostufen des Sprechers (`length_scale`) stehen im Manifest. Szenengrenzen `B` und Zeiten der Szenen 6 bis 8 sind nicht verändert; die CAPS-Indizes ab 20 sind um 1 verschoben (alter 20 = neuer 21 usw.), `sprechertext.json` und die WAV-Namen folgen.
+- Untertitel: „Einordnung: Das Vertragsende lässt sich meist lesen. Den Termin der Neuausschreibung sagt es nicht voraus. Ob daraus ein Geschäft wird, ist offen.“
+- Sprechtext (kürzer wegen der Zeit): „Das Vertragsende lässt sich meist lesen. Den Termin sagt es nicht voraus. Ob daraus ein Geschäft wird, ist offen.“
+- Bildkarte „Einordnung“: Vertragsende: lesbar · Termin: nicht vorhersagbar · Geschäft: offen (Einblendung mit dem Satzbeginn).
+- Belege der Formulierung (Interpretation, nicht stärker als die Zahlen): „meist lesen“ = 66 von 70 gleich mit dem Vergleichswert zweier nicht unabhängiger KI-Leser, Vergleichswert teils zirkulär, Mensch 14 von 15; „Termin nicht voraus“ = Trefferquote 28,8 % gegenüber dem Ziel 60 % (`reports/evaluation_iteration5.md`); „Geschäft offen“ = Business-Case-Prüfung ohne tragfähigen Case, Hypothesen ungeprüft (`docs/business_case_auswahl.md`).
+- Weitere Zeitänderungen in der Animation: Rad „Prüfen“ 168,0 (vorher 173), „Einsetzen“ 179,4 (vorher 181), Jubel von Franz nur zum Satz „vierzehn stimmen“ (ab 177,7 s).
+- Alle WAV-Dateien wurden für v3 neu erzeugt; Piper ist nicht bitgenau reproduzierbar, Sprechdauern schwanken um einige Zehntelsekunden zwischen Läufen (v2-Ton liegt nur in der MP4).
+- Die Einordnung ist **nicht** Teil der Belege der Iterationen, sondern eine Zusammenfassung der Aussagen im Video.
+
 ## Quellen der Zahlen im Video
 | Zahl im Video | Quelle |
 |---|---|
@@ -74,8 +106,8 @@ python -m venv .venv-video
 .venv-video\Scripts\python.exe src\report\video_export.py            # Standard: 8 bis 186 s, 30 fps
 .venv-video\Scripts\python.exe src\report\video_export.py --von 0 --bis 186 --out mein.mp4
 ```
-Ergebnis: `docs/video/franz_und_die_glaskugel_szenen_0-5_v2.mp4` (Piper-Stimme; die erste Fassung mit SAPI-Stimme `franz_und_die_glaskugel_szenen_0-5.mp4` bleibt als v1 erhalten, ältere WAVs in `audio_sapi/`; Ordner mit anderen WAVs per `--audio DIR`) (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
-**Quizphase im Export:** Das Quizbild (Live-Zeit 105 s) steht 3 s still, in den letzten 0,5 s mit dem Hinweis „Auflösung folgt …“; die Zeit 105 bis 116 s der Live-Fassung entfällt, das Video läuft bei 116 s weiter. Die Quizfrage wird in diesen Sekunden gesprochen. Die Standbilder werden bei 30 fps per `window.render(t)` aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien); die Tonspur wird aus den WAVs mit `adelay` an den Untertitel-Anfängen gemischt.
+Ergebnis: `docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4` (aktuelle Fassung; v2 = Piper-Stimme ohne Einordnung und mit den alten Bildzeiten; die erste Fassung mit SAPI-Stimme `franz_und_die_glaskugel_szenen_0-5.mp4` bleibt als v1 erhalten, ältere WAVs in `audio_sapi/`; Ordner mit anderen WAVs per `--audio DIR`) (H.264, AAC, yuv420p, 1280 x 720, 30 fps; der Dateiname folgt der Auftragsvorgabe, der Standardbereich 8 bis 186 s umfasst die Szenen 1 bis 5 der Zeitleiste `B`, das Titelbild 0 bis 8 s ist nicht enthalten).
+**Quizphase im Export:** Das Quizbild (Live-Zeit 105 s) steht 3 s still (danach 0,5 s) mit dem Hinweis „Auflösung folgt …“; die Zeit 105 bis 116 s der Live-Fassung entfällt, das Video läuft bei 116 s weiter. Die Quizfrage wird in diesen Sekunden gesprochen. Die Standbilder werden bei 30 fps per `window.render(t)` aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien); die Tonspur wird aus den WAVs mit `adelay` an den Untertitel-Anfängen gemischt.
 
 ## Grenzen
 - Stimme **synthetisch** (Piper, Thorsten-Voice), ein Modell für alle Figuren (nur Tonhöhe und Tempo unterscheiden sie), Betonung maschinell. **Die Klangqualität wurde vom Bearbeiter (KI) nicht gehört**, nur Dauer, Pegel und Anfangsstille wurden gemessen; Hörprobe durch den Nutzer steht aus.

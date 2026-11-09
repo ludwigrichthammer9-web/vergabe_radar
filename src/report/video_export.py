@@ -9,7 +9,7 @@ Vorher die WAV-Dateien erzeugen: src/report/video_vertonung.py (Piper, ElevenLab
 
 Aufruf:
     .venv-video\Scripts\python.exe src\report\video_export.py [--von 8] [--bis 186] [--fps 30]
-        [--out docs/video/franz_und_die_glaskugel_szenen_0-5_v2.mp4] [--audio DIR] [--stills DIR]
+        [--out docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4] [--audio DIR] [--stills DIR]
 
 Ablauf: Die Seite wird mit ?render geladen; window.render(t) zeichnet das Bild zur Zeit t.
 Jedes Bild wird als PNG aufgenommen und direkt an ffmpeg gegeben (keine Zwischendateien).
@@ -43,7 +43,7 @@ def main():
     ap.add_argument("--von", type=float, default=8)
     ap.add_argument("--bis", type=float, default=186)
     ap.add_argument("--fps", type=int, default=30)
-    ap.add_argument("--out", default=str(VIDEO / "franz_und_die_glaskugel_szenen_0-5_v2.mp4"))
+    ap.add_argument("--out", default=str(VIDEO / "franz_und_die_glaskugel_szenen_0-5_v3.mp4"))
     ap.add_argument("--audio", default=str(AUDIO), help="Ordner mit cap_NN.wav und manifest.json")
     ap.add_argument("--stills", default=None, help="Ordner: Standbilder bei ausgewählten Zeiten speichern")
     a = ap.parse_args()
