@@ -2,7 +2,31 @@
 
 _Stand 2026-11-09. Laut Bewertungsbogen (`docs/bewertung_LN.md`, Zeile 29) gibt es drei Fragen: eine **Methodenfrage**, einen **Live-Nachweis im Werkzeug** und eine **Entscheidungs- oder Transferfrage**. Die Fragen gehen an das Teammitglied, das den Teil **nicht** präsentiert hat. Quellen der Fragen: Notizen „FRAGE – ANTWORT“ und „ZEIG-MIR-WO“ in `src/report/vortrag.py`, `docs/bewertung_LN.md`, Beispielfragen des Bewertungsbogens 5 („Beispielfragen für die Fragenrunde“, LN B und LN C), typische Prüferfragen._
 
-_Folien (Stand: Kopf von `src/report/vortrag.py`, 2026-11-09; dort wurde parallel noch gearbeitet): 11 sichtbar. 1 Titel · 2 Video „Franz und die Glaskugel“ (4:15 mit Einleitung, 3:32 Video, Quizfrage, Überleitung) · 3 Betriebe heute und unsere Idee · 4 Konkurrenz: Vertragsenden kostenlos bei Vergabeweiser · 5 Vergleich mit Vergabeweiser · 6 Make or Buy aus Sicht des Betriebs · 7 Demo als Zielbild · 8 So funktioniert es technisch: Pipeline und Prognoseregel · 9 KI-Irrwege und Trennung von Entwicklung und Test · 10 Empfehlung und Grenzen · 11 Fazit. Folien 12 bis 17 sind ausgeblendeter Anhang (Vier Versuche, vier verfehlte Schwellen; Frage/Kriterium/Daten; Trefferquote je Vorlauf; Liste und Genauigkeit; zwei Sicherungsfolien „Falls die Technik streikt“). Vor dem Vortrag in `docs/vortrag/` abgleichen._
+_Folien (Stand: Kopf und `TITEL` in `src/report/vortrag.py`, 2026-11-09): 11 sichtbar._
+
+| Nr. | Folie | Sprecher | Fragen dazu beantwortet |
+|---|---|---|---|
+| 1 | Titel | Ludwig | Manuel |
+| 2 | Video „Franz und die Glaskugel“ (Kurzfilm 3:32; **Quizfrage jetzt vor dem Video**) | Ludwig | Manuel |
+| 3 | Betriebe heute und unsere Idee | Manuel | Ludwig |
+| 4 | Konkurrenz: Vertragsenden kostenlos bei Vergabeweiser | Manuel | Ludwig |
+| 5 | Vergleich mit Vergabeweiser | Ludwig | Manuel |
+| 6 | Make or Buy aus Sicht des Betriebs | Ludwig | Manuel |
+| 7 | Demo als Zielbild | Ludwig | Manuel |
+| 8 | Technik: Pipeline und Prognoseregel im Code (`src/model/baseline.py`) | Manuel | Ludwig |
+| 9 | KI-Irrwege und Trennung von Entwicklung und Test | Ludwig | Manuel |
+| 10 | Empfehlung und Grenzen | Manuel | Ludwig |
+| 11 | Fazit (mit QR-Code zum Repo) | Manuel | Ludwig |
+
+_Ausgeblendeter Anhang: 12 Vier Versuche, vier verfehlte Schwellen · 13 Frage/Kriterium/Daten · 14 Trefferquote je Vorlauf · 15 Liste und Genauigkeit · 16–17 Sicherung „Falls die Technik streikt“ (Live-Nachweise als Bild). Die Folientitel im Vortrag sind Aussagesätze (z. B. Folie 8: „So funktioniert es technisch: von der TED-Abfrage zur geprüften Liste“); oben stehen Kurznamen. Vor dem Vortrag in `docs/vortrag/` abgleichen._
+
+**Einheitliche Zahlen (so sagen, überall gleich):**
+- Laufzeitende bestimmbar (Gebäudereinigung, Iteration 1): **80,9 % (90,0 %, wenn eine Dauer ohne Beginn mitzählt)**; n = 440 Zuschläge in 3 Monaten (`docs/iterationen.md`, Zeilen 85 und 107).
+- BT-58 (höchste Zahl der Verlängerungen) immer mit Bezugsmenge: **vorhanden bei 18,9 %, > 0 bei 14,7 % der 15.706 deutschen Zuschlagsbekanntmachungen** vom 22.07. bis 21.10.2026 (alle Branchen); in der Gebäudereinigung > 0 bei 42,0 % von 440 (`reports/datenqualitaet_DEU_20260722_20261021.md`, Zeilen 3, 65–66 und 155).
+- Folie 2, Runde 1: **„11 von 24 Vorschlägen richtig“** (Präzision V2, 45,8 %), nicht „Vorgänger gefunden“; gefunden wurden 11 von 38 = 28,9 % (Trefferquote V3; `docs/iterationen.md`, Zeilen 407–408).
+- Folie 9: Auf Entwicklungsdaten **hielt die KI 10–11 von 12 Vorschläge für plausibel**, im Test waren 11 von 24 richtig (`docs/iterationen.md`, Zeile 420).
+- Arbeit nach Iteration 10 heißt **„Nachträge nach Iteration 10“**, nicht „Iteration 11“.
+- „Nutzer“ (so in Lab-Log und Iterationslog) heißt im Gespräch „wir“ (gemeinsam im Call, rund 90 %) oder „Ludwig“, wenn `docs/beitraege.md` es ihm einzeln zuordnet.
 
 **Regel für jede Antwort:** erst die Zahl, dann die Grenze, dann die Datei. Fakten und Deutung trennen („Gemessen ist …; wir deuten das als …“). Auf den Folien heißt das Höchstende „spätestes Vertragsende“; in Code, Lab-Log und hier „Höchstende“.
 
@@ -188,7 +212,7 @@ Zeig mir wo: `docs/iterationen.md`, Zeilen 690–695; Lab-Log §3 und §7.
 ### Entscheidungs- und Transferfragen
 
 **E1. Warum habt ihr die Demo gebaut, nachdem der Auswahlbogen Nein gesagt hatte?**
-Kurzantwort: Sie wurde auf Wunsch nach dem Auswahlbogen gebaut, als Veranschaulichung der Datenübergabe, ausdrücklich ohne Business-Case-Anspruch. Der Bogen hatte die Idee (K-I) mit K7 = 0 ausgeschlossen, gerade weil „erst bauen, dann prüfen“ der Fehler aus dem Marktgate war; das sagen wir offen. Die Demo belegt keine Nachfrage und keine KI-Genauigkeit; den Vorgänger-Hinweis haben wir im großen Datensatz abgeschaltet (3 von 3 Auslösungen falsch).
+Kurzantwort: Wir haben sie auf eigenen Wunsch nach dem Auswahlbogen gebaut (`docs/beitraege.md`: Wunsch nach Demo, gemeinsam), als Veranschaulichung der Datenübergabe, ausdrücklich ohne Business-Case-Anspruch. Der Bogen hatte die Idee (K-I) mit K7 = 0 ausgeschlossen, gerade weil „erst bauen, dann prüfen“ der Fehler aus dem Marktgate war; das sagen wir offen. Die Demo belegt keine Nachfrage und keine KI-Genauigkeit; den Vorgänger-Hinweis haben wir im großen Datensatz abgeschaltet (3 von 3 Auslösungen falsch).
 Zeig mir wo: `docs/business_case_auswahl.md`, Zeile 50; `docs/demo_push.md`; Lab-Log §6 und §8.
 
 **E2. Was soll ein Reinigungsbetrieb morgen konkret tun?**
@@ -200,8 +224,8 @@ Kurzantwort: Nicht belastbar, es sind Hinweise. Neun Anrufe, drei erreicht (zwei
 Zeig mir wo: `docs/business.md` §8.9, Zeilen 314–343; `docs/business_case_auswahl.md`, Zeile 77.
 
 **E4. Würde das in einer anderen Nische funktionieren, etwa Winterdienst, oder an einem anderen Standort?**
-Kurzantwort: Die Pipeline ist übertragbar (CPV und Region sind Parameter von `src/ted_download.py`); die Leseregeln müsste man neu testen. Winterdienst hatte in Iteration 1 eine ähnliche Datenqualität (Laufzeitende 84,5 % gegen 80,9 % bestimmbar, Intervalle überlappen), aber nur 129 statt 440 Zuschläge in drei Monaten und ein Saisonmuster. Vor allem gilt die Lehre: zuerst prüfen, ob es die Liste schon gibt (Marktgate).
-Zeig mir wo: `docs/iterationen.md`, Zeilen 83–107.
+Kurzantwort: Die Pipeline ist übertragbar (CPV und Region sind Parameter von `src/ted_download.py`); die Leseregeln müsste man neu testen. Winterdienst hatte in Iteration 1 eine ähnliche Datenqualität (Laufzeitende bestimmbar bei 84,5 % gegen 80,9 %, Intervalle überlappen; 93,0 % gegen 90,0 %, wenn eine Dauer ohne Beginn mitzählt), aber nur 129 statt 440 Zuschläge in drei Monaten und ein Saisonmuster. Vor allem gilt die Lehre: zuerst prüfen, ob es die Liste schon gibt (Marktgate).
+Zeig mir wo: `docs/iterationen.md`, Zeilen 83–107; Werte mit Dauer: `reports/datenqualitaet_DEU_20260722_20261021.md`, Zeilen 155–156.
 
 **E5. Was ist mit Aufträgen unterhalb der EU-Schwelle?**
 Kurzantwort: Die fehlen in TED. Im Bekanntmachungsservice standen 32 von 120 Oberpfälzer Reinigungsverfahren nicht auf TED, also 26,7 % (Wilson 19,6–35,2 %); die Vorab-Schwelle von 33 % ist damit nicht entscheidbar. Die erste Auswertung ergab 0 von 84, das war ein Filterfehler; wir haben die Null geprüft statt sie zu berichten. Die Vergabestelle sagte, sie vergebe „sehr oft“ national (n = 1).
@@ -209,21 +233,21 @@ Zeig mir wo: Lab-Log §5, Paket B; `reports/oeffentlichevergabe_robustheit.md`.
 
 **E6. Was passiert bei doppeltem Datenvolumen?**
 Kurzantwort: Abruf und Aufbereitung skalieren, das sind Skripte gegen eine öffentliche API; die Liste hat heute 9.325 Lose. Was nicht skaliert, ist die Prüfung: Handprüfung, KI-Leser und Evaluator kosten je Stichprobe Zeit, und mit mehr Daten kommen neue Fehlerarten. Gemessen haben wir das nicht.
-Zeig mir wo: `docs/reproduzierbarkeit.md`; Notiz zur Transferfrage in `src/report/vortrag.py` (Folie „Empfehlung und Grenzen“).
+Zeig mir wo: `docs/reproduzierbarkeit.md`; Notiz zur Transferfrage in `src/report/vortrag.py` (Folie 10 „Empfehlung und Grenzen“).
 
 **E7. Warum habt ihr die Konkurrenz erst so spät gesehen?**
 Kurzantwort: Ein Prozessfehler. Die Sichtung der Wettbewerber (Plan G1.1) war früh geplant und blieb offen; zwei Suchen am 2026-10-24 fanden keinen deutschen Dienst; am 2026-10-29 fiel die Entscheidung gegen Kundenkontakt. Erst am 2026-11-05 fand ein Recherche-Agent Vergabeweiser und AusschreibungsRadar. Kosten: Die Iterationen 5 bis 9 arbeiteten an einer Liste, die es kostenlos gibt. Lehre: ein Marktgate vor der Modellierung.
 Zeig mir wo: Lab-Log §1, „Lernpunkt: Die Konkurrenz wurde erst spät gesehen“; `docs/business.md` §8.6.
 
 **E8. Was hat die KI falsch gemacht, und was habt ihr selbst bemerkt?**
-Kurzantwort: KI-Fehler (Auswahl): Auf Entwicklungsdaten hielt Claude 10 bis 11 von 12 Vorschlägen für plausibel, im Test waren 11 von 24 richtig; die „blinden“ Leser der Iteration 8 kannten die Projektbeschreibung; die Schwelle W8a war rechnerisch unerreichbar. Selbst bemerkt hat der Nutzer unter anderem: kalibrierte Paare in der Zweitprüfung (P11, P12), dass Iteration 6 ihm dieselben Paare noch einmal vorlegte, den Fall 527230-2026 (Dauerfeld enthält die Option schon; Paket C fand dann 12 Lose) und dass die Angabe des Evaluators, Vergabeweiser benachrichtige auch per Teams, Slack oder Webhook, nicht stimmt (Startseite nennt nur gespeicherte Suchen und E-Mail; Gegencheck 2026-11-06). Vieles fand der Evaluator, ein getrennter Subagent.
+Kurzantwort: KI-Fehler (Auswahl): Auf Entwicklungsdaten hielt die KI 10–11 von 12 Vorschläge für plausibel, im Test waren 11 von 24 richtig (Folie 9); die „blinden“ Leser der Iteration 8 kannten die Projektbeschreibung; die Schwelle W8a war rechnerisch unerreichbar. Selbst bemerkt haben wir unter anderem: Ludwig beim Ausfüllen seiner Zweitprüfung die kalibrierten Paare (P11, P12; laut `docs/beitraege.md` beurteilte er P1–P13) und beim Ausfüllen der Iteration 6 (Prüfung laut `docs/beitraege.md` bei Ludwig), dass Teil B dieselben Paare noch einmal vorlegte; wir (im Call) den Fall 527230-2026 (Dauerfeld enthält die Option schon; Paket C fand dann 12 Lose) und dass die Angabe des Evaluators, Vergabeweiser benachrichtige auch per Teams, Slack oder Webhook, nicht stimmt (Startseite nennt nur gespeicherte Suchen und E-Mail; Gegencheck 2026-11-06). In `docs/ki_irrwege.md` steht dafür „Nutzer“; wer von uns beiden es jeweils war, ist dort nicht festgehalten. Vieles fand der Evaluator, ein getrennter Subagent.
 Zeig mir wo: Lab-Log §8; `docs/ki_irrwege.md` (Spalte „Bemerkt durch“).
 
 **E9. Was war Manuels Beitrag?** (keine eigene Kategorie im Bogen; Bezug: Beiträge beider sichtbar)
 Kurzantwort, **am besten von Manuel selbst.** Laut `docs/beitraege.md` (Angabe beider, 2026-11-09, nicht aus Git belegbar): Rund 90 % der Zeit haben wir gemeinsam im Call gearbeitet; Claude Code lief über Ludwigs Rechner und Konto, darum steht im Git nur Ludwig. Einzeln belegt sind bei Manuel:
 - Zweitprüfung Iteration 5: Paare P14–P71 (Angabe, 2026-11-03).
 - Iteration 9: 15 Lose im TED-Original gelesen (V6: 14/15).
-- Kritische Business-Case-Prüfung mit dem Subagenten `evaluator` (2026-11-07): Kandidaten bewertet, Kernbotschaft entschärft, keine Iteration 11, Liste „Das dürfen wir NICHT behaupten“.
+- Kritische Business-Case-Prüfung mit dem Subagenten `evaluator` (2026-11-07): Kandidaten bewertet, Kernbotschaft entschärft, keine weitere Iteration (nur Nachträge nach Iteration 10), Liste „Das dürfen wir NICHT behaupten“.
 - Reproduzierbarkeitsprüfung auf macOS (2026-11-07): Repo frisch geklont, Berichts-Skripte neu erzeugt und verglichen, Befunde zu Windows-Pfaden und `zeitprotokoll.py`.
 - Video: Animation KI-gestützt erstellt, abwechselnd mit Ludwig überarbeitet; neue Fassung mit ElevenLabs-Stimmen (`franz_video_ton.mp4`, 2026-11-09).
 - Folien und Vortrag: Präsentation/Umsetzung (Angabe, 2026-11-03); Präsentation gemeinsam.
@@ -265,18 +289,85 @@ Zeig mir wo: `docs/business.md` §7.1; Lab-Log §5 (Make or Buy, Deutung).
 **E15. Wer hat das Video gemacht, und warum ist es gekürzt?**
 Kurzantwort: Die Animation hat Manuel KI-gestützt erstellt; wir haben sie abwechselnd gemeinsam überarbeitet. Die aktuelle Fassung mit Ton ist von Manuel (4:28), die Stimmen sind KI-generiert (ElevenLabs, steht im Abspann). Für den Vortrag hat Claude Code Runde 4 herausgeschnitten (kostenlose Liste, Vergleich 230 Verträge, Waage Selbstbauen/kostenlos, Oberpfalz, Bauplan; ca. 3:18 bis 4:14), weil die Folien danach diese Inhalte zeigen (Konkurrenz, Vergleich mit Vergabeweiser, Make or Buy); so bleiben 3:32. Schnitt in Sprechpausen, Original unverändert. Grenze: Figuren erfunden, Gespräche nachgestellt (es gab drei echte); das Video ist Veranschaulichung, kein Beleg. Tarif und Bedingungen von ElevenLabs haben wir nicht geprüft, darum ist das Video ohne Freigabe.
 Zeig mir wo: `docs/video/README.md`, Abschnitt „Aktuelle Fassung (2026-11-09)“; `docs/beitraege.md`, Zeile Video; Lab-Log §6.
+
+**E16. Was würdet ihr mit drei Monaten mehr Zeit tun?** (Bogentyp Transfer; Folie 11)
+Kurzantwort, in dieser Reihenfolge:
+1. **Zuerst die Nachfrage prüfen**, denn dort liegt der Engpass. Der Test ist vorbereitet, nicht durchgeführt: TED-Alarm nach Teams weiterleiten, dann drei Anrufe, Schwelle vorab festgelegt „mindestens 2 von 3 Betrieben“ nutzen Teams oder Planner, nennen mindestens 1 Stunde pro Woche und übertragen heute von Hand (K-J). Dazu das Wizard-of-Oz-Blatt mit 3 bis 5 Betrieben (eigene Schwelle: Gründe bei mindestens 3 von 5 Aufträgen ablesbar).
+2. **Die Liste unabhängig prüfen:** Menschen außerhalb des Teams lesen die 15 abweichenden Lose und 30 zufällige Lose; dazu ein Leser aus einer zweiten Modellfamilie. Heute fehlen beide (Lab-Log §1 Risiken und §7 „Offene Grenzen“). Die Zahl 30 ist unsere Setzung für den Plan, nicht belegt.
+3. **Eine Prognose nur mit neuen Merkmalen:** Vorinformationen (PIN, laut Iteration 2 etwa 30 pro Jahr in CPV 909) und ausgeübte Verlängerungen, geprüft als Vorwärtstest ab dem Zuschlag statt Rückwärtssuche (Lab-Log §7, „Lohnt eine weitere Prognose-Iteration?“).
+4. **Unterschwellige Verfahren erst, wenn (1) trägt:** 26,7 % der Oberpfälzer Reinigungsverfahren stehen nicht auf TED (Paket B), aber eine größere Datenbasis hilft nur, wenn jemand die Liste nutzt.
+
+Ausdrücklich **nicht:** weitere Leseregeln. Die Genauigkeit ist nicht der Engpass, die Liste gibt es kostenlos (E10, E12).
+Zeig mir wo: `docs/business_case_auswahl.md`, Nachtrag K-J, Zeile 77; `docs/wizard_of_oz_blatt.md`, Zeilen 5–7; Lab-Log §1 (Tabelle Risiken, Zeile „KI-Methode“), §5 (Paket B) und §7.
+
 ---
 
-## Teil C: Wer antwortet worauf (VORSCHLAG)
+## Teil C: Wer antwortet worauf (festgelegt)
 
-> **Nur ein Vorschlag**, abhängig davon, wer welchen Teil präsentiert. Grundidee: Fragen gehen an den, der den Teil **nicht** präsentiert hat. Am besten präsentiert also jeder den Teil, zu dem der **andere** die meisten eigenen Belege hat. Bitte vor dem Vortrag gemeinsam festlegen und diese Tabelle anpassen.
+**Aufteilung (festgelegt):** Ludwig spricht Folien 1, 2, 5, 6, 7, 9; Manuel spricht Folien 3, 4, 8, 10, 11. Laut Bewertungsbogen gehen die Fragen an das Teammitglied, das den Teil **nicht** präsentiert hat (`docs/bewertung_LN.md`, Zeile 29). Also: **Fragen zu Ludwigs Folien beantwortet Manuel, Fragen zu Manuels Folien beantwortet Ludwig.** Maßgeblich ist die Folie, auf die sich die Frage bezieht (Zuordnung unten; die Notiz der Folie 11 in `src/report/vortrag.py` nennt dieselben Folien für die Transferfragen). Passt eine Frage auf zwei Folien, gilt die erstgenannte; der andere ergänzt höchstens einen Satz.
 
-| Teil im Vortrag | präsentiert (Vorschlag) | Fragen dazu beantwortet (Vorschlag) | Warum |
-|---|---|---|---|
-| Methode, Technik, Live-Nachweis, KI-Irrwege (M1–M11, L1–L5, E8, E12, E13) | Ludwig | Manuel | Manuel hat laut `docs/beitraege.md` die Zweitprüfung (P14–P71, laut Nutzer) und das Lesen der 15 Lose gemacht; Live-Nachweise vorher einmal selbst ausführen |
-| Video und Demo (E1, E15) | Ludwig | Manuel | Manuel hat die Animation und die neue Fassung des Videos erstellt (`docs/beitraege.md`) |
-| Business Understanding: Betriebe, Konkurrenz, Make or Buy, Empfehlung (E2–E7, E10, E11, E14) | Manuel | Ludwig | Ludwig hat laut `docs/beitraege.md` die Anrufe geführt und die Entscheidungen dokumentiert |
-| Beitrag (E9) | – | jeder für sich | eigene Angaben, nichts annehmen |
+| Frage | Bezug (Folie) | antwortet |
+|---|---|---|
+| M1 Warum ±3 Monate und 60 %? | 2 (Kriterium in der Einleitung), Anhang 13 | **Manuel** |
+| M2 28,8 % gegen 17,3 % mehr als Zufall? | 8 (McNemar in der Notiz), Anhang 14 | **Ludwig** |
+| M3 6 Monate nach Ansicht der Daten? | 8, Anhang 14 | **Ludwig** |
+| M4 Welche Baseline? | 8 (R0 und R1 im Code), Anhang 15 | **Ludwig** |
+| M5 KI-Leser derselben Modellfamilie | 9, Anhang 15 | **Manuel** |
+| M6 Nur die 15 abweichenden Lose? | 5 | **Manuel** |
+| M7 Leakage im Backtest | 8 (Regel vor dem Lauf eingefroren) | **Ludwig** |
+| M8 Besseres Maß als die Trefferquote? | 8, Anhang 14 | **Ludwig** |
+| M9 Feste Regel statt gelerntes Modell | 8 | **Ludwig** |
+| M10 Ausreißer | 8 (Pipeline, Aufbereitung) | **Ludwig** |
+| M11 Zielwechsel Prognose → Liste | 2 (Video Runde 2 und 3), Anhang 12 | **Manuel** |
+| L1 Parameter ändern | 8 (Prognoseregel im Code) | **Ludwig** |
+| L2 Trennung von Entwicklung und Test | 9 | **Manuel** |
+| L3 Fehlwerte umstellen | 8 (Liste mit Stufen A–F) | **Ludwig** |
+| L4 Seed zeigen | 9 (Stichproben mit Seed) | **Manuel** |
+| L5 Diagramm erzeugen | 8, Anhang 14 | **Ludwig** |
+| E1 Demo nach dem Nein | 7 | **Manuel** |
+| E2 Was soll ein Betrieb morgen tun? | 10 | **Ludwig** |
+| E3 Wie belastbar sind drei Gespräche? | 3 | **Ludwig** |
+| E4 Andere Nische, anderer Standort | 10 (Notiz Folie 11: „Folien 6 und 10“) | **Ludwig** |
+| E5 Unterhalb der EU-Schwelle (Paket B) | 9 (die Null), Ausblick auf 6 | **Manuel** |
+| E6 Doppeltes Datenvolumen | 10 | **Ludwig** |
+| E7 Konkurrenz so spät gesehen | 9 (laut Notiz Folie 11), Bezug 4 | **Manuel** |
+| E8 KI-Fehler, selbst bemerkt | 9 | **Manuel** |
+| E9 Manuels Beitrag | – | **jeder für sich** (eigene Angaben, nichts annehmen) |
+| E10 Warum nicht einfach Vergabeweiser? | 4 | **Ludwig** |
+| E11 Wer würde zahlen? | 3 (Gespräche); falls an Folie 6 gestellt: Manuel | **Ludwig** |
+| E12 Knapp unter dem Kriterium | 10 (Grenzen), Anhang 15 | **Ludwig** |
+| E13 Zehnmal so viele Daten | 8 | **Ludwig** |
+| E14 Ab welcher Trefferquote lohnt es? | 6 (Deckungsbeitrag im Make-or-Buy-Modell) | **Manuel** |
+| E15 Video | 2 | **Manuel** |
+| E16 Drei Monate mehr Zeit | 11 | **Ludwig** |
+
+Ergebnis: Manuel 12 Fragen (M1, M5, M6, M11, L2, L4, E1, E5, E7, E8, E14, E15), Ludwig 19 (M2–M4, M7–M10, L1, L3, L5, E2–E4, E6, E10–E13, E16), E9 jeder für sich. Ludwig hat mehr, weil die Technikfolie 8 bei Manuel liegt.
+
+**Was jeder dafür vorbereiten muss (nicht mehr der eigene Teil, sondern der des anderen):**
+- **Manuel** (Folien 1, 2, 5, 6, 7, 9):
+  - Folie 9: Live-Nachweis L2 selbst ausführen können (Einzeiler Überschneidung 0, dann `git log --oneline --reverse 4f50436^..f6583cc`, Teil A (b)) und die Grenzen dazu sagen (Commit-Zeiten setzen wir selbst). Dazu L4 (Seed, Teil A (d)) und E8 (`docs/ki_irrwege.md`, Spalte „Bemerkt durch“).
+  - Folie 5: M6 (15 abweichende Lose: 7 Höchstende statt Grundlaufzeit, 4 Losebene) und M5 (KI-Leser; eigene Lesung der 15 Lose, 14/15, aber als Teammitglied nicht unabhängig).
+  - Folie 6: Make or Buy in `reports/make_or_buy.md` und Lab-Log §5 lesen; Kernsatz: Eigenbau gegen kostenlose Dienste im Basismodell nie günstiger, das ist eine Modellkonstruktion, keine Messung (Lab-Log §1, Zeile 137). E14 (Deckungsbeitrag nur als Modellgröße).
+  - Folien 2 und 7: M1, M11, E1, E15 (eigene Angaben zum Video).
+- **Ludwig** (Folien 3, 4, 8, 10, 11):
+  - Folie 8: Code-Nachweis L1 (Parameter ändern, Teil A (a)), dazu L3, L5 und M2–M4, M7–M10. Die Regel steht in `src/model/baseline.py`; die Varianten sind nachträglich, kein neuer Test.
+  - Folie 3: E3 und E11 (Gespräche; Ludwig hat die neun Anrufe geführt, `docs/beitraege.md`; Notizen in `docs/business.md` §8.9).
+  - Folien 4, 10, 11: E2, E4, E6, E10, E12, E13, E16.
+
+## Übungsplan Kreuzverhör (20 min)
+
+Ziel: Jeder übt genau die Fragen, die er im Vortrag beantworten muss, also die zu den Folien des **anderen**.
+
+**Vorbereitung (vor dem Start, nicht in den 20 min):** Ludwigs Windows-Laptop, PowerShell im Wurzelordner des Repos, vorher `chcp 65001` (sonst erscheinen „±“, „–“ und Umlaute als Ersatzzeichen, Hinweis in Teil A), Schriftgröße im Terminal mindestens 20 pt. Die Befehle aus Teil A (a) bis (e) in eine Textdatei zum Kopieren legen (außerhalb des Repos, z. B. auf dem Desktop), damit nichts abgetippt wird.
+
+| Zeit | Was | Wer |
+|---|---|---|
+| 0:00–6:00 | Manuel führt L1, L2 und L3 einmal selbst auf Ludwigs Laptop aus (Befehle aus der Textdatei) und vergleicht die Ausgabe mit Teil A. L1 und L3 beantwortet im Vortrag zwar Ludwig, Manuel soll sie aber im Notfall zeigen können. | Manuel tippt, Ludwig schaut zu |
+| 6:00–12:00 | **Runde 1:** Manuel zieht je eine M-, L- und E-Frage aus seiner Spalte in Teil C (Folien 1, 2, 5, 6, 7, 9). Ludwig stellt sie und stoppt die Zeit; danach je 30 s Rückmeldung. | Manuel antwortet |
+| 12:00–18:00 | **Runde 2:** Ludwig zieht je eine M-, L- und E-Frage aus seiner Spalte (Folien 3, 4, 8, 10, 11). Manuel stellt sie und stoppt. | Ludwig antwortet |
+| 18:00–20:00 | Notieren, welche Antwort länger als 45 s war oder ohne Datei blieb; diese Frage beim nächsten Durchgang zuerst ziehen. | beide |
+
+**Regeln für jede Antwort:** höchstens 45 Sekunden, nach dem Muster **Zahl – Grenze – Datei** (z. B. „28,8 % statt 60 % · 52 Paare, Rückwärtssuche · `reports/backtest_iteration5.md`“). Bei L-Fragen zählt die Zeit ab dem ersten Tastendruck. Eine Fangbehauptung aus Teil D pro Runde einstreuen.
 
 ## Teil D: Fangbehauptungen
 
@@ -289,6 +380,7 @@ Der Bogen 5 nennt den Typ „Falschbehauptung: erwartet wird Widerspruch mit Beg
 | „26,7 % der Verfahren liegen unter der EU-Schwelle.“ | Nein. 32 von 120 Oberpfälzer Reinigungsverfahren wurden **nicht auf TED gefunden**. Der Datensatz hat kein Schwellenfeld, den Wert haben wir nicht geprüft. B1 (33 %) ist nicht entscheidbar (Wilson 19,6–35,2 %). | `reports/oeffentlichevergabe_robustheit.md`, Zeilen 128 und 143 |
 | „Vergabeweiser ist schlechter als eure Liste.“ | Nein, nicht belegt. Abweichung bei 27 von 230 Losen (11,7 %), meist andere Zählweise: Vergabeweiser nennt ein Ende je Verfahren, nicht je Los; von den 15 Abweichungen in 10b sind 7 Höchstende statt Grundlaufzeit und 4 Losebene. Zählt das Höchstende als richtig, bleibt 3 : 0, p = 0,25. | Lab-Log §0 und §5 |
 | „Die 6 Monate habt ihr aus den Daten optimiert.“ | Nein. Der Vorlauf war gesetzt (Projektplan T3.3.4; Schätzung aus den Paaren, T3.2.1, bewusst gestrichen) und vor dem Lauf in `src/model/baseline.py` eingefroren. Nachträglich ist 6 trotzdem der beste Vorlauf (28,8 %). Das zeigt die Sensitivität, ist aber kein neuer Test. Ehrlich dazu: Der Anker Höchstende wurde nach Ansicht eines Teils der Paare gewählt (M3). | `docs/projektplan.md`, Zeilen 186 und 194; `reports/sensitivitaet_iteration5.md` |
+| „Ihr habt 11 von 24 Vorgängern gefunden.“ (Folie 2) | Nein. 11 von 24 **Vorschlägen** waren richtig (Präzision 45,8 %); gefunden wurden 11 von 38 Vorgängern = 28,9 % (Trefferquote). Beide Schwellen verfehlt. | `docs/iterationen.md`, Zeilen 407–408 |
 | „Der Median der Abweichung ist +0,6 Monate, die Prognose liegt also richtig.“ | Nein. Die Lage stimmt im Mittel, die Streuung ist riesig (mittleres Quartil −10,8 bis +14,3 Monate); nur 15 von 52 im Fenster. | M8; `docs/lab_log_bilder/diagramm_abweichung.png` |
 
 **Außerdem nicht sagen:**
@@ -297,3 +389,13 @@ Der Bogen 5 nennt den Typ „Falschbehauptung: erwartet wird Widerspruch mit Beg
 - „Selbst bauen ist teuer“ (das Modell zeigt nur: Der Preis ist kein Vorteil des Eigenbaus).
 - „Betriebe wollen das“ oder „würden zahlen“ (n = 3).
 - „0 %“ oder „genau 27 %“ für Paket B.
+- „Iteration 11“ (richtig: Nachträge nach Iteration 10).
+
+## Technik-Checkliste
+
+- Eigener Laptop (Ludwigs Windows-Laptop) und Adapter für den Beamer mitnehmen; Anschluss vorher testen.
+- Ton testen: Video auf Folie 2 im Raum kurz anspielen, Lautstärke einstellen.
+- USB-Stick: `docs/vortrag/vortrag_vergabe_radar.pptx`, beide MP4 (`docs/video/franz_video_ton_kurz.mp4`, 3:32; `docs/video/franz_video_ton.mp4`, 4:28) und eine Kopie des Repos.
+- `docs/demo/live_demo.html` vor dem Vortrag im Browser öffnen (Folie 7); PowerShell mit `chcp 65001` und großer Schrift offen lassen (Teil A).
+- Ausgeblendete Folien 12 bis 17 in der Bildschirmpräsentation über **Nummer + Enter** aufrufen; vorher einmal testen (z. B. `16` + Enter für die Sicherung).
+- Probedurchlauf mit Stoppuhr, **Ziel 14:30** (Puffer 30 s gegen 15:00). Zwischenzeiten laut Zeitbudget in der Notiz der Folie 11: **4:45** Ende Folie 2 (Wechsel zu Manuel) · **7:30** Ende Folie 4 (Wechsel zu Ludwig) · **10:45** Ende Folie 7 (Wechsel zu Manuel) · **13:00** Ende Folie 9 (Wechsel zu Manuel für Folien 10 und 11).
