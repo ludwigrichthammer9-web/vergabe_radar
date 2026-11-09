@@ -358,27 +358,70 @@ box(s, 5.4, 3.5, 3.85, 0.7, [[("Nicht belegt: ", {"bold": True, "color": AMBER})
 laien(s, "Kostenlose Dienste genügen, solange die Daten nicht ins eigene System sollen.")
 fuss(s, "Annahmen: 100 € je Stunde; Niedrig 20 h einmalig + 5 h im Jahr, Mittel 60 + 20, Hoch 120 + 50. „Nie“ = Modellkonstruktion. Gespräche n = 3.")
 
-# Folie 9 ------------------------------------------------------------
-s = new_slide("Demo: von der Bekanntmachung zur Push-Nachricht",
-              "ZEIT 0:45. KERNAUSSAGE: Eine kleine Demo zeigt, wie die Datenübergabe aussehen könnte: Aus einem Schnappschuss öffentlicher TED-Bekanntmachungen (621 Stück, 02. bis 16.10.2026) filtert ein Profil für die Oberpfalz, eine KI-Stufe urteilt über die Eignung, und das Ergebnis wird als Teams-Karte und als E-Mail-Entwurf erzeugt. Nichts wurde gesendet, alles läuft offline reproduzierbar. ""EINORDNUNG (wichtig): Die Demo ist eine Veranschaulichung der Datenübergabe, kein Business Case und kein Beleg für Nachfrage; der Auswahlbogen (docs/business_case_auswahl.md) hat diese Idee (K-I) wegen K7 = 0 ausgeschlossen. Sie wurde danach auf Wunsch gebaut. Profil und Stichtag sind erfunden. ""ZAHLEN (Fakt aus dem Lauf, docs/demo/ergebnis_lauf.json): 621 Bekanntmachungen, 145 im Fenster, 131 ohne Doppelveröffentlichung, 125 mit Reinigungs-CPV, davon in der Oberpfalz 4. Profil P1 (Schwandorf, 60 km): 4 Nachrichten, KI passt/unklar/nicht 3/1/0; Profil P2 (Amberg, 25 km): 2 Treffer, 1/1/0. Die Trefferzahlen sind kein Befund. KI gegen Regel stimmt in 13 von 14 Fällen überein, davon 5 trivial, ohne Referenz durch einen Menschen. Der Vorvertrags-Hinweis ist gebaut, an echten Bekanntmachungen nie ausgelöst (0 von 6), also nicht belegt. Teams-Anzeige, Versand und Live-Modus wurden nie getestet. ""FRAGE – ANTWORT: „Warum eine Demo, wenn es keinen Business Case gibt?“ Sie zeigt nur die technische Machbarkeit der Datenübergabe (offene Daten, Schema, KI-Stufe); sie sagt nichts über Nachfrage. Das Alleinstellungsmerkmal beanspruchen wir nicht: AusschreibungsRadar bietet Eignungsabgleich laut Anbieterseite schon. ""ZEIG-MIR-WO: docs/demo_push.md, docs/demo/push_demo.html (im Browser öffnen), docs/demo/nachrichten/.")
+# Folie 7 (Demo) ------------------------------------------------------------
+DEMO_VIDEO = ROOT / "docs" / "video" / "live_demo_aufnahme.mp4"      # erzeugt von src/report/demo_aufnahme.py
+DEMO_POSTER = ROOT / "docs" / "vortrag" / "poster_live_demo.png"
+DEMO_LINK_REL = "../demo/live_demo.html"                             # relativ zur PPTX (docs/vortrag/); gilt, wenn der Ordner docs/ mitgenommen wird
+DEMO_NOTIZEN = (
+    "ZEIT 0:45 (bleibt 0:45; dauert die Live-Vorführung länger, die Aufnahme zeigen oder die Demo überspringen und nur die Einordnung sagen). "
+    "KERNAUSSAGE: Eine kleine Demo zeigt, wie die Datenübergabe aussehen könnte: Aus echten, öffentlichen TED-Bekanntmachungen (großer Datensatz: 590 Ausschreibungen mit Leistungsort Bayern, 16.10.2025 bis 06.11.2026) filtert das Profil einer erfundenen Firma, und das Ergebnis erscheint als Teams-Karte und als E-Mail-Vorschau. Nichts wird gesendet, alles läuft offline im Browser. "
+    "KLICKFOLGE LIVE (8 Schritte, Datei docs/demo/live_demo.html, Link auf der Folie oder vorher in einem Browser-Tab öffnen): "
+    "(1) Seite zeigen und den gelben Hinweis vorlesen: fiktive Firma, kein Business Case, nichts gesendet. "
+    "(2) Datensatz „Großer Datensatz (Bayern, 12 Monate)“ wählen. "
+    "(3) Schnellknopf „Cham, 50 km“; der Frist-Filter bleibt AN („nur Ausschreibungen, bei denen man sich noch bewerben kann“). "
+    "(4) „Filterung starten“: der Trichter läuft etwa 8 Sekunden; dabei mitlesen, 590 → 562 → 428 → 405 → 37 → 19 → 2 (Zeitraum, Mehrfachveröffentlichung, Reinigungs-CPV, Oberpfalz, Radius, Frist). "
+    "(5) Ergebnis: 2 Treffer; sagen: „Treffer sind kein Befund über den Markt, die Firma ist erfunden.“ "
+    "(6) Einen Treffer anklicken: Teams-Karte mit den Fakten aus der Bekanntmachung, getrennt von der Deutung („Datenfeld“ gegen „im Text, nicht im Datenfeld“). "
+    "(7) Kanal „E-Mail“ umschalten: derselbe Inhalt als Mail-Vorschau. "
+    "(8) Frist-Filter AUS schalten (Schritt 1, Haken entfernen), erneut starten oder „Sofort anzeigen“: jetzt 16 statt 2 Treffer, 14 davon mit abgelaufener Frist. Dazu sagen: „Das ist nur zur Veranschaulichung; auf diese Ausschreibungen kann man sich nicht mehr bewerben.“ Der Warnhinweis „nur zur Veranschaulichung“ steht auch in der Seite. "
+    "RÜCKFALL: Öffnet der Browser nicht oder hakt die Seite, die Aufnahme auf der Folie abspielen (docs/video/live_demo_aufnahme.mp4, etwa 1 Minute, ohne Ton, dieselbe Klickfolge) und live dazu sprechen. "
+    "EINORDNUNG (wichtig, immer sagen): Die Demo ist eine Veranschaulichung der Datenübergabe, kein Business Case und kein Beleg für Nachfrage; der Auswahlbogen (docs/business_case_auswahl.md) hat diese Idee (K-I) wegen K7 = 0 ausgeschlossen. Sie wurde danach auf Wunsch gebaut. Firma und Stichtag sind erfunden; nichts wird gesendet; Treffer sind kein Befund; ein KI-Urteil gibt es nur für die gespeicherten Beispiele P1 und P2, bei jeder anderen Firma gilt eine Stichwortregel (im Bild „Stichwortregel, keine KI“). "
+    "ZAHLEN (Fakt aus dem Lauf, docs/demo/ergebnis_lauf.json, Beispiel-Schnappschuss): 621 Bekanntmachungen, 145 im Fenster, 131 ohne Doppelveröffentlichung, 125 mit Reinigungs-CPV, davon in der Oberpfalz 4. Profil P1 (Schwandorf, 60 km): 4 Nachrichten, KI passt/unklar/nicht 3/1/0; Profil P2 (Amberg, 25 km): 2 Treffer, 1/1/0. KI gegen Regel stimmt in 13 von 14 Fällen überein, davon 5 trivial, ohne Referenz durch einen Menschen. Der Vorvertrags-Hinweis ist gebaut, an echten Bekanntmachungen nie ausgelöst (0 von 6), also nicht belegt. Teams-Anzeige, Versand und Live-Modus wurden nie getestet. "
+    "FRAGE – ANTWORT: „Warum eine Demo, wenn es keinen Business Case gibt?“ Sie zeigt nur die technische Machbarkeit der Datenübergabe (offene Daten, Schema, Filter, Nachricht); sie sagt nichts über Nachfrage. „Wo ist der Unterschied zu AusschreibungsRadar?“ Ein Alleinstellungsmerkmal beanspruchen wir nicht: AusschreibungsRadar bietet Eignungsabgleich laut Anbieterseite schon; unser Merkmalsunterschied (Ende je Los, Grundlaufzeit) steckt nicht in dieser Demo, und ein Qualitätsvorsprung ist nicht belegt (Folien 4 und 5). "
+    "ZEIG-MIR-WO: docs/demo_push.md (Abschnitte 10 und 11), docs/demo/live_demo.html, docs/demo/push_demo.html, docs/demo/nachrichten/, Aufnahme docs/video/live_demo_aufnahme.mp4 (Skript src/report/demo_aufnahme.py). ")
 
-stufen = (("621", "Bekanntmachungen"), ("145", "vom 2. bis 16.10.2026"), ("125", "zur Gebäudereinigung"), ("4", "in der Oberpfalz"))
-for i, (zahl, text) in enumerate(stufen):
-    y = 1.4 + i * 0.7
-    rect(s, 0.6, y, 4.0, 0.6, WHITE, name=f"Trichter {i + 1} Karte")
-    box(s, 0.8, y, 1.0, 0.6, zahl, size=24, color=BLUE, font=HEAD, anchor=MSO_ANCHOR.MIDDLE, name=f"Trichter {i + 1} Zahl")
-    box(s, 1.8, y, 2.7, 0.6, text, size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Trichter {i + 1} Text")
-# Mock einer Teams-Karte (Aufbau der echten Karte docs/demo/nachrichten/P1_691173-2026.json)
-rect(s, 4.8, 1.4, 4.6, 2.05, WHITE, name="Karte Rahmen").line.color.rgb = LINE
-rect(s, 4.8, 1.4, 0.1, 2.05, BLUE, MSO_SHAPE.RECTANGLE, name="Karte Akzent")
-box(s, 5.1, 1.48, 4.15, 0.5, "Neue Ausschreibung: Unterhalts- sowie Glas- und Rahmenreinigung", size=14, bold=True, name="Karte Titel")
-box(s, 5.1, 2.1, 4.15, 0.7, [[("Ort  ", {"color": GREY}), ("Schwandorf", {})], [("Frist  ", {"color": GREY}), ("11.11.2026", {})]], size=14, name="Karte Fakten")
-rect(s, 5.1, 2.82, 4.15, 0.5, PALE, radius=0.1, name="Karte KI Block")
-box(s, 5.2, 2.82, 4.0, 0.5, "KI-Deutung, nicht Fakt", size=14, color=GREY, anchor=MSO_ANCHOR.MIDDLE, name="Karte KI Text")
-rect(s, 4.8, 3.55, 4.6, 0.65, BLUE, name="Hinweis Live-Demo")
-box(s, 4.95, 3.55, 4.3, 0.65, "Live-Demo im Browser: docs/demo/live_demo.html", size=14, bold=True, color=WHITE, anchor=MSO_ANCHOR.MIDDLE, name="Hinweis Live-Demo Text")
+s = new_slide("Demo: von der Bekanntmachung zur Push-Nachricht", DEMO_NOTIZEN)
+
+if DEMO_VIDEO.exists() and DEMO_POSTER.exists():
+    # Bildschirmaufnahme der Live-Demo (ohne Ton) links, Link und Einordnung rechts
+    s.shapes.add_movie(str(DEMO_VIDEO), Inches(0.6), Inches(1.4), Inches(4.97), Inches(2.8), poster_frame_image=str(DEMO_POSTER), mime_type="video/mp4").name = "Aufnahme Live-Demo"
+    rect(s, 5.8, 1.4, 3.6, 1.35, LBLUE, name="Link Karte")
+    tb = box(s, 5.95, 1.45, 3.3, 1.25, [[("Live-Demo im Browser", {"bold": True, "color": DBLUE, "size": 14, "font": HEAD})], "", ""],
+             size=14, color=DBLUE, anchor=MSO_ANCHOR.MIDDLE, name="Link Text", space=2)
+    # Absatz 2: anklickbarer Link (relativ zur PPTX); Absatz 3: Textpfad für den Fall, dass der Link auf dem Vortragsrechner nicht greift
+    p2, p3 = tb.text_frame.paragraphs[1], tb.text_frame.paragraphs[2]
+    r = p2.add_run()
+    r.text = "docs/demo/live_demo.html"
+    r.font.size, r.font.bold, r.font.name = Pt(14), True, BODY
+    r.hyperlink.address = DEMO_LINK_REL
+    r2 = p3.add_run()
+    r2.text = "Pfad: ...\\vergabe_radar\\docs\\demo\\live_demo.html"
+    r2.font.size, r2.font.color.rgb, r2.font.name = Pt(11), DBLUE, BODY
+    rect(s, 5.8, 2.85, 3.6, 1.35, WHITE, name="Einordnung Karte")
+    box(s, 5.95, 2.9, 3.3, 1.25, [[("Fiktive Firma, kein Business Case", {"bold": True, "color": RED, "size": 14, "font": HEAD})],
+                                  "Nichts gesendet. Treffer sind kein Befund. KI-Urteil nur für P1/P2, sonst Stichwortregel."],
+        size=12, anchor=MSO_ANCHOR.MIDDLE, name="Einordnung Text", space=3)
+    DEMO_STATUS = "Aufnahme eingebettet"
+else:
+    # Fallback ohne Aufnahme: Trichter und Karten-Mock wie bisher
+    stufen = (("621", "Bekanntmachungen"), ("145", "vom 2. bis 16.10.2026"), ("125", "zur Gebäudereinigung"), ("4", "in der Oberpfalz"))
+    for i, (zahl, text) in enumerate(stufen):
+        y = 1.4 + i * 0.7
+        rect(s, 0.6, y, 4.0, 0.6, WHITE, name=f"Trichter {i + 1} Karte")
+        box(s, 0.8, y, 1.0, 0.6, zahl, size=24, color=BLUE, font=HEAD, anchor=MSO_ANCHOR.MIDDLE, name=f"Trichter {i + 1} Zahl")
+        box(s, 1.8, y, 2.7, 0.6, text, size=14, anchor=MSO_ANCHOR.MIDDLE, name=f"Trichter {i + 1} Text")
+    # Mock einer Teams-Karte (Aufbau der echten Karte docs/demo/nachrichten/P1_691173-2026.json)
+    rect(s, 4.8, 1.4, 4.6, 2.05, WHITE, name="Karte Rahmen").line.color.rgb = LINE
+    rect(s, 4.8, 1.4, 0.1, 2.05, BLUE, MSO_SHAPE.RECTANGLE, name="Karte Akzent")
+    box(s, 5.1, 1.48, 4.15, 0.5, "Neue Ausschreibung: Unterhalts- sowie Glas- und Rahmenreinigung", size=14, bold=True, name="Karte Titel")
+    box(s, 5.1, 2.1, 4.15, 0.7, [[("Ort  ", {"color": GREY}), ("Schwandorf", {})], [("Frist  ", {"color": GREY}), ("11.11.2026", {})]], size=14, name="Karte Fakten")
+    rect(s, 5.1, 2.82, 4.15, 0.5, PALE, radius=0.1, name="Karte KI Block")
+    box(s, 5.2, 2.82, 4.0, 0.5, "KI-Deutung, nicht Fakt", size=14, color=GREY, anchor=MSO_ANCHOR.MIDDLE, name="Karte KI Text")
+    rect(s, 4.8, 3.55, 4.6, 0.65, BLUE, name="Hinweis Live-Demo")
+    box(s, 4.95, 3.55, 4.3, 0.65, "Live-Demo im Browser: docs/demo/live_demo.html", size=14, bold=True, color=WHITE, anchor=MSO_ANCHOR.MIDDLE, name="Hinweis Live-Demo Text")
+    DEMO_STATUS = "Fallback ohne Aufnahme"
 laien(s, "So könnte ein passender Hinweis im Alltag aussehen. Gesendet wurde nichts.")
-fuss(s, "Veranschaulichung, kein Business Case. Profil und Stichtag erfunden, Anzeige in Teams nie getestet. Karte gekürzt (P1_691173-2026).")
+fuss(s, "Veranschaulichung, kein Business Case. Firma und Stichtag erfunden, Anzeige in Teams nie getestet. Aufnahme ohne Ton: docs/video/live_demo_aufnahme.mp4.")
 
 # Folie 10 ------------------------------------------------------------
 s = new_slide("KI-Irrwege und Trennung von Entwicklung und Test",
@@ -530,4 +573,4 @@ else:
         sl._element.set("show", "0")
 OUT.parent.mkdir(parents=True, exist_ok=True)
 prs.save(OUT)
-print(len(prs.slides), "Folien (ausgeblendet:", 0 if "--ohne-anhang" in sys.argv else 3, "); Video:", VIDEO_STATUS, ";", OUT)
+print(len(prs.slides), "Folien (ausgeblendet:", 0 if "--ohne-anhang" in sys.argv else 3, "); Video:", VIDEO_STATUS, "; Demo:", DEMO_STATUS, ";", OUT)

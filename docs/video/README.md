@@ -82,6 +82,8 @@ Der Schalter `--stimme` wählt den Weg:
 | Weg | Aufruf | Eigenschaften |
 |---|---|---|
 | **piper** (Standard) | `.venv-video\Scripts\python.exe -I src\report\video_vertonung.py` | offline, kostenlos, Modell `de_DE-thorsten-high` |
+| piper-mehrstimmig | `... --stimme piper-mehrstimmig` | offline, eigenes Modell je Figur (siehe unten) |
+| edge | `... --stimme edge` | Cloud (Microsoft, inoffiziell), Texte verlassen den Rechner |
 | elevenlabs | `... --stimme elevenlabs` (Plan ohne Netz: `--trocken`) | Cloud, braucht Konto und Schlüssel |
 | sapi | `... --stimme sapi` | frühere Fassung v1 (Windows Hedda), Ausgabe in `audio_sapi/` |
 
@@ -90,6 +92,35 @@ Der Schalter `--stimme` wählt den Weg:
 - Lizenz: Die Stimme „Thorsten“ (Thorsten-Voice, Thorsten Müller) steht laut Modellkarte unter CC0 (gemeinfrei). Piper selbst: MIT-Lizenz; Sprachausgabe nutzt eSpeak-NG-Daten im Paket (GPL-3-Lizenz der eSpeak-NG-Daten, bei Weitergabe des Pakets beachten; das Video enthält nur die erzeugte Audiodatei).
 - Das Modell hat **einen** Sprecher. Die Figuren werden über Tonhöhe und Tempo unterschieden (ffmpeg): Franz etwas höher und flotter, Bit (KI) deutlich höher mit leichtem Tremolo (robotisch), Prüfi tiefer, Erzähler unverändert. Das Tempo (`length_scale`) wird je Untertitel nur erhöht, wenn die Dauer sonst nicht ins Fenster passt (Dauer <= Fenster - 0,3 s). Aufnahmen werden vorne von Stille befreit und auf -3 dBFS Spitze normiert.
 - Ob „T E D“ oder „Ted“ besser klingt, wurde **nicht gehört**; im Sprechtext steht „T E D“ (Buchstabieren), änderbar in `sprechertext.json`.
+
+### Mehrstimmig: piper-mehrstimmig und edge (Wahl steht aus)
+Anlass: Der Nutzer wollte eine menschlichere Stimme und Stimmvorlagen. Beide Wege sind **vorbereitet, aber noch nicht als Standard erzeugt**; `docs/video/audio/` und die Videos v1 bis v3 sind unverändert. Die Zuordnung Figur -> Stimme steht in `docs/video/stimmen.json` (Abschnitte `piper_mehrstimmig` und `edge`, jeweils mit Feld `abspann`).
+
+**Hörproben** (5 Sätze: Erzähler, Franz, Bit, Prüfi, Erzähler): `docs/video/stimmproben/probe_piper-mehrstimmig.wav` und `probe_edge.wav`. Neu erzeugen: `.venv-video\Scripts\python.exe -I src\report\video_vertonung.py --stimme piper-mehrstimmig --probe` (bzw. `--stimme edge --probe`). `--probe` schreibt nur dorthin, nicht nach `audio/`, und ändert die HTML nicht.
+
+**Nach der Wahl genügen zwei Befehle** (Beispiel für Piper mehrstimmig; für Edge `--stimme edge`):
+```
+.venv-video\Scripts\python.exe -I src\report\video_vertonung.py --stimme piper-mehrstimmig
+.venv-video\Scripts\python.exe src\report\video_export.py --out docs\video\franz_und_die_glaskugel_szenen_0-5_v4.mp4
+```
+Der erste Befehl erzeugt alle `audio/cap_NN.wav` und `manifest.json` neu (überschreibt die jetzigen WAVs; die v3-Töne stecken weiter in der v3-MP4) und setzt den Stimmennamen im Abspann und auf dem Startbildschirm der HTML aus dem Feld `abspann` der `stimmen.json` (nur diese zwei Textstellen, der Szenenablauf bleibt unverändert). Das Tempo je Untertitel wird wie bei Piper automatisch angepasst (Dauer <= Fenster - 0,3 s). Zurück zur alten Stimme: `--stimme piper` (setzt den Abspann **nicht** zurück; dort `Stimmen: synthetisch (...)` von Hand oder aus Git wiederherstellen).
+
+**Piper mehrstimmig** (offline). Modelle liegen außerhalb des Repos in `%LOCALAPPDATA%\piper_models`. Geprüfte Liste (Hugging Face `rhasspy/piper-voices`, `de/de_DE`, Modellkarten am 2026-11-09 gelesen):
+| Modell | Qualität | Lizenz laut Modellkarte | Entscheidung |
+|---|---|---|---|
+| thorsten (high/medium/low) | 22 kHz | CC0 | benutzt: Erzähler (high), Bit (medium) |
+| thorsten_emotional (medium, 8 Sprecher: amused, angry, disgusted, drunk, neutral, sleepy, surprised, whisper) | 22 kHz | CC0 | benutzt: Franz (Sprecher `amused`) |
+| kerstin (low) | 16 kHz | CC0 | benutzt: Prüfi (weibliche Stimme; die Karte nennt kein Geschlecht, nach dem Namen angenommen) |
+| mls (medium, 236 Sprecher) | 22 kHz | CC-BY 4.0 (OpenSLR 94, Namensnennung nötig) | heruntergeladen, **nicht benutzt** (Geschlecht und Klang der Sprecher-IDs ohne Hören nicht wählbar) |
+| karlsson, ramona (low), eva_k (x_low) | 16 kHz | Karte nur „See URL“ (M-AILABS, caito.de); die Seite war nicht erreichbar | **nicht benutzt** (Lizenz nicht geprüft) |
+| pavoque (low) | 16 kHz | CC BY-NC-SA 4.0 | **nicht benutzt** (Weitergabe nur nichtkommerziell und unter gleichen Bedingungen) |
+Die niedrige Qualität von kerstin (16 kHz) klingt vermutlich dumpfer als Thorsten-high; ungehört.
+Bit bleibt leicht robotisch (Tonhöhe x1,14 und Tremolo per ffmpeg). Ein Modell je Figur lädt die Datei einmal; erster Aufruf mit allen Modellen braucht zusätzlich Speicher (rund 300 MB Modelle gesamt). Zusätzlich geladen: `de_DE-kerstin-low`, `de_DE-thorsten_emotional-medium`, `de_DE-mls-medium` (je `.onnx` und `.onnx.json` von `https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/<name>/<qualität>/`).
+
+**Edge (Microsoft-Neuralstimmen)**, Paket `edge-tts==7.3.1` in `requirements-video.txt` (Installation: `.venv-video\Scripts\python.exe -m pip install -r requirements-video.txt`). Stimmenliste: `.venv-video\Scripts\edge-tts.exe --list-voices` (deutsch: Amala, Conrad, FlorianMultilingual, Katja, Killian, SeraphinaMultilingual). Zuordnung: Erzähler Florian (Multilingual), Franz Conrad, Bit Killian (Tonhöhe +25 Hz plus Tremolo), Prüfi Katja, Frage ans Publikum Seraphina. `rate` und `pitch` je Figur in `stimmen.json` als Basis; das Skript erhöht die Rate in 5-Prozent-Schritten (bis +35 Prozent über der Basis), bis die Dauer ins Fenster passt. Aufnahmen werden wie bei Piper von Stille befreit und auf -3 dBFS normiert.
+- **Prüfung der Fenster (2026-11-09, Trockenlauf in ein Temp-Verzeichnis, nicht nach `audio/`):** Alle 29 Untertitel passen bei beiden Wegen (Dauer <= Fenster - 0,3 s), Spitze -3 dBFS, keine Klipps, Anfangsstille <= 0,05 s. Piper mehrstimmig brauchte nur Tempo 0,90 bis 1,00. Edge ist langsamer als die Fenster: der Erzähler Florian braucht oft +5 bis +20 Prozent Rate, bei Untertitel 20 (Einordnung) +35 Prozent (Grenze der Automatik), Untertitel 0, 6, 14, 19 +20 Prozent. Das klingt dort vermutlich gehetzt (ungehört); Abhilfe: Sprechtext in `sprechertext.json` kürzen oder den Erzähler auf eine andere Stimme setzen.
+- **Datenabfluss und Status:** Die Sprechtexte (öffentliche Projektfakten, keine personenbezogenen Daten) werden an einen Microsoft-Dienst gesendet. `edge-tts` nutzt den Online-Dienst des Edge-Browsers über einen **inoffiziellen** Zugang, ohne Vertrag, ohne Zusicherung der Verfügbarkeit und ohne klare Nutzungsbedingungen für Dritte; für ein Studienprojekt vom Nutzer ausdrücklich gewünscht. Das Ergebnis (WAV im Video) ist reproduzierbar nur, solange der Dienst die Stimmen unverändert anbietet; Netz ist zur Erzeugung nötig, danach nicht mehr.
+- Die Lizenzlage der erzeugten Audiodaten ist nicht geklärt; vor einer Veröffentlichung außerhalb des Studienprojekts prüfen.
 
 ### ElevenLabs (optional, nicht getestet)
 - Voraussetzung: eigenes ElevenLabs-Konto, Umgebungsvariable `ELEVENLABS_API_KEY` (**nie in Dateien schreiben**), echte `voice_id` je Sprecher in `docs/video/stimmen.json` (dort stehen Platzhalter `HIER_VOICE_ID_EINTRAGEN`, keine erfundenen IDs). Modell `eleven_multilingual_v2`, Ausgabe `pcm_22050`.

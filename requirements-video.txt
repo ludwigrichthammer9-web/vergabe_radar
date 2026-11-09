@@ -4,3 +4,5 @@ piper-tts==1.8.0
 numpy==2.5.4
 # Nur fuer --stimme elevenlabs (optional, nicht getestet):
 elevenlabs==2.77.0
+# Nur fuer --stimme edge (optional, inoffizieller Zugang zu Microsoft-Neuralstimmen, Texte gehen ins Netz):
+edge-tts==7.3.1

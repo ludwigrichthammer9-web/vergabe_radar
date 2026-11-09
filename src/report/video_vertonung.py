@@ -14,6 +14,10 @@ Stimmen (Schalter --stimme):
               voice_id in docs/video/stimmen.json. Die Texte VERLASSEN den Rechner, Kosten
               laufen über das eigene Konto. Ausgabe docs/video/audio/. Mit --trocken nur Plan,
               kein Netz, kein Schlüssel nötig. NICHT getestet.
+  piper-mehrstimmig  wie piper, aber je Figur ein eigenes Modell (docs/video/stimmen.json,
+              Abschnitt piper_mehrstimmig; nur Modelle mit CC0/CC-BY-Lizenz).
+  edge        Microsoft-Neuralstimmen ueber das Paket edge-tts (Abschnitt edge in stimmen.json).
+              Die Sprechtexte VERLASSEN den Rechner (inoffizieller Zugang zu einem Microsoft-Dienst).
   sapi        Windows SAPI (Hedda), offline; Ausgabe docs/video/audio_sapi/ (frühere Fassung v1).
 
 Das Tempo wird je Untertitel so gewählt, dass die Dauer <= Fenster - 0,3 s ist; passt es
@@ -21,8 +25,8 @@ nicht, wird gemeldet (Text kürzen oder Fenster verlängern).
 Ergebnis: manifest.json im Ausgabeordner (Index, Start, Ende, Sprecher, Datei, Dauer, Spitze).
 
 Aufruf (Windows):
-    .venv-video\Scripts\python.exe -I src\report\video_vertonung.py [--stimme piper|elevenlabs|sapi]
-        [--trocken] [--modell PFAD.onnx]
+    .venv-video\Scripts\python.exe -I src\report\video_vertonung.py [--stimme piper|piper-mehrstimmig|edge|elevenlabs|sapi]
+        [--trocken] [--modell PFAD.onnx] [--probe]
 """
 import argparse
 import json
@@ -132,7 +136,8 @@ def schreibe_wav(p, x, sr):
 def nachbearbeiten(src, dst, filt=""):
     """Stille am Anfang kürzen, Filter anwenden, auf Mono/22050 Hz, Spitze auf -3 dBFS."""
     import numpy as np
-    kette = ["silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05"]
+    kette = ["silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05",
+             f"aresample={SR}"]
     if filt:
         kette.append(filt)
     tmp = Path(str(dst) + ".tmp.wav")
@@ -197,6 +202,122 @@ def lauf_piper(caps, texte, out, modell):
                     break
             ergebnis[i] = f"length_scale {basis*f:.2f}, Tonhoehe x{pf}"
     return ergebnis
+
+
+# ---------------- Piper mehrstimmig ----------------
+def modell_pfad(name):
+    return Path(os.path.expandvars(r"%LOCALAPPDATA%\piper_models")) / f"{name}.onnx"
+
+
+def lauf_piper_mehr(caps, texte, out, indices):
+    from piper import PiperVoice, SynthesisConfig
+    cfg = json.loads(STIMMEN.read_text(encoding="utf-8"))["piper_mehrstimmig"]["sprecher"]
+    stimmen = {}
+    ergebnis = {}
+    with tempfile.TemporaryDirectory() as tmp:
+        for i in indices:
+            start, ende, wer, _ = caps[i]
+            c = cfg.get(wer, cfg["E"])
+            if c["modell"] not in stimmen:
+                pf = modell_pfad(c["modell"])
+                if not pf.exists():
+                    sys.exit(f"Piper-Modell fehlt: {pf} (siehe README, Abschnitt Mehrstimmig)")
+                v = PiperVoice.load(pf)
+                mp = json.loads(Path(str(pf) + ".json").read_text(encoding="utf-8"))
+                stimmen[c["modell"]] = (v, mp.get("speaker_id_map") or {})
+            voice, smap = stimmen[c["modell"]]
+            sid = smap[c["speaker"]] if c.get("speaker") else None
+            basis, pf_, extra = c.get("length_scale", 1.0), c.get("pitch", 1.0), c.get("filter", "")
+            filt = ",".join(x for x in (pitch_filter(pf_), extra) if x)
+            fenster = ende - start - LEAD_OUT
+            for f in PIPER_FAKTOREN:
+                roh = Path(tmp) / f"roh_{i}.wav"
+                with wave.open(str(roh), "wb") as w:
+                    voice.synthesize_wav(texte[i], w, SynthesisConfig(speaker_id=sid, length_scale=basis * f))
+                d = nachbearbeiten(roh, out / f"cap_{i:02d}.wav", filt)
+                if d <= fenster:
+                    break
+            ergebnis[i] = (c["modell"] + (f"/{c['speaker']}" if c.get("speaker") else "")
+                           + f", length_scale {basis*f:.2f}, Tonhoehe x{pf_}")
+    return ergebnis
+
+
+# ---------------- Edge (Microsoft Neural, edge-tts) ----------------
+EDGE_RATEN = [0, 5, 10, 15, 20, 25, 30, 35]    # Prozentpunkte, die auf die Basisrate addiert werden
+
+
+def lauf_edge(caps, texte, out, indices):
+    try:
+        import asyncio
+        import edge_tts
+    except ImportError:
+        sys.exit("Paket edge-tts fehlt: .venv-video\\Scripts\\python.exe -m pip install -r requirements-video.txt")
+    cfg = json.loads(STIMMEN.read_text(encoding="utf-8"))["edge"]["sprecher"]
+    print("HINWEIS: Die Sprechtexte werden an einen Microsoft-Dienst gesendet (edge-tts, inoffizieller Zugang).")
+
+    async def hole(text, voice, rate, pitch, ziel):
+        for versuch in range(3):
+            try:
+                await edge_tts.Communicate(text, voice, rate=rate, pitch=pitch).save(str(ziel))
+                return
+            except Exception:           # Netzfehler: erneut versuchen
+                if versuch == 2:
+                    raise
+                await asyncio.sleep(2)
+
+    ergebnis = {}
+    with tempfile.TemporaryDirectory() as tmp:
+        for i in indices:
+            start, ende, wer, _ = caps[i]
+            c = cfg.get(wer, cfg["E"])
+            basis = int(c.get("rate", "+0%").replace("%", ""))
+            fenster = ende - start - LEAD_OUT
+            for zu in EDGE_RATEN:
+                rate = f"{basis + zu:+d}%"
+                roh = Path(tmp) / f"roh_{i}.mp3"
+                asyncio.run(hole(texte[i], c["voice"], rate, c.get("pitch", "+0Hz"), roh))
+                d = nachbearbeiten(roh, out / f"cap_{i:02d}.wav", c.get("filter", ""))
+                if d <= fenster:
+                    break
+            ergebnis[i] = f"{c['voice']}, rate {rate}, pitch {c.get('pitch', '+0Hz')}"
+    return ergebnis
+
+
+def abspann_setzen(stimme):
+    """Schreibt den Stimmennamen (stimmen.json, Feld abspann) in die zwei Stellen der HTML."""
+    cfg = json.loads(STIMMEN.read_text(encoding="utf-8"))
+    key = {"piper-mehrstimmig": "piper_mehrstimmig", "edge": "edge"}.get(stimme)
+    if not key or "abspann" not in cfg.get(key, {}):
+        return
+    neu = cfg[key]["abspann"]
+    html = HTML.read_text(encoding="utf-8")
+    html2, n = re.subn(r"Stimmen?: synthetisch \([^()<]*\)", lambda m: neu, html)
+    if n:
+        HTML.write_text(html2, encoding="utf-8")
+    print(f"Abspann/Startbildschirm: {n} Stelle(n) auf '{neu}' gesetzt")
+
+
+def probe(stimme, caps, texte):
+    """Hoerprobe: 5 Saetze (Erzaehler, Franz, Bit, Pruefi, Erzaehler) -> docs/video/stimmproben/."""
+    import numpy as np
+    ziel = VIDEO / "stimmproben"
+    ziel.mkdir(exist_ok=True)
+    wahl = [0, 1, 5, 17, 20]
+    with tempfile.TemporaryDirectory() as tmp:
+        t = Path(tmp)
+        info = (lauf_piper_mehr(caps, texte, t, wahl) if stimme == "piper-mehrstimmig"
+                else lauf_edge(caps, texte, t, wahl))
+        teile, bericht = [], []
+        for i in wahl:
+            x, sr = lies_wav(t / f"cap_{i:02d}.wav")
+            m = messen(t / f"cap_{i:02d}.wav")
+            fenster = caps[i][1] - caps[i][0] - LEAD_OUT
+            bericht.append(f"  {i:02d} {caps[i][2]} dauer {m['dauer']:.2f}s, fenster-0,3 {fenster:.2f}s, passt {m['dauer'] <= fenster}"
+                           f" | spitze {m['spitze_dbfs']} dBFS | klipps {m['klipps']} | stille {m['stille_anfang']}s | {info[i]}")
+            teile += [x, np.zeros(int(0.7 * sr), dtype="float32")]
+        schreibe_wav(ziel / f"probe_{stimme}.wav", np.concatenate(teile[:-1]), SR)
+    print("\n".join(bericht))
+    print("Hoerprobe:", ziel / f"probe_{stimme}.wav")
 
 
 # ---------------- ElevenLabs ----------------
@@ -276,21 +397,31 @@ def lauf_sapi(caps, texte, out):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stimme", choices=["piper", "elevenlabs", "sapi"], default="piper")
+    ap.add_argument("--stimme", choices=["piper", "piper-mehrstimmig", "edge", "elevenlabs", "sapi"], default="piper")
     ap.add_argument("--trocken", action="store_true", help="nur Plan zeigen (elevenlabs: kein Netz)")
     ap.add_argument("--modell", default=None, help="Pfad zum Piper-Modell (.onnx)")
+    ap.add_argument("--probe", action="store_true", help="nur Hoerprobe (5 Saetze) nach docs/video/stimmproben/")
     a = ap.parse_args()
     caps = lese_caps()
     if not caps:
         sys.exit("Keine Untertitel gefunden")
     texte = sprechtexte(caps) if a.stimme != "sapi" else {i: t for i, t in sprechtexte_sapi(caps).items()}
     out = OUT_SAPI if a.stimme == "sapi" else OUT_NEU
+    if a.probe:
+        if a.stimme not in ("piper-mehrstimmig", "edge"):
+            sys.exit("--probe nur mit piper-mehrstimmig oder edge")
+        probe(a.stimme, caps, texte)
+        return
     if a.stimme == "elevenlabs" and a.trocken:
         lauf_elevenlabs(caps, texte, out, True)
         return
     out.mkdir(parents=True, exist_ok=True)
     if a.stimme == "piper":
         info = lauf_piper(caps, texte, out, a.modell)
+    elif a.stimme == "piper-mehrstimmig":
+        info = lauf_piper_mehr(caps, texte, out, range(len(caps)))
+    elif a.stimme == "edge":
+        info = lauf_edge(caps, texte, out, range(len(caps)))
     elif a.stimme == "elevenlabs":
         info = lauf_elevenlabs(caps, texte, out, False)
     else:
@@ -309,6 +440,7 @@ def main():
               f"spitze {m['spitze_dbfs']:6.2f} dBFS stille {m['stille_anfang']:.2f}s {info[i]}"
               f"{'' if passt else '  <-- PASST NICHT'}")
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+    abspann_setzen(a.stimme)
     if schlecht:
         print("Nicht passend:", schlecht)
 

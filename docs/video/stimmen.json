@@ -3,10 +3,105 @@
  "model_id": "eleven_multilingual_v2",
  "output_format": "pcm_22050",
  "sprecher": {
-  "E": {"name": "Erzaehler", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0},
-  "F": {"name": "Franz", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0},
-  "B": {"name": "Bit (KI)", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.05},
-  "P": {"name": "Pruefi (Kontrolle)", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0},
-  "Q": {"name": "Frage ans Publikum", "voice_id": "HIER_VOICE_ID_EINTRAGEN", "speed": 1.0}
+  "E": {
+   "name": "Erzaehler",
+   "voice_id": "HIER_VOICE_ID_EINTRAGEN",
+   "speed": 1.0
+  },
+  "F": {
+   "name": "Franz",
+   "voice_id": "HIER_VOICE_ID_EINTRAGEN",
+   "speed": 1.0
+  },
+  "B": {
+   "name": "Bit (KI)",
+   "voice_id": "HIER_VOICE_ID_EINTRAGEN",
+   "speed": 1.05
+  },
+  "P": {
+   "name": "Pruefi (Kontrolle)",
+   "voice_id": "HIER_VOICE_ID_EINTRAGEN",
+   "speed": 1.0
+  },
+  "Q": {
+   "name": "Frage ans Publikum",
+   "voice_id": "HIER_VOICE_ID_EINTRAGEN",
+   "speed": 1.0
+  }
+ },
+ "_hinweis_mehrstimmig": "Nur fuer --stimme piper-mehrstimmig: je Figur Modell (Dateiname ohne .onnx in %LOCALAPPDATA%\\piper_models), optional speaker (Name aus speaker_id_map), length_scale (Basis), pitch (Faktor), filter (ffmpeg). Lizenzen siehe README.",
+ "piper_mehrstimmig": {
+  "abspann": "Stimmen: synthetisch (Piper: Thorsten-Voice, Thorsten emotional, Kerstin; alle CC0)",
+  "sprecher": {
+   "E": {
+    "name": "Erzaehler",
+    "modell": "de_DE-thorsten-high",
+    "length_scale": 1.0,
+    "pitch": 1.0
+   },
+   "F": {
+    "name": "Franz",
+    "modell": "de_DE-thorsten_emotional-medium",
+    "speaker": "amused",
+    "length_scale": 0.95,
+    "pitch": 1.04
+   },
+   "B": {
+    "name": "Bit (KI)",
+    "modell": "de_DE-thorsten-medium",
+    "length_scale": 0.95,
+    "pitch": 1.14,
+    "filter": "tremolo=f=35:d=0.15"
+   },
+   "P": {
+    "name": "Pruefi (Kontrolle)",
+    "modell": "de_DE-kerstin-low",
+    "length_scale": 1.0,
+    "pitch": 1.0
+   },
+   "Q": {
+    "name": "Frage ans Publikum",
+    "modell": "de_DE-thorsten-high",
+    "length_scale": 1.0,
+    "pitch": 1.04
+   }
+  }
+ },
+ "_hinweis_edge": "Nur fuer --stimme edge (Paket edge-tts). Texte gehen an einen Microsoft-Dienst (inoffizieller Zugang). voice: Name aus 'edge-tts --list-voices'; rate/pitch Basis (wird nur erhoeht, wenn die Dauer nicht ins Fenster passt); filter: optionaler ffmpeg-Filter.",
+ "edge": {
+  "abspann": "Stimmen: synthetisch (Microsoft Neural-Stimmen ueber edge-tts)",
+  "sprecher": {
+   "E": {
+    "name": "Erzaehler",
+    "voice": "de-DE-FlorianMultilingualNeural",
+    "rate": "+0%",
+    "pitch": "+0Hz"
+   },
+   "F": {
+    "name": "Franz",
+    "voice": "de-DE-ConradNeural",
+    "rate": "+5%",
+    "pitch": "+0Hz"
+   },
+   "B": {
+    "name": "Bit (KI)",
+    "voice": "de-DE-KillianNeural",
+    "rate": "+5%",
+    "pitch": "+25Hz",
+    "filter": "tremolo=f=35:d=0.15"
+   },
+   "P": {
+    "name": "Pruefi (Kontrolle)",
+    "voice": "de-DE-KatjaNeural",
+    "rate": "+0%",
+    "pitch": "+0Hz"
+   },
+   "Q": {
+    "name": "Frage ans Publikum",
+    "voice": "de-DE-SeraphinaMultilingualNeural",
+    "rate": "+0%",
+    "pitch": "+0Hz"
+   }
+  }
  }
 }

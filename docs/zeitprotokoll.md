@@ -1,6 +1,6 @@
 # Zeitprotokoll (aus der Git-Historie)
 
-_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-06. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
+_Erzeugt mit `src/zeitprotokoll.py` am 2026-11-09. Methode: Commits mit höchstens 90 min Abstand = eine Sitzung; Dauer = erster bis letzter Commit + 30 min Vorlauf. **Untergrenze:** Arbeit ohne Commit (Lesen, Handprüfung, Recherche, Gespräche) fehlt; die Rechenzeit von Claude ist enthalten. Beiträge anderer Personen (Kommilitone) stehen nicht im Git und werden unten von Hand ergänzt._
 
 | Iteration | Sitzungen | Commits | Stunden (Untergrenze) |
 |---|---|---|---|
@@ -14,8 +14,8 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-06. Methode: Commits mit höchste
 | 8 | 2 | 5 | 1.3 |
 | 9 | 2 | 10 | 1.9 |
 | 10 | 3 | 21 | 4.4 |
-| 11 | 1 | 10 | 1.5 |
-| **Summe** | 30 | 128 | **37.7** |
+| 11 | 5 | 32 | 7.4 |
+| **Summe** | 34 | 150 | **43.5** |
 
 ## Iteration 1
 
@@ -100,12 +100,19 @@ _Erzeugt mit `src/zeitprotokoll.py` am 2026-11-06. Methode: Commits mit höchste
 
 | Tag | Zeit | Commits | Std. | Erster / letzter Commit |
 |---|---|---|---|---|
-| 2026-11-05 | 22:58–00:01 | 10 | 1.5 | Lab-Log auf Iteration 10 und 10b: Zyklus 4 (Business Understanding und / Wizard-of-Oz-Blatt: fünf echte laufende Oberpfälzer Lose zur Bewertung |
+| 2026-11-05 | 22:58–00:16 | 12 | 1.8 | Lab-Log auf Iteration 10 und 10b: Zyklus 4 (Business Understanding und / Letzte Korrekturen nach Gesamtprüfung: Abdeckung mit Zeitraum, Vergabe |
+| 2026-11-06 | 08:32–10:41 | 15 | 2.7 | Paket D (Teil 1): Make-or-Buy-Modell, business.md §9 Perspektive des B / Vortrag: Demo-Folie, Folien 9/10 zusammengelegt (12 Folien), Namen; Ap |
+| 2026-11-06 | 13:13–13:51 | 2 | 1.1 | Live-Demo (docs/demo/live_demo.html), Dark-Mode-Reparatur mit Umschalt / Live-Demo: grosser Datensatz (Bayern, 590 Ausschreibungen), Filterlauf |
+| 2026-11-08 | 19:51–20:38 | 2 | 1.3 | Video 'Franz und die Glaskugel' (korrigiert, vertont, MP4), Vortrag mi / Video v2: Piper-Stimme (Thorsten), eigener Sprechertext, ElevenLabs-Zw |
+| 2026-11-09 | 14:05–14:05 | 1 | 0.5 | Video v3: Bildereignisse zum Wort verschoben, einordnender Schlusssatz |
 
 ## Ergänzungen von Hand (nicht im Git)
 
 | Datum | Person | Tätigkeit | Std. |
 |---|---|---|---|
 | 2026-11-05 | Nutzer | Gespräche Iteration 10 (W5): Vorbereitung, 9 Anrufe, Abtippen (business.md §8.9) | 1.75 |
-| 2026-11-05 | Kommilitone | Lesen von 15 Losen im TED-Original (Iteration 9, V6) | offen |
+| 2026-11-05 | Kommilitone (Manuel Strobel) | Lesen von 15 Losen im TED-Original (Iteration 9, V6) | offen |
+| 2026-11-03 | Kommilitone (Manuel Strobel) | Zweitprüfung P14–P71 (Iteration 5; Angabe des Nutzers) | offen |
+| | Kommilitone (Manuel Strobel) | Präsentation/Umsetzung der Folien (Angabe des Nutzers, 2026-11-03) | offen |
+| 2026-11-08 | Kollege (laut Nutzer, Name nicht dokumentiert) | Erstellung der Video-Animation „Franz und die Glaskugel“ (KI-gestützt) | offen |
 | | | weitere Handarbeit (Zweitprüfungen, Handprüfungen der Iterationen 5 bis 7) | offen |

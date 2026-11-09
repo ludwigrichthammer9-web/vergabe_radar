@@ -1,8 +1,10 @@
 # Lab-Log: Vergabe-Radar
 
-_Big Data Analytics, Leistungsnachweis B (Zweierteam). Chronologisch nach CRISP-DM-Zyklen. Zahlen und Quellen stehen in `docs/iterationen.md`, `docs/business.md`, `docs/phasen/` und `reports/`; hier steht die Erzählung mit den Entscheidungen. Fakten und Deutung sind getrennt gekennzeichnet. Hauptteil: Abschnitte 0 bis 9; Details im Anhang A (Hashes und Commits) und B (alle KI-Irrwege)._
+_Big Data Analytics, Leistungsnachweis B (Zweierteam). Chronologisch nach CRISP-DM-Zyklen. Zahlen und Quellen stehen in `docs/iterationen.md`, `docs/business.md`, `docs/phasen/` und `reports/`; hier steht die Erzählung mit den Entscheidungen. Fakten und Deutung sind getrennt gekennzeichnet. Hauptteil: Abschnitte 0 bis 11 (bis vor Anhang A); Details im Anhang A (Hashes und Commits) und B (alle KI-Irrwege). Stand: 2026-11-09._
 
-_Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitprotokoll.md` und `docs/ki_irrwege.md`._
+_Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitprotokoll.md` und `docs/ki_irrwege.md`; Bilder mit `src/report/lab_log_bilder.py`._
+
+> **In einfachen Worten.** Wir wollten wissen, ob sich aus den Bekanntmachungen vergebener öffentlicher Aufträge (Datenbank TED, das EU-Amtsblatt für Ausschreibungen) vorhersagen lässt, wann ein Reinigungsvertrag in Deutschland neu ausgeschrieben wird, damit sich ein Betrieb früh vorbereiten kann. Wir haben dafür drei Ansätze gegen vorab festgelegte Schwellen geprüft: neue Aufträge ihren Vorgängern zuordnen, den Termin der Neuausschreibung berechnen und eine Liste der Vertragsenden bauen. Der Termin lässt sich nicht vorhersagen (Trefferquote 28,8 % statt der geforderten 60 %). Das Ende eines Vertrags lässt sich meist aus der Bekanntmachung lesen (66 von 70 Stichprobenverträgen stimmen mit zwei KI-Lesern überein), doch diese Liste gibt es schon kostenlos, und unsere Prüfung ergab keinen tragfähigen Business Case. Wir empfehlen deshalb, die Liste als Hilfsmittel zu nutzen und kein eigenes Produkt zu bauen; für einen Reinigungsbetrieb ist „kostenlos nutzen“ im Modell mit Annahmen besser als „selbst bauen“. Grenzen: nur drei Gespräche, die KI-Leser sind nicht unabhängig, ob jemand für die Liste zahlt, ist ungeprüft.
 
 ## 0. Überblick
 
@@ -10,10 +12,10 @@ _Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitpr
 
 **Antwort in drei Sätzen.**
 1. Der Termin der Neuausschreibung lässt sich mit den TED-Daten nicht brauchbar vorhersagen: Die beste einfache Regel trifft das Fenster ±3 Monate in 28,8 % der 52 geprüften Fälle (Schwelle 60 %, naive Referenz 17,3 %).
-2. Brauchbar ist eine Liste der Verträge mit dem Ende ihrer Laufzeit („laut Bekanntmachung“): Rund 73 % aller Lose haben ein Ende der Grundlaufzeit (6.803 von 9.325; im letzten Jahr 79,4 %, Erklärung in Abschnitt 4), und 94,3 % (66 von 70 Stichprobenlosen, nicht alle 6.803) stimmen mit dem Vergleichswert zweier KI-Leser überein (Mensch 14/15; „die Liste ist korrekt“ ist nicht belegt). Diese Art Liste gibt es aber schon kostenlos (Vergabeweiser) und günstig (AusschreibungsRadar).
-3. Belegt ist nur ein Merkmalsunterschied (Ende je Los, Ende der Grundlaufzeit statt Höchstende; auf zwei Stichproben in rund 10 % der Lose), kein Qualitätsvorteil beim Lesen. Zahlungsbereitschaft zeigte sich in einem von drei Gesprächen (ein größerer Betrieb), gespalten, und nur für Wettbewerbsdaten, die TED nur teilweise liefert; Nachfrage bleibt ungeprüft.
+2. Brauchbar ist eine Liste der Verträge mit dem Ende ihrer Laufzeit („laut Bekanntmachung“): 6.803 von 9.325 Losen (rund 73 %) haben ein Ende der Grundlaufzeit (Abschnitt 4); 66 von 70 Stichprobenlosen (94,3 %) stimmen mit dem Vergleichswert zweier KI-Leser überein (Mensch 14/15; „die Liste ist korrekt“ ist nicht belegt). Diese Art Liste gibt es aber schon kostenlos (Vergabeweiser) und günstig (AusschreibungsRadar).
+3. Belegt ist nur ein Merkmalsunterschied (Ende je Los, Grundlaufzeit statt Höchstende; rund 10 % der Lose auf zwei Stichproben), kein Qualitätsvorteil beim Lesen. Zahlungsbereitschaft zeigte sich in einem von drei Gesprächen und nur für Wettbewerbsdaten; Nachfrage bleibt ungeprüft.
 
-**Verlauf.** Zehn Iterationen in vier Zyklen. Die Entscheidung am Ende jeder Iteration (weiter, zurück zu Phase X, Idee anpassen) war vorab an Schwellen gebunden, die vor dem Ergebnis committet wurden. Zyklus 4 entstand, weil der Dozent mehr Gewicht auf Business Understanding verlangte.
+**Verlauf.** Zehn Iterationen in vier Zyklen; danach (2026-11-06 bis 11-09) Business-Case-Auswahl, Demo, Live-Demo, Video und Folienumbau (Abschnitt 5 und 6). Die Entscheidung am Ende jeder Iteration (weiter, zurück zu Phase X, Idee anpassen) war vorab an Schwellen gebunden, die vor dem Ergebnis committet wurden. Zyklus 4 entstand, weil der Dozent mehr Gewicht auf Business Understanding verlangte.
 
 | Zyklus | Iterationen | Leitfrage | Ergebnis |
 |---|---|---|---|
@@ -37,10 +39,22 @@ _Erzeugt mit `src/report/lab_log.py` aus `docs/lab_log_vorlage.md`, `docs/zeitpr
 | Stufe A bis F | Güteklasse je Listeneintrag (Herkunft des Endes): A aus Text gelesen oder unauffällig, B berechnet, C ohne Angabe, D unbestimmbar, E geschätzt, F kein Ende |
 | diskordant | Liste und Vergabeweiser weichen um mehr als einen Tag ab oder eine Seite hat kein Datum |
 | Wilson | 95-%-Konfidenzintervall für einen Anteil |
+| Zuschlagsbekanntmachung | Veröffentlichung, dass ein Auftrag vergeben wurde (an wen, für welche Laufzeit) |
+| naive Referenz (Baseline) | einfache Vergleichsregel, die eine Prognose übertreffen muss, um etwas zu taugen |
+| Make or Buy | Entscheidung „selbst bauen oder kaufen/abonnieren“ |
+| Push-Nachricht | Meldung, die von selbst im Arbeitswerkzeug (Teams, E-Mail) ankommt |
 
 ## 1. Business Understanding im Überblick
 
 _Kurzfassung für den Dozenten. Quellen: `docs/business.md` §6 bis §8, `reports/wettbewerbsbild_oberpfalz.md`. Angaben aus Web-Recherche eines KI-Agenten und eines KI-Gutachtens sind nur dort „geprüft“, wo `docs/business.md` es vermerkt._
+
+**Rahmen: die Entscheidung eines Gebäudereinigungsunternehmens (Wunsch des Nutzers).** Ein Betrieb, der für Kommunen und Behörden bietet, fragt: _Selbst bauen, kostenlos nutzen oder abonnieren?_ (Make or Buy). Kosten und Break-even rechnen wir nur mit Annahmen (Aufwand, Stundensatz, Pflege nicht gemessen; `reports/make_or_buy.md`); dass Eigenbau gegen kostenlose Dienste „nie günstiger“ ist, ist eine Modellkonstruktion und keine Messung. Ob es einen tragfähigen Business Case gibt, prüften wir mit einem vorab festgelegten Auswahlbogen (`docs/business_case_auswahl.md`).
+
+**Ergebnis der Business-Case-Prüfung (Fakten, 2026-11-06 bis 11-09).**
+- _Auswahlbogen:_ Acht Kandidaten (K-A bis K-H) wurden nach sieben Kriterien mit je 0 bis 2 Punkten bewertet (höchstens 14; Schwelle 8, vorab). Die höchste Summe war 7 (K-A, Amtsinhaber-Quote), also unter 8: **kein tragfähiger Business Case.** Die Kriterien wurden festgelegt, nachdem die Recherchen vorlagen (Bestätigungsgefahr).
+- _Test K-A abgebrochen:_ Nach der vorab festgelegten Regel (Abbruch unter 30 verwertbaren Paaren) hatten nur 23 von 52 Paaren einen Zuschlag des Nachfolgers.
+- _Nachtrag K-J_ (Push in Teams, Outlook, Planner per Power Automate; Evaluation 2026-11-08/09; Quellen, gelesen 2026-11-06: learn.microsoft.com Power-Automate-Lizenzen, ted.europa.eu „About TED“ und „My dashboard“, vergabeweiser.de, ausschreibungsradar.com/preise; `docs/business_case_auswahl.md`): Den Ablauf gibt es schon kostenlos (TED-Suchprofile mit E-Mail-Alarm und RSS, Vergabeweiser-Alerts, Weiterleitung per Standard-Flow); die HTTP-Aktion in Power Automate ist Premium (13 € je Nutzer und Monat). Das Problem „Suchaufwand“ ist in den drei Gesprächen nicht belegt; im Datensatz ergeben sich etwa 13 bis 19 Treffer pro Jahr und Profil (Profile erfunden). Bewertung streng 5, wohlwollend 7 von 14, K7 = 0: **Ergebnis unverändert.**
+- _Offen:_ Der billige Test (eine Stunde Alarm-Weiterleitung bauen, drei Anrufe mit vorab festgelegter Schwelle) ist vorbereitet, **nicht durchgeführt**; Hypothesen H1/H2 (Annahmen A21, A22) ungeprüft; Wizard-of-Oz-Blatt (`docs/wizard_of_oz_blatt.md`) nicht durchgeführt.
 
 **Wie gehen Betriebe heute vor (Fakten).**
 - Zugang zu Ausschreibungen: kostenlos über den Bekanntmachungsservice oeffentlichevergabe.de, Suchprofile auf TED und IHK-Dienste; kostenpflichtig über Dienste wie subreport (84 bis 198 € pro Monat), DTAD (Vertrieb) oder evergabe.de (83 € pro Monat) (`docs/business.md` §8.1). 63 % aller Vergaben 2024 nur nach Preis.
@@ -81,7 +95,7 @@ Beide geprüften deutschen Anbieter schreiben selbst, dass der Auftraggeber ents
 | Zielgruppe ohne IT | Kleinbetrieb ohne Verwaltungssystem (Gespräch 2); nur rund ein Drittel mit Branchensoftware (sekundär); Importschnittstellen nicht geprüft | Export hilft nur Betrieben mit Zielsystem; Kurztest vorbereitet, nicht durchgeführt |
 | Pflege | Eigenbau 5 bis 50 Stunden je Jahr (Annahme); TED-Felder, Schema und Dienste ändern sich | in Rechnung als Annahme; nicht gemessen |
 | Daten | TED nur oberhalb der EU-Schwelle (über alle Branchen 88 % der Vergaben darunter); 25,4 % der Oberpfalz-Lose ohne Ende; Zuschlagswert nur bei 47,7 %; die meisten Vorgänger heutiger Neuausschreibungen vor eForms (55 von 68) | Paket B: Lücke von rund einem Viertel im Bekanntmachungsservice, Erweiterung nur als Ausblick |
-| Listenfehler | 12 Lose (0,13 %), bei denen das Dauerfeld die Option schon enthält; bei 1 von 10 übereinstimmenden Losen beide Quellen falsch | Liste eingefroren; als offene Grenze genannt (Abschnitt 6) |
+| Listenfehler | 12 Lose (0,13 %), bei denen das Dauerfeld die Option schon enthält; bei 1 von 10 übereinstimmenden Losen beide Quellen falsch | Liste eingefroren; als offene Grenze genannt (Abschnitt 7) |
 | KI-Methode | Regeln, Leser und Evaluator gleiche Modellfamilie; Menschenprüfung nur 14/15 (Kommilitone), nicht an den 15 diskordanten Losen | offengelegt; zweite Modellfamilie und Menschenprüfung fehlen |
 | Recht | TED-Lizenz laut Rechtsseite frei wiederverwendbar (vor Abgabe zu bestätigen); Vergabeweiser CC BY 4.0 (Nennung); Auftragnehmernamen können bei Einzelunternehmern personenbezogen sein (Vorprüfung: 4 von 47 Namen ohne Rechtsform; Export auch ohne Namen); kein Scraping, nur einzelne Seiten von AusschreibungsRadar, `robots.txt` beachtet | Wortlaut der TED-Rechtsseite vor Abgabe selbst bestätigen |
 
@@ -89,7 +103,7 @@ Beide geprüften deutschen Anbieter schreiben selbst, dass der Auftraggeber ents
 
 **Competitive Edge, ehrlich.** _Was bleibt:_ ein Merkmalsunterschied auf Los- und Definitionsebene (rund 10 % der Lose auf zwei Stichproben, Abschnitt 5), ein offen dokumentiertes Prüfverfahren und der Backtest, dass ein fester Abstand den Termin nicht vorhersagt. _Was nicht bleibt:_ Preis, Daten (offen), Wettbewerbsbild, Terminprognose; Vergabeweiser nennt nach eigener Angabe auch Verfahren unterhalb der EU-Schwelle, wir haben das nicht gemessen. _Ausblick, kein Vorteil:_ Daten unterhalb von TED (Zeile (iii)). _Nicht behauptet:_ dass die Liste genauer ist als Vergabeweiser, dass Vergabeweiser falsch liest, dass ein Marktvorteil besteht oder dass Betriebe die Liste nachfragen oder bezahlen.
 
-**Perspektive des Betriebs: selbst filtern (Make or Buy; Paket D, Nachtrag 2026-11-06).** _Idee des Nutzers:_ Der Betrieb filtert kostenlose TED-Daten selbst und übergibt die Treffer in sein System; die Webseite stellt nur dar. _Fakten (unter Annahmen):_ Eigenbau ist im Basismodell gegen Vergabeweiser und AusschreibungsRadar Starter nie günstiger (Modellkonstruktion, keine Messung), gegen ein Abo wie DTAD (knapp 1.500 € im Jahr, Gespräch) nur im Szenario „niedrig“ (nach 2,0 Jahren). Symmetrische Variante (Nutzungsstunden auch bei den Alternativen): 1,0 bis 12,0 Jahre. _Deutung:_ „Keine Abo-Kosten“ trägt nicht: Kostenlose Wege gibt es, der Eigenbau hat Betriebs- und Pflegekosten. Offene Hypothesen: Daten mit dokumentiertem Schema im eigenen System, Anreicherung, Wettbewerbsfelder (nur zur Hälfte).
+**Perspektive des Betriebs (Make or Buy; Paket D).** Rahmen und Ergebnis stehen oben; Modell und Szenarien in Abschnitt 5. Im Basismodell ist Eigenbau gegen Vergabeweiser und AusschreibungsRadar Starter nie günstiger (Modellkonstruktion, keine Messung), gegen ein Abo wie DTAD nur im Szenario „niedrig“; symmetrisch gerechnet 1,0 bis 12,0 Jahre. _Deutung:_ „Keine Abo-Kosten“ trägt nicht, weil kostenlose Wege existieren und der Eigenbau Betriebs- und Pflegekosten hat.
 
 ### Lernpunkt: Die Konkurrenz wurde erst spät gesehen (Prozessfehler)
 
@@ -109,11 +123,19 @@ Business Understanding: Kandidaten für eine Nische waren Gebäudereinigung, IT-
 
 _Deutung._ Große Auftraggeber vergeben viele Verträge parallel; die Kennung reicht nicht. Vor eForms liefert `REF_NOTICE` die Laufzeit (A11: 25/30).
 
+_Phasen:_ Business Understanding und Data Understanding (Iteration 1 und 2: Nische, Machbarkeit), Data Preparation und Modeling (3 und 4: Zuordnungsregel), Evaluation (Blindprüfung, Handsuche), Deployment entfällt; Rücksprung innerhalb des Zyklus nach jeder verfehlten Schwelle.
+
+_Für Laien: Wir wollten einen neuen Auftrag automatisch seinem Vorgänger zuordnen. Das gelang auch mit besserer Regel nicht zuverlässig genug, also haben wir diesen Weg aufgegeben._
+
 ## 3. Zyklus 2: Terminprognose (Iteration 5)
 
 | Iteration (Datum) | Frage | Kriterium vorab | Ergebnis (Fakten) | Entscheidung |
 |---|---|---|---|---|
 | 5 (10-30 bis 11-04) | Sagt „Höchstende − 6 Monate“ (R1) den Termin der Neuausschreibung voraus? | Treffer = Fenster ±3 Monate; X3: ≥ 60 % und ≥ 10 Prozentpunkte über der Baseline R0 (Ende der Grundlaufzeit − 6 Monate); Schwelle vor jeder Berechnung festgelegt | 52 von Hand bestätigte Paare (Zweitprüfung 61/67 = 91,0 %, mit KI-Hilfe, nicht als unabhängig gewertet): R1 28,8 % (Wilson 18,3–42,3), R0 17,3 %; 20 Neuausschreibungen kamen mehr als 3 Monate früher, 17 später | **Idee anpassen:** keine Terminprognose; Produktkern ist die Vertragsliste mit Enddaten |
+
+_Phasen:_ Business Understanding (Prognoseziel und Schwelle vorab), Data Preparation (Zuschlagstabelle), Modeling (Regel R1 gegen Baseline R0), Evaluation (52 Paare, Zweitprüfung), Deployment entfällt.
+
+_Für Laien: Wir haben getestet, ob ein fester Abstand zum Vertragsende den Termin der Neuausschreibung trifft. Er traf nur in 28,8 % der Fälle (gefordert: 60 %); eine einfache Vergleichsregel kam auf 17,3 %._
 
 _Data Preparation:_ Zuschlagstabelle je Los (`src/prepare/vertragsliste.py`) mit Ende der Grundlaufzeit, Höchstende und Herkunft; Leakage vermieden (nur Wissen zum Zeitpunkt des Vorgänger-Zuschlags). _Deutung:_ Der Termin ist zweigipflig verteilt; ein fester Abstand trägt nicht; die Vergabestelle stützt das (Verlängerung ist der Normalfall).
 
@@ -126,6 +148,10 @@ _Data Preparation:_ Zuschlagstabelle je Los (`src/prepare/vertragsliste.py`) mit
 | 8 (11-04/05) | Bestätigen zwei KI-Leser die Liste? | Z0 Leser untereinander ≥ 90 %, Z1 bis Z4 (Liste gegen Vergleichswert, Regelwirkung, Höchstende, Kontrolle) | Z0 94/95; Z1 77/80 = 96,2 %; Z2 14/15 (bei einheitlichem Maßstab 11/15, verfehlt); Z3 75/80 und 67/72; Z4 10/10. Neue Listenfehler: Lose ohne Zuschlag, Übertragung von Werten, „3 Jahre mit Option“ | Weiter (Projektabschluss), eingeschränkt: Leser nicht unabhängig, nicht von Menschen bestätigt |
 | 9 (11-05) | Beheben Regeln 6 bis 10 diese Fehler; hält die Liste auf einer neuen Stichprobe (Seed 20261109, 110 Lose)? | V1 ≥ 90 %, V2 bis V8 (u. a. Höchstende V4, Lose ohne Zuschlag V7, Verfahren V8) | Liste 9.325 statt 9.915 Lose; V1 66/70 = 94,3 % (Wilson 86,2–97,8); V2 28/30; V3 66 gegen 65 von 70 (alte Fassung); V5 110/110; V6 Kommilitone 14/15. **Verfehlt:** V4 (87,1 % bei Schwelle 90 %), V7 (Los N51); V8 teilweise | Weiter, eingeschränkt: Fassung 9 wird Prototyp, Höchstende nur Hinweis; „V1 bis V8 erfüllt“ wird nicht behauptet |
 
+_Phasen:_ Rücksprung zu Phase 3 und 4 (Regeln 1b, 6 bis 10), Evaluation je Iteration an neuen Stichproben, Deployment: Prototyp der Webseite (Abschnitt 6).
+
+_Für Laien: Wir haben die Liste der Vertragsenden mehrfach an Stichproben geprüft und die Leseregeln verbessert. Zuletzt stimmen 66 von 70 Verträgen mit dem Vergleichswert überein; „fehlerfrei“ ist das nicht belegt._
+
 **Abdeckung (Zähler und Nenner, an einer Stelle).** Quelle: `data/processed/vertragsliste_909.csv` (Fassung 9) und `reports/vertragsliste_iteration9.md`, nachgerechnet.
 - **Alle Lose:** 6.803 von 9.325 haben ein Ende der Grundlaufzeit, **rund 73 %** (72,95 %); 2.522 Lose (27,0 %) haben keines.
 - **Letztes Jahr (X4):** Unter den Losen aus Zuschlägen, veröffentlicht 2025-10-01 bis 2026-09-30, haben 2.783 von 3.503 ein Ende, **79,4 %** (Wilson 78,1–80,8; Schwelle 80 % knapp verfehlt). Der Anteil schwankt nach Halbjahr zwischen 63,6 % und 80,7 %; das letzte Jahr liegt deshalb über dem Gesamtwert.
@@ -136,6 +162,10 @@ _Deutung._ Die Fassung 9 ist auf der Stichprobe zu 94,3 % mit dem Vergleichswert
 ## 5. Zyklus 4: Business Understanding und Wettbewerb (Iteration 10 und 10b)
 
 _Anlass (2026-11-05, nach Iteration 9): Der Dozent verlangt mehr Gewicht auf Business Understanding; die Sichtung der Wettbewerber war nie erfolgt (Abschnitt 1). Abweichend von „keine weitere Iteration“ beschloss der Nutzer einen Rücksprung zu Phase 1. Stichprobe und Vergleichswert der Iteration 9 dienten als fester Maßstab._
+
+_Phasen:_ Rücksprung zu Phase 1 (Business Understanding), dann Data Understanding (Vergabeweiser-API, Bekanntmachungsservice), Evaluation (10b, Pakete), Deployment nur als Veranschaulichung (Abschnitt 6).
+
+_Für Laien: Wir haben geprüft, was es am Markt schon gibt und ob sich mit der Liste ein Geschäft machen lässt. Ergebnis: Die Liste gibt es kostenlos, ein Geschäft ist nicht belegt._
 
 **Iteration 10: Business Understanding und Wettbewerber.** Recherche (KI-Agent plus KI-Gutachten aus BWL-Sicht, einzelne Seiten von Claude nachgelesen): Vergabeweiser bietet eine kostenlose Liste auslaufender Verträge samt API, AusschreibungsRadar eine günstige; **A2 („es gibt keinen deutschen Dienst“) ist widerlegt.** Das Gutachten hielt das Kernprodukt „Liste“ für nicht tragfähig (`docs/business.md` §8.4, §8.5). Gespräche (W5, Leitfaden vorab): neun Anrufe, drei Stellen erreicht (zwei Reinigungsbetriebe, eine Vergabestelle); Notizen ohne Namen. Zahlungsbereitschaft zeigte sich nur für Wettbewerbsdaten; die Vergabestelle bestätigt, dass das Vertragsende kein Neuausschreibungstermin ist. n = 3, Hinweise.
 
@@ -173,37 +203,93 @@ _Anlass (2026-11-05, nach Iteration 9): Der Dozent verlangt mehr Gewicht auf Bus
 
   - _Deutung:_ „Nie günstiger“ ist eine Modellkonstruktion (Annahmen). „Keine Abo-Kosten“ trägt nicht; ein Mehrwert müsste aus Funktion kommen. Die „zusätzlichen Aufträge“ (Deckungsbeitrag 25.110 € je Auftrag, Median-Jahresumsatz 167.404 €) sind eine Größenordnung, kein Nutzenbeleg. _Grenzen:_ Aufwände, Marge und Stundensatz nicht gemessen; keine Aussage zur Relevanz der Datenübergabe (D3 nein).
 
-- **Prozessnotiz: Demo Profil-Match (2026-11-06).** Auf Wunsch gebaut, nach dem Auswahlbogen; Ergebnis: Machbarkeit der Datenübergabe, keine Evidenz für Nachfrage, Genauigkeit oder Vorteil (`docs/demo_push.md`).
+- **Nach Iteration 10b (2026-11-06 bis 11-09; Fakten, kein Erfolg behauptet).** (1) Business-Case-Auswahl mit vorab festgelegten Kriterien: kein tragfähiger Case (Abschnitt 1). (2) Demo Profil-Match mit Push-Vorschau, auf Wunsch des Nutzers nach dem Auswahlbogen gebaut (K7 = 0): Veranschaulichung der Datenübergabe, kein Business Case; Abnahmekriterien A1 bis A7 vorab, aber keine Hypothese zu Nachfrage oder Genauigkeit (`docs/demo_push.md`). (3) Live-Demo mit großem Datensatz und Filterlauf. (4) Video „Franz und die Glaskugel“, Fassungen v1 bis v3. (5) Umbau der Folien auf zehn sichtbare Folien. (6) Prüfung von K-J (Abschnitt 1). Ergebnisse zum Anfassen: Abschnitt 6.
 
 **Abweichungen von der Vorab-Planung (offen).** Zuordnungsweg 2 nach dem Trockenlauf ergänzt; Abrufskript nach DNS-Fehler angepasst; Nebentest W7 nach Beginn des Abrufs.
 
 ### Entscheidung (2026-11-05, Nutzer): Weiter, Projektabschluss, eingeschränkt formuliert
 - **Begründung.** W1 ist formal erfüllt, aber überwiegend Los- und Definitionsunterschied; W8a ist formal verfehlt wegen eines Fehlers der Vorab-Schwelle, W8b erfüllt. Nach der Vorab-Regel gilt „kein belegter Vorteil im definierten Maß“, und das ist nicht als Gleichheit zu lesen. Befund: Merkmalsunterschied, kein belegter Qualitätsvorteil, Nachfrage offen.
 - **Abweichung von der Vorab-Folge (offen begründet).** „W8a verfehlt → ‚kein Vorteil gegenüber Vergabeweiser‘ gilt weiter“ wird nicht übernommen, weil sie der gemessenen Richtung widerspricht und die Schwelle unerreichbar war; „Die Liste ist genauer“ wird ebenso wenig behauptet.
-- **Geschäftlich.** „Liste als eigenes Produkt nicht tragfähig“ (`docs/business.md` §8.4) bleibt bestehen; A2 bleibt widerlegt; A1, A3 und A15 bleiben ungeprüft. Weitere Grenzen: Abschnitt 6; das Protokoll der Leserläufe 10b liegt außerhalb des Repos.
+- **Geschäftlich.** „Liste als eigenes Produkt nicht tragfähig“ (`docs/business.md` §8.4) bleibt bestehen; A2 bleibt widerlegt; A1, A3 und A15 bleiben ungeprüft. Weitere Grenzen: Abschnitt 7; das Protokoll der Leserläufe 10b liegt außerhalb des Repos.
 
-## 6. Was wir empfehlen und was nicht
+## 6. Ergebnisse zum Anfassen: Vertragsliste, Webseite, Demo und Video
 
+_Alle Dateien liegen im Repository. Sie veranschaulichen die Datenübergabe, sie sind **kein Business Case** (K7 = 0) und belegen keine Nachfrage, keine KI-Genauigkeit und keinen Vorteil gegenüber den bestehenden Diensten. Screenshots (Hell-Modus) mit Edge/Playwright aus den HTML-Dateien erzeugt (`src/report/lab_log_bilder.py`)._
+
+| Ergebnis | Datei | Was es zeigt (Fakten) | Grenzen |
+|---|---|---|---|
+| Vertragsliste (Fassung Iteration 9) | `data/processed/vertragsliste_909.csv` (nicht im Git, erzeugbar), Export `docs/prototyp/export/` (Schema 1.1, `docs/export_schema.md`) | 9.325 Lose; je Los Ende der Grundlaufzeit, Höchstende (nur Hinweis) und Herkunft in den Stufen A bis F (Glossar); 6.803 Lose mit Ende | Ende „laut Bekanntmachung“; „korrekt“ nicht belegt (Abschnitt 4) |
+| Webseite | `docs/prototyp/vertragsliste.html` | Prototyp für die Oberpfalz (130 Lose aus 64 Bekanntmachungen, Stand 04.11.2026) mit Filtern (Suche, Auftragnehmer, Region, Status, Stufe, Zeitraum), CSV-Export der Auswahl, Hell/Dunkel/Automatisch | Prototyp, Darstellung; kein Produkt |
+| Demo Profil-Match | `docs/demo_push.md`, `docs/demo/push_demo.html` | zwei erfundene Profile; Trichter der Filter; KI-Stufe urteilt „passt/unklar/passt nicht“ nur mit prüfbarem Zitat (7 gespeicherte Urteile); Teams-Karte und E-Mail nur als Vorschau, **nichts gesendet** | KI gegen Regel 13 von 14 (5 trivial, kein Mensch): keine Genauigkeit; Karten nie in echtem Teams gerendert |
+| Live-Demo | `docs/demo/live_demo.html` | Beispieldatensatz (621 Bekanntmachungen, Auszug 150) und großer Datensatz (590 Bekanntmachungen, Bayern, 12 Monate bis 06.11.2026); erfundene Firma einstellen, Knopf „Filterung starten“ mit Filterlauf; KI-Urteile nur für P1/P2, sonst Stichwortregel; keine KI-Aufrufe, nichts gesendet | Beispiel: mit Frist-Filter 0, 1 und 2 Treffer für drei erfundene Firmen, keine Marktaussage; Vorgänger-Hinweis abgeschaltet (3 von 3 Auslösungen falsch) |
+
+<div class="bilder">
+<figure><img src="lab_log_bilder/webseite_1.png"><figcaption>Webseite: Kopf und Hinweis zur Quelle</figcaption></figure>
+<figure><img src="lab_log_bilder/push_demo_1.png"><figcaption>Push-Demo: Kopf, Profil P1 (erfunden)</figcaption></figure>
+<figure><img src="lab_log_bilder/live_demo_1.png"><figcaption>Live-Demo: Filterlauf mitten in der Animation</figcaption></figure>
+<figure><img src="lab_log_bilder/webseite_2.png"><figcaption>Webseite: Filter und Tabelle</figcaption></figure>
+<figure><img src="lab_log_bilder/push_demo_2.png"><figcaption>Push-Demo: Teams-Vorschau und Posteingang</figcaption></figure>
+<figure><img src="lab_log_bilder/live_demo_2.png"><figcaption>Live-Demo: Ergebnis für „Beispiel Cham GmbH (erfunden)“</figcaption></figure>
+</div>
+
+<div class="video" markdown="1">
+<figure><img src="lab_log_bilder/video_standbild.png"><figcaption>Standbild, Szene „Ergebnis“ (Quellzeit 171 s)</figcaption></figure>
+<div markdown="1">
+
+**Video „Franz und die Glaskugel“** (`docs/video/franz_und_die_glaskugel_szenen_0-5_v3.mp4`, Szenen 1 bis 5, rund 170 s; Quelle der Animation `docs/video/franz_und_die_glaskugel.html`).
+
+- _Zweck:_ Zusammenfassung des Projekts für den Vortrag, mit erfundenen Figuren (Franz, Bit, Prüfi). Veranschaulichung, kein zusätzlicher Beleg.
+- _Herkunft:_ Die Animation hat laut Nutzer ein Kollege KI-gestützt erstellt. Wir haben sie korrigiert: Zahlen gegen Belege geprüft (keine falschen Zahlen gefunden), zu starke Sätze eingeschränkt, Stimme und Export ergänzt; Liste der Korrekturen in `docs/video/README.md`.
+- _Grenzen:_ Stimme synthetisch (Piper, Thorsten-Voice); Figuren erfunden, Gespräche nachgestellt (es gab drei echte); vereinfacht (vier „Runden“ statt zehn Iterationen); Hörprobe durch den Nutzer **offen**.
+
+</div>
+</div>
+
+## 7. Was wir empfehlen und was nicht
+
+- **Rahmen: Sicht eines Gebäudereinigungsunternehmens.** Entscheidungsfrage des Betriebs: _Selbst bauen, kostenlos nutzen oder abonnieren?_ Antwort nach unserem Stand (Deutung, unter Annahmen): zuerst die kostenlosen Wege nutzen (TED-Suchprofile mit E-Mail-Alarm, Vergabeweiser-Alerts, diese Liste als CSV); abonnieren nur für eine Funktion, die man braucht (im Gespräch genannt: Wettbewerbsdaten; Zahlungsbereitschaft in einem von drei Gesprächen); selbst bauen lohnt im Basismodell gegen kostenlose Dienste nie (Modellkonstruktion, Aufwand und Pflege nicht gemessen). Ergebnis der Business-Case-Prüfung: **kein tragfähiger Business Case** (höchste Summe 7 < 8; Test K-A nach der Vorprüfung abgebrochen, 23 von 52 Paaren; Push-Variante K-J streng 5, wohlwollend 7 von 14, K7 = 0). Nächster billiger Test (vorbereitet, **nicht durchgeführt**): eine Stunde Alarm-Weiterleitung bauen und drei Anrufe mit vorab festgelegter Schwelle.
 - **Empfehlung.** Die Vertragsliste „Ende der Laufzeit laut Bekanntmachung“ ist als Ausgangspunkt nutzbar; vor jeder Entscheidung die verlinkte Bekanntmachung lesen. Als eigenes Produkt empfehlen wir sie **nicht**, weil es das Kernprodukt kostenlos (Vergabeweiser) und günstig (AusschreibungsRadar) gibt. Weiterverfolgen ließe sich nur eine Nische (Wettbewerbsdaten, Datenqualität als Zulieferung, Vergabestellen), nach Gesprächen mit mehr Beteiligten.
 - **Zulässige Aussagen.** „Zu 94,3 % identisch mit dem Vergleichswert zweier KI-Leser; an 15 Losen bestätigt ein Mensch (14/15); Höchstende nur Hinweis.“ Und: „Auf zwei Stichproben (n = 70 und n = 160) weicht Vergabeweisers Datum in rund 10 % der Lose vom Ende der Grundlaufzeit nach neutraler Definition ab, wo die Liste richtig liegt.“
 - **Nicht belegt.** Eine Terminprognose; „die Liste ist korrekt“; „Fehlerarten behoben und bestätigt“; „V1 bis V8 erfüllt“; ein Qualitätsvorteil gegenüber Vergabeweiser (und ebenso Gleichheit); Nachfrage, Zahlungsbereitschaft und Marktvorteil (A1, A15); Abdeckung unterhalb der EU-Schwelle (A3); Relevanz der Datenübergabe für Betriebe (D4 offen, H1/H2 ungeprüft); Nutzbarkeit des Exports in Excel oder Branchensoftware.
 - **Offene Lücke Systemlandschaft.** In den drei Gesprächen wurde die Systemlandschaft nicht erfragt; der Test ist vorbereitet (Fragen im Wizard-of-Oz-Blatt, `docs/wizard_of_oz_blatt.md`).
 - **Offene Grenzen der Liste.** Das Höchstende ist oft zu hoch (laut Evaluator in 7 von 11 Fällen) und nur ein Hinweis; Schuljahres-Verträge sind nicht tagesgenau; `unpublished` wird nicht erkannt; „Dauerfeld enthält die Option“ (12 Lose, 0,13 %) und Textmuster wie M59 werden nicht gefangen. Die Zuordnung zu Vergabeweiser wurde nicht für alle 160 Lose von Hand geprüft; keine Menschenprüfung der 15 diskordanten Lose; keine zweite Modellfamilie. Die Demo Profil-Match belegt keine Nachfrage und keine KI-Genauigkeit (13 von 14, davon 5 trivial, ohne Menschenreferenz); Profile und Stichtag sind erfunden.
 
-## 7. KI-Irrwege und ihre Prüfung
+## 8. KI-Irrwege und ihre Prüfung
 
-Die KI (Claude Code) hat Hypothesen, Regeln, Stichproben und Auswertungen mitgebaut. Die Fehler wurden vom Nutzer, vom Evaluator (eigener Subagent, nur Lesezugriff) oder von Claude selbst gefunden. Die vier wichtigsten; die vollständige Tabelle mit allen Einträgen steht im Anhang B.
+Die KI (Claude Code) hat Hypothesen, Regeln, Stichproben und Auswertungen mitgebaut. Die Fehler wurden vom Nutzer, vom Evaluator (eigener Subagent, nur Lesezugriff) oder von Claude selbst gefunden. Die sechs wichtigsten; die vollständige Tabelle mit allen Einträgen steht im Anhang B.
 
 | Datum | Irrweg | Bemerkt durch | Konsequenz |
 |---|---|---|---|
 | 2026-10-25 | Auf Entwicklungsdaten hielt Claude 10–11 von 12 Vorschlägen für plausibel, im Test waren 11 von 24 korrekt | Test auf neuen Daten | Regel verworfen; Testdaten strikt getrennt |
 | 2026-11-04 | Iteration 6 und 7: Prüfvorlage zeigte den Listenwert (Verankerung); danach wurden Felder versteckt, und die Nachprüfung übernahm das Feld | Evaluator, Auswertung | Y1 nur als Mischmaß berichtet; Vorlage ohne Listenwerte |
 | 2026-11-05 | Wettbewerber nicht gesichtet (G1.1), zwei Suchen fanden keinen Dienst | Recherche-Agent nach Hinweis des Dozenten | A2 widerlegt; Marktgate (Abschnitt 1); Zyklus 4 |
+| 2026-11-06 | Demo, Vorgänger-Hinweis (Titelähnlichkeit): nur an einem erfundenen Titel getestet; im großen Datensatz lagen alle 3 Auslösungen falsch | Prüfung am großen Datensatz (Claude) | im großen Datensatz abgeschaltet, als „gebaut, nicht belegt“ gekennzeichnet |
+| 2026-11-08 | Video „Franz und die Glaskugel“ (Animation KI-gestützt von einem Kollegen): erste Fassung stärker als die Belege („Genau das haben uns die Daten gezeigt“, „rund 10 Prozent“ ohne Ursache, „66 von 70“ ohne Einschränkung); Vereinfachungen (9.325 vor der Korrektur, vier Runden statt zehn Iterationen) | Prüfung der Texte gegen die Berichte (Claude, Auftrag des Nutzers) | Texte eingeschränkt, Zahlen unverändert; Vereinfachungen im README genannt |
 | 2026-11-05 | Paket B: Null als Ergebnis gelesen (0 von 84 Verfahren „B1 deutlich verfehlt“); tatsächlich Filterartefakt (Landkreis-Code am Lieferort fehlt bei nationalen Verfahren) | Robustheitsprüfung | Erste Auswertung nicht gültig; B1 nicht entscheidbar |
 
-## 8. Zeitaufwand
+## 9. Beiträge beider Teammitglieder
 
-Untergrenze aus der Git-Historie, insgesamt **37,7 Stunden** (Sitzung = Commits mit höchstens 90 Minuten Abstand, plus 30 Minuten Vorlauf; Iteration 10 enthält 10b und die Pakete A, C, F; Iteration 11 sind die Nachträge nach dem Tag `iteration-10`). Enthalten ist die Rechenzeit von Claude. Nicht enthalten: Lesen, Prüfen von Hand, Recherche und Vortrag.
+_Stand 2026-11-09, Quelle `docs/beitraege.md`. Im Git steht nur ein Autor (alle Commits laufen über das Konto von Ludwig Richthammer, die Arbeit mit Claude Code eingeschlossen). Die Zuordnung stammt deshalb aus den Dokumenten und aus Angaben des Nutzers, nicht aus dem Git. **Manuel Strobel** (Kommilitone, Zweierteam) hat seine Beiträge noch nicht selbst eingetragen; was nicht aus den Dokumenten bekannt ist, steht als **offen: von Manuel nachzutragen**._
+
+| Bereich | Ludwig Richthammer | Claude Code (KI-Assistenz) | Manuel Strobel |
+|---|---|---|---|
+| Fragestellung, Nische, Kriterien, Entscheidungen | Entscheidungen (Nische, „Idee anpassen“, Prognoseziel Höchstende, Rücksprung zum Business Understanding, Sicht des Betriebs, Wunsch nach Demo und Live-Demo); Freigaben | Vorschläge, Entwürfe der Kriterien (vor den Ergebnissen committet) | offen: von Manuel nachzutragen |
+| Daten, Aufbereitung, Auswertungen | Freigaben | Skripte (`src/`), Downloads, Tabellen | offen |
+| Urteilsregeln 1.1, Blindprüfungen | geschrieben und kalibriert (2026-10-24); Urteile in Iteration 3 und 4 (W4 13/20; V4 17/20) | Schlüssel, Auswertung; Handsuche durch den Subagenten `rechercheur` | – |
+| Zweitprüfung Iteration 5 | P1 bis P13 (P11, P12 nicht beurteilt) | Vorlage, Schlüssel, Auswertung | P14 bis P71 (laut Nutzer, 2026-11-03) |
+| Prüfung der Liste, KI-Leser | Prüfung der Stichprobe (Iteration 6) | Leser, Vergleichswert, Auswertung | 15 Lose im TED-Original gelesen (Iteration 9, V6: 14/15) |
+| Gespräche mit Betrieben und Vergabestelle | neun Anrufe, drei Stellen erreicht, Notizen ohne Namen (105 Minuten mit Vorbereitung) | – | offen |
+| Evaluation | Entscheidungen | Subagent `evaluator` (kritische Prüfung) | offen |
+| Business-Case-Auswahl, Demo, Live-Demo | Ideen und Wünsche (Make or Buy, Push-Matching, K-J, Live-Demo), Gegencheck der Angaben | Recherche-Agenten, Bewertung, Code der Demos | offen |
+| Video „Franz und die Glaskugel“ | Auftrag zur Prüfung der Texte | Prüfung gegen Belege, Korrekturen, Vertonung, Export | Animation von einem Kollegen KI-gestützt erstellt (laut Nutzer; ob von Manuel: **offen**); Autorenzeile im Abspann nennt Manuel und Ludwig, Manuels Anteil an der Korrektur: **offen** |
+| Folien und Vortrag | Durchsicht, Freigaben | Foliengerüst und Umbau (`src/report/vortrag.py`) | Präsentation/Umsetzung (laut Nutzer, 2026-11-03; heutiger Stand: **offen**) |
+| Dokumentation, Lab-Log | Durchsicht, Freigaben | Texte in `docs/`, `reports/` | offen |
+
+**Offen bis zur Abgabe:** Manuel trägt seine Beiträge und Stunden selbst ein (`docs/beitraege.md`, Handeinträge im Zeitprotokoll). Bis dahin gelten für ihn nur die oben genannten Angaben; weitere werden nicht angenommen.
+
+## 10. Zeitaufwand
+
+Untergrenze aus der Git-Historie, insgesamt **43,5 Stunden** (Stand 2026-11-09, erzeugt mit `src/zeitprotokoll.py`; Sitzung = Commits mit höchstens 90 Minuten Abstand, plus 30 Minuten Vorlauf; Iteration 10 enthält 10b und die Pakete A, C, F; Iteration 11 sind die Nachträge nach dem Tag `iteration-10`: Paket D, Business-Case-Auswahl, Demo, Live-Demo, Video, Folienumbau, Lab-Log). Enthalten ist die Rechenzeit von Claude. Nicht enthalten: Lesen, Prüfen von Hand, Recherche (z. B. K-J am 2026-11-08/09, ohne eigenen Commit), Vortrag.
 
 | Iteration | Sitzungen | Commits | Stunden (Untergrenze) |
 |---|---|---|---|
@@ -217,10 +303,10 @@ Untergrenze aus der Git-Historie, insgesamt **37,7 Stunden** (Sitzung = Commits 
 | 8 | 2 | 5 | 1.3 |
 | 9 | 2 | 10 | 1.9 |
 | 10 | 3 | 21 | 4.4 |
-| 11 | 1 | 10 | 1.5 |
-| **Summe** | 30 | 128 | **37.7** |
+| 11 | 5 | 32 | 7.4 |
+| **Summe** | 34 | 150 | **43.5** |
 
-**Arbeitsschritte mit Zeitaufwand.** Näherung: Sitzungen anhand der Commit-Nachrichten zugeordnet; „Handarbeit“ nach Angaben des Nutzers. Summe der Git-Spalte = 36,2 Stunden (Iteration 1 bis 10); mit 1,5 Stunden der Nachträge (Iteration 11) die 37,7 Stunden oben.
+**Arbeitsschritte mit Zeitaufwand.** Näherung: Sitzungen anhand der Commit-Nachrichten zugeordnet; „Handarbeit“ nach Angaben des Nutzers. Summe der Git-Spalte = rund 36 Stunden (Iteration 1 bis 10); mit 7,4 Stunden der Nachträge (Iteration 11) die 43,5 Stunden oben (rundungsbedingt).
 
 | Arbeitsschritt | Zugeordnete Git-Sitzungen | Git (Std., ca.) | Handarbeit außerhalb Git |
 |---|---|---|---|
@@ -231,11 +317,14 @@ Untergrenze aus der Git-Historie, insgesamt **37,7 Stunden** (Sitzung = Commits 
 | Business Understanding und Recherche (Wettbewerber, Wettbewerbsbild, Nebentest) | Iteration 4 (Anteil), 10 (Anteil) | 2,1 | – |
 | Gespräche mit Betrieben und Vergabestelle (W5) | – | – | **105 Minuten** (1,75 Stunden: Vorbereitung, neun Anrufe, Abtippen; Angabe des Nutzers) |
 | Lab-Log, Folien, Dokumentation | Iteration 4, 5, 10 (Anteile) | 2,8 | Lesen der Berichte, Vortrag: nicht erfasst |
+| Make or Buy, Business-Case-Auswahl, Demo, Live-Demo, Video, Folienumbau, Lab-Log-Nachträge | Iteration 11 (Nachträge nach `iteration-10`) | 7,4 | Wünsche, Gegencheck, Hörprobe des Videos: nicht erfasst |
+| Beiträge von Manuel Strobel (Zweitprüfung P14 bis P71, Folien, 15 Lose; Video-Animation durch einen Kollegen) | – | – | Stunden **offen: von Manuel nachzutragen** |
 
 
-## 9. Reproduzierbarkeit und Quellen
+## 11. Reproduzierbarkeit und Quellen
 
-- **Code und Daten.** Alle Schritte laufen als Skripte in `src/` (Abhängigkeiten in `requirements.txt`; Aufrufe in `docs/reproduzierbarkeit.md`); Make-or-Buy und Export: `src/report/make_or_buy.py`, `export_vertragsliste.py`, `docs/export_schema.md`. Rohdaten unverändert in `data/raw` (nicht im Git, Abruf per `src/ted_download.py`); Datenzugang für die Abgabe: Quellcode und Abrufanleitung im Repository https://github.com/ludwigrichthammer9-web/vergabe_radar (Anleitung `docs/reproduzierbarkeit.md`); die Rohdaten werden mit `src/ted_download.py` neu abgerufen (öffentliche Quelle).
+- **Datensatzquelle.** TED (Tenders Electronic Daily, Amt für Veröffentlichungen der EU), Search API v3 (`https://api.ted.europa.eu/v3/notices/search`, anonym), eForms-Bekanntmachungen und ältere Formulare ab Oktober 2016, Deutschland, Haupt-CPV 909; Vergleichsdaten: Vergabeweiser-API (CC BY 4.0), Bekanntmachungsservice (CC0); Telefongespräche ohne Namen. Quellenliste und Lizenzen: `docs/quellen.md`.
+- **Code und Daten.** Alle Schritte laufen als Skripte in `src/` (Abhängigkeiten in `requirements.txt`; Aufrufe in `docs/reproduzierbarkeit.md`); Make-or-Buy und Export: `src/report/make_or_buy.py`, `export_vertragsliste.py`, `docs/export_schema.md`; Demo und Live-Demo: `src/demo/` (offline aus Auszügen im Repo, `docs/demo_push.md`); Video: `src/report/video_vertonung.py`, `video_export.py` (`.venv-video`, `requirements-video.txt`, `docs/video/README.md`); Bilder dieses Logs: `src/report/lab_log_bilder.py` (`.venv-video`). Rohdaten unverändert in `data/raw` (nicht im Git, Abruf per `src/ted_download.py`); Datenzugang für die Abgabe: Quellcode und Abrufanleitung im Repository https://github.com/ludwigrichthammer9-web/vergabe_radar (Anleitung `docs/reproduzierbarkeit.md`); die Rohdaten werden mit `src/ted_download.py` neu abgerufen (öffentliche Quelle).
 - **Vorab festgelegt.** Seeds, Kriterien und Skripte wurden vor dem Ziehen oder Abruf committet; Hashes und Commits im Anhang A. Ausnahmen: Abschnitt 5.
 - **Quellen.** `docs/quellen.md` (TED Search API v3, Lizenz laut TED-Rechtsseite frei wiederverwendbar, vor Abgabe zu bestätigen; Vergabeweiser CC BY 4.0; AusschreibungsRadar, einzelne Seiten, `robots.txt` beachtet; Bekanntmachungsservice CC0; Preise in `docs/business.md` §8; Annahmen: `docs/annahmen.md`).
 
@@ -252,6 +341,8 @@ Untergrenze aus der Git-Historie, insgesamt **37,7 Stunden** (Sitzung = Commits 
 ## Anhang B. KI-Irrwege, vollständige Tabelle
 
 Nur ergänzt, nie überschrieben (`docs/ki_irrwege.md`). Je Eintrag: Datum, was schieflief, wie es bemerkt wurde, Konsequenz.
+
+<div class="klein" markdown="1">
 
 | Datum | Irrweg | Bemerkt durch | Konsequenz |
 |---|---|---|---|
@@ -283,3 +374,8 @@ Nur ergänzt, nie überschrieben (`docs/ki_irrwege.md`). Je Eintrag: Datum, was 
 | 2026-11-05 | Iteration 10b: Claude legte die Schwelle W8a (Vorsprung ≥ 16 Lose = 10 % von 160) fest, indem er die Diskordanzrate der Iteration 10 (12/70 = 17 %) übernahm; tatsächlich waren nur 15 von 160 Losen diskordant, die Schwelle war damit rechnerisch unerreichbar. Außerdem gab es keine Folgeregel für „W8a verfehlt, W8b erfüllt“, und das Skript gibt den Satz „Abweichungen von der Vorab-Festlegung: keine“ fest aus | Claude nach dem Abruf (vor den Leserantworten) und Evaluator ([evaluation_iteration10b.md](../reports/evaluation_iteration10b.md)) | Kriterium nicht nachträglich geändert; im Ergebnis „formal verfehlt, rechnerisch unerreichbar“ mit gemessener Differenz (+15, p = 0,0001) ausgewiesen; Folge der Vorab-Regel nicht als Gleichheit gelesen |
 | 2026-11-05 | Iteration 10b: Die Zuordnung zu Vergabeweiser über die Verfahrenskennung (Weg 2) ordnete bei M54 (346782-2025) einen fremden Eintrag zu (Vreden statt Lengerich), und M7 wurde durch die Reihenfolge der Ursachenklassen als „Losebene“ statt „Höchstende“ geführt (begünstigt Vergabeweiser in W8b) | Evaluator (Gesamtprüfung) | M54 gehört nicht zu „Vergabeweiser liest falsch“; W8b mit M7 als Höchstende wäre +11 statt +10; als Grenzen im Ergebnis genannt |
 | 2026-11-05 | Paket B: Die erste Auswertung (Filter auf NUTS-3-Codes der Oberpfalz) fand 0 von 84 Verfahren unterhalb der EU-Schwelle und wurde im Bericht als „B1 deutlich verfehlt“ gelesen; das Feld für den Lieferort trägt bei nationalen Verfahren meist nur NUTS-1 („DE2“, 71,2 %), sodass der Filter nationale Verfahren aussortierte | Claude (Misstrauen gegenüber der Null, bevor das Ergebnis in Lab-Log oder Folien kam) und die Robustheitsprüfung des Agenten | Erste Auswertung nicht gültig; mit Postleitzahl und Ortsliste 32 von 120 (26,7 %, Wilson 19,6–35,2 %), B1 nicht entscheidbar; Lernpunkt „Eine Null ist ein Verdachtsmoment, kein Ergebnis“ |
+| 2026-11-08 | Video „Franz und die Glaskugel“ (vom Kollegen KI-gestützt erstellt): Die erste Fassung formulierte stärker als die Belege, nämlich „Genau das haben uns die Daten gezeigt“ (die Antwort „Selbst bauen? Nein“ folgt aus einem Modell mit Annahmen, nicht aus einer Messung), „Der Unterschied bei rund 10 Prozent“ ohne Ursache (von 15 abweichenden Losen der Iteration 10b: 7 Höchstende, 4 Losebene, 4 sonstige; ein Qualitätsvorsprung ist nicht belegt), „66 von 70“ ohne den Hinweis auf nicht unabhängige KI-Leser und teils zirkulären Vergleichswert, und die Aussage der Vergabestelle ohne Einordnung. Außerdem steht „Liste fertig! 9.325 Verträge“ vor der Korrektur, die Zahl 9.325 gehört aber zur späteren Fassung der Iteration 9 (vorher 9.915). | Prüfung der Texte gegen `docs/iterationen.md`, `reports/evaluation_iteration10b.md`, `reports/optionsanalyse.md` (Claude, Auftrag des Nutzers) | Texte in `docs/video/franz_und_die_glaskugel.html` eingeschränkt, Zahlen unverändert; die Zeitleiste vereinfacht den Projektverlauf (vier „Runden“ statt zehn Iterationen), die Zahl 9.325 bleibt als Vereinfachung, im README genannt (`docs/video/README.md`) |
+| 2026-11-06 | Business-Case-Auswahl, Kandidat K-I (Push-Matching): Der Evaluator nahm an, Vergabeweiser biete „Benachrichtigungen per E-Mail, Teams, Slack oder Webhook“; die Startseite nennt nur „gespeicherte Suchen und E-Mail-Benachrichtigungen“ | Nutzer-Gegencheck (WebFetch, vergabeweiser.de, 2026-11-06) | K2 von 0 auf 1 korrigiert, Summe 7 statt 6; Ergebnis unverändert (K7 = 0, als Kern ausgeschlossen); Nachtrag in `docs/business_case_auswahl.md` |
+| 2026-11-06 | Demo, Vorgänger-Hinweis (Titelähnlichkeit zu einem Los der Prototyp-Liste): nur an einem erfundenen Titel getestet; im großen Datensatz (52 Oberpfälzer Bekanntmachungen) lagen alle 3 Auslösungen falsch (alte Fassung 2-mal die spätere Zuschlagsbekanntmachung desselben Verfahrens, neue Fassung 1-mal ein anderes Objekt, Score 0,75) | Prüfung am großen Datensatz der Live-Demo (Claude) | Funktion im großen Datensatz abgeschaltet und so beschriftet; als „gebaut, nicht belegt“ in `docs/demo_push.md` §4 und §11 |
+
+</div>
