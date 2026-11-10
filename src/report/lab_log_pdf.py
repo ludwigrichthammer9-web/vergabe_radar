@@ -21,7 +21,7 @@ PROFIL = Path(tempfile.gettempdir()) / "lab_log_pdf_profil"  # eigenes Profil, d
 CSS = """
 /* Gestaltung nach Apple Human Interface Guidelines (Klarheit, Zurückhaltung, Tiefe); nur Light-Mode, da Druck. 8-Punkt-Raster. */
 @page { size: A4; margin: 11mm 12mm; }
-:root { --text: #1C1C1E; --grau: #8E8E93; --flaeche: #F2F2F7; --linie: #E5E5EA; --blau: #007AFF; }
+:root { --text: #1C1C1E; --grau: #8E8E93; --flaeche: #F2F2F7; --linie: #E5E5EA; --blau: #34618F; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", sans-serif;
        font-size: 9pt; line-height: 1.36; color: var(--text); }
