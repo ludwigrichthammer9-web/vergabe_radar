@@ -4,7 +4,7 @@ Stand nach Iteration 10/10b, Business-Case-Prüfung und Nachtrag Sensitivität (
 (höchstens 2 Zeilen), viel Weißraum, weiße Karten auf hellgrauem Grund (F2F2F7), Systemfarben mit fester Bedeutung (Grün = erfüllt/gut,
 Rot = verfehlt, Orange = Vorsicht, Blau = neutral/Hervorhebung; dunkle Karte nur für die Publikumsfrage auf Folie 3), Schrift Segoe UI.
 Text mindestens 14 pt; Fußnoten und Abschnittszeile 11 pt, Fußnoten einzeilig, ohne Dateipfade (Pfade stehen in den Notizen).
-Oben auf jeder Inhaltsfolie eine graue Abschnittszeile (Idee · Betriebe · Markt · Produkt · Prüfung · Fazit), der aktuelle Abschnitt blau.
+Oben auf jeder Inhaltsfolie eine graue Abschnittszeile (Idee · Betriebe · Markt · Produkt · Prüfung · Fazit), der aktuelle Abschnitt fett und blau.
 Unten der Kasten „Kurz gesagt:“ mit der Folgerung für Laien. Notizen je Folie: SPRICHT (erste Zeile), ZEIT, KERNAUSSAGE, FRAGE – ANTWORT, ZEIG-MIR-WO,
 KURZ GESAGT, bei Sprecherwechsel ÜBERGANG (letzter Satz). Summe der Zeiten der sichtbaren Folien: 15:00.
 Sprecher: Ludwig Richthammer Folien 1, 2, 5, 6, 7, 9 (9:15 Folienzeit, davon 3:32 Video, also etwa 5:45 gesprochen); Manuel Strobel Folien 3, 4, 8, 10, 11 (5:45).
@@ -50,7 +50,8 @@ OUT = ROOT / "docs" / "vortrag" / "vortrag_vergabe_radar.pptx"
 
 # Apple Human Interface Guidelines: Systemfarben, ruhige Flächen, runde Karten, Systemschrift
 DARK, BLUE, AMBER, RED, GREEN, GREY, PALE, INK, WHITE, SOFT, LBLUE, DBLUE, LINE = (RGBColor.from_string(h) for h in
-    ("1C1C1E", "007AFF", "FF9F0A", "FF3B30", "34C759", "6E6E73", "F2F2F7", "1C1C1E", "FFFFFF", "AEAEB2", "E5F1FF", "0062CC", "D1D1D6"))
+    ("1C1C1E", "34618F", "FF9F0A", "FF3B30", "34C759", "6E6E73", "F2F2F7", "1C1C1E", "FFFFFF", "AEAEB2", "E4EBF3", "264A70", "D1D1D6"))
+# Akzent: gedecktes Stahlblau statt grellem Systemblau #007AFF (Wunsch 2026-11-10)
 DAMBER = RGBColor.from_string("B25E00")   # Orange als Schrift (lesbar auf Weiß)
 DGREEN = RGBColor.from_string("248A3D")   # Grün als Schrift (lesbar auf Weiß)
 HEAD, BODY, MONO = "Segoe UI Semibold", "Segoe UI", "Consolas"   # Ersatz für San Francisco unter Windows
@@ -250,8 +251,8 @@ s = new_slide("ZEIT 0:30. EINSTIEG (wörtlich, langsam): „28 Tage. So viel Zei
               "ZEIG-MIR-WO: docs/iterationen.md (Übersicht und Ergebnis Iteration 10 und 10b), docs/lab_log.md Abschnitt 0.", dark=True, teil="titel")
 
 # Radar-Grafik: Kreise um einen Mittelpunkt
-rect(s, 6.1, 0.9, 3.4, 3.4, RGBColor.from_string("DCEBFF"), MSO_SHAPE.OVAL, "Radar außen")
-rect(s, 6.6, 1.4, 2.4, 2.4, RGBColor.from_string("B3D4FF"), MSO_SHAPE.OVAL, "Radar mitte")
+rect(s, 6.1, 0.9, 3.4, 3.4, RGBColor.from_string("E4EBF3"), MSO_SHAPE.OVAL, "Radar außen")
+rect(s, 6.6, 1.4, 2.4, 2.4, RGBColor.from_string("C5D4E4"), MSO_SHAPE.OVAL, "Radar mitte")
 rect(s, 7.1, 1.9, 1.4, 1.4, BLUE, MSO_SHAPE.OVAL, "Radar innen")
 rect(s, 8.15, 1.55, 0.3, 0.3, AMBER, MSO_SHAPE.OVAL, "Radar Punkt")
 box(s, 0.6, 1.35, 5.2, 1.0, "Vergabe-Radar", size=48, color=INK, font=HEAD, name="Titel")
@@ -296,7 +297,7 @@ def poster_aus_video(video, pfad, sekunde=POSTER_SEKUNDE):
     except OSError:
         f1 = f2 = ImageFont.load_default()
     d.rectangle((0, 745, 1600, 900), fill=(28, 28, 30))               # verdeckt die Untertitelzeile des Standbilds
-    d.polygon([(70, 790), (70, 870), (140, 830)], fill=(0, 122, 255))
+    d.polygon([(70, 790), (70, 870), (140, 830)], fill=(255, 255, 255))
     d.text((180, 798), "Franz und die Glaskugel", font=f1, fill=(255, 255, 255))
     d.text((760, 804), "Kurzfilm · ca. 3,5 Minuten · Abspielen", font=f2, fill=(174, 174, 178))
     pfad.parent.mkdir(parents=True, exist_ok=True)
@@ -312,7 +313,7 @@ def poster_erzeugen(pfad):
     d = ImageDraw.Draw(im)
     d.ellipse((1000, 160, 1480, 640), fill=(44, 44, 46))
     d.ellipse((1080, 240, 1400, 560), fill=(58, 58, 60))
-    d.ellipse((1160, 320, 1320, 480), fill=(0, 122, 255))
+    d.ellipse((1160, 320, 1320, 480), fill=(52, 97, 143))
     d.ellipse((1290, 270, 1340, 320), fill=(255, 159, 10))
     try:
         f1 = ImageFont.truetype("C:/Windows/Fonts/seguisb.ttf", 92)
@@ -322,8 +323,8 @@ def poster_erzeugen(pfad):
     d.text((100, 300), "Franz und", font=f1, fill=(255, 255, 255))
     d.text((100, 410), "die Glaskugel", font=f1, fill=(255, 255, 255))
     d.text((100, 560), "Kurzfilm · ca. 3,5 Minuten", font=f2, fill=(174, 174, 178))
-    d.polygon([(100, 700), (100, 790), (180, 745)], fill=(0, 122, 255))
-    d.text((210, 715), "Abspielen", font=f2, fill=(0, 122, 255))
+    d.polygon([(100, 700), (100, 790), (180, 745)], fill=(255, 255, 255))
+    d.text((210, 715), "Abspielen", font=f2, fill=(255, 255, 255))
     pfad.parent.mkdir(parents=True, exist_ok=True)
     im.save(pfad)
 

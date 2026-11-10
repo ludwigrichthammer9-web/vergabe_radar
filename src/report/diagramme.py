@@ -25,7 +25,7 @@ sys.path.insert(0, str(ROOT / "src" / "model"))
 from sensitivitaet_backtest import QUELLE, lade_paare, treffer  # noqa: E402
 
 AUS = ROOT / "docs" / "lab_log_bilder"
-BLAU, GRAU, ROT, GRUEN, TEXT, LINIE = "#007AFF", "#8E8E93", "#FF3B30", "#34C759", "#1C1C1E", "#D1D1D6"
+BLAU, GRAU, ROT, GRUEN, TEXT, LINIE = "#34618F", "#8E8E93", "#FF3B30", "#34C759", "#1C1C1E", "#D1D1D6"
 plt.rcParams.update({"font.family": ["Segoe UI", "DejaVu Sans"], "font.size": 10, "axes.edgecolor": LINIE,
                      "axes.labelcolor": TEXT, "xtick.color": TEXT, "ytick.color": TEXT, "axes.spines.top": False,
                      "axes.spines.right": False})
